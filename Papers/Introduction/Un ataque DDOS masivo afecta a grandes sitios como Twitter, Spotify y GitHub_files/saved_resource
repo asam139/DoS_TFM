@@ -1,0 +1,15 @@
+             
+                          adnImg0 = document.createElement('img');
+                          adnImg0.style.width = "1px";
+                          adnImg0.style.height = "1px";
+                          adnImg0.style.cssFloat = "left";
+                          adnImg0.setAttribute('src','http://pixel.rubiconproject.com/tap.php?v=201746');
+                          document.body.appendChild(adnImg0);
+                            
+                          adnImg1 = document.createElement('img');
+                          adnImg1.style.width = "1px";
+                          adnImg1.style.height = "1px";
+                          adnImg1.style.cssFloat = "left";
+                          adnImg1.setAttribute('src','http://pixel.rubiconproject.com/tap.php?v=201728');
+                          document.body.appendChild(adnImg1);
+                

@@ -1,0 +1,69 @@
+body a:link:after, body a:visited:after {
+    content: "";
+}
+
+body {
+background: white; 
+font-size: 12pt;
+padding: 0 10px !important;
+}
+
+
+
+#menu { 
+display: none; 
+}
+
+#wrapper, 
+#content { 
+width: auto; 
+margin: 0 5%; 
+padding: 0; 
+border: 0; 
+float: none !important; 
+color: black; 
+background: transparent none; 
+}
+
+div#content { 
+margin-left: 10%;
+padding-top: 1em;
+border-top: 1px solid #930; 
+}
+
+a:link, 
+a:visited { 
+color: #520;
+background: transparent; 
+font-weight: bold; 
+text-decoration: underline; 
+}
+.wcenter,.wcols .wcol1,.wlistingsingle,.wpagesingle .wlistingsingletext{width:100%}
+.wnavtop,.wheadermenu,.wcol2,.wlistingsinglerelated,.wlistingsinglecomments,.wlistingsingle .wlistingsinglesocialmedia,.wlistingsingle .wlistingsingleheadertags,.wfooter{display:none}
+.wlistingsingle .wlistingsingleheadertags{background:none}
+.wlistingsingle .wlistingsingleheader{border:none;}
+.wlistingsingle .wlistingsingleheader{border-top:solid 1px #c5c5c5;border-left:solid 1px #c5c5c5;border-right:solid 1px #c5c5c5;margin:20px 0 0 0; display: block !important;}
+.wlistingsingle .wlistingsingleheadertags{border: none !important;}
+
+.wlistingsingle .wlistingsingleheader {
+    border: 1px solid #c5c5c5 !important;
+    margin-bottom: 15px !important;
+    margin-right: 1px !important;
+    padding: 0 11px 15px !important;
+}
+
+.wlistingsingle .wlistingsingleimage, .wlistingsingle .wlistingsingleimage div.wmain,
+.wlistingsingle .wlistingsingleimage div.wmain img {
+    margin-top: 0px !important
+}
+
+
+.wlistingsingle  {
+    border: 1px solid #c5c5c5 !important;
+    margin-bottom: 15px !important;
+    margin-right: 1px !important;
+    padding: 0 11px 15px !important;
+    margin-bottom: -80px !important;
+}
+
+body { padding: 0 15px !important; margin: 0 15px !important; }

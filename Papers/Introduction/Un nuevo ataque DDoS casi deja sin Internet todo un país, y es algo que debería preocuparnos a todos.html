@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<!-- saved from url=(0129)http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos -->
+<html lang="es" class=" js no-touch csstransforms csstransitions"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     
+<title>Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos</title>
+
+<script type="text/javascript" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/09bdee14ae"></script><script src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/nr-998.min.js"></script><script src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/saved_resource" async=""></script><script async="" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/analytics.js"></script><script async="" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/beacon.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQAFUFRQGwIAXVVWDgk="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(12),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(13),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(5),t(4),"addEventListener"in window&&t(3),s.xhrWrappable&&t(6),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(14)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],4:[function(t,e,n){var r=t("ee").get("raf"),o=t(14)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],5:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(14)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],6:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,v,"fn-",c)}function i(t){y.push(t),h&&(w=-w,b.data=w)}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(3);var f=t("ee"),u=f.get("xhr"),d=t(14)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",v=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,g),g.prototype=p.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var w=1,b=document.createTextNode(w);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],7:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(8),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(11),h=t(10),m=window.XMLHttpRequest;a.features.xhr=!0,t(6),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],8:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],9:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(12),c=t(13),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],10:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],11:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],12:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],13:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],14:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(13),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[g[n]];return f&&f.push([w,n,r,i]),i}}function p(t,e){y[t]=h(t).concat(e)}function h(t){return y[t]||[]}function m(t){return d[t]=d[t]||o(n)}function v(t,e){f(t,function(t,n){e=e||"feature",g[n]=e,e in u||(u[e]=[])})}var y={},g={},w={on:p,emit:n,get:m,listeners:h,context:e,buffer:v,abort:a,aborted:!1};return w}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(12),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=w.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(12),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(9);var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},g=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),w=e.exports={offset:a(),origin:v,features:{},xhrWrappable:g};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,7]);</script><meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Hace dos semanas un ataque DDoS dejó inactivos servicios como Twitter, PayPal, Play Station Network y otros gigantes de la tecnología. Casi podríamos conside...">
+  <meta name="news_keywords" content="ddos, ataque, Ciberguerra, botnet, Ciberataque, Seguridad">
+ <meta name="robots" content="noodp">
+<meta property="fb:admins" content="100000716994885">
+<meta property="fb:pages" content="54999640934">
+<meta name="application-name" content="Genbeta">
+<meta name="msapplication-tooltip" content="Software y web. Genbeta">
+<meta name="msapplication-starturl" content="http://www.genbeta.com">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="msapplication-task" content="name=Lo mejor;action-uri=http://www.genbeta.com/lomejor;icon-uri=https://img.weblogssl.com/css/genbeta/v7/images/pin-bg-lomejor-icon.ico">
+ <meta name="msapplication-task" content="name=Respuestas;action-uri=http://www.genbeta.com/respuestas;icon-uri=https://img.weblogssl.com/css/genbeta/v7/images/pin-bg-respuestas-icon.ico">
+<!--[if gte IE 9]>
+<link rel="shortcut icon" type="image/x-icon" href="https://img.weblogssl.com/css/genbeta/v7/images/pin-bg-home-icon.ico"/>
+<link rel=icon type="image/ico" href="https://img.weblogssl.com/css/genbeta/v7/images/pin-bg-home-icon.ico"/>
+<![endif]-->
+<link rel="shortcut icon" href="https://img.weblogssl.com/css/genbeta/r2/images/favicon.ico" type="image/ico">
+<link rel="apple-touch-icon" href="https://img.weblogssl.com/css/genbeta/r2/images/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://img.weblogssl.com/css/genbeta/r2/images/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://img.weblogssl.com/css/genbeta/r2/images/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://img.weblogssl.com/css/genbeta/r2/images/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="https://img.weblogssl.com/css/genbeta/r2/images/apple-touch-icon-57-precomposed.png">
+  
+   <link rel="publisher" href="http://plus.google.com/+genbeta">
+   <link rel="alternate" type="application/rss+xml" title="" href="http://www.genbeta.com/index.xml">
+  <link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos">
+ <!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="https://img.weblogssl.com/css/genbeta/v7/ie7.css">
+<![endif]-->
+  <link rel="image_src" href="https://i.blogs.es/bbc179/6866188762_66405fd77f_o/75_75.jpg">
+   <meta property="og:image" content="https://i.blogs.es/bbc179/6866188762_66405fd77f_o/original.jpg">
+  <meta property="og:title" content="Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos">
+  <meta property="og:description" content="Hace dos semanas un ataque DDoS dejó inactivos servicios como Twitter, PayPal, Play Station Network y otros gigantes de la tecnología. Casi podríamos conside...">
+  <meta property="og:url" content="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos">
+  <meta property="og:type" content="article">
+  <meta property="og:updated_time" content="2016-11-05T03:52:41">
+  <meta name="DC.Creator" content="Yúbal FM">
+  <meta name="DC.Date" content="04 noviembre 2016">
+  <meta name="DC.Source" content="Genbeta">
+  <meta property="article:modified_time" content="2016-11-05T03:52:41">
+  <meta property="article:published_time" content="2016-11-04T10:31:47">
+      <link rel="canonical" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos">
+          <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://i.blogs.es/bbc179/6866188762_66405fd77f_o/650_1200.jpg"><meta name="twitter:site" content="@genbeta"><meta name="twitter:title" content="Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos"><meta name="twitter:description" content="Hace dos semanas un ataque DDoS dejó inactivos servicios como Twitter, PayPal, Play Station Network y otros gigantes de la tecnología. Casi podríamos conside..."><meta name="twitter:creator" content="@Yubal_FM">    <link rel="stylesheet" type="text/css" href="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/main.css">
+  <link rel="amphtml" href="http://m.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos/amp">
+<!-- IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+ <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+     <script src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/gpt.js"></script><script id="gpt-impl-0.21996459783200417" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/pubads_impl_105.js"></script><link rel="prefetch" href="http://tpc.googlesyndication.com/safeframe/1-0-5/html/container.html">
+  <script type="text/javascript">
+    googletag.defineSlot('/1018282/GEB-CEN-interior', [300, 250], 'div-gpt-cen').addService(googletag.pubads());
+     googletag.defineSlot('/1018282/GEB-CEN2-interior', [300, 250], 'div-gpt-cen2').addService(googletag.pubads());
+                googletag.defineSlot('/1018282/GEB-TOP-interior', [1000, 40], 'div-gpt-top').addService(googletag.pubads());
+        googletag.defineSlot('/1018282/GEB-LAT2-interior', [160, 600], 'div-gpt-lat2').addService(googletag.pubads());
+      googletag.defineSlot('/1018282/GEB-LAT-interior', [160, 600], 'div-gpt-lat').addService(googletag.pubads());
+       googletag.defineSlot('/1018282/GEB-BOT2-interior', [728, 90], 'div-gpt-bot2').addService(googletag.pubads());
+       googletag.defineOutOfPageSlot('/1018282/GEB-INT-interior', 'div-gpt-int').addService(googletag.pubads());
+      var MAX_source = "";
+     var GPTcats = ["seguridad"];
+    var GPTtags = ["ddos", "ataque", "ciberguerra", "botnet", "ciberataque"];
+  googletag.pubads().setTargeting("screen", screen.width.toString()).setTargeting("cat", GPTcats).setTargeting("tag", GPTtags).setTargeting("type", "post").setTargeting("source",MAX_source);
+    googletag.pubads().collapseEmptyDivs();
+  googletag.pubads().enableSingleRequest();
+     googletag.pubads().enableSyncRendering();
+    googletag.enableServices();
+   </script>
+   <script type="text/javascript" charset="utf-8" async="" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/tweet.5e33f296a9ed7a390e3d5ab84d0ba34e.js"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f8;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3a5795;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #2f477a;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f8;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+ <body class="js-desktop">
+     <div id="fb-share-button">
+    Compartir
+    <button class="btn-facebook"></button>
+   </div>
+    <div class="customize-me">
+            <div id="div-gpt-int" style="width:1px; height:1px;">
+ <script type="text/javascript">
+     googletag.display("div-gpt-int");
+   </script><script type="text/javascript" src="https://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;correlator=4463783750986638&amp;output=json_html&amp;callback=googletag.impl.pubads.setAdContentsBySlotForSync&amp;impl=ss&amp;json_a=1&amp;eid=108809080&amp;sc=0&amp;sfv=1-0-5&amp;iu_parts=1018282%2CGEB-CEN-interior%2CGEB-CEN2-interior%2CGEB-TOP-interior%2CGEB-LAT2-interior%2CGEB-LAT-interior%2CGEB-BOT2-interior%2CGEB-INT-interior&amp;enc_prev_ius=%2F0%2F1%2C%2F0%2F2%2C%2F0%2F3%2C%2F0%2F4%2C%2F0%2F5%2C%2F0%2F6%2C%2F0%2F7&amp;prev_iu_szs=300x250%2C300x250%2C1000x40%2C160x600%2C160x600%2C728x90%2C1x1&amp;ists=1&amp;cust_params=screen%3D1280%26cat%3Dseguridad%26tag%3Dddos%252Cataque%252Cciberguerra%252Cbotnet%252Cciberataque%26type%3Dpost%26source%3D&amp;cookie_enabled=1&amp;lmt=1479833314&amp;dt=1479833314440&amp;cc=100&amp;frm=20&amp;biw=1280&amp;bih=632&amp;oid=3&amp;adxs=-9%2C-9%2C-9%2C-9%2C-9%2C-9%2C0&amp;adys=-9%2C-9%2C-9%2C-9%2C-9%2C-9%2C0&amp;adks=1866249404%2C1787917236%2C4266975541%2C2555512562%2C3481001900%2C18892848%2C505953648&amp;gut=v2&amp;ifi=1&amp;u_tz=60&amp;u_his=1&amp;u_h=800&amp;u_w=1280&amp;u_ah=773&amp;u_aw=1280&amp;u_cd=24&amp;u_nplug=5&amp;u_nmime=7&amp;u_sd=1&amp;flash=23.0.0&amp;url=http%3A%2F%2Fwww.genbeta.com%2Fseguridad%2Fun-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos&amp;dssz=5&amp;icsg=8&amp;std=0&amp;csl=43&amp;vrg=105&amp;vrp=105&amp;ga_vid=714499013.1479833242&amp;ga_sid=1479833314&amp;ga_hid=1382883439" id="sae-script-1"></script>
+</div>
+              <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+ __gaTracker('create', "UA-78515-6", 'auto');
+ __gaTracker('create', "UA-78515-62", 'auto', {'name': 'rollUp'});
+ __gaTracker('set', 'contentGroup1', 'post');
+ __gaTracker('set', 'contentGroup2', "yúbal fm");
+ __gaTracker('set', 'contentGroup3', "seguridad");
+ __gaTracker('set', 'contentGroup4', "normal");
+ __gaTracker('rollUp.set', 'contentGroup1', 'post');
+ __gaTracker('rollUp.set', 'contentGroup2', "yúbal fm");
+ __gaTracker('rollUp.set', 'contentGroup3', "seguridad");
+ __gaTracker('rollUp.set', 'contentGroup4', "normal");
+ var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "11306788" });
+(function() {
+ var s = document.createElement("script"), el = document.getElementsByTagName("script")[1];
+ s.async = true;
+ s.src = (document.location.protocol == "https:" ? "https://sb": "http://b") + ".scorecardresearch.com/beacon.js";
+ el.parentNode.insertBefore(s, el);
+})();</script>      <div class="head-content-favs">
+         <section class="head-container head-container-with-ad">
+ <div class="head head-with-ad is-init">
+  <div class="ad ad-head"></div>
+  <section class="head-favicons-container"><nav class="head-favicons"><div class="head-favicons-index"><a id="favicons-toggle" class="js-group-toggle" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" data-target="#head-favicons"><abbr title="Weblogs SL">WSL</abbr></a></div></nav></section>  <div class="head-brand">
+   <div class="brand">
+    <a href="http://www.genbeta.com/" class="brand-logo head-brand-logo"><span>Genbeta</span></a>
+   </div>
+   <ul class="head-nav">
+    <li><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#sections" class="head-link head-link-sections m-v1 js-toggle" data-searchbox="#search-field-1">Menú</a></li>
+    <li><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#headlines" class="head-link head-link-new m-v1 js-toggle">Nuevo</a></li>
+    <li><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#search" class="head-link head-link-search m-v1 js-toggle" data-searchbox="#search-field-2">Buscar</a></li>
+   </ul>
+           <div class="head-editorspick-container">
+     <nav class="head-editorspick">
+      <span class="head-editorspick-type">No te pierdas</span>
+      <p class="head-editorspick-post">
+       <a href="http://www.genbeta.com/seguridad/que-son-las-botnets-y-por-que-se-usaron-en-el-ataque-ddos-del-viernes?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=no_te_pierdas">Qué son las botnets y por qué son un peligro creciente</a>
+      </p>
+     </nav>
+    </div>
+     </div>
+     </div>
+</section>
+                   <div class="ad ad-top">
+ <div class="ad-box" id="div-gpt-top" data-google-query-id="" style="display: none;">
+  <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="ad-contact">Publicidad</a>
+  <script type="text/javascript">
+       googletag.display("div-gpt-top");
+     </script>
+ </div>
+</div>
+             <div class="page-container">
+     <div class="content-container">
+      <main>
+              <article>
+                          <div class="article article-normal ">
+                    <div class="article-header article-normal-header">
+           <header>
+               <h1><span>Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos</span></h1>
+  <div class="article-normal-header-content">
+     <div class="article-asset-big article-asset-image">
+    <img alt="Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos" srcset="https://i.blogs.es/bbc179/6866188762_66405fd77f_o/450_1000.jpg 450w, https://i.blogs.es/bbc179/6866188762_66405fd77f_o/650_1200.jpg 650w, https://i.blogs.es/bbc179/6866188762_66405fd77f_o/1024_2000.jpg 1024w, https://i.blogs.es/bbc179/6866188762_66405fd77f_o/1366_2000.jpg 1366w"><span></span>
+   </div>
+    <div class="article-social-share m-in-normal">
+   <p>Compartir</p>
+   <ul>
+ <li><a href="http://www.facebook.com/dialog/feed?app_id=360028941603&amp;redirect_uri=http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos&amp;link=http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos" class="js-btn-facebook btn-facebook-count" data-postname="un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos">1008</a></li>
+ <li><a href="https://twitter.com/intent/tweet?url=http://www.genbeta.com/p/207976&amp;text=Un%20nuevo%20ataque%20DDoS%20casi%20deja%20sin%20Internet%20todo%20un%20pa%C3%ADs%2C%20y%20es%20algo%20que%20deber%C3%ADa%20preocuparnos%20a%20todos&amp;via=genbeta" class="btn-twitter js-btn-twitter" data-postname="un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos">Twitter</a></li>
+ <li><a href="mailto:?subject=Un%20nuevo%20ataque%20DDoS%20casi%20deja%20sin%20Internet%20todo%20un%20pa%C3%ADs,%20y%20es%20algo%20que%20deber%C3%ADa%20preocuparnos%20a%20todos&amp;body=http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos%3Futm_source%3Dsharebutton%26utm_medium%3Demail%26utm_content%3DPOST%26utm_campaign%3D22_Nov_2016%26utm_term%3DCLICK%2BON%2BTITLE" class="btn-email js-btn-email" data-postname="un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos">E-mail</a></li>
+</ul>  </div>
+  <div class="article-actions">
+      <div class="article-save"><a id="fav-button" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#">Guardar</a></div>
+   <div class="article-comments"><a title="6 Comentarios" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#comments" class="js-smooth-scroll">6 Comentarios</a></div>
+  </div>
+ </div>
+           </header>
+           <div class="article-aside m-normal-first-aside">
+ <div class="article-aside-content">
+     <div class="related-alts-container">
+  <div class="aside-box aside-newsletter-box">
+   <h3 class="aside-title">Suscríbete a Genbeta</h3>
+   <form class="js-subscription newsletter-form aside-newsletter-form" method="post" data-url="http://mailer.weblogssl.com/subscribe_check/#email#/genbeta/Genbeta">
+    <p class="newsletter-hint">Recibe un email al día con nuestros artículos: </p>
+    <p><input class="js-email newsletter-input" type="email" placeholder="Tu correo electrónico">
+    <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>
+   </form>
+   <nav class="menu-follow aside-menu-follow">
+    <span class="item-meta aside-item-meta">Síguenos</span>
+    <ul>
+     <li><a href="http://twitter.com/genbeta" class="icon-twitter link-twitter">Twitter</a></li>
+     <li><a href="http://www.facebook.com/pages/Genbeta/54999640934" class="icon-facebook link-facebook">Facebook</a></li>
+           <li><a href="http://www.youtube.com/user/XatakaTv" class="icon-youtube link-youtube">Youtube</a></li>
+                              <li><a href="http://www.genbeta.com/index.xml" class="icon-rss link-rss">RSS</a></li>
+     <li>
+      <a href="http://feedly.com/i/subscription/feed/http://feeds.weblogssl.com/genbeta" target="blank">
+      <img id="feedlyFollow" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/m-icon-feedly.png" alt="follow us in feedly" width="32" height="32"></a>
+     </li>
+    </ul>
+   </nav>
+  </div>
+ </div>
+     <div class="ad ad-lat">
+ <div class="js-img-adb">
+  <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#">
+    <img src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/geb2.jpg" alt="¿Usas Adblock Plus en Genbeta? Ver cómo desactivarlo para genbeta.com">
+  </a>
+</div><div class="ad-box" id="div-gpt-lat" data-google-query-id="" style="display: none;">
+  <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="ad-contact">Publicidad</a>
+  <script type="text/javascript">
+       googletag.display("div-gpt-lat");
+     </script>
+ </div>
+</div>
+    <script>
+ window.WSLModules = window.WSLModules || {};
+ WSLModules.Overlay = {'moduleConf' : "c1"};
+</script>
+<div class="related-alts-container">
+ <section class="related-alts">
+  <ul>
+           </ul>
+    
+ <p class="aside-title">TE RECOMENDAMOS</p>
+ <ul>
+  
+   
+   <li class="related-item">
+    <a href="http://www.genbeta.com/web/cinco-dias-despues-github-continua-bajo-el-mayor-ataque-ddos-de-su-historia">
+     <img src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/150_150.jpg" alt="Cinco días después, GitHub continua bajo el mayor ataque DDoS de su historia">
+     <div class="related-item-info">
+      <h3 class="related-item-title">Cinco días después, GitHub continua bajo el mayor ataque DDoS de su historia</h3>
+     </div>
+    </a>
+   </li>
+  
+   
+   <li class="related-item">
+    <a href="http://www.genbeta.com/herramientas/los-gobiernos-te-vigilan-descubrelo-con-detekt-el-anti-spyware-de-amnistia-internacional">
+     <img src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/150_150(1).jpg" alt="¿Los gobiernos te vigilan? Descúbrelo con Detekt, el anti-spyware de Amnistia Internacional">
+     <div class="related-item-info">
+      <h3 class="related-item-title">¿Los gobiernos te vigilan? Descúbrelo con Detekt, el anti-spyware de Amnistia Internacional</h3>
+     </div>
+    </a>
+   </li>
+  
+   
+   <li class="related-item">
+    <a href="http://www.genbeta.com/seguridad/esta-pagina-es-capaz-de-mapear-los-ataques-ddos-de-todo-el-mundo-en-tiempo-real">
+     <img src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/150_150.png" alt="Esta página es capaz de mapear los ataques DDoS de todo el mundo en tiempo real">
+     <div class="related-item-info">
+      <h3 class="related-item-title">Esta página es capaz de mapear los ataques DDoS de todo el mundo en tiempo real</h3>
+     </div>
+    </a>
+   </li>
+  
+ </ul>
+<img src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/abtest.png" style="display: none;"></section>
+</div>
+<div class="article-social-share m-v1 js-article-social-share">
+ <div class="article-social-share-wrapper">
+  <p>Compartir <q class="article-social-share-meta">Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos</q></p>
+  <ul>
+   <li><a class="js-btn-facebook btn-facebook-count" href="http://www.facebook.com/dialog/feed?app_id=360028941603&amp;redirect_uri=http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos&amp;link=http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos">1008</a></li>
+   <li><a class="btn-twitter" href="https://twitter.com/intent/tweet?url=http://www.genbeta.com/p/207976&amp;text=Un%20nuevo%20ataque%20DDoS%20casi%20deja%20sin%20Internet%20todo%20un%20pa%C3%ADs%2C%20y%20es%20algo%20que%20deber%C3%ADa%20preocuparnos%20a%20todos&amp;via=genbeta">Twitter</a></li>
+   <li><a class="btn-email" href="mailto:?subject=Un%20nuevo%20ataque%20DDoS%20casi%20deja%20sin%20Internet%20todo%20un%20pa%C3%ADs%2C%20y%20es%20algo%20que%20deber%C3%ADa%20preocuparnos%20a%20todos&amp;body=http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos%3Futm_source%3Dsharebutton%26utm_medium%3Demail%26utm_content%3DPOST%26utm_campaign%3D22_Nov_2016%26utm_term%3DCLICK%2BON%2BTITLE">Email</a></li>
+  </ul>
+ </div>
+</div>
+
+      <div class="ad ad-lat2">
+  <div class="ad-box" id="div-gpt-lat2" data-google-query-id="" style="display: none;">
+   <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="ad-contact">Publicidad</a>
+   <script type="text/javascript">
+         googletag.display("div-gpt-lat2");
+       </script>
+  </div>
+ </div>
+   </div>
+</div>
+          </div>
+                    <div class="article-metadata-container">
+           <div class="article-metadata">
+                        <time class="article-date" datetime="1478251907" data-format="D MMMM YYYY">4 Noviembre 2016</time><span id="is-editor"></span>
+                                                  <footer class="article-author">
+              <a class="article-author-avatar" href="http://www.genbeta.com/autor/yubal" rel="author"><img alt="yubal" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/2dfc6428fbf840b61b15d1f118225acc"></a>
+              <a class="article-author-link" href="http://www.genbeta.com/autor/yubal" rel="author">Yúbal FM</a>
+                             <a class="article-author-twitter" href="http://www.twitter.com/Yubal_FM">@Yubal_FM</a>
+                           </footer>
+                       </div>
+          </div>
+          <div class="article-content">
+                                  <div class="blob">
+                           <div class="article-asset-image article-asset-normal"><div class="asset-content">  </div></div>
+
+<p>Hace dos semanas <a href="http://www.genbeta.com/actualidad/un-ataque-ddos-masivo-afecto-hoy-a-grandes-sitios-como-twitter-spotify-y-github">un ataque DDoS</a> dejó inactivos servicios como Twitter, PayPal, Play Station Network y otros gigantes de la tecnología. Casi podríamos considerarlo como <strong>el pistoletazo de salida de un nuevo tipo amenaza</strong> en la red, una en la que los ataques son masivos, y en la que conceptos antes desconocidos para el gran público como el de <a href="http://www.genbeta.com/seguridad/que-son-las-botnets-y-por-que-se-usaron-en-el-ataque-ddos-del-viernes">las botnets</a> cobran cada vez más importancia.</p>
+
+<p>Esta semana, un nuevo ataque de estas características casi ha sido capaz de <strong>dejar sin Internet a todo un país</strong>, <a href="http://www.zdnet.com/article/mirai-botnet-attack-briefly-knocked-an-entire-country-offline/">concretamente a Liberia</a>. Lo peor de todo es que cabe la posibilidad de que los responsables de ambos ataques sean los mismos, razón por la que TODOS deberíamos preocuparnos ante las implicaciones que esto podría tener.</p>
+
+<!--more-->
+
+<h2>Dejando sin Internet a todo un país</h2>
+
+<p>Para entender este ataque primero hay que tener en cuenta que <strong>Liberia es un país débil en términos informáticos</strong>. <a href="http://www.bbc.com/news/world-africa-15692430">Internet les llegó en 2011</a>, y según los últimos datos <a href="https://www.cia.gov/library/publications/the-world-factbook/geos/li.html">sólo el 5,9%</a> de sus <a href="http://www.datosmacro.com/demografia/poblacion/liberia">4,5 millones de habitantes</a> tiene acceso a la red.  Por lo tanto, sin el potencial de las grandes potencias, Liberia es un país perfecto para hacer pruebas con sistemas de ataque.</p>
+
+<p>El ataque fue realizado por una botnet de Mirai, el mismo tipo de red responsable del ataque a Dyn que provocó la caída masiva de grandes servicios hace dos semanas. Mirai es un toolkit de denegación de servicio desarrollado por varios especialistas en botnets, y <strong>al ser de código abierto</strong> cualquiera puede descargarlo y utilizarlo.</p>
+
+<twitterwidget class="twitter-tweet twitter-tweet-rendered" id="twitter-widget-0" style="position: static; visibility: visible; display: block; transform: rotate(0deg); max-width: 100%; width: 500px; min-width: 220px; margin-top: 10px; margin-bottom: 10px;" data-tweet-id="793954183837876224"></twitterwidget>
+
+<script async="" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/widgets.js" charset="utf-8"></script>
+
+<p>Los ataques fueron realizados por una denominada Botnet 14, y empezaron a ser reportados el lunes 31 por la cuenta <a href="https://twitter.com/MiraiAttacks/status/793954183837876224">@MiraiAttacks</a> que analiza los movimientos de esta botnet. <strong>Ayer todavía se estaban registrando ataques</strong> periódicos en este país, pero poco a poco todo parece haberse normalizado.</p>
+
+<p>La empresa de telecomunicaciones Level 3 le confirmó a <a href="http://www.zdnet.com/article/mirai-botnet-attack-briefly-knocked-an-entire-country-offline/">ZDNet</a> que habían sido testigos de un ataque contra una empresa de telecomunicaciones en Liberia, y algunos usuarios confirmaron <strong>habían llegado a quedarse sin conexión</strong> durante cortos periodos de tiempo el miércoles. Aún así, con tan poca población conectada es difícil poder confirmar rotundamente este dato.</p>
+
+<h2>Un ataque que nos debería preocupar a todos</h2>
+
+<p>El analista británico y especialista en IT <a href="https://medium.com/@networksecurity/shadows-kill-mirai-ddos-botnet-testing-large-scale-attacks-sending-threatening-messages-about-6a61553d1c7#.jhzm68u69">Kevin Beaumont</a> fue ayer uno de los primeros en juntar las piezas del puzzle y avisar de lo que estaba pasando en Liberia. También notó que <strong>el responsable de la botnet estaba enviando mensajes</strong> atacando páginas ficticias como "uk.small" para amenazar a Reino Unido o "kevin​.lies​.in​.fear" para amenazarle a él mismo. Como en otro de estos mensajes decían simplemente "Shadow Kill", este es el nombre que ha decidido darle al responsable.</p>
+
+<p>El ataque llevó a generar un tráfico de 500gbit/seg, <strong>una de las mayores capacidades que se han visto nunca</strong> en ataques DDoS mediante botnets. De hecho, el volumen de este tráfico podría significar que el operador de la botnet podría ser el mismo de los ataques a Dyn, que simplemente estaba probando hasta dónde puede llevar su arma.</p>
+
+<p>Esto es algo que según Beaumont <strong>es extremadamente preocupante para todos</strong>, ya que sugiere que el operador ahora ya sabe que tiene la suficiente capacidad para crear un impacto importante en todo un país. Por lo tanto, podría ser que viéramos nuevos ataques cada vez más ambiciosos en el futuro, y por eso lo que ha pasado en Liberia debería preocuparnos a todos.</p>
+
+<p>Imagen | <a href="https://www.flickr.com/photos/katylevinson/6866188762">Katy Levinson</a><br>
+En Genbeta | <a href="http://www.genbeta.com/seguridad/que-son-las-botnets-y-por-que-se-usaron-en-el-ataque-ddos-del-viernes">Qué son las botnets y por qué son un peligro creciente</a></p>
+                         </div>
+                                                                              <div class="article-links">
+            <div class="article-social-share m-in-links">
+             <p>Compartir <q class="article-social-share-meta">Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos</q></p>
+             <ul>
+ <li><a href="http://www.facebook.com/dialog/feed?app_id=360028941603&amp;redirect_uri=http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos&amp;link=http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos" class="js-btn-facebook btn-facebook-count" data-postname="un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos">1008</a></li>
+ <li><a href="https://twitter.com/intent/tweet?url=http://www.genbeta.com/p/207976&amp;text=Un%20nuevo%20ataque%20DDoS%20casi%20deja%20sin%20Internet%20todo%20un%20pa%C3%ADs%2C%20y%20es%20algo%20que%20deber%C3%ADa%20preocuparnos%20a%20todos&amp;via=genbeta" class="btn-twitter js-btn-twitter" data-postname="un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos">Twitter</a></li>
+ <li><a href="mailto:?subject=Un%20nuevo%20ataque%20DDoS%20casi%20deja%20sin%20Internet%20todo%20un%20pa%C3%ADs,%20y%20es%20algo%20que%20deber%C3%ADa%20preocuparnos%20a%20todos&amp;body=http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos%3Futm_source%3Dsharebutton%26utm_medium%3Demail%26utm_content%3DPOST%26utm_campaign%3D22_Nov_2016%26utm_term%3DCLICK%2BON%2BTITLE" class="btn-email js-btn-email" data-postname="un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos">E-mail</a></li>
+</ul>            </div>
+             <div class="article-topics-list">
+ <span class="article-topic-desc">Temas</span>
+ <ul class="article-topics-categories">
+     <li><a class="article-topic-link" href="http://www.genbeta.com/categoria/seguridad">Seguridad</a></li>
+   </ul>
+ <ul class="article-topics-tags">
+     <li><a class="article-topic-link" href="http://www.genbeta.com/tag/ddos">ddos</a></li>
+     <li><a class="article-topic-link" href="http://www.genbeta.com/tag/ataque">ataque</a></li>
+     <li><a class="article-topic-link" href="http://www.genbeta.com/tag/ciberguerra">Ciberguerra</a></li>
+     <li><a class="article-topic-link" href="http://www.genbeta.com/tag/botnet">botnet</a></li>
+     <li><a class="article-topic-link" href="http://www.genbeta.com/tag/ciberataque">Ciberataque</a></li>
+   </ul>
+ </div>           </div>
+          </div>
+         </div>
+                                   <div class="ad ad-cen">
+ <div class="js-img-adb">
+  <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#">
+    <img src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/geb2.jpg" alt="¿Usas Adblock Plus en Genbeta? Ver cómo desactivarlo para genbeta.com">
+  </a>
+</div><div class="ad-box" id="div-gpt-cen" data-google-query-id="" style="display: none;">
+  <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="ad-contact">Publicidad</a>
+  <script type="text/javascript">
+       googletag.display("div-gpt-cen");
+     </script>
+ </div>
+</div>
+                                     <div id="recommendedPosts">
+
+ 
+ <section id="relatedHorizontalPosts" class="post-related-posts articles-full-width related-horizontal-posts">
+  <p class="section-title">También te puede gustar</p>
+  <div class="post-related-content">
+   <ul>
+    
+     
+      
+      <li class="horizontal-related-posts article-brand" id="campaignPost" data-url="http://www.bluebbva.com/2016/11/las-10-canciones-que-lo-petaron-en-su-dia-y-hoy-serian-censuradas-por-la-sociedad.asp?utm_source=genbeta&amp;utm_medium=referral&amp;utm_campaign=recommended_post" data-campaignid="3771">
+       <div class="article-disclaimer">
+        <a href="http://www.bluebbva.com/2016/11/las-10-canciones-que-lo-petaron-en-su-dia-y-hoy-serian-censuradas-por-la-sociedad.asp?utm_source=genbeta&amp;utm_medium=referral&amp;utm_campaign=recommended_post">Partner</a>
+       </div>
+       <a href="http://www.bluebbva.com/2016/11/las-10-canciones-que-lo-petaron-en-su-dia-y-hoy-serian-censuradas-por-la-sociedad.asp?utm_source=genbeta&amp;utm_medium=referral&amp;utm_campaign=recommended_post">
+        <img title="Las 10 canciones que lo petaron en su día y hoy serían censuradas por la sociedad" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/20161103130112026216_manson.jpg" alt="Las 10 canciones que lo petaron en su día y hoy serían censuradas por la sociedad">
+       </a>
+       <a href="http://www.bluebbva.com/2016/11/las-10-canciones-que-lo-petaron-en-su-dia-y-hoy-serian-censuradas-por-la-sociedad.asp?utm_source=genbeta&amp;utm_medium=referral&amp;utm_campaign=recommended_post"><span>Las 10 canciones que lo petaron en su día y hoy serían censuradas por la sociedad</span></a>
+      <img src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/abtest(1).png" style="display: none;"></li>
+     
+     
+     <li class="horizontal-related-posts" data-id="112680">
+      <a href="http://www.genbeta.com/seguridad/los-gobiernos-responsables-del-87-del-ciberespionaje" class="js-recommendation">
+       <img title="Los gobiernos, responsables del 87% del ciberespionaje " class="" sf-src="//i.blogs.es/1b7e75/650_1000_capitolio/230_165.jpg" alt="Los gobiernos, responsables del 87% del ciberespionaje " src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/230_165.jpg">
+      </a>
+      <a href="http://www.genbeta.com/seguridad/los-gobiernos-responsables-del-87-del-ciberespionaje" class="js-recommendation"><span>Los gobiernos, responsables del 87% del ciberespionaje </span></a>
+     </li>
+    
+     
+     
+     <li class="horizontal-related-posts" data-id="109495">
+      <a href="http://www.genbeta.com/seguridad/descubierta-botnet-que-robo-mas-de-dos-millones-de-usuarios-y-contrasenas-con-un-keylogger" class="js-recommendation">
+       <img title="Descubierta botnet que robó más de dos millones de usuarios y contraseñas con un keylogger " class="" sf-src="//i.blogs.es/cc925b/650_1000_6a0168e94917b4970c019b01aba85b970d/230_165.jpg" alt="Descubierta botnet que robó más de dos millones de usuarios y contraseñas con un keylogger " src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/230_165(1).jpg">
+      </a>
+      <a href="http://www.genbeta.com/seguridad/descubierta-botnet-que-robo-mas-de-dos-millones-de-usuarios-y-contrasenas-con-un-keylogger" class="js-recommendation"><span>Descubierta botnet que robó más de dos millones de usuarios y contraseñas con un keylogger </span></a>
+     </li>
+    
+     
+     
+     <li class="horizontal-related-posts" data-id="54249">
+      <a href="http://www.genbeta.com/actualidad/cuidado-nuevos-ataques-de-phishing-en-twitter-a-traves-de-dm" class="js-recommendation">
+       <img title="¡Cuidado! nuevos ataques de phishing en Twitter a través de DM" class="" sf-src="//i.blogs.es/c26e45/twitter-phishing/230_165.jpg" alt="¡Cuidado! nuevos ataques de phishing en Twitter a través de DM" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/230_165(2).jpg">
+      </a>
+      <a href="http://www.genbeta.com/actualidad/cuidado-nuevos-ataques-de-phishing-en-twitter-a-traves-de-dm" class="js-recommendation"><span>¡Cuidado! nuevos ataques de phishing en Twitter a través de DM</span></a>
+     </li>
+    
+     
+     
+     <li class="horizontal-related-posts" data-id="198106">
+      <a href="http://www.genbeta.com/mensajeria-instantanea/a-cubierto-telegram-esta-sufriendo-un-ataque-ddos-a-escala-global" class="js-recommendation">
+       <img title="¡A cubierto! Telegram está sufriendo un ataque DDoS a escala global" class="" sf-src="//i.blogs.es/13317e/space_invader/230_165.jpg" alt="¡A cubierto! Telegram está sufriendo un ataque DDoS a escala global" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/230_165(3).jpg">
+      </a>
+      <a href="http://www.genbeta.com/mensajeria-instantanea/a-cubierto-telegram-esta-sufriendo-un-ataque-ddos-a-escala-global" class="js-recommendation"><span>¡A cubierto! Telegram está sufriendo un ataque DDoS a escala global</span></a>
+     </li>
+    
+     
+     
+     <li class="horizontal-related-posts" data-id="207902">
+      <a href="http://www.genbeta.com/actualidad/el-ataque-contra-dyn-dns-que-sacudio-internet-fue-probablemente-obra-de-hackers-amateurs" class="js-recommendation">
+       <img title="El ataque DDoS contra Dyn DNS que sacudió Internet fue probablemente obra de hackers amateurs" class="" sf-src="//i.blogs.es/b4d174/ataque-dyn-dns/230_165.jpg" alt="El ataque DDoS contra Dyn DNS que sacudió Internet fue probablemente obra de hackers amateurs" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/230_165(4).jpg">
+      </a>
+      <a href="http://www.genbeta.com/actualidad/el-ataque-contra-dyn-dns-que-sacudio-internet-fue-probablemente-obra-de-hackers-amateurs" class="js-recommendation"><span>El ataque DDoS contra Dyn DNS que sacudió Internet fue probablemente obra de hackers amateurs</span></a>
+     </li>
+    
+     
+     
+     <li class="horizontal-related-posts" data-id="109426">
+      <a href="http://www.genbeta.com/seguridad/stuxnet-historia-del-primer-arma-de-la-ciberguerra" class="js-recommendation">
+       <img title="Stuxnet: historia del primer arma de la ciberguerra" class="" sf-src="//i.blogs.es/f2a8d7/stuxnetataque/230_165.png" alt="Stuxnet: historia del primer arma de la ciberguerra" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/230_165.png">
+      </a>
+      <a href="http://www.genbeta.com/seguridad/stuxnet-historia-del-primer-arma-de-la-ciberguerra" class="js-recommendation"><span>Stuxnet: historia del primer arma de la ciberguerra</span></a>
+     </li>
+    
+     
+     
+     <li class="horizontal-related-posts" data-id="115961">
+      <a href="http://www.genbeta.com/mensajeria-instantanea/telegram-sufre-un-ataque-de-denegacion-de-servicio-que-imposibilita-la-conexion-de-sus-usuarios" class="js-recommendation">
+       <img title="Telegram sufre un ataque de denegación de servicio que imposibilita la conexión de sus usuarios" class="" sf-src="//i.blogs.es/ac6f25/650_1000_teclado/230_165.png" alt="Telegram sufre un ataque de denegación de servicio que imposibilita la conexión de sus usuarios" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/230_165(5).png">
+      </a>
+      <a href="http://www.genbeta.com/mensajeria-instantanea/telegram-sufre-un-ataque-de-denegacion-de-servicio-que-imposibilita-la-conexion-de-sus-usuarios" class="js-recommendation"><span>Telegram sufre un ataque de denegación de servicio que imposibilita la conexión de sus usuarios</span></a>
+     </li>
+    
+   </ul>
+  </div>
+ </section>
+
+</div>
+  <script>
+    window.WSLModules = window.WSLModules || {};
+    WSLModules.recommendation = {'moduleConf' : 'Amplify'};
+    __gaTracker('send', 'event', 'recommendation' + WSLModules.recommendation.moduleConf, 'view', {'nonInteraction': 1});
+  </script>
+                 <script type="text/javascript">
+(function() {
+ var lazyElements    = document.getElementsByClassName('sf-lazy')
+ ,   disableDesktopLazyLoading = "1"
+ ,   srcsetSupported = false
+ ,   threshold;
+
+ if (!/Edge\/\d+/.test(navigator.userAgent)) {
+  srcsetSupported = 'srcset' in document.createElement('img');
+ }
+
+ function updateAttributes(element) {
+  if (element.hasAttribute('sf-srcset')) {
+   element.setAttribute('srcset', element.getAttribute('sf-srcset'));
+  }
+  if (element.hasAttribute('sf-src')) {
+   element.setAttribute('src', element.getAttribute('sf-src'));
+  }
+  element.classList.remove('sf-lazy');
+ }
+
+ threshold = (window.innerHeight || document.documentElement.clientHeight) + 100;
+ function lazyLoad() {
+  var coords, element, i, isVisible;
+  if (0 == lazyElements.length) {
+   document.removeEventListener('scroll', lazyLoad);
+   return false;
+  }
+
+  for (i = 0; i < lazyElements.length; i++) {
+   element = lazyElements[i];
+   coords = element.getBoundingClientRect();
+   isVisible = (coords.top >= 0 && coords.left >= 0 && coords.top) <= threshold;
+   if (isVisible) {
+    updateAttributes(element);
+   }
+  }
+ }
+
+ if (srcsetSupported) {
+  if ('1' == disableDesktopLazyLoading) {
+   while(lazyElements.length > 0) {
+    updateAttributes(lazyElements[0]);
+   }
+  } else {
+   document.addEventListener('scroll', lazyLoad);
+   lazyLoad();
+  }
+ }
+})();
+</script>                 <script>
+ window.WSLModules = window.WSLModules || {};
+ WSLModules.Comments = {
+   'moduleConf' : 'c9'
+ };
+ window.AML || (window.AML = {});
+ window.AML.Comments = {config:{'status':'open'}};
+</script>
+<a id="to-comments"></a>
+<div id="comments">
+ <div class="comment-section">
+     <div id="main-container" class="comment-section">
+  <div id="common-container">
+   <div class="comment-wrapper initial-comments" style="display:none">
+    <div class="comments-list">
+     <h2>Los mejores comentarios:</h2>
+     <ul id="initial-comments"></ul>
+    </div>
+   </div>
+   
+   <div id="comment-wrapper" class="comment-wrapper comment-wrapper-aside">
+    <div id="comments-area" class="comments-list" style="">
+     <div id="comment-header"><h2>
+  6 comentarios 
+</h2>
+<div class="comments-common-actions ">
+  <div class="context-menu comments-settings ">
+    <a id="comments-sort-button" class="btn btn-context btn-settings js-toggle" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#comments-options-menu">Opciones</a>
+    <ul id="comments-options-menu" class="context-menu-list" style="display: none;">
+      <li class="comment-actions-sort" data-orderby="valued"><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#">Ver primero mejor valorados</a></li>
+      <li class="comment-actions-sort" data-orderby="cronolog"><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#">Primero más antiguos</a></li>
+      <li class="comment-actions-sort" data-orderby="recent"><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#">Primero más recientes</a></li>
+    </ul>
+  </div>
+  <div class="article-comments-write">
+  
+    <a class="btn btn-comment js-toggle show-comment is-opened" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#comments-write-form">Escribir comentario</a>
+  
+</div>
+</div></div>
+     <div id="comments-write-form" class="comment-write-form" style="display: block;"><div><form action="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" method="post" id="commentform" onsubmit="return false">
+  <div class="comment-write-terms"><a href="http://www.genbeta.com/auth/comment-terms" target="_blank">Normas <span>de participación</span></a></div>
+  <div class="comment-write-author">
+    <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#"><img class="user-avatar" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/avatar.png" alt="Usuario"></a>
+    <a class="loginModalBox" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#"> Entra para comentar </a>
+  </div>
+  <div class="comment-write-input">
+    <textarea name="text" cols="60" rows="10" class="commentBox" required="true"></textarea>
+  </div>
+  <fieldset class="comment-write-notify">
+  <legend>Recibir por e-mail:</legend>
+  <p><input type="radio" name="notify" value="1" id="subscribe-comments"> <label for="subscribe-comments">Todos</label></p>
+  <p><input type="radio" name="notify" value="2" id="subscribe-replys"> <label for="subscribe-replys">Sólo respuestas a los míos</label></p>
+  <p><input type="radio" name="notify" checked="checked" value="0" id="subscribe-not"> <label for="subscribe-not">Nada</label> </p>
+</fieldset>
+  <div class="comment-submit">
+    <button class="btn-primary btn-disabled comment-publish" disabled="disabled">Publicar</button>
+  </div>
+</form></div></div>
+     <!-- .comment-write-form -->
+     <ul id="comments-list"><li id="c523041" class="comment-item">
+  
+
+  
+
+  <div class="comment-author">
+    <a class="comment-author-avatar" href="http://www.genbeta.com/usuario/drvy" title="Ir a la página de usuario de drvy">
+      <img class="user-avatar" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/picture" alt="Avatar de drvy">
+      
+    </a>
+    <p class="comment-author-name">
+      <a href="http://www.genbeta.com/usuario/drvy">
+        drvy
+      </a>
+    </p>
+    
+      <div class="comment-author-stars">
+        
+          <span>*</span>
+        
+          <span>*</span>
+        
+      </div>
+    
+  </div>
+
+  <div class="comment-date">
+    <a class="permanlink" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#c523041" title="Copiar enlace a este comentario">
+      <time class="comment-time" datetime="2016-11-04">4 Nov., 14:30</time>
+    </a>
+  </div>
+  <div class="comment-order"><a href="javascript:void(0);">3</a></div>
+
+  
+    <div class="comment-content blob">
+      <p></p><p>El DDoS que dejo K.O. a Twitter, Paypal.. etc.. fue efectivo solo en la costa oeste de Estados Unidos. No se porque se le exagera tanto.. desde el primer momento asociándolo a que dejo dichos servicios inactivos a nivel mundial....</p><p>Es normal que un país como Liberia se vea afectado contra un DDoS apenas tienen usuarios (30%) e infraestructura. Que lo intenten con la Europea a ver si les da.</p><p>Saludos<br>
+</p><p></p>
+    </div>
+  
+
+  <div class="comment-reply-actions">
+    
+    
+      <a class="btn-comment-reply js-toggle-reply-form" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" title="Responder a este comentario">
+        Responder
+      </a>
+    
+    
+  </div>
+
+  <div class="comment-actions">
+    <a class="btn-comment-menu js-toggle-menu" id="ca523041" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#">Menú</a>
+    <ul class="context-menu-list comment-actions-menu js-comment-actions-menu" id="c523041-comment-actions">
+      
+        
+      
+      <li class="comment-actions-abuse" title="Reportar (spam, insultos...)">
+        <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="abuse">Reportar (spam, insultos...)</a>
+      </li>
+      <li class="comment-actions-permanlink">
+        <a class="permanlink" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#c523041">Copiar enlace a este comentario</a>
+      </li>
+      
+      <li class="comment-actions-vote">
+        <span class="karma">0 votos, karma: <strong>8.00</strong></span>
+        <span class="votes">
+          <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="btn-comment-vote-up " title="Vota positivo">Vota positivo</a>
+          <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="btn-comment-vote-down " title="Vota negativo">Vota negativo</a>
+        </span>
+      </li>
+    </ul>
+  </div>
+  <div id="replyFormPlaceHolder"></div>
+</li><a class="comment-thread-close js-toggle-replies-caption" data-id="523041" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#">Cerrar respuestas</a><li id="c523049" class="comment-item comment-reply comment-reply-1">
+  
+    <div class="comment-reply-relation">
+      <img class="user-avatar" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/picture" alt="Avatar de drvy">
+      Respondiendo a
+      <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#c523041">
+        drvy
+      </a>
+    </div>
+  
+
+  
+
+  <div class="comment-author">
+    <a class="comment-author-avatar" href="http://www.genbeta.com/usuario/conspirance" title="Ir a la página de usuario de conspirance">
+      <img class="user-avatar" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/bda314b54fb688c6de702955400a337a" alt="Avatar de conspirance">
+      
+    </a>
+    <p class="comment-author-name">
+      <a href="http://www.genbeta.com/usuario/conspirance">
+        conspirance
+      </a>
+    </p>
+    
+      <div class="comment-author-stars">
+        
+          <span>*</span>
+        
+      </div>
+    
+  </div>
+
+  <div class="comment-date">
+    <a class="permanlink" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#c523049" title="Copiar enlace a este comentario">
+      <time class="comment-time" datetime="2016-11-04">4 Nov., 18:30</time>
+    </a>
+  </div>
+  <div class="comment-order"><a href="javascript:void(0);">4</a></div>
+
+  
+    <div class="comment-content blob">
+      <p></p><p>Creo que ya hubo un ataque, el de SpamHaus en UK en el 2013, que ralentizó el acceso a servicios en internet de lo población británica.</p><p>Por cierto, yo vivo en España y no podía acceder a PayPal durante los primeros momentos del ataque DDoS a Dyn, igual que no se podía usar como pasarela de pago en algunas tiendas.</p><p></p>
+    </div>
+  
+
+  <div class="comment-reply-actions">
+    
+    
+      <a class="btn-comment-reply js-toggle-reply-form" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" title="Responder a este comentario">
+        Responder
+      </a>
+    
+    
+  </div>
+
+  <div class="comment-actions">
+    <a class="btn-comment-menu js-toggle-menu" id="ca523049" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#">Menú</a>
+    <ul class="context-menu-list comment-actions-menu js-comment-actions-menu" id="c523049-comment-actions">
+      
+        
+      
+      <li class="comment-actions-abuse" title="Reportar (spam, insultos...)">
+        <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="abuse">Reportar (spam, insultos...)</a>
+      </li>
+      <li class="comment-actions-permanlink">
+        <a class="permanlink" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#c523049">Copiar enlace a este comentario</a>
+      </li>
+      
+      <li class="comment-actions-vote">
+        <span class="karma">0 votos, karma: <strong>5.00</strong></span>
+        <span class="votes">
+          <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="btn-comment-vote-up " title="Vota positivo">Vota positivo</a>
+          <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="btn-comment-vote-down " title="Vota negativo">Vota negativo</a>
+        </span>
+      </li>
+    </ul>
+  </div>
+  <div id="replyFormPlaceHolder"></div>
+</li><li id="c523026" class="comment-item">
+  
+
+  
+
+  <div class="comment-author">
+    <a class="comment-author-avatar" href="http://www.genbeta.com/usuario/pelicultista" title="Ir a la página de usuario de pelicultista">
+      <img class="user-avatar" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/fec6028de822055c99aaf4deeb31f10e" alt="Avatar de pelicultista">
+      
+    </a>
+    <p class="comment-author-name">
+      <a href="http://www.genbeta.com/usuario/pelicultista">
+        pelicultista
+      </a>
+    </p>
+    
+      <div class="comment-author-stars">
+        
+          <span>*</span>
+        
+      </div>
+    
+  </div>
+
+  <div class="comment-date">
+    <a class="permanlink" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#c523026" title="Copiar enlace a este comentario">
+      <time class="comment-time" datetime="2016-11-04">4 Nov., 10:33</time>
+    </a>
+  </div>
+  <div class="comment-order"><a href="javascript:void(0);">1</a></div>
+
+  
+    <div class="comment-content blob">
+      <p></p><p>Chicos, corregid la población de Liberia, que no es tanta tanta :)</p><p></p>
+    </div>
+  
+
+  <div class="comment-reply-actions">
+    
+    
+      <a class="btn-comment-reply js-toggle-reply-form" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" title="Responder a este comentario">
+        Responder
+      </a>
+    
+    
+  </div>
+
+  <div class="comment-actions">
+    <a class="btn-comment-menu js-toggle-menu" id="ca523026" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#">Menú</a>
+    <ul class="context-menu-list comment-actions-menu js-comment-actions-menu" id="c523026-comment-actions">
+      
+        
+      
+      <li class="comment-actions-abuse" title="Reportar (spam, insultos...)">
+        <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="abuse">Reportar (spam, insultos...)</a>
+      </li>
+      <li class="comment-actions-permanlink">
+        <a class="permanlink" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#c523026">Copiar enlace a este comentario</a>
+      </li>
+      
+      <li class="comment-actions-vote">
+        <span class="karma">0 votos, karma: <strong>5.00</strong></span>
+        <span class="votes">
+          <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="btn-comment-vote-up " title="Vota positivo">Vota positivo</a>
+          <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="btn-comment-vote-down " title="Vota negativo">Vota negativo</a>
+        </span>
+      </li>
+    </ul>
+  </div>
+  <div id="replyFormPlaceHolder"></div>
+</li><a class="comment-thread-close js-toggle-replies-caption" data-id="523026" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#">Cerrar respuestas</a><li id="c523027" class="comment-item comment-reply comment-reply-1 comment-staff">
+  
+    <div class="comment-reply-relation">
+      <img class="user-avatar" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/fec6028de822055c99aaf4deeb31f10e" alt="Avatar de pelicultista">
+      Respondiendo a
+      <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#c523026">
+        pelicultista
+      </a>
+    </div>
+  
+
+  
+
+  <div class="comment-author">
+    <a class="comment-author-avatar" href="http://www.genbeta.com/usuario/yubalfm" title="Ir a la página de usuario de Yúbal FM">
+      <img class="user-avatar" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/926749_1.png" alt="Avatar de yubalfm">
+      
+        <span class="comment-author-staff">Staff</span>
+      
+    </a>
+    <p class="comment-author-name">
+      <a href="http://www.genbeta.com/usuario/yubalfm">
+        Yúbal FM
+      </a>
+    </p>
+    
+      <div class="comment-author-stars">
+        
+          <span>*</span>
+        
+          <span>*</span>
+        
+          <span>*</span>
+        
+          <span>*</span>
+        
+      </div>
+    
+  </div>
+
+  <div class="comment-date">
+    <a class="permanlink" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#c523027" title="Copiar enlace a este comentario">
+      <time class="comment-time" datetime="2016-11-04">4 Nov., 10:40</time>
+    </a>
+  </div>
+  <div class="comment-order"><a href="javascript:void(0);">2</a></div>
+
+  
+    <div class="comment-content blob">
+      <p></p><p>Hecho, gracias :)</p><p></p>
+    </div>
+  
+
+  <div class="comment-reply-actions">
+    
+    
+      <a class="btn-comment-reply js-toggle-reply-form" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" title="Responder a este comentario">
+        Responder
+      </a>
+    
+    
+  </div>
+
+  <div class="comment-actions">
+    <a class="btn-comment-menu js-toggle-menu" id="ca523027" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#">Menú</a>
+    <ul class="context-menu-list comment-actions-menu js-comment-actions-menu" id="c523027-comment-actions">
+      
+        
+      
+      <li class="comment-actions-abuse" title="Reportar (spam, insultos...)">
+        <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="abuse">Reportar (spam, insultos...)</a>
+      </li>
+      <li class="comment-actions-permanlink">
+        <a class="permanlink" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#c523027">Copiar enlace a este comentario</a>
+      </li>
+      
+      <li class="comment-actions-vote">
+        <span class="karma">0 votos, karma: <strong>13.00</strong></span>
+        <span class="votes">
+          <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="btn-comment-vote-up " title="Vota positivo">Vota positivo</a>
+          <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="btn-comment-vote-down " title="Vota negativo">Vota negativo</a>
+        </span>
+      </li>
+    </ul>
+  </div>
+  <div id="replyFormPlaceHolder"></div>
+</li><li id="c523059" class="comment-item">
+  
+
+  
+
+  <div class="comment-author">
+    <a class="comment-author-avatar" href="http://www.genbeta.com/usuario/herpesg666" title="Ir a la página de usuario de herpesg666">
+      <img class="user-avatar" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/a2c080620628cf015b996aba8aeb040d" alt="Avatar de herpesg666">
+      
+    </a>
+    <p class="comment-author-name">
+      <a href="http://www.genbeta.com/usuario/herpesg666">
+        herpesg666
+      </a>
+    </p>
+    
+      <div class="comment-author-stars">
+        
+          <span>*</span>
+        
+      </div>
+    
+  </div>
+
+  <div class="comment-date">
+    <a class="permanlink" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#c523059" title="Copiar enlace a este comentario">
+      <time class="comment-time" datetime="2016-11-04">4 Nov., 22:29</time>
+    </a>
+  </div>
+  <div class="comment-order"><a href="javascript:void(0);">5</a></div>
+
+  
+    <div class="comment-content blob">
+      <p></p><p>Yo no estoy preocupado, si consiguen algo relevante quiza alguien haga un documental interesante (o mejor aun, una serie de documentales seria fantastico).<br>
+Como con el 11S sacaron documentales sobre el fallo estructural de las torres, sobre como la reserva federal redujo los tipos (o no se que) y como esto dio la estocada final a la burbuja inmobiliaria.<br>
+Las catastrofes son una putada, pero tan interesantes ...</p><p></p>
+    </div>
+  
+
+  <div class="comment-reply-actions">
+    
+    
+      <a class="btn-comment-reply js-toggle-reply-form" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" title="Responder a este comentario">
+        Responder
+      </a>
+    
+    
+  </div>
+
+  <div class="comment-actions">
+    <a class="btn-comment-menu js-toggle-menu" id="ca523059" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#">Menú</a>
+    <ul class="context-menu-list comment-actions-menu js-comment-actions-menu" id="c523059-comment-actions">
+      
+        
+      
+      <li class="comment-actions-abuse" title="Reportar (spam, insultos...)">
+        <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="abuse">Reportar (spam, insultos...)</a>
+      </li>
+      <li class="comment-actions-permanlink">
+        <a class="permanlink" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#c523059">Copiar enlace a este comentario</a>
+      </li>
+      
+      <li class="comment-actions-vote">
+        <span class="karma">0 votos, karma: <strong>5.00</strong></span>
+        <span class="votes">
+          <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="btn-comment-vote-up " title="Vota positivo">Vota positivo</a>
+          <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="btn-comment-vote-down " title="Vota negativo">Vota negativo</a>
+        </span>
+      </li>
+    </ul>
+  </div>
+  <div id="replyFormPlaceHolder"></div>
+</li><li id="c523073" class="comment-item">
+  
+
+  
+
+  <div class="comment-author">
+    <a class="comment-author-avatar" href="http://www.genbeta.com/usuario/oberstgruppenfuhrer" title="Ir a la página de usuario de oberstgruppenfuhrer">
+      <img class="user-avatar" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/f31d740daac98901006ab90ee2580ae8" alt="Avatar de oberstgruppenfuhrer">
+      
+    </a>
+    <p class="comment-author-name">
+      <a href="http://www.genbeta.com/usuario/oberstgruppenfuhrer">
+        oberstgruppenfuhrer
+      </a>
+    </p>
+    
+      <div class="comment-author-stars">
+        
+          <span>*</span>
+        
+      </div>
+    
+  </div>
+
+  <div class="comment-date">
+    <a class="permanlink" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#c523073" title="Copiar enlace a este comentario">
+      <time class="comment-time" datetime="2016-11-05">5 Nov., 4:52</time>
+    </a>
+  </div>
+  <div class="comment-order"><a href="javascript:void(0);">6</a></div>
+
+  
+    <div class="comment-content blob">
+      <p></p><p>En estos momentos las paginas alojadas en servidores gringos estan lentas, es un nuevo DDOS?? ya revise mi conexion, esta full<br>
+Cuenten uds que tal les va</p><p></p>
+    </div>
+  
+
+  <div class="comment-reply-actions">
+    
+    
+      <a class="btn-comment-reply js-toggle-reply-form" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" title="Responder a este comentario">
+        Responder
+      </a>
+    
+    
+  </div>
+
+  <div class="comment-actions">
+    <a class="btn-comment-menu js-toggle-menu" id="ca523073" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#">Menú</a>
+    <ul class="context-menu-list comment-actions-menu js-comment-actions-menu" id="c523073-comment-actions">
+      
+        
+      
+      <li class="comment-actions-abuse" title="Reportar (spam, insultos...)">
+        <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="abuse">Reportar (spam, insultos...)</a>
+      </li>
+      <li class="comment-actions-permanlink">
+        <a class="permanlink" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#c523073">Copiar enlace a este comentario</a>
+      </li>
+      
+      <li class="comment-actions-vote">
+        <span class="karma">0 votos, karma: <strong>5.00</strong></span>
+        <span class="votes">
+          <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="btn-comment-vote-up " title="Vota positivo">Vota positivo</a>
+          <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="btn-comment-vote-down " title="Vota negativo">Vota negativo</a>
+        </span>
+      </li>
+    </ul>
+  </div>
+  <div id="replyFormPlaceHolder"></div>
+</li></ul>
+     <div style="display: none;"></div>
+     <div id="bottom-create-comment-widget" class="article-comments-write article-comments-write-again"><div class="article-comments-write">
+  
+    <a class="btn btn-comment js-toggle show-comment is-opened" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#comments-write-form">Escribir comentario</a>
+  
+</div></div>
+     <div id="bottom-comments-write-form" class="comment-write-form" style="display: none;"><div><form action="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" method="post" id="commentform" onsubmit="return false">
+  <div class="comment-write-terms"><a href="http://www.genbeta.com/auth/comment-terms" target="_blank">Normas <span>de participación</span></a></div>
+  <div class="comment-write-author">
+    <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#"><img class="user-avatar" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/avatar.png" alt="Usuario"></a>
+    <a class="loginModalBox" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#"> Entra para comentar </a>
+  </div>
+  <div class="comment-write-input">
+    <textarea name="text" cols="60" rows="10" class="commentBox" required="true"></textarea>
+  </div>
+  <fieldset class="comment-write-notify">
+  <legend>Recibir por e-mail:</legend>
+  <p><input type="radio" name="notify" value="1" id="subscribe-comments"> <label for="subscribe-comments">Todos</label></p>
+  <p><input type="radio" name="notify" value="2" id="subscribe-replys"> <label for="subscribe-replys">Sólo respuestas a los míos</label></p>
+  <p><input type="radio" name="notify" checked="checked" value="0" id="subscribe-not"> <label for="subscribe-not">Nada</label> </p>
+</fieldset>
+  <div class="comment-submit">
+    <button class="btn-primary btn-disabled comment-publish" disabled="disabled">Publicar</button>
+  </div>
+</form></div></div>
+    </div>
+   </div>
+  </div>
+ </div>
+<script type="text/javascript">
+  window.AML || (window.AML = {});
+  window.AML.Comments || (window.AML.Comments = {});
+  AML.Comments.config.data = {"comments":[{"id":"523041","post_id":"207976","date":1478266212,"content_filtered":"<p>El DDoS que dejo K.O. a Twitter, Paypal.. etc.. fue efectivo solo en la costa oeste de Estados Unidos. No se porque se le exagera tanto.. desde el primer momento asoci\u00e1ndolo a que dejo dichos servicios inactivos a nivel mundial....<\/p><p>Es normal que un pa\u00eds como Liberia se vea afectado contra un DDoS apenas tienen usuarios (30%) e infraestructura. Que lo intenten con la Europea a ver si les da.<\/p><p>Saludos<br \/>\n<\/p>","content":"El DDoS que dejo K.O. a Twitter, Paypal.. etc.. fue efectivo solo en la costa oeste de Estados Unidos. No se porque se le exagera tanto.. desde el primer momento asoci\u00e1ndolo a que dejo dichos servicios inactivos a nivel mundial....\n\nEs normal que un pa\u00eds como Liberia se vea afectado contra un DDoS apenas tienen usuarios (30%) e infraestructura. Que lo intenten con la Europea a ver si les da.\n\nSaludos\n","karma":"8.00","parent":"0","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"106119","author":"","webpage":null,"user_name":"drvy","karma_level":"22.00","iseditor":"0","global_id":"532826","facebook_uid":"100000073477533","index":3,"avatar_type":"facebook","avatar_link":"\/\/graph.facebook.com\/100000073477533\/picture"},{"id":"523049","post_id":"207976","date":1478280603,"content_filtered":"<p>Creo que ya hubo un ataque, el de SpamHaus en UK en el 2013, que ralentiz\u00f3 el acceso a servicios en internet de lo poblaci\u00f3n brit\u00e1nica.<\/p><p>Por cierto, yo vivo en Espa\u00f1a y no pod\u00eda acceder a PayPal durante los primeros momentos del ataque DDoS a Dyn, igual que no se pod\u00eda usar como pasarela de pago en algunas tiendas.<\/p>","content":"Creo que ya hubo un ataque, el de SpamHaus en UK en el 2013, que ralentiz\u00f3 el acceso a servicios en internet de lo poblaci\u00f3n brit\u00e1nica.\n\nPor cierto, yo vivo en Espa\u00f1a y no pod\u00eda acceder a PayPal durante los primeros momentos del ataque DDoS a Dyn, igual que no se pod\u00eda usar como pasarela de pago en algunas tiendas.","karma":"5.00","parent":"523041","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"1","comment_approved":"1","comment_author":"","user_id":"132760","author":"","webpage":null,"user_name":"conspirance","karma_level":"17.00","iseditor":"0","global_id":"746676","facebook_uid":null,"index":4,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/bda314b54fb688c6de702955400a337a"},{"id":"523026","post_id":"207976","date":1478251981,"content_filtered":"<p>Chicos, corregid la poblaci\u00f3n de Liberia, que no es tanta tanta :)<\/p>","content":"Chicos, corregid la poblaci\u00f3n de Liberia, que no es tanta tanta :)","karma":"5.00","parent":"0","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"154689","author":"","webpage":null,"user_name":"pelicultista","karma_level":"1.00","iseditor":"0","global_id":"1126854","facebook_uid":null,"index":1,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/fec6028de822055c99aaf4deeb31f10e"},{"id":"523027","post_id":"207976","date":1478252406,"content_filtered":"<p>Hecho, gracias :)<\/p>","content":"Hecho, gracias :)","karma":"13.00","parent":"523026","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"1","comment_approved":"1","comment_author":"","user_id":"139639","author":"Y\u00fabal FM","webpage":null,"user_name":"yubalfm","karma_level":"72.00","iseditor":"1","global_id":"926749","facebook_uid":null,"index":2,"avatar_type":"wsl","avatar_link":"\/\/img.weblogssl.com\/avatar\/mini\/926749_1.png"},{"id":"523059","post_id":"207976","date":1478294995,"content_filtered":"<p>Yo no estoy preocupado, si consiguen algo relevante quiza alguien haga un documental interesante (o mejor aun, una serie de documentales seria fantastico).<br \/>\nComo con el 11S sacaron documentales sobre el fallo estructural de las torres, sobre como la reserva federal redujo los tipos (o no se que) y como esto dio la estocada final a la burbuja inmobiliaria.<br \/>\nLas catastrofes son una putada, pero tan interesantes ...<\/p>","content":"Yo no estoy preocupado, si consiguen algo relevante quiza alguien haga un documental interesante (o mejor aun, una serie de documentales seria fantastico).\nComo con el 11S sacaron documentales sobre el fallo estructural de las torres, sobre como la reserva federal redujo los tipos (o no se que) y como esto dio la estocada final a la burbuja inmobiliaria.\nLas catastrofes son una putada, pero tan interesantes ...","karma":"5.00","parent":"0","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"137481","author":"","webpage":null,"user_name":"herpesg666","karma_level":"17.00","iseditor":"0","global_id":"894103","facebook_uid":null,"index":5,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/a2c080620628cf015b996aba8aeb040d"},{"id":"523073","post_id":"207976","date":1478317961,"content_filtered":"<p>En estos momentos las paginas alojadas en servidores gringos estan lentas, es un nuevo DDOS?? ya revise mi conexion, esta full<br \/>\nCuenten uds que tal les va<\/p>","content":"En estos momentos las paginas alojadas en servidores gringos estan lentas, es un nuevo DDOS?? ya revise mi conexion, esta full\nCuenten uds que tal les va","karma":"5.00","parent":"0","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"153763","author":"","webpage":null,"user_name":"oberstgruppenfuhrer","karma_level":"5.00","iseditor":"0","global_id":"1088262","facebook_uid":null,"index":6,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/f31d740daac98901006ab90ee2580ae8"}],"meta":{"more_records":"false","start":0,"total":6,"order":"valued","totalCount":6,"commentStatus":"open"}};
+  AML.Comments.config.postId = 207976;
+  AML.Comments.config.enableSocialShare = "0";
+  AML.Comments.config.campaignDate = "22_Nov_2016";
+  AML.Comments.config.enableImageUploading = "0";
+</script>
+ </div>
+</div>
+               </article>
+                           <div class="ad ad-cen2">
+ <div class="ad-box" id="div-gpt-cen2" data-google-query-id="" style="display: none;">
+  <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="ad-contact">Publicidad</a>
+  <script type="text/javascript">
+       googletag.display("div-gpt-cen2");
+     </script>
+ </div>
+</div>
+                                         <section id="editorialRecommendedPosts" class="section-related">
+
+ <div class="post-related-posts articles-full-width">
+  <p class="post-related-xatakamagnet-title">Recomendado en Magnet</p>
+  <div class="post-related-content">
+   <ul>
+    
+     
+     <li class="horizontal-related-posts">
+      <a href="http://magnet.xataka.com/preguntas-no-tan-frecuentes/esta-calculadora-que-te-permite-prever-que-necesitas-para-sobrevivir-a-un-desastre-apocaliptico?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=editorial_recommendation_section">
+       <img title="Esta calculadora alimenticia te permite prever qué necesitas para sobrevivir a un desastre apocalíptico" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/230_165(6).jpg" alt="Esta calculadora alimenticia te permite prever qué necesitas para sobrevivir a un desastre apocalíptico">
+      </a>
+      <a href="http://magnet.xataka.com/preguntas-no-tan-frecuentes/esta-calculadora-que-te-permite-prever-que-necesitas-para-sobrevivir-a-un-desastre-apocaliptico?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=editorial_recommendation_section"><span>Esta calculadora alimenticia te permite prever qué necesitas para sobrevivir a un desastre apocalíptico</span></a>
+      </li>
+    
+     
+     <li class="horizontal-related-posts">
+      <a href="http://magnet.xataka.com/idolos-de-hoy-y-siempre/la-ultima-y-quiza-mejor-version-de-bizarre-love-triangle-es-jazz-y-te-va-a-arreglar-la-semana?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=editorial_recommendation_section">
+       <img title="&#39;Bizarre Love Triangle&#39;, la canción camino de las 1.000 versiones, es ahora jazz y te va a arreglar la semana" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/230_165(7).jpg" alt="&#39;Bizarre Love Triangle&#39;, la canción camino de las 1.000 versiones, es ahora jazz y te va a arreglar la semana">
+      </a>
+      <a href="http://magnet.xataka.com/idolos-de-hoy-y-siempre/la-ultima-y-quiza-mejor-version-de-bizarre-love-triangle-es-jazz-y-te-va-a-arreglar-la-semana?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=editorial_recommendation_section"><span>'Bizarre Love Triangle', la canción camino de las 1.000 versiones, es ahora jazz y te va a arreglar la semana</span></a>
+      </li>
+    
+     
+     <li class="horizontal-related-posts">
+      <a href="http://magnet.xataka.com/un-mundo-fascinante/el-avion-mas-grande-del-mundo-aterrizando-durante-una-tormenta-es-lo-mas-impresionante-que-veras-hoy?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=editorial_recommendation_section">
+       <img title="El avión más grande del mundo aterrizando durante una tormenta es lo más impresionante que verás hoy" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/230_165(8).jpg" alt="El avión más grande del mundo aterrizando durante una tormenta es lo más impresionante que verás hoy">
+      </a>
+      <a href="http://magnet.xataka.com/un-mundo-fascinante/el-avion-mas-grande-del-mundo-aterrizando-durante-una-tormenta-es-lo-mas-impresionante-que-veras-hoy?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=editorial_recommendation_section"><span>El avión más grande del mundo aterrizando durante una tormenta es lo más impresionante que verás hoy</span></a>
+      </li>
+    
+     
+     <li class="horizontal-related-posts">
+      <a href="http://magnet.xataka.com/en-diez-minutos/twitter-ese-sitio-donde-ya-no-te-trollean-te-mandan-fotos-de-pistolas-como-amenaza?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=editorial_recommendation_section">
+       <img title="Twitter, ese sitio donde ya no te trollean, te mandan fotos de pistolas como amenaza" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/230_165(9).jpg" alt="Twitter, ese sitio donde ya no te trollean, te mandan fotos de pistolas como amenaza">
+      </a>
+      <a href="http://magnet.xataka.com/en-diez-minutos/twitter-ese-sitio-donde-ya-no-te-trollean-te-mandan-fotos-de-pistolas-como-amenaza?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=editorial_recommendation_section"><span>Twitter, ese sitio donde ya no te trollean, te mandan fotos de pistolas como amenaza</span></a>
+      </li>
+    
+   </ul>
+  </div>
+ </div>
+<img src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/abtest(2).png" style="display: none;"></section>
+                                       <div class="ad ad-bot">
+ <div class="ad-box" id="div-gpt-bot2" data-google-query-id="" style="display: none;">
+  <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="ad-contact">Publicidad</a>
+  <script type="text/javascript">
+       googletag.display("div-gpt-bot2");
+     </script>
+ </div>
+</div>
+                     </main>
+      <section id="sections" class="head-menu-container head-menu-sections">
+ <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#sections" class="head-menu-toggler js-toggle"></a>
+ <div class="head-menu">
+  <noscript>
+   &lt;a href="#start" class="close close-corner"&gt;Inicio&lt;/a&gt;
+  </noscript>
+             <div id="sections-search">     <div class="head-menu-search">      <div class="head-search-form js-search-form">       <input id="search-field-1" type="text" placeholder="Buscar en Genbeta" class="search-container-1" data-container="#search-container-1">       <button class="head-search-button js-search-button" data-field="#search-field-1">Buscar</button>      </div>     </div></div>
+   <script type="text/javascript">
+    document.getElementById("sections-search").innerHTML = '\
+     <div class="head-menu-search">\
+      <div class="head-search-form js-search-form">\
+       <input id="search-field-1" type="text" placeholder="Buscar en Genbeta" class="search-container-1" data-container="#search-container-1">\
+       <button class="head-search-button js-search-button" data-field="#search-field-1">Buscar</button>\
+      </div>\
+     </div>';
+   </script>
+    <div id="search-container-1" class="js-search-results"></div>
+    <nav class="head-menu-categories">
+    <ul>
+           <li><a class="head-list-item js-track-header-event" href="http://www.genbeta.com/categoria/actualidad">Actualidad</a></li>           <li><a class="head-list-item js-track-header-event" href="http://www.genbeta.com/categoria/linux">Linux</a></li>           <li><a class="head-list-item js-track-header-event" href="http://www.genbeta.com/categoria/movil">Móvil</a></li>           <li><a class="head-list-item js-track-header-event" href="http://www.genbeta.com/categoria/windows">Windows</a></li>           <li><a class="head-list-item js-track-header-event" href="http://www.genbeta.com/categoria/herramientas">Herramientas</a></li>                <li><a class="head-list-item js-track-header-event" href="http://www.genbeta.com/tag/deep-web">Deep web</a></li>           <li><a class="head-list-item js-track-header-event" href="http://www.genbeta.com/tag/cazadores-de-fakes">Cazadores de Fakes</a></li>           <li><a class="head-list-item js-track-header-event" href="http://www.genbeta.com/tag/cursos-online-gratuitos">Cursos online gratuitos</a></li>           <li><a class="head-list-item js-track-header-event" href="http://www.genbeta.com/tag/nuevo-windows-10">Nuevo Windows 10</a></li>           <li><a class="head-list-item js-track-header-event" href="http://www.genbeta.com/tag/bloqueo-a-the-pirate-bay-en-espana">Bloqueo a The Pirate Bay en España</a></li>         </ul>
+    <p class="head-more-item">
+     <a href="http://www.genbeta.com/archivos" class="btn js-track-header-event">Ver más temas</a>
+    </p>
+  </nav>
+  <aside class="head-menu-follow">
+   <span class="head-item-meta">Síguenos</span>
+   <ul>
+    <li><a href="http://twitter.com/genbeta" class="icon-twitter link-twitter js-track-header-event">Twitter</a></li>
+    <li><a href="http://www.facebook.com/pages/Genbeta/54999640934" class="icon-facebook link-facebook js-track-header-event">Facebook</a></li>
+         <li><a href="http://www.youtube.com/user/XatakaTv" class="icon-youtube link-youtube js-track-header-event">Youtube</a></li>
+                        <li><a href="http://www.genbeta.com/index.xml" class="icon-rss link-rss js-track-header-event">RSS</a></li>
+        <li id="sections-newsletter">  <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#head-menu-newsletter" class="icon-email link-email js-toggle-subscribe">E-mail</a></li>
+   </ul>
+  </aside>
+  <section id="head-menu-newsletter" class="head-menu-newsletter">
+   <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#head-menu-newsletter" class="close close-corner js-toggle-subscribe"></a>
+   <form class="newsletter-form head-newsletter-form js-subscription" method="post" data-url="http://mailer.weblogssl.com/subscribe_check/#email#/genbeta/Genbeta" data-id="#head-menu-newsletter">
+    <h3 class="newsletter-heading">Recibe un email al día con los artículos de Genbeta: </h3>
+    <p><input class="newsletter-input js-email" type="email" placeholder="Tu correo electrónico">
+    <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>
+   </form>
+  </section>
+  <nav class="head-menu-extras">
+   <ul class="head-list">
+         <li><a class="head-list-item section-respuestas js-track-header-event" href="http://www.genbeta.com/respuestas">Genbeta Respuestas</a></li>             <li><a class="head-list-item section-tv js-track-header-event" href="http://www.youtube.com/user/XatakaTv">Xataka
+      <span>TV</span>
+    </a></li>
+     
+    <li><a class="head-list-item section-lomejor js-track-header-event" href="http://www.genbeta.com/lomejor">Lo mejor</a></li>
+    <li><a class="head-list-item section-staff js-track-header-event" href="http://www.genbeta.com/quienes-somos">Equipo editorial</a></li>
+    <li><a class="head-list-item section-contact js-track-header-event" href="http://www.genbeta.com/contacto">Contacta con nosotros</a></li>
+    <div id="sections-login">  <span id="login"><li>
+  <a class="head-list-item section-login" id="openLogin" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#nav-login">
+    Entra o Regístrate
+  </a>
+</li></span></div>
+   </ul>
+  </nav>
+     <aside class="head-menu-external">
+    <p class="nav-heading">Más sitios que te gustarán</p>
+    <ul>
+           <li><a class="head-list-item js-track-header-event" href="http://www.xataka.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka</a></li>           <li><a class="head-list-item js-track-header-event" href="http://www.vidaextra.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Vidaextra</a></li>           <li><a class="head-list-item js-track-header-event" href="http://www.blogdecine.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Blog de cine</a></li>           <li><a class="head-list-item js-track-header-event" href="http://www.applesfera.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Applesfera</a></li>           <li><a class="head-list-item js-track-header-event" href="http://www.xatakandroid.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Android</a></li>           <li><a class="head-list-item js-track-header-event" href="http://www.vayatele.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Vaya Tele</a></li>         </ul>
+   </aside>
+    <div class="head-menu-channels">
+   <h3>Explora en Weblogs SL</h3>
+   <ul>
+         <li><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#head-channel-tecnologia" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Tecnología
+        <span class="head-item-meta m-desc">Móviles, tablets, aplicaciones, videojuegos, fotografía, domótica...</span></a><ul id="head-channel-tecnologia" class="head-channel-list"><li><a class="head-list-item tec-xataka js-track-header-event" href="http://www.xataka.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka</a></li><li><a class="head-list-item tec-xatakamovil js-track-header-event" href="http://www.xatakamovil.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Móvil</a></li><li><a class="head-list-item tec-xatakafoto js-track-header-event" href="http://www.xatakafoto.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Foto</a></li><li><a class="head-list-item tec-xatakandroid js-track-header-event" href="http://www.xatakandroid.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Android</a></li><li><a class="head-list-item tec-xatakahome js-track-header-event" href="http://www.xatakahome.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Smart Home</a></li><li><a class="head-list-item tec-xatakawindows js-track-header-event" href="http://www.xatakawindows.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Windows</a></li><li><a class="head-list-item tec-xatakaciencia js-track-header-event" href="http://www.xatakaciencia.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Ciencia</a></li><li><a class="head-list-item tec-applesfera js-track-header-event" href="http://www.applesfera.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Applesfera</a></li><li><a class="head-list-item tec-vidaextra js-track-header-event" href="http://www.vidaextra.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Vida Extra</a></li><li><a class="head-list-item tec-genbeta js-track-header-event" href="http://www.genbeta.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Genbeta</a></li><li><a class="head-list-item tec-genbetadev js-track-header-event" href="http://www.genbetadev.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Genbeta Dev</a></li><li><a class="head-list-item tec-magnet js-track-header-event" href="http://magnet.xataka.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Magnet</a></li><li><a class="head-list-item tec-compradiccion js-track-header-event" href="http://compradiccion.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Compradiccion</a></li><li><a class="head-list-item tec-xatakaesports js-track-header-event" href="http://esports.xataka.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka eSports</a></li></ul></li>         <li><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#head-channel-Estilodevida" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Estilo de vida
+        <span class="head-item-meta m-desc">Moda, belleza, estilo, salud, fitness, familia, gastronomía, decoración, famosos...</span></a><ul id="head-channel-Estilodevida" class="head-channel-list"><li><a class="head-list-item est-trendencias js-track-header-event" href="http://www.trendencias.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias</a></li><li><a class="head-list-item est-trendenciasbelleza js-track-header-event" href="http://belleza.trendencias.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias Belleza</a></li><li><a class="head-list-item est-trendenciashombre js-track-header-event" href="http://www.trendenciashombre.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias Hombre</a></li><li><a class="head-list-item est-directoalpaladar js-track-header-event" href="http://www.directoalpaladar.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Directo al Paladar</a></li><li><a class="head-list-item est-bebesymas js-track-header-event" href="http://www.bebesymas.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Bebés y Más</a></li><li><a class="head-list-item est-vitonica js-track-header-event" href="http://www.vitonica.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Vitónica</a></li><li><a class="head-list-item est-decoesfera js-track-header-event" href="http://decoracion.trendencias.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Decoesfera</a></li><li><a class="head-list-item est-embelezzia js-track-header-event" href="http://www.embelezzia.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Embelezzia</a></li><li><a class="head-list-item est-poprosa js-track-header-event" href="http://www.poprosa.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Poprosa</a></li></ul></li>         <li><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#head-channel-motor" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Motor
+        <span class="head-item-meta m-desc">Coches, competición, motos, vehículos eléctricos, híbridos...</span></a><ul id="head-channel-motor" class="head-channel-list"><li><a class="head-list-item mot-motorpasion js-track-header-event" href="http://www.motorpasion.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión</a></li><li><a class="head-list-item mot-motorpasionmoto js-track-header-event" href="http://www.motorpasionmoto.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión Moto</a></li><li><a class="head-list-item mot-motorpasionfuturo js-track-header-event" href="http://www.motorpasionfuturo.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión Futuro</a></li></ul></li>         <li><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#head-channel-ocio" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Ocio
+        <span class="head-item-meta m-desc">Televisión, series, cine, estrenos, viajes, literatura...</span></a><ul id="head-channel-ocio" class="head-channel-list"><li><a class="head-list-item oci-blogdecine js-track-header-event" href="http://www.blogdecine.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Blog de Cine</a></li><li><a class="head-list-item oci-vayatele js-track-header-event" href="http://www.vayatele.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">¡Vaya Tele!</a></li><li><a class="head-list-item oci-diariodelviajero js-track-header-event" href="http://www.diariodelviajero.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Diario del Viajero</a></li><li><a class="head-list-item oci-papelenblanco js-track-header-event" href="http://www.papelenblanco.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Papel en Blanco</a></li></ul></li>         <li><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#head-channel-economia" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Economía
+        <span class="head-item-meta m-desc">Finanzas, mundo de la empresa, autónomos, fiscalidad, administración, recursos humanos...</span></a><ul id="head-channel-economia" class="head-channel-list"><li><a class="head-list-item eco-elblogsalmon js-track-header-event" href="http://www.elblogsalmon.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">El Blog Salmón</a></li><li><a class="head-list-item eco-pymesyautonomos js-track-header-event" href="http://www.pymesyautonomos.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Pymes y Autónomos</a></li><li><a class="head-list-item eco-ahorrodiario js-track-header-event" href="http://www.ahorrodiario.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Ahorro Diario</a></li></ul></li>         <li><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#head-channel-latinoamerica" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Latinoamérica
+        <span class="head-item-meta m-desc">Publicaciones de México, Colombia...</span></a><ul id="head-channel-latinoamerica" class="head-channel-list"><li><a class="head-list-item tec-xataka js-track-header-event" href="http://www.xataka.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka México</a></li><li><a class="head-list-item mot-motorpasion js-track-header-event" href="http://www.motorpasion.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión México</a></li><li><a class="head-list-item est-directoalpaladar js-track-header-event" href="http://www.directoalpaladar.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Directo Al Paladar México</a></li><li><a class="head-list-item tec-xatakandroid js-track-header-event" href="http://www.xatakandroid.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Android México</a></li><li><a class="head-list-item tec-vidaextra js-track-header-event" href="http://www.vidaextra.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Vida Extra México</a></li><li><a class="head-list-item est-vitonica js-track-header-event" href="http://www.vitonica.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Vitónica México</a></li><li><a class="head-list-item est-trendenciashombre js-track-header-event" href="http://www.trendenciashombre.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias Hombre México</a></li><li><a class="head-list-item tec-xataka js-track-header-event" href="http://www.xataka.com.co/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Colombia</a></li></ul></li>         <li><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#head-channel-mediosparaclientes" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Medios para clientes
+        <span class="head-item-meta m-desc">Publicaciones para otras marcas y partners...</span></a><ul id="head-channel-mediosparaclientes" class="head-channel-list"><li><a class="head-list-item  js-track-header-event" href="http://www.circulaseguro.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Circula Seguro</a></li><li><a class="head-list-item  js-track-header-event" href="http://www.circulaseguro.pt/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Circula Seguro PT</a></li><li><a class="head-list-item  js-track-header-event" href="http://www.nobbot.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Nobbot</a></li><li><a class="head-list-item  js-track-header-event" href="http://blog.cocacola.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Happing Magazine</a></li><li><a class="head-list-item  js-track-header-event" href="http://blog.sage.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Sage Experience</a></li><li><a class="head-list-item  js-track-header-event" href="http://www.optimismodigital.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Optimismo Digital</a></li><li><a class="head-list-item  js-track-header-event" href="http://www.ennaranja.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">En Naranja</a></li><li><a class="head-list-item  js-track-header-event" href="http://blogginzenith.zenithmedia.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Bloggin Zenith</a></li><li><a class="head-list-item  js-track-header-event" href="http://www.tecnologiadetuatu.elcorteingles.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Tecnología de tú a tú</a></li><li><a class="head-list-item  js-track-header-event" href="http://mimundo.philips.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Mi Mundo Philips</a></li><li><a class="head-list-item  js-track-header-event" href="http://www.bloglenovo.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Blog Lenovo</a></li><li><a class="head-list-item  js-track-header-event" href="http://muysaludable.sanitas.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Muy Saludable de Sanitas</a></li><li><a class="head-list-item  js-track-header-event" href="http://zona.cocacola.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Zona Coca-Cola</a></li><li><a class="head-list-item  js-track-header-event" href="http://www.hipercor.es/descubre/ideas-para-comer?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Hipercor: Ideas para comer</a></li><li><a class="head-list-item  js-track-header-event" href="http://www.bluebbva.com/bluemagazine?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Bluemagazine</a></li><li><a class="head-list-item  js-track-header-event" href="https://www.segurosdetuatu.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Seguros de tú a tú</a></li><li><a class="head-list-item corrienteelectrica js-track-header-event" href="http://corrienteelectrica.renault.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Corriente Eléctrica</a></li></ul></li>       </ul>
+  </div>
+  <nav class="head-menu-links">
+   <ul class="head-list">
+    <li><a class="head-list-item js-track-header-event" href="http://www.weblogssl.com/contenidos">Condiciones de uso</a></li>
+    <li><a class="head-list-item js-track-header-event" href="http://www.weblogssl.com/aviso">Aviso legal</a></li>
+    <li><a class="head-list-item js-track-header-event" href="http://www.socialmediasl.com/servicios/acciones-en-nuestros-medios">Publicidad</a></li>
+   </ul>
+  </nav>
+ </div>
+</section>
+<script type="text/javascript">
+ document.getElementById("sections-login").innerHTML = '\
+  <span id="login">\
+   <li><a class="head-list-item section-login js-menu-toggle" id="openLogin" href="#nav-login">Entra o Regístrate</a></li>\
+  </span>';
+ document.getElementById("sections-newsletter").innerHTML = '\
+  <a href="#head-menu-newsletter" class="icon-email link-email js-toggle-subscribe">E-mail</a>';
+</script>
+<section id="headlines" class="head-menu-container head-menu-new">
+ <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#headlines" class="head-menu-toggler js-toggle"></a>
+ <div class="head-menu">
+  <noscript>
+   &lt;a href="#start" class="close close-corner"&gt;Inicio&lt;/a&gt;
+  </noscript>
+     <div class="head-menu-editorspick">
+    <p class="nav-heading">No te pierdas</p>
+     <a class="js-track-header-event" href="http://www.genbeta.com/seguridad/que-son-las-botnets-y-por-que-se-usaron-en-el-ataque-ddos-del-viernes">Qué son las botnets y por qué son un peligro creciente</a>
+   </div>
+    <p class="nav-heading">Reciente</p>
+  <ul id="recent-posts">
+    <li><a href="http://www.genbeta.com/linux/fedora-25-workstation-ya-esta-disponible-estas-son-sus-novedades" class="head-new-item">
+ Fedora 25 Workstation ya está disponible, estas son sus novedades
+ <span class="head-item-meta"><time class="js-header-post" datetime="1479826871">hace 2 horas</time></span></a></li> <li><a href="http://www.xataka.com/n/ensenar-moral-a-las-maquinas-el-gran-reto-del-coche-autonomo?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=headlines_reciente" class="head-new-item m-crosspost">
+ Enseñar moral a las máquinas: el gran reto del coche autónomo  
+ <span class="head-item-meta">
+  en Xataka <time class="js-header-post" datetime="1479827303">hace 2 horas</time></span></a></li> <li><a href="http://www.genbeta.com/actualidad/netflix-se-salta-tu-adblocker-con-su-nueva-campana-publicitaria-y-lo-hace-gracias-a-adblock-plus" class="head-new-item">
+ Netflix estrena campaña publicitaria para usuarios de adblocking con Black Mirror como reclamo
+ <span class="head-item-meta"><time class="js-header-post" datetime="1479824471">hace 2 horas</time></span></a></li> <li><a href="http://www.genbeta.com/a-fondo/15-de-las-mejores-aplicaciones-disenadas-para-windows-10" class="head-new-item">
+ 15 de las mejores aplicaciones diseñadas para Windows 10
+ <span class="head-item-meta"><time class="js-header-post" datetime="1479823271">hace 3 horas</time></span></a></li> <li><a href="http://www.genbeta.com/paso-a-paso/como-ver-netflix-en-4k-desde-windows-10" class="head-new-item">
+ Cómo ver Netflix en 4K desde Windows 10
+ <span class="head-item-meta"><time class="js-header-post" datetime="1479815198">hace 5 horas</time></span></a></li> <li><a href="http://www.genbeta.com/linux/que-motiva-a-aquellos-que-crean-nuevas-distribuciones-linux" class="head-new-item m-republish"><span class="head-new-video-desc">¿Qué motiva a aquellos que crean nuevas distribuciones Linux?</span><span class="head-item-meta">
+             Por si te lo perdiste
+           </span></a></li> <li><a href="http://www.genbeta.com/redes-sociales-y-comunidades/facebook-quiere-poder-mostrarte-lo-cerca-que-estas-de-redes-wifi-publicas-y-gratuitas" class="head-new-item">
+ Facebook quiere poder mostrarte lo cerca que estás de redes WiFi públicas y gratuitas 
+ <span class="head-item-meta"><time class="js-header-post" datetime="1479799870">hace 9 horas</time></span></a></li> <li><a href="http://www.genbeta.com/actualidad/vivaldi-recibe-su-version-1-5-sincronizandose-con-smart-homes-mejorando-pestanas-y-con-un-modo-de-lectura" class="head-new-item">
+ Vivaldi recibe su versión 1.5 sincronizándose con smart-homes, mejorando pestañas y con un modo de lectura
+ <span class="head-item-meta"><time class="js-header-post" datetime="1479798072">hace 10 horas</time></span></a></li> <li><a href="http://www.genbeta.com/actualidad/evitar-multitudes-en-el-black-friday-google-maps-ahora-lo-hace-posible" class="head-new-item">
+ Google Maps te dirá a partir de ahora si una tienda está llena, (hola, Black Friday)
+ <span class="head-item-meta"><time class="js-header-post" datetime="1479752948">hace un día</time></span></a></li> <li><a href="http://www.xataka.com/streaming/el-streaming-4k-de-netflix-finalmente-esta-disponible-en-windows-10-pero-con-algunas-condiciones?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=headlines_reciente" class="head-new-item m-crosspost">
+ El streaming 4K de Netflix finalmente está disponible en Windows 10, pero con algunas condiciones 
+ <span class="head-item-meta">
+  en Xataka <time class="js-header-post" datetime="1479797726">hace 10 horas</time></span></a></li> <li><a href="http://www.genbeta.com/redes-sociales-y-comunidades/tocado-y-hundido-facebook-culmina-la-snapchatizacion-de-instagram-y-ahora-va-a-por-periscope" class="head-new-item">
+ Tocado y hundido, Facebook culmina la Snapchatización de Instagram, y ahora va a por Periscope
+ <span class="head-item-meta"><time class="js-header-post" datetime="1479749363">hace un día</time></span></a></li> <li><a href="http://www.genbeta.com/a-fondo/esclavos-de-las-5-estrellas-llegaremos-a-valorarnos-enfermizamente-como-en-black-mirror" class="head-new-item">
+ Esclavos de las 5 estrellas: ¿llegaremos a valorarnos enfermizamente como en Black Mirror? 
+ <span class="head-item-meta"><time class="js-header-post" datetime="1479744073">hace un día</time></span></a></li> <li><a href="http://www.genbeta.com/a-fondo/estas-son-las-mejores-ofertas-de-software-apps-y-cursos-para-el-black-friday-ya-disponibles" class="head-new-item">
+ Estas son las mejores ofertas de software, apps y cursos para el Black Friday ya disponibles
+ <span class="head-item-meta"><time class="js-header-post" datetime="1479740471">hace un día</time></span></a></li> <li><a href="http://www.genbeta.com/actualidad/los-ninos-ya-pasan-mas-tiempo-en-internet-que-viendo-la-tele" class="head-new-item">
+ Los niños ya pasan más tiempo en Internet que viendo la tele
+ <span class="head-item-meta"><time class="js-header-post" datetime="1479736870">hace un día</time></span></a></li> <li><a href="http://www.genbeta.com/linux/zorin-os-la-distro-linux-que-se-quiere-parecer-a-windows-10" class="head-new-item">
+ Zorin OS, la distro Linux que se quiere parecer a Windows 10
+ <span class="head-item-meta"><time class="js-header-post" datetime="1479735069">hace un día</time></span></a></li> <li><a href="http://www.genbeta.com/actualidad/cuidado-con-el-imitador-google-com-y-google-com-parecen-iguales-pero-no-lo-son" class="head-new-item">
+ Cuidado con el imitador: ɢoogle.com y Google.com parecen iguales pero no lo son
+ <span class="head-item-meta"><time class="js-header-post" datetime="1479731602">hace un día</time></span></a></li> <li><a href="http://www.genbeta.com/a-fondo/esto-es-lo-que-te-puedes-encontrar-en-respuestas-ocultas-el-yahoo-respuestas-de-la-darknet" class="head-new-item m-republish"><span class="head-new-video-desc">'Respuestas Ocultas', así es el Yahoo Respuestas de la Darknet</span><span class="head-item-meta">
+             Por si te lo perdiste
+           </span></a></li> <li><a href="http://www.genbeta.com/actualidad/obama-explica-por-que-estados-unidos-no-puede-perdonar-a-snowden" class="head-new-item">
+ Obama explica por qué Estados Unidos no puede perdonar a Snowden
+ <span class="head-item-meta"><time class="js-header-post" datetime="1479714068">hace un día</time></span></a></li> <li><a href="http://www.genbeta.com/actualidad/los-hackers-espanoles-se-llevan-la-champions-league-de-la-ciberseguridad" class="head-new-item">
+ Los hackers españoles se llevan la 'Champions League' de la ciberseguridad
+ <span class="head-item-meta"><time class="js-header-post" datetime="1479711088">hace un día</time></span></a></li> <li><a href="http://www.genbeta.com/herramientas/predictiveworld-o-como-predecir-tu-futuro-gracias-al-big-data" class="head-new-item">
+ Predictiveworld o cómo “predecir tu futuro” gracias al Big Data
+ <span class="head-item-meta"><time class="js-header-post" datetime="1479661271">hace 2 días</time></span></a></li>  </ul>
+  <p class="head-more-item"><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="btn" id="view-more" data-blog="genbeta">Ver más artículos</a></p>
+     <div class="head-menu-video">
+    <p class="nav-heading"> Xataka 
+     <span>TV</span>
+    </p>
+    <ul id="recent-videos">
+          <li><a href="http://www.xataka.com/analisis/oneplus-3t-analisis-una-renovacion-a-medio-camino-que-merece-la-pena" class="head-new-item"><span class="head-new-video-thumb"><img alt="OnePlus 3T, review" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/mqdefault.jpg"></span><span class="head-new-video-desc">OnePlus 3T, review</span></a></li> 
+     <li><a href="http://www.xataka.com/analisis/nes-mini-analisis-perfecta-emulacion-de-clasicos-de-nintendo-hasta-en-la-necesidad-de-sentarte-a-1-metro-del-televisor" class="head-new-item"><span class="head-new-video-thumb"><img alt="NES Mini, review" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/mqdefault(1).jpg"></span><span class="head-new-video-desc">NES Mini, review</span></a></li> 
+     <li><a href="http://www.xataka.com/analisis/ps4-pro-analisis-el-juego-a-4k-por-399-euros-tiene-letra-pequena" class="head-new-item"><span class="head-new-video-thumb"><img alt="PS4 Pro, review" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/mqdefault(2).jpg"></span><span class="head-new-video-desc">PS4 Pro, review</span></a></li> 
+    </ul>
+    <p class="head-more-item"><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="btn" id="view-more-videos" data-blog="genbeta">Ver más vídeos</a></p>
+   </div>
+   </div>
+</section>
+<nav id="search" class="head-menu-container head-menu-searchapp"> <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#search" class="head-menu-toggler js-toggle"></a> <div class="head-menu">  <h2>Buscar</h2>  <div class="head-menu-search">   <div class="head-search-form js-search-form">    <input id="search-field-2" type="text" placeholder="Buscar en Genbeta" class="search-container-2" data-container="#search-container-2">    <button class="head-search-button js-search-button" data-field="#search-field-2">Buscar</button>   </div>  </div>  <section id="search-container-2" class="js-search-results"></section> </div></nav>
+<script type="text/javascript">
+ document.getElementById("search").innerHTML = '\
+ <a href="#search" class="head-menu-toggler js-toggle"></a>\
+ <div class="head-menu">\
+  <h2>Buscar</h2>\
+  <div class="head-menu-search">\
+   <div class="head-search-form js-search-form">\
+    <input id="search-field-2" type="text" placeholder="Buscar en Genbeta" class="search-container-2" data-container="#search-container-2">\
+    <button class="head-search-button js-search-button" data-field="#search-field-2">Buscar</button>\
+   </div>\
+  </div>\
+  <section id="search-container-2" class="js-search-results"></section>\
+ </div>';
+</script><nav class="nav nav-list nav-register" id="nav-twitter-register"></nav>
+<nav class="nav nav-list nav-login" id="nav-login"><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#nav-login" class="head-menu-toggler js-close-login"></a>
+<div class="head-menu">
+  <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#nav-login" class="close close-corner js-close-login"></a>
+  <form id="wsl_login_form" class="login-form" onsubmit="return false">
+    <p class="help-msg">Entra o <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#nav-register" class="js-open-register">regístrate</a> para poder guardar artículos, comentar o votar en la comunidad.</p>
+    <p id="wsl_invalid_login" class="wsl_error hide">Tu correo electrónico o tu contraseña no son correctos.</p>
+    <p>
+      <label for="wsl_ud_email">Correo electrónico:<input type="text" class="text" name="ud_username" id="wsl_ud_email" value="" tabindex="1" size="15"></label>
+      <label for="wsl_ud_pass">Contraseña: <input type="password" class="text" name="ud_pass" id="wsl_ud_pass" value="" tabindex="2" size="15"></label>
+    </p>
+    
+      <button type="submit" id="wsl_login_button" class="btn btn-primary">Entrar</button>
+      <span class="help-msg form-submit-alt">
+        <a class="js-open-recover" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#nav-recover">Recuperar contraseña</a>
+      </span>
+    
+  </form>
+  <div class="login-3rd-part">
+    <p>
+      <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="facebook-login" id="facebook_login">Entra con Facebook</a>
+      
+        <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="twitter-login" id="twitter_login">Entra con Twitter</a>
+      
+    </p>
+  </div>
+  <p id="dont_have_account_text"><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#nav-register" id="open_register" class="js-open-register">Regístrate en Genbeta</a></p>
+</div></nav>
+<nav class="nav nav-list nav-register" id="nav-register"><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#nav-register" class="head-menu-toggler js-close-register"></a>
+<div class="head-menu">
+  <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#nav-register" class="close close-corner js-close-register"></a>
+  <form id="fos_user_registration_form" class="register-form" action="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" onsubmit="return false">
+    <p class="help-msg"><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#nav-login" class="js-open-login">Entra</a> o regístrate para poder guardar artículos, comentar o votar en la comunidad.</p>
+    <p class="wsl_error" id="wsl_register_invalid" style="display: none;">El correo electrónico no tiene el formato válido.</p>
+    <p class="wsl_error" id="wsl_email_invalid" style="display: none;">El correo electrónico no tiene el formato válido.</p>
+    <p class="wsl_error" id="wsl_short_pwd" style="display: none;">La contraseña debe tener al menos 6 caracteres.</p>
+    <p class="wsl_error" id="wsl_pwd_not_match" style="display: none;">Las contraseñas no coinciden.</p>
+    <p id="wsl_check_email" style="display:none"><span id="check_username">Comprobando...</span></p>
+    <p class="mclear message status" id="nicename_not_reqd" style="display:none">Ya tienes nombre de usuario en Genbeta: <strong id="username">chavalina</strong></p>
+    <p>
+      <label for="email">Correo electrónico: <input type="text" class="required text" name="fos_user_registration_form[email]" id="wsl_email" value="" size="30"></label>
+      <label for="password">Contraseña: <input type="password" size="20" class="required text" name="fos_user_registration_form[plainPassword][first]" id="wsl_password" value="">
+      <span class="mhelp">La contraseña debe tener al menos 6 caracteres.</span></label>
+      <label for="confirm_password">Repite la contraseña: <input type="password" size="20" class="required text" name="fos_user_registration_form[plainPassword][second]" id="wsl_confirm_password" value=""></label>
+    </p>
+    <p class="wsl_error" id="wsl_invalid_username" style="display: none;">El nombre de usuario no tiene el formato válido.</p>
+    <span id="wsl_res_username"></span>
+    <p class="mclear" id="username-box">
+      <label for="username">
+        El username no puede contener menos de 3 caracteres: www.genbeta.com/usuario/ <input type="text" size="25" value="" id="wsl_username" name="user_name" class="required text ">
+        <span id="wsl_check_username" style="display: none;">Comprobando...</span>
+        <span class="mhelp">Se usa para la dirección de tu página de usuario, piénsalo bien porque <strong>no podrás cambiarlo</strong>. Mínimo 3 caracteres, se pueden usar números (pero no como carácter inicial), pero no mayúsculas, espacios, tildes o caracteres especiales.</span>
+      </label>
+    </p>
+    <p class="wsl_error" id="wsl_check_policy" style="display: none;">Debes aceptar la política de privacidad y de participación.</p>
+    <p><label for="condition_agree"><input type="checkbox" class="required" name="condition_agree" id="wsl_condition_agree" value="condition_agree"> He leído y acepto la <a target="_blank" id="politica" href="http://www.genbeta.com/aviso"><strong>politica de privacidad y de participación</strong></a>.</label></p>
+    <div class="submit-area"><button id="wsl_register_button" type="submit" class="btn btn-primary button">Regístrate</button></div>
+  </form>
+  <div class="login-3rd-part">
+    <p>
+      <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="facebook-login" id="facebook_login">Entra con Facebook</a>
+      
+        <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="twitter-login" id="twitter_login">Entra con Twitter</a>
+      
+    </p>
+  </div>
+  <p id="already_acc">¿Ya tienes cuenta? <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#nav-login" class="js-open-login">identifícate aquí</a></p>
+</div></nav>
+<nav class="nav nav-list nav-login" id="nav-recover"><a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#nav-recover" class="head-menu-toggler js-close-menu"></a>
+<div class="head-menu">
+  <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#nav-recover" class="close close-corner js-close-menu"></a>
+  <form class="login-form">
+    <p class="help-msg">Te enviaremos un correo electrónico con un enlace para recuperar tu contraseña:</p>
+    <div class="alert-error alert-block" id="alert-error" style="display: none;">Este correo electrónico no corresponde a ninguna cuenta registrada en Xataka</div>
+    <div class="alert-error alert-block" id="alert-already-sent" style="display: none;">Ya has intentado recuperar la contraseña en las últimas 24 horas, revisa tu correo y también la carpeta de <em>spam</em>.</div>
+    <p>
+      <label for="recover-email">Correo electrónico: <input type="email" class="text" name="ud_username" id="recover-email" size="15"></label>
+    </p>
+    <button type="button" id="request_password_button" class="btn btn-primary">Recuperar contraseña</button> 
+    <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="cancel-link" id="back-to-login">Cancelar</a>
+    <div class="alert-success alert-block" id="alert-success" style="display: none;">Comprueba tu correo y haz click en el enlace que te hemos enviado para elegir tu nueva contraseña. Si no encuentras nuestro mensaje, comprueba también en <em>spam</em>, por favor.</div>
+  </form>
+</div></nav>
+<nav class="nav nav-list nav-login" id="nav-pick"></nav>
+             <script>
+  window.WSLModules = window.WSLModules || {};
+  WSLModules.Footer = {'moduleConf' : 'c1'};
+</script>
+<footer class="foot">
+ <div class="wrapper foot-wrapper">
+  <div id="newsletter" class="newsletter-box"><form method="POST" class="js-subscription newsletter-form foot-newsletter-form" data-url="http://mailer.weblogssl.com/subscribe_check/#email#/genbeta/Genbeta"><p class="nav-heading">Recibe un email al día con los artículos de Genbeta: </p>   <p><input class="js-email newsletter-input" type="email" placeholder="Tu correo electrónico">   <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p></form>
+   <div class="menu-follow foot-menu-follow">
+    <span class="item-meta foot-item-meta">Síguenos</span>
+    <ul>
+     <li><a href="http://twitter.com/genbeta" class="icon-twitter link-twitter">Twitter</a></li>
+     <li><a href="http://www.facebook.com/pages/Genbeta/54999640934" class="icon-facebook link-facebook">Facebook</a></li>
+           <li><a href="http://www.youtube.com/user/XatakaTv" class="icon-youtube link-youtube">Youtube</a></li>
+                              <li><a href="http://www.genbeta.com/index.xml" class="icon-rss link-rss">RSS</a></li>
+         </ul>
+   </div>
+  </div>
+  <nav class="menu-categories foot-menu-categories">
+   <p class="nav-heading">En Genbeta hablamos de...</p>
+   <ul>
+         <li><a class="list-item foot-list-item" href="http://www.genbeta.com/categoria/actualidad">Actualidad</a></li>         <li><a class="list-item foot-list-item" href="http://www.genbeta.com/categoria/linux">Linux</a></li>         <li><a class="list-item foot-list-item" href="http://www.genbeta.com/categoria/movil">Móvil</a></li>         <li><a class="list-item foot-list-item" href="http://www.genbeta.com/categoria/windows">Windows</a></li>         <li><a class="list-item foot-list-item" href="http://www.genbeta.com/categoria/herramientas">Herramientas</a></li>             <li><a class="list-item foot-list-item" href="http://www.genbeta.com/tag/deep-web">Deep web</a></li>         <li><a class="list-item foot-list-item" href="http://www.genbeta.com/tag/cazadores-de-fakes">Cazadores de Fakes</a></li>         <li><a class="list-item foot-list-item" href="http://www.genbeta.com/tag/cursos-online-gratuitos">Cursos online gratuitos</a></li>         <li><a class="list-item foot-list-item" href="http://www.genbeta.com/tag/nuevo-windows-10">Nuevo Windows 10</a></li>         <li><a class="list-item foot-list-item" href="http://www.genbeta.com/tag/bloqueo-a-the-pirate-bay-en-espana">Bloqueo a The Pirate Bay en España</a></li>       </ul>
+   <p class="view-even-more"><a href="http://www.genbeta.com/archivos" class="btn">Ver más temas</a></p>
+  </nav>
+  <script type="text/javascript">
+   document.write('\
+    <div class="search-box foot-search">\
+     <div class="search-form js-search-form">\
+      <input id="search-field-3" type="text" placeholder="Buscar en Genbeta" class="search-container-3" data-container="#search-container-3">\
+      <button class="search-button js-search-button" data-field="#search-field-3">Buscar</button>\
+     </div>\
+    </div>')
+  </script>    <div class="search-box foot-search">     <div class="search-form js-search-form">      <input id="search-field-3" type="text" placeholder="Buscar en Genbeta" class="search-container-3" data-container="#search-container-3">      <button class="search-button js-search-button" data-field="#search-field-3">Buscar</button>     </div>    </div>
+  <div id="search-container-3" class="js-search-results"></div>
+ </div>
+</footer>
+<section class="foot-external">
+ <div class="wrapper foot-wrapper">
+  <header class="foot-head">
+   <a class="backlink foot-backlink" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#">Subir</a>
+   <p class="wsl-brand foot-wsl-brand">
+    <a href="http://weblogssl.com/" class="wsl-logo foot-wsl-logo">
+     <span>Weblogs SL</span>
+    </a>
+   </p>
+     </header>
+    <div class="menu-external foot-menu-external">
+  <div class="spain-blogs">
+       <div class="links-category">
+     <p class="channel-title"> Tecnología </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item" href="http://www.xataka.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka</a></li><li><a class="list-item foot-list-item" href="http://www.xatakamovil.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Móvil</a></li><li><a class="list-item foot-list-item" href="http://www.xatakafoto.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Foto</a></li><li><a class="list-item foot-list-item" href="http://www.xatakandroid.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Android</a></li><li><a class="list-item foot-list-item" href="http://www.xatakahome.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Smart Home</a></li><li><a class="list-item foot-list-item" href="http://www.xatakawindows.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Windows</a></li><li><a class="list-item foot-list-item" href="http://www.xatakaciencia.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Ciencia</a></li><li><a class="list-item foot-list-item" href="http://www.applesfera.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Applesfera</a></li><li><a class="list-item foot-list-item" href="http://www.vidaextra.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Vida Extra</a></li><li><a class="list-item foot-list-item" href="http://www.genbeta.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Genbeta</a></li><li><a class="list-item foot-list-item" href="http://www.genbetadev.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Genbeta Dev</a></li><li><a class="list-item foot-list-item" href="http://magnet.xataka.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Magnet</a></li><li><a class="list-item foot-list-item" href="http://compradiccion.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Compradiccion</a></li><li><a class="list-item foot-list-item" href="http://esports.xataka.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka eSports</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Estilo de vida </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item" href="http://www.trendencias.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias</a></li><li><a class="list-item foot-list-item" href="http://belleza.trendencias.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias Belleza</a></li><li><a class="list-item foot-list-item" href="http://www.trendenciashombre.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias Hombre</a></li><li><a class="list-item foot-list-item" href="http://www.directoalpaladar.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Directo al Paladar</a></li><li><a class="list-item foot-list-item" href="http://www.bebesymas.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Bebés y Más</a></li><li><a class="list-item foot-list-item" href="http://www.vitonica.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Vitónica</a></li><li><a class="list-item foot-list-item" href="http://decoracion.trendencias.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Decoesfera</a></li><li><a class="list-item foot-list-item" href="http://www.embelezzia.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Embelezzia</a></li><li><a class="list-item foot-list-item" href="http://www.poprosa.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Poprosa</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Motor </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item" href="http://www.motorpasion.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión</a></li><li><a class="list-item foot-list-item" href="http://www.motorpasionmoto.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión Moto</a></li><li><a class="list-item foot-list-item" href="http://www.motorpasionfuturo.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión Futuro</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Economía </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item" href="http://www.elblogsalmon.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">El Blog Salmón</a></li><li><a class="list-item foot-list-item" href="http://www.pymesyautonomos.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Pymes y Autónomos</a></li><li><a class="list-item foot-list-item" href="http://www.ahorrodiario.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Ahorro Diario</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Ocio </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item" href="http://www.blogdecine.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Blog de Cine</a></li><li><a class="list-item foot-list-item" href="http://www.vayatele.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">¡Vaya Tele!</a></li><li><a class="list-item foot-list-item" href="http://www.diariodelviajero.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Diario del Viajero</a></li><li><a class="list-item foot-list-item" href="http://www.papelenblanco.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Papel en Blanco</a></li>     </ul>
+    </div>
+     </div>
+  <div class="latam-blogs">
+    <p class="channel-title">Latinoamérica</p>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://www.xataka.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka México</a></li><li><a class="list-item foot-list-item" href="http://www.xatakandroid.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Android México</a></li><li><a class="list-item foot-list-item" href="http://www.vidaextra.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Vida Extra México</a></li><li><a class="list-item foot-list-item" href="http://www.xataka.com.co/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Colombia</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://www.directoalpaladar.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Directo Al Paladar México</a></li><li><a class="list-item foot-list-item" href="http://www.vitonica.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Vitónica México</a></li><li><a class="list-item foot-list-item" href="http://www.trendenciashombre.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias Hombre México</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://www.motorpasion.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión México</a></li> </ul>
+</div>
+     </div>
+  <div class="others-blogs">
+   <p class="channel-title">Participamos en</p>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://www.nobbot.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Nobbot</a></li><li><a class="list-item foot-list-item" href="http://www.tecnologiadetuatu.elcorteingles.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Tecnología de tú a tú</a></li><li><a class="list-item foot-list-item" href="http://www.bloglenovo.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Blog Lenovo</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://mimundo.philips.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Mi Mundo Philips</a></li><li><a class="list-item foot-list-item" href="http://muysaludable.sanitas.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Muy Saludable de Sanitas</a></li><li><a class="list-item foot-list-item" href="http://www.cocacolaespana.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Coca-Cola Journey</a></li><li><a class="list-item foot-list-item" href="http://www.coca-colamexico.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Coca-Cola Journey México</a></li><li><a class="list-item foot-list-item" href="http://www.cocacolaportugal.pt/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Coca-Cola Journey Portugal</a></li><li><a class="list-item foot-list-item" href="http://zona.cocacola.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Zona Coca-Cola</a></li><li><a class="list-item foot-list-item" href="http://www.hipercor.es/descubre/ideas-para-comer?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Hipercor: Ideas para comer</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://www.circulaseguro.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Circula Seguro</a></li><li><a class="list-item foot-list-item" href="http://www.circulaseguro.pt/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Circula Seguro PT</a></li><li><a class="list-item foot-list-item" href="http://corrienteelectrica.renault.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Corriente Eléctrica</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://www.ennaranja.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">En Naranja</a></li><li><a class="list-item foot-list-item" href="http://blog.sage.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Sage Experience</a></li><li><a class="list-item foot-list-item" href="http://blogginzenith.zenithmedia.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Bloggin Zenith</a></li><li><a class="list-item foot-list-item" href="https://www.segurosdetuatu.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Seguros de tú a tú</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://www.bluebbva.com/bluemagazine?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Bluemagazine</a></li> </ul>
+</div>
+     </div>
+ </div>
+ </div>
+    <aside id="head-favicons" class="head-favicons-container m-is-later js-head-favicons">
+ <div class="head-favicons">
+  <div class="head-favicons-index">
+   <a class="js-group-toggle" href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" data-target="#head-network"><acronym title="Weblogs SL">WSL</acronym></a>
+  </div>
+  <div class="head-group"><span class="head-group-logo"></span></div>
+  <ul class="head-favicons-list">
+                  <li>
+      <a class="favicon tec-xataka
+       " href="http://www.xataka.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Xataka</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon tec-vidaextra
+       " href="http://www.vidaextra.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Vida Extra</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon oci-blogdecine
+       " href="http://www.blogdecine.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Blog de Cine</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon eco-elblogsalmon
+       " href="http://www.elblogsalmon.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>El Blog Salmón</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon tec-genbeta
+              favicon-current
+       " href="http://www.genbeta.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Genbeta</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon mot-motorpasion
+       " href="http://www.motorpasion.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Motorpasión</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon est-directoalpaladar
+       " href="http://www.directoalpaladar.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Directo al Paladar</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon est-bebesymas
+       " href="http://www.bebesymas.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Bebés y Más</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon oci-vayatele
+       " href="http://www.vayatele.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>¡Vaya Tele!</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon oci-diariodelviajero
+       " href="http://www.diariodelviajero.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Diario del Viajero</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon tec-xatakaciencia
+       " href="http://www.xatakaciencia.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Xataka Ciencia</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon est-trendencias
+       " href="http://www.trendencias.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Trendencias</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon tec-applesfera
+       " href="http://www.applesfera.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Applesfera</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon tec-xatakamovil
+       " href="http://www.xatakamovil.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Xataka Móvil</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon mot-motorpasionmoto
+       " href="http://www.motorpasionmoto.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Motorpasión Moto</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon oci-papelenblanco
+       " href="http://www.papelenblanco.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Papel en Blanco</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon est-decoesfera
+       " href="http://decoracion.trendencias.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Decoesfera</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon est-vitonica
+       " href="http://www.vitonica.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Vitónica</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon est-embelezzia
+       " href="http://www.embelezzia.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Embelezzia</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon est-poprosa
+       " href="http://www.poprosa.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Poprosa</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon tec-xatakafoto
+       " href="http://www.xatakafoto.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Xataka Foto</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon eco-pymesyautonomos
+       " href="http://www.pymesyautonomos.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Pymes y Autónomos</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon est-trendenciasbelleza
+       " href="http://belleza.trendencias.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Trendencias Belleza</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon eco-ahorrodiario
+       " href="http://www.ahorrodiario.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Ahorro Diario</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon est-trendenciashombre
+       " href="http://www.trendenciashombre.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Trendencias Hombre</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon tec-xatakandroid
+       " href="http://www.xatakandroid.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Xataka Android</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon tec-genbetadev
+       " href="http://www.genbetadev.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Genbeta Dev</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon mot-motorpasionfuturo
+       " href="http://www.motorpasionfuturo.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Motorpasión Futuro</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon tec-xatakahome
+       " href="http://www.xatakahome.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Xataka Smart Home</span>
+      </a>
+     </li>
+                <li>
+      <a class="favicon tec-xatakawindows
+       " href="http://www.xatakawindows.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Xataka Windows</span>
+      </a>
+     </li>
+                                <li>
+      <a class="favicon tec-magnet
+       " href="http://magnet.xataka.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+       <span>Magnet</span>
+      </a>
+     </li>
+                      <li>
+       <a class="favicon tec-compradiccion " href="http://compradiccion.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+        <span>Compradiccion</span>
+       </a>
+      </li>
+                             <li>
+         <a class="favicon tec-xatakaesports " href="http://esports.xataka.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+          <span>Xataka eSports</span>
+         </a>
+        </li>
+              </ul>
+ </div>
+</aside>
+<aside class="favicons-expanded-container js-favicons-expand" id="head-network">
+ <div class="favicons-expanded">
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Tecnología</h4></li>
+      
+                       <li>
+        <a class="favicon tec-xataka" href="http://www.xataka.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Xataka
+        </a>
+       </li>
+                        <li>
+        <a class="favicon tec-xatakamovil" href="http://www.xatakamovil.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Xataka Móvil
+        </a>
+       </li>
+                        <li>
+        <a class="favicon tec-xatakafoto" href="http://www.xatakafoto.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Xataka Foto
+        </a>
+       </li>
+                        <li>
+        <a class="favicon tec-xatakandroid" href="http://www.xatakandroid.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Xataka Android
+        </a>
+       </li>
+                        <li>
+        <a class="favicon tec-xatakahome" href="http://www.xatakahome.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Xataka Smart Home
+        </a>
+       </li>
+                        <li>
+        <a class="favicon tec-xatakawindows" href="http://www.xatakawindows.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Xataka Windows
+        </a>
+       </li>
+                        <li>
+        <a class="favicon tec-xatakaciencia" href="http://www.xatakaciencia.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Xataka Ciencia
+        </a>
+       </li>
+                        <li>
+        <a class="favicon tec-applesfera" href="http://www.applesfera.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Applesfera
+        </a>
+       </li>
+                        <li>
+        <a class="favicon tec-vidaextra" href="http://www.vidaextra.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Vida Extra
+        </a>
+       </li>
+                        <li>
+        <a class="favicon tec-genbeta" href="http://www.genbeta.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Genbeta
+        </a>
+       </li>
+                        <li>
+        <a class="favicon tec-genbetadev" href="http://www.genbetadev.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Genbeta Dev
+        </a>
+       </li>
+                        <li>
+        <a class="favicon tec-magnet" href="http://magnet.xataka.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Magnet
+        </a>
+       </li>
+                  
+               <li>
+         <a class="favicon tec-compradiccion" href="http://compradiccion.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+          <span></span>Compradiccion
+         </a>
+        </li>
+                                       <li>
+         <a class="favicon tec-xatakaesports" href="http://esports.xataka.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+          <span></span>Xataka eSports
+         </a>
+        </li>
+                      </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Estilo de vida</h4></li>
+      
+                       <li>
+        <a class="favicon est-trendencias" href="http://www.trendencias.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Trendencias
+        </a>
+       </li>
+                        <li>
+        <a class="favicon est-trendenciasbelleza" href="http://belleza.trendencias.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Trendencias Belleza
+        </a>
+       </li>
+                        <li>
+        <a class="favicon est-trendenciashombre" href="http://www.trendenciashombre.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Trendencias Hombre
+        </a>
+       </li>
+                                                <li>
+        <a class="favicon est-directoalpaladar" href="http://www.directoalpaladar.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Directo al Paladar
+        </a>
+       </li>
+                        <li>
+        <a class="favicon est-bebesymas" href="http://www.bebesymas.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Bebés y Más
+        </a>
+       </li>
+                        <li>
+        <a class="favicon est-vitonica" href="http://www.vitonica.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Vitónica
+        </a>
+       </li>
+                        <li>
+        <a class="favicon est-decoesfera" href="http://decoracion.trendencias.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Decoesfera
+        </a>
+       </li>
+                        <li>
+        <a class="favicon est-embelezzia" href="http://www.embelezzia.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Embelezzia
+        </a>
+       </li>
+                        <li>
+        <a class="favicon est-poprosa" href="http://www.poprosa.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Poprosa
+        </a>
+       </li>
+               </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Motor</h4></li>
+      
+                       <li>
+        <a class="favicon mot-motorpasion" href="http://www.motorpasion.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Motorpasión
+        </a>
+       </li>
+                        <li>
+        <a class="favicon mot-motorpasionmoto" href="http://www.motorpasionmoto.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Motorpasión Moto
+        </a>
+       </li>
+                        <li>
+        <a class="favicon mot-motorpasionfuturo" href="http://www.motorpasionfuturo.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Motorpasión Futuro
+        </a>
+       </li>
+               </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Economía</h4></li>
+      
+                       <li>
+        <a class="favicon eco-elblogsalmon" href="http://www.elblogsalmon.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>El Blog Salmón
+        </a>
+       </li>
+                        <li>
+        <a class="favicon eco-pymesyautonomos" href="http://www.pymesyautonomos.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Pymes y Autónomos
+        </a>
+       </li>
+                        <li>
+        <a class="favicon eco-ahorrodiario" href="http://www.ahorrodiario.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Ahorro Diario
+        </a>
+       </li>
+               </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Ocio</h4></li>
+      
+                       <li>
+        <a class="favicon oci-blogdecine" href="http://www.blogdecine.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Blog de Cine
+        </a>
+       </li>
+                        <li>
+        <a class="favicon oci-vayatele" href="http://www.vayatele.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>¡Vaya Tele!
+        </a>
+       </li>
+                        <li>
+        <a class="favicon oci-diariodelviajero" href="http://www.diariodelviajero.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Diario del Viajero
+        </a>
+       </li>
+                        <li>
+        <a class="favicon oci-papelenblanco" href="http://www.papelenblanco.com/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons">
+         <span></span>Papel en Blanco
+        </a>
+       </li>
+               </ul>
+   </div>
+   </div>
+ <div class="favicons-expanded favicons-new-channel">
+  <h2 class="channel-title">Latinoamérica</h2>
+     <div class="favicons-expanded-inner">
+    <ul>
+           <li>
+       <a href="http://www.xataka.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons" class="favicon tec-xataka">
+        <span></span>Xataka México
+       </a>
+      </li>
+           <li>
+       <a href="http://www.xatakandroid.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons" class="favicon tec-xatakandroid">
+        <span></span>Xataka Android México
+       </a>
+      </li>
+           <li>
+       <a href="http://www.vidaextra.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons" class="favicon tec-vidaextra">
+        <span></span>Vida Extra México
+       </a>
+      </li>
+           <li>
+       <a href="http://www.xataka.com.co/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons" class="favicon tec-xataka">
+        <span></span>Xataka Colombia
+       </a>
+      </li>
+         </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+           <li>
+       <a href="http://www.directoalpaladar.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons" class="favicon est-directoalpaladar">
+        <span></span>Directo Al Paladar México
+       </a>
+      </li>
+           <li>
+       <a href="http://www.vitonica.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons" class="favicon est-vitonica">
+        <span></span>Vitónica México
+       </a>
+      </li>
+           <li>
+       <a href="http://www.trendenciashombre.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons" class="favicon est-trendenciashombre">
+        <span></span>Trendencias Hombre México
+       </a>
+      </li>
+         </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+           <li>
+       <a href="http://www.motorpasion.com.mx/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=favicons" class="favicon mot-motorpasion">
+        <span></span>Motorpasión México
+       </a>
+      </li>
+         </ul>
+   </div>
+   </div>
+</aside> </section>
+<div id="adblock_placeholder"><div id="overlay-helper" class="overlay-layer">
+  <div class="overlay-fade js-overlay-fade"></div>
+  <div class="overlay-container help-abp-osx-chrome" id="abp-disable">
+<div class="overlay-content">
+  <span class="hint-arrow"></span>
+  <div class="help-style-guide"><p>En esta zona de la barra de tu navegador encontrarás el botón de configuración de Adblock Plus.</p>
+<p>Pulsa y desactiva la opción <strong>"Activado en este sitio" como puedes ver en esta imagen:</strong></p><strong>
+<p class="hint-img">
+  <img src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/abp-disable-chrome-osx.jpg" alt="Menú de Adblock Plus, desactivar para este sitio">
+</p>
+<p>¡No te preocupes! Adblock seguirá activo en el resto de páginas que visites</p>        <p class="overlay-action">
+          <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="btn btn-secondary btn-close js-overlay-close">Cerrar</a>
+        </p>
+      </strong></div><strong>
+    </strong></div><strong>
+  </strong></div><strong>
+</strong></div></div>
+<script>
+ (function() {
+  var form = document.createElement('form');
+  form.method = 'POST';
+  form.classList.add('js-subscription', 'newsletter-form', 'foot-newsletter-form');
+  form.setAttribute('data-url', "http://mailer.weblogssl.com/subscribe_check/#email#/genbeta/Genbeta");
+  form.innerHTML = '<p class="nav-heading">Recibe un email al día con los artículos de Genbeta: </p>\
+   <p><input class="js-email newsletter-input" type="email" placeholder="Tu correo electrónico">\
+   <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>';
+  var newsletterContainer = document.getElementById('newsletter');
+  newsletterContainer.insertBefore(form, newsletterContainer.firstChild);
+ })();
+</script>
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/xd_arbiter.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/xd_arbiter(1).html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="f3d5946742f355c" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/ping.html" style="display: none;"></iframe></div></div></div>                   <div id="cookies-overlay" class="cookies-overlay"><div class="cookies-wrapper">
+ <a href="http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos#" class="close">×</a>
+ <p>
+  Usamos cookies para personalizar su experiencia. Si sigue navegando estará aceptando su uso.
+  <a target="_blank" href="http://www.weblogssl.com/cookies">Más información </a>
+ </p>
+</div></div>           </div>
+    </div>
+         <script>
+var country = 'ES';
+</script>
+<script type="text/javascript">
+ var WSL2 = WSL2 || {};
+ WSL2 = {
+  config: {
+   fbapikey: "360028941603",
+   cookieDomain: "",
+   siteName: "Genbeta",
+   enabledImageInForoComment : "0",
+   imagePath: "https://img.weblogssl.com/css/genbeta/v7",
+   desktopSiteUrl: "http://www.genbeta.com",
+   redirectDesktopRoot: 'false',
+   postId: 207976,
+   postTitle: "Un\x20nuevo\x20ataque\x20DDoS\x20casi\x20deja\x20sin\x20Internet\x20todo\x20un\x20pa\u00EDs,\x20y\x20es\x20algo\x20que\x20deber\u00EDa\x20preocuparnos\x20a\x20todos",
+   tweetText: "Comentario%20a%20Un%20nuevo%20ataque%20DDoS%20casi%20deja%20sin%20Internet%20todo%20un%20pa%C3%ADs%2C%20y%20es%20algo%20que%20deber%C3%ADa...",
+   twitterName: "genbeta",
+   device: "desktop",
+   enabledTwitterLogin: "1",
+   postUrl: "http://www.genbeta.com/seguridad/un-nuevo-ataque-ddos-casi-deja-sin-internet-a-liberia-y-es-algo-que-deberia-preocuparnos-a-todos",
+   enableRecommendationTracker: "1",
+   enableAmplifyABTesting: "0",
+   enabledRecoverPassword: "1",
+   enableFbQuoteSharing: "1",
+   enableCommentDeleteOption: "1",
+   disableDesktopLazyLoadingImages: "1",
+   enableSidebarRecommendations: "1",
+   enableEditorialRecommendations: "1",
+   blogMeta: {
+    mnemonic: "GEB",
+    blogDomain: "genbeta.com"
+   },
+   enableAdblockDetection: "1",
+   enableAdblockNetflixCampaign: "0"
+  }
+ };
+ /* Chartbeat snippet */
+ </script>
+ <script type="text/javascript" async="true" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/postpage-1354.js"></script>
+<script type="text/javascript">
+ if ('ES' === country) {
+  (function() {
+   var e = document.createElement("script");
+   var s = document.getElementsByTagName("script")[0];
+   e.src = "//t.audience.network/b/?ah=e4da3b7fbbce2345d7772b0674a318d5&rnd=" + (new Date()).getTime();
+   e.async = true;
+   s.parentNode.insertBefore(e, s);
+  })();
+ }
+</script>
+      <script type="text/javascript" async="true" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/1"></script>
+ <script type="text/javascript" async="true" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/genbeta"></script>
+                  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"09bdee14ae","applicationID":"1094498","transactionName":"ZgdUZxMAW0EDARULCl9NdUYSFVpfTQYEEQ5FDUZjDhJBYgMFBA==","queueTime":0,"applicationTime":23,"atts":"SkBXEVsaSE8=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+       </div>
+  </div>
+   
+<iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Un nuevo ataque DDoS casi deja sin Internet todo un país, y es algo que debería preocuparnos a todos_files/saved_resource.html"></iframe></body></html>
