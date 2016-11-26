@@ -1,5 +1,5 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass ociamthesis-lyx
@@ -13,13 +13,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -30,15 +30,24 @@
 \use_hyperref false
 \papersize default
 \use_geometry false
-\use_amsmath 1
-\use_esint 0
-\use_mhchem 1
-\use_mathdots 1
-\cite_engine natbib_authoryear
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 0
 \index Index
 \shortcut idx
@@ -83,10 +92,11 @@ cleardoublepage}
 
 \begin_layout Standard
 D.
- Juan José Ramoz Muñoz, profesor del Departamento de Teoría de la Señal,
- Telemática y Comunicaciones de la Universidad de Granada, como director
- del Proyecto Fin de Carrera de D.
- Rafael Martos Llavero
+ Juan José Ramoz Muñoz y D.
+ Juan Manuel López Soler, profesores del Departamento de Teoría de la Señal,
+ Telemática y Comunicaciones de la Universidad de Granada, como directores
+ del Trabajo Fin de Grado de D.
+ Saúl Moreno Abril
 \begin_inset Newline newline
 \end_inset
 
@@ -94,18 +104,14 @@ D.
 \begin_inset Newline newline
 \end_inset
 
-Informa:
-\begin_inset Newline newline
-\end_inset
-
-que el presente trabajo, titulado:
+Informa que el presente trabajo, titulado:
 \begin_inset Newline newline
 \end_inset
 
 
 \series bold
 \emph on
-VVD: Vídeo Vigilancia Distribuida
+Desarrollo de un Juego en Red con Técnicas de Predicción de Movimiento
 \size larger
 \emph default
 
@@ -116,7 +122,7 @@ VVD: Vídeo Vigilancia Distribuida
 \end_layout
 
 \begin_layout Standard
-Ha sido realizado y redactado por el mencionado alumno bajo mi dirección,
+Ha sido realizado y redactado por el mencionado alumno bajo nuestra dirección,
  y con esta fecha autorizo a su presentación.
 \end_layout
 
@@ -206,7 +212,7 @@ de
 \begin_inset space ~
 \end_inset
 
-de 2012.
+de 2015.
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -233,6 +239,32 @@ de 2012.
 \align center
 Fdo.
  Juan José Ramos Muñoz
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Fdo.
+ Juan Manuel López Soler 
 \begin_inset Newpage clearpage
 \end_inset
 

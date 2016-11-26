@@ -1,5 +1,5 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass ociamthesis-lyx
@@ -14,7 +14,9 @@
 \usepackage [ c o l o r l i n k s=true , c i t e c o l o r =blue , l i n k c o l o r=black , ur l c o l o r=
 green ] { hyper ref }
 \usepackage{listings}
+\usepackage{url}
 \usepackage{color}
+
 
 %Ajustar página pdf a la ventana
 \hypersetup{
@@ -24,7 +26,7 @@ pdfstartview={FitH}
 %Encabezado y pie de pagina
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\thechapter. #1 }}{}}
-\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+%\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
 \fancyhf{}
 \fancyhead[RO]{\bfseries\rightmark}
 \fancyhead[LE]{\bfseries\leftmark}
@@ -36,10 +38,6 @@ pdfstartview={FitH}
   \fancyhead{}
   \renewcommand{\headrulewidth}{0pt}
 }
-
-%Imagen de la portada
-\def\crest{{\includegraphics{titlepage/logougr.pdf}}}
-
 
 %Listados de código
 %CODIGO EN COLOR
@@ -92,13 +90,27 @@ commentstyle=\color{negro},
    {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
 
 
+
+
+
+
+
 %PORTADA
-\title{PROYECTO FIN DE CARRERA \\ \begingroup \fontsize{300pt}{320pt}\selectfont \textbf{VVD: Vídeo Vigilancia Distribuida} \endgroup}
-\author{Rafael Martos Llavero}
+\title{TRABAJO FIN DE GRADO \\ \begingroup \fontsize{300pt}{320pt}\selectfont \textbf{Desarrollo de un Juego en Red con Técnicas de Predicción de Movimiento } \endgroup}
+%Imagen de la portada
+\def\crest{{\includegraphics[height=3cm]{titlepage/logougr.pdf}}}
+\author{Saúl Moreno Abril}
 \college{}
 %\renewcommand{\submittedtext}{Para los estudios de}
-\degree{INGENIERÍA DE TELECOMUNICACIÓN}
-\degreedate{2011/2012}
+\degree{GRADO EN  INGENIERÍA DE TECNOLOGÍAS DE TELECOMUNICACIÓN}
+\degreedate{2014/2015}
+
+
+%Otros ajustes
+\setcounter{secnumdepth}{5}
+\renewcommand{\listtablename}{Índice de tablas} 
+\renewcommand{\tablename}{Tabla} 
+\renewcommand{\nomname}{Acrónimos}
 \end_preamble
 \use_default_options false
 \begin_modules
@@ -114,39 +126,48 @@ foottoend
 \font_roman default
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 1
 \bibtex_command default
-\index_command default
+\index_command texindy
 \paperfontsize 12
 \spacing single
 \use_hyperref false
 \papersize a4paper
 \use_geometry false
-\use_amsmath 2
-\use_esint 0
-\use_mhchem 1
-\use_mathdots 1
-\cite_engine natbib_numerical
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type numerical
+\biblio_style plainnat
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
 \end_index
-\secnumdepth 3
-\tocdepth 3
+\secnumdepth 5
+\tocdepth 5
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language english
@@ -168,12 +189,12 @@ status open
 
 \begin_layout Plain Layout
 
-% PLANTILLA LYX PARA PROYECTO FINAL DE CARRERA
+% PLANTILLA LYX PARA TRABAJO DE FIN DE GRADO
 \end_layout
 
 \begin_layout Plain Layout
 
-% Autor: Rafael Martos Llavero
+% Autor: Saúl Moreno Abril
 \end_layout
 
 \begin_layout Plain Layout
@@ -242,16 +263,6 @@ begin{romanpages}
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "Dedicaciones/Nota.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
 filename "Dedicaciones/Contraportada.lyx"
 
 \end_inset
@@ -307,13 +318,6 @@ filename "Agradecimientos/Acknowledgments.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "Capitulos/glosario.lyx"
-
-\end_inset
-
-
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
@@ -337,6 +341,16 @@ LatexCommand tableofcontents
 
 \begin_layout Standard
 \begin_inset FloatList algorithm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "auto"
 
 \end_inset
 
@@ -374,44 +388,49 @@ filename "Capitulos/Capitulo 2 Estado del Arte.lyx"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "Capitulos/Capitulo 3 Especificacion de Requisitos.lyx"
+filename "Capitulos/Capitulo 3 Diseño.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "Capitulos/Capitulo 4 Implementación.lyx"
 
 \end_inset
 
 
 \begin_inset CommandInset include
 LatexCommand include
-filename "Capitulos/Capitulo 4 Planificación.lyx"
+filename "Capitulos/Capitulo 5  Evaluación.lyx"
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "Capitulos/Capitulo 5 Diseño.lyx"
+filename "Capitulos/Capitulo 6 Conclusiones.lyx"
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "Capitulos/Capitulo 6 Implementación.lyx"
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand include
-filename "Capitulos/Capitulo 7 Evaluación.lyx"
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand include
-filename "Capitulos/Capitulo 8 Conclusiones.lyx"
+filename "Capitulos/Capitulo 7 Planificacion.lyx"
 
 \end_inset
 
@@ -420,23 +439,6 @@ filename "Capitulos/Capitulo 8 Conclusiones.lyx"
 
 \begin_layout Standard
 \start_of_appendix
-\begin_inset CommandInset include
-LatexCommand include
-filename "Apendices/Apendice 1 Manual de Usuario Servidor.lyx"
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand include
-filename "Apendices/Apendice 2 Manual de Usuario Cliente.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\bibname}{References}
 \end_inset
@@ -465,7 +467,7 @@ bibname}{Referencias}
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "references/bao"
+bibfiles "references/myBib"
 options "bibtotoc,styles/bibtex styles/gillow"
 
 \end_inset

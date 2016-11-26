@@ -1,0 +1,304 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass ociamthesis-lyx
+\options a4paper,titlepage
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage{
+\backslash
+pagestyle{empty}
+\backslash
+cleardoublepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+\noun on
+Palabras Clave
+\end_layout
+
+\begin_layout Standard
+Red, Juego Multijugador, Dead Reckoning, Técnicas de Predicción, Unity3D
+ y EoS.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size larger
+\noun on
+Resumen
+\end_layout
+
+\begin_layout Standard
+La industria del videojuego generó en 2013 más de 93000 millones de dólares
+ a nivel mundial, y se prevé que en 2015 se alcancen los 111000 millones
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "EssentialFactComputerVideoGame"
+
+\end_inset
+
+.
+ Indudablemente se trata de una industria pujante, y que aprovecha las innovacio
+nes tecnológicas para ofrecer una calidad de experiencia cada vez más exigente
+ a sus jugadores.
+ Cada vez son más los usuarios que juegan por entretenimiento, para aprender
+ o incluso entrenarse en entornos similares a los profesionales.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De entre todos, destacan por su interacción con otros jugadores y su dificultad
+ técnica los juegos multijugador en red.
+ Cada vez este tipo de juegos recrean un mundo virtual más realista y complejo
+ en el cual los usuarios participan con mayor interactividad con el escenario
+ y entre sí.
+ El objetivo es que estas simulaciones formadas por cada una de los diferentes
+ usuarios parezcan una única, para que así las acciones realizadas por parte
+ de los jugadores parezcan que se están produciendo en el mismo mundo, consiguie
+ndo así una buena experiencia de juego.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sin embargo, las redes actuales no garantizan los requisitos de calidad
+ de servicio (latencia, ancho de banda, variación de retardo, probabilidad
+ de paquetes acotada, etc) a este tipo de aplicaciones.
+ Estos factores provoca una falta de coherencia entre las simulaciones distancia
+das de modo que provocan errores de precisión, movimientos erráticos y hasta
+ la pérdida de la conexión total que se traduce en un descontento por parte
+ del usuario.
+ Para que el objetivo de proporcionar una experiencia de usuario satisfactoria
+ a cada jugador sea posible sobre las redes actuales, es necesario la implementa
+ción de múltiples técnicas y esquemas que reduzcan los factores adversos
+ de la red.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entre las diferentes técnicas para minimizar los problemas a los que se
+ enfrentan los juegos y simulaciones en red están las denominadas técnicas
+ de predicción del movimiento o 
+\shape italic
+dead reckoning
+\shape default
+.
+ Estas técnicas intentan mitigar el efecto adverso que se da cuando se realiza
+ el envío de una actualización del estado del mundo del juego y esta sufre
+ retardo o se pierde.
+ El resultado de este retardo o pérdida de paquetes provoca que los objetos
+ de la escena se mantengan en lugares incorrectos en ese instante de tiempo.
+ Que los objetos van a ser representados en pantalla de nuevo sean mostrados
+ en su última posición conocida se traduce en un movimiento poco natural
+ de los elementos del juego.
+ Este tipo de trayectorias poco fluidas las percibe negativamente el usuario.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para aliviar este es el problema, las técnicas de predicción se enfocan
+ en estimar las posiciones futuras de las trayectorias de los elementos
+ móviles del juego.
+ Esto lo hacen utilizando la información anterior de los objetos remotos.
+ Concretamente, usan como información anterior parámetros como la posición,
+ velocidad, aceleración y tiempo transcurrido para estimar la trayectoria.
+ De este modo cuando llegue la verdadera posición, la diferencia o error
+ entre la posición real y la estimada será menor o incluso inexistente,
+ de modo que el jugador observa un movimiento suave y fiel al movimiento
+ real de los objetos remotos.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Adicionalmente, las técnicas de dead reckoning permiten reducir el consumo
+ de ancho de banda requerido por el juego, ya que si el error de la predicción
+ es lo suficientemente bajo, la frecuencia de envío de información de actualizac
+ión puede reducirse.
+ El proyecto se centrará en la adaptación e implementación de la técnica
+ de predicción más común en la bibliografía: los polinominos derivados.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En este proyecto se ha realizado el desarrollo de un videojuego multijugador
+ en línea cuyo nombre es
+\shape italic
+ End of Shooter
+\shape default
+ (EoS).
+ EoS es un 
+\shape italic
+First Person Shooter
+\shape default
+ (FPS), género de videojuegos que se caracteriza por requerir un alto nivel
+ de interactividad en tiempo real entre los personajes y otras entidades
+ que lo componen.
+ Este ha sido el principal motivo de elegir este tipo de juegos, ya que
+ es un magnífico entorno para evaluar las técnicas de predicción seleccionadas.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El juego se ha desarrollado con la plataforma 
+\shape italic
+Unity3D
+\shape default
+ gracias a las numerosas facilidades que proporciona para el desarrollo
+ de videojuegos.
+ Además, cuenta con un gran soporte para red, y dispone de numerosos recursos
+ gratuitos para su uso.
+ Para aplicar las técnicas de predicción, se han desarrollado scripts nuevos,
+ asignados a cada personaje.
+ Estos scripts son los encargados de enviar y recibir las actualizaciones
+ de los movimientos de los personajes.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Para la evaluación de las técnicas de predicción se miden distintos aspectos
+ del movimiento de los personajes en red.
+ El primero de ellos consiste en medir la fluidez del movimiento de los
+ personajes, midiendo las fluctuaciones del movimiento de los personajes
+ remotos.
+ El segundo aspecto es el comportamiento del movimiento de los personajes
+ cuando se reduce la tasa de actualización, lo que reduce la tasa de transmisión
+ del servidor.
+ Por último, se estudia los errores de las trayectorias cuando se introduce
+ una tasa de pérdidas de paquetes en la red.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como resultado, en todas las casos se ha visto una notable mejora haciendo
+ uso de las técnicas de predicción frente al funcionamiento por defecto
+ de 
+\shape italic
+Unity3D
+\shape default
+ en red.
+\end_layout
+
+\end_body
+\end_document

@@ -1,5 +1,5 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass ociamthesis-lyx
@@ -13,13 +13,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -30,15 +30,24 @@
 \use_hyperref false
 \papersize default
 \use_geometry false
-\use_amsmath 1
-\use_esint 0
-\use_mhchem 1
-\use_mathdots 1
-\cite_engine natbib_authoryear
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 0
 \index Index
 \shortcut idx
@@ -87,11 +96,15 @@ cleardoublepage}
 \size larger
 \noun on
 Key Words
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Video surveillance, distributed servers, streaming video, IP networks, Android
- devices, data encryption, PTZ, camera control
+Network, Multiplayer Videogame, Online, Dead Reckoning, Prediction Techniques,
+ Unity3D y EoS.
 \begin_inset Newline newline
 \end_inset
 
@@ -104,23 +117,141 @@ Video surveillance, distributed servers, streaming video, IP networks, Android
 \size larger
 \noun on
 Abstract
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Today we live under numerous "eyes" who care for our businesses, for people
- who use public services, day care of our children and / or daughters, etc.
- The early development of IP networks that are based on currently existing
- video surveillance suggests a multitude of innovative features to interconnect
- offices and remote locations.
- In addition, the proliferation of remote management needs related to alarm,
- unified video services, voice and data, etc..
- largely require the use of IP technologies that provide solutions to all
- kinds of challenges.
-\end_layout
-
-\begin_layout Standard
-Blah, blah, blah ...
+Videogame’s industry generated more than 93000 million dollars worldwide
+ in 2013 and it is anticipated that it will reach 111000 million in 2015.
+ Undoubtedly, it is a booming industry that makes good use of the innovations
+ to offer an increasingly demanding quality experience to its players.
+ The number of users that play to while away some time, to learn or even
+ to train in environments similar to professionals is increasing.
  
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Of all of them, the online multiplayer games stand out for their interaction
+ with other player and their technical difficulties.
+ These kind of videogames recreate a more realistic and complex virtual
+ world where the users interact more with the scene and between them.
+ The objective is that these simulations created by each of the different
+ users, look like one, so that the players’ actions seem to take place in
+ the same world, obtaining that way a good game experience.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+However, the present networks do not guarantee the service quality requirements
+ (latency, bandwidth, jitter, fenced packet probability, …) to these sort
+ of applications.
+ These factors cause a lack of coherence between the distant simulations
+ that cause accuracy errors, erratic movements and even the total loss of
+ the connexion, that provokes an unsatisfied player.
+ In order to provide a satisfactory user-experience to each player over
+ present networks, it is necessary to implement multiple techniques and
+ schemas that reduce the adverse network factors.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Between the different techniques to minimize the problems that the games
+ and simulations confront, we find the movement prediction techniques or
+ dead reckoning.
+ These techniques try to mitigate the adverse effect produced by sending
+ an actualization of the game state and it is delayed or gets lost.
+ The result of this delay or packet loss provokes that the scene objects
+ stay in incorrect places in that time instant.
+ When this happens, the objects use the last known position, so the movement
+ of the game objects is very unnatural.
+ The user perceives these non-fluent trajectories negatively.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To lighten this problem, the prediction techniques are focused in estimating
+ the future trajectory positions of the moving elements in the game.
+ This is done using the past information from the remote objects.
+ In particular, they use as earlier information, parameters such as position,
+ velocity, acceleration and elapsed time to estimate the trajectory.
+ This way when the real position comes, the difference or error between
+ the real position and the estimated one will be lower or even non-existent,
+ so the player observers a soft movement similar to the movement of those
+ objects in the real world.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Additionally, the dead reckoning techniques allow reducing the bandwidth
+ usage required by the game, because if the error in the prediction is low
+ enough, the frequency of actualization information sending can be reduced.
+ The project centres in the adaptation and implementation of the most common
+ prediction technique in the bibliography: the derivate polynomials.
+ In this project, an online multiplayer videogame called End of Shooter
+ (EoS) has been developed.
+ EoS is a First Person Shooter (FPS), a videogame gender that is characterised
+ by requiring a high level of interactivity in real time between the characters
+ and other entities.
+ This is the main reason to choose these kind of games, because it is a
+ great environment to evaluate the selected prediction techniques.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The game has been developed with the Unity3D platform owing to the numerous
+ facilities that it provides for videogame development.
+ Besides, it has a big online support and provides many free resources to
+ use.
+ To apply the prediction techniques, new scripts have been developed and
+ assigned to each character.
+ These scripts are in charge of sending and receiving the characters’ movement
+ actualizations.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To evaluate the prediction techniques different movement aspects from the
+ online characters are measured.
+ The first of them consists in measuring the character's movement fluidity,
+ measuring the remote characters’ movement fluctuations.
+ The second aspect is the characters’ movement behaviour when the actualization
+ rate is reduced, which reduces the server transmission rate.
+ Finally, it studies the errors in the trajectories when an online packet
+ loss rate is introduced.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As a result, in every case a remarkable improvement has been seen when using
+ the prediction techniques instead of the default online option of Unity3D.
 \end_layout
 
 \end_body

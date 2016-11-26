@@ -1,8 +1,11 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass ociamthesis-lyx
+\begin_preamble
+
+\end_preamble
 \options a4paper,titlepage
 \use_default_options false
 \maintain_unincluded_children false
@@ -13,13 +16,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -30,15 +33,24 @@
 \use_hyperref false
 \papersize default
 \use_geometry false
-\use_amsmath 1
-\use_esint 0
-\use_mhchem 1
-\use_mathdots 1
-\cite_engine natbib_numerical
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type numerical
+\biblio_style plainnat
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 0
 \index Index
 \shortcut idx
@@ -62,593 +74,1855 @@
 \begin_body
 
 \begin_layout Chapter
-Estado del Arte
+Estado del Arte 
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Estado-del-Arte"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-En el Capítulo 
+En el capítulo 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "chap:Introducción"
 
 \end_inset
 
-, se ha destacado la importancia que tiene la seguridad en nuestra sociedad,
- y Bla, Bla, Bla
+ se ha destacado los aspectos más importantes del trabajo.
+ En este capítulo se hará una breve introducción sobre los videojuegos,
+ sus características y arquitecturas de juegos en red, con especial detalle
+ al tipo de juego que se desarrollará.
+ También se ve una comparación de diferentes entornos de desarrollo de juegos
+ mostrando las diferentes posibilidades que ofrece cada uno de ellos y cuál
+ parece más adecuado para unos requisitos dados.
+ Por último se tratan las técnicas de predicción de movimiento o 
+\shape italic
+dead reckoning
+\shape default
+ con las que mejorar la experiencia de juego de los usuarios.
 \end_layout
 
 \begin_layout Section
-TeleEye iView
+Introducción a los videojuegos
 \end_layout
 
 \begin_layout Standard
-The TeleEye Group ha desarrollado un sistema de vídeo vigilancia para móviles
+Los videojuegos se pueden definir como cualquier aplicación o software cuyo
+ fin es el entretenimiento de una o más personas por lo general 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "VideogamesCHPForEducation"
+
+\end_inset
+
+.
+ Más específicamente, los juegos multijugador son juegos en los que se permiten
+ participar simultáneamente a dos o más jugadores.
+ En estos juegos, los participantes compiten en demostrar su habilidad,
+ bien como grupo para alcanzar un objetivo o por el contrario enfrentándose
+ entre sí individualmente o formando grupos.
+ Por todo ello, la palabra multijugador da a entender hoy en día que los
+ usuarios juegan juntos mediante sus dispositivos conectados a una red,
+ bien local o global (Internet).
+ Aunque hay que diferenciar entre videojuegos que permitan un multijugador
+ local, es decir todos los participantes usan el mismo dispositivo físico
+ y los juegos multijugador en red, da igual de qué tipo, en los cuales cada
+ usuario usa un dispositivo diferente.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A día de hoy los videojuegos se ejecutan sobre muy diversas plataformas,
+ como ordenadores personales, consolas, máquinas recreativas, dispositivos
+ móviles, etc.
+ La plataforma predefine bastante las posibilidades de los juegos que se
+ van a ejecutar sobre ella ya que están sujetos a usar los controladores
+ y periféricos que ésta ofrece.
+ 
+\end_layout
+
+\begin_layout Standard
+Un proyecto de desarrollo de un videojuego es un campo multidisciplinar
+ donde se mezclan perfiles de muy diversos tipos.
+ Además depende del género y tipo de juego así como la plataforma a la que
+ está orientada.
+ 
+\end_layout
+
+\begin_layout Standard
+Existen muchos géneros de videojuegos, como el de aventura, arcade, educativos,
+ estrategia, acción, plataformas, simuladores, deportivos, etc.
+ Pero últimamente como se comenta en el introducción, capítulo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Introducción"
+
+\end_inset
+
+, los juegos multijugador en red son los que mayor crecimiento están teniendo
+ ya que en sí no son un género sino un añadido a cualquiera de los anteriores,
+ haciendo más atractivo y adictivo el juego ya que se pueden jugar junto
+ a amigos o desconocidos a gran distancia haciendo uso de la red.
+\end_layout
+
+\begin_layout Section
+Juegos Multijugador en Línea 
+\end_layout
+
+\begin_layout Standard
+Los juegos multijugador online o MOGs son en sí una especie de simulación
+ interactiva distribuida (DIS) 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DeadReckoning2D"
+
+\end_inset
+
+, es decir un conjunto de elementos que forman una infraestructura con el
+ objetivo de unir múltiples simulaciones en ubicaciones distintas para poder
+ crear mundos virtuales y complejos que ofrezcan la posibilidad de actividades
+ altamente interactivas.
+ Las simulaciones están formadas por entidades que interactúan unas con
+ otras 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "StandardDIS"
+
+\end_inset
+
+.
+ Estas entidades se modelan como objetos, colecciones de campos (variables
+ y atributos) y métodos para modelar el comportamiento de una determinada
+ entidad.
+ El comportamiento de las entidades esta formado por relaciones con otras
+ entidades, el entorno y consigo mismas.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La infraestructura que conforma un MOGs se apoya sobre una red que actualmente
+ no ofrece un servicio con retardos acotados o garantía de entrega de paquetes.
+ Cada vez estos juegos precisan de requisitos mayores ya que ofrecen una
+ mayor interactividad unida a la mejora gráfica que conlleva la necesidad
+ de aumentar la precisión para que así el jugador obtenga una experiencia
+ de juego satisfactoria.
+ Es decir, los jugadores necesitan que sus acciones parezcan ser ejecutadas
+ en el mismo espacio virtual alcanzando suficiente realismo como si fuera
+ un mundo real a pesar de que las localizaciones geográficas estén a miles
+ de kilómetros de distancia.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede distinguir varios tipos de videojuegos atendiendo a características,
+ como es si admiten varios jugadores o no, a qué público van dirigidos,
+ su finalidad, la tecnología que emplean, el género, etc.
+ Cada género presentan sus propias características cuando se quiere añadirle
+ el modo multijugador en red.
+ Por ello es necesario analizar el tipo de juego para tener los requisitos
+ a cumplir antes de su desarrollo.
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+A continuación se hará una breve clasificación de los principales géneros
+ de videojuegos en línea prestando atención en un género en especial ya
+ que será el que se implemente.
+ Después se comentan las arquitectura que presentan los videojuegos en red.
+ Y por último, se enumerarán las principales características del tráfico
+ que generan estos.
+ 
+\end_layout
+
+\begin_layout Subsection
+Clasificación
+\end_layout
+
+\begin_layout Standard
+Los juegos multijugador en línea pueden ser de muchos géneros entre los
+ que están:
+\end_layout
+
+\begin_layout Itemize
+Rol: el jugador asume el papel de un personaje e interactúa con otros personajes
+, los cuales son otros jugadores, en un gran mundo virtual.
+ El avance en el juego y la superación de retos se traducen en la progresión
+ de las capacidades e inventario del jugador.
+\end_layout
+
+\begin_layout Itemize
+
+\shape italic
+Shooter
+\shape default
+ en primera persona: famosamente conocidos como 
+\shape italic
+First Person Shooter
+\shape default
+ (FPS) son juegos que enfatizan en la habilidad del jugador a la hora de
+ apuntar y pensar tácticamente.
+\end_layout
+
+\begin_layout Itemize
+Estrategia en tiempo real: normalmente son aquello en los cuales el jugador
+ se pone ante una civilización, ejército o similares y según sus decisiones
+ así avanzará en la partida.
+\end_layout
+
+\begin_layout Itemize
+Estrategia basada en turnos: cada jugador dispone de un tiempo o 
+\shape italic
+tick
+\shape default
+ para llevar a cabo sus acciones.
+\end_layout
+
+\begin_layout Itemize
+Simulaciones: tienen como objetivo simular con precisión ciertos aspectos
+ del mundo real, por ejemplo conducir o pilotar.
+ 
+\end_layout
+
+\begin_layout Itemize
+Casual: juegos cuyo objetivo es atraer a una gran cantidad de usuarios casuales,
+ ya que son simples y no hace falta dedicarles mucho tiempo.
+\end_layout
+
+\begin_layout Itemize
+Masivos: mas conocidos como MMOGs (
+\shape italic
+Massively Multiplayer Online Game
+\shape default
+) 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "MMOG"
+description "Massively Multiplayer Online Game"
+
+\end_inset
+
+ son un tipo especial en el cual se puede soportan una gran cantidad de
+ participantes simultáneos.
+ Este tipo de juegos a su vez puede ser de cualquiera de las anteriores
+ temáticas apareciendo por ejemplo los MMORPG (
+\shape italic
+Massively Multiplayer Online Role-Playing Games
+\shape default
+) 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "MMORPG"
+description "Massively Multiplayer Online Role-Playing Games"
+
+\end_inset
+
+ o MMOFPS (
+\shape italic
+Massively Multiplayer Online First Person Shooter
+\shape default
+) 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol " MMOFPS "
+description "Massively Multiplayer Online First Person Shooter"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Son muchísimos los géneros que existen y más los subgéneros dentro de cada
+ uno de ellos.
+ Cada uno tiene detalles propios que le dan identidad y personalidad.
+ Se podría analizar cada uno de ellos en detalle pero este no es el objetivo.
+ El género que en el que si vamos a profundizar en el FPS ya que es el género
+ elegido para el videojuego sobre el cual se implementarán y evaluarán las
+ técnicas propuestas.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Multiplayer Online First Person Shooter 
+\end_layout
+
+\begin_layout Standard
+Cada tipo de MOG presenta unas características específicas debido al comportamie
+nto que intentan simular y a como el usuario interacciona con mundo virtual.
+ En particular, los FPS son un género de los videojuegos que se centran
+ en el combate con armas mediante una perspectiva en primera persona 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "FundamentalsOfGameDesign"
+
+\end_inset
+
+.
+ Esto quiere decir que el jugador experimenta la acción a través de los
+ ojos del protagonista.
+ Desde los inicios del género las mejoras de los gráficos 3D y pseudo-3D
+ han desafiado tanto al desarrollo hardware como a la totalidad del juego,
+ campaña, multijugador u otros modos.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como la mayoría de juegos de tiros, los FPS implican un avatar o personaje,
+ una o más armas, y enemigos.
+ Debido a que tienen lugar en un entorno 3D, estos juegos tienden a ser
+ más realistas que juegos en 2D y por ellos tienen representaciones más
+ exactas de la gravedad y las colisiones.
+ En este género es común mostrar las manos de los personajes y armas en
+ la vista principal, además de un HUD (
+\shape italic
+Head-Up Display
+\shape default
+) 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "HUD"
+description "Head-Up Display"
+
+\end_inset
+
+ que muestre la salud, munición y otros detalles además de un posible mapa
+ de los alrededores.
+ El personaje es controlado por medio de algún controlador dependiendo de
+ la plataforma.
+ Los más usados son una combinación de ratón y teclado o mandos siendo la
+ primera opción un poco superior.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Últimamente, una de las características más importante de los FPS es el
+ modo multijugador que incluyen.
+ Hay algunos juegos que están especialmente desarrollados para este modo
+ y estando muy limitados en los restantes modos.
+ Este es el caso de videojuego que se desarrollará, que solamente contará
+ con modo multijugador en red.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los FPS tienen unos requisitos de tiempo real muy altos ya que es necesario
+ que el jugador observe al resto de jugadores con un movimiento continuo
+ y suave para poder apuntar y disparar los proyectiles, así como estos puedan
+ impactar en los jugadores.
+ Pequeños errores de precisión provocan la frustracción en los participantes
+ ya que ellos observan que han disparado al enemigo y este no sufre daño,
+ o ven al enemigo moverse aleatoriamente, pareciendo incluso que se teletranspor
+tarse.
+ Debido a que este género de juegos son los que mayores prestaciones requieren
+ es la elección para el juego a desarrollar para realizar la implementación
+ y evaluación de las técnicas.
+ 
+\end_layout
+
+\begin_layout Subsection
+Arquitectura de red para juegos en línea
+\end_layout
+
+\begin_layout Standard
+La organización de red de juegos está formada por múltiples componentes,
+ procedimientos y principios.
+ Para el desarrollo de arquitecturas de redes para videojuegos existen diferente
+s modelos.
+ Cada modelo conlleva ciertas ventajas o desventajas en aspectos como la
+ escalabilidad, complejidad de implementación, etc.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Modelo Cliente-Servidor
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:EA-Modelo-Cliente-Servidor"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El modelo cliente-servidor se caracteriza por tener una entidad central,
+ el servidor, que se encarga de enviar información a los demás participantes
+ en la partida.
+ Este modelo reduce el problema de la latencia debido a que ahora la latencia
+ para un cliente dado solo depende de su conexión con el servidor, no viéndose
+ afectado (al menos no directamente) por la latencia de los demás jugadores.
+\end_layout
+
+\begin_layout Standard
+Actualmente, la gran mayoría de juegos en red utilizan el modelo cliente-servido
+r debido a que reduce el problema de la latencia, reduce el ancho de banda,
+ permite añadir mecanismos antitrampa y es más fácil de implementar 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AlgoNetwForComputerGames"
+
+\end_inset
+
+.
+ En la Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ArquitecturaClienteServidor"
+
+\end_inset
+
+ se puede observa este modelo en el cual los clientes envían las actualizaciones
+ al servidor y el servidor por su parte reenvía las actualizaciones o envía
+ las propias según el tipo de servidor, tal como se comentará a continuación.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../figures/ArquitecturaCliente-Servidor.png
+	scale 50
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Arquitectura Cliente-Servidor
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ArquitecturaClienteServidor"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Según el tipo de juego, los servidores pueden ser fijos, distribuyéndose
+ geográficamente en lugares estratégicos en función del público y la expansión
+ que el videojuego tiene, o pueden ser distribuidos, implementádose en los
+ propios clientes.
+ Esta última posibilidad es muy común ya que permite una gran escabilidad.
+ Los servidores se usan para mantener el estado de los jugadores y mantener
+ el mundo virtual.
+ La función principal del servidor es enviar los estados de los objetos
+ y otros personajes de interés hacia el jugador de modo que el servidor
+ siempre sabe que es lo que está ocurriendo.
+ Existen otras tareas de las cuales los servidores pueden hacerse cargo.
+ Por ejemplo es común que se hagan cargo de la autenticación de modo que
+ participantes no autorizados se les deniegue el acceso.
+ Además pueden ofrecer funcionalidades para chat de texto o voz.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En caso de usar servidores fijos, estos tienen capacidades limitadas por
+ lo que ante una gran cantidad de usuarios es necesario incrementar proporcional
+mente el número de servidores..
+ En muchos casos, esto no es escalable.
+ Cuando ocurre esto, la compañía desarrolladora y productora instala una
+ cantidad limitada de servidores de modo que el número de jugadores que
+ pueden participar simultáneamente está limitada por la cantidad máxima
+ de tráfico que soporten dichos servidores.
+ Si se conoce la media de jugadores que están jugando a la vez, se puede
+ ajustar el número de servidores a este requisito.
+ El problema es controlar los picos que se pueden dar en algunos momentos
+ concretos donde los servidores pueden llegar a su límite.
+ Debido a esto, esta arquitectura tiene un cuello de botella en el acceso
+ a los servidores.
+ En cambio, si se usan servidores distribuidos en los propios clientes este
+ problema se elimina ya que el cliente al buscar una partida puede crear
+ el mismo el servidor permitiendo a otros clientes unirse.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A la hora de diseñar el servidor en este modelo, se definen dos posibilidades
+ básicas: que sea un servidor acreditado o no acreditado 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "HighLevelNetwConcepts"
+
+\end_inset
+
+.
+ Ambos enfoques tienen en común que el servidor interconecta a los clientes
+ e intercambia información entre ellos.
+ Además también ofrecen privacidad para los usuarios finales ya que los
+ clientes en realidad nunca se conectan directamente entre sí o al menos
+ no tienen sus direcciones IP reveladas a otros clientes.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Servidor acreditado
+\begin_inset CommandInset label
+LatexCommand label
+name "par:Servidor-acreditado"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El servidor realiza toda la simulación del mundo virtual del juego, aplica
+ las reglas del juego y el procesamiento de toda la información proveniente
+ de los jugadores.
+ Cada cliente envía su entrada (en forma de pulsaciones de teclas o acciones)
+ al servidor y continuamente recibe el estado actual del juego desde el
+ servidor.
+ El cliente nunca hace ningún cambio en el estado mismo del juego.
+ En su lugar, le dice al servidor lo que quiere hacer, y el servidor entonces
+ controla la solicitud y responde al cliente para describir lo que ocurrió
+ como resultado.
+\end_layout
+
+\begin_layout Standard
+Fundamentalmente, hay una capa de separación entre lo que el jugador quiere
+ hacer y lo que realmente sucede.
+ Esto permite al servidor escuchar las peticiones de cada cliente antes
+ de decidir la forma de actualizar el estado del juego.
+ Una ventaja de este enfoque es que hace mucho más difícil hacer trampa
+ para los clientes.
+ Por ejemplo, los clientes no tienen la posibilidad de hacer trampa diciéndole
+ al servidor (y por lo tanto otros clientes) que un enemigo ha sido eliminado,
+ ya que no llegan a tomar esa decisión por sí mismos.
+ Sólo pueden decirle al servidor que un arma se disparó y, desde allí, le
+ corresponde al servidor determinar si se alcanzó a algún jugador.
+ 
+\end_layout
+
+\begin_layout Standard
+Como desventaja hay que destacar el tiempo que transcurre entre que se envió
+ la orden y se actualiza la información del juego en los clientes.
+ Si el jugador presiona un control para avanzar y se tarda suficiente tiempo
+ para que la respuesta vuelva desde el servidor, el retraso será perceptible
+ para el jugador.
+ Una solución a esto es utilizar la denominada predicción del lado del cliente,
+ que se verá en una sección posterior.
+ Además, un servidor acreditado lleva a cabo una mayor carga de procesamiento.
+\end_layout
+
+\begin_layout Paragraph
+Servidor no acreditado
+\begin_inset CommandInset label
+LatexCommand label
+name "par:Servidor-no-acreditado"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un servidor no acreditado no controla el resultado de cada entrada del usuario.
+ Los propios clientes procesan la entrada del usuario y la lógica del juego
+ a nivel local.
+ A continuación, envían el resultado de las acciones determinadas al servidor.
+ El servidor sincroniza todas las acciones con el estado del mundo virtual.
+ Este tipo es más fácil de implementar desde una perspectiva de diseño,
+ ya que el servidor en realidad sólo transmite mensajes entre los clientes
+ y no realiza ningún procesamiento adicional más allá de lo que los clientes
+ hacen.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No hay necesidad de ningún tipo de métodos de predicción para las entradas,
+ ya que los clientes manejen toda la física y eventos propios y transmiten
+ lo que pasó hacia el servidor.
+ Ellos son los dueños de sus objetos y son los únicos agentes autorizados
+ a enviar las modificaciones locales de esos objetos en la red.
+\end_layout
+
+\begin_layout Subsubsection
+Modelo Peer-to-Peer
+\end_layout
+
+\begin_layout Standard
+También conocido como P2P (Peer-to-Peer)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "P2P"
+description "Peer-to-Peer"
+
+\end_inset
+
+, Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ArquitecturaP2P"
+
+\end_inset
+
+, este modelo carece de servidor dedicados sino que cada nodo o 
+\shape italic
+peer 
+\shape default
+de la red sirve y solicita información a los demás
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AlgoNetwForComputerGames"
+
+\end_inset
+
+.
+ Es decir, no hay ninguna autoridad que imponga reglas o mantenga el estado
+ de los objetos.
+ Hoy en día es posible encontrar juegos que sigan usando este modelo de
+ arquitectura de red pero presenta problemas que desaconsejan su uso en
+ la mayoría de juegos actuales
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AlgoNetwForComputerGames"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../figures/ArquitecturaP2P.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Arquitectura P2P
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ArquitecturaP2P"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En este modelo, cada nodo ejecuta una instancia del juego y envía el estado
+ de su mundo a todos los demás nodos.
+ Para poder renderizar la escena, antes todos los nodos deben recibir los
+ mensajes de los demás.
+ La latencia de todos los jugadores tiene un impacto determinante en la
+ partida, ya que el jugador con mayor latencia tardará mas en recibir los
+ mensajes de los demás jugadores y en enviar los suyos, retrasando la ejecución
+ del juego para todos los participantes; es decir, la latencia de los jugadores
+ tiende a igualarse a la del jugador con mayor latencia.
+ Esto afecta negativamente a la inmediatez, lo que no es aceptable en juegos
+ donde ésta sea una propiedad básica (tipo FPS).
+ Por otro lado, este modelo tiene dificultades para mantener la consistencia
+ de una partida, ya que comunicar el estado entre todos los jugadores consume
+ mucho ancho de banda, al requerir un gran número de mensajes.
+\end_layout
+
+\begin_layout Subsubsection
+Híbrida
+\end_layout
+
+\begin_layout Standard
+Se apoya en características tanto del modelo cliente-servidor como en el
+ modelo P2P, en la Fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ArquitecturaHíbrida"
+
+\end_inset
+
+ se puede ver un ejemplo.
+ En esta arquitectura los servidores tiene como función dar soporte a la
+ estructura.
+ Generalmente en este modelo el servidor maneja las autorizaciones de los
+ jugadores, almacena estados como por ejemplo la habilidad del jugador y
+ ofrece soporte para la búsqueda de partidas.
+ El resto de funciones son manejadas por los 
+\shape italic
+peers
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../figures/ArquitecturaHibrida.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Arquitectura Híbrida
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ArquitecturaHíbrida"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Características del tráfico de juego en red
+\end_layout
+
+\begin_layout Standard
+Los videojuegos generan unos patrones de tráfico en la red muy característico,
+ diferenciándose de otras aplicaciones.
+ La caracterización del tráfico permitirá comprender que aspecto afectan
+ más a los videojuegos y el porqué de su estudio en la evaluación.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los MOGs presentan las siguientes características
+\begin_inset CommandInset citation
+LatexCommand citep
+key "TraficoMOG"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+Tráfico bidireccional: existe envío de información desde el servidor al
+ cliente y viceversa.
+ 
+\end_layout
+
+\begin_layout Itemize
+Predictibilidad: modelar el tráfico es relativamente una simple tarea, puesto
+ que el tráfico exhibe un comportamiento fractal (repetitivo y cíclico)
+ cuando el número de jugadores activos está relativamente fijado.
+ 
+\end_layout
+
+\begin_layout Itemize
+Poca variabilidad: presentan un tasa de transmisión muy constante, siendo
+ dependiente con el género del juego.
+\end_layout
+
+\begin_layout Itemize
+Paquetes de tamaños pequeños: la información intercambiada es reducida,
+ por lo que el ancho de banda utilizado es reducido.
+\end_layout
+
+\begin_layout Itemize
+Alta tasa de paquetes: se generan grandes ráfagas altamente periódicas de
+ pequeños paquetes.
+\end_layout
+
+\begin_layout Itemize
+Sensibilidad al retardo: dependiendo de los requisitos de interactividad
+ del juego, el retardo puede llegar a degradar gravemente la jugabilidad.
+\end_layout
+
+\begin_layout Section
+Análisis de Entornos de Desarrollo de Videojuegos en Red
+\end_layout
+
+\begin_layout Standard
+Existe una gran disponibildiad de entornos de desarrollo de videojuegos
+ y aplicaciones.
+ En este apartado se analizan los más conocidos, evaluando su idoneidad
+ para este proyecto.
+\end_layout
+
+\begin_layout Subsection
+Corona SDK
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Corona SDK
+\shape default
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "CoronaWeb"
+
+\end_inset
+
+ es una herramienta o kit de desarrollo software multiplataforma para dispositiv
+os únicamente móviles desarrollada por 
+\shape italic
+Corona Labs Inc
+\shape default
+.
+ Permite desarrollar aplicaciones para los siguientes sistemas: 
+\shape italic
+iOS, Android 
+\shape default
+(incluyendo 
+\shape italic
+Android TV
+\shape default
+), 
+\shape italic
+Kindle y Windows Phone 8
+\shape default
+.
+ Ofrece una gran rapidez para el desarrollo de los proyectos.
+ Esto es debido a la gran cantidad de librerías de las que dispone: desde
+ alguna básica para entorno gráfico hasta aquellas relacionadas con la monetizac
+ión o redes sociales.
+ Es por ello que es posible crear juegos y aplicaciones rápidamente, pudiendo
+ ver los cambios en el simulador del que dispone, 
+\shape italic
+Corona Simulator
+\shape default
+.
+ Hace relativamente poco ha sido liberada completamente su licencia hasta
+ obtener un máximo de beneficios, aspecto muy llamativo.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuenta con comunidad bastante amplia por lo que se tiene gran cantidad de
+ información, tutoriales y blogs donde preguntar dudas y aprender.
+ Esto aunque parece un detalle solo es de lo más importante de una herramienta,
+ que sea de confianza y podamos resolver los problemas que se presenten
+ como el desarrollo del proyecto avanza.
+ Se trata de una herramienta la cual se especializa para el desarrollo de
+ juegos aunque también se puede hacer aplicaciones.
+ Por lo tanto dispondrá de muchas más ayuda para el desarrollo de videojuegos,
+ como ejemplo comentar la nueva herramienta que presentaron hace poco (en
+ fase de prueba) denominada Composer GUI orientada al diseño visual de escenario
+s, es decir sin necesidad de código directamente.
+ El desarrollo se realiza con el lenguaje de 
+\shape italic
+scripting
+\shape default
+ Lua 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "WebLua"
+
+\end_inset
+
+, un lenguaje interpretado muy rápido, bastante ligero y fácil de aprender.
+ Un aspecto muy importante es que el motor que implementa es de dos dimensiones,
+ 2D, por lo tanto esta limitado a esta pudiendo simular una tercera dimensión
+ llegando a lo que se conoce como 2.5D.
+ Corona SDK se basa en estándares de la industria incluyendo por ejemplo
+ 
+\shape italic
+OpenGL, OpenAL, Box2D, Facebook, SQLite
+\shape default
+ y otros muchos.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con respecto a red no ofrece ningún mecanismo que simplifique la implementación
+ por lo tanto se trata de un entorno con muchas carencias en este aspecto.
+ La única manera de realizar videojuegos en red es implementar todo la arquitect
+ura desde abajo (
+\shape italic
+sockets
+\shape default
+) o acudir a librerías de terceros generalmente de pago.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../figures/EjemploCoronaSDK.png
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ejemplo con 
+\shape italic
+Corona SDK
+\shape default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:EjemploCorona"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Shiva3D
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Shiva3D
+\shape default
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Shiva3DWeb"
+
+\end_inset
+
+ es un entorno de desarrollo de aplicaciones y juegos 3D.
+ Permite exportar tanto los juegos como aplicaciones a más de 20 plataformas
+ entre las que se encuentran 
+\shape italic
+iOS,
+\shape default
+ 
+\shape italic
+Android, Windows Phone, Windows, OS X, Linux
+\shape default
+, navegadores y consolas de juegos.
+ Se trata de una potente plataforma de desarrollo reduciendo el tiempo para
+ sacar el contenido al mercado.
+ Por tanto esta orientada tanto a grandes desarrolladoras como a pequeñas
+ o desarrolladores individuales.
+ 
+\shape italic
+Shiva3D
+\shape default
+ cuenta con un fuerte equipo de apoyo detrás de él, los cuales no paran
+ de introducir novedades y facilidades así como añadir soporte a todos sus
+ desarrolladores.
+ Ofrece a los desarrolladores tres tipos de licencia.
+ La primera de ellas es una versión Web gratis muy pobre ya que solo permite
+ publicar en páginas web.
+ En cambio las otras dos, la básica y avanzada permiten hacer uso de todo
+ las características y por ello tienen un costo que sorprendentemente no
+ es muy alto.
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+En cuanto a todas las características son muy variadas y potentes.
+ El editor de
+\shape italic
+ Shiva3D
+\shape default
+ es un software el cual te muestra para se vea lo se obtendrá.
+ Es lo que se llama un 
+\shape italic
+WYSIWYG
+\shape default
+ (
+\shape italic
+What You See Is What You Get
+\shape default
+)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "WYSIWYG"
+description "What You See Is What You Get\\\\\\\\"
+
+\end_inset
+
+.
+ Esta formado por 21 módulos desde editor de terreno y animaciones a un
+ editor de código.
+ Al igual que 
+\shape italic
+Corona SDK
+\shape default
+ la programación se realiza en Lua contando con cientas de específicas funciones
+ y constantes de 
+\shape italic
+Shiva3D
+\shape default
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Respecto a las posibilidades que ofrece para crear juegos en red tiene dos
+ variantes.
+ La primera es usar un servidor incorporado para pequeños juegos multijugador
+ de hasta 16 jugadores haciendo uso de 
+\shape italic
+GET
+\shape default
+ y 
+\shape italic
+POST
+\shape default
+ a través de XML.
+ La segunda posibilidad es muchísimo más potente tratándose de una licencia
+ adicional para un servidor dedicado 
+\shape italic
+Shiva
+\shape default
+ para miles de jugadores.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../figures/EjemploShiva3D.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ejemplo con 
+\shape italic
+Shiva3D
+\shape default
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "EjemploShiva3D"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:EjemploShiva3D"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Marmalade
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Marmalade
+\shape default
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "MarmaladeWeb"
+
+\end_inset
+
+se presenta como una herramienta de desarrollo multiplataforma cuyo objetivo
+ principal es dar una gran libertad para innovar, crear y desarrollar contenido
+ en cualquier dispositivo sin comprometer en el rendimiento o aspecto.
+ Reduce el tiempo y esfuerzo en la creación de juegos y aplicaciones en
+ diferentes sistemas operativos y plataformas.
+ Gracias a Marmalade se usa el mismo código base en todas las plataformas
+ compatibles y se puede compartir, integrar y reutilizar tecnologías y herramien
+tas de terceros.
+ Al igual que los demás entornos permite las principales plataformas incluyendo
+ el nuevo sistema operativo móvil Tizen.
+ En el caso de 
+\shape italic
+Marmalade
+\shape default
+ existen varios tipos de licencia.
+ Parte desde la licencia gratis la cual tiene limitaciones en cuanto a plataform
+as y del desarrollo de aplicaciones nativas hasta la licencia profesional
+ la cual alcanza un precio muy elevado.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El kit de desarrollo esta formado por un conjunto de herramientas que permiten
+ desarrollar aplicaciones y juegos y se dividen en cinco subsistemas:
+\end_layout
+
+\begin_layout Itemize
+
+\shape italic
+Marmalade C++
+\shape default
+: permite desarrollar en 
+\shape italic
+C++
+\shape default
+ para cualquier plataforma con un alto rendimiento.
+ Es la herramienta principal ya que 
+\shape italic
+C++
+\shape default
+ es el lenguaje principal de desarrollo con 
+\shape italic
+Marmalade
+\shape default
+.
+\end_layout
+
+\begin_layout Itemize
+
+\shape italic
+Marmalade Juice
+\shape default
+: aporta la capacidad de compilar los proyectos iOS nativos para Android.
+ Es decir permite desarrollar las aplicaciones y juegos con Xcode en los
+ lenguajes
+\shape italic
+ Objetive-C
+\shape default
+ o 
+\shape italic
+Swift
+\shape default
+, compilarlos y exportarlos sin necesidad de ningún cambio.
+\end_layout
+
+\begin_layout Itemize
+
+\shape italic
+Marmalade Quick
+\shape default
+: se trata de un entorno RAD (
+\shape italic
+Rapid Application Development
+\shape default
+) que permite un despliegue simultáneo en múltiples plataformas.
+ Este subsistema usa como lenguaje 
+\shape italic
+Lua
+\shape default
+.
+\end_layout
+
+\begin_layout Itemize
+
+\shape italic
+Marmalade Web
+\shape default
+: permite la creación de aplicaciones híbridas usando
+\shape italic
+ HTML5, CSS y JavaScript
+\shape default
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\shape italic
+Marmalade Ecosystem
+\shape default
+: acceso a módulos, servicios, herramientas y extensiones que ayudan a enriquece
+r, conectar y monetizar.
+\end_layout
+
+\begin_layout Standard
+El lenguaje principal es 
+\shape italic
+C++
+\shape default
+, aunque dependiendo del subsistema se usan diferentes sin contar el desarrollo
+ en entornos nativos.
+ Resumiendo
+\shape italic
+ Marmalade
+\shape default
+ se presenta más bien como una herramienta que permite implementar código
+ a través de múltiples plataformas y dispositivos desde una única base de
+ código, es decir un 
+\shape italic
+middleware
+\shape default
+.
+ 
+\shape italic
+Marmalade
+\shape default
+ permite desarrollos en 2D y 3D pero está mucho más orientado al primero
+ de ellos al igual que 
+\shape italic
+CoronaSDK
+\shape default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Marmalade no ofrece en sí ninguna ayuda propia para implementar juegos multijuga
+dor sino que permite usar cualquier librería de terceros para su implementación.
+ (Buscar algo más de información hay poquita la verdad).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../figures/EjemploMarmalade.jpg
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ejemplo con 
+\shape italic
+Marmalade
+\shape default
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "EjemploMarmalade"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:EjemploMarmalade"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Torque3D
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Torque3D 
+\shape default
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Torque3DWeb"
+
+\end_inset
+
+ es una plataforma que se presenta como solución de código abierto para
+ el desarrollo de videojuegos.
+ Cuenta con el motor 
+\shape italic
+Torque Game
+\shape default
+.
+ Ha sido diseñado para una alta flexibilidad y rendimiento en un amplia
+ gama de hardware.
+ Viene con un conjunto completo de herramientas para producir juegos y simulacio
+nes de calidad.
+ 
+\shape italic
+Torque3D
+\shape default
+ es solo compatible con 
+\shape italic
+Windows
+\shape default
+ y desarrollo web y respecto a las plataformas a las que se pueden exportar
+ los juegos son escasas:
+\shape italic
+ Windows, Linux, OS X, iOS
+\shape default
+ y algunas consolas.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuenta con un editor WYSIWYG que deja que desear ya que muchas cosas se
+ necesitan hacer programando.
+ Cuenta con herramientas de ayuda a los diseñadores para los gráficos, así
+ como creación de terreros, iluminación, físicas y sistemas de renderización.
+ Se trata de una plataforma muy completa a nivel profesional.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En cuanto red ofrece una sencilla forma de implementar juegos multijugador
+ incluyendo técnicas para ofrece servicio óptimo, interpolación, extrapolación
+ y predicción del lado del cliente.
+ Lo mejor es que debido a que el desarrollo de un juego en red es complejo
+ la empresa a la que pertenece 
+\shape italic
+Torque3D
+\shape default
+ liberó un proyecto el cual consiste en un FPS multijugador totalmente funcional
+ y que se puede usar como modelo.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+El principal problema que presenta esta plataforma es que está olvidada
+ por parte de la compañía propietaria y debido a ello no existe comunidad
+ entorno a ella.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../figures/EjemploTorque3D.jpg
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ejemplo con 
+\shape italic
+Torque3D
+\shape default
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "EjemploTorque3D"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:EjemploTorque3D"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Unity3D
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Unity3D
+\shape default
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Unity3DWeb"
+
+\end_inset
+
+ se trata de unas de las plataformas para desarrollar videojuegos más completas
+ que existen.
+ Permite desarrollar para múltiples plataformas a partir de un único proyecto
+ entre las que están las principales móviles, navegadores, de escritorio
+ y consolas.
+ Dentro del proyecto se tiene control sobre todas las plataformas para las
+ cuales se ejecutará.
+ Por lo que Unity consigue hacer más fácil de mantener el código de trabajo
+ con la abstracción de la plataforma.
+ 
+\shape italic
+Unity3D
+\shape default
+ busca hacerse cargo del trabajo de fondo de modo que los desarrolladores
+ solo se centren en el desarrollo del juego en sí.
+ Unity es un motor gráfico asociado a los juegos para dispositivos móviles
+ con un mayor ayudas para el 3D.
+ Aunque actualmente facilita ya el desarrollo de juegos en 2D enormemente
+ así gracias a su ultima versión que añade nuevas y potentes capacidad para
+ crear juegos con gráficos más realistas para dispositivos más potentes..
+ Las licencias de Unity son elevadas.
+ La gratuita tiene limitaciones en cuanto a plataformas, características
+ y beneficios mientras que las de pago abren más posibilidades a costa de
+ su alto precio.
+ Aún así compensa enormemente por el tiempo de desarrollo que ahorra y la
+ calidad del producto final.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Su gran potencia reside en su editor uno de los más sencillos y potentes
+ del mercado.
+ El editor permite visualizar el juego a distintas resoluciones en una vista
+ WYSIWYG, al igual que el editor de 
+\shape italic
+Shiva3D
+\shape default
+.
+ Cuenta con un gran potente motor repleto de características y posibilidades.
+ 
+\shape italic
+Unity3D
+\shape default
+ permite usar junto con 
+\shape italic
+3ds Max, Maya, Blender, Cinema 4D, Adobe Photoshop, Adobe Fireworks
+\shape default
+ y otros.
+ De modo que los cambios realizados a las creaciones realizadas con estas
+ se actualizan automáticamente en Unity sin necesidad de reimportar.El motor
+ gráfico que utiliza es 
+\shape italic
+Direct3D
+\shape default
+ (para 
+\shape italic
+Windows
+\shape default
+), 
+\shape italic
+OpenGL
+\shape default
+ (para
+\shape italic
+ Mac
+\shape default
+ y 
+\shape italic
+Linux
+\shape default
+), 
+\shape italic
+OpenGL ES
+\shape default
+ (para 
+\shape italic
+Android
+\shape default
+ y
+\shape italic
  iOS
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "iOS"
-description "Sistema operativo móvil de Apple. Integrado en los dispositivos iPhone, iPod, iPad y Apple TV."
-
-\end_inset
-
- y Android
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "Android"
-description "Sistema operativo de Google para dispositivos móviles basado en Linux y en aplicaciones middleware."
-
-\end_inset
-
- que permite el control y visualización remota de videocámaras instaladas
- en hogares o en oficinas desde cualquier parte del mundo
+\shape default
+) y propietarios para consolas y el resto.
+ Permite mapeado de relieve, reflexión de mapeado, mapeado de paralaje,
+ oclusión ambiental, sombras dinámicas, renderizados, etc.
+ La programación de los 
+\shape italic
+script
+\shape default
+ se realiza a través del editor que integra
+\shape italic
+ MonoDevelop
+\shape default
+, en cualquiera de los siguientes tres lenguajes, 
+\shape italic
+UnityScript, C#
+\shape default
+ o 
+\shape italic
+Boo
+\shape default
+.
+ Además 
+\shape italic
+Unity3D
+\shape default
+ ofrece multitud de paquetes gratuitos o de pago de una amplia gama, incluyendo
+ modelos 3D, interfaces de usuario, ejemplos o animaciones por lo que puede
+ reducir el tiempo de desarrollo del proyecto.
+ Todos estos paquetes se ofrecen a través de 
+\shape italic
+Unity Asset Stor
+\shape default
+e 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "TeleyeiView"
+key "UnityAssetStore"
 
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename D:/Mis Datos/Universidad/PFC Videovigilancia por Móvil/LyX/Memoria PFC/figures/teleEye.jpg
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-TeleEye iView para Android.
-\begin_inset CommandInset citation
-LatexCommand citep
-key "ImagenTeleEye"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "Fig TeleEye"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Características
-\end_layout
-
-\begin_layout Standard
-TeleEye iView está desarrollado siguiendo Bla, Bla, Bla...
- y puede realizar PTZ
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "PTZ"
-description "Acrónimo de \\textit{pan-tilt-zoom}, es decir, moviento horizontal y vertical de la cámara y la posibilidad de acercar la imagen."
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-Ventajas
-\end_layout
-
-\begin_layout Itemize
-El cliente está disponible para un amplio número de dispositivos diseñados
- tanto para Android como para iOS.
-\end_layout
-
-\begin_layout Itemize
-Transmisión de vídeo sobre Wi-Fi, HSDPA
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "HSDPA"
-description "\\textit{High Speed Downlink Packet Access}, también denominada 3.5G, 3G+ o turbo 3G, es la optimización de la tecnología espectral UMTS/WCDMA."
-
-\end_inset
-
-, 3G
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "3G"
-description "Abreviación de \\textit{tercera generación} de transmisión de voz y datos a través de telefonía móvil mediante UMTS."
-
-\end_inset
-
-
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "UMTS"
-description "\\textit{Universal Mobile Telecommunications Systems} es una tecnología sucesora de la tecnologia GSM, usada por los dispositivos móviles de tercera generación."
-
-\end_inset
-
-, EDGE
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "EDGE"
-description "\\textit{Enhaced Data Rates for GSM Evolution} o Tasas de Datos Mejoradas para la evolución de GSM, es una tecnología de la telefonía móvil que actúa como puente entre las redes 2G y 3G."
-
-\end_inset
-
- o GPRS
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "GPRS"
-description "\\textit{General Packet Radio Service} o Servicio General de Paquetes Vía Radio es una extensión de GSM para la transmisión de datos por paquetes."
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Bla, Bla, Bla
-\end_layout
-
-\begin_layout Subsection
-Desventajas
-\end_layout
-
-\begin_layout Itemize
-Es necesario un 
-\emph on
-hardware
-\emph default
- específico que actúe como servidor, que será el encargado del control de
- las cámaras y del envío en 
-\emph on
-streaming
-\emph default
- del vídeo llamado 
-\series bold
-TeleEye Mobile Monitoring Solution (M-303)
-\series default
-, por lo tanto, no es gratuito.
-\end_layout
-
-\begin_layout Itemize
-En el cliente sólo es posible visualizar una de las cámaras Bla, Bla, Bla
-\end_layout
-
-\begin_layout Section
-Otro Ejemplo
-\end_layout
-
-\begin_layout Standard
-Bla, Bla, Bla
-\end_layout
-
-\begin_layout Subsection
-Características
-\end_layout
-
-\begin_layout Standard
-Bla, Bla, Bla
-\end_layout
-
-\begin_layout Subsection
-Ventajas
-\end_layout
-
-\begin_layout Itemize
-La grabación del vídeo se realiza a 30 
-\emph on
-frames
-\emph default
-
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "Frame"
-description "\\textit{Fotograma}, es una imagen particular dentro de una sucesión de imágenes que componen una animación."
-
-\end_inset
-
- por segundo en tiempo real, con una resolución de 720 x 480 píxeles
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "Píxel"
-description "Acrónimo en inglés de \\textit{Picture Element}, es la menor unidad homogénea en color que forma parte de una imagen digital."
-
-\end_inset
-
- y se puede ajustar para que grabe a 352 x 240 píxeles con 240 
-\emph on
-frames
-\emph default
- por segundo .
-\end_layout
-
-\begin_layout Itemize
-Permite la detección del movimiento en la imagen, siendo posible la configuració
-n del sistema para que sólo almacene el vídeo cuando se detecte movimiento,
- de lo contrario, deja de grabar automáticamente.
- Esto permite un ahorro importante de disco duro y de tiempo al visualizar
- el vídeo almacenado.
- 
-\end_layout
-
-\begin_layout Itemize
-Activa un sistema de alarma con el envío de un e-mail cuando se detecta
- el movimiento.
-\end_layout
-
-\begin_layout Itemize
-Dispone de un puerto USB al que se puede conectar un disco duro externo
- para posibles 
-\emph on
-backups
-\emph default
-, tanto completos como de parte del vídeo.
- Este puerto no se puede emplear para tener espacio de almacenamiento extra
- disponible en el servidor.
-\end_layout
-
-\begin_layout Itemize
-Es posible visualizar de manera simultánea las imágenes captadas por las
- cámaras en un monitor VGA (con una resolución de 800 x 600 píxeles o de
- 1280 x 1024 píxeles) y en los dispositivos móviles .
-\end_layout
-
-\begin_layout Itemize
-Se puede ampliar la memoria interna del servidor hasta 2 Terabytes, lo que
- equivale a 120 días de grabación de manera continuada.
- 
-\end_layout
-
-\begin_layout Itemize
-Cuando se llena la memoria, sigue grabando empezando de nuevo por el principio
- de la misma, sobrescribiendo los datos almacenados, por lo que nunca se
- detiene.
-\end_layout
-
-\begin_layout Itemize
-A través de Internet, es posible ver de manera remota el vídeo grabado empleando
- 
-\emph on
-smartphones
-\emph default
- de Blackberry, Android, Symbian 3 y 5, iOS y Windows Mobile.
- 
-\end_layout
-
-\begin_layout Itemize
-Los días y el horario de grabación son programables por medio de la interfaz
- del servidor.
-\end_layout
-
-\begin_layout Itemize
-Dos usuarios pueden ver de manera simultánea y remota el vídeo, sin experimentar
- pérdidas en la QoS (
-\emph on
-Quality of Service
-\emph default
-).
-\end_layout
-
-\begin_layout Itemize
-En la pantalla se pueden visualizar hasta cuatro cámaras.
- 
-\end_layout
-
-\begin_layout Itemize
-La búsqueda en los vídeos almacenados se realiza por fecha y hora.
-\end_layout
-
-\begin_layout Subsection
-Desventajas
-\end_layout
-
-\begin_layout Itemize
-Es necesario un 
-\emph on
-hardware
-\emph default
- adicional que es el encargado de realizar la función de grabación del vídeo
- capturado por las cámaras y de ofrecerlo a los clientes.
-\end_layout
-
-\begin_layout Itemize
-Precio aproximado de 275€.
-\end_layout
-
-\begin_layout Itemize
-No es un sistema distribuido, ya que no es posible la interconexión de varios
- servidores.
-\end_layout
-
-\begin_layout Section
-Live2Phone
-\end_layout
-
-\begin_layout Standard
-Los desarrolladores de Intellsys SRL han creado un software que permite
- la implantación de un sistema de vídeo vigilancia remota aprovechando los
- equipos de los que dispone el usuario.
- No es necesario un 
-\emph on
-hardware
-\emph default
- adicional que actúe como servidor, ya que el servidor es una aplicación
- compatible con los sistemas operativos existentes en el mercado
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Live2phone"
-
-\end_inset
-
+, el cual es un recurso disponible desde el editor de 
+\shape italic
+Unity3D
+\shape default
 .
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename D:/Mis Datos/Universidad/PFC Videovigilancia por Móvil/LyX/Memoria PFC/figures/live2Phone.jpg
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Live2Phone para Symbian.
-\begin_inset CommandInset citation
-LatexCommand citep
-key "ImagenLive2Phone"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "Fig Live2Phone"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Características
-\end_layout
-
-\begin_layout Standard
-Live2Phone es una aplicación de vídeo vigilancia con 
-\emph on
-streaming
-\emph default
- de vídeo, diseñada siguiendo el modelo de cliente-servidor.
 \begin_inset Newline newline
 \end_inset
 
 
-\series bold
-Live2Phone Server
-\series default
- es el elemento central del sistema, que se encontrará instalado en el ordenador
- personal del cliente y se encargará de captar y procesar las fuentes de
- vídeo desde una cámara web USB u otra fuente 
-\emph on
-Direct Show
-\emph default
-, como por ejemplo una capturadora de vídeo o una tarjeta de televisión.
-\begin_inset Newline newline
-\end_inset
-
-
-\series bold
-Live2Phone Client
-\series default
- se encontrará instalado en un teléfono móvil que disponga de Symbian S60
- 3rd Edition.
- También hay una versión del cliente para ordenadores de sobremesa.
-\end_layout
-
-\begin_layout Subsection
-Ventajas
-\end_layout
-
-\begin_layout Itemize
-Detección de movimiento con sensibilidad adaptable y con tono de alarma.
-\end_layout
-
-\begin_layout Itemize
-Soporta el 
-\emph on
-streaming
-\emph default
- de vídeo de varias cámaras de manera simultánea.
-\end_layout
-
-\begin_layout Itemize
-Las cámaras soportadas pueden ser de diferentes marcas y modelos.
-\end_layout
-
-\begin_layout Itemize
-El 
-\emph on
-streaming
-\emph default
- de vídeo está diseñado para consumir poco ancho de banda, con un 
-\emph on
-frame
-\emph default
- rate de 4-6 
-\emph on
-frames
-\emph default
-/segundo y a 8KB/segundo.
-\end_layout
-
-\begin_layout Itemize
-Se puede instalar en sistemas con con IP dinámica.
-\end_layout
-
-\begin_layout Itemize
-El sistema de vigilancia es a tiempo completo, es decir, puede estar funcionando
- las 24 horas del día durante los 7 días de la semana.
-\end_layout
-
-\begin_layout Subsection
-Desventajas
-\end_layout
-
-\begin_layout Itemize
-Tanto el cliente como el servidor no son multiplataforma, ya que el cliente
- sólo está disponible para dispositivos móviles con Symbian S60 3rd Edition
- y el servidor sólo está disponible para sistemas con Windows XP, 2000 o
- Vista.
-\end_layout
-
-\begin_layout Itemize
-No permite la recepción del sonido de la cámara.
-\end_layout
-
-\begin_layout Itemize
-Este sistema no tiene implementado funciones PTZ.
-\end_layout
-
-\begin_layout Section
-MobileCamViewer
 \end_layout
 
 \begin_layout Standard
-La compañía mobiDEOS ha desarrollado un sistema de vídeo vigilancia para
- monitorizar las cámaras web, cámaras IP, cámaras analógicas CCTV, NVR (
-\emph on
-Network Vídeo Recorder
-\emph default
-)
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "NVR"
-description "\\textit{Network Video Recorder} es un programa software que almacena el vídeo captado por cámaras IP en formato digital en algún soporte de almacenamiento."
 
-\end_inset
-
- y DVR (
-\emph on
-Digital Video Recorder
-\emph default
-)
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "DVR"
-description "\\textit{Digital Vídeo Recorder} es un programa software que almacena el vídeo grabado por cámaras analógicas en algún soporte de almacenamiento."
-
-\end_inset
-
- basado en un servidor que se encuentra en la nube y en un cliente instalado
- en el dispositivo móvil
-\begin_inset CommandInset citation
-LatexCommand citep
-key "MobileCamViewer"
-
-\end_inset
-
-.
+\shape italic
+Unity3D
+\shape default
+ ofrece grandes posibilidades para desarrollar juegos multijugador.
+ Incluye una librería específica para implementar el servidor y clientes
+ muy cómodo para implementar un multijugador local simplificando enormemente
+ el desarrollo.
+ Por otra parte contiene todo lo necesario para abstraer al desarrollador
+ de la implementación de la comunicación entre las diferentes entidades.
+ Por lo tanto ofrece todo lo necesario siendo cómodo y muy fácil de usar.
+ El problema surge cuando se trata de un juego más ambicioso que quiere
+ implementar un multijugador en red a nivel global por ejemplo.
+ En esta situación no queda más remedio que recurrir a terceros.
+ En caso de 
+\shape italic
+Unity3D
+\shape default
+, 
+\shape italic
+Photon
+\shape default
+ es un buen ejemplo ya que ofrece sus librerías para este propósito con
+ diferentes licencias en función de los requisitos del juego.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
-placement h
+placement H
 wide false
 sideways false
 status open
@@ -671,33 +1945,35 @@ centering
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename D:/Mis Datos/Universidad/PFC Videovigilancia por Móvil/LyX/Memoria PFC/figures/MobileCamViewer.PNG
+	filename ../figures/EjemploUnity3D.jpg
+	width 100text%
 
 \end_inset
 
 
-\end_layout
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset Caption
+Ejemplo con 
+\shape italic
+Unity3D
+\shape default
 
-\begin_layout Plain Layout
-Logotipo MobileCamViewer.
 \begin_inset CommandInset citation
 LatexCommand citep
-key "ImagenMobileCamViewer"
-
-\end_inset
-
-
-\end_layout
+key "EjemploUnity3D"
 
 \end_inset
 
 
 \begin_inset CommandInset label
 LatexCommand label
-name "Fig MobileCamViewer"
+name "fig:EjemploUnity3D"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -710,94 +1986,111 @@ name "Fig MobileCamViewer"
 \end_layout
 
 \begin_layout Subsection
-Características
+Unreal Engine 4
 \end_layout
 
 \begin_layout Standard
-Este sistema basado en cliente-servidor, permite visualizar las imágenes
- captadas por alguna cámara IP y mostrarlo en un dispositivo móvil con iPhone,
- Blackberry, Android, Windows Mobile y J2ME.
-\end_layout
 
-\begin_layout Subsection
-Ventajas
-\end_layout
-
-\begin_layout Itemize
-Permite el acceso a múltiples usuarios y la visualización simultánea de
- una misma cámara.
-\end_layout
-
-\begin_layout Itemize
-El cliente y el servidor están disponibles para múltiples sistemas operativos.
-\end_layout
-
-\begin_layout Itemize
-El vídeo no se almacena en el servidor, se destruye nada más ser emitido.
-\end_layout
-
-\begin_layout Itemize
-La información está encriptada con Triple DES 112
-\begin_inset CommandInset citation
-LatexCommand citep
-key "TripleDES"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-El servidor está diseñado para operar como un cliente interno, pero también
- está diseñado para ser utilizado en un modelo ASP
+\shape italic
+Unreal Engine 4
+\shape default
+ (UE4) 
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
-symbol "ASP"
-description "\\textit{Application Service Provider}, es una empresa que ofrece servicios de computación a sus clientes a través de una red."
+symbol "UE4"
+description "Unreal Engine 4"
 
 \end_inset
 
-.
-\end_layout
 
-\begin_layout Subsection
-Desventajas
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand citep
+key "UE4Web"
 
-\begin_layout Itemize
-No está disponible para Android.
-\end_layout
+\end_inset
 
-\begin_layout Itemize
-No es un sistema distribuido, ya que no permite la interconexión entre varios
- servidores.
-\end_layout
+ se trata de un completa suite de herramientas para el desarrollo de juegos.
+ Permite el desarrollo desde pequeños juegos para móviles en 2D hasta títulos
+ AAA (juegos con alta calidad y alto presupuesto) de grandes desarrolladoras
+ en 3D.
+ No solo es una herramienta cuyo su único uso sea para juegos, sino también
+ para realidad virtual, educación, arquitectura o el cine.
+ Ofrece todo lo necesario para cualquier idea que se ocurra.
+ Recientemente 
+\shape italic
+Unreal Engine 4
+\shape default
+ se ha liberado completamente solamente se paga un porcentaje de los beneficios
+ que se obtienen, es decir ellos ingresan si el desarrollador ingresa.
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Itemize
-Para hacer uso del servidor, hay que pagar unas cuotas por el servicio.
-\end_layout
 
-\begin_layout Section
-Alnet PC-Based DVRs and Systems
 \end_layout
 
 \begin_layout Standard
-Platinum CCTV Surveillance Solutions (Ez-Toyz Inc.) ha desarrollado un sistema
- de seguridad con una gran cantidad de servicios de vídeo vigilancia remota
+Actualmente UE4 ofrece una gran adaptabilidad ya que es ideal trabajar para
+ juegos en ordenadores así como para las demás plataformas.
+ Es decir permite crear juegos pequeños y adaptarlos sin hacer prácticamente
+ nada a plataformas móviles o navegadores.
+ Al igual que 
+\shape italic
+Shiva3D
+\shape default
+ y 
+\shape italic
+Unity3D
+\shape default
+ ofrece un completo editor WYSIWYG muy potente llegando a crear videojuegos
+ sin necesidad de escribir código es lo que se conoce como 
+\shape italic
+blueprints
+\shape default
+.
+ El sistema de 
+\shape italic
+Blueprints Visual Scripting
+\shape default
+ permite construir juegos desde cero sin tener que escribir ninguna línea
+ de código.
+ Eso sí la programación no queda relegada aún segundo plano sino que los
  
-\begin_inset CommandInset citation
-LatexCommand citep
-key "alnetSystem"
-
+\shape italic
+blueprints
+\shape default
+ y el código están pensado para trabajar juntos y revueltos.
+ UE4 fue reescrito completamente en 
+\shape italic
+C++
+\shape default
+ siendo este el lenguaje de programación usado en el desarrollo.
+ En cuanto potencia, es decir el nivel gráfico y estético del motor es inmejorab
+le.
+ Por destacar algo cuenta con una gestión de partículas de las mejores del
+ momento.
+ Contiene innumerables herramientas avanzada muy diversas.
+ 
+\begin_inset Newline newline
 \end_inset
 
-.
- 
+
+\begin_inset Newline newline
+\end_inset
+
+En cuanto a ayuda para la implementación del multijugador en los juegos
+ UE4 ofrece muchísimas posibilidades.
+ Por ejemplo recientemente se introdujo el sistema de 
+\shape italic
+blueprints
+\shape default
+ orientado a multijugador.
+ Esto es programación gráfica orientada a gestionar y crear servidores y
+ demás componentes para un buen modo multijugador.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
-placement h
+placement H
 wide false
 sideways false
 status open
@@ -820,36 +2113,38 @@ centering
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename D:/Mis Datos/Universidad/PFC Videovigilancia por Móvil/LyX/Memoria PFC/figures/Alnet PC-Based DVRs and Systems.jpg
+	filename ../figures/EjemploUE4.jpg
+	width 100text%
 
 \end_inset
 
 
-\end_layout
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Alnet para iPhone.
+Ejemplo de UE4
 \begin_inset CommandInset citation
 LatexCommand citep
-key "imagenAlnet"
-
-\end_inset
-
-
-\end_layout
+key "EjemploUE4"
 
 \end_inset
 
 
 \begin_inset CommandInset label
 LatexCommand label
-name "Fig  Alnet"
+name "fig:EjemploUE4"
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -859,99 +2154,2900 @@ name "Fig  Alnet"
 \end_layout
 
 \begin_layout Subsection
-Características
+Comparativa
 \end_layout
 
 \begin_layout Standard
-El sistema se basa en una arquitectura cliente-servidor.
- Hay dos modelos posibles para el servidor: el servidor puede ser un sistema
- DVR con H.264 integrado en un 
-\emph on
-hardware
-\emph default
- que realiza las funciones de almacenamiento de vídeo, control de las cámaras
- analógicas y 
-\emph on
-streaming
-\emph default
- del vídeo hacia los dispositivos móviles; o un 
-\emph on
-software
-\emph default
- que hará que un ordenador con conexión a la red actúe como servidor NVR
- de vídeo vigilancia, gestionando tanto las cámaras IP conectadas a la red,
- como las cámaras conectadas al equipo a través de una tarjeta DVR, realizando
- las mismas funciones mencionadas con anterioridad.
+En esta sección se comparan los diferentes entornos para el desarrollo de
+ videojuegos.
+ Para la comparación se abarcan diferentes aspectos.
+ Para una comparación mucho más clara y visual se realizará por medio de
+ una tabla divida en dos partes la cual se explicará a continuación.
+ Las columnas que contiene la tabla son:
+\end_layout
+
+\begin_layout Itemize
+Entorno: indica la herramienta o kit de desarrollo que se está analizando.
+\end_layout
+
+\begin_layout Itemize
+Plataformas: indica las plataformas y sistemas operativos que soporta.
+\end_layout
+
+\begin_layout Itemize
+Facilidades y recursos: referido a las herramientas, características y recursos
+ que el entorno pone al alcance de los desarrolladores para un cómodo y
+ rápido desarrollo.
+ Se clasifica en:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Altas: ofrece gran características de diseño visual y gráfico, recursos
+ de diseño y diversas herramientas.
+\end_layout
+
+\begin_layout Itemize
+Medias: ofrece diseño gráfico pero necesita de programación, herramientas
+ que simplifican el trabajo, junto 
+\end_layout
+
+\begin_layout Itemize
+Bajas: herramientas más sencillas, con más importancia de la programación.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Dificultad: se refiere al la curva de aprendizaje que tiene el entorno en
+ sí.
+\end_layout
+
+\begin_layout Itemize
+Lenguajes de programación: los lenguajes de programación soportados por
+ el entorno.
+\end_layout
+
+\begin_layout Itemize
+Tipo de Motor: indica de cuantas dimensiones es el motor, es decir de 2D
+ y/o 3D.
+\end_layout
+
+\begin_layout Itemize
+Potencia: capacidad gráfica, efectos, iluminaciones y animaciones que alcanza
+ el motor.
+\end_layout
+
+\begin_layout Itemize
+Multijugador: indica si el entorno incluye soporte para multijugador.
+ El soporte se clasifica en poco, moderado y mucho.
+ 
+\end_layout
+
+\begin_layout Itemize
+Licencia: indica que ofrece la versión gratuita.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="19" columns="5">
+<features rotate="0" tabularvalignment="bottom">
+<column alignment="center" valignment="top" width="2.5cm">
+<column alignment="center" valignment="top" width="4cm">
+<column alignment="center" valignment="top" width="25mm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Entornos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Plataformas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Herramientas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Dificultad
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Lenguaje
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+CoronaSDK
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Escritorio: Ninguna
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Básicas
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Baja
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lua
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Móviles: iOS, Android, Kindle, Windows Phone
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Otras: Ninguna
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Shiva3D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Escritorio: Windows, Mac OS X, Linux 
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Medias
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alta
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lua
+\begin_inset Newline newline
+\end_inset
+
+C++
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Móviles: iOS, Android, Windows Phone
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Otras: Navegadores, Consolas
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Marmalade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Escritorio: Windows, Mac OS X 
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Medias
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Media
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C++
+\begin_inset Newline newline
+\end_inset
+
+Objetive-C
+\begin_inset Newline newline
+\end_inset
+
+Lua
+\begin_inset Newline newline
+\end_inset
+
+HTML5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Móviles: iOS, Android, Windows Phone, Tyzen
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Otras: Navegadores, Consolas
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Torque3D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Escritorio: Windows, Mac OS X 
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Medias
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alta
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C++
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Móviles: iOS
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Otras: escasas consolas
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Unity3D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Escritorio: Windows, Mac OS X, Linux
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Altas
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Media
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C#
+\begin_inset Newline newline
+\end_inset
+
+UnityScript
+\begin_inset Newline newline
+\end_inset
+
+ Boo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Móviles: iOS, Android, Windows Phone
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Otras: Navegadores, Consolas
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+UE4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Escritorio: Windows, Mac OS X, Linux 
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Altas
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Media/Alta
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C++
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Móviles: iOS, Android, Windows Phone
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Otras: Navegadores, Consolas
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tabla comparativa de entornos (I)
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:TablaComparativaEntornos1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="6">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="2.5cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="15mm">
+<column alignment="center" valignment="top" width="25mm">
+<column alignment="center" valignment="top" width="30mm">
+<column alignment="center" valignment="top" width="15mm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Entornos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Potencia
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Motor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Multijugador
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Licencia Gratuita
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Actual
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Corona SDK
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Baja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sin limitaciones
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SI
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Shiva3D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Media
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3D-2D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SI
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Limitaciones Severas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NO
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Marmalade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Media-Alta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3D-2D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SI
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Limitaciones Severas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SI
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Torque3D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Medias
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3D-2D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SI
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sin limitaciones
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NO
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Unity3D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3D-2D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SI
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Limitaciones 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SI
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+UE4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Muy Alta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3D-2D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SI
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sin limitaciones
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SI
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tabla comparativa de entornos (II)
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:TablaComparativaEntornos2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El videojuego a desarrollar se trata de un FPS en tiempo real sobre ordenadores
+ de escritorio.
+ Teniendo en cuenta este objetivo a continuación se muestra una valoración
+ de los diferentes entornos y por que se ha elegido uno en concreto.
  
 \begin_inset Newline newline
 \end_inset
 
-El cliente está desarrollado tanto para PC como para los dispositivos móviles.
- Se pueden realizar tareas tanto de visualización, cómo de control de las
- cámaras de manera remota.
+
+\end_layout
+
+\begin_layout Standard
+Lo primero es que debido a que el juego que se quiere implementar es en
+ 3D se ha descartado los entornos que solo disponen de 2D, es decir 
+\shape italic
+Corona SDK
+\shape default
+.
+ 
+\shape italic
+Shiva3D
+\shape default
+ debido a que su versión gratuita solo permite el desarrollo web y también
+ su curva de aprendizaje es lenta se descarto.
+ 
+\shape italic
+Marmalade
+\shape default
+ por su parte ofrece todo lo necesario, pero con respecto al multijugador
+ carecía de la funcionalidad que se buscaba.Además de que su desarrollo es
+ algo más lento que en el resto de entornos.
+ Por último encontramos a 
+\shape italic
+Unity3D
+\shape default
+ y UE4.
+ En ambos encontramos todo los requisitos para implementar el videojuego
+ que se busca.
+ Ambos tiene un increíble editor gráfico más que suficiente para el objetivo.
+ También tienen funcionalidades para implementar multijugador.
+ El problema es que UE4 es un entorno capaz de llegar a desarrollar videojuegos
+ AAA y esto conlleva que para un equipo pequeño o individual es demasiado.
+ En cambio 
+\shape italic
+Unity3D
+\shape default
+ es perfecto para desarrolladores individuales o pequeños grupos ya que
+ permite un desarrollo muy rápido a demás de ofrecer muchísimos recursos.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pero el aspecto por el que se escoge 
+\shape italic
+Unity3D
+\shape default
+ como entorno de desarrollo es debido a la implementación que permite para
+ el multijugador.
+ Incluye funcionalidad para implementar clientes así como servidores en
+ los clientes de modo que da todo el control al desarrollador y esto es
+ fundamental para el objetivo del trabajo.
+\end_layout
+
+\begin_layout Section
+Técnicas de predicción o 
+\shape italic
+Dead Reckoning
+\shape default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Técnicas-de-predicción"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuando se empieza a desarrollar un videojuego en red rápidamente aparecen
+ problemas al tratar con las redes.
+ Esto no afecta tan drásticamente a los juegos en los cuales lo movimientos
+ son pausados y lentos, por ejemplo un juego por turnos.
+ Pero por otra parte, los juegos con altos requisitos de interactividad
+ se ven muy afectados.
+ Existen soluciones basadas en proveer líneas dedicadas extremo a extremo
+ donde la latencia, probabilidad de pérdidas y tasa de transferencia esté
+ garantizada.
+ Pero aunque las redes dedicadas son una solución viable, sin embargo es
+ mejor que los juegos operen sobre Internet donde las latencias, así como
+ su variabilidad (
+\shape italic
+jitter
+\shape default
+), pérdidas, son menos previsibles y generalmente más grandes.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Afortunadamente ya se han desarrollado soluciones para estos problemas las
+ cuales en un principio estaban diseñadas para simulaciones interactivas
+ distribuidas o DIS.
+ Como ya se comentó los DIS son una tecnología para unir simulaciones de
+ distintos tipos en múltiples localizaciones para llegar a crear mundos
+ realistas y complejos que permitan una alta interactividad.
+ La actualizaciones de estados por parte de las simulaciones pueden generar
+ grandes cantidades de información, y por tanto saturar el ancho de banda
+ de la red.
+ Para reducir la cantidad de información y ocultar la latencia las técnicas
+ de 
+\shape italic
+dead reckoning
+\shape default
+ desarrolladas en el estándar IEEE 1278 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "StandardDIS"
+
+\end_inset
+
+ son una característica fundamental para las DIS.
+ Haciendo uso de un modelo de predicción se pretende que los usuarios participan
+tes mantengan una vista consistente del estado global (EG) 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "EG"
+description "Estado Global"
+
+\end_inset
+
+, el cuál es dinámico y se encuentra distribuido.
+ El EG es la información que cambia con el tiempo y que cada participante
+ debe conocer sobre el mundo virtual.
+ El estado dinámico en un mundo virtual se conforma de información de quién
+ y en qué está participando, su ubicación relativa, su comportamiento, etc.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En esta sección se define y describe una de la técnicas más conocidas y
+ comunes utilizadas en el desarrollo de mundos virtuales, 
+\shape italic
+dead reckoning
+\shape default
+ o predicción en español.
+ En una primera subsección se definirá en que consiste la técnica.
+ Posteriormente se verán las técnicas de predicción más comunes razonando
+ que ventajas y mejoras proporcionan así como los inconvenientes que presentan.
+ Por último se comentan otras técnicas con objetivos diferentes cuya importancia
+ también es elevada.
+ 
 \end_layout
 
 \begin_layout Subsection
-Ventajas
+Definición
 \end_layout
 
-\begin_layout Itemize
-Admite un gran número de modelos de cámaras disponibles en el mercado.
+\begin_layout Standard
+Dead reckoning se puede definir según 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AdaptiveDRAForDIS"
+
+\end_inset
+
+ como una serie de técnicas y algoritmos computables que buscan predecir
+ el estado de las entidades participantes del mundo virtual, de modo que
+ se puede reducir el número de paquetes de actualización necesarios y la
+ latencia de actualización sea mínima.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-Permite el acceso simultáneo a múltiples usuarios y la visualización de
- una misma cámara al mismo tiempo sin pérdidas en la QoS (
-\emph on
-Quality of Service
-\emph default
-)
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "QoS"
-description "\\textit{Quality of Service}, la totalidad de las características de un servicio de telecomunicaciones que determinan su capacidad para satisfacer las necesidades explícitas e implícitas del usuario del servicio."
+\begin_layout Standard
+Las técnicas de predicción conllevan la transmisión de paquetes a los entidades
+ participantes en el mundo virtual.
+ Estos paquetes contendrán información que se procesará para predecir y
+ aproximar el estado general verdadero, de modo que se podría reducir la
+ tasa de actualización.
+ Es decir con cada paquetes de actualización se predice el movimiento la
+ posición, velocidad, aceleración y otros estados de la entidad.
+ El modelo de 
+\shape italic
+dead reckoning
+\shape default
+ estima la posición de todas las entidades simuladas.
+ La posición anticipada de una entidad es calculada a partir de la última
+ posición o su pasado haciendo uso de una técnica de predicción
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AlgoNetwForComputerGames"
 
 \end_inset
 
 .
+ 
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-El cliente está disponible para Symbian, Windows Mobile, Android y iOS.
+\begin_layout Standard
+Por ejemplo, cuando se está en un mundo virtual y se crea una nueva entidad,
+ el equipo que posee dicha entidad envía un PDU (
+\shape italic
+Protocol Data Unit
+\shape default
+) al resto de equipos que conforman la red.
+ Este PDU contiene información que identifica a la entidad, como su cinemática
+ (posición, velocidad, aceleración y orientación) y otra información como
+ por ejemplo el daño de ataque.
+ De este modo estos equipos crean copias locales de la entidad y por lo
+ tanto, cada nodo en la red comienza a ver a dicha entidad.
+ Los PDU tendrán una cierta frecuencia de emisión para la actualización
+ de las entidades en los equipos.
+ Si se carece de técnicas de 
+\shape italic
+dead reckoning,
+\shape default
+ las entidades se moverían estáticamente acorde a la llegada de paquetes.
+ Por lo tanto, en caso de retardo o una frecuencia baja también las entidades
+ muestran movimiento erráticos o entrecortados.
+ Se quedarían quietos hasta la siguiente actualización y saltarían a la
+ siguiente con el nuevo PDU recibido.
+ Este problema se puede reducir aumentando la frecuencia pero este enfoque
+ tiene serios problemas ya que requiere una tasa de transmisión muy alta.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-El vídeo puede ser almacenado, ya sea en el 
-\emph on
-hardware
-\emph default
- de gestión de DVR o en el PC que actúa como servidor NVR.
+\begin_layout Standard
+Con 
+\shape italic
+dead reckoning,
+\shape default
+ por el contrario, después de la recepción del PDU, cada nodo comienza a
+ mover a la entidad según la técnica de predicción acordada, siempre que
+ la entidad continué moviéndose de una manera predecible y coherente.
+ Es decir, siga una trayectoria.
+ Además, es posible que ya que el nodo propietario de la entidad recuerda
+ la última vez que envió una actualización ejecute también la técnica de
+ predicción basándose en ese PDU.
+ Por lo tanto, tiene una copia de la última actualización que los otros
+ nodos de la red han visto como verdadera y también puede calcular la predicción
+ de estos.
+ De modo que cuando el nodo propietario compara el valor extrapolado con
+ el verdadero de la entidad que está controlada por el jugador, y por ejemplo
+ si estos difieren superando un umbral de error un nuevo PDU es enviado
+ para actualizar a todas las copias en los nodos restantes.
+ Y de nuevo se repite el proceso.
+ En la Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:EjemploDeadReckoning"
+
+\end_inset
+
+ se nuestra un ejemplo muy visual de un protocolo de predicción donde se
+ usa esto.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-Desde el cliente es posible seleccionar la calidad de la imagen recibida.
+\begin_layout Standard
+Si se observa la Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:EjemploDeadReckoning"
+
+\end_inset
+
+, se muestra una entidad, en este caso un simple muñeco que podría ser el
+ jugador el cuál cuando se crea en el instante t0 está en una posición determina
+da.
+ En este instante los demás equipos o nodos ejemplifican al nuevo jugador
+ tomando esa posición inicial.
+ Además de la posición los equipos reciben otros estados de la entidad como
+ la velocidad o aceleración.
+ Con estos estados las entidades aplican el protocolo de predicción para
+ describir un camino.
+ De vuelta al equipo propietario, el jugador sigue el camino en rojo y a
+ la vez va calculando a partir de t0 el estado que tendría el jugador en
+ los restantes equipos.
+ En el equipo propietario se ha definido un umbral que indica la diferencia
+ máxima permitida entre la posición verdadera y la predicha.
+ En el instante de tiempo t1 este umbral se alcanza y se realiza un actualizació
+n que conlleva la corrección en los equipos de la posición del jugador como
+ indica t'1.
+ 
 \end_layout
 
-\begin_layout Itemize
-Tiene implementada la funcionalidad de control PTZ remoto.
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
 \end_layout
 
-\begin_layout Itemize
-El vídeo almacenado en el servidor puede ser visualizado de manera remota
- en los dispositivos móviles.
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../figures/EjemploDeadReckoning.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ejemplo visual de Dead Reckoning
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:EjemploDeadReckoning"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Además es importante tener en cuenta que cuando la entidad, o el jugador
+ del ejemplo, debe moverse desde su posición calculada y trayectoria predicha
+ a su posición verdadera y trayectoria predicha actualmente se puede dar
+ un salto.
+ Para resolver este problema se presenta las técnicas o protocolos de convergenc
+ia que también se comentan junto con los de predicción a continuación.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+El umbral puede no ser necesario establecerlo en caso de que se lleguen
+ actualizaciones periódicamente.
+ Este es el caso de los videojuegos en los cuales se tienen una tasa de
+ actualización fija, apenas variante.
+ 
 \end_layout
 
 \begin_layout Subsection
-Desventajas
+Técnicas de predicción
+\end_layout
+
+\begin_layout Standard
+Existen varias técnicas de predicción.
+ Concretamente en esta sección, se verá las predcciones por polinomios derivados
+ y polinomios híbridos.
+\end_layout
+
+\begin_layout Subsubsection
+Polinomios derivados
+\end_layout
+
+\begin_layout Standard
+Las técnicas más comunes usan polinomios derivados para predecir la posición
+ futura de la entidad
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AlgoNetwForComputerGames"
+
+\end_inset
+
+.
+ El polinomio derivado se forma construyendo una fórmula que involucre varias
+ derivadas de la posición actual.
+ La primera derivada de la posición es la velocidad y la segunda la aceleración.
+ Está información es usada para estimar la posición con más precisión y
+ suavidad.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El más simple de todos es el de orden cero, es decir no hace uso de ninguna
+ derivada de la posición.
+ Por tanto solamente usa la posición instantánea del objeto.
+ Los polinomios de orden cero sencillamente copian el estado del paquete
+ de actualización y por lo tanto no son muy usados ya que son una forma
+ degenerada de predicción.
+ En la fórmula 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:PDOrden0"
+
+\end_inset
+
+ se puede ver la ecuación del polinomio de primer orden.
+ En dicha ecuación 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+$x_{t'}$
+\end_layout
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish
+ es la posición recibida que se envió en el instante de tiempo 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+$t'$
+\end_layout
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish
+ , y 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+$x_{t}$
+\end_layout
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish
+ es la posición a estimar en el instante de tiempo 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+$t$
+\end_layout
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+x_{t}\;=\;x_{t'}\label{eq:PDOrden0}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El primer polinomio derivado, no degenerado tiene orden uno.
+ Esto quiere decir que aprovecha la primera derivada de la posición, la
+ velocidad.
+ Debido a que la velocidad ya alguna información del comportamiento que
+ tiene el objeto en el tiempo, la predicción de primer orden es una mejora
+ muy significativa sobre el de orden cero.
+ En la fórmula 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:PDOrden1"
+
+\end_inset
+
+ se puede ver como se incluye en este caso la velocidad,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ $v_{t'}$
+\end_layout
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish
+ , la primera derivada de la posición, para obtener el primer polinomio.
+ Incluir la velocidad conlleva que los paquetes de actualización de estado
+ proporcionen la posición actual y la velocidad instantánea.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+x_{t}\;=\;x_{t'}\;+\;v_{t'}*t\label{eq:PDOrden1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para mejorar aún más la predicción de la posición, se puede incluir más
+ derivados en los paquetes.
+ En caso de añadir la aceleración se puede hacer uso de los polinomios de
+ segundo orden.
+ En este caso, como se ve en 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:PDOrden2"
+
+\end_inset
+
+, se añade a la ecuación la aceleración, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ $a_{t'}$
+\end_layout
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish
+ , la segunda derivada de la posición.
+ En este caso la fórmula describe un movimiento uniformemente acelerado
+ aunque podría ser posible hacer uso de otra en función de la situación
+ específica, aunque es inusual.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+x_{t}\;=\;x_{t'}\;+\;v_{t'}*t\;+\;\frac{1}{2}*a_{t'}*t^{2}\label{eq:PDOrden2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los polinomios de segundo orden son la técnica de predicción más popular
+ actualmente en el desarrollo de videojuegos en línea y otros mundos virtuales
+ en la actualidad
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AlgoNetwForComputerGames"
+
+\end_inset
+
+.
+ Esto es debido a que es fácil de entender y programar, rápida de calcular,
+ y proporciona predicciones relativamente buenas de las posiciones de los
+ objetos.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una vez descritos los polinomios más comunes, se pueden clasificar en función
+ de como se calculen las diferentes derivadas de la posición.
+ Centrándose solamente en los ordenes que se han descrito la estimación
+ puede ser en un solo paso o en dos pasos.
+ 
 \end_layout
 
 \begin_layout Itemize
-El servidor sólo está disponible para Windows.
+Un paso: en este caso se envían las derivadas en los paquetes de actualización,
+ es decir el paquete ya contiene la velocidad y la aceleración si es necesario.
+ 
 \end_layout
 
 \begin_layout Itemize
-No es un sistema distribuido, ya que no permite la interconexión entre varios
- servidores.
+Dos pasos: en este caso los paquetes no contienen todas las derivadas ya
+ que son calculadas usando la diferencia entre los dos últimos mensajes
+ de actualización que han llegado.
+ 
+\end_layout
+
+\begin_layout Standard
+En la Tab.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:ClasificacionEcPrediccion"
+
+\end_inset
+
+ se muestra una clasificación de las diferentes fórmulas según el orden
+ y el número de pasos 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AdaptiveDRAForDIS"
+
+\end_inset
+
+.
+ Las variables con un apóstofre se refieren al primer mensaje de actualización
+ y con dos al segundo mensaje de actualización.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="6cm">
+<column alignment="center" valignment="top" width="6.5cm">
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Un paso
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Dos pasos
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+1º Orden
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x_{t}\;=\;x_{t'}\;+\;v_{t'}*t$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x_{t}\;=\;x_{t'}\;+\;\frac{x_{t'}-x_{t''}}{t'-t''}*t$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+2º Orden
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x_{t}\;=\;x_{t'}\;+\;v_{t'}*t\;+\;\frac{1}{2}*a_{t'}*t^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x_{t}\;=\;x_{t'}\;+\;v_{t'}*t\;+\;\frac{1}{2}*\frac{v_{t`}-v_{t''}}{t'-t''}*t^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Clasificación de las Ecuaciones de Predicción
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:ClasificacionEcPrediccion"
+
+\end_inset
+
+.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AdaptiveDRAForDIS"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Polinomios híbridos
+\end_layout
+
+\begin_layout Standard
+Se basan en que la elección del orden del polinomio sea dinámica según la
+ situación.
+ Cuando se hace uso de polinomios híbridos el nodo remoto puede elegir dinámicam
+ente el orden del polinomio (normalmente entre uno y dos).
+ En cuanto a las ventajas que presentan primeramente los polinomios de primer
+ orden requieren menos operaciones y ofrecen un mejor predicción cuando
+ la aceleración es mínima además de existir ocasiones en que la posición
+ puede ser predicha con más exactitud sin hacer uso de la aceleración.
+ Un ejemplo sería un objeto cuya aceleración cambia continuamente su aceleración
+, ya que considerarla puede producir una estimación incorrecta, debido a
+ que se produzcan cambios en la aceleración justo después de enviar el paquete
+ de actualización.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Limitaciones de los polinomios
+\end_layout
+
+\begin_layout Standard
+Se han considerado en la revisión los polinomios de orden cero, uno y dos,
+ así como híbridos.
+ En un principio se podría pensar añadir más términos a los polinomios es
+ decirde mayor orden; sin embargo se ha llegado a demostrar que la inclusión
+ de más términos inusualmente mejora la calidad de la predicción 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AlgoNetwForComputerGames"
+
+\end_inset
+
+.
+ Es más en muchos casos lo empeoran.
+ Por otra parte cuanto más términos, más información es necesaria transmitir
+ en cada paquete por lo que se aumenta el ancho de banda oponiéndose a un
+ principio de la predicción (reducción de la información necesaria).
+\end_layout
+
+\begin_layout Subsection
+Técnicas de convergencia
+\end_layout
+
+\begin_layout Standard
+Las técnicas de convergencia definen que tratamiento se realiza con la informaci
+ón que contienen los paquetes de actualización de estado para corregir una
+ predicción inexacta
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AlgoNetwForComputerGames"
+
+\end_inset
+
+.
+ Una buena técnica o algoritmo de convergencia permite corregir el estado
+ predicho rápidamente sin crear efectos visualmente notables para el usuario.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La técnica más simple de convergencia se denomina convergencia rápida o
+ de orden cero.
+ Esta técnica consiste sencillamente en corregir de inmediato la predicción,
+ sin preocuparse por los efectos visuales que pueda producir.
+ Como ventajas es simple tanto para entenderla e implantarla pero por supuesto
+ que no proporciona el mejor despliegue visual.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las opciones mejores buscan una convergencia más lenta entre la posición
+ actual y nueva predicción que ha llegado.
+ Una de las más usadas es la convergencia lineal la cual establece una ruta
+ entre la posición actual y la nueva posición perteneciente a la nueva ruta
+ predicha.
+ La convergencia lineal permite dar continuidad a lo largo de la ruta visual.
+ Esto quiere decir que el usuario no ningún salto aumentando su experiencia
+ y calidad.
+ Sin embargo no tiene por que ser necesariamente esta continuidad suave,
+ debido a que la entidad podría cambiar de dirección de repente.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplicando técnicas de convergencia que hacen uso de curvas más sofisticadas
+ se puede lograr un resultado mucho más exquisito.
+ El problema es que al igual que otros aspectos en el desarrollo de videojuegos
+ u otros mundos virtuales es que hay que valorar si el protocolo de convergencia
+ compensa, si la mejora visual es comparable a la complejidad computacional.
+ 
+\end_layout
+
+\begin_layout Subsection
+Otras técnicas de interés
+\end_layout
+
+\begin_layout Standard
+El objetivo de esta sección es mostrar otras técnicas que se usan el videojuegos
+ para mejorar la experiencia del usuario de otros modos.
+ Estas técnicas son igual de importantes o más que las de predicción pero
+ estas tienen otros fines.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Interpolación
+\end_layout
+
+\begin_layout Standard
+Si las entidades u objetos del mundo solamente se renderizan en las posiciones
+ que se reciben del servidor, el movimiento y animaciones podrían observarse
+ entrecortado y muy poco suave.
+ Además paquetes perdidos causarían fallos más notables.
+ Una propuesta para resolver este problema consiste en volver un poquito
+ atrás en el tiempo actual, por lo que las posiciones y animaciones se pueden
+ interpolar, es decir hallar estados intermedios entre estados recientes,
+ el actual y el último recibido 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AlgoNetwForComputerGames"
+
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El tiempo de interpolación que se toma como máximo depende de la tasa de
+ envío de los paquetes principalmente además del retardo para que así al
+ menos haya más de una actualización.
+ De este modo en caso de que se pierda una actualización o se desordene
+ siempre se tiene otra.
+ En la Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:EsquemaInterpolacion"
+
+\end_inset
+
+ se puede observar una pequeña representación.
+ En la figura se muestra el tiempo de cliente, que representa el tiempo
+ en los equipo, y lo que se hace es que se introduce un retraso, tiempo
+ interpolación, entre este tiempo y el de visualización o renderizado.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../figures/Interpolacion.png
+	width 75text%
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esquema Interpolación
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:EsquemaInterpolacion"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Predicción de la entrada
+\end_layout
+
+\begin_layout Standard
+Para explicar esta técnica, pongamos el siguiente ejemplo: se tiene un jugador
+ con un retardo hasta el servidor de 150ms y que quiere moverse hacia delante.
+ Para moverse el jugador pulsa la tecla correspondiente y esta información
+ se envía al servidor.
+ El servidor procesa la información y modifica el mundo para seguidamente
+ transmitir la modificación.
+ Por lo tanto el jugador observa su movimiento con el retraso anterior.
+ Este retardo también debería ser aplicado a todo lo demás como disparos,
+ animaciones, etc.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Este problema provoca una sensación extraña, poco natural y hace que sea
+ difícil mover o apuntar con precisión.
+ La predicción de la entrada es una forma de eliminar este retraso y dejar
+ que las acciones del jugador se sienten más instantáneas.
+ Para ello en lugar de esperar al servidor para actualizar su propia posición,
+ el cliente puede actualizar su propia versión local del estado del juego
+ pero debe ser capaz de recibir correcciones de la versión acreditada del
+ servidor cuando sea necesario
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AlgoNetwForComputerGames"
+
+\end_inset
+
+.
+ Esta técnica solamente es posible para las entidades locales ya que la
+ predicción de la entrada funciona mediante la pulsaciones de teclas y controles
+ para hacer una mejor estimación de donde el jugador va a terminar.
+ Ademas, solamente se debe utilizar para acciones sencillas y no cambios
+ lógicos significativos a nivel global.
+\end_layout
+
+\begin_layout Subsubsection
+Compensación de retardo
+\end_layout
+
+\begin_layout Standard
+Esta técnica consiste en mantener un historial de las posiciones recientes
+ de los jugadores durante un intervalo de tiempo de modo que cuando nueva
+ información llega esta sea ejecutada en el momento que se la información
+ se envió
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AlgoNetwForComputerGames"
+
+\end_inset
+
+.
+ De modo que si la información fuera por ejemplo de un disparo que se ha
+ realizado, se vería si se ha impacto en el mundo que el jugador estaba
+ viendo y no en el actual el cuál podría haber sido modificado.
+ Para poder hacerlo solamente se necesita conocer la latencia hacia el jugador
+ que envió la información.
+ Esta técnica tiene sentido solamente si el servidor es autoritario, es
+ decir es el encargado de procesar toda la información en vez de solamente
+ reenviar a los jugadores.
 \end_layout
 
 \end_body

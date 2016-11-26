@@ -1,0 +1,121 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass ociamthesis-lyx
+\options a4paper,titlepage
+\use_default_options false
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type numerical
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Líneas de Trabajo Futuro
+\end_layout
+
+\begin_layout Standard
+Existe muy poca información sobre técnicas de predicción aplicadas a los
+ videojuegos en red.
+ Debido a que los videojuegos actualmente están en auge, con un crecimiento
+ enorme año tras año, y más si son en red, se propuso este trabajo.
+ El trabajo presentado se ha orientado a la búsqueda, identificación, implementa
+ción y evaluación de las técnicas de predicción más conocidas.
+ Como en todo trabajo de investigación, la búsqueda de una respuesta a la
+ pregunta inicial nos propone, de forma ineludible, el planteo de nuevas
+ preguntas.
+ 
+\end_layout
+
+\begin_layout Standard
+A modo de reflexión sobre el trabajo realiado, se realizan algunos comentarios
+ y propuestas sobre las posible líneas de trabajo futuro.
+ 
+\end_layout
+
+\begin_layout Standard
+El primero de ellos es que se podría tener en cuenta en las técnicas de
+ predicción el entorno además de la información contenida en los mensajes
+ de actualización.
+ De este modo si por ejemplo un jugador se esta acercando a una pared lo
+ más probable es que se mueva paralelamente a ella, se cubra, etc.
+ Sería una gran mejora tener en cuenta el entorno ya que no solo se mejoraría
+ en sí el movimiento de las entidades sino que se eliminarían ciertos problemas.
+ Entre ellos no se pondrían a las entidades en posiciones que pertenezcan
+ al entorno, es decir mover poner al personaje de modo que corte parte del
+ entorno.
+ 
+\end_layout
+
+\begin_layout Standard
+Por otra parte, se podría tener en cuenta a los aliados así como los enemigos
+ para realizar la predicción de los movimientos.
+ Poniendo Es muy común que en determinados juegos por equipos el personaje
+ tienda a reunirse con sus aliados por protección ante el enemigo u otros
+ motivos.
+ Por otra parte un personaje ante muchos enemigos tiende a moverse hacia
+ los laterales para seguir
+\end_layout
+
+\end_body
+\end_document

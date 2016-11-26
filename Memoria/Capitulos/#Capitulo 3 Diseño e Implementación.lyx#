@@ -1,0 +1,4323 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass ociamthesis-lyx
+\begin_preamble
+%Packages
+\usepackage{listings}
+\end_preamble
+\options a4paper,titlepage
+\use_default_options false
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type numerical
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle headings
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Diseño e Implementación
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:DiseñoEImplementacion"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este capítulo esta divido en dos grandes secciones, el diseño y la implementació
+n.
+ En la primera de ella se explica como es la arquitectura y estructura del
+ videojuego.
+ En esta parte se busca mostrar esquemáticamente como se ha planteado el
+ desarrollo del videojuego en red.
+ También como segunda parte se explica el diseño que se sigue para la implementa
+ción de las técnicas de predicción.
+ En esta parte se ve todo lo necesario para obtener una correcta implementación
+ posteriormente debido a que hay que tener muy claro que información es
+ necesaria enviar y en que momentos aplicar las técnicas.
+ Posteriormente se verá la implementación que se ha hecho para ambas partes
+ tanto del videojuego como de las técnicas de predicción de movimiento.
+ Con respecto a la implementación del juego se enfocará en la parte de red
+ que es la que tiene mayor interés para el objetivo del trabajo aunque también
+ se explicarán los demás elementos sin entrar en mucho detalle de código
+ sino más bien en cuanto a la funcionalidad de estos.
+ 
+\end_layout
+
+\begin_layout Section
+Diseño
+\end_layout
+
+\begin_layout Standard
+El objetivo del diseño será realizar un plan detallado para implementar
+ el videojuego así como las técnicas de predicción.
+ Para ello se usarán esquemas y figuras para que todo sea mucho más visual.
+ El diseño del videojuego se dividirá en 2 partes.
+ En la primera de ellas se comenta la arquitectura que sigue el videojuego
+ y en la siguiente se expone la estructura del videojuego dividiendolo por
+ escenas para que se simplifique.
+ En cuanto a las técnicas de predicción se expone la idea que se implementará
+ mediante el uso de figuras para que sea más visual.
+\end_layout
+
+\begin_layout Subsection
+Descripción del Videojuego End Of Shooter
+\end_layout
+
+\begin_layout Standard
+El videojuego como ya se ha comentado es un FPS, al cual se le llamado End
+ Of Shooter o EOS 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "EOS"
+description "End Of Shooter. Es el nombre del videojuego desarrollado.\\\\\\\\"
+
+\end_inset
+
+.
+ El juego consitirá en partidas donde los jugadores deben eliminarse entre
+ sí, es decir un contra todos.
+ Los jugadores contarán con una única arma automática para eliminar a los
+ demás jugadores.
+ La acción tendrá lugar en mapas sencillos sin muchos detalles.
+ Además no existe ningún límite de muertes o puntuación para acabar la partida
+ siendo infinitas.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En las siguientes subsecciones se trataran diversos aspectos del diseño
+ de EOS.
+ Primeramente se comentará la arquitectura de red por la que se ha optado
+ y posteriormente las escenas que lo conforman.
+\end_layout
+
+\begin_layout Subsubsection
+Arquitectura de Red
+\end_layout
+
+\begin_layout Standard
+La arquitectura por la que se ha optado para implementar el multijugador
+ es la cliente-servidor.
+ El mótivo de elegir está arquitectura es que Unity3D ofrece todo lo necesario
+ para implementarla cómodamente y con relativa sencillez y velocidad.
+ Además se ha optado por que los jugadores sean también los servidores,
+ es decir uno de los jugadores será el servidor que acoja la partida y los
+ demás jugadores se unen a esta.
+ Al jugador que aloja el servidor se le denomina host.
+ 
+\end_layout
+
+\begin_layout Standard
+En la Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ArquitecturaEOS"
+
+\end_inset
+
+ queda representada la arquitectura general del modo multijugador.
+ Una vez el jugador inicia una partida, se crea el servidor convirtiendose
+ así dicho jugador en un host pudiendose otros jugadores unirse a la partida.
+ Una vez estos jugadores se unen hay un intercambio de información entre
+ ellos y el host.
+ El host será el encargado de reenviar la actualizaciones al resto de usuarios
+ para que así todos estén actualizados.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../figures/ArquitecturaEOS.png
+	width 75text%
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Arquitectura EOS
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ArquitecturaEOS"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Respecto al servidor se trata de un servidor no autoritario, comentado en
+ la sección 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "par:Servidor-no-autoritativo"
+
+\end_inset
+
+.
+ Esto quiere decir que no controla el resultado de cada entrada del jugador.
+ Los propios jugadores procesan las entradas y la lógica del juego localmente,
+ y posteriormente envian el resultado de cualquier acción al servidor.
+ El servidor entonces sincroniza todas las acciones con el estado del mundo
+ y reenvia a los restantes jugadores.
+ Este tipo de servidor tiene un mayor facilidad para ser implementado debido
+ a que solamente necesita reenviar mensajes entre los clientes y no realiza
+ un procesamiento adicional más allá de lo que los clientes hacen.
+ A parte implica que no sea necesario ningún método de predicción en los
+ clientes para el manejo de las entidades propias ya que ellos son los dueños
+ y los únicos agentes autorizados a enviar modificaciones de esos objetos
+ a la red.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Escenas
+\end_layout
+
+\begin_layout Standard
+El juego tiene dos escenas principales.
+ En la primera de ellas, el menú, se permite al usuario iniciar una partida,
+ unirse a una ya creada o cambiar el mapa, además se puede modificar algunas
+ opciones de sonido y gráficos.
+ Y la segunda es la escena de mayor importancia, la de juego, la cual incluye
+ el modelo del mapa, los jugadores y otros elementos que se comentarán.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Escena de Menú
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La escena del menú es la más sencilla de comprender.
+ El objetivo del menú es mostrar al usuario una interfaz para que pueda
+ iniciar el juego así como permitir configurar el sonido o gráficos por
+ ejemplo.
+ El menú que se ha diseñado es bastante simple mostrando al principio una
+ pantalla donde se muestran 3 botones.
+ El primero permite iniciar el juego, el segundo modificar el audio y gráficos
+ y el tercero cerrar el juego.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si se pulsa el botón de juego aparece nuevas posibilidades:
+\end_layout
+
+\begin_layout Itemize
+Iniciar servidor: está opción es para ser el host de la partida.
+\end_layout
+
+\begin_layout Itemize
+Conexión directa: intenta conectarse al servidor situado en la misma máquina.
+ Esta opción esta incluida para la facilidad y comodidad al realizar las
+ pruebas y la depuración.
+\end_layout
+
+\begin_layout Itemize
+Seleccionar el mapa: permite elegir el mapa en el que se va a jugar ya que
+ hay 2 disponibles.
+ 
+\end_layout
+
+\begin_layout Standard
+Además en la zona derecha de la pantalla se muestran los servidores disponibles,
+ es decir las partidas a las que poder unirse, indicando cuantos jugadores
+ hay en la partida ya.
+ En la Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CapturaMenu"
+
+\end_inset
+
+ se muestra una captura de pantalla del menú del videojuego.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../figures/CapturaMenu.png
+	width 75text%
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Captura del Menú
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CapturaMenu"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Escena de Juego
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La escena de juego es la más compleja sin duda.
+ Esta escena tiene la mayor complejidad ya que representa el mundo virtual
+ que compartirán los diferentes jugadores, presenta mayor cantidad de elementos
+ y además con más funcionalidad.
+ En el juego existen dos escenas de juego las cuales representan cada una
+ de ellas a un mapa de entre los que se puede elegir.
+ Por lo tanto entre estas escenas la única diferencia es el modelo 3D del
+ mapa.
+ La escena se ha pensado para que aparezca un pequeño menú que permita al
+ usario empezar a jugar, cambiar algunos ajustes o salirse simplemente.
+ En la Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CapturaJuegoInicio"
+
+\end_inset
+
+ se puede ver como ha quedado esta pequeña interfaz que se comenta.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../figures/CapturaJuegoInicio.png
+	width 75text%
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Captura de una de las escenas de juego al inicio
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CapturaJuegoInicio"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una vez empieza el juego, el jugador se pone en el papel del personaje,
+ el cual aparece en uno de los punto del mapa de reaparición.
+ A partir de aquí el jugador puede moverse libremente por todo el mapa buscando
+ al resto de jugadores que se unan a la partida.
+ Como se observa en la Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CapturaJuego2"
+
+\end_inset
+
+ la escena en principio parece sencilla con el modelo del mapa y los jugadores
+ pero para nada es así.
+ Detrás de lo que se ve está toda la complejidad para permitir la interacción
+ entre los jugadores.
+ Posteriormente en otra sección comentaremos más detenidamente las diferentes
+ partes que componen la escena y permiten la interacción entre los jugadores.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../figures/CapturaJuego2.png
+	width 75text%
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Captura de la escena juego cuando el personaje aparece
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CapturaJuego2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sincronización 
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:DiseñoTécnicasPredicción"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una vez se ha visto en el cápitulo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Estado-del-Arte"
+
+\end_inset
+
+ se va a proceder a explicar más detalladamente que información se envia
+ en cada paquete de actualización, como se procesan dichos paquetes conforme
+ van llegando a los jugadores.
+ Esto quiere decir que técnica se aplica en función de como lleguen las
+ actualizaciones de estado y en que consisten.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Intercambio de Información
+\end_layout
+
+\begin_layout Standard
+Para poder aplicar las técnicas de predicción es necesario compartir cierta
+ información de las entidades con el resto de jugadores.
+ Esta información depende del tipo de técnica que se utilice.
+ Lo más inteligente sería enviar solamente la información necesaria que
+ se utilice en la técnica, pero debido a que se posteriormente se implementarán
+ varias técnicas se ha concluido que es más cómodo enviar toda la información
+ y después usar solamente la necesaria para la técnica en cuestión.
+ 
+\end_layout
+
+\begin_layout Standard
+La información es encapsulada en paquetes los cuales se envian a una tasa
+ fija durante la ejecución del juego.
+ Esta tasa se puede modificar durante el desarrollo del juego en función
+ de las necesidades del juego.
+ En principio tiene un valor de 15 paquetes por segundo, valor más que suficient
+e, llegando aproximadamente un paquete cada 66.66 ms.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../figures/InfActualizacion.png
+	width 75text%
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Proceso de envio de los paquetes
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:InformacionActualizacion"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se observa en la Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:InformacionActualizacion"
+
+\end_inset
+
+ la información se envía en paquetes con la frecuencia prefijada.
+ El siguiente paso será ver como cada entidad remota procesa los paquetes
+ que le llegan.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Procesamiento de los paquetes
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:ProcesamientoPaquetes"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los paquetes con la información llegan a las entidades almacenandose en
+ un buffer de tamaño limitado.
+ El objetivo es almacenar los paquetes más recientes perdiendo lo más antiguos
+ que ya no son útiles.
+ Las marcas de tiempo de paquetes indican que tipo de técnica se aplica
+ mover a las entidades.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../figures/Buffer.png
+	width 75text%
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Buffer para los paquetes que van llegando
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Buffer"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Según la marca de tiempo del paquete más actual existen 3 posibilidades:
+\end_layout
+
+\begin_layout Itemize
+Inteporlación: se realiza interpolación en caso de que el paquete más reciente
+ se encuentre en la ventana de interpolación que se ha definido.
+ Queda representado con el gráfico superior de la Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:TiposProcesamientoPaquetes"
+
+\end_inset
+
+.
+ El tiempo de interpolación depende directamente de la tasa de actualización
+ que se establezca.
+ Esto se debe a que para una correcta interpolación que el tiempo de interpolaci
+ón sea entorno al doble que la tasa de actualización para que haya un paquete
+ o dos con los que interpolar.
+\end_layout
+
+\begin_layout Itemize
+Predicción: se aplica en caso de que el paquete más reciente este por debajo
+ del tiempo de renderizado y no se supere el tiempo límite.
+ Queda representado con el gráfico inferior de la Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:TiposProcesamientoPaquetes"
+
+\end_inset
+
+.
+ El tiempo de predicción depende mucho del tipo de aplicación.
+ Tiene que ser un tiempo suficiente para mejorar el movimiento de las entidades
+ cuando se producen problemas pero muy grande como para que se realicen
+ predicciones muy desviadas.
+ 
+\end_layout
+
+\begin_layout Itemize
+Nada: en caso de que la marca de tiempo del paquete más actual este por
+ debajo del tiempo máximo de extrapolación.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../figures/TiposProcesamientoPaquetes.png
+	width 75text%
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Interpolación y Predicción 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:TiposProcesamientoPaquetes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Implementación
+\end_layout
+
+\begin_layout Standard
+El objetivo de esta sección es mostrar como se ha logrado todo lo que se
+ ha comentado en la sección anterior de diseño.
+ Para ello se entrará en la implementación final centrandosé en los aspecto
+ más importantes para el trabajo incluyendo algunos datos interesantes.
+ Primeramente se describirá la implementación del videojuego haciendo uso
+ de lo que Unity3D ofrece.
+ Esta parte está dividida en dos, la arquitectura (cliente y servidor) y
+ las escenas acontinuación.
+ Y en la segunda parte se mostrará la implementación de los técnicas de
+ predicción.
+ 
+\end_layout
+
+\begin_layout Subsection
+Videojuego
+\end_layout
+
+\begin_layout Subsubsection
+Arquitectura de Red
+\end_layout
+
+\begin_layout Standard
+Antes de explicar la implementación realizada de la arquitectura del videojuego
+ se va a comentar lo que ofrece Unity3D para ello.
+ Ya que esta parte es fundamental para entender posteriormente como se implement
+a toda la funcionalidad en red así como las técnicas de predicción.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Unity Networking
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Unity3D dispone pone a la disposición de los desarrolladores de un complejo
+ y potente sistema para la implementación de juegos en red denominado Unity
+ Networking 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Unity3DNetworking"
+
+\end_inset
+
+.
+ Este sistema esta muy bien integrado en el entorno y permite una rápido
+ desarrollo.
+ Unity3D ha trabajado muy duro para que las comunicaciones sean tan robustas
+ y flexibles como sea posible.
+ Para entender mejor este sistema se van comentar las principales clases
+ que conforman al sistema.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+Network
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se trata de la clase principal de la implementación de red proveyendo de
+ las funciones y atributos del núcleo 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Unity3DNetwork"
+
+\end_inset
+
+.
+ Esta clase configura la interfaz de red y todos los parámetros de red.
+ Se usa para configurar el servidor o para conectarse a uno previamente
+ creado contando con una gran cantidad de funciones que ayudan a la gestión
+ de tareas.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Mediante el uso de sus atributos permite conocer mucha información entre
+ la cual está:
+\end_layout
+
+\begin_layout Itemize
+Saber si el nodo es servidor o cliente
+\end_layout
+
+\begin_layout Itemize
+Numero de conexiones, es decir el número de jugadores conectados.
+\end_layout
+
+\begin_layout Itemize
+Frecuencia de envío de paquetes de actualización por parte de las entidades
+\end_layout
+
+\begin_layout Itemize
+Obtener el tiempo actual de red.
+\end_layout
+
+\begin_layout Standard
+Y gracias a las funciones que ofrece permite por ejemplo:
+\end_layout
+
+\begin_layout Itemize
+Inicializar el servidor, pasando el número de conexiones máximas.
+\end_layout
+
+\begin_layout Itemize
+Conectarse a un servidor y desconectarse
+\end_layout
+
+\begin_layout Itemize
+Ejemplificar una entidad en red
+\end_layout
+
+\begin_layout Itemize
+Obtener el ping medio para un jugador
+\end_layout
+
+\begin_layout Standard
+Además tiene una serie de mensajes para permitir capturar cuando sea conectado,
+ desconectado del servidor, un jugador se ha conectado o desconectado, etc.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+NetworkView
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La clase NetworkView 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Unity3DNetworkView"
+
+\end_inset
+
+ o vista de red define que objetos deben estar sincronizados a través de
+ la red así como se debe realizar esta sincronización.
+ Esta clase se añade a un objeto y se le pasa un 
+\shape italic
+script
+\shape default
+ en el cual se indica que información se envían en los paquetes de actualización
+ así que hacer cuando se reciben.
+ También es posible pasarle directamente una trasformada del objeto (es
+ decir la clase que contiene la posición, rotación y escala del objeto)
+ y Unity lo hace automático.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Entre las propiedades que ofrece permite saber si la vista de red controla
+ al objeto en sí, es decir si el objeto está en el nodo propietario.
+ Esta propiedad es muy importante ya que según si se está en el nodo propietario
+ o no las acciones que hay que hacer con respecto al objeto son muy diferentes.
+ También destacar que permite hacer uso de RPC o 
+\shape italic
+Remote Procedure Call
+\shape default
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "RPC"
+description "Remote Procedure Call\\\\"
+
+\end_inset
+
+ para llamar a funciones en todos los jugadores, algo muy cómodo y útil
+ que ofrece una gran potencia, por ejemplo si un jugador recibe daño se
+ llama a un método por RPC para que quite salud a ese jugador en todos los
+ nodos.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+NetworkViewID
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta clase sencillamente representa un identificador único para cada instancia
+ de la clase 
+\shape italic
+NetworkView
+\shape default
+ en el juego multijugador 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Unity3DNetworkViewID"
+
+\end_inset
+
+.
+ Esta clase cumple un papel fundamental ya que es muy importante que el
+ identificador sea único entre todos los clientes y que se puedan generar
+ para que la sincronización de la red no se corrompa.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+NetworkMessageInfo
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se trata de una estructura de datos que contiene información sobre el mensaje
+ que acaba de ser recibido desde la red 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Unity3DNetworkMessageInfo"
+
+\end_inset
+
+.
+ La información que contiene es la 
+\shape italic
+NetworkView
+\shape default
+ y jugador que envió el mensaje y la marca de tiempo el que se envió.
+ Esta marca de tiempo en el que el paquete fue enviado tendrá un papel fundament
+al para el cápitulo siguiente.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+MasterServer
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta clase se utiliza para que la búsqueda de partidas entre los servidores
+ y los clientes se facilite enormemente 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Unity3DMasterServer"
+
+\end_inset
+
+.
+ Permite entre lo más destacable anunciar los hosts o realizar una petición
+ de la lista de hosts para el juego en cuestión.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Servidor 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los servidores se han optado por que sean los propios clientes.
+ Es decir un cliente será el host de la partida, es decir actuará como cliente
+ y servidor.
+ De este modo no es necesario un proyecto solamente para el servidor además
+ de poder eliminar las máquinas que actuarían como servidores.
+ Como desventaja, la implementación de los clientes aumenta en complejidad
+ ya que se tiene que implementar el servidor y gestionar todo lo relacionado
+ con él.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En cuanto a el juego la implementación del servidor es relativamente sencilla.
+ En el menú del juego se permite al jugador iniciar el servidor, es decir
+ crear una partida a la que otros jugadores se podrán unir.
+ Cuando se pulsa este botón se ejecuta el código que se muestra en el Alg.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:CreaciondelServidor"
+
+\end_inset
+
+.
+ En el código primeramente se inicializa la capa de seguridad.
+ El objetivo de esta capa es, si se implementa, es evitar mediante diferentes
+ procedimientos como encriptación que los jugadores hagan trampas o trucos.
+ A continuación se inicializa el servidor indicándole el número máximo de
+ conexiones (que no tiene que coincidir con el de jugadores), el puerto
+ en el que escuchará y si se usa 
+\shape italic
+Network Address Translation
+\shape default
+ o NAT 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "NAT"
+description "Network Address Translation\\\\\\\\"
+
+\end_inset
+
+.
+ Por último se registra que hay un cliente que ha creado un servidor indicando
+ el identificador del juego, el nombre del servidor (el nombre que el jugador
+ quiera) y un comentario sin utilidad aparente.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=[Sharp]C,breaklines=true,basicstyle=
+\backslash
+footnotesize} 
+\backslash
+begin{lstlisting}[frame=single] 
+\end_layout
+
+\begin_layout Plain Layout
+
+if (GUILayout.Button ("Start Server")) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	Network.InitializeSecurity (); 		
+\end_layout
+
+\begin_layout Plain Layout
+
+	Network.InitializeServer(maxConnections,port,true); 	
+\end_layout
+
+\begin_layout Plain Layout
+
+	MasterServer.RegisterHost(uniqueGameName,gameName,"Comment: TFG");
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Creación del Servidor
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:CreaciondelServidor"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con estas simples sentencias el servidor está listo exceptuando algunos
+ detalles sin importancia.
+ Queda implementar como los clientes descubren que existe un nuevo servidor
+ al que unirse.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Cliente 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para que un cliente se una a una partida y no sea él quién cree la partida
+ es necesario primero conocer que servidores están disponibles.
+ En Alg.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:ObtenerListaHost"
+
+\end_inset
+
+ se tiene la implementación para obtener la lista de servidores.
+ Primeramente al iniciar el menú se invoca a un método que llama periódicamente
+ a una función.
+ Esta función lo que hace es sencillamente usar la clase
+\shape italic
+ MasterServer
+\shape default
+ para que realice una petición de la lista de host disponibles para el identific
+ador del juego.
+ Por último en el método Update el cuál se ejecuta en cada frame se obtiene
+ haciendo otra vez uso de 
+\shape italic
+MasterServer 
+\shape default
+la lista de host más actual que se tiene.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=[Sharp]C,breaklines=true,basicstyle=
+\backslash
+footnotesize} 
+\backslash
+begin{lstlisting}[frame=single] 
+\end_layout
+
+\begin_layout Plain Layout
+
+void Start()     {
+\end_layout
+
+\begin_layout Plain Layout
+
+    InvokeRepeating("GetHostList", 0, refreshTime);   
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+void GetHostList() {         
+\end_layout
+
+\begin_layout Plain Layout
+
+	MasterServer.RequestHostList(uniqueGameName);    
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+void Update()     
+\end_layout
+
+\begin_layout Plain Layout
+
+{                  
+\end_layout
+
+\begin_layout Plain Layout
+
+	datas = MasterServer.PollHostList();     
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Obtener lista de host
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:ObtenerListaHost"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una vez ya disponemos de la lista de host solamente hay que mostrarla al
+ jugador el cual decidiría a que partida quiere unirse.
+ La clase que representa a un host se denomina 
+\shape italic
+HostData
+\shape default
+, y permite acceder a su nombre, jugadores conectados y su límite por lo
+ que se le puede mostrar al usuario esta información.
+ Cuando el jugador elige un host al que conectarse se llama el método 
+\shape italic
+Connect
+\shape default
+ de la clase 
+\shape italic
+Network
+\shape default
+ pasándole el host seleccionado como aparece en el Alg.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:ConectarHost"
+
+\end_inset
+
+.
+ En el código se muestra también como se ha usado un scroll para representar
+ a los hosts.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=[Sharp]C,breaklines=true,basicstyle=
+\backslash
+footnotesize} 
+\backslash
+begin{lstlisting}[frame=single] 
+\end_layout
+
+\begin_layout Plain Layout
+
+GUI.Box (new Rect (Screen.width - 400 * dif, 0, 400 * dif, Screen.height),
+ "");
+\end_layout
+
+\begin_layout Plain Layout
+
+GUILayout.BeginArea (new Rect (Screen.width - 400 * dif, 0, 400 * dif, Screen.heigh
+t)); 
+\end_layout
+
+\begin_layout Plain Layout
+
+GUILayout.Label ("Avaiable Servers: " + datas.Length); 			
+\end_layout
+
+\begin_layout Plain Layout
+
+scroll = GUILayout.BeginScrollView (scroll); 
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\end_layout
+
+\begin_layout Plain Layout
+
+foreach(HostData data in datas) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	GUILayout.BeginHorizontal (); 				
+\end_layout
+
+\begin_layout Plain Layout
+
+	GUILayout.Label(data.gameName+" Players: " + data.connectedPlayers + "/" +
+ data.playerLimit);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (GUILayout.Button ("Connect")) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		Network.Connect (data);   					
+\end_layout
+
+\begin_layout Plain Layout
+
+ 	   curMenu = 6;
+\end_layout
+
+\begin_layout Plain Layout
+
+	} 	
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\end_layout
+
+\begin_layout Plain Layout
+
+	GUILayout.EndHorizontal ();
+\end_layout
+
+\begin_layout Plain Layout
+
+} 	
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+GUILayout.EndScrollView (); 			
+\end_layout
+
+\begin_layout Plain Layout
+
+GUILayout.EndArea ();
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Conectarse a un host
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:ConectarHost"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por último comentar que haciendo uso de RPC se consigue que los jugadores
+ cuando se conecten carguen el mismo mapa que el host escogió.
+ En el Alg.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:CargarNivelRPC"
+
+\end_inset
+
+ se muestra el método OnServerInitialized el cual se llama cuando el servidor
+ se crea.
+ Dentro del método se obtiene el 
+\shape italic
+NetworkView
+\shape default
+ asociado al objeto que contiene el 
+\shape italic
+script
+\shape default
+ y haciendo uso de RPC se llama a la función 
+\shape italic
+LoadLevel
+\shape default
+.
+ El modo 
+\shape italic
+AllBufered
+\shape default
+ significa que la llamada a esta función se guarde en un buffer enviándose
+ a todos los clientes que se conecten posteriormente.
+ El último parámetro es un entero que indica el nivel a cargar y se pasa
+ como parámetro de 
+\shape italic
+LoadLevel
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=[Sharp]C,breaklines=true,basicstyle=
+\backslash
+footnotesize} 
+\backslash
+begin{lstlisting}[frame=single] 
+\end_layout
+
+\begin_layout Plain Layout
+
+void OnServerInitialized(){
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+	GetComponent<NetworkView>().RPC("LoadLevel",RPCMode.AllBuffered, maps[curMapIndex
+].levelName); 		
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+[RPC]     
+\end_layout
+
+\begin_layout Plain Layout
+
+void LoadLevel(string level){         
+\end_layout
+
+\begin_layout Plain Layout
+
+         Application.LoadLevel(level); 		
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cargar el nivel haciendo uso de RPC
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:CargarNivelRPC"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Escenas
+\end_layout
+
+\begin_layout Standard
+Como se ha comentado en el diseño el juego consta de dos escenas, el menú
+ y la de juego.
+ En este parte se desglosa cada una de las escenas para ver que elementos
+ la componen, así como se implementan y que funciones cumplen.
+ Principalmente se dedicará mayor atención a los elementos que tienen alguna
+ implicación con el multijugador en sí ya que son los que más interesan
+ para el objetivo.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Escena de Menú
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En cuanto a la jerarquía de la escena queda representa en la Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:MenuSceneHierarchy-1"
+
+\end_inset
+
+.
+ En la escena solamente se añade un objeto el cual está vacío, es decir
+ es invisible.
+ Este objeto al que se denomina GameController se le añade un 
+\shape italic
+script
+\shape default
+ el cuál incluye toda la lógica para crear el menú, 
+\shape italic
+MainMenu
+\shape default
+.
+ Además debido a que se necesitan hacer llamadas RPC para indicar a los
+ jugadores que mapa deben cargar cuando se unen al servidor se necesitar
+ añadir un 
+\shape italic
+NetworkView
+\shape default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../figures/MenuSceneHierarchy.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esquema de la escena de menú
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:MenuSceneHierarchy-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Además por incluir un poco de dinamismo se ha añadido una cámara para que
+ se renderice un cielo y se la añadido un sencillo 
+\shape italic
+script
+\shape default
+ para que gire la cámara quedando un menú más atractivo.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Escena de Juego
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La escena de juego presenta más complejidad que el menú debido a la mayor
+ cantidad de elementos que se requieren así como la funcionalidad de estos.
+ Al igual que se ha hecho con la escena de menú, en la Fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GameSceneHierarchy"
+
+\end_inset
+
+ se muestra el esquema a partir del cuál se comentarán los diferentes elementos.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../figures/GameSceneHierarchy.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esquema de la escena de menú
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GameSceneHierarchy"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Scene: este objeto es el modelo del escenario.
+\end_layout
+
+\begin_layout Itemize
+Rotate Around: este objeto se ha creado para que al iniciar la escena haya
+ una cámara rotando alrededor del escenario hasta que el jugador quiera
+ comenzar.
+ El objeto que gira sstá constituido por una cámara y un 
+\shape italic
+script
+\shape default
+ que modifica su rotación con el paso del tiempo.
+ 
+\end_layout
+
+\begin_layout Itemize
+Spawns: este objeto representa el conjunto de posiciones donde los jugadores
+ reaparecen al iniciar o después de morir.
+ 
+\end_layout
+
+\begin_layout Itemize
+GameController: se encarga de mostrar un simple menú al inicio para que
+ que el jugador pueda comenzar la partida y además maneja la desconexión
+ del jugador o servidor para que se vuelva a la escena del menú.
+ 
+\end_layout
+
+\begin_layout Itemize
+Player: este objeto representa a cada jugador en la partida.
+ El jugador se trata de la entidad más compleja de todo el juego debido
+ a todo lo que tiene que hacer: sincronización, animaciones, ajustes, HUD,
+ minimapa, etc.
+ A continuación se ve con mucho más detalle este elemento entrando en las
+ diferentes partes que lo componen ya que es el más importante y complejo.
+ 
+\end_layout
+
+\begin_layout Subparagraph*
+Jugador 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El jugador es la entidad más compleja de todo el juego.
+ Esto es debido a por que esta formado por múltiples elementos como es el
+ modelado compuesto por cientos de partes, las animaciones del modelo (andar,
+ correr, desplazarse, apuntar ...
+ ), múltiples 
+\shape italic
+scripts
+\shape default
+ con objetivos diferentes como el control mediante el ratón y teclado, el
+ movimiento, el HUD, los sonidos para las diferentes acciones que el jugador
+ puede realizar, etc.
+ En la Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PlayerHierarchy"
+
+\end_inset
+
+ se pueden ver prácticamente todos los elementos que componen al jugador
+ ya que algunos se han obviado por simplificar.
+ Un aspecto fundamental es que si vemos hay algunos elementos que se repiten,
+ es decir tienen el mismo nombre, esto es debido a como se implementa el
+ juego en primera persona.
+ Si se observa la figura hay un elemento qu ese denomina MainRoot y por
+ otra parte otro que se denomina 
+\shape italic
+Model
+\shape default
+.
+ El jugador se ha implementado de tal forma que esta compuesto por el 
+\shape italic
+Model 
+\shape default
+o modelo 3D del personaje del cuerpo entero y por otra parte se ha replicado
+ las manos y la arma obteniendo lo que se ha denominado 
+\shape italic
+MainRoot
+\shape default
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esto se ha implementado así debido a que cuando se maneja a un jugador lo
+ único que nos importa del personaje que movemos es que se muestre el arma
+ y las manos, y por tanto se desactiva el modelo del cuerpo completo (así
+ como todas las funciones y elementos referido a él).
+ Pero por el contrario a los demás jugadores en el dispositivo si se necesita
+ que se muestre su modelo se muestre al completo y por el contrario se desactive
+ el 
+\shape italic
+MainRoot
+\shape default
+ ya que estos jugadores no están controlados por el jugador local sino remotamen
+te por otros jugadores.
+ En los dispositivos de los demás jugadores pasará justamente lo contrario.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Respecto a los elementos de red que el jugador contiene son los 
+\shape italic
+NetworkView
+\shape default
+ así como sus 
+\shape italic
+scripts
+\shape default
+ asociados.
+ Los más importantes son los 
+\shape italic
+scripts
+\shape default
+ denominados 
+\shape italic
+NetworkRigidBody
+\shape default
+ los cuales se encargan de enviar las actualizaciones así como recibirlas
+ para procesarlas aplicando las técnicas comentandas adecuadamente.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../figures/PlayerHierarchy.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esquema de los elementos que componen al jugador
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PlayerHierarchy"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sincronización
+\end_layout
+
+\begin_layout Standard
+En este apartado se va a desarrollar como sean implementado exactamente
+ la sincronización para las entidades distribuidas, los personajes.
+ Precisamente se va explicar el 
+\shape italic
+script
+\shape default
+ denominado 
+\shape italic
+NetworkRigidBody
+\shape default
+ que se ha comentado anteriormente referido al jugador.
+ Para que sea más comprensible se dividirá el 
+\shape italic
+script
+\shape default
+ en 3 partes:
+\end_layout
+
+\begin_layout Itemize
+Inicialización: en este parte se comentan las variables necesarias más important
+e que permiten una mayor comodidad y simpleza en la implementación.
+\end_layout
+
+\begin_layout Itemize
+Envio y recepción: se muestra como se envián la información de actualización
+ así como lo que se realiza cuando se recibe.
+ 
+\end_layout
+
+\begin_layout Itemize
+Actualizaciones: se explica primeramente más rápido como se realiza la interpola
+ción para posteriormente centrarse en la implementación de diferentes técnicas
+ predicción.
+\end_layout
+
+\begin_layout Subsubsection
+Inicialización
+\end_layout
+
+\begin_layout Standard
+Por comodidad se ha definido una estructura denominada 
+\shape italic
+State
+\shape default
+, Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:EstructuraState"
+
+\end_inset
+
+, que representa a un estado que se va enviar o también recibir.
+ Este estado está compuesto por una marca de tiempo, la posición, velocidades
+ y aceleraciones necesarias para poder realizar las técnicas.
+ Se ha decido enviar todas las necesarias independientemente del tipo de
+ la técnica que se use ya que es mucho más cómodo para la evaluación.
+ En un caso real se enviarán solamente las necesarias mejorando la eficiencia.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=[Sharp]C,breaklines=true,basicstyle=
+\backslash
+footnotesize} 
+\backslash
+begin{lstlisting}[frame=single] 
+\end_layout
+
+\begin_layout Plain Layout
+
+internal struct  State{
+\end_layout
+
+\begin_layout Plain Layout
+
+		internal double timestamp; 	    //indica el instante de tiempo					 
+\end_layout
+
+\begin_layout Plain Layout
+
+		internal Vector3 pos; 			 //posición 		
+\end_layout
+
+\begin_layout Plain Layout
+
+		internal Vector3 velocity;     	//velocidad 		
+\end_layout
+
+\begin_layout Plain Layout
+
+		internal Vector3 acceleration; 	//aceleración
+\end_layout
+
+\begin_layout Plain Layout
+
+		internal Quaternion rot;	       //rotación
+\end_layout
+
+\begin_layout Plain Layout
+
+		internal Vector3 angularVelocity;  //velocidad angular rad/s, afectará
+ a la rotación 
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Estructura State
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:EstructuraState"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por otra parte se ha definido un buffer con un tamaño fijo de 20 en el cuál
+ se van almacenando los paquetes recibidos más recientes según su orden.
+ Esto quiere decir que no tiene por que estar ordenados según la marca de
+ tiempo y por tanto después será necesario comprobar para aplicar las técnicas.
+ El tamaño escogido puedes ser mayor o incluso menos, pero con 20 es más
+ que suficiente para que siempre haya paquetes recientes aunque se desordenen
+ o haya algunas pérdidas.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=[Sharp]C,breaklines=true,basicstyle=
+\backslash
+footnotesize} 
+\backslash
+begin{lstlisting}[frame=single] 
+\end_layout
+
+\begin_layout Plain Layout
+
+// Se almacenan los 20 o X últimos actualizaciones de estado.
+  	
+\end_layout
+
+\begin_layout Plain Layout
+
+State[] m_BufferedState = new State[20];
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Creación del Buffer
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Buffer"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Envio y Recepción de Estados 
+\end_layout
+
+\begin_layout Standard
+El método que se llama tanto para el envió como para la recepción se denomina
+ 
+\shape italic
+OnSerializeNetworkView
+\shape default
+.
+ Este método tiene dos parámetros, el primero de ellos es el stream para
+ en envio y el otro es información adicional.
+ Gracias al stream se puede comprobar mediante un atributo que tiene si
+ esta escribiendo o por el contrario está recibiendo.
+ De este modo se obtiene la diferencia entre los dos casos.
+ En el Alg.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:OnSerializeNetworkView"
+
+\end_inset
+
+ se ve la función al completo la cual se comentará cada una de las partes.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Envio
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mediante la propriedad 
+\shape italic
+isWriting
+\shape default
+ se comprueba que se va a enviar una actualización.
+ Por tanto lo que se hace es obtener todos los parámetros que se quieren
+ enviar y se serializan.
+ A este sección del código solamente se ejecutará para elementos propietarios,
+ es decir, para los jugadores locales, es decir en cada dispositivo solamente
+ habrá uno que sea local y envie su información de actualización al servidor,
+ el cual reenviará al resto.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Recepción
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En caso de que no este escribiendo, no queda otra que recibir.
+ En este caso se crean variables para pasarlas por referencia y recibir
+ los datos de la actualización que se acaba de recibir.
+ Una vez se recibe la información con ella se crea un estructura de tipo
+ State para almanecear la información y por último insertarla en el buffer
+ en la primera posición ya que es la más reciente.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=[Sharp]C,breaklines=true,basicstyle=
+\backslash
+footnotesize} 
+\backslash
+begin{lstlisting}[frame=single] 
+\end_layout
+
+\begin_layout Plain Layout
+
+void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info) {
+ 	
+\end_layout
+
+\begin_layout Plain Layout
+
+	// Se envian datos al servidor!!
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (stream.isWriting){
+\end_layout
+
+\begin_layout Plain Layout
+
+		Vector3 pos = transform.position;
+\end_layout
+
+\begin_layout Plain Layout
+
+		Vector3 velocity = rigidBody.velocity;
+\end_layout
+
+\begin_layout Plain Layout
+
+		Vector3 acceleration = (rigidBody.velocity - lastVelToSend) / Time.fixedDeltaTim
+e;
+\end_layout
+
+\begin_layout Plain Layout
+
+		lastVelToSend = rigidBody.velocity;
+\end_layout
+
+\begin_layout Plain Layout
+
+		Quaternion rot = transform.rotation;
+\end_layout
+
+\begin_layout Plain Layout
+
+		Vector3 angularVelocity = rigidBody.angularVelocity;
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+		stream.Serialize(ref pos);
+\end_layout
+
+\begin_layout Plain Layout
+
+		stream.Serialize(ref velocity);
+\end_layout
+
+\begin_layout Plain Layout
+
+		stream.Serialize(ref acceleration);
+\end_layout
+
+\begin_layout Plain Layout
+
+		stream.Serialize(ref rot); 			
+\end_layout
+
+\begin_layout Plain Layout
+
+		stream.Serialize(ref angularVelocity);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+	// Read data from remote client
+\end_layout
+
+\begin_layout Plain Layout
+
+	else{
+\end_layout
+
+\begin_layout Plain Layout
+
+		Vector3 pos = Vector3.zero;
+\end_layout
+
+\begin_layout Plain Layout
+
+		Vector3 velocity = Vector3.zero;
+\end_layout
+
+\begin_layout Plain Layout
+
+		Vector3 acceleration = Vector3.zero;
+\end_layout
+
+\begin_layout Plain Layout
+
+		Quaternion rot = Quaternion.identity;
+\end_layout
+
+\begin_layout Plain Layout
+
+		Vector3 angularVelocity = Vector3.zero;
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+		stream.Serialize(ref pos);
+\end_layout
+
+\begin_layout Plain Layout
+
+		stream.Serialize(ref velocity);
+\end_layout
+
+\begin_layout Plain Layout
+
+		stream.Serialize(ref acceleration);
+\end_layout
+
+\begin_layout Plain Layout
+
+		stream.Serialize(ref rot);
+\end_layout
+
+\begin_layout Plain Layout
+
+		stream.Serialize(ref angularVelocity);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+		// Shift the buffer sideways, deleting state 20
+\end_layout
+
+\begin_layout Plain Layout
+
+		for (int i=m_BufferedState.Length-1;i>=1;i--){
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+			m_BufferedState[i] = m_BufferedState[i-1];
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+		// Actual estado recibido!!
+\end_layout
+
+\begin_layout Plain Layout
+
+		State state; 			
+\end_layout
+
+\begin_layout Plain Layout
+
+		state.timestamp = info.timestamp;
+\end_layout
+
+\begin_layout Plain Layout
+
+		state.pos = pos;
+\end_layout
+
+\begin_layout Plain Layout
+
+		state.velocity = velocity;
+\end_layout
+
+\begin_layout Plain Layout
+
+		state.acceleration = acceleration;
+\end_layout
+
+\begin_layout Plain Layout
+
+		state.rot = rot;
+\end_layout
+
+\begin_layout Plain Layout
+
+		state.angularVelocity = angularVelocity;
+\end_layout
+
+\begin_layout Plain Layout
+
+		m_BufferedState[0] = state; 
+\end_layout
+
+\begin_layout Plain Layout
+
+	} 	
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Implementación del envio y recepción en el método OnSerializeNetworkView
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:OnSerializeNetworkView"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Actualizaciones
+\end_layout
+
+\begin_layout Standard
+El juego ejecuta el método 
+\shape italic
+Update
+\shape default
+ en cada 
+\shape italic
+script
+\shape default
+ por cada nuevo frame.
+ En esta función se añade el código para implementar las técnicas para las
+ entidades distribuidas, es decir para los personajes.
+ Las técnicas solamente serán aplicadas a los objetos o personajes que no
+ sean propietarios, es decir a aquellos que no están siendo controlados
+ por un usuario.
+ Esto es debido a que el movimiento del personaje que controla el usuario
+ está determinado por las entradas que este produzca.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En el Alg.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:MétodoUpdate"
+
+\end_inset
+
+ se ve el método 
+\shape italic
+Update
+\shape default
+ en el cual mediante la propiedad 
+\shape italic
+isMine
+\shape default
+ que ofrece la 
+\shape italic
+NetworkView
+\shape default
+ asociada al 
+\shape italic
+script
+\shape default
+ se puede diferenciar si el objeto es propietario, es decir en este caso
+ es el personaje manejado por el usuario o si por el contrario no lo es
+ siendo un personaje controlado por un usuario remoto.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=[Sharp]C,breaklines=true,basicstyle=
+\backslash
+footnotesize} 
+\backslash
+begin{lstlisting}[frame=single] 
+\end_layout
+
+\begin_layout Plain Layout
+
+void Update () {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (!nView.isMine) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		//No se es propietario de la NetworkView,
+\end_layout
+
+\begin_layout Plain Layout
+
+		//por lo tanto es controlada remotamente.
+\end_layout
+
+\begin_layout Plain Layout
+
+		//Será necesario aplicar las técnicas.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	}else{  
+\end_layout
+
+\begin_layout Plain Layout
+
+		//Propietario de la NetworkView, 
+\end_layout
+
+\begin_layout Plain Layout
+
+		//y por lo tanto también de la instancia, del personaje.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Método Update
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:MétodoUpdate"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que solamente se aplicarán las técnicas en la primera condicción
+ dejando la otra vacia.
+ Una vez ya se tiene claro está diferenciación es necesario crear otra para
+ ver cuando se aplica una técnica u otra según el diseño que se realizó.
+ Para poder hacer está diferenciación se necesita tomar un tiempo máximo
+ de interpolación.
+ Este tiempo depende de la tasa al que se envían las actualizaciones de
+ estado.
+ En la implementación se obtiene el tiempo de red y se le resta el tiempo
+ máximo de interpolación obteniendo lo que sea ha denominado tiempo de interpola
+ción o el tiempo renderizado.
+ Una vez se tiene este tiempo se compará con la marca de tiempo del último
+ paquete recibido.
+ En caso de que la marca de este paquete sea mayor se realiza la interpolación
+ y en caso contrario se aplican técnicas de predicción.
+ En el Alg.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:interpolacion"
+
+\end_inset
+
+ se puede observar como se diferencian ambas técnicas según se ha explicado.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para la interpolación lo que se realiza es buscar los dos paquetes con la
+ marca de tiempo más actual.
+ Una vez se encuentran se calcula cuanto tiempo es necesario interpolar
+ mediante la diferencia de sus marcas de tiempo y por último se utiliza
+ una función que ofrece Unity3D denominada 
+\shape italic
+Lerp
+\shape default
+ que realiza una interpolación lineal entre dos posiciones dependiendo de
+ una variable que se le pasa que indica de que posición estará más cerca
+ la interpolación.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=[Sharp]C,breaklines=true,basicstyle=
+\backslash
+footnotesize} 
+\backslash
+begin{lstlisting}[frame=single] 
+\end_layout
+
+\begin_layout Plain Layout
+
+// Este es el tiempo quitandole actual de renderizado, o el tiempo limite
+ de interpolación.
+ 			
+\end_layout
+
+\begin_layout Plain Layout
+
+double interpolationTime = Network.time - m_IntLimit;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// Usamos interpolación si el tiempo objetivo está en el buffer.
+ Esto
+\end_layout
+
+\begin_layout Plain Layout
+
+// no sucederá si no se mantiene el rate de llegada de actualizaciones 
+\end_layout
+
+\begin_layout Plain Layout
+
+// de estados.
+ Esto se puede deber a diversos problemas.
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\end_layout
+
+\begin_layout Plain Layout
+
+if (m_BufferedState [0].timestamp > interpolationTime) { 				
+\end_layout
+
+\begin_layout Plain Layout
+
+	// Se recorre el buffer para encontrar el correcto.
+ 				
+\end_layout
+
+\begin_layout Plain Layout
+
+	// Una vez se encuentra uno de ellos se sale del bucle.
+ 				
+\end_layout
+
+\begin_layout Plain Layout
+
+	for (int i=0; i<m_TimestampCount; i++) { 					
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (m_BufferedState [i].timestamp <= interpolationTime || i == m_TimestampCount
+ - 1) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			// Es el mejor estado, el más actual.
+ Normalmente será el 0.
+ 						
+\end_layout
+
+\begin_layout Plain Layout
+
+			// Está fijado como máximo a una antiguedad menor o igual que m_IntLimit.
+\end_layout
+
+\begin_layout Plain Layout
+
+			State rhs = m_BufferedState [Mathf.Max (i - 1, 0)]; 						
+\end_layout
+
+\begin_layout Plain Layout
+
+			// El más cercano al más actual.
+ Más antiguo que "rhs".
+\end_layout
+
+\begin_layout Plain Layout
+
+			State lhs = m_BufferedState [i];
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+			// Se calcula el tiempo entre los dos estados para saber 						
+\end_layout
+
+\begin_layout Plain Layout
+
+			// si la interpolación es necesaria.
+\end_layout
+
+\begin_layout Plain Layout
+
+			double length = rhs.timestamp - lhs.timestamp;
+\end_layout
+
+\begin_layout Plain Layout
+
+			float t = 0.0F;
+\end_layout
+
+\begin_layout Plain Layout
+
+			if (length > 0.0001) {
+\end_layout
+
+\begin_layout Plain Layout
+
+				t = (float)((interpolationTime - lhs.timestamp) / length);
+\end_layout
+
+\begin_layout Plain Layout
+
+			} 						
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+			// Si t=0 => lhs se utiliza directamente
+\end_layout
+
+\begin_layout Plain Layout
+
+			transform.position = Vector3.Lerp (lhs.pos, rhs.pos, t);
+\end_layout
+
+\begin_layout Plain Layout
+
+			transform.rotation = Quaternion.Slerp (lhs.rot, rhs.rot, t);
+\end_layout
+
+\begin_layout Plain Layout
+
+			return;
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+// Se usa extrapolación en caso de que las actualizaciones no lleguen adecuadame
+nte.
+\end_layout
+
+\begin_layout Plain Layout
+
+else {
+\end_layout
+
+\begin_layout Plain Layout
+
+	//PREDICCIÓN
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Implementación de la Interpolación
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:interpolacion"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para el caso de la predicción se establece un tiempo máximo entre el último
+ paquete recibido y el tiempo de renderizado a partir del cual no se predice.
+ En caso de que la marca del último paquete este dentro de este tiempo se
+ aplica la técnica de predicción implementada.
+ En el Alg.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:interpolacion"
+
+\end_inset
+
+ se puede observar como con una variable se diferencia entre 4 tipos de
+ técnicas, las cuales se explicaron teóricamente en el Cap.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Estado-del-Arte"
+
+\end_inset
+
+.
+ Para un juego que vaya a salir al mercado en esta parte se aplicaría solamente
+ una técnica de predicción pero debido a comodidad para la evalución es
+ mucho más comodo para cambiar entre las diferentes técnicas.
+ Además cada técnica esta como una función independiente.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=[Sharp]C,breaklines=true,basicstyle=
+\backslash
+footnotesize} 
+\backslash
+begin{lstlisting}[frame=single] 
+\end_layout
+
+\begin_layout Plain Layout
+
+// Este es el tiempo quitandole actual de renderizado, o el tiempo limite
+ de interpolación.
+ 			
+\end_layout
+
+\begin_layout Plain Layout
+
+double interpolationTime = Network.time - m_IntLimit;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// Usamos interpolación si el tiempo objetivo está en el buffer.
+ Esto
+\end_layout
+
+\begin_layout Plain Layout
+
+// no sucederá si no se mantiene el rate de llegada de actualizaciones 
+\end_layout
+
+\begin_layout Plain Layout
+
+// de estados.
+ Esto se puede deber a diversos problemas.
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\end_layout
+
+\begin_layout Plain Layout
+
+if (m_BufferedState [0].timestamp > interpolationTime) { 				
+\end_layout
+
+\begin_layout Plain Layout
+
+	//INTERPOLACIÓN
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+// Se usa extrapolación en caso de que las actualizaciones no lleguen adecuadame
+nte.
+\end_layout
+
+\begin_layout Plain Layout
+
+else {
+\end_layout
+
+\begin_layout Plain Layout
+
+	State latest = m_BufferedState [0]; 		
+\end_layout
+
+\begin_layout Plain Layout
+
+	float extrapolationLength = (float)(interpolationTime - latest.timestamp);
+\end_layout
+
+\begin_layout Plain Layout
+
+	// No se hace extrapolación para más de ExtLimit, 500ms por defecto
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (extrapolationLength < m_ExtLimit) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (algorithm == 0) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			ExtOneStepFirstOrder (extrapolationLength);
+\end_layout
+
+\begin_layout Plain Layout
+
+		} else if (algorithm == 1) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			ExtOneStepSecondOrder (extrapolationLength);
+\end_layout
+
+\begin_layout Plain Layout
+
+		} else if (algorithm == 2) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			ExtTwoStepFirstOrder (extrapolationLength);
+\end_layout
+
+\begin_layout Plain Layout
+
+		} else if (algorithm == 3) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			ExtTwoStepSecondOrder (extrapolationLength);
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Implementación de la Predicción
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:extrapolacion"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Técnicas de Predicción
+\begin_inset CommandInset label
+LatexCommand label
+name "par:Técnicas-de-Predicción"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+Predicción en Un Paso de Primer Orden
+\begin_inset CommandInset label
+LatexCommand label
+name "par:OSFO"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La primera técnica de predicción es una extrapolación en un paso de primer
+ orden.
+ Para llevarla a cabo se obtiene la muestra más reciente y utilizando la
+ información que esta contiene se aplica la fórmula de un movimiento uniforme.
+ Es decir solamente se utiliza la posición y su primera derivada, la velocidad.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=[Sharp]C,breaklines=true,basicstyle=
+\backslash
+footnotesize} 
+\backslash
+begin{lstlisting}[frame=single] 
+\end_layout
+
+\begin_layout Plain Layout
+
+private void ExtOneStepFirstOrder(float time){
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		State latest = m_BufferedState[0];
+\end_layout
+
+\begin_layout Plain Layout
+
+		float angle = time * latest.angularVelocity.magnitude * Mathf.Rad2Deg;
+\end_layout
+
+\begin_layout Plain Layout
+
+		Quaternion angularRotation = Quaternion.AngleAxis(angle, latest.angularVelocity)
+; 	
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		transform.position = latest.pos + latest.velocity * time;
+\end_layout
+
+\begin_layout Plain Layout
+
+		rigidBody.velocity = latest.velocity;
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		transform.rotation = angularRotation * latest.rot;
+\end_layout
+
+\begin_layout Plain Layout
+
+		rigidBody.angularVelocity = latest.angularVelocity;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Función para la predicción en un paso de primer orden
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:OSFO"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+Predicción en Un Paso de Segundo Orden
+\begin_inset CommandInset label
+LatexCommand label
+name "par:OSSO"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si se le añade un orden, se hace uso de la segunda derivada de la posición
+ tomando la fórmula de un movimiento uniformemente acelerado.
+ En este caso si se hace uso de la posición junto con sus dos primeras derivadas
+, la velocidad y la aceleración.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=[Sharp]C,breaklines=true,basicstyle=
+\backslash
+footnotesize} 
+\backslash
+begin{lstlisting}[frame=single] 
+\end_layout
+
+\begin_layout Plain Layout
+
+private void ExtOneStepSecondOrder(float time){
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		State latest = m_BufferedState[0]; 	
+\end_layout
+
+\begin_layout Plain Layout
+
+		float angle = time * latest.angularVelocity.magnitude * Mathf.Rad2Deg;
+\end_layout
+
+\begin_layout Plain Layout
+
+		Quaternion angularRotation = Quaternion.AngleAxis(angle, latest.angularVelocity)
+;	
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		transform.position = latest.pos + latest.velocity * time + 0.5f * latest.accelerati
+on * Mathf.Pow(time,2);
+\end_layout
+
+\begin_layout Plain Layout
+
+		rigidBody.velocity = latest.velocity;
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		transform.rotation = angularRotation * latest.rot;
+\end_layout
+
+\begin_layout Plain Layout
+
+		rigidBody.angularVelocity = latest.angularVelocity; 	
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Función para la predicción en un paso de segundo orden
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:OSSO"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+Predicción en Dos Pasos de Primer Orden
+\begin_inset CommandInset label
+LatexCommand label
+name "par:TSFO"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En caso de realizar la predicción en dos pasos es necesario obtener los
+ dos estados más recientes.
+ A partir de estos dos estados se calcula la primera derivada.
+ Mediante las posiciones se obtiene primeramente la dirección de movimiento,
+ la distancia entre ellas y la diferencia entre las marcas de tiempo.
+ Una vez se tiene esta información se puede obtener la primera derivada
+ de la posición, la velocidad como la distancia recorrida entre el tiempo.
+ Obtenida la primera derivada aplica la fórmula de un movimiento uniforme.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=[Sharp]C,breaklines=true,basicstyle=
+\backslash
+footnotesize} 
+\backslash
+begin{lstlisting}[frame=single] 
+\end_layout
+
+\begin_layout Plain Layout
+
+private void ExtTwoStepFirstOrder(float time){
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	State latest = m_BufferedState[0];
+\end_layout
+
+\begin_layout Plain Layout
+
+	State nextToLast = m_BufferedState[1];
+\end_layout
+
+\begin_layout Plain Layout
+
+	Vector3 directionV = latest.pos - nextToLast.pos; // Dirección del movimiento
+\end_layout
+
+\begin_layout Plain Layout
+
+	float distance = Vector3.Distance (latest.pos, nextToLast.pos);
+\end_layout
+
+\begin_layout Plain Layout
+
+	float timeDif = Convert.ToSingle (latest.timestamp - nextToLast.timestamp);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (Mathf.Approximately(distance, 0) || Mathf.Approximately(timeDif, 0))
+ {
+\end_layout
+
+\begin_layout Plain Layout
+
+		//No calculamos sino que directamente aplicamos la última ya que no hay
+ diferencia entre ellas.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		transform.position = latest.pos;
+\end_layout
+
+\begin_layout Plain Layout
+
+		rigidBody.velocity = latest.velocity;
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		transform.rotation = latest.rot;
+\end_layout
+
+\begin_layout Plain Layout
+
+		rigidBody.angularVelocity = latest.angularVelocity;
+\end_layout
+
+\begin_layout Plain Layout
+
+		return;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	float velocity = distance / timeDif; 	
+\end_layout
+
+\begin_layout Plain Layout
+
+	directionV = directionV.normalized;
+\end_layout
+
+\begin_layout Plain Layout
+
+	Vector3 expectedPosition = latest.pos + directionV * time * velocity;
+\end_layout
+
+\begin_layout Plain Layout
+
+	transform.position = Vector3.Lerp(transform.position, expectedPosition, Time.deltaT
+ime*velocity);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Para el resto que no es la posicion, directamente la última.
+\end_layout
+
+\begin_layout Plain Layout
+
+	float angle = time * latest.angularVelocity.magnitude * Mathf.Rad2Deg;
+\end_layout
+
+\begin_layout Plain Layout
+
+	Quaternion angularRotation = Quaternion.AngleAxis(angle, latest.angularVelocity);
+\end_layout
+
+\begin_layout Plain Layout
+
+	rigidBody.velocity = latest.velocity;
+\end_layout
+
+\begin_layout Plain Layout
+
+	transform.rotation = angularRotation * latest.rot;
+\end_layout
+
+\begin_layout Plain Layout
+
+	rigidBody.angularVelocity = latest.angularVelocity; 	
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Función para la predicción en dos paso de primer orden
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:TSFO"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+Predicción en Dos Paso de Segundo Orden
+\begin_inset CommandInset label
+LatexCommand label
+name "par:TSSO"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En este caso, a diferencia del anterior, se usan los dos estados más actuales
+ para obtener la segunda derivada de la posición, la aceleración.
+ Solamente es necesario obtener la aceleración ya que la velocidad se toma
+ del estado más reciente.
+ Para obtener la aceleración se calcula la dirección que está tiene, la
+ diferencia de velocidad y el tiempo en el que se ha producido esa variación
+ de velocidad.
+ Con esta información se calcula la aceleración simplemente dividiendo la
+ diferencia entre el tiempo.
+ Por último se aplica la fórmula de un movimiento uniformemente acelerado.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=[Sharp]C,breaklines=true,basicstyle=
+\backslash
+footnotesize} 
+\backslash
+begin{lstlisting}[frame=single] 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+private void ExtTwoStepSecondOrder(float time){
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	State latest = m_BufferedState[0];
+\end_layout
+
+\begin_layout Plain Layout
+
+	State nextToLast = m_BufferedState[1]; 	
+\end_layout
+
+\begin_layout Plain Layout
+
+	Vector3 directionA = latest.velocity - nextToLast.velocity; // Dirección
+ del movimiento
+\end_layout
+
+\begin_layout Plain Layout
+
+	float distance = Vector3.Distance (latest.velocity, nextToLast.velocity);
+\end_layout
+
+\begin_layout Plain Layout
+
+	float timeDif = Convert.ToSingle (latest.timestamp - nextToLast.timestamp);
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (Mathf.Approximately(distance, 0) || Mathf.Approximately(timeDif, 0))
+ {
+\end_layout
+
+\begin_layout Plain Layout
+
+		//No calculamos sino que directamente aplicamos la última ya que no hay
+ diferencia entre ellas.
+  		
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		transform.position = latest.pos;
+\end_layout
+
+\begin_layout Plain Layout
+
+		rigidBody.velocity = latest.velocity;
+\end_layout
+
+\begin_layout Plain Layout
+
+		transform.rotation = latest.rot;
+\end_layout
+
+\begin_layout Plain Layout
+
+		rigidBody.angularVelocity = latest.angularVelocity;
+\end_layout
+
+\begin_layout Plain Layout
+
+		return; 
+\end_layout
+
+\begin_layout Plain Layout
+
+	} 	
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	float acceleration = distance / timeDif; 	
+\end_layout
+
+\begin_layout Plain Layout
+
+	directionA = directionA.normalized;
+\end_layout
+
+\begin_layout Plain Layout
+
+	Vector3 expectedPosition = latest.pos + latest.velocity * time + 0.5f * directionA
+ * acceleration * Mathf.Pow(time,2);
+\end_layout
+
+\begin_layout Plain Layout
+
+	transform.position = Vector3.Lerp(transform.position, expectedPosition, Time.deltaT
+ime*acceleration); 	
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Para el resto que no es la posicion, directamente la última.
+ 	
+\end_layout
+
+\begin_layout Plain Layout
+
+	float angle = time * latest.angularVelocity.magnitude * Mathf.Rad2Deg;
+\end_layout
+
+\begin_layout Plain Layout
+
+	Quaternion angularRotation = Quaternion.AngleAxis(angle, latest.angularVelocity);
+ 	
+\end_layout
+
+\begin_layout Plain Layout
+
+	rigidBody.velocity = latest.velocity;
+\end_layout
+
+\begin_layout Plain Layout
+
+	transform.rotation = angularRotation * latest.rot;
+\end_layout
+
+\begin_layout Plain Layout
+
+	rigidBody.angularVelocity = latest.angularVelocity	
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Función para la predicción en dos paso de primer orden
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:TSSO"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

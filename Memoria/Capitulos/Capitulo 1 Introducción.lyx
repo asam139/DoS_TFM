@@ -1,5 +1,5 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass ociamthesis-lyx
@@ -13,16 +13,16 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
-\output_sync 0
+\output_sync 1
 \bibtex_command default
 \index_command default
 \paperfontsize 12
@@ -30,15 +30,24 @@
 \use_hyperref false
 \papersize default
 \use_geometry false
-\use_amsmath 1
-\use_esint 0
-\use_mhchem 1
-\use_mathdots 1
-\cite_engine natbib_authoryear
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type numerical
+\biblio_style plainnat
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 0
 \index Index
 \shortcut idx
@@ -73,129 +82,363 @@ name "chap:Introducción"
 \end_layout
 
 \begin_layout Section
-Contexto
-\begin_inset CommandInset label
-LatexCommand label
-name "Contexto de la Video Vigilancia"
+Motivación
+\end_layout
 
+\begin_layout Standard
+A día de hoy, ¿quién no ha jugado con el móvil, la consola o el ordenador
+ a algún original juego que llama la atención por su temática o jugabilidad?,
+ la respuesta es que prácticamente todas las personas responderían que sí.
+ Los videojuegos han llegado a formar parte de nuestra vida de diferentes
+ formas.
+ Algunos juegos tienen como objetivo solamente el entretenimiento pero otros
+ desafían las habilidades del jugador, ayudan aprender y por supuesto cada
+ vez más son una manera de relacionarse con otras personas.
+ 
+\begin_inset Newline newline
 \end_inset
 
 
 \end_layout
 
-\begin_layout Subsection
-La importancia de la vídeo vigilancia
+\begin_layout Standard
+Los jugadores de videojuegos se han gastado 21.53 billones de dólares solamente
+ en 2013 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "EssentialFactComputerVideoGame"
+
+\end_inset
+
+.
+ En este caso se engloba por una parte el contenido, es decir los videojuegos
+ en sí, y por otra parte el hardware y accesorios.
+ Con respecto al formato, el digital ha superado con un 53% al físico debido
+ entre otras razones a la comodidad y reducción de precio que supone dicho
+ formato.
+ El mayor crecimiento han sido los juegos multijugador online o los juegos
+ casual-sociales en dispositivos móviles.
+ Estos han visto un crecimiento del 55% del 2012 al 2013, algo muy a tener
+ en cuenta.
+ Indudablemente se trata de una industria pujante, y que cada vez aprovecha
+ más las innovaciones tecnológicas para ofrecer una calidad cada vez más
+ exigente a sus jugadores.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-La captación y/o el tratamiento de imágenes con fines de vigilancia es una
- práctica muy extendida en nuestra sociedad.
- La vídeo vigilancia generalmente persigue garantizar la seguridad de los
- bienes y las personas Bla, Bla, Bla.
+El mundo de los videojuegos ha sufrido numerosas transformaciones desde
+ sus inicios.
+ La aparición y popularidad de Internet en los años 90 ya hacían prever
+ que, tarde o temprano, se produciría una convergencia tecnológica entre
+ el mundo de los videojuegos e Internet, si bien, las limitaciones de las
+ tarjetas gráficas de los ordenadores y del ancho de banda de la red de
+ Internet no lo han hecho posible hasta hace pocos años.
+ Los juegos multijugador online o MOG (
+\shape italic
+Multiplayer Online Games
+\shape default
+)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "MOG"
+description "Multiplayer Online Games"
+
+\end_inset
+
+ han tenido una increíble evolución desde los primeros como son 
+\shape italic
+Empire
+\shape default
+(1973)
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PlatoEmpire"
+
+\end_inset
+
+ y un año más tarde 
+\shape italic
+Spasim
+\shape default
+ (1974)
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PlatoSpasim"
+
+\end_inset
+
+.
+ Ambos eran ejecutados sobre la red 
+\shape italic
+PLATO System
+\shape default
+ de la Universidad de Illinois
+\begin_inset CommandInset citation
+LatexCommand citep
+key "RedPlato"
+
+\end_inset
+
+.
+ Por una parte, 
+\shape italic
+Empire
+\shape default
+ es considerado el primer juego de estrategia multijugador en red, el cual
+ comenzó soportando 8 jugadores simultáneos y posteriormente alcanzó hasta
+ los 30.
+ Y por su parte 
+\shape italic
+Spasim
+\shape default
+ se considera el primer 
+\shape italic
+shooter
+\shape default
+ tridimensional en primer persona o FPS (
+\shape italic
+First Person Shooter
+\shape default
+) 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "FPS"
+description "First Person Shooter"
+
+\end_inset
+
+ de la historia.
+ Como curiosidad permitía 32 jugadores y las posiciones de las naves se
+ actualizaban una vez por segundo.
+ Si se compara estos MOG con los actuales juegos se ve una increíble diferencia,
+ no solo hablando a nivel gráfico, sino la jugabilidad, sociabilidad y complejid
+ad que los conforman.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los MOG son considerados una simulación distribuida interactiva o DIS (
+\shape italic
+Distributed Interactive Simulation
+\shape default
+)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "DIS"
+description "Distributed Interactive Simulation"
+
+\end_inset
+
+, es decir una infraestructura que reúne simulaciones ejecutadas en multitud
+ de ubicaciones diferentes para la simulación de actividades altamente interacti
+vas.
+ Esta interactividad conlleva que el intercambio de información es decir
+ los mensajes, unidades de datos del protocolo o PDUs (
+\shape italic
+Protocol Data Unit
+\shape default
+) 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "PDU"
+description "Protocol Data Unit"
+
+\end_inset
+
+ entre las distintas simulaciones sea alto dependiendo también de la temática.
+ Este intercambio se lleva a cabo sobre una red la cual no es perfecta,
+ lo que implica la necesidad de implementación de mecanismos que mejoren
+ la interactividad que requieren las simulaciones que se traduce como la
+ experiencia de juego que tienen los usuarios.
+\begin_inset Newline newline
+\end_inset
+
  
 \end_layout
 
-\begin_layout Subsection
-Seguridad emocional
+\begin_layout Standard
+Las redes IP no están actualmente diseñadas para transportar tráfico de
+ tiempo real.
+ Los videojuegos, como aplicaciones en tiempo real, requieren un ancho de
+ banda garantizado cuando la transmisión tiene lugar.
+ Además las redes IP son una red de conmutación donde los paquetes son encaminad
+os independientemente a través de las redes interconectadas.
+ Por lo tanto no se puede garantizar que los datos en tiempo real consigan
+ alcanzar el destino sin mezclarse.
+ Se producen pérdidas de paquetes mayoritariamente debidas a congestión.
+ Esta situación provoca problemas en los videojuegos, que al igual que el
+ vídeo o el audio necesitan que los datos lleguen secuencialmente y en orden
+ en la medida que son requeridos.
+ 
 \end_layout
 
-\begin_layout Standard
-La existencia de alarmas Bla, Bla, Bla.
-\end_layout
+\begin_layout Section
+Definición del problema
+\begin_inset CommandInset label
+LatexCommand label
+name "Definición del Problema"
 
-\begin_layout Standard
-Así existe lo que se se llama 
-\begin_inset Quotes eld
 \end_inset
 
-seguridad emocional
-\begin_inset Quotes erd
+
+\end_layout
+
+\begin_layout Standard
+Existen multitud de factores que afectan a los juegos multijugador en red
+ debido al diseño y naturaleza de estas mismas.
+ El retardo, 
+\shape italic
+jitter
+\shape default
+ (variabilidad del retardo) y pérdida de PDUs son los principales problemas
+ a los que se enfrentan los MOG, ya que estos llegan a provocar falta de
+ coherencia entre las diversas simulaciones, pérdida de precisión y movimientos
+ erráticos de las entidades que forman parte de la simulación.
+ Por ello los MOG lógicamente tienen un desarrollo más complejo que los
+ juegos locales.
+ Por lo tanto aparece la necesidad de encontrar soluciones a estos problemas
+ con el objetivo de conseguir que jugadores distanciados parezcan encontrarse
+ en un mismo mundo virtual.
+ Estas soluciones buscan minimizar la aparición de situaciones adversas
+ debido a los efectos negativos de la red.
+ Los diversos problemas provocan que los objetos sean renderizados en la
+ escena en una posición o instante incorrecto.
+ Si estos objetos ante esta situación son representados como su último estado
+ recibido se tiene movimientos erráticos y esporádicos muy indeseados ya
+ que perjudican a la jugabilidad.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../figures/EjemploProblemas.jpg
+	width 75text%
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ejemplo donde un personaje tiene una posición incorrecta, diferente de la
+ del jugador local
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ejemploProblemas"
+
 \end_inset
 
 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "seguridadEmocional"
+key "EjemploProblemas"
 
 \end_inset
 
-, (Aqui acabo de poner una Referencia) es decir, aquellas alarmas o alertas
- que no están relacionadas con la seguridad simplemente sino que contienen
- elementos de información y sucesos ocurridos.
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Podemos dividir en dos categorías el tipo de alarmas de las que estamos
- hablando:
-\end_layout
+Una de estas soluciones son las técnicas y algoritmos de predicción de movimient
+o o 
+\shape italic
+dead reckoning
+\shape default
+ (DR)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "DR"
+description "Dead Reckoning"
 
-\begin_layout Enumerate
-Alarmas de actividad: Aquellas que nos informan de la presencia de personal
- doméstico, del regreso de un hijo o hija al hogar con la persona que los
- trae del colegio, la llegada de los demás miembros de la familia, etc.
-\end_layout
+\end_inset
 
-\begin_layout Enumerate
-Alarmas de ausencia de actividad: Si uno deja a un niño, niñas o personas
- mayores en el hogar y durante un período de tiempo prolongado no se produce
- ningún tipo de aviso, esto puede deberse a que ha ocurrido algo y, por
- tanto, requiere de nuestra atención.
-\end_layout
+.
+ Estas son utilizados para estimar una posición más cercana del jugador
+ u objeto remoto.
+ Esto asegura que una vez que el jugador recibe la verdadera posición del
+ objeto, el salto de posición a la ubicación correcta es o bien inexistente
+ o mucho menor, creando la ilusión de que este objeto se comporta normalmente.El
+ objetivo será diseñar e implementar sobre un videojuego multijugador en
+ línea las técnicas de predicción para evaluar las mejoras que suponen.
+ 
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
-Bla, Bla, Bla...
-\end_layout
 
-\begin_layout Subsection
-Vídeo Vigilancia Inalámbrica 
-\end_layout
-
-\begin_layout Standard
-El sistema de vídeo vigilancia inalámbrica representa una solución alternativa
- a la mayoría de los Bla, Bla, Bla.
- Proporciona características como:
-\end_layout
-
-\begin_layout Itemize
-Alto grado de funcionalidad.
-\end_layout
-
-\begin_layout Itemize
-Totalmente Escalable.
-\end_layout
-
-\begin_layout Itemize
-Despliegue rápido y sencillo.
-\end_layout
-
-\begin_layout Itemize
-Flexibilidad.
-\end_layout
-
-\begin_layout Itemize
-Rentabilidad de la inversión.
-\end_layout
-
-\begin_layout Standard
-Bla, Bla, Bla...
 \end_layout
 
 \begin_layout Section
-Motivación
+Hipótesis
 \end_layout
 
 \begin_layout Standard
-Como ya se ha apuntado en la Sección 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "Contexto de la Video Vigilancia"
+De acuerdo a los estudios realizados y a las implementaciones existentes
+ de esquemas de 
+\shape italic
+\emph on
+predicción 
+\shape default
+\emph default
+tanto en motores de juegos como en otras aplicaciones donde hay una simulación
+ interactiva distribuida se tienen algunas hipótesis desde la que se parten:
+\end_layout
 
-\end_inset
+\begin_layout Itemize
+Las técnicas de predicción o
+\shape italic
+ dead reckoning 
+\shape default
+permiten que el margen de retardo y pérdidas pueda ser mayor además de que
+ puede disminuir el número de información enviada por la red.
+\end_layout
 
-, los sistemas de vídeo vigilancia sirven para una gran cantidad de propósitos.
- En el ámbito de las empresas, bancos, instituciones públicas, aeropuertos,
- grandes eventos con aglomeraciones de personas, etc.
- Bla, Bla, Bla.
+\begin_layout Itemize
+La experiencia del usuario mejora considerablemente haciendo uso de estas
+ técnicas.
+ Aunque tiene una fuerte dependencia con la complejidad de estas y condiciones
+ de la red en términos de latencia y pérdidas.
 \end_layout
 
 \begin_layout Section
@@ -203,8 +446,242 @@ Objetivos y alcance del proyecto
 \end_layout
 
 \begin_layout Standard
-El principal objetivo del presente proyecto es el diseño e implementación
- de un sistema Bla, Bla, Bla
+El propósito de este proyecto es cumplir con los objetivos propuestos:
+\end_layout
+
+\begin_layout Enumerate
+Desarrollar un videojuego en red, al que se ha denominado 
+\shape italic
+End Of Shooter
+\shape default
+ o EoS 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "EoS"
+description "End of Shooter. Es el nombre del videojuego desarrollado.\\\\\\\\"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Diseñar e implementar un esquema de predicción de movimiento.
+\end_layout
+
+\begin_layout Enumerate
+Evaluar las mejoras de calidad que introduce el esquema de predicción.
+\end_layout
+
+\begin_layout Section
+Metodología
+\end_layout
+
+\begin_layout Standard
+Para satisfacer los objetivos del proyecto se seguirá la siguiente metodología:
+\end_layout
+
+\begin_layout Itemize
+Revisión del estado del arte para diferentes técnicas o esquemas de predicción.
+ 
+\end_layout
+
+\begin_layout Itemize
+Diseño e implementación del del escenario para poner a prueba los esquemas.
+ 
+\end_layout
+
+\begin_layout Itemize
+Análisis de parámetros de simulación en los diferentes esquemas de predicción.
+ 
+\end_layout
+
+\begin_layout Itemize
+Análisis de los resultados.
+ 
+\end_layout
+
+\begin_layout Section
+Trabajos relacionados
+\end_layout
+
+\begin_layout Standard
+Existe en la bibliografía diversos estudios sobre las técnicas de predicción
+ de movimiento.
+ En especial el artículo
+\shape italic
+ Dead Reckoning Using Play Patterns in a Simple 2D Multiplayer Online Game
+\shape default
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DeadReckoning2D"
+
+\end_inset
+
+ cuyos autores son Wei Shi, Jean-Pierre Corriveau y Jacob Agar.
+ En este artículo se realiza un estudio sobre técnicas de predicción de
+ movimiento además su implementación y evaluación sobre un pequeño juego
+ en 2D obteniendo grandes resultados.
+ Otro artículo muy completo es 
+\shape italic
+Adaptive Dead Reckoning Algorithms For Distributed Interactive Simulation
+\shape default
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AdaptiveDRAForDIS"
+
+\end_inset
+
+, escrito por Bu-Sung Lee, Wentong Cai, Stephen J.
+ Turner y L.Chen.
+ En este artículo se describe dos algoritmos adaptativos de predicción de
+ movimiento para DIS.
+ El primer algoritmo es un mecanismo de control de ajuste adaptativo a un
+ umbral y el segundo es una automática selección de ecuación de extrapolación.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por último mencionar otros artículos relacionados:
+\end_layout
+
+\begin_layout Itemize
+
+\shape italic
+Fair and Efficient Dead Reckoning-Based Update Dissmination for Distributed
+ Virtual Enviroments
+\shape default
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "FairEfficientDRForDVE"
+
+\end_inset
+
+, escrito por Zengxiang Ly, Xueyan Tang, Wentong Chai y Stephen John Turner.
+\end_layout
+
+\begin_layout Itemize
+
+\shape italic
+An Enhanced Dead Reckoning Model for Physics-Aware Multiplayer Computer
+ Games 
+\shape default
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "EnhancedDRForMOG"
+
+\end_inset
+
+, escrito por Séamus C.
+ McLoone, Patrick J.
+ Walsh and Tomás E.
+ Ward.
+\end_layout
+
+\begin_layout Section
+Estructura del documento
+\end_layout
+
+\begin_layout Standard
+El proyecto está estructurado en varios capítulos.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En el primer capítulo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Estado-del-Arte"
+
+\end_inset
+
+ se trata todo el estado del arte con respecto a los juegos multijugador
+ online o MOG.
+ Se realiza una definición formal de ellos, para posteriormente enumerar
+ los principales tipos y terminando sobre que arquitecturas implementan
+ y sus características.
+ También se lleva a cabo un análisis de múltiples entornos de desarrollo
+ para videojuegos concluyendo con una comparación y justificación de porqué
+ se ha usado uno de ellos.
+ Por último en este capítulo se tratan las técnicas de predicción, su origen,
+ sus objetivos y las más usadas.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La resolución del trabajo se dividirá en dos capítulos.
+ El primero de ellos el capítulo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Diseño"
+
+\end_inset
+
+ se centra en el diseño de todo el trabajo.
+ Primeramente se comenta la estructura del videojuego a desarrollar y posteriorm
+ente el diseño y adaptación de las técnicas de predicción para su implementación
+ en el videojuego.
+ Posteriormente en el capítulo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Implementacion"
+
+\end_inset
+
+ se muestra la implementación de las partes más importantes del videojuego,
+ centrándose en la parte de red para posteriormente mostrar la implementación
+ de las técnicas de predicción.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ A continuación en el capítulo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Evaluación"
+
+\end_inset
+
+ se lleva a cabo la evaluación de las técnicas de predicción por medio de
+ varios casos y métricas.
+ Finalmente hablaremos de las tendencias futuras y las conclusiones que
+ se han obtenido.
+ Por último se presenta el capítulo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Conclusiones"
+
+\end_inset
+
+ donde se comentan los resultados obtenidos y el capítulo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Planicación"
+
+\end_inset
+
+ que muestra la planificación del proyecto.
+ 
 \end_layout
 
 \end_body
