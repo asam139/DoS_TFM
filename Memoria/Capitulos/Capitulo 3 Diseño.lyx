@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass ociamthesis-lyx
 \begin_preamble
 %Packages
@@ -14,16 +16,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -252,6 +254,10 @@ reference "fig:CapturaMenu"
 \end_inset
 
  se muestra una captura de pantalla del menú del videojuego.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -351,6 +357,10 @@ Spawn
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -429,13 +439,17 @@ reference "fig:CapturaJuego2"
  Posteriormente en la sección 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:IMPEstructura-del-videojuego"
+reference "subsec:IMPEstructura-del-videojuego"
 
 \end_inset
 
  comentaremos más detenidamente las diferentes elementos que componen la
  escena que permiten la interacción entre los jugadores.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -512,7 +526,7 @@ El paradigma por el que se ha optado para implementar el multijugador es
  el cliente-servidor (ver sección 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:EA-Modelo-Cliente-Servidor"
+reference "subsec:EA-Modelo-Cliente-Servidor"
 
 \end_inset
 
@@ -548,6 +562,10 @@ se así dicho jugador en un anfitrión al que se pueden unir otros jugadores
  El anfitrión será el encargado de reenviar la actualizaciones al resto
  de usuarios para que así todos estén actualizados.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -636,7 +654,7 @@ reference "par:Servidor-no-acreditado"
 Mensajes del protocolo
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Mensajes-del-Protocolo"
+name "subsec:Mensajes-del-Protocolo"
 
 \end_inset
 
@@ -698,6 +716,10 @@ reference "sec:Técnicas-de-predicción"
 \end_inset
 
 .
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -760,7 +782,7 @@ name "fig:MensajeProtocolo"
 Técnicas de predicción de movimiento 
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:DiseñoTécnicasPredicción"
+name "subsec:DiseñoTécnicasPredicción"
 
 \end_inset
 
@@ -826,6 +848,10 @@ Cada entidad local envía la información en mensajes de actualización que
  Por defecto, Unity3D le asigna un valor de 15 paquetes por segundo, por
  lo que a cada personaje remoto le llega aproximadamente un paquete cada
  66.66 ms.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -897,7 +923,7 @@ reference "fig:InformacionActualizacion"
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Mensajes-del-Protocolo"
+reference "subsec:Mensajes-del-Protocolo"
 
 \end_inset
 
@@ -910,7 +936,7 @@ reference "sub:Mensajes-del-Protocolo"
 Recepción de los mensajes de actualización
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Recepción-de-las-actualizaciones"
+name "subsec:Recepción-de-las-actualizaciones"
 
 \end_inset
 
@@ -934,6 +960,10 @@ buffer
  se desplaza una posición eliminando el mensaje en la posición 0.
  De este modo queda un espacio para almacenar el nuevo mensaje recibido.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1007,7 +1037,7 @@ Los mensajes de actualización se almacenan junto con su marca de tiempo
 Procesamiento de los actualizaciones
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:DiseñoProcesamientoActualizaciones"
+name "subsec:DiseñoProcesamientoActualizaciones"
 
 \end_inset
 
@@ -1106,6 +1136,10 @@ reference "fig:DiseñoInterpolación"
  En la figura se tienen actualizaciones cuyas marcas de tiempo están dentro
  de la ventana de interpolación por lo que se puede realizar la interpolación
  adecuadamente.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1227,13 +1261,13 @@ $t_{renderizado}$
 
 \end_inset
 
-, y por encima del tiempo máximo de predicción 
+,y por encima del tiempo máximo de predicción 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$t_{predicción}$
+$t_{pred}$
 \end_layout
 
 \end_inset
@@ -1255,7 +1289,7 @@ status open
 
 \begin_layout Plain Layout
 
-$t_{predicción}$
+$t_{pred}$
 \end_layout
 
 \end_inset
@@ -1265,6 +1299,10 @@ $t_{predicción}$
  cuando se producen problemas, pero no tan grande como para que se realicen
  predicciones muy desviadas.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1360,6 +1398,10 @@ reference "sec:Técnicas-de-predicción"
  Cada vector de las ecuaciones está formado por 3 componentes: eje X, Y
  y Z.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1389,7 +1431,7 @@ centering
 \begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="6cm">
 <column alignment="center" valignment="top" width="6.5cm">
@@ -1551,6 +1593,10 @@ reference "fig:DiseñoNada"
 \end_inset
 
  se muestra un esquema de ejemplo.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
