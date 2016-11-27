@@ -105,10 +105,10 @@ A día de hoy, Internet cada vez ofrece más servicios que permiten a los
 \end_layout
 
 \begin_layout Standard
-La caida de estos servicios, provocan a las empresas que los ofrecen enorme
+La caída de estos servicios, provocan a las empresas que los ofrecen enorme
  perdidas financieras sino que además dañan la imagen de la empresa con
  sus clientes.
- Entre todas las posibilidades que provocan esta caida de los servicios
+ Entre todas las posibilidades que provocan esta caída de los servicios
  se encuentran los ataques Denegación de Servicio Distribuido o DDoS (
 \shape italic
 Distributed Denail of Service)
@@ -218,33 +218,13 @@ name "Definición del Problema"
 \end_layout
 
 \begin_layout Standard
-Existen multitud de factores que afectan a los juegos multijugador en red
- debido al diseño y naturaleza de estas mismas.
- El retardo, 
-\shape italic
-jitter
-\shape default
- (variabilidad del retardo) y pérdida de PDUs son los principales problemas
- a los que se enfrentan los MOG, ya que estos llegan a provocar falta de
- coherencia entre las diversas simulaciones, pérdida de precisión y movimientos
- erráticos de las entidades que forman parte de la simulación.
- Por ello los MOG lógicamente tienen un desarrollo más complejo que los
- juegos locales.
- Por lo tanto aparece la necesidad de encontrar soluciones a estos problemas
- con el objetivo de conseguir que jugadores distanciados parezcan encontrarse
- en un mismo mundo virtual.
- Estas soluciones buscan minimizar la aparición de situaciones adversas
- debido a los efectos negativos de la red.
- Los diversos problemas provocan que los objetos sean renderizados en la
- escena en una posición o instante incorrecto.
- Si estos objetos ante esta situación son representados como su último estado
- recibido se tiene movimientos erráticos y esporádicos muy indeseados ya
- que perjudican a la jugabilidad.
- 
-\begin_inset Separator latexpar
-\end_inset
-
-
+Debido a la gran importancia de los ataques DDoS es necesario desarrollar
+ unos comprensivos mecanismos de defensa para su identificación y antipación
+ es una meta para toda la comunidad de investigación de detección y prevención
+ de intrusiones.
+ Aunque, el desarrollo de tal mecanimso requiere una compresión completa
+ del problema y las técnicas que se han utilizado hasta ahora en prevención,
+ deteccion y respuesta a inundaciones DDoS.
 \end_layout
 
 \begin_layout Standard
@@ -273,7 +253,7 @@ centering
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../figures/EjemploProblemas.jpg
+	filename ../figures/DDoSAttack.jpg
 	width 75text%
 	rotateOrigin center
 
@@ -283,18 +263,17 @@ centering
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Ejemplo donde un personaje tiene una posición incorrecta, diferente de la
- del jugador local
+Ejemplo de ataque DDoS
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:ejemploProblemas"
+name "fig:DDOSAttack"
 
 \end_inset
 
 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "EjemploProblemas"
+key "OVH"
 
 \end_inset
 
@@ -312,28 +291,9 @@ key "EjemploProblemas"
 \end_layout
 
 \begin_layout Standard
-Una de estas soluciones son las técnicas y algoritmos de predicción de movimient
-o o 
-\shape italic
-dead reckoning
-\shape default
- (DR)
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "DR"
-description "Dead Reckoning"
-
-\end_inset
-
-.
- Estas son utilizados para estimar una posición más cercana del jugador
- u objeto remoto.
- Esto asegura que una vez que el jugador recibe la verdadera posición del
- objeto, el salto de posición a la ubicación correcta es o bien inexistente
- o mucho menor, creando la ilusión de que este objeto se comporta normalmente.El
- objetivo será diseñar e implementar sobre un videojuego multijugador en
- línea las técnicas de predicción para evaluar las mejoras que suponen.
- 
+Esta prevención, deteección y respuesta se puede realizar mediante téncias
+ de Inteligencia Artificial.
+ (me pierdo un poco)
 \begin_inset Newline newline
 \end_inset
 
@@ -381,27 +341,15 @@ El propósito de este proyecto es cumplir con los objetivos propuestos:
 \end_layout
 
 \begin_layout Enumerate
-Desarrollar un videojuego en red, al que se ha denominado 
-\shape italic
-End Of Shooter
-\shape default
- o EoS 
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "EoS"
-description "End of Shooter. Es el nombre del videojuego desarrollado.\\\\\\\\"
-
-\end_inset
-
-.
+Desarrollar un .
 \end_layout
 
 \begin_layout Enumerate
-Diseñar e implementar un esquema de predicción de movimiento.
+Diseñar e.
 \end_layout
 
 \begin_layout Enumerate
-Evaluar las mejoras de calidad que introduce el esquema de predicción.
+Evaluar las mejoras de calidad.
 \end_layout
 
 \begin_layout Section
