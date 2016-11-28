@@ -291,13 +291,17 @@ key "OVH"
 \end_layout
 
 \begin_layout Standard
-Esta prevención, deteección y respuesta se puede realizar mediante téncias
- de Inteligencia Artificial.
- (me pierdo un poco)
-\begin_inset Newline newline
-\end_inset
-
-
+La detección de los ataques DDoS se ha intentado resolver desde la Inteligencia
+ Artificial usando aprendizaje automático.
+ La detección de ataques DDoS requiere un clasificador de aprendizaje adaptativo
+ y incremental, menos complejidad computacional y una toma de decisiones
+ precisa a partir de información incierta.
+ Por lo tanto, los ataques DDoS podrían detectarse utilizando las técnicas
+ de computación basadas en aprendizaje automático.
+ Dentro del aprendizaje automático se encuentran las técnicas de clasificación
+ que nos permiten agrupar muestras de acuerdo a criterios o métodos, estas
+ técnicas son la clasificación supervisada, las cuales también seran objeto
+ de estudio en este trabajo, y la no supervisada.
 \end_layout
 
 \begin_layout Section
@@ -306,30 +310,18 @@ Hipótesis
 
 \begin_layout Standard
 De acuerdo a los estudios realizados y a las implementaciones existentes
- de esquemas de 
-\shape italic
-\emph on
-predicción 
-\shape default
-\emph default
-tanto en motores de juegos como en otras aplicaciones donde hay una simulación
- interactiva distribuida se tienen algunas hipótesis desde la que se parten:
+ de técnicas de aprendizaje autómatico para la predicción de ataques DDoS
+ se tienen algunas hipótesis desde la que se parten:
 \end_layout
 
 \begin_layout Itemize
-Las técnicas de predicción o
-\shape italic
- dead reckoning 
-\shape default
-permiten que el margen de retardo y pérdidas pueda ser mayor además de que
- puede disminuir el número de información enviada por la red.
+Las técnicas de aprendizaje automático aplicadas a la detección de atauqes
+ DDoS tiene un gran efectividad.
 \end_layout
 
 \begin_layout Itemize
-La experiencia del usuario mejora considerablemente haciendo uso de estas
- técnicas.
- Aunque tiene una fuerte dependencia con la complejidad de estas y condiciones
- de la red en términos de latencia y pérdidas.
+Estas técnicas tiene un costo menor con respecto a otras con los mismos
+ objetivos (por poner alguna más).
 \end_layout
 
 \begin_layout Section
@@ -341,15 +333,16 @@ El propósito de este proyecto es cumplir con los objetivos propuestos:
 \end_layout
 
 \begin_layout Enumerate
-Desarrollar un .
+Describir las técnicas para predicción de ataques DDoS .
 \end_layout
 
 \begin_layout Enumerate
-Diseñar e.
+Ejecutar técnicas de aprendizaje autómatico sobre ataques DDoS.
 \end_layout
 
 \begin_layout Enumerate
-Evaluar las mejoras de calidad.
+Evaluar los resultados obtenidos a partir de los sistemas de aprendizaje
+ automático.
 \end_layout
 
 \begin_layout Section
@@ -361,17 +354,20 @@ Para satisfacer los objetivos del proyecto se seguirá la siguiente metodología
 \end_layout
 
 \begin_layout Itemize
-Revisión del estado del arte para diferentes técnicas o esquemas de predicción.
+Revisión del estado del arte para diferentes técnicas para detección de
+ ataques DDoS.
  
 \end_layout
 
 \begin_layout Itemize
-Diseño e implementación del del escenario para poner a prueba los esquemas.
+Diseño e implementación del sistema de aprendizaje automático para detección
+ de ataques DDoS.
  
 \end_layout
 
 \begin_layout Itemize
-Análisis de parámetros de simulación en los diferentes esquemas de predicción.
+Análisis de parámetros de simulación en los diferentes sistemas de aprendizaje
+ automático.
  
 \end_layout
 
@@ -385,26 +381,40 @@ Trabajos relacionados
 \end_layout
 
 \begin_layout Standard
-Existe en la bibliografía diversos estudios sobre las técnicas de predicción
- de movimiento.
+Existe en la bibliografía diversos estudios sobre las técnicas de Inteligencia
+ Artificial basadas en el aprendizaje automatico aplicadas a la detección
+ de ataques DDoS.
  En especial el artículo
 \shape italic
- Dead Reckoning Using Play Patterns in a Simple 2D Multiplayer Online Game
+ Detection of distributed denial of service attacks using an ensemble of
+ adaptive and hybrid neuro-fuzzy systems
 \shape default
  
 \begin_inset CommandInset citation
 LatexCommand citep
-key "DeadReckoning2D"
+key "DectionOfDDoSAttacks_Article"
 
 \end_inset
 
- cuyos autores son Wei Shi, Jean-Pierre Corriveau y Jacob Agar.
- En este artículo se realiza un estudio sobre técnicas de predicción de
- movimiento además su implementación y evaluación sobre un pequeño juego
- en 2D obteniendo grandes resultados.
- Otro artículo muy completo es 
+ cuyos autores son P.
+ Arun, Raj Kumar y S.
+ Selvakumar.
+ En este artículo se explica como los ataques DDoS puden detectarse utilizanod
+ técnicas de computación, tales como las redes neuronales y algoritmo géneticos.
+ Posteriormente proponen clasificadores Neurofuzzy adaptavivos e híbridos
+ como subsistemas del conjunto para mejorar los resultados, obtenienod grandes
+ resultados finalmente.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Otro artículo muy completo es 
 \shape italic
-Adaptive Dead Reckoning Algorithms For Distributed Interactive Simulation
+XXX
 \shape default
  
 \begin_inset CommandInset citation
@@ -413,12 +423,8 @@ key "AdaptiveDRAForDIS"
 
 \end_inset
 
-, escrito por Bu-Sung Lee, Wentong Cai, Stephen J.
- Turner y L.Chen.
- En este artículo se describe dos algoritmos adaptativos de predicción de
- movimiento para DIS.
- El primer algoritmo es un mecanismo de control de ajuste adaptativo a un
- umbral y el segundo es una automática selección de ecuación de extrapolación.
+, escrito por XXX.
+ En este artículo se describe .
  
 \begin_inset Newline newline
 \end_inset
@@ -433,8 +439,8 @@ Por último mencionar otros artículos relacionados:
 \begin_layout Itemize
 
 \shape italic
-Fair and Efficient Dead Reckoning-Based Update Dissmination for Distributed
- Virtual Enviroments
+A Survey of Defense Mechanisms Against Distributed Denial of Service (DDoS)
+ Flooding Attacks
 \shape default
  
 \begin_inset CommandInset citation
@@ -443,26 +449,22 @@ key "FairEfficientDRForDVE"
 
 \end_inset
 
-, escrito por Zengxiang Ly, Xueyan Tang, Wentong Chai y Stephen John Turner.
+, escrito por Saman Taghavi Zargar, James Joshi, y David Tipper.
 \end_layout
 
 \begin_layout Itemize
 
 \shape italic
-An Enhanced Dead Reckoning Model for Physics-Aware Multiplayer Computer
- Games 
+A survey of Distributed Denial of Service attack
 \shape default
 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "EnhancedDRForMOG"
+key "ASurveyOfDDoSAttack"
 
 \end_inset
 
-, escrito por Séamus C.
- McLoone, Patrick J.
- Walsh and Tomás E.
- Ward.
+, escrito por Mr.K.Narasimha Mallikarjunan, K.Muthupriya, y Dr.S.Mercy Shalinie.
 \end_layout
 
 \begin_layout Section
