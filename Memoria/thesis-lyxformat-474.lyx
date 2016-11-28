@@ -1,9 +1,7 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
-\save_transient_properties true
-\origin unavailable
 \textclass ociamthesis-lyx
 \begin_preamble
 % ociamthesis-lyx v2.1
@@ -98,15 +96,14 @@ commentstyle=\color{negro},
 
 
 %PORTADA
-\title{TRABAJO FIN DE MÁSTER \\ \begingroup \fontsize{300pt}{320pt}\selectfont \textbf{Detección de ataques de Denegación de Servicio usando
-técnicas de clasificación supervisada.} \endgroup}
+\title{TRABAJO FIN DE GRADO \\ \begingroup \fontsize{300pt}{320pt}\selectfont \textbf{Desarrollo de un Juego en Red con Técnicas de Predicción de Movimiento } \endgroup}
 %Imagen de la portada
 \def\crest{{\includegraphics[height=3cm]{titlepage/logougr.pdf}}}
 \author{Saúl Moreno Abril}
 \college{}
 %\renewcommand{\submittedtext}{Para los estudios de}
-\degree{MÁSTER EN  INGENIERÍA DE TECNOLOGÍAS DE TELECOMUNICACIÓN}
-\degreedate{2016/2017}
+\degree{GRADO EN  INGENIERÍA DE TECNOLOGÍAS DE TELECOMUNICACIÓN}
+\degreedate{2014/2015}
 
 
 %Otros ajustes
@@ -126,16 +123,16 @@ foottoend
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
-\font_sans "default" "default"
-\font_typewriter "default" "default"
-\font_math "auto" "auto"
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100 100
-\font_tt_scale 100 100
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \default_output_format default
 \output_sync 1
