@@ -304,10 +304,8 @@ La detección de los ataques DDoS se ha intentado resolver desde la Inteligencia
 \end_layout
 
 \begin_layout Standard
-Dentro del aprendizaje automático se encuentran las técnicas de clasificación
- que nos permiten agrupar muestras de acuerdo a criterios o métodos, estas
- técnicas son la clasificación supervisada, las cuales también seran objeto
- de estudio en este trabajo, y la no supervisada.
+Dentro del aprendizaje automático se encuentran diferentes tipos en función
+ de la realimentación disponible en el proceso.
 \end_layout
 
 \begin_layout Section
@@ -497,7 +495,7 @@ reference "chap:Estado-del-Arte"
  los principales tipos y y sus características.
  También se lleva a cabo una descripción de las técnicas existentes para
  su predicción y una comparación entre ellas.
- Finalmente se centra en que se ha relizado hasta la fecha para la predicción
+ Finalmente se centra en qué se ha relizado hasta la fecha para la predicción
  de DDoS mediante el uso de aprendizaje autómatico 
 \begin_inset Newline newline
 \end_inset
