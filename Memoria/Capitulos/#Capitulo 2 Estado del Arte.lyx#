@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass ociamthesis-lyx
 \begin_preamble
 
@@ -13,16 +15,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -93,17 +95,29 @@ reference "chap:Introducción"
 \end_inset
 
  se ha destacado los aspectos más importantes del trabajo.
- En este capítulo se hará una breve introducción sobre los videojuegos,
- sus características y arquitecturas de juegos en red, con especial detalle
- al tipo de juego que se desarrollará.
- También se ve una comparación de diferentes entornos de desarrollo de juegos
- mostrando las diferentes posibilidades que ofrece cada uno de ellos y cuál
- parece más adecuado para unos requisitos dados.
- Por último se tratan las técnicas de predicción de movimiento o 
-\shape italic
-dead reckoning
-\shape default
- con las que mejorar la experiencia de juego de los usuarios.
+ En este capítulo exploramos el alcance de los problemas que provocan los
+ ataques DDoS así como se intenta combatirlos.
+ A continuación se clasificamos los ataques de inundación de DDoS así como
+ las contramedidas existentes basándonos en dónde y cuándo previenen, detectan
+ y responden a los ataques de DDoS.
+ La principal intención con este cápitulo es estimular a la comunidad investigad
+ora a desarrollar mecanismos creativos, efectivos, eficientes e integrales
+ de prevención, detección y respuesta que aborden el DDoS.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por útimo en este capítulo se explicarán conceptos sobre inteligencia artificial
+, siendo el aprendizaje aútomatico el principal objetivo de estudio, aplicado
+ a detección de ataques DDoS.
+ Para ello se hará una pequeña introducción a la IA, en la cual se definen
+ y explican conceptos relacionados que ayuden a la comprensión.
+ Posteriormente se centará en el aprendizaje automático, definiendo y comentando
+ los diferentes tipos para acabar .
+ 
 \end_layout
 
 \begin_layout Section
@@ -173,7 +187,7 @@ reference "chap:Introducción"
 \end_layout
 
 \begin_layout Section
-Juegos Multijugador en Línea 
+Juegos nultijugador en línea 
 \end_layout
 
 \begin_layout Standard
@@ -362,7 +376,9 @@ Son muchísimos los géneros que existen y más los subgéneros dentro de cada
 \end_layout
 
 \begin_layout Subsubsection
-Multiplayer Online First Person Shooter 
+
+\shape italic
+Multiplayer online first person shooter 
 \end_layout
 
 \begin_layout Standard
@@ -465,10 +481,10 @@ s modelos.
 \end_layout
 
 \begin_layout Subsubsection
-Modelo Cliente-Servidor
+Modelo cliente-servidor
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:EA-Modelo-Cliente-Servidor"
+name "subsec:EA-Modelo-Cliente-Servidor"
 
 \end_inset
 
@@ -507,6 +523,10 @@ reference "fig:ArquitecturaClienteServidor"
  al servidor y el servidor por su parte reenvía las actualizaciones o envía
  las propias según el tipo de servidor, tal como se comentará a continuación.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -724,7 +744,7 @@ No hay necesidad de ningún tipo de métodos de predicción para las entradas,
 \end_layout
 
 \begin_layout Subsubsection
-Modelo Peer-to-Peer
+Modelo peer-to-peer
 \end_layout
 
 \begin_layout Standard
@@ -993,7 +1013,7 @@ Sensibilidad al retardo: dependiendo de los requisitos de interactividad
 \end_layout
 
 \begin_layout Section
-Análisis de Entornos de Desarrollo de Videojuegos en Red
+Análisis de entornos de desarrollo de videojuegos en red
 \end_layout
 
 \begin_layout Standard
@@ -1004,6 +1024,8 @@ Existe una gran disponibildiad de entornos de desarrollo de videojuegos
 \end_layout
 
 \begin_layout Subsection
+
+\shape italic
 Corona SDK
 \end_layout
 
@@ -1169,6 +1191,8 @@ name "fig:EjemploCorona"
 \end_layout
 
 \begin_layout Subsection
+
+\shape italic
 Shiva3D
 \end_layout
 
@@ -1356,6 +1380,8 @@ name "fig:EjemploShiva3D"
 \end_layout
 
 \begin_layout Subsection
+
+\shape italic
 Marmalade
 \end_layout
 
@@ -1591,6 +1617,8 @@ name "fig:EjemploMarmalade"
 \end_layout
 
 \begin_layout Subsection
+
+\shape italic
 Torque3D
 \end_layout
 
@@ -1743,6 +1771,8 @@ name "fig:EjemploTorque3D"
 \end_layout
 
 \begin_layout Subsection
+
+\shape italic
 Unity3D
 \end_layout
 
@@ -1986,6 +2016,8 @@ name "fig:EjemploUnity3D"
 \end_layout
 
 \begin_layout Subsection
+
+\shape italic
 Unreal Engine 4
 \end_layout
 
@@ -2122,7 +2154,11 @@ centering
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Ejemplo de UE4
+Ejemplo de 
+\shape italic
+UE4
+\shape default
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "EjemploUE4"
@@ -2179,6 +2215,10 @@ Facilidades y recursos: referido a las herramientas, características y recursos
  que el entorno pone al alcance de los desarrolladores para un cómodo y
  rápido desarrollo.
  Se clasifica en:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2259,7 +2299,7 @@ centering
 \begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="19" columns="5">
-<features rotate="0" tabularvalignment="bottom">
+<features tabularvalignment="bottom">
 <column alignment="center" valignment="top" width="2.5cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="25mm">
@@ -3259,7 +3299,7 @@ centering
 \begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="6">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="2.5cm">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="15mm">
@@ -3785,7 +3825,7 @@ Unity3D
 \begin_layout Section
 Técnicas de predicción o 
 \shape italic
-Dead Reckoning
+dead reckoning
 \shape default
 
 \begin_inset CommandInset label
@@ -4063,7 +4103,11 @@ centering
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Ejemplo visual de Dead Reckoning
+Ejemplo visual de 
+\shape italic
+dead reckoning
+\shape default
+
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:EjemploDeadReckoning"
@@ -4174,17 +4218,6 @@ status open
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
 $x_{t'}$
 \end_layout
 
@@ -4222,17 +4255,6 @@ status open
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
 $t'$
 \end_layout
 
@@ -4270,17 +4292,6 @@ status open
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
 $x_{t}$
 \end_layout
 
@@ -4318,17 +4329,6 @@ status open
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
 $t$
 \end_layout
 
@@ -4394,17 +4394,6 @@ status open
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
  $v_{t'}$
 \end_layout
 
@@ -4471,17 +4460,6 @@ status open
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
  $a_{t'}$
 \end_layout
 
@@ -4578,6 +4556,10 @@ key "AdaptiveDRAForDIS"
 .
  Las variables con un apóstofre se refieren al primer mensaje de actualización
  y con dos al segundo mensaje de actualización.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4607,7 +4589,7 @@ centering
 \begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="6cm">
 <column alignment="center" valignment="top" width="6.5cm">
@@ -4926,6 +4908,10 @@ reference "fig:EsquemaInterpolacion"
  en los equipo, y lo que se hace es que se introduce un retraso, tiempo
  interpolación, entre este tiempo y el de visualización o renderizado.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5009,7 +4995,7 @@ Este problema provoca una sensación extraña, poco natural y hace que sea
  Para ello en lugar de esperar al servidor para actualizar su propia posición,
  el cliente puede actualizar su propia versión local del estado del juego
  pero debe ser capaz de recibir correcciones de la versión acreditada del
- servidor cuando sea necesario
+ servidor cuando sea necesario 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AlgoNetwForComputerGames"
@@ -5045,9 +5031,9 @@ key "AlgoNetwForComputerGames"
  viendo y no en el actual el cuál podría haber sido modificado.
  Para poder hacerlo solamente se necesita conocer la latencia hacia el jugador
  que envió la información.
- Esta técnica tiene sentido solamente si el servidor es autoritario, es
- decir es el encargado de procesar toda la información en vez de solamente
- reenviar a los jugadores.
+ Esta técnica tiene sentido solamente si el servidor es acreditado, es decir
+ es el encargado de procesar toda la información en vez de solamente reenviar
+ a los jugadores.
 \end_layout
 
 \end_body
