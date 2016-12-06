@@ -372,7 +372,7 @@ Para satifisfacer los objetivos del proyectos primeramente se hara un revisión
  del estado del arte en la cual se describe diferentes téncias para la detección
  de ataques DDoS y se profundiza en trabajos anteriores sobre aprendizaje
  aútomatico aplicado a la detección de estos.
- A continuación se expone n los algoritmos los cuales son objeto de estudio
+ A continuación se exponen los algoritmos los cuales son objeto de estudio
  en el trabajo así como la base de datos sobre la cual se va a poner a prueba
  estos algoritmos.
  El siguiente paso será obtener los parámetros de las diferentes simulaciones
@@ -387,8 +387,20 @@ Trabajos relacionados
 
 \begin_layout Standard
 Existe en la bibliografía diversos estudios sobre las técnicas de Inteligencia
- Artificial basadas en el aprendizaje automatico aplicadas a la detección
- de ataques DDoS.
+ Artificial, 
+\shape italic
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "IA"
+description "Inteligencia Artificial"
+
+\end_inset
+
+
+\shape default
+ basadas en el aprendizaje automatico aplicadas a la detección de ataques
+ DDoS.
  En especial destacamosel artículo
 \shape italic
  Detection of distributed denial of service attacks using an ensemble of
