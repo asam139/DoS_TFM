@@ -125,27 +125,41 @@ Introducción a los ataques DDoS
 \end_layout
 
 \begin_layout Standard
-Los videojuegos se pueden definir como cualquier aplicación o software cuyo
- fin es el entretenimiento de una o más personas por lo general 
+Los ataques de denegación de servicio distribuido o DDoS, los cuales tiene
+ como objetivo impedir que los usuarios legítimos tengan acceso a un recurso
+ espécifico, han sido conocidos desde principios de la década de 1980 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "VideogamesCHPForEducation"
+key "DDoS_PJCriscuolo"
 
 \end_inset
 
 .
- Más específicamente, los juegos multijugador son juegos en los que se permiten
- participar simultáneamente a dos o más jugadores.
- En estos juegos, los participantes compiten en demostrar su habilidad,
- bien como grupo para alcanzar un objetivo o por el contrario enfrentándose
- entre sí individualmente o formando grupos.
- Por todo ello, la palabra multijugador da a entender hoy en día que los
- usuarios juegan juntos mediante sus dispositivos conectados a una red,
- bien local o global (Internet).
- Aunque hay que diferenciar entre videojuegos que permitan un multijugador
- local, es decir todos los participantes usan el mismo dispositivo físico
- y los juegos multijugador en red, da igual de qué tipo, en los cuales cada
- usuario usa un dispositivo diferente.
+ Actualmente los existen dos métodos para lanzar ataques DDoS en Internet
+\begin_inset CommandInset citation
+LatexCommand citep
+key "TaxonomyDDoSAttackAndDefenseMechanisms"
+
+\end_inset
+
+.
+ El primer método consiste en enviar un páquete malformado de modo que confunde
+ algún protocolo o aplicación que esta ejecuntandose en la víctima.
+ El otro método, y más común, engloba una o ambas de las siguientes acciones
+ por parte del atacante.
+ La primera de ella es interrumplir la conectividad del usuario al servicio
+ sobrecargando el ancho de banda, los recursos del router, etc.
+ Básicamente ataques de inundación en la capa de red y transporte.
+ Y la segunda es bloquear el acceso al servicio por parte del usuario mediante
+ la sobrecarga de los recursor del servidor, es decir ataques de inundación
+ a nivel de aplicación
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DDoS_RSCALAID"
+
+\end_inset
+
+.
 \begin_inset Newline newline
 \end_inset
 
@@ -153,37 +167,65 @@ key "VideogamesCHPForEducation"
 \end_layout
 
 \begin_layout Standard
-A día de hoy los videojuegos se ejecutan sobre muy diversas plataformas,
- como ordenadores personales, consolas, máquinas recreativas, dispositivos
- móviles, etc.
- La plataforma predefine bastante las posibilidades de los juegos que se
- van a ejecutar sobre ella ya que están sujetos a usar los controladores
- y periféricos que ésta ofrece.
- 
-\end_layout
-
-\begin_layout Standard
-Un proyecto de desarrollo de un videojuego es un campo multidisciplinar
- donde se mezclan perfiles de muy diversos tipos.
- Además depende del género y tipo de juego así como la plataforma a la que
- está orientada.
- 
-\end_layout
-
-\begin_layout Standard
-Existen muchos géneros de videojuegos, como el de aventura, arcade, educativos,
- estrategia, acción, plataformas, simuladores, deportivos, etc.
- Pero últimamente como se comenta en el introducción, capítulo 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Introducción"
+Hoy en día, los ataques DDoS son frecuentemente lanzados por una red de
+ Zombies o Botnet, la cual es un conjunto de dispositivos controlados remotament
+e, bien organizados y ampliamente dispersos que están continuamente enviando
+ una gran cantidad de tráfico y/o peticiones al servicio de la víctima
+\begin_inset CommandInset citation
+LatexCommand citep
+key "SVM_Zombies_DDoS"
 
 \end_inset
 
-, los juegos multijugador en red son los que mayor crecimiento están teniendo
- ya que en sí no son un género sino un añadido a cualquiera de los anteriores,
- haciendo más atractivo y adictivo el juego ya que se pueden jugar junto
- a amigos o desconocidos a gran distancia haciendo uso de la red.
+.
+ De este modo la víctima la víctima reponde tan lento que el servicio es
+ inusable o directamente colapsa.
+ Los Zombies o ordenadores que son parte de una botnet son usualmente reclutados
+ a través de gusanos, troyanos o puertas traseras
+\begin_inset CommandInset citation
+LatexCommand citep
+key "SVM_Zombies_DDoS,DefendingAgainstDDoS_RKCChang"
+
+\end_inset
+
+.
+ Este tipo de redes complica los mecanismo de detección para reconocer al
+ original atacante debido al uso de las direcciones IP falsificadas por
+ los zombies bajo control.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Desde sus inicios han sido innumerables los ataques de DDoS que se han llevado
+ contra diferentes empresas, entidades y servicios.
+ Entre ellos el reciente ataque del 21 de Octubre de 2016 en el cual unos
+ desconocidos realizaron una serie de ataques DDoS sobre la empresa Dyn,
+ proveedora de servicios de nombre de doniminio o DNS (Domain Name Service)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "DNS"
+description "Domain Name Service"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AtaqueDDoS21Octubre_Diaroti,AtaqueDDoS21Octubre"
+
+\end_inset
+
+.
+ Los incidentes afectaron principalmente a servicios estadounidenses y europeos.
+ La serie de ataques, tres en total, afectó a algunas de las plataformas
+ web más populares incluyendo Twitter, Netflix, Reddit, Spotify, PayPal,
+ Pinterest, CNN, así como los emblemáticos periódicos, The Guardian, New
+ York Times y Wall Street Journal.
+ 
 \end_layout
 
 \begin_layout Section
