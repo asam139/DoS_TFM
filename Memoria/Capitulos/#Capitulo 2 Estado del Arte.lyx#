@@ -234,117 +234,162 @@ Ataques DDoS: Incentivos
 
 \begin_layout Standard
 Los ataques DDoS están usualmente motivados por diferentes incentivos.
- Estos incentivos se pueden clasificar en cinco categorias:
+ Estos incentivos se pueden clasificar en cinco categorias
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ASurveyofDefenseMechanismsAgainstDDoS"
+
+\end_inset
+
+:
 \end_layout
 
-\begin_layout Subsection
-Clasificación
-\end_layout
-
-\begin_layout Standard
-Los juegos multijugador en línea pueden ser de muchos géneros entre los
- que están:
-\end_layout
-
-\begin_layout Itemize
-Rol: el jugador asume el papel de un personaje e interactúa con otros personajes
-, los cuales son otros jugadores, en un gran mundo virtual.
- El avance en el juego y la superación de retos se traducen en la progresión
- de las capacidades e inventario del jugador.
-\end_layout
-
-\begin_layout Itemize
-
-\shape italic
-Shooter
-\shape default
- en primera persona: famosamente conocidos como 
-\shape italic
-First Person Shooter
-\shape default
- (FPS) son juegos que enfatizan en la habilidad del jugador a la hora de
- apuntar y pensar tácticamente.
-\end_layout
-
-\begin_layout Itemize
-Estrategia en tiempo real: normalmente son aquello en los cuales el jugador
- se pone ante una civilización, ejército o similares y según sus decisiones
- así avanzará en la partida.
-\end_layout
-
-\begin_layout Itemize
-Estrategia basada en turnos: cada jugador dispone de un tiempo o 
-\shape italic
-tick
-\shape default
- para llevar a cabo sus acciones.
-\end_layout
-
-\begin_layout Itemize
-Simulaciones: tienen como objetivo simular con precisión ciertos aspectos
- del mundo real, por ejemplo conducir o pilotar.
+\begin_layout Enumerate
+Beneficios Financieros/Económicos: debido a la naturaleza de su incentivo,
+ los atacantes de esta categoría suelen ser los atacantes más técnicos y
+ más experimentados.
+ y por lo tanto a menudo son los ataques más peligrosos y difíciles de detener.
  
 \end_layout
 
-\begin_layout Itemize
-Casual: juegos cuyo objetivo es atraer a una gran cantidad de usuarios casuales,
- ya que son simples y no hace falta dedicarles mucho tiempo.
+\begin_layout Enumerate
+Venganza: los ataques en esta categoría provienen de individuos frustados,
+ normalmente con pocas habilidades técnicas, que llegan los ataques como
+ respuesta a una injusticia percibida.
+ 
 \end_layout
 
-\begin_layout Itemize
-Masivos: mas conocidos como MMOGs (
-\shape italic
-Massively Multiplayer Online Game
-\shape default
-) 
+\begin_layout Enumerate
+Creencia Ideológica: atacantes motivados por creencias ideológicas, es uno
+ de los mayores incentivos.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Retos intelectuales: los ataques de esta categoría provienene de personas
+ que quieren experiementar y aprender sobre como lanzar varios tipos de
+ ataques.
+ Normalmente son jovenes hackers quienes quiern mostrar sus capacidades.
+ Hoy en día, existen gran cantidad de herramientas para atacar y alquilar
+ botnets que hasta un aficionado podría lanzar un ataque DDoS.
+\end_layout
+
+\begin_layout Enumerate
+Guerra cibernética: en esta categoría los atacantes pertenecen normalmente
+ a un grupo u organización militar o terrorista de otro país.
+ Ellos están politicamente motivados para dañar los núcleos críticos.
+ Entre los objetivos se suelen encontrar, organizaciones financieras tanto
+ privadas comom públicas, infraestructuras de suministros eléctrico y de
+ agua, proveedores de telecomunicaciones, etc.
+ 
+\end_layout
+
+\begin_layout Subsection
+Ataques DDoS: Clasificación
+\end_layout
+
+\begin_layout Standard
+La característica distribuidos de los ataques DDoS es la que hace que sean
+ extremadamante dificil combatir y detectarlos.
+ Los atacantes normalmente usan direcciones IP falsas con la intención de
+ esconder su verdadera identidad, por lo que se vuelve muy complicado rastrear
+ este tipo de ataques.
+ Además hay muchísimas vulnerabilidades en muchísimos hosts de Internet
+ que pueden ser explotados.
+ Actualmente los ataques dirigidos a la capa de aplicación se estan viendo
+ incrementados rápidamente.
+ Existen muchos tipos de clasificaciones de los diferentes tipos de ataques
+ DDoS pero vamos a comentar la que los clasifica en función de la capa en
+ la cual el ataque actúa.
+ Según esta clasificación se dividen en dos grupos principales:
+\end_layout
+
+\begin_layout Enumerate
+Ataques de Inundación DDoS a la capa de Red/Transporte: estos ataques son
+ mayoritariamente lanzados usando paquetes de TCP, UDP, ICMP y DNS.
+ Hay cuatro tipos de ataques en esta categoría:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Ataques de Inundación: ataques centrados en interrunpir la conectividad
+ de los usuarios legítimos agotando el ancho de banda.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Ataques de Inundación explotando un protocolo: el ataque explota alguna
+ específica característica o un fallo de implementación de alguno de los
+ protocolos que al víctima usa con el objetivo de consumir una gran cantidad
+ de recursos.
+\end_layout
+
+\begin_layout Enumerate
+Ataques de Inundación basados en reflexión: los atacantes envían peticiones
+ falsas en lugar de peticiones directas a los reflectores; por lo tanto
+ esos reflectores envían sus respuestas a las víctimas agotando sus recursos.
+\end_layout
+
+\begin_layout Enumerate
+Ataques de Inundación basados en amplificación: los atacantes explotan servicios
+ para generar una gran cantidad de mensajes o múltiples mensajes por cada
+ mensaje que ellos reciben amplificiando el tráfico hacia la víctima.
+ Las Botnets han sido constantemente usadas con el propósito de amplificación
+ y reflexión.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Ataques de Inundación DDoS a la capa de Aplicación: estos ataques se centran
+ en interrumpir el uso legítimo de los servicios agotando los recursos del
+ servidor.
+ Los ataques de este tipo generalmente consumen menos ancho de banda y son
+ más dificil de detectar debido a que son mas similares al tráfico benigno.
+ Aún así son igualmente perjudiciales ya que atacan a específicas característica
+s de aplicaciones como HTTP, DNS, o SIP (Session Initiation Protocol)
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
-symbol "MMOG"
-description "Massively Multiplayer Online Game"
-
-\end_inset
-
- son un tipo especial en el cual se puede soportan una gran cantidad de
- participantes simultáneos.
- Este tipo de juegos a su vez puede ser de cualquiera de las anteriores
- temáticas apareciendo por ejemplo los MMORPG (
-\shape italic
-Massively Multiplayer Online Role-Playing Games
-\shape default
-) 
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "MMORPG"
-description "Massively Multiplayer Online Role-Playing Games"
-
-\end_inset
-
- o MMOFPS (
-\shape italic
-Massively Multiplayer Online First Person Shooter
-\shape default
-) 
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol " MMOFPS "
-description "Massively Multiplayer Online First Person Shooter"
+symbol "SIP"
+description "Sesssion Initiation Protocol"
 
 \end_inset
 
 .
+ A continuación clasificamos en diferentes tipos:
 \end_layout
 
-\begin_layout Standard
-Son muchísimos los géneros que existen y más los subgéneros dentro de cada
- uno de ellos.
- Cada uno tiene detalles propios que le dan identidad y personalidad.
- Se podría analizar cada uno de ellos en detalle pero este no es el objetivo.
- El género que en el que si vamos a profundizar en el FPS ya que es el género
- elegido para el videojuego sobre el cual se implementarán y evaluarán las
- técnicas propuestas.
+\begin_deeper
+\begin_layout Enumerate
+Ataques basados en reflexión/amplificación: los atacantes usan las mismas
+ técnicas que para los ataques en la capa de red/transporte.
  
 \end_layout
 
+\begin_layout Enumerate
+Ataques basados en HTTP: se puede subdividir en:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sessión: la tasa de peticones por parte del atacante es mayor que la de
+ los usuarios por lo que el servidor se agota y es incapaz de dar servicio.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Asimétricos: los atacantes envian sesiones que contienen peticiones con
+ uno alto contenido de datos.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Lentos ataques de solicutud/respuesta: de la misma forma los atacantes envián
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Subsubsection
 
 \shape italic
