@@ -225,43 +225,6 @@ key "AtaqueDDoS21Octubre_Diaroti,AtaqueDDoS21Octubre"
  web más populares incluyendo Twitter, Netflix, Reddit, Spotify, PayPal,
  Pinterest, CNN, así como los emblemáticos periódicos, The Guardian, New
  York Times y Wall Street Journal.
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Recientes avances en mecanismos de defensa contra ataques DDoS han puesto
- fin a los ataques que eran lanzados con una herramienta hacia una web.
- En los ataques DDoS actuales, los atacantes usa métodos mucho más complicados.
- A pesar de todos los esfuerzos para decrementar el numero de incidentes
- ellos han ido creciendo en frecuencia y tamaño.
- Un reciente reporte de Arbor Network, el cual esta formado por muchísimo
- operadores de red a nivel mundial, comunica que la frecuencia de los ataques
- va en aumento
-\begin_inset CommandInset citation
-LatexCommand citep
-key "ArborNetworks_Report"
-
-\end_inset
-
-.
- Hace dos años, el 25% de los encuestados reflejo más de 21 ataques por
- mes; en 2014 incremento a un 38% y en 2015 a un 44%.
- Además el tamaño de los ataques tambien se ha visto incrementado.
- El número de ataques por encima de 100Gbps ha ido creciendo significatibamente.
- Según el sistema ATLAS que reúne estadísticas de más de 300 clientes que
- utilizan Arbor Network Peakflow SP en todo el mundo, en 2013 se registraron
- 39 ataques por encima de 100Gbps; en 2014, fueron 159 y en 2015 fueron
- 223, con 16 que sobrepasaron los 200Gbps
-\begin_inset CommandInset citation
-LatexCommand citep
-key "ArborNetworks_Report"
-
-\end_inset
-
-.
  
 \end_layout
 
@@ -271,55 +234,11 @@ Ataques DDoS: Incentivos
 
 \begin_layout Standard
 Los ataques DDoS están usualmente motivados por diferentes incentivos.
- Estos incentivos se pueden clasificar en cinco categorias
-\begin_inset CommandInset citation
-LatexCommand citep
-key "ASurveyofDefenseMechanismsAgainstDDoS"
-
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Enumerate
-Beneficios Financieros/Económicos: debido a la naturaleza de su incentivo,
- los atacantes de esta categoría suelen ser los atacantes más técnicos y
- más experimentados.
- y por lo tanto a menudo son los ataques más peligrosos y difíciles de detener.
-\end_layout
-
-\begin_layout Enumerate
-Venganza: los ataques en esta categoría provienen de individuos frustados,
- normalmente con pocas habilidades técnicas, que llegan los ataques como
- respuesta a una injusticia percibida.
-\end_layout
-
-\begin_layout Enumerate
-Creencia Ideológica: atacantes motivados por creencias ideológicas, es uno
- de los mayores incentivos.
-\end_layout
-
-\begin_layout Enumerate
-Retos intelectuales: los ataques de esta categoría provienene de personas
- que quieren experiementar y aprender sobre como lanzar varios tipos de
- ataques.
- Normalmente son jovenes hackers quienes quiern mostrar sus capacidades.
- Hoy en día, existen gran cantidad de herramientas para atacar y alquilar
- botnets que hasta un aficionado podría lanzar un ataque DDoS.
-\end_layout
-
-\begin_layout Enumerate
-Guerra cibernética: en esta categoría los atacantes pertenecen normalmente
- a un grupo u organización militar o terrorista de otro país.
- Ellos están politicamente motivados para dañar los núcleos críticos.
- Entre los objetivos se suelen encontrar, organizaciones financieras tanto
- privadas comom públicas, infraestructuras de suministros eléctrico y de
- agua, proveedores de telecomunicaciones, etc.
- 
+ Estos incentivos se pueden clasificar en cinco categorias:
 \end_layout
 
 \begin_layout Subsection
-Ataques DDoS: 
+Clasificación
 \end_layout
 
 \begin_layout Standard

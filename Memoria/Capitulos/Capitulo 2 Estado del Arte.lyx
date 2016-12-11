@@ -121,7 +121,7 @@ l, para posteriormente exponer el aprendizaje aútomatico.
 \end_layout
 
 \begin_layout Section
-Introducción a los ataques DDoS
+Ataques DDoS
 \end_layout
 
 \begin_layout Standard
@@ -228,89 +228,64 @@ key "AtaqueDDoS21Octubre_Diaroti,AtaqueDDoS21Octubre"
  
 \end_layout
 
-\begin_layout Section
-Juegos nultijugador en línea 
+\begin_layout Subsection
+Ataques DDoS: Incentivos
 \end_layout
 
 \begin_layout Standard
-Los juegos multijugador online o MOGs son en sí una especie de simulación
- interactiva distribuida (DIS) 
+Los ataques DDoS están usualmente motivados por diferentes incentivos.
+ Estos incentivos se pueden clasificar en cinco categorias
 \begin_inset CommandInset citation
 LatexCommand citep
-key "DeadReckoning2D"
+key "ASurveyofDefenseMechanismsAgainstDDoS"
 
 \end_inset
 
-, es decir un conjunto de elementos que forman una infraestructura con el
- objetivo de unir múltiples simulaciones en ubicaciones distintas para poder
- crear mundos virtuales y complejos que ofrezcan la posibilidad de actividades
- altamente interactivas.
- Las simulaciones están formadas por entidades que interactúan unas con
- otras 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "StandardDIS"
-
-\end_inset
-
-.
- Estas entidades se modelan como objetos, colecciones de campos (variables
- y atributos) y métodos para modelar el comportamiento de una determinada
- entidad.
- El comportamiento de las entidades esta formado por relaciones con otras
- entidades, el entorno y consigo mismas.
- 
-\begin_inset Newline newline
-\end_inset
-
-
+:
 \end_layout
 
-\begin_layout Standard
-La infraestructura que conforma un MOGs se apoya sobre una red que actualmente
- no ofrece un servicio con retardos acotados o garantía de entrega de paquetes.
- Cada vez estos juegos precisan de requisitos mayores ya que ofrecen una
- mayor interactividad unida a la mejora gráfica que conlleva la necesidad
- de aumentar la precisión para que así el jugador obtenga una experiencia
- de juego satisfactoria.
- Es decir, los jugadores necesitan que sus acciones parezcan ser ejecutadas
- en el mismo espacio virtual alcanzando suficiente realismo como si fuera
- un mundo real a pesar de que las localizaciones geográficas estén a miles
- de kilómetros de distancia.
+\begin_layout Enumerate
+Beneficios Financieros/Económicos: debido a la naturaleza de su incentivo,
+ los atacantes de esta categoría suelen ser los atacantes más técnicos y
+ más experimentados.
+ y por lo tanto a menudo son los ataques más peligrosos y difíciles de detener.
  
-\begin_inset Newline newline
-\end_inset
-
-
 \end_layout
 
-\begin_layout Standard
-Se puede distinguir varios tipos de videojuegos atendiendo a características,
- como es si admiten varios jugadores o no, a qué público van dirigidos,
- su finalidad, la tecnología que emplean, el género, etc.
- Cada género presentan sus propias características cuando se quiere añadirle
- el modo multijugador en red.
- Por ello es necesario analizar el tipo de juego para tener los requisitos
- a cumplir antes de su desarrollo.
+\begin_layout Enumerate
+Venganza: los ataques en esta categoría provienen de individuos frustados,
+ normalmente con pocas habilidades técnicas, que llegan los ataques como
+ respuesta a una injusticia percibida.
  
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
+\begin_layout Enumerate
+Creencia Ideológica: atacantes motivados por creencias ideológicas, es uno
+ de los mayores incentivos.
  
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
-A continuación se hará una breve clasificación de los principales géneros
- de videojuegos en línea prestando atención en un género en especial ya
- que será el que se implemente.
- Después se comentan las arquitectura que presentan los videojuegos en red.
- Y por último, se enumerarán las principales características del tráfico
- que generan estos.
+\begin_layout Enumerate
+Retos intelectuales: los ataques de esta categoría provienene de personas
+ que quieren experiementar y aprender sobre como lanzar varios tipos de
+ ataques.
+ Normalmente son jovenes hackers quienes quiern mostrar sus capacidades.
+ Hoy en día, existen gran cantidad de herramientas para atacar y alquilar
+ botnets que hasta un aficionado podría lanzar un ataque DDoS.
+\end_layout
+
+\begin_layout Enumerate
+Guerra cibernética: en esta categoría los atacantes pertenecen normalmente
+ a un grupo u organización militar o terrorista de otro país.
+ Ellos están politicamente motivados para dañar los núcleos críticos.
+ Entre los objetivos se suelen encontrar, organizaciones financieras tanto
+ privadas comom públicas, infraestructuras de suministros eléctrico y de
+ agua, proveedores de telecomunicaciones, etc.
  
 \end_layout
 
 \begin_layout Subsection
-Clasificación
+Ataques DDoS: Clasificación
 \end_layout
 
 \begin_layout Standard
