@@ -518,7 +518,14 @@ Clasificación basada en la ubicación de despliegue
 \end_layout
 
 \begin_layout Enumerate
-Mecanismos para ataques DDoS a la capa de red/transporte: 
+Mecanismos para ataques DDoS a la capa de red/transporte
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ASurveyofDefenseMechanismsAgainstDDoS"
+
+\end_inset
+
+: 
 \end_layout
 
 \begin_deeper
@@ -549,7 +556,7 @@ key "DDoS_PJCriscuolo"
 \shape italic
 Ingress/Egress filtering at the sources' edge routers
 \shape default
-, D-WARD, MULTOPS (
+; D-WARD, MULTOPS (
 \shape italic
 Multi-Level Tree for Online Packet Statistics
 \shape default
@@ -577,14 +584,7 @@ y RFW (
 \shape italic
 MANAnet Reverse Firewal
 \shape default
-l)
-\begin_inset CommandInset citation
-LatexCommand citep
-key "ASurveyofDefenseMechanismsAgainstDDoS"
-
-\end_inset
-
-.
+l).
 \end_layout
 
 \begin_layout Enumerate
@@ -594,11 +594,11 @@ Basados en el destino: en este tipo de mecanismios la detección y respuesta
  de acceso a los destinos.
  Estos mecanimos pueden modelar el comportamiento de la víctima y detectar
  así cualquier anomalía.
- Algunos de los principales mecanimos basados en destino son 
+ Algunos de los principales mecanimos basados en destino son: 
 \shape italic
 IP Traceback Mechanisms
 \shape default
-, MIP (
+; MIP (
 \shape italic
 Management Information Base
 \shape default
@@ -610,9 +610,9 @@ description "Management Information Base"
 
 \end_inset
 
-, 
+
 \shape italic
-Packet marking and filtering mechanisms, History-based IP filtering 
+; Packet marking and filtering mechanisms, History-based IP filtering 
 \shape default
 y
 \shape italic
@@ -622,11 +622,53 @@ y
 \end_layout
 
 \begin_layout Enumerate
-Ataques de 
+Basados en la red: estos mecanismos son desplegados dentro de la red y principal
+mente en los routers que forman los AS.
+ Entre este tipo de mecanismos se encuentra, 
+\shape italic
+route-based packet filtering y detecting and filtering malicious routers.
 \end_layout
 
 \begin_layout Enumerate
-Ataques de Inundación
+Híbridos: los mecanimos anteriores solamente tienen en cuenta su punto de
+ actuación, además la detección y respuesta está realizada mayoritariamente
+ por cada punto de despliegue o varios.
+ Estos mecanimos son llamados centralizados.
+ Por los híbridos o descentralizados tienen en cuenta múltiples localizaciones
+ para la fuente, destino y redes intermedias.
+ Por ejemplo la detección puede ser hecha en la parte de la víctima y la
+ respuesta distribuida iniciada y distribuida a otros nodos de la red por
+ la víctima.
+ Entre los mecanimos híbridos se encuentran: Hybrid packet marking and throttlin
+g/filtering mechanisms; DEFCOM (
+\shape italic
+Defensive Cooperative Overlay Mesh
+\shape default
+)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "DEFCOM"
+description "Defensive Cooperative Overlay Mesh"
+
+\end_inset
+
+; COSSACK; 
+\shape italic
+capability-based mechanisms
+\shape default
+; AITF(
+\shape italic
+Active Internet Traffic Filtering
+\shape default
+)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "AITF"
+description "Active Internet Traffic Filtering"
+
+\end_inset
+
+y StopIt.
 \end_layout
 
 \end_deeper
@@ -636,11 +678,74 @@ Mecanismos para la capa de aplicación:
 
 \begin_deeper
 \begin_layout Enumerate
-Ataques basados 
+Basados en el destino (lado del servidor): la mayoría de aplicaciones siguen
+ un modelo cliente-servidor.
+ Un servidor es un proceso que implementa un específico servicio.
+ Un cliente es un proceso que pide el servicio que ofrece el servidor.
+ Como se ha dicho los mecanismos basados en el destino son desplegados en
+ el destino, es decir en el servidor.
+ La mayoría de mecanismos de este tipo observan el modelo del servidor y
+ los clientes para así poder detectar anomalias y desechar o reducir el
+ límite de las peticiones maliciosas.
+ Entre estos se encuentran: defense against Reflection/Amplification attacks;
+ DDoS-Shield: anomaly detector based on hidden semi-Markov model y DAT (Defense
+ Against Tilt DDoS attacks)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "DAT"
+description "Defense Against Tilt DDoS attacks"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-Ataq
+Híbridos o distribuidos: emplean la colaboración entre el cliente y el servidor
+ para detectar y responder a los ataques.
+ Por ejemplo la detección se realiza en la víctima (servidor), y la respuesta
+ se inicia y distribuye a los clientes de la víctima.
+ Algunos de estos métodos son: 
+\shape italic
+Speak-up
+\shape default
+; DOW(
+\shape italic
+Defense and Offense Wall
+\shape default
+)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "DOW"
+description "Defense and Offense Wall"
+
+\end_inset
+
+; 
+\shape italic
+differentiate DDoS flooding bots from human
+\shape default
+; 
+\shape italic
+admission control and congestion control
+\shape default
+; TMH (
+\shape italic
+Trush Management Helmet
+\shape default
+)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "TMH"
+description "Trush Management Helmet"
+
+\end_inset
+
+ y 
+\shape italic
+hybrid detection based on trust and information theory based metrics
+\shape default
+.
 \end_layout
 
 \end_deeper
