@@ -525,7 +525,7 @@ key "ASurveyofDefenseMechanismsAgainstDDoS"
 
 \end_inset
 
-.: 
+: 
 \end_layout
 
 \begin_deeper
@@ -672,6 +672,10 @@ y StopIt.
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+(PODRÍA METER UNA TABLA CON LAS VENTAJAS Y DESVENTAJAS)
+\end_layout
+
 \begin_layout Enumerate
 Mecanismos para la capa de aplicación: 
 \end_layout
@@ -687,18 +691,132 @@ Basados en el destino (lado del servidor): la mayoría de aplicaciones siguen
  La mayoría de mecanismos de este tipo observan el modelo del servidor y
  los clientes para así poder detectar anomalias y desechar o reducir el
  límite de las peticiones maliciosas.
- Entre estos se encuentran: defense against Reflection/Amplification attacks;
- DDoS-Shield: anomaly detector based on hidden semi-Markov model; DAT (Defense
- Against Tilt DDoS attacks)
+ Entre estos se encuentran: 
+\shape italic
+defense against Reflection/Amplification attacks
+\shape default
+; DDoS-Shield: 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "anomaly detector based on hidden semi-Markov model"
+description "Trush Management Helmet"
+
+\end_inset
+
+ y DAT (
+\shape italic
+Defense Against Tilt DDoS attacks
+\shape default
+)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "DAT"
+description "Defense Against Tilt DDoS attacks"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-Ataq
+Híbridos o distribuidos: emplean la colaboración entre el cliente y el servidor
+ para detectar y responder a los ataques.
+ Por ejemplo la detección se realiza en la víctima (servidor), y la respuesta
+ se inicia y distribuye a los clientes de la víctima.
+ Algunos de estos métodos son: 
+\shape italic
+Speak-up
+\shape default
+; DOW(
+\shape italic
+Defense and Offense Wall
+\shape default
+)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "DOW"
+description "Defense and Offense Wall"
+
+\end_inset
+
+; 
+\shape italic
+differentiate DDoS flooding bots from human
+\shape default
+; 
+\shape italic
+admission control and congestion control
+\shape default
+; TMH (
+\shape italic
+Trush Management Helmet
+\shape default
+)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "TMH"
+description "Trush Management Helmet"
+
+\end_inset
+
+ y 
+\shape italic
+hybrid detection based on trust and information theory based metrics
+\shape default
+.
 \end_layout
 
 \end_deeper
 \begin_layout Subsubsection
 Clasificación basada en el tiempo de actuación
+\end_layout
+
+\begin_layout Enumerate
+Antes del ataque o prevención: lo mejor siempre es parar el ataque DDoS
+ al inicio, es decir prevenir es le mejor solución.
+ Los mecanimos de prevención pueden ser desplegados en las fuentes, redes
+ intermedias o una combinación de ellos.
+ La mayoría de este tipo de mecanismos se centran en arreglar vulnerabilidades
+ de seguridad que pueden ser explotadas por los ataques DDoS.
+ Hay muchos mecanismos de prevención generales que deberían ser empleados
+ en todos ellos.
+ Algunos de estos son: mecanismos de seguridad de protoco y sistema para
+ incrementar en general la seguridad de los sistemas; Fail-Safe protección;
+ asignación de recursos y credenciales; mecanismos de reconfiguación; instalació
+n de IDPS (Intrusion Detection & Prevention Systems)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "IDPS"
+description "Intrusion Detection & Prevention Systems"
+
+\end_inset
+
+; balanceo de carga y otras condiraciones de seguridad por parte del servidor.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Durante el ataque o detección: pueden ser desplegados en los mismos puntos
+ que los anteriores.
+ Algunos mecanismos detectan los ataques cuando se detectan patrones anómalos
+ en las capas de red/transporte o aplicación.
+ Muchísimos IDPS están basados en estos mecanismos.
+ Ellos emplean técnicas de minería de datos e IA para obtener más precisión
+ en las detecciones.
+ Estos mecanismos monitorizan algunas características y estadísticas de
+ los flujos de tráfico de modo que aprenden el comportamiento de cada uno
+ de ellos obtener patrones con los que comparar y así detectar anomalias.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Después del ataque: despues de que el ataque sea detectado, el sistema de
+ defensa debe identificar la fuente y bloquear el tráfico.
+ Hoy en día, la mayoría de mecanismos no pueden detener los ataques totalmente
+ sino que consiguen minimizar el impacto del ataque y maximizar la disponibilida
+d de los servicios.
+ Estos mecanismos se dividen en identificación de la fuente del ataque y
+ posterioremente iniciar una respuesta adecuada, como pueder
 \end_layout
 
 \begin_layout Subsection
