@@ -229,7 +229,7 @@ key "AtaqueDDoS21Octubre_Diaroti,AtaqueDDoS21Octubre"
 \end_layout
 
 \begin_layout Subsection
-Ataques DDoS: Incentivos
+Incentivos
 \end_layout
 
 \begin_layout Standard
@@ -285,7 +285,14 @@ Guerra cibernética: en esta categoría los atacantes pertenecen normalmente
 \end_layout
 
 \begin_layout Subsection
-Ataques DDoS: Clasificación
+Clasificación
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Clasificación"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -305,7 +312,7 @@ La característica distribuidos de los ataques DDoS es la que hace que sean
 \end_layout
 
 \begin_layout Enumerate
-Ataques de Inundación DDoS a la capa de Red/Transporte: estos ataques son
+Ataques de inundación DDoS a la capa de red/transporte: estos ataques son
  mayoritariamente lanzados usando paquetes de TCP, UDP, ICMP y DNS.
  Hay cuatro tipos de ataques en esta categoría:
 \end_layout
@@ -341,7 +348,7 @@ Ataques de Inundación basados en amplificación: los atacantes explotan servici
 
 \end_deeper
 \begin_layout Enumerate
-Ataques de Inundación DDoS a la capa de Aplicación: estos ataques se centran
+Ataques de inundación DDoS a la capa de aplicación: estos ataques se centran
  en interrumpir el uso legítimo de los servicios agotando los recursos del
  servidor.
  Los ataques de este tipo generalmente consumen menos ancho de banda y son
@@ -379,431 +386,43 @@ Sessión: la tasa de peticones por parte del atacante es mayor que la de
 
 \begin_layout Enumerate
 Asimétricos: los atacantes envian sesiones que contienen peticiones con
- uno alto contenido de datos.
- 
+ datos muy pesados.
 \end_layout
 
 \begin_layout Enumerate
-Lentos ataques de solicutud/respuesta: de la misma forma los atacantes envián
- 
+Lentos ataques de solicutud/respuesta: de la misma forma los atacantes crean
+ sesiones en las cuales las peticiones tienen datos muy pesados.
 \end_layout
 
 \end_deeper
 \end_deeper
-\begin_layout Subsubsection
-
-\shape italic
-Multiplayer online first person shooter 
-\end_layout
-
-\begin_layout Standard
-Cada tipo de MOG presenta unas características específicas debido al comportamie
-nto que intentan simular y a como el usuario interacciona con mundo virtual.
- En particular, los FPS son un género de los videojuegos que se centran
- en el combate con armas mediante una perspectiva en primera persona 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "FundamentalsOfGameDesign"
-
-\end_inset
-
-.
- Esto quiere decir que el jugador experimenta la acción a través de los
- ojos del protagonista.
- Desde los inicios del género las mejoras de los gráficos 3D y pseudo-3D
- han desafiado tanto al desarrollo hardware como a la totalidad del juego,
- campaña, multijugador u otros modos.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Como la mayoría de juegos de tiros, los FPS implican un avatar o personaje,
- una o más armas, y enemigos.
- Debido a que tienen lugar en un entorno 3D, estos juegos tienden a ser
- más realistas que juegos en 2D y por ellos tienen representaciones más
- exactas de la gravedad y las colisiones.
- En este género es común mostrar las manos de los personajes y armas en
- la vista principal, además de un HUD (
-\shape italic
-Head-Up Display
-\shape default
-) 
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "HUD"
-description "Head-Up Display"
-
-\end_inset
-
- que muestre la salud, munición y otros detalles además de un posible mapa
- de los alrededores.
- El personaje es controlado por medio de algún controlador dependiendo de
- la plataforma.
- Los más usados son una combinación de ratón y teclado o mandos siendo la
- primera opción un poco superior.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Últimamente, una de las características más importante de los FPS es el
- modo multijugador que incluyen.
- Hay algunos juegos que están especialmente desarrollados para este modo
- y estando muy limitados en los restantes modos.
- Este es el caso de videojuego que se desarrollará, que solamente contará
- con modo multijugador en red.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Los FPS tienen unos requisitos de tiempo real muy altos ya que es necesario
- que el jugador observe al resto de jugadores con un movimiento continuo
- y suave para poder apuntar y disparar los proyectiles, así como estos puedan
- impactar en los jugadores.
- Pequeños errores de precisión provocan la frustracción en los participantes
- ya que ellos observan que han disparado al enemigo y este no sufre daño,
- o ven al enemigo moverse aleatoriamente, pareciendo incluso que se teletranspor
-tarse.
- Debido a que este género de juegos son los que mayores prestaciones requieren
- es la elección para el juego a desarrollar para realizar la implementación
- y evaluación de las técnicas.
- 
-\end_layout
-
 \begin_layout Subsection
-Arquitectura de red para juegos en línea
+Mecanismos de Defensa: alcance y clasificación
 \end_layout
 
 \begin_layout Standard
-La organización de red de juegos está formada por múltiples componentes,
- procedimientos y principios.
- Para el desarrollo de arquitecturas de redes para videojuegos existen diferente
-s modelos.
- Cada modelo conlleva ciertas ventajas o desventajas en aspectos como la
- escalabilidad, complejidad de implementación, etc.
- 
-\end_layout
-
-\begin_layout Subsubsection
-Modelo cliente-servidor
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:EA-Modelo-Cliente-Servidor"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-El modelo cliente-servidor se caracteriza por tener una entidad central,
- el servidor, que se encarga de enviar información a los demás participantes
- en la partida.
- Este modelo reduce el problema de la latencia debido a que ahora la latencia
- para un cliente dado solo depende de su conexión con el servidor, no viéndose
- afectado (al menos no directamente) por la latencia de los demás jugadores.
-\end_layout
-
-\begin_layout Standard
-Actualmente, la gran mayoría de juegos en red utilizan el modelo cliente-servido
-r debido a que reduce el problema de la latencia, reduce el ancho de banda,
- permite añadir mecanismos antitrampa y es más fácil de implementar 
+Normalmente cuando un ataque DDoS es detectado, no hay nada que se pueda
+ hacer excepto desconectar a la víctima de la red y manualmente arreglar
+ el problema.
+ Por lo tanto, el objetivo de cualquier mecanismo de defensa DDoS es detectarlos
+ tan pronto como sea posible y detenerlo lo más cerca posible de su fuente
+ de origen.
+ La detección de los ataques y su correspondiente respuesta, se puede llevar
+ a acabo en diferentes puntos de la red, existentes entre el atacante y
+ la víctima.
+ Es muy claro que es mucho más fácil detectar los ataques en aquellos puntos
+ más cercanos a la víctima ya que se pueden observar todos los flujos atacantes
+ .
+ Pero obviamente, es deseable responder al ataque lo más cercano de la fuente,
+ por lo tanto siempre hay un compromiso entre la precisión y la cercanía
+ a la fuente que tienen los mecanimos de prevención y detección.
 \begin_inset CommandInset citation
 LatexCommand citep
-key "AlgoNetwForComputerGames"
-
-\end_inset
-
-.
- En la Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:ArquitecturaClienteServidor"
-
-\end_inset
-
- se puede observa este modelo en el cual los clientes envían las actualizaciones
- al servidor y el servidor por su parte reenvía las actualizaciones o envía
- las propias según el tipo de servidor, tal como se comentará a continuación.
- 
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
+key "ASurveyofDefenseMechanismsAgainstDDoS,ASurveyOfDDoSAttack"
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../figures/ArquitecturaCliente-Servidor.png
-	scale 50
-	rotateOrigin center
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Arquitectura Cliente-Servidor
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:ArquitecturaClienteServidor"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Según el tipo de juego, los servidores pueden ser fijos, distribuyéndose
- geográficamente en lugares estratégicos en función del público y la expansión
- que el videojuego tiene, o pueden ser distribuidos, implementádose en los
- propios clientes.
- Esta última posibilidad es muy común ya que permite una gran escabilidad.
- Los servidores se usan para mantener el estado de los jugadores y mantener
- el mundo virtual.
- La función principal del servidor es enviar los estados de los objetos
- y otros personajes de interés hacia el jugador de modo que el servidor
- siempre sabe que es lo que está ocurriendo.
- Existen otras tareas de las cuales los servidores pueden hacerse cargo.
- Por ejemplo es común que se hagan cargo de la autenticación de modo que
- participantes no autorizados se les deniegue el acceso.
- Además pueden ofrecer funcionalidades para chat de texto o voz.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-En caso de usar servidores fijos, estos tienen capacidades limitadas por
- lo que ante una gran cantidad de usuarios es necesario incrementar proporcional
-mente el número de servidores..
- En muchos casos, esto no es escalable.
- Cuando ocurre esto, la compañía desarrolladora y productora instala una
- cantidad limitada de servidores de modo que el número de jugadores que
- pueden participar simultáneamente está limitada por la cantidad máxima
- de tráfico que soporten dichos servidores.
- Si se conoce la media de jugadores que están jugando a la vez, se puede
- ajustar el número de servidores a este requisito.
- El problema es controlar los picos que se pueden dar en algunos momentos
- concretos donde los servidores pueden llegar a su límite.
- Debido a esto, esta arquitectura tiene un cuello de botella en el acceso
- a los servidores.
- En cambio, si se usan servidores distribuidos en los propios clientes este
- problema se elimina ya que el cliente al buscar una partida puede crear
- el mismo el servidor permitiendo a otros clientes unirse.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-A la hora de diseñar el servidor en este modelo, se definen dos posibilidades
- básicas: que sea un servidor acreditado o no acreditado 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "HighLevelNetwConcepts"
-
-\end_inset
-
-.
- Ambos enfoques tienen en común que el servidor interconecta a los clientes
- e intercambia información entre ellos.
- Además también ofrecen privacidad para los usuarios finales ya que los
- clientes en realidad nunca se conectan directamente entre sí o al menos
- no tienen sus direcciones IP reveladas a otros clientes.
- 
-\end_layout
-
-\begin_layout Paragraph
-Servidor acreditado
-\begin_inset CommandInset label
-LatexCommand label
-name "par:Servidor-acreditado"
-
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-El servidor realiza toda la simulación del mundo virtual del juego, aplica
- las reglas del juego y el procesamiento de toda la información proveniente
- de los jugadores.
- Cada cliente envía su entrada (en forma de pulsaciones de teclas o acciones)
- al servidor y continuamente recibe el estado actual del juego desde el
- servidor.
- El cliente nunca hace ningún cambio en el estado mismo del juego.
- En su lugar, le dice al servidor lo que quiere hacer, y el servidor entonces
- controla la solicitud y responde al cliente para describir lo que ocurrió
- como resultado.
-\end_layout
-
-\begin_layout Standard
-Fundamentalmente, hay una capa de separación entre lo que el jugador quiere
- hacer y lo que realmente sucede.
- Esto permite al servidor escuchar las peticiones de cada cliente antes
- de decidir la forma de actualizar el estado del juego.
- Una ventaja de este enfoque es que hace mucho más difícil hacer trampa
- para los clientes.
- Por ejemplo, los clientes no tienen la posibilidad de hacer trampa diciéndole
- al servidor (y por lo tanto otros clientes) que un enemigo ha sido eliminado,
- ya que no llegan a tomar esa decisión por sí mismos.
- Sólo pueden decirle al servidor que un arma se disparó y, desde allí, le
- corresponde al servidor determinar si se alcanzó a algún jugador.
- 
-\end_layout
-
-\begin_layout Standard
-Como desventaja hay que destacar el tiempo que transcurre entre que se envió
- la orden y se actualiza la información del juego en los clientes.
- Si el jugador presiona un control para avanzar y se tarda suficiente tiempo
- para que la respuesta vuelva desde el servidor, el retraso será perceptible
- para el jugador.
- Una solución a esto es utilizar la denominada predicción del lado del cliente,
- que se verá en una sección posterior.
- Además, un servidor acreditado lleva a cabo una mayor carga de procesamiento.
-\end_layout
-
-\begin_layout Paragraph
-Servidor no acreditado
-\begin_inset CommandInset label
-LatexCommand label
-name "par:Servidor-no-acreditado"
-
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Un servidor no acreditado no controla el resultado de cada entrada del usuario.
- Los propios clientes procesan la entrada del usuario y la lógica del juego
- a nivel local.
- A continuación, envían el resultado de las acciones determinadas al servidor.
- El servidor sincroniza todas las acciones con el estado del mundo virtual.
- Este tipo es más fácil de implementar desde una perspectiva de diseño,
- ya que el servidor en realidad sólo transmite mensajes entre los clientes
- y no realiza ningún procesamiento adicional más allá de lo que los clientes
- hacen.
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-No hay necesidad de ningún tipo de métodos de predicción para las entradas,
- ya que los clientes manejen toda la física y eventos propios y transmiten
- lo que pasó hacia el servidor.
- Ellos son los dueños de sus objetos y son los únicos agentes autorizados
- a enviar las modificaciones locales de esos objetos en la red.
-\end_layout
-
-\begin_layout Subsubsection
-Modelo peer-to-peer
-\end_layout
-
-\begin_layout Standard
-También conocido como P2P (Peer-to-Peer)
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "P2P"
-description "Peer-to-Peer"
-
-\end_inset
-
-, Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:ArquitecturaP2P"
-
-\end_inset
-
-, este modelo carece de servidor dedicados sino que cada nodo o 
-\shape italic
-peer 
-\shape default
-de la red sirve y solicita información a los demás
-\begin_inset CommandInset citation
-LatexCommand citep
-key "AlgoNetwForComputerGames"
-
-\end_inset
-
-.
- Es decir, no hay ninguna autoridad que imponga reglas o mantenga el estado
- de los objetos.
- Hoy en día es posible encontrar juegos que sigan usando este modelo de
- arquitectura de red pero presenta problemas que desaconsejan su uso en
- la mayoría de juegos actuales
-\begin_inset CommandInset citation
-LatexCommand citep
-key "AlgoNetwForComputerGames"
-
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout Standard
@@ -831,22 +450,21 @@ centering
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../figures/ArquitecturaP2P.png
+	filename ../figures/xxxx.png
 	scale 50
+	rotateOrigin center
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Arquitectura P2P
+Diferentes partes en la cual se puede detectar y responder a los ataques
+ DDoS
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:ArquitecturaP2P"
+name "fig:Diff_Loc_Perf_DDoS_Det_Res"
 
 \end_inset
 
@@ -864,107 +482,137 @@ name "fig:ArquitecturaP2P"
 \end_layout
 
 \begin_layout Standard
-En este modelo, cada nodo ejecuta una instancia del juego y envía el estado
- de su mundo a todos los demás nodos.
- Para poder renderizar la escena, antes todos los nodos deben recibir los
- mensajes de los demás.
- La latencia de todos los jugadores tiene un impacto determinante en la
- partida, ya que el jugador con mayor latencia tardará mas en recibir los
- mensajes de los demás jugadores y en enviar los suyos, retrasando la ejecución
- del juego para todos los participantes; es decir, la latencia de los jugadores
- tiende a igualarse a la del jugador con mayor latencia.
- Esto afecta negativamente a la inmediatez, lo que no es aceptable en juegos
- donde ésta sea una propiedad básica (tipo FPS).
- Por otro lado, este modelo tiene dificultades para mantener la consistencia
- de una partida, ya que comunicar el estado entre todos los jugadores consume
- mucho ancho de banda, al requerir un gran número de mensajes.
-\end_layout
-
-\begin_layout Subsubsection
-Híbrida
-\end_layout
-
-\begin_layout Standard
-Se apoya en características tanto del modelo cliente-servidor como en el
- modelo P2P, en la Fig.
+Al igual que se ha hecho en la sección 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:ArquitecturaHíbrida"
+reference "subsec:Clasificación"
 
 \end_inset
 
- se puede ver un ejemplo.
- En esta arquitectura los servidores tiene como función dar soporte a la
- estructura.
- Generalmente en este modelo el servidor maneja las autorizaciones de los
- jugadores, almacena estados como por ejemplo la habilidad del jugador y
- ofrece soporte para la búsqueda de partidas.
- El resto de funciones son manejadas por los 
-\shape italic
-peers
-\shape default
+ de defensa seguirá el mismo tipo de clasificación.
+ Los mecanimos para combatir los ataques de DDoS a la capa de red/transporte
+ se dividen en cuatro categorías, basados en fuente, destino, red e híbridos.
+ Y los mecanismos que combaten los ataques en la capa de aplicación se dividen
+ en dos categorías, basados en destino e híbridos.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ASurveyofDefenseMechanismsAgainstDDoS"
+
+\end_inset
+
+.
+ Además haremos una clasificación secundaria de los mecanismos basada en
+ el punto que actúan entre el inicio y el fin del ataque
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ASurveyofDefenseMechanismsAgainstDDoS"
+
+\end_inset
+
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
+\begin_layout Subsubsection
+Clasificación basada en la ubicación de despliegue
 \end_layout
+
+\begin_layout Enumerate
+Mecanismos para ataques DDoS a la capa de red/transporte: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Basados en la fuente: estos mecanismos son desplegados cerca de la fuente
+ del ataque para prevenir que los clientes de la red generen ataques de
+ inundación DDoS.
+ Estos mecanismos son localizados en los límites de los routers de la red
+ de la fuente o en los routers de acceso a un sistema autónomo, AS (Autonomous
+ System)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "AS"
+description "Autonomous System"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../figures/ArquitecturaHibrida.png
-	scale 50
+ que conecta a los routers límite
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DDoS_PJCriscuolo"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Arquitectura Híbrida
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:ArquitecturaHíbrida"
-
-\end_inset
-
-
-\end_layout
+.
+ Varios mecanismos han sido diseñados para defeneter los ataques DDoS en
+ la fuente, algunos de los más importantes son: filtrado de entrada/salida
+ en los routers límite de las fuentes, D-WARD, árbol multinivel para las
+ estadísticas del paquete en línea, MULTOPS (Multi-Level Tree for Online
+ Packet Statistics)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "MULTOPS"
+description "MUlti-Level Tree for Online Packet Statistics "
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
+ y estadísticas tabuladas del paquete en línea, TOPS (Tabulated Online Packet
+ Statistics)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "TOPS"
+description "Tabulated Online Packet Statistics"
 
 \end_inset
 
+y firewall inverso de MANAnet, RFW (MANAnet Reverse Firewall)
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ASurveyofDefenseMechanismsAgainstDDoS"
 
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Basados en el destino: en este tipo de mecanismios la detección y respuesta
+ está hecha en el destino del ataque.
+ Existen varios mecanismos que tiene lugar en los routers límite o en los
+ de acceso a los destinos.
+ Estos mecanimos pueden modelar el comportamiento de la víctima y detectar
+ así cualquier anomalía.
+ Algunos de los principales mecanimos basados en destino son IP Traceback
+ Mechanisms, MIP (Management Information Base), Packet marking and filtering
+ mechanisms, History-based IP filtering y Packet dropping based on the level
+ of congestion
+\end_layout
+
+\begin_layout Enumerate
+Ataques de 
+\end_layout
+
+\begin_layout Enumerate
+Ataques de Inundación
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Mecanismos para la capa de aplicación: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Ataques basados 
+\end_layout
+
+\begin_layout Enumerate
+Ataq
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Clasificación basada en el tiempo de actuación
 \end_layout
 
 \begin_layout Subsection
