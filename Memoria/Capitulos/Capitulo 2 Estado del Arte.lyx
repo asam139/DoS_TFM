@@ -426,62 +426,6 @@ key "ASurveyofDefenseMechanismsAgainstDDoS,ASurveyOfDDoSAttack"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../figures/xxxx.png
-	scale 50
-	rotateOrigin center
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Diferentes partes en la cual se puede detectar y responder a los ataques
- DDoS
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Diff_Loc_Perf_DDoS_Det_Res"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Al igual que se ha hecho en la sección 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -669,11 +613,418 @@ description "Active Internet Traffic Filtering"
 \end_inset
 
 y StopIt.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Standard
-(PODRÍA METER UNA TABLA CON LAS VENTAJAS Y DESVENTAJAS)
+\align center
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="7">
+<features tabularvalignment="bottom">
+<column alignment="center" valignment="top" width="2.5cm">
+<column alignment="center" valignment="top" width="2.5cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="left" valignment="top" width="2.25cm">
+<column alignment="left" valignment="middle" width="2.5cm">
+<column alignment="left" valignment="top" width="2.75cm">
+<column alignment="left" valignment="top" width="2cm">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Precisión
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Escalabilidad
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Rendimiento del sistema
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Complejidad de Implementación
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Defensa en conjunto
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Centralizados
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Basado en fuente
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bajo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Baja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Moderado
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Baja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NO
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Basado en destino
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Baja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bueno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Baja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NO
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Basado en red
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bajo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Media
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Moderado
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Media
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NO
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Distribuidos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Híbrido o Distribuido
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Media
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Media - Alta
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pobre - Moderado
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Media - Alta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SI
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparación cualitativa de mecanismos de defensa contra ataques DDoS sobre
+ la capa de red/transporte basados en la localización donde se desplegan
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:comparacionDDoS-N/T-deployment-location"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -764,9 +1115,262 @@ description "Trush Management Helmet"
 hybrid detection based on trust and information theory based metrics
 \shape default
 .
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\align center
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="6">
+<features tabularvalignment="bottom">
+<column alignment="center" valignment="top" width="2.5cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="left" valignment="top" width="2.25cm">
+<column alignment="left" valignment="middle" width="2.5cm">
+<column alignment="left" valignment="top" width="2.75cm">
+<column alignment="left" valignment="top" width="2cm">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Precisión
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Escalabilidad
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Rendimiento del sistema
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Complejidad de Implementación
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Defensa en conjunto
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Basados en destino
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Baja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Moderado - bueno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Baja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NO
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Híbridos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Media
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Media
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Moderado
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Media - Alta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SI
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparación cualitativa de mecanismos de defensa contra ataques DDoS sobre
+ la capa de aplicación basados en la localización donde se desplegan
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:comparacionDDoS-N/T-deployment-location-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Clasificación basada en el tiempo de actuación
 \end_layout
@@ -819,66 +1423,6 @@ d de los servicios.
  posterioremente iniciar una respuesta adecuada, como puede ser limitar
  la tasa para esa fuente.
  
-\end_layout
-
-\begin_layout Subsection
-Características del tráfico de juego en red
-\end_layout
-
-\begin_layout Standard
-Los videojuegos generan unos patrones de tráfico en la red muy característico,
- diferenciándose de otras aplicaciones.
- La caracterización del tráfico permitirá comprender que aspecto afectan
- más a los videojuegos y el porqué de su estudio en la evaluación.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Los MOGs presentan las siguientes características
-\begin_inset CommandInset citation
-LatexCommand citep
-key "TraficoMOG"
-
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Itemize
-Tráfico bidireccional: existe envío de información desde el servidor al
- cliente y viceversa.
- 
-\end_layout
-
-\begin_layout Itemize
-Predictibilidad: modelar el tráfico es relativamente una simple tarea, puesto
- que el tráfico exhibe un comportamiento fractal (repetitivo y cíclico)
- cuando el número de jugadores activos está relativamente fijado.
- 
-\end_layout
-
-\begin_layout Itemize
-Poca variabilidad: presentan un tasa de transmisión muy constante, siendo
- dependiente con el género del juego.
-\end_layout
-
-\begin_layout Itemize
-Paquetes de tamaños pequeños: la información intercambiada es reducida,
- por lo que el ancho de banda utilizado es reducido.
-\end_layout
-
-\begin_layout Itemize
-Alta tasa de paquetes: se generan grandes ráfagas altamente periódicas de
- pequeños paquetes.
-\end_layout
-
-\begin_layout Itemize
-Sensibilidad al retardo: dependiendo de los requisitos de interactividad
- del juego, el retardo puede llegar a degradar gravemente la jugabilidad.
 \end_layout
 
 \begin_layout Section
@@ -1002,7 +1546,7 @@ sockets
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1039,1005 +1583,6 @@ Corona SDK
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:EjemploCorona"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-
-\shape italic
-Shiva3D
-\end_layout
-
-\begin_layout Standard
-
-\shape italic
-Shiva3D
-\shape default
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Shiva3DWeb"
-
-\end_inset
-
- es un entorno de desarrollo de aplicaciones y juegos 3D.
- Permite exportar tanto los juegos como aplicaciones a más de 20 plataformas
- entre las que se encuentran 
-\shape italic
-iOS,
-\shape default
- 
-\shape italic
-Android, Windows Phone, Windows, OS X, Linux
-\shape default
-, navegadores y consolas de juegos.
- Se trata de una potente plataforma de desarrollo reduciendo el tiempo para
- sacar el contenido al mercado.
- Por tanto esta orientada tanto a grandes desarrolladoras como a pequeñas
- o desarrolladores individuales.
- 
-\shape italic
-Shiva3D
-\shape default
- cuenta con un fuerte equipo de apoyo detrás de él, los cuales no paran
- de introducir novedades y facilidades así como añadir soporte a todos sus
- desarrolladores.
- Ofrece a los desarrolladores tres tipos de licencia.
- La primera de ellas es una versión Web gratis muy pobre ya que solo permite
- publicar en páginas web.
- En cambio las otras dos, la básica y avanzada permiten hacer uso de todo
- las características y por ello tienen un costo que sorprendentemente no
- es muy alto.
-\begin_inset Newline newline
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-En cuanto a todas las características son muy variadas y potentes.
- El editor de
-\shape italic
- Shiva3D
-\shape default
- es un software el cual te muestra para se vea lo se obtendrá.
- Es lo que se llama un 
-\shape italic
-WYSIWYG
-\shape default
- (
-\shape italic
-What You See Is What You Get
-\shape default
-)
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "WYSIWYG"
-description "What You See Is What You Get\\\\\\\\"
-
-\end_inset
-
-.
- Esta formado por 21 módulos desde editor de terreno y animaciones a un
- editor de código.
- Al igual que 
-\shape italic
-Corona SDK
-\shape default
- la programación se realiza en Lua contando con cientas de específicas funciones
- y constantes de 
-\shape italic
-Shiva3D
-\shape default
-.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-Respecto a las posibilidades que ofrece para crear juegos en red tiene dos
- variantes.
- La primera es usar un servidor incorporado para pequeños juegos multijugador
- de hasta 16 jugadores haciendo uso de 
-\shape italic
-GET
-\shape default
- y 
-\shape italic
-POST
-\shape default
- a través de XML.
- La segunda posibilidad es muchísimo más potente tratándose de una licencia
- adicional para un servidor dedicado 
-\shape italic
-Shiva
-\shape default
- para miles de jugadores.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../figures/EjemploShiva3D.png
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Ejemplo con 
-\shape italic
-Shiva3D
-\shape default
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "EjemploShiva3D"
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:EjemploShiva3D"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-
-\shape italic
-Marmalade
-\end_layout
-
-\begin_layout Standard
-
-\shape italic
-Marmalade
-\shape default
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "MarmaladeWeb"
-
-\end_inset
-
-se presenta como una herramienta de desarrollo multiplataforma cuyo objetivo
- principal es dar una gran libertad para innovar, crear y desarrollar contenido
- en cualquier dispositivo sin comprometer en el rendimiento o aspecto.
- Reduce el tiempo y esfuerzo en la creación de juegos y aplicaciones en
- diferentes sistemas operativos y plataformas.
- Gracias a Marmalade se usa el mismo código base en todas las plataformas
- compatibles y se puede compartir, integrar y reutilizar tecnologías y herramien
-tas de terceros.
- Al igual que los demás entornos permite las principales plataformas incluyendo
- el nuevo sistema operativo móvil Tizen.
- En el caso de 
-\shape italic
-Marmalade
-\shape default
- existen varios tipos de licencia.
- Parte desde la licencia gratis la cual tiene limitaciones en cuanto a plataform
-as y del desarrollo de aplicaciones nativas hasta la licencia profesional
- la cual alcanza un precio muy elevado.
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-El kit de desarrollo esta formado por un conjunto de herramientas que permiten
- desarrollar aplicaciones y juegos y se dividen en cinco subsistemas:
-\end_layout
-
-\begin_layout Itemize
-
-\shape italic
-Marmalade C++
-\shape default
-: permite desarrollar en 
-\shape italic
-C++
-\shape default
- para cualquier plataforma con un alto rendimiento.
- Es la herramienta principal ya que 
-\shape italic
-C++
-\shape default
- es el lenguaje principal de desarrollo con 
-\shape italic
-Marmalade
-\shape default
-.
-\end_layout
-
-\begin_layout Itemize
-
-\shape italic
-Marmalade Juice
-\shape default
-: aporta la capacidad de compilar los proyectos iOS nativos para Android.
- Es decir permite desarrollar las aplicaciones y juegos con Xcode en los
- lenguajes
-\shape italic
- Objetive-C
-\shape default
- o 
-\shape italic
-Swift
-\shape default
-, compilarlos y exportarlos sin necesidad de ningún cambio.
-\end_layout
-
-\begin_layout Itemize
-
-\shape italic
-Marmalade Quick
-\shape default
-: se trata de un entorno RAD (
-\shape italic
-Rapid Application Development
-\shape default
-) que permite un despliegue simultáneo en múltiples plataformas.
- Este subsistema usa como lenguaje 
-\shape italic
-Lua
-\shape default
-.
-\end_layout
-
-\begin_layout Itemize
-
-\shape italic
-Marmalade Web
-\shape default
-: permite la creación de aplicaciones híbridas usando
-\shape italic
- HTML5, CSS y JavaScript
-\shape default
-.
- 
-\end_layout
-
-\begin_layout Itemize
-
-\shape italic
-Marmalade Ecosystem
-\shape default
-: acceso a módulos, servicios, herramientas y extensiones que ayudan a enriquece
-r, conectar y monetizar.
-\end_layout
-
-\begin_layout Standard
-El lenguaje principal es 
-\shape italic
-C++
-\shape default
-, aunque dependiendo del subsistema se usan diferentes sin contar el desarrollo
- en entornos nativos.
- Resumiendo
-\shape italic
- Marmalade
-\shape default
- se presenta más bien como una herramienta que permite implementar código
- a través de múltiples plataformas y dispositivos desde una única base de
- código, es decir un 
-\shape italic
-middleware
-\shape default
-.
- 
-\shape italic
-Marmalade
-\shape default
- permite desarrollos en 2D y 3D pero está mucho más orientado al primero
- de ellos al igual que 
-\shape italic
-CoronaSDK
-\shape default
-
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Marmalade no ofrece en sí ninguna ayuda propia para implementar juegos multijuga
-dor sino que permite usar cualquier librería de terceros para su implementación.
- (Buscar algo más de información hay poquita la verdad).
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../figures/EjemploMarmalade.jpg
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Ejemplo con 
-\shape italic
-Marmalade
-\shape default
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "EjemploMarmalade"
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:EjemploMarmalade"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-
-\shape italic
-Torque3D
-\end_layout
-
-\begin_layout Standard
-
-\shape italic
-Torque3D 
-\shape default
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Torque3DWeb"
-
-\end_inset
-
- es una plataforma que se presenta como solución de código abierto para
- el desarrollo de videojuegos.
- Cuenta con el motor 
-\shape italic
-Torque Game
-\shape default
-.
- Ha sido diseñado para una alta flexibilidad y rendimiento en un amplia
- gama de hardware.
- Viene con un conjunto completo de herramientas para producir juegos y simulacio
-nes de calidad.
- 
-\shape italic
-Torque3D
-\shape default
- es solo compatible con 
-\shape italic
-Windows
-\shape default
- y desarrollo web y respecto a las plataformas a las que se pueden exportar
- los juegos son escasas:
-\shape italic
- Windows, Linux, OS X, iOS
-\shape default
- y algunas consolas.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Cuenta con un editor WYSIWYG que deja que desear ya que muchas cosas se
- necesitan hacer programando.
- Cuenta con herramientas de ayuda a los diseñadores para los gráficos, así
- como creación de terreros, iluminación, físicas y sistemas de renderización.
- Se trata de una plataforma muy completa a nivel profesional.
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-En cuanto red ofrece una sencilla forma de implementar juegos multijugador
- incluyendo técnicas para ofrece servicio óptimo, interpolación, extrapolación
- y predicción del lado del cliente.
- Lo mejor es que debido a que el desarrollo de un juego en red es complejo
- la empresa a la que pertenece 
-\shape italic
-Torque3D
-\shape default
- liberó un proyecto el cual consiste en un FPS multijugador totalmente funcional
- y que se puede usar como modelo.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-El principal problema que presenta esta plataforma es que está olvidada
- por parte de la compañía propietaria y debido a ello no existe comunidad
- entorno a ella.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../figures/EjemploTorque3D.jpg
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Ejemplo con 
-\shape italic
-Torque3D
-\shape default
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "EjemploTorque3D"
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:EjemploTorque3D"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-
-\shape italic
-Unity3D
-\end_layout
-
-\begin_layout Standard
-
-\shape italic
-Unity3D
-\shape default
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Unity3DWeb"
-
-\end_inset
-
- se trata de unas de las plataformas para desarrollar videojuegos más completas
- que existen.
- Permite desarrollar para múltiples plataformas a partir de un único proyecto
- entre las que están las principales móviles, navegadores, de escritorio
- y consolas.
- Dentro del proyecto se tiene control sobre todas las plataformas para las
- cuales se ejecutará.
- Por lo que Unity consigue hacer más fácil de mantener el código de trabajo
- con la abstracción de la plataforma.
- 
-\shape italic
-Unity3D
-\shape default
- busca hacerse cargo del trabajo de fondo de modo que los desarrolladores
- solo se centren en el desarrollo del juego en sí.
- Unity es un motor gráfico asociado a los juegos para dispositivos móviles
- con un mayor ayudas para el 3D.
- Aunque actualmente facilita ya el desarrollo de juegos en 2D enormemente
- así gracias a su ultima versión que añade nuevas y potentes capacidad para
- crear juegos con gráficos más realistas para dispositivos más potentes..
- Las licencias de Unity son elevadas.
- La gratuita tiene limitaciones en cuanto a plataformas, características
- y beneficios mientras que las de pago abren más posibilidades a costa de
- su alto precio.
- Aún así compensa enormemente por el tiempo de desarrollo que ahorra y la
- calidad del producto final.
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Su gran potencia reside en su editor uno de los más sencillos y potentes
- del mercado.
- El editor permite visualizar el juego a distintas resoluciones en una vista
- WYSIWYG, al igual que el editor de 
-\shape italic
-Shiva3D
-\shape default
-.
- Cuenta con un gran potente motor repleto de características y posibilidades.
- 
-\shape italic
-Unity3D
-\shape default
- permite usar junto con 
-\shape italic
-3ds Max, Maya, Blender, Cinema 4D, Adobe Photoshop, Adobe Fireworks
-\shape default
- y otros.
- De modo que los cambios realizados a las creaciones realizadas con estas
- se actualizan automáticamente en Unity sin necesidad de reimportar.El motor
- gráfico que utiliza es 
-\shape italic
-Direct3D
-\shape default
- (para 
-\shape italic
-Windows
-\shape default
-), 
-\shape italic
-OpenGL
-\shape default
- (para
-\shape italic
- Mac
-\shape default
- y 
-\shape italic
-Linux
-\shape default
-), 
-\shape italic
-OpenGL ES
-\shape default
- (para 
-\shape italic
-Android
-\shape default
- y
-\shape italic
- iOS
-\shape default
-) y propietarios para consolas y el resto.
- Permite mapeado de relieve, reflexión de mapeado, mapeado de paralaje,
- oclusión ambiental, sombras dinámicas, renderizados, etc.
- La programación de los 
-\shape italic
-script
-\shape default
- se realiza a través del editor que integra
-\shape italic
- MonoDevelop
-\shape default
-, en cualquiera de los siguientes tres lenguajes, 
-\shape italic
-UnityScript, C#
-\shape default
- o 
-\shape italic
-Boo
-\shape default
-.
- Además 
-\shape italic
-Unity3D
-\shape default
- ofrece multitud de paquetes gratuitos o de pago de una amplia gama, incluyendo
- modelos 3D, interfaces de usuario, ejemplos o animaciones por lo que puede
- reducir el tiempo de desarrollo del proyecto.
- Todos estos paquetes se ofrecen a través de 
-\shape italic
-Unity Asset Stor
-\shape default
-e 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "UnityAssetStore"
-
-\end_inset
-
-, el cual es un recurso disponible desde el editor de 
-\shape italic
-Unity3D
-\shape default
-.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\shape italic
-Unity3D
-\shape default
- ofrece grandes posibilidades para desarrollar juegos multijugador.
- Incluye una librería específica para implementar el servidor y clientes
- muy cómodo para implementar un multijugador local simplificando enormemente
- el desarrollo.
- Por otra parte contiene todo lo necesario para abstraer al desarrollador
- de la implementación de la comunicación entre las diferentes entidades.
- Por lo tanto ofrece todo lo necesario siendo cómodo y muy fácil de usar.
- El problema surge cuando se trata de un juego más ambicioso que quiere
- implementar un multijugador en red a nivel global por ejemplo.
- En esta situación no queda más remedio que recurrir a terceros.
- En caso de 
-\shape italic
-Unity3D
-\shape default
-, 
-\shape italic
-Photon
-\shape default
- es un buen ejemplo ya que ofrece sus librerías para este propósito con
- diferentes licencias en función de los requisitos del juego.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../figures/EjemploUnity3D.jpg
-	width 100text%
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Ejemplo con 
-\shape italic
-Unity3D
-\shape default
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "EjemploUnity3D"
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:EjemploUnity3D"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-
-\shape italic
-Unreal Engine 4
-\end_layout
-
-\begin_layout Standard
-
-\shape italic
-Unreal Engine 4
-\shape default
- (UE4) 
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "UE4"
-description "Unreal Engine 4"
-
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "UE4Web"
-
-\end_inset
-
- se trata de un completa suite de herramientas para el desarrollo de juegos.
- Permite el desarrollo desde pequeños juegos para móviles en 2D hasta títulos
- AAA (juegos con alta calidad y alto presupuesto) de grandes desarrolladoras
- en 3D.
- No solo es una herramienta cuyo su único uso sea para juegos, sino también
- para realidad virtual, educación, arquitectura o el cine.
- Ofrece todo lo necesario para cualquier idea que se ocurra.
- Recientemente 
-\shape italic
-Unreal Engine 4
-\shape default
- se ha liberado completamente solamente se paga un porcentaje de los beneficios
- que se obtienen, es decir ellos ingresan si el desarrollador ingresa.
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Actualmente UE4 ofrece una gran adaptabilidad ya que es ideal trabajar para
- juegos en ordenadores así como para las demás plataformas.
- Es decir permite crear juegos pequeños y adaptarlos sin hacer prácticamente
- nada a plataformas móviles o navegadores.
- Al igual que 
-\shape italic
-Shiva3D
-\shape default
- y 
-\shape italic
-Unity3D
-\shape default
- ofrece un completo editor WYSIWYG muy potente llegando a crear videojuegos
- sin necesidad de escribir código es lo que se conoce como 
-\shape italic
-blueprints
-\shape default
-.
- El sistema de 
-\shape italic
-Blueprints Visual Scripting
-\shape default
- permite construir juegos desde cero sin tener que escribir ninguna línea
- de código.
- Eso sí la programación no queda relegada aún segundo plano sino que los
- 
-\shape italic
-blueprints
-\shape default
- y el código están pensado para trabajar juntos y revueltos.
- UE4 fue reescrito completamente en 
-\shape italic
-C++
-\shape default
- siendo este el lenguaje de programación usado en el desarrollo.
- En cuanto potencia, es decir el nivel gráfico y estético del motor es inmejorab
-le.
- Por destacar algo cuenta con una gestión de partículas de las mejores del
- momento.
- Contiene innumerables herramientas avanzada muy diversas.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-En cuanto a ayuda para la implementación del multijugador en los juegos
- UE4 ofrece muchísimas posibilidades.
- Por ejemplo recientemente se introdujo el sistema de 
-\shape italic
-blueprints
-\shape default
- orientado a multijugador.
- Esto es programación gráfica orientada a gestionar y crear servidores y
- demás componentes para un buen modo multijugador.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../figures/EjemploUE4.jpg
-	width 100text%
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Ejemplo de 
-\shape italic
-UE4
-\shape default
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "EjemploUE4"
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:EjemploUE4"
 
 \end_inset
 
