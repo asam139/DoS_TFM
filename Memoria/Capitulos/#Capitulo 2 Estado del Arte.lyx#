@@ -1471,7 +1471,6 @@ En esta sección se realizará una introducción a la IA, en la cual se explicar
  en las de clasificación supervisada.
  Por último se exponen artículos en los cuales se hace uso de técnias de
  aprendizaje automático para la detección de ataques DDoS.
- 
 \end_layout
 
 \begin_layout Subsection
@@ -1479,48 +1478,14 @@ Introducción
 \end_layout
 
 \begin_layout Standard
-
-\shape italic
-Corona SDK
-\shape default
-
-\begin_inset CommandInset citation
-LatexCommand citep
-key "CoronaWeb"
-
-\end_inset
-
- es una herramienta o kit de desarrollo software multiplataforma para dispositiv
-os únicamente móviles desarrollada por 
-\shape italic
-Corona Labs Inc
-\shape default
-.
- Permite desarrollar aplicaciones para los siguientes sistemas: 
-\shape italic
-iOS, Android 
-\shape default
-(incluyendo 
-\shape italic
-Android TV
-\shape default
-), 
-\shape italic
-Kindle y Windows Phone 8
-\shape default
-.
- Ofrece una gran rapidez para el desarrollo de los proyectos.
- Esto es debido a la gran cantidad de librerías de las que dispone: desde
- alguna básica para entorno gráfico hasta aquellas relacionadas con la monetizac
-ión o redes sociales.
- Es por ello que es posible crear juegos y aplicaciones rápidamente, pudiendo
- ver los cambios en el simulador del que dispone, 
-\shape italic
-Corona Simulator
-\shape default
-.
- Hace relativamente poco ha sido liberada completamente su licencia hasta
- obtener un máximo de beneficios, aspecto muy llamativo.
+En el enfoque moderno de la IA, se utiliza el concepto de Agente Inteligente
+ para unificar sus distintas áreas de trabajo.
+ Un agente básicamente es cualquier cosa capaz de percibir su entorno mediante
+ sensores (entradas), procesar tales percepciones y actúa de manera racional
+ en dicho entorno mediante efectores (salida).
+ Por lo tanto, se puede definir la IA como un subcampo de la informática
+ dedicado a la construccióhn de agentes que exhiben aspectos del comportamiento
+ inteligente.
 \begin_inset Newline newline
 \end_inset
 
@@ -1528,53 +1493,89 @@ Corona Simulator
 \end_layout
 
 \begin_layout Standard
-Cuenta con comunidad bastante amplia por lo que se tiene gran cantidad de
- información, tutoriales y blogs donde preguntar dudas y aprender.
- Esto aunque parece un detalle solo es de lo más importante de una herramienta,
- que sea de confianza y podamos resolver los problemas que se presenten
- como el desarrollo del proyecto avanza.
- Se trata de una herramienta la cual se especializa para el desarrollo de
- juegos aunque también se puede hacer aplicaciones.
- Por lo tanto dispondrá de muchas más ayuda para el desarrollo de videojuegos,
- como ejemplo comentar la nueva herramienta que presentaron hace poco (en
- fase de prueba) denominada Composer GUI orientada al diseño visual de escenario
-s, es decir sin necesidad de código directamente.
- El desarrollo se realiza con el lenguaje de 
-\shape italic
-scripting
-\shape default
- Lua 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "WebLua"
+Existen muchísimos tipos de agentes pero todos tiene 4 características comúnes:
+\end_layout
 
+\begin_layout Itemize
+Autonomía: debe ser capaz de actuar sin intervención humana y tener el control
+ sobre sus propias acciones y estado interno
+\end_layout
+
+\begin_layout Itemize
+Racionalidad: debe actuar con el fin de alcanzar sus objetivos maximizando
+ el rendimiento y sin tomar decisiones que les impidan alcanzar dichos objetivos
+\end_layout
+
+\begin_layout Itemize
+Veracidad: no deben transmitir información falsa o inexacta a propósito
+\end_layout
+
+\begin_layout Itemize
+Aprendizaje: deben modificar su comportamiento en base a nuevas interacciones
+ con el entorno
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
-, un lenguaje interpretado muy rápido, bastante ligero y fácil de aprender.
- Un aspecto muy importante es que el motor que implementa es de dos dimensiones,
- 2D, por lo tanto esta limitado a esta pudiendo simular una tercera dimensión
- llegando a lo que se conoce como 2.5D.
- Corona SDK se basa en estándares de la industria incluyendo por ejemplo
+
+\end_layout
+
+\begin_layout Standard
+En cuanto a clasificaciones tenemos dos principales.
+ La primera según su modelo de actuación pueden ser: reactivos, deben percibir
+ y responder de forma temporal (rápida); pro-activo, además deben de exhibir
+ comportamientos dirigidos a lograr objetivos que sean oportunos y tomar
+ inicitiva, y por último social, que puedan interactuar con otros agentes
+ o humanos.
+ Otra clasificación se basa en su arquitectura:
+\end_layout
+
+\begin_layout Enumerate
+Deliberativa: contienen explícitamente un modelo simbólico de su entorno,
+ y las decisiones se realizan a través de un razonamiento lógico basado
+ en emparejamientos de patrones y manipulaciones simbólicas.
+\end_layout
+
+\begin_layout Enumerate
+Reactivas: actúan siguiendo un esquema estímulo-respuesta según el estado
+ actual de su entorno.
+ Los agentes reactivos son relativamente simples e interaccionan con otros
+ agentes de manera sencilla.
+ No obstante, en un conjunto de agentes reactivos, las interacciones pueden
+ dan lugar a patrones de comportamiento muy complejos.
+\end_layout
+
+\begin_layout Enumerate
+Híbridas: La arquitectura de agentes simbólicos dejó de utilizarse por la
+ enorme complejidad que tenía, y en la actualidad se sigue sólo una arquitectura
+ reactiva, o una reactiva con elementos de arquitectura simbólica: la arquitectu
+ra híbrida.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Uno de los pilares fundamentales de la IA es la resolución de problemas,
+ cuyo objetivo es que una máquina ayude a un humano a encontrar la solución.
+ La resolución de problemas mediante la búsqueda de una solución en el espacio
+ de posibles estados en los que puede encontrarse el problema es una de
+ las primeras áreas en las que la Inteligencia Artificial comenzó a trabajar.
+ Con el paso del tiempo han ido apareciendo diversos algoritmos para buscar
+ en el espacio de estados, teniendo todos ellos como aspecto común, el basarse
+ en la creación de un árbol de búsqueda.
+ Entre estos algortimos se encuentran: sin información como búsqueda en
+ anchura, profundidad, costo, profundidad limitada, iterativa o bidireccional;
+ con información como el algoritmo de escalada simple, escalada por la máxima
+ pendiente, variaciones estocástivas, génetivos, algoritmo A* o búsqueda
+ iterativa.
  
-\shape italic
-OpenGL, OpenAL, Box2D, Facebook, SQLite
-\shape default
- y otros muchos.
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Con respecto a red no ofrece ningún mecanismo que simplifique la implementación
- por lo tanto se trata de un entorno con muchas carencias en este aspecto.
- La única manera de realizar videojuegos en red es implementar todo la arquitect
-ura desde abajo (
-\shape italic
-sockets
-\shape default
-) o acudir a librerías de terceros generalmente de pago.
 \end_layout
 
 \end_body
