@@ -1477,5 +1477,135 @@ En esta sección se realizará una introducción a la IA, en la cual se explicar
 Introducción
 \end_layout
 
+\begin_layout Standard
+En el enfoque moderno de la IA, se utiliza el concepto de Agente Inteligente
+ para unificar sus distintas áreas de trabajo.
+ Un agente básicamente es cualquier cosa capaz de percibir su entorno mediante
+ sensores (entradas), procesar tales percepciones y actúa de manera racional
+ en dicho entorno mediante efectores (salida).
+ Por lo tanto, se puede definir la IA como un subcampo de la informática
+ dedicado a la construccióhn de agentes que exhiben aspectos del comportamiento
+ inteligente.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Existen muchísimos tipos de agentes pero todos tiene 4 características comúnes:
+\end_layout
+
+\begin_layout Itemize
+Autonomía: debe ser capaz de actuar sin intervención humana y tener el control
+ sobre sus propias acciones y estado interno
+\end_layout
+
+\begin_layout Itemize
+Racionalidad: debe actuar con el fin de alcanzar sus objetivos maximizando
+ el rendimiento y sin tomar decisiones que les impidan alcanzar dichos objetivos
+\end_layout
+
+\begin_layout Itemize
+Veracidad: no deben transmitir información falsa o inexacta a propósito
+\end_layout
+
+\begin_layout Itemize
+Aprendizaje: deben modificar su comportamiento en base a nuevas interacciones
+ con el entorno
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En cuanto a clasificaciones tenemos dos principales.
+ La primera según su modelo de actuación pueden ser: reactivos, deben percibir
+ y responder de forma temporal (rápida); pro-activo, además deben de exhibir
+ comportamientos dirigidos a lograr objetivos que sean oportunos y tomar
+ inicitiva, y por último social, que puedan interactuar con otros agentes
+ o humanos.
+ Otra clasificación se basa en su arquitectura:
+\end_layout
+
+\begin_layout Enumerate
+Deliberativa: contienen explícitamente un modelo simbólico de su entorno,
+ y las decisiones se realizan a través de un razonamiento lógico basado
+ en emparejamientos de patrones y manipulaciones simbólicas.
+\end_layout
+
+\begin_layout Enumerate
+Reactivas: actúan siguiendo un esquema estímulo-respuesta según el estado
+ actual de su entorno.
+ Los agentes reactivos son relativamente simples e interaccionan con otros
+ agentes de manera sencilla.
+ No obstante, en un conjunto de agentes reactivos, las interacciones pueden
+ dan lugar a patrones de comportamiento muy complejos.
+\end_layout
+
+\begin_layout Enumerate
+Híbridas: La arquitectura de agentes simbólicos dejó de utilizarse por la
+ enorme complejidad que tenía, y en la actualidad se sigue sólo una arquitectura
+ reactiva, o una reactiva con elementos de arquitectura simbólica: la arquitectu
+ra híbrida.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Uno de los pilares fundamentales de la IA es la resolución de problemas,
+ cuyo objetivo es que una máquina ayude a un humano a encontrar la solución.
+ La resolución de problemas mediante la búsqueda de una solución en el espacio
+ de posibles estados en los que puede encontrarse el problema es una de
+ las primeras áreas en las que la Inteligencia Artificial comenzó a trabajar.
+ Con el paso del tiempo han ido apareciendo diversos algoritmos para buscar
+ en el espacio de estados, teniendo todos ellos como aspecto común, el basarse
+ en la creación de un árbol de búsqueda.
+ Entre estos algortimos se encuentran: sin información como búsqueda en
+ anchura, profundidad, costo, profundidad limitada, iterativa o bidireccional;
+ con información como las heurísticas, algoritmo de escalada simple, escalada
+ por la máxima pendiente, variaciones estocástivas, algoritmos génetivos,
+ algoritmo A* o búsqueda iterativa.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La capacidad de estos algoritmos, heurísticas y funciones no pueden representar
+ todas las decisiones de exploración en el problema.
+ Haciendo uso de conocimiento más específico se pueden tomar mejores deciciones
+ y analizar mejor cada paso y acercarse a como un experto lo solucionaría.
+ Un sistema basado en el conocimiento es un sistema informático que utiliza
+ conocimiento sobre un dominio concreto para encontrar solución a problemas
+ sobre ese dominio.
+ Si alguno de estos aplica un conocimiento extraído de un experto, conocimiento
+ que tiene muy poca gente, entonces estamos ante un Sistema Experto.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Estos sistemas pretenden representar funciones cognitivas del ser humano
+ como el aprendizaje y el razonamiento.
+ El aprendizaje es una capacidad fundamental de la inteligencia humana que
+ nos permite adaptarnos a cambiso de nuestro entorno, desarrollar habilidades
+ o mejorarlas y adquirir experiencia en nuevos dominios.
+\end_layout
+
 \end_body
 \end_document

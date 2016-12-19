@@ -1572,10 +1572,36 @@ Uno de los pilares fundamentales de la IA es la resolución de problemas,
  en la creación de un árbol de búsqueda.
  Entre estos algortimos se encuentran: sin información como búsqueda en
  anchura, profundidad, costo, profundidad limitada, iterativa o bidireccional;
- con información como el algoritmo de escalada simple, escalada por la máxima
- pendiente, variaciones estocástivas, génetivos, algoritmo A* o búsqueda
- iterativa.
+ con información como las heurísticas, algoritmo de escalada simple, escalada
+ por la máxima pendiente, variaciones estocástivas, algoritmos génetivos,
+ algoritmo A* o búsqueda iterativa.
  
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La capacidad de estos algoritmos, heurísticas y funciones no pueden representar
+ todas las decisiones de exploración en el problema.
+ Haciendo uso de conocimiento más específico se pueden tomar mejores deciciones
+ y analizar mejor cada paso y acercarse a como un experto lo solucionaría.
+ Un sistema basado en el conocimiento es un sistema informático que utiliza
+ conocimiento sobre un dominio concreto para encontrar solución a problemas
+ sobre ese dominio.
+ Si alguno de estos aplica un conocimiento extraído de un experto, conocimiento
+ que tiene muy poca gente, entonces estamos ante un Sistema Experto.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Estos sistemas pretenden representar funciones cognitivas del ser humano
+ como el aprendizaje y el razonamiento
 \end_layout
 
 \end_body
