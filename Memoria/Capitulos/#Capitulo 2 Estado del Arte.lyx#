@@ -1601,7 +1601,13 @@ La capacidad de estos algoritmos, heurísticas y funciones no pueden representar
 
 \begin_layout Standard
 Estos sistemas pretenden representar funciones cognitivas del ser humano
- como el aprendizaje y el razonamiento
+ como el aprendizaje y el razonamiento.
+ El aprendizaje es una capacidad fundamental de la inteligencia humana que
+ nos permite adaptarnos a cambiso de nuestro entorno, desarrollar habilidades
+ o mejorarlas y adquirir experiencia en nuevos dominios.
+ En este punto entra el aprendizaje automatico o 
+\shape italic
+machine learning.
 \end_layout
 
 \end_body
