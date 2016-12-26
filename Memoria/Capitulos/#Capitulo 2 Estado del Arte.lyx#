@@ -1464,6 +1464,26 @@ name "tab:comparacionDDoS-A-deployment-location-1"
 Clasificación basada en el tiempo de actuación
 \end_layout
 
+\begin_layout Standard
+El segundo criterio para la clasificación es el momento en que los mecanismos
+ de defensa DDoS deben actuar en respuesta a un posible ataque de inundación
+ de DDoS.
+ Basándonos en este criterio, clasificamos ambos mecanismos de defensa contra
+ los ataques DDoS a nivel de aplicación y de red / transporte en tres categorías
+ (es decir, tres puntos de defensa contra el ataque de inundación): antes
+ del ataque (prevención de ataques) durante el ataque Ataque de detección),
+ y después del ataque (identificación de la fuente de ataque y respuesta)
+\begin_inset CommandInset citation
+LatexCommand citep
+key "TaxonomyDDoSAttackAndDefenseMechanisms"
+
+\end_inset
+
+.
+ Sin embargo, un mecanismo de defensa DDoS comprensivo debe incluir las
+ tres defensas ya que no existe una solución única.
+\end_layout
+
 \begin_layout Enumerate
 Antes del ataque o prevención: lo mejor siempre es parar el ataque DDoS
  al inicio, es decir prevenir es le mejor solución.
@@ -1491,7 +1511,7 @@ description "Intrusion Detection & Prevention Systems"
 
 \end_inset
 
-; balanceo de carga y otras condiraciones de seguridad por parte del servidor.
+; balanceo de carga y otras consideraciones de seguridad por parte del servidor.
  
 \end_layout
 
@@ -1546,12 +1566,21 @@ Inteligencia artificial aplicada a la detección de ataques DDoS
 \end_layout
 
 \begin_layout Standard
+La IA nos permite la detección de los ataques de DDoS lo cúal es muy importante
+ ya que el objetivo es minimizar el tiempo de infección que el ataque está
+ dejando a los usuarios sin servicio.
+ Por lo tanto, una rápida detección permite aplicar las medidas considerables
+ para que el servicio siga ofreciendose y así se minimicen las pérdidas.
+ 
+\end_layout
+
+\begin_layout Standard
 En esta sección se realizará una introducción a la IA, en la cual se explicarán
  los conceptos esenciales para comprender las técnicas de aprendizaje automatico
  existentes.
  A continuación se realizara una clasificación de estas con especial interés
  en las de clasificación supervisada.
- Por último se exponen artículos en los cuales se hace uso de técnias de
+ Por último se exponen artículos en los cuales se hace uso de técnicas de
  aprendizaje automático para la detección de ataques DDoS.
 \end_layout
 
