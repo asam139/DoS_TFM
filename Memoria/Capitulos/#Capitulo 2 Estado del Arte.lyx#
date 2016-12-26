@@ -97,7 +97,7 @@ reference "chap:Introducción"
  se ha destacado los aspectos más importantes del trabajo.
  En este capítulo exploramos el alcance de los problemas que provocan los
  ataques DDoS así como se intenta combatirlos.
- A continuación se clasificamos los ataques de inundación de DDoS así como
+ A continuación se clasifican los ataques de inundación de DDoS así como
  las contramedidas existentes basándonos en dónde y cuándo previenen, detectan
  y responden a los ataques de DDoS.
  La principal intención con este cápitulo es estimular a la comunidad investigad
@@ -113,13 +113,13 @@ ora a desarrollar mecanismos creativos, efectivos, eficientes e integrales
 Por útimo en este capítulo se expondrán trabajos en los cuales se aplicán
  técnicas de aprendizaje autómatico para la detección de ataques DDoS.
  Para una mejor comprensión se explicarán conceptos sobre inteligencia artificia
-l, para posteriormente exponer el aprendizaje aútomatico centrandonos en
+l, para posteriormente exponer el aprendizaje aútomatico centrándonos en
  las técnicas de clasificación supervisada las cuales son el objetivo del
  trabajo.
  Para ello se hará una pequeña introducción a la IA, en la cual se definen
  y explican conceptos relacionados.
- Posteriormente se centará en el aprendizaje automático, definiendo y comentando
- los diferentes tipos.
+ Posteriormente se centrará en el aprendizaje automático, definiendo y comentand
+o los diferentes métodos.
 \end_layout
 
 \begin_layout Section
@@ -137,42 +137,11 @@ key "DDoS_PJCriscuolo"
 \end_inset
 
 .
- Actualmente los existen dos métodos para lanzar ataques DDoS en Internet
-\begin_inset CommandInset citation
-LatexCommand citep
-key "TaxonomyDDoSAttackAndDefenseMechanisms"
-
-\end_inset
-
-.
- El primer método consiste en enviar un páquete malformado de modo que confunde
- algún protocolo o aplicación que esta ejecuntandose en la víctima.
- El otro método, y más común, engloba una o ambas de las siguientes acciones
- por parte del atacante.
- La primera de ella es interrumplir la conectividad del usuario al servicio
- sobrecargando el ancho de banda, los recursos del router, etc.
- Básicamente ataques de inundación en la capa de red y transporte.
- Y la segunda es bloquear el acceso al servicio por parte del usuario mediante
- la sobrecarga de los recursor del servidor, es decir ataques de inundación
- a nivel de aplicación
-\begin_inset CommandInset citation
-LatexCommand citep
-key "DDoS_RSCALAID"
-
-\end_inset
-
-.
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Hoy en día, los ataques DDoS son frecuentemente lanzados por una red de
- Zombies o Botnet, la cual es un conjunto de dispositivos controlados remotament
-e, bien organizados y ampliamente dispersos que están continuamente enviando
- una gran cantidad de tráfico y/o peticiones al servicio de la víctima
+ Hoy en día, los ataques DDoS son frecuentemente lanzados por una red de
+ ordenadores zombies o Botnet, la cual es un conjunto de dispositivos controlado
+s remotamente, bien organizados y ampliamente dispersos que están continuamente
+ enviando una gran cantidad de tráfico y/o peticiones al servicio de la
+ víctima
 \begin_inset CommandInset citation
 LatexCommand citep
 key "SVM_Zombies_DDoS"
@@ -180,9 +149,9 @@ key "SVM_Zombies_DDoS"
 \end_inset
 
 .
- De este modo la víctima la víctima reponde tan lento que el servicio es
- inusable o directamente colapsa.
- Los Zombies o ordenadores que son parte de una botnet son usualmente reclutados
+ De este modo la víctima responde tan lento que el servicio es inusable
+ o directamente colapsa.
+ Los zombies o ordenadores que son parte de una botnet son usualmente reclutados
  a través de gusanos, troyanos o puertas traseras
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -192,7 +161,7 @@ key "SVM_Zombies_DDoS,DefendingAgainstDDoS_RKCChang"
 
 .
  Este tipo de redes complica los mecanismo de detección para reconocer al
- original atacante debido al uso de las direcciones IP falsificadas por
+ atacante original debido al uso de las direcciones IP falsificadas por
  los zombies bajo control.
  
 \begin_inset Newline newline
@@ -264,14 +233,37 @@ Venganza: los ataques en esta categoría provienen de individuos frustados,
 \begin_layout Enumerate
 Creencia Ideológica: atacantes motivados por creencias ideológicas, es uno
  de los mayores incentivos.
- 
+ Como ejemplo, los ataques DDoS en España al PP (Partido Popular)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "PP"
+description "Partido Popular"
+
+\end_inset
+
+ y PSOE (
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "PSOE"
+description "Partido Socialista Obrero Español"
+
+\end_inset
+
+ debido a la ley Sinde
+\begin_inset CommandInset citation
+LatexCommand citep
+key "leySinde"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
 Retos intelectuales: los ataques de esta categoría provienene de personas
  que quieren experiementar y aprender sobre como lanzar varios tipos de
  ataques.
- Normalmente son jovenes hackers quienes quiern mostrar sus capacidades.
+ Normalmente son jovenes hackers quienes quieren mostrar sus capacidades.
  Hoy en día, existen gran cantidad de herramientas para atacar y alquilar
  botnets que hasta un aficionado podría lanzar un ataque DDoS.
 \end_layout
@@ -281,7 +273,7 @@ Guerra cibernética: en esta categoría los atacantes pertenecen normalmente
  a un grupo u organización militar o terrorista de otro país.
  Ellos están politicamente motivados para dañar los núcleos críticos.
  Entre los objetivos se suelen encontrar, organizaciones financieras tanto
- privadas comom públicas, infraestructuras de suministros eléctrico y de
+ privadas como públicas, infraestructuras de suministros eléctrico y de
  agua, proveedores de telecomunicaciones, etc.
  
 \end_layout
@@ -298,12 +290,43 @@ name "subsec:Clasificación"
 \end_layout
 
 \begin_layout Standard
+Actualmente existen dos métodos para lanzar ataques DDoS en Internet
+\begin_inset CommandInset citation
+LatexCommand citep
+key "TaxonomyDDoSAttackAndDefenseMechanisms"
+
+\end_inset
+
+: el primer método consiste en enviar un páquete malformado de modo que
+ confunde algún protocolo o aplicación que está ejecuntándose en la víctima.
+ El otro método, y más común, engloba una o ambas de las siguientes acciones
+ por parte del atacante: la primera de ella es interrumplir la conectividad
+ del usuario al servicio sobrecargando el ancho de banda, los recursos del
+ router, etc.
+ Básicamente ataques de inundación en la capa de red y transporte; y la
+ segunda es bloquear el acceso al servicio por parte del usuario mediante
+ la sobrecarga de los recursor del servidor, es decir ataques de inundación
+ a nivel de aplicación
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DDoS_RSCALAID"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 La característica distribuidos de los ataques DDoS es la que hace que sean
- extremadamante dificil combatir y detectarlos.
+ extremadamante difícil combatir y detectarlos.
  Los atacantes normalmente usan direcciones IP falsas con la intención de
  esconder su verdadera identidad, por lo que se vuelve muy complicado rastrear
  este tipo de ataques.
- Además hay muchísimas vulnerabilidades en muchísimos hosts de Internet
+ Además hay muchísimas vulnerabilidades en muchísimos dispositivos de Internet
  que pueden ser explotados.
  Actualmente los ataques dirigidos a la capa de aplicación se estan viendo
  incrementados rápidamente.
@@ -328,15 +351,16 @@ Ataques de Inundación: ataques centrados en interrunpir la conectividad
 
 \begin_layout Enumerate
 Ataques de Inundación explotando un protocolo: el ataque explota alguna
- específica característica o un fallo de implementación de alguno de los
- protocolos que al víctima usa con el objetivo de consumir una gran cantidad
+ característica específica o un fallo de implementación de alguno de los
+ protocolos que la víctima usa con el objetivo de consumir una gran cantidad
  de recursos.
 \end_layout
 
 \begin_layout Enumerate
 Ataques de Inundación basados en reflexión: los atacantes envían peticiones
- falsas en lugar de peticiones directas a los reflectores; por lo tanto
- esos reflectores envían sus respuestas a las víctimas agotando sus recursos.
+ falsas a los reflectores, conjunto de dispositivo, los cuales multiplican
+ la carga de esas peticiones enviando sus respuestas a las víctimas llegando
+ a agotar sus recursos.
 \end_layout
 
 \begin_layout Enumerate
@@ -354,7 +378,7 @@ Ataques de inundación DDoS a la capa de aplicación: estos ataques se centran
  en interrumpir el uso legítimo de los servicios agotando los recursos del
  servidor.
  Los ataques de este tipo generalmente consumen menos ancho de banda y son
- más dificil de detectar debido a que son mas similares al tráfico benigno.
+ más difíciles de detectar debido a que son más similares al tráfico benigno.
  Aún así son igualmente perjudiciales ya que atacan a específicas característica
 s de aplicaciones como HTTP, DNS, o SIP (Session Initiation Protocol)
 \begin_inset CommandInset nomenclature
@@ -381,7 +405,7 @@ Ataques basados en HTTP: se puede subdividir en:
 
 \begin_deeper
 \begin_layout Enumerate
-Sessión: la tasa de peticones por parte del atacante es mayor que la de
+Sessión: la tasa de peticiones por parte del atacante es mayor que la de
  los usuarios por lo que el servidor se agota y es incapaz de dar servicio.
  
 \end_layout
@@ -392,7 +416,7 @@ Asimétricos: los atacantes envian sesiones que contienen peticiones con
 \end_layout
 
 \begin_layout Enumerate
-Lentos ataques de solicutud/respuesta: de la misma forma los atacantes crean
+Ataques de solicitud/respuesta lenta: de la misma forma los atacantes crean
  sesiones en las cuales las peticiones tienen datos muy pesados.
 \end_layout
 
@@ -413,8 +437,7 @@ Normalmente cuando un ataque DDoS es detectado, no hay nada que se pueda
  a acabo en diferentes puntos de la red, existentes entre el atacante y
  la víctima.
  Es muy claro que es mucho más fácil detectar los ataques en aquellos puntos
- más cercanos a la víctima ya que se pueden observar todos los flujos atacantes
- .
+ más cercanos a la víctima ya que se pueden observar todos los flujos atacantes.
  Pero obviamente, es deseable responder al ataque lo más cercano de la fuente,
  por lo tanto siempre hay un compromiso entre la precisión y la cercanía
  a la fuente que tienen los mecanimos de prevención y detección.
@@ -422,6 +445,10 @@ Normalmente cuando un ataque DDoS es detectado, no hay nada que se pueda
 LatexCommand citep
 key "ASurveyofDefenseMechanismsAgainstDDoS,ASurveyOfDDoSAttack"
 
+\end_inset
+
+
+\begin_inset Newline newline
 \end_inset
 
 
@@ -497,7 +524,7 @@ key "DDoS_PJCriscuolo"
 \end_inset
 
 .
- Varios mecanismos han sido diseñados para defeneter los ataques DDoS en
+ Varios mecanismos han sido diseñados para defender los ataques DDoS en
  la fuente, algunos de los más importantes son: 
 \shape italic
 Ingress/Egress filtering at the sources' edge routers
@@ -530,7 +557,14 @@ y RFW (
 \shape italic
 MANAnet Reverse Firewal
 \shape default
-l).
+l)
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ASurveyofDefenseMechanismsAgainstDDoS"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -564,6 +598,13 @@ y
 \shape italic
  Packet dropping based on the level of congestion
 \shape default
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ASurveyofDefenseMechanismsAgainstDDoS"
+
+\end_inset
+
 .
 \end_layout
 
@@ -572,7 +613,18 @@ Basados en la red: estos mecanismos son desplegados dentro de la red y principal
 mente en los routers que forman los AS.
  Entre este tipo de mecanismos se encuentra, 
 \shape italic
-route-based packet filtering y detecting and filtering malicious routers.
+route-based packet filtering y detecting and filtering malicious routers
+\shape default
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ASurveyofDefenseMechanismsAgainstDDoS"
+
+\end_inset
+
+: 
+\shape italic
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -614,7 +666,14 @@ description "Active Internet Traffic Filtering"
 
 \end_inset
 
-y StopIt.
+y StopIt
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ASurveyofDefenseMechanismsAgainstDDoS"
+
+\end_inset
+
+: .
 \end_layout
 
 \end_deeper
@@ -654,11 +713,11 @@ centering
 <lyxtabular version="3" rows="5" columns="7">
 <features tabularvalignment="bottom">
 <column alignment="center" valignment="top" width="2.5cm">
-<column alignment="center" valignment="top" width="2.5cm">
 <column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="1.6cm">
 <column alignment="left" valignment="top" width="2.25cm">
-<column alignment="left" valignment="middle" width="2.5cm">
-<column alignment="left" valignment="top" width="2.75cm">
+<column alignment="left" valignment="middle" width="2.25cm">
+<column alignment="left" valignment="top" width="2.25cm">
 <column alignment="left" valignment="top" width="2cm">
 <row>
 <cell alignment="center" valignment="top" bottomline="true" usebox="none">
@@ -707,7 +766,7 @@ Escalabilidad
 \begin_layout Plain Layout
 
 \series bold
-Rendimiento del sistema
+Rendimiento
 \end_layout
 
 \end_inset
@@ -718,7 +777,7 @@ Rendimiento del sistema
 \begin_layout Plain Layout
 
 \series bold
-Complejidad de Implementación
+Complejidad
 \end_layout
 
 \end_inset
@@ -1079,6 +1138,13 @@ description "Defense Against Tilt DDoS attacks"
 
 \end_inset
 
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ASurveyofDefenseMechanismsAgainstDDoS"
+
+\end_inset
+
 .
 \end_layout
 
@@ -1125,7 +1191,16 @@ description "Trush Management Helmet"
 
  y 
 \shape italic
-hybrid detection based on trust and information theory based metrics.
+hybrid detection based on trust and information theory based metrics
+\shape default
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ASurveyofDefenseMechanismsAgainstDDoS"
+
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -1164,14 +1239,14 @@ centering
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="6">
 <features tabularvalignment="bottom">
-<column alignment="center" valignment="top" width="2.5cm">
-<column alignment="center" valignment="top" width="2cm">
+<column alignment="left" valignment="middle" width="2cm">
+<column alignment="center" valignment="top" width="1.75cm">
 <column alignment="left" valignment="top" width="2.25cm">
 <column alignment="left" valignment="middle" width="2.5cm">
 <column alignment="left" valignment="top" width="2.75cm">
 <column alignment="left" valignment="top" width="2cm">
 <row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1398,10 +1473,17 @@ Antes del ataque o prevención: lo mejor siempre es parar el ataque DDoS
  de seguridad que pueden ser explotadas por los ataques DDoS.
  Hay muchos mecanismos de prevención generales que deberían ser empleados
  en todos ellos.
- Algunos de estos son: mecanismos de seguridad de protoco y sistema para
- incrementar en general la seguridad de los sistemas; Fail-Safe protección;
- asignación de recursos y credenciales; mecanismos de reconfiguación; instalació
-n de IDPS (Intrusion Detection & Prevention Systems)
+ Algunos de estos son
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ASurveyofDefenseMechanismsAgainstDDoS"
+
+\end_inset
+
+: mecanismos de seguridad de protoco y sistema para incrementar en general
+ la seguridad de los sistemas; Fail-Safe protección; asignación de recursos
+ y credenciales; mecanismos de reconfiguación; instalación de IDPS (Intrusion
+ Detection & Prevention Systems)
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "IDPS"
