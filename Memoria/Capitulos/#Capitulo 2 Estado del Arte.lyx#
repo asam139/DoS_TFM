@@ -1675,17 +1675,12 @@ ra híbrida.
 \begin_layout Standard
 Uno de los pilares fundamentales de la IA es la resolución de problemas,
  cuyo objetivo es que una máquina ayude a un humano a encontrar la solución.
- La resolución de problemas mediante la búsqueda de una solución en el espacio
- de posibles estados en los que puede encontrarse el problema es una de
- las primeras áreas en las que la Inteligencia Artificial comenzó a trabajar.
+ Una de las primeras áreas en las que la IA comenzó a trabjar fue la resolución
+ de problemas mediante la búsqueda de una solución en el espacio de posibles
+ estados en los que puede encontrarse el problema.
  Con el paso del tiempo han ido apareciendo diversos algoritmos para buscar
  en el espacio de estados, teniendo todos ellos como aspecto común, el basarse
  en la creación de un árbol de búsqueda.
- Entre estos algortimos se encuentran: sin información como búsqueda en
- anchura, profundidad, costo, profundidad limitada, iterativa o bidireccional;
- con información como las heurísticas, algoritmo de escalada simple, escalada
- por la máxima pendiente, variaciones estocástivas, algoritmos génetivos,
- algoritmo A* o búsqueda iterativa.
  
 \begin_inset Newline newline
 \end_inset
@@ -1719,6 +1714,306 @@ Estos sistemas pretenden representar funciones cognitivas del ser humano
  En este punto entra el aprendizaje automatico o 
 \shape italic
 machine learning.
+\end_layout
+
+\begin_layout Subsection
+Aprendizaje Automático
+\end_layout
+
+\begin_layout Standard
+El aprendizaje automático (del inglés, 
+\shape italic
+machine learning
+\shape default
+) es el subcampo de las ciencias de la computación y una rama de la inteligencia
+ artificial cuyo objetivo es desarrollar técnicas que permitan a las computadora
+s aprender
+\begin_inset CommandInset citation
+LatexCommand citep
+key "patternRecognitionAndMachineLearning"
+
+\end_inset
+
+.
+ De forma más concreta, se trata de crear programas capaces de generalizar
+ comportamientos a partir de una información suministrada en forma de ejemplos.
+ Es, por lo tanto, un proceso de inducción del conocimiento.
+ El aprendizaje automático se centra en el análisis de los datos y el estudio
+ de la complejidad computacional de los problemas.
+ Muchos problemas son de clase NP-hard
+\begin_inset CommandInset citation
+LatexCommand citep
+key "problemasPvsNP"
+
+\end_inset
+
+, por lo que gran parte de la investigación realizada en aprendizaje automático
+ está enfocada al diseño de soluciones factibles a esos problemas.
+ El aprendizaje automático puede ser visto como un intento de automatizar
+ algunas partes del método científico mediante métodos matemáticos.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Algunos sistemas de aprendizaje automático intentan eliminar toda necesidad
+ de intuición o conocimiento experto de los procesos de análisis de datos,
+ mientras otros tratan de establecer un marco de colaboración entre el experto
+ y la computadora.
+ De todas formas, la intuición humana no puede ser reemplazada en su totalidad,
+ ya que el diseñador del sistema ha de especificar la forma de representación
+ de los datos y los métodos de manipulación y caracterización de los mismos.
+ Sin embargo, las computadoras son utilizadas por todo el mundo con fines
+ tecnológicos muy buenos.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El aprendizaje automático tiene como resultado un modelo para resolver una
+ tarea dada.
+ Entre los modelos se distinguen
+\begin_inset CommandInset citation
+LatexCommand citep
+key "patternRecognitionAndMachineLearning"
+
+\end_inset
+
+: los modelos geométricos, construidos en el espacio de instancias y que
+ pueden tener una, dos o múltiples dimensiones; los modelos probabilísticos,
+ que intentan determinar la distribución de probabilidades descriptora de
+ la función que enlaza a los valores de las características con valores
+ determinados y los modelos lógicos, que transforman expresan las probabilidades
+ en reglas organizadas en forma de árboles de decisión.
+ Los algoritmos que se utilizan para resolver los problemas basados en árboles
+ de decicisón pueden ser muy variados
+\begin_inset CommandInset citation
+LatexCommand citep
+key "patternRecognitionAndMachineLearning"
+
+\end_inset
+
+.
+ Estos se dividen en: sin información, como búsqueda en anchura, profundidad,
+ costo, profundidad limitada, iterativa o bidireccional o con información
+ como las heurísticas, algoritmo de escalada simple, escalada por la máxima
+ pendiente, variaciones estocástivas, algoritmos génetivos, algoritmo A*
+ o búsqueda iterativa.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Otro aspecto muy importante son los atributos en los cuales se basa el modelo.
+ Un atributo o característica es un tipo de medida realizada sobre cualquier
+ instancia a medir.
+ Los atributos mapean el espacio de instancias a un conjunto de valores
+ o dominio de atributos.
+ Los valores del dominio pueden ser números como la frecuencia de aparición
+ de las instancias, valores binarios o un conjunto cualquiera como el de
+ meses, estaciones o colores.
+\end_layout
+
+\begin_layout Subsection
+Tipos de Algoritmos
+\end_layout
+
+\begin_layout Standard
+Los diferentes algoritmos de Aprendizaje Automático se agrupan en una taxonomía
+ en función de la salida de los mismos.
+ Los tipos de algoritmos son:
+\end_layout
+
+\begin_layout Subsubsection
+Aprendizaje supervisado
+\end_layout
+
+\begin_layout Standard
+En aprendizaje automático y minería de datos, el aprendizaje supervisado
+ es una técnica para deducir una función a partir de datos de entrenamiento
+\begin_inset CommandInset citation
+LatexCommand citep
+key "aprendizajeAutomaticoSupervisado"
+
+\end_inset
+
+.
+ Los datos de entrenamiento consisten de pares de objetos (normalmente vectores)
+: una componente del par son los datos de entrada y el otro, los resultados
+ deseados.
+ La salida de la función puede ser un valor numérico (como en los problemas
+ de regresión) o una etiqueta de clase (como en los de clasificación).
+ El objetivo del aprendizaje supervisado es el de crear una función capaz
+ de predecir el valor correspondiente a cualquier objeto de entrada válida
+ después de haber visto una serie de ejemplos, los datos de entrenamiento.
+ Para ello, tiene que generalizar a partir de los datos presentados a las
+ situaciones no vistas previamente
+\begin_inset CommandInset citation
+LatexCommand citep
+key "aprendizajeAutomaticoSupervisado"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con el fin de resolver un determinado problema de aprendizaje supervisado
+ (por ejemplo, aprender a reconocer la escritura) uno tiene que considerar
+ varios pasos
+\begin_inset CommandInset citation
+LatexCommand citep
+key "aprendizajeAutomaticoSupervisado"
+
+\end_inset
+
+.
+ Primeramente es necesario determinar el tipo de ejemplos de entrenamiento.
+ Antes de hacer cualquier otra cosa, hay que decidir qué tipo de datos se
+ va a utilizar para entrenar el modelo.
+ Lo siguiente es reunir un conjunto de entrenamiento.
+ El conjunto de necesidades de formación a las características propias del
+ uso del mundo real de la función.
+ Por lo tanto, un conjunto de objetos de entrada que se recopila y salidas
+ correspondientes se recogen también, ya sea humana o de los expertos a
+ partir de mediciones.
+ Posteriormente se determina la función de ingreso de la representación
+ de la función aprendido.
+ Seguidamente se determinar la estructura de la función adecuada para resolver
+ y el problema y la técnica de aprendizaje correspondiente.
+ Por ejemplo, se podría optar por utilizar red neuronal artificial o un
+ árbol de decisión.Y por último se completa el diseño.
+ El ingeniero a continuación, ejecuta el algoritmo de aprendizaje en el
+ conjunto de la formación obtenida.
+ Parámetros del algoritmo de aprendizaje puede ser ajustado mediante la
+ optimización de rendimiento en un subconjunto de ellas (llamado conjunto
+ de validación) del conjunto de entrenamiento, o por medio de la validación
+ cruzada.
+ Después del ajuste de parámetros y de aprendizaje, el desempeño del algoritmo
+ se puede medir utilizando un conjunto de pruebas independiente del de entrenami
+ento.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Otro término para el aprendizaje supervisado es la clasificación
+\begin_inset CommandInset citation
+LatexCommand citep
+key "aprendizajeAutomaticoSupervisado"
+
+\end_inset
+
+.
+ Una amplia gama de clasificadores están disponibles, cada uno con sus fortaleza
+s y debilidades.
+ El rendimiento del clasificador depende en gran medida de las características
+ de los datos que deben clasificarse.
+ No hay una clasificación única que funciona mejor en todos los problemas
+ dados.
+ Diversas pruebas empíricas se han realizado para comparar el rendimiento
+ del clasificador y para encontrar las características de los datos que
+ determinan el rendimiento del clasificador y se ha llegado a la conclusión
+ que la determinación de un clasificador adecuado para un problema dado
+ es sin embargo aún, más un arte que una ciencia.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los clasificadores más utilizados 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "aprendizajeAutomaticoSupervisado"
+
+\end_inset
+
+son las redes neuronales, como el (perceptrón multicapa); las máquinas de
+ vectores de soporte; el algoritmo de los K-vecinos más cercanos, los modelos
+ de mixturas; el clasificador bayesiano ingenuo; los árboles de decisión
+ y las funciones de base radial.
+\end_layout
+
+\begin_layout Subsubsection
+Aprendizaje No Supervisado
+\end_layout
+
+\begin_layout Standard
+Ek aprendizaje no supervisado es un método donde un modelo es ajustado a
+ las observaciones
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AdvancedLecturesonMachineLearning"
+
+\end_inset
+
+.
+ Se distingue del aprendizaje supervisado por el hecho de que no hay un
+ conocimiento a priori.
+ En el aprendizaje no supervisado, un conjunto de datos de objetos de entrada
+ es tratado.
+ Así, el aprendizaje no supervisado típicamente trata los objetos de entrada
+ como un conjunto de variables aleatorias, siendo construido un modelo de
+ densidad para el conjunto de datos.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El aprendizaje no supervisado está muy relacionado con el problema de estimación
+ de la densidad de estadísticas
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AdvancedLecturesonMachineLearning"
+
+\end_inset
+
+.
+ Sin embargo, también abarca muchas otras técnicas que buscan resumir y
+ explicar las carecterísticas clave de los datos.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Uno de los enfoques estadísticos para el aprendizaje sin supervisión es
+ el método de los momentos
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AdvancedLecturesonMachineLearning"
+
+\end_inset
+
+.
+ En el método de los momentos, los parámetros desconocidos (de interés)
+ en el modelo están relacionados con los momentos de una o más variables
+ aleatorias, y por lo tanto, estos parámetros desconocidos se pueden estimar
+ dados los momentos.
+ Los momentos se suelen estimar empíricamente a partir de muestras.
+ En particular, el método de los momentos se muestra para ser eficaz en
+ el aprendizaje de los parámetros de los modelos de variables latentes.
+ Los modelos de variables latentes son modelos estadísticos donde además
+ de las variables observadas, existe también un conjunto de variables latentes
+ que no se observa.
 \end_layout
 
 \end_body
