@@ -1787,8 +1787,8 @@ key "patternRecognitionAndMachineLearning"
  pueden tener una, dos o múltiples dimensiones; los modelos probabilísticos,
  que intentan determinar la distribución de probabilidades descriptora de
  la función que enlaza a los valores de las características con valores
- determinados y los modelos lógicos, que transforman expresan las probabilidades
- en reglas organizadas en forma de árboles de decisión.
+ determinados y los modelos lógicos, que expresan las probabilidades en
+ reglas organizadas en forma de árboles de decisión.
  Los algoritmos que se utilizan para resolver los problemas basados en árboles
  de decicisón pueden ser muy variados
 \begin_inset CommandInset citation
@@ -1954,7 +1954,7 @@ Aprendizaje No Supervisado
 \end_layout
 
 \begin_layout Standard
-Ek aprendizaje no supervisado es un método donde un modelo es ajustado a
+El aprendizaje no supervisado es un método donde un modelo es ajustado a
  las observaciones
 \begin_inset CommandInset citation
 LatexCommand citep
