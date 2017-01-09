@@ -256,7 +256,7 @@ key "leySinde"
 
 \end_inset
 
-.
+).
 \end_layout
 
 \begin_layout Enumerate
@@ -358,7 +358,7 @@ Ataques de Inundación explotando un protocolo: el ataque explota alguna
 
 \begin_layout Enumerate
 Ataques de Inundación basados en reflexión: los atacantes envían peticiones
- falsas a los reflectores, conjunto de dispositivo, los cuales multiplican
+ falsas a los reflectores, conjunto de dispositivos, los cuales multiplican
  la carga de esas peticiones enviando sus respuestas a las víctimas llegando
  a agotar sus recursos.
 \end_layout
@@ -712,13 +712,13 @@ centering
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="7">
 <features tabularvalignment="bottom">
-<column alignment="center" valignment="top" width="2.5cm">
-<column alignment="center" valignment="top" width="2cm">
-<column alignment="center" valignment="top" width="1.6cm">
-<column alignment="left" valignment="top" width="2.25cm">
-<column alignment="left" valignment="middle" width="2.25cm">
-<column alignment="left" valignment="top" width="2.25cm">
-<column alignment="left" valignment="top" width="2cm">
+<column alignment="center" valignment="middle" width="2.5cm">
+<column alignment="center" valignment="middle" width="2cm">
+<column alignment="center" valignment="middle" width="1.6cm">
+<column alignment="center" valignment="middle" width="2.25cm">
+<column alignment="center" valignment="middle" width="2.1cm">
+<column alignment="center" valignment="middle" width="2.1cm">
+<column alignment="center" valignment="middle" width="1.75cm">
 <row>
 <cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
@@ -744,39 +744,43 @@ centering
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Precisión
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Escalabilidad
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Rendimiento
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Complejidad
 \end_layout
 
@@ -788,6 +792,7 @@ Complejidad
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Defensa en conjunto
 \end_layout
 
@@ -801,6 +806,7 @@ Defensa en conjunto
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Centralizados
 \end_layout
 
@@ -812,6 +818,7 @@ Centralizados
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Basado en fuente
 \end_layout
 
@@ -821,33 +828,41 @@ Basado en fuente
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Bajo
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Baja
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Moderado
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Baja
 \end_layout
 
@@ -857,6 +872,8 @@ Baja
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 NO
 \end_layout
 
@@ -879,6 +896,7 @@ NO
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Basado en destino
 \end_layout
 
@@ -888,33 +906,41 @@ Basado en destino
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Alta
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Baja
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Bueno
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Baja
 \end_layout
 
@@ -924,6 +950,8 @@ Baja
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 NO
 \end_layout
 
@@ -946,6 +974,7 @@ NO
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Basado en red
 \end_layout
 
@@ -955,33 +984,41 @@ Basado en red
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Bajo
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Media
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Moderado
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Media
 \end_layout
 
@@ -991,6 +1028,8 @@ Media
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 NO
 \end_layout
 
@@ -1004,6 +1043,7 @@ NO
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Distribuidos
 \end_layout
 
@@ -1015,6 +1055,7 @@ Distribuidos
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Híbrido o Distribuido
 \end_layout
 
@@ -1024,6 +1065,8 @@ Híbrido o Distribuido
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Media
 \end_layout
 
@@ -1033,6 +1076,8 @@ Media
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Media - Alta
 \end_layout
 
@@ -1042,6 +1087,8 @@ Media - Alta
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Pobre - Moderado
 \end_layout
 
@@ -1051,6 +1098,8 @@ Pobre - Moderado
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Media - Alta
 \end_layout
 
@@ -1060,6 +1109,8 @@ Media - Alta
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 SI
 \end_layout
 
@@ -1239,12 +1290,12 @@ centering
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="6">
 <features tabularvalignment="bottom">
-<column alignment="left" valignment="middle" width="2cm">
-<column alignment="center" valignment="top" width="1.75cm">
-<column alignment="left" valignment="top" width="2.25cm">
-<column alignment="left" valignment="middle" width="2.5cm">
-<column alignment="left" valignment="top" width="2.75cm">
-<column alignment="left" valignment="top" width="2cm">
+<column alignment="left" valignment="middle" width="3cm">
+<column alignment="center" valignment="middle" width="1.75cm">
+<column alignment="center" valignment="middle" width="2.25cm">
+<column alignment="center" valignment="middle" width="2cm">
+<column alignment="center" valignment="middle" width="2.75cm">
+<column alignment="center" valignment="middle" width="1.75cm">
 <row>
 <cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
@@ -1261,39 +1312,43 @@ centering
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Precisión
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Escalabilidad
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Rendimiento del sistema
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Complejidad de Implementación
 \end_layout
 
@@ -1305,6 +1360,7 @@ Complejidad de Implementación
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Defensa en conjunto
 \end_layout
 
@@ -1312,12 +1368,13 @@ Defensa en conjunto
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Basados en destino
 \end_layout
 
@@ -1327,33 +1384,41 @@ Basados en destino
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Alta
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Baja
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Moderado - bueno
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Baja
 \end_layout
 
@@ -1363,6 +1428,8 @@ Baja
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 NO
 \end_layout
 
@@ -1370,12 +1437,13 @@ NO
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Híbridos
 \end_layout
 
@@ -1385,6 +1453,8 @@ Híbridos
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Media
 \end_layout
 
@@ -1394,6 +1464,8 @@ Media
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Media
 \end_layout
 
@@ -1403,6 +1475,8 @@ Media
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Moderado
 \end_layout
 
@@ -1412,6 +1486,8 @@ Moderado
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Media - Alta
 \end_layout
 
@@ -1421,6 +1497,8 @@ Media - Alta
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 SI
 \end_layout
 
@@ -1503,7 +1581,7 @@ key "ASurveyofDefenseMechanismsAgainstDDoS"
 : mecanismos de seguridad de protoco y sistema para incrementar en general
  la seguridad de los sistemas; Fail-Safe protección; asignación de recursos
  y credenciales; mecanismos de reconfiguación; instalación de IDPS (Intrusion
- Detection & Prevention Systems)
+ Detection and Prevention Systems)
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "IDPS"
