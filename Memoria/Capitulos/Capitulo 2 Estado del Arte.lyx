@@ -1585,7 +1585,7 @@ key "ASurveyofDefenseMechanismsAgainstDDoS"
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "IDPS"
-description "Intrusion Detection & Prevention Systems"
+description "Intrusion Detection and Prevention Systems"
 
 \end_inset
 
