@@ -744,7 +744,7 @@ centering
 \begin_layout Plain Layout
 
 \series bold
-\size small
+\size footnotesize
 Precisión
 \end_layout
 
@@ -756,7 +756,7 @@ Precisión
 \begin_layout Plain Layout
 
 \series bold
-\size small
+\size footnotesize
 Escalabilidad
 \end_layout
 
@@ -768,7 +768,7 @@ Escalabilidad
 \begin_layout Plain Layout
 
 \series bold
-\size small
+\size footnotesize
 Rendimiento
 \end_layout
 
@@ -780,7 +780,7 @@ Rendimiento
 \begin_layout Plain Layout
 
 \series bold
-\size small
+\size footnotesize
 Complejidad
 \end_layout
 
@@ -792,7 +792,7 @@ Complejidad
 \begin_layout Plain Layout
 
 \series bold
-\size small
+\size footnotesize
 Defensa en conjunto
 \end_layout
 
@@ -806,7 +806,7 @@ Defensa en conjunto
 \begin_layout Plain Layout
 
 \series bold
-\size small
+\size footnotesize
 Centralizados
 \end_layout
 
@@ -818,7 +818,7 @@ Centralizados
 \begin_layout Plain Layout
 
 \series bold
-\size small
+\size footnotesize
 Basado en fuente
 \end_layout
 
@@ -829,7 +829,7 @@ Basado en fuente
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Bajo
 \end_layout
 
@@ -840,7 +840,7 @@ Bajo
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Baja
 \end_layout
 
@@ -851,7 +851,7 @@ Baja
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Moderado
 \end_layout
 
@@ -862,7 +862,7 @@ Moderado
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Baja
 \end_layout
 
@@ -873,7 +873,7 @@ Baja
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 NO
 \end_layout
 
@@ -896,7 +896,7 @@ NO
 \begin_layout Plain Layout
 
 \series bold
-\size small
+\size footnotesize
 Basado en destino
 \end_layout
 
@@ -907,7 +907,7 @@ Basado en destino
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Alta
 \end_layout
 
@@ -918,7 +918,7 @@ Alta
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Baja
 \end_layout
 
@@ -929,7 +929,7 @@ Baja
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Bueno
 \end_layout
 
@@ -940,7 +940,7 @@ Bueno
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Baja
 \end_layout
 
@@ -951,7 +951,7 @@ Baja
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 NO
 \end_layout
 
@@ -974,7 +974,7 @@ NO
 \begin_layout Plain Layout
 
 \series bold
-\size small
+\size footnotesize
 Basado en red
 \end_layout
 
@@ -985,7 +985,7 @@ Basado en red
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Bajo
 \end_layout
 
@@ -996,7 +996,7 @@ Bajo
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Media
 \end_layout
 
@@ -1007,7 +1007,7 @@ Media
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Moderado
 \end_layout
 
@@ -1018,7 +1018,7 @@ Moderado
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Media
 \end_layout
 
@@ -1029,7 +1029,7 @@ Media
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 NO
 \end_layout
 
@@ -1043,7 +1043,7 @@ NO
 \begin_layout Plain Layout
 
 \series bold
-\size small
+\size footnotesize
 Distribuidos
 \end_layout
 
@@ -1055,7 +1055,7 @@ Distribuidos
 \begin_layout Plain Layout
 
 \series bold
-\size small
+\size footnotesize
 Híbrido o Distribuido
 \end_layout
 
@@ -1066,7 +1066,7 @@ Híbrido o Distribuido
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Media
 \end_layout
 
@@ -1077,7 +1077,7 @@ Media
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Media - Alta
 \end_layout
 
@@ -1088,7 +1088,7 @@ Media - Alta
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Pobre - Moderado
 \end_layout
 
@@ -1099,7 +1099,7 @@ Pobre - Moderado
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Media - Alta
 \end_layout
 
@@ -1110,7 +1110,7 @@ Media - Alta
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 SI
 \end_layout
 
@@ -1290,14 +1290,14 @@ centering
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="6">
 <features tabularvalignment="bottom">
-<column alignment="center" valignment="middle" width="2cm">
+<column alignment="left" valignment="middle" width="3cm">
 <column alignment="center" valignment="middle" width="1.75cm">
 <column alignment="center" valignment="middle" width="2.25cm">
 <column alignment="center" valignment="middle" width="2cm">
 <column alignment="center" valignment="middle" width="2.75cm">
 <column alignment="center" valignment="middle" width="1.75cm">
 <row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1312,7 +1312,7 @@ centering
 \begin_layout Plain Layout
 
 \series bold
-\size small
+\size footnotesize
 Precisión
 \end_layout
 
@@ -1324,7 +1324,7 @@ Precisión
 \begin_layout Plain Layout
 
 \series bold
-\size small
+\size footnotesize
 Escalabilidad
 \end_layout
 
@@ -1336,7 +1336,7 @@ Escalabilidad
 \begin_layout Plain Layout
 
 \series bold
-\size small
+\size footnotesize
 Rendimiento del sistema
 \end_layout
 
@@ -1348,7 +1348,7 @@ Rendimiento del sistema
 \begin_layout Plain Layout
 
 \series bold
-\size small
+\size footnotesize
 Complejidad de Implementación
 \end_layout
 
@@ -1360,7 +1360,7 @@ Complejidad de Implementación
 \begin_layout Plain Layout
 
 \series bold
-\size small
+\size footnotesize
 Defensa en conjunto
 \end_layout
 
@@ -1368,13 +1368,13 @@ Defensa en conjunto
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
-\size small
+\size footnotesize
 Basados en destino
 \end_layout
 
@@ -1385,7 +1385,7 @@ Basados en destino
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Alta
 \end_layout
 
@@ -1396,7 +1396,7 @@ Alta
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Baja
 \end_layout
 
@@ -1407,7 +1407,7 @@ Baja
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Moderado - bueno
 \end_layout
 
@@ -1418,7 +1418,7 @@ Moderado - bueno
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Baja
 \end_layout
 
@@ -1429,7 +1429,7 @@ Baja
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 NO
 \end_layout
 
@@ -1437,13 +1437,13 @@ NO
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
-\size small
+\size footnotesize
 Híbridos
 \end_layout
 
@@ -1454,7 +1454,7 @@ Híbridos
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Media
 \end_layout
 
@@ -1465,7 +1465,7 @@ Media
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Media
 \end_layout
 
@@ -1476,7 +1476,7 @@ Media
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Moderado
 \end_layout
 
@@ -1487,7 +1487,7 @@ Moderado
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 Media - Alta
 \end_layout
 
@@ -1498,7 +1498,7 @@ Media - Alta
 
 \begin_layout Plain Layout
 
-\size small
+\size footnotesize
 SI
 \end_layout
 
@@ -1581,11 +1581,11 @@ key "ASurveyofDefenseMechanismsAgainstDDoS"
 : mecanismos de seguridad de protoco y sistema para incrementar en general
  la seguridad de los sistemas; Fail-Safe protección; asignación de recursos
  y credenciales; mecanismos de reconfiguación; instalación de IDPS (Intrusion
- Detection & Prevention Systems)
+ Detection and Prevention Systems)
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "IDPS"
-description "Intrusion Detection & Prevention Systems"
+description "Intrusion Detection and Prevention Systems"
 
 \end_inset
 
@@ -1852,39 +1852,31 @@ Algunos sistemas de aprendizaje automático intentan eliminar toda necesidad
 \end_layout
 
 \begin_layout Standard
-El aprendizaje automático tiene como resultado un modelo para resolver una
- tarea dada.
- Entre los modelos se distinguen
+El aprendizaje automático busca aplicar técnicas de análisis de datos, aprendiza
+je estadístico, creación de modelos, ect, con el objetivo de idenficar automátic
+amente patrones o tendencias dentro de los datos 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "patternRecognitionAndMachineLearning"
-
-\end_inset
-
-: los modelos geométricos, construidos en el espacio de instancias y que
- pueden tener una, dos o múltiples dimensiones; los modelos probabilísticos,
- que intentan determinar la distribución de probabilidades descriptora de
- la función que enlaza a los valores de las características con valores
- determinados y los modelos lógicos, que expresan las probabilidades en
- reglas organizadas en forma de árboles de decisión.
- Los algoritmos que se utilizan para resolver los problemas basados en árboles
- de decicisón pueden ser muy variados
-\begin_inset CommandInset citation
-LatexCommand citep
-key "patternRecognitionAndMachineLearning"
+key "AnIntroductiontoMachineLearning"
 
 \end_inset
 
 .
- Estos se dividen en: sin información, como búsqueda en anchura, profundidad,
- costo, profundidad limitada, iterativa o bidireccional o con información
- como las heurísticas, algoritmo de escalada simple, escalada por la máxima
- pendiente, variaciones estocástivas, algoritmos génetivos, algoritmo A*
- o búsqueda iterativa.
-\begin_inset Newline newline
-\end_inset
+ De la misma forma, estas técnicas son utilizadas para predecir con un cierto
+ grado de precisión, siempre y cuando los datos que se utilicen en el inicio
+ sean lo suficientemente correctos.
+ Una de las partes fundamentales del aprendizaje automatico es la clasificación
+ o regresión.
+ En este trabajo nos centraremos en la primera de ella.
+\end_layout
 
-
+\begin_layout Standard
+Normalmente, dado un conjuntos de datos, esté se estructura en instancias
+ con sus atributos o variables.
+ Dentro de los atributos o variables hay que distinguir entre los que aportan
+ información y por otra parte, un único atributo que nos indica el estado
+ de la instancia.
+ 
 \end_layout
 
 \begin_layout Standard

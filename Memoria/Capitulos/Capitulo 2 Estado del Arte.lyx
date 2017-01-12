@@ -1852,9 +1852,33 @@ Algunos sistemas de aprendizaje automático intentan eliminar toda necesidad
 \end_layout
 
 \begin_layout Standard
-El aprendizaje automático tiene como resultado un modelo para resolver una
- tarea dada.
- Entre los modelos se distinguen
+El aprendizaje automático busca aplicar técnicas de análisis de datos, aprendiza
+je estadístico, creación de modelos, ect, con el objetivo de idenficar automátic
+amente patrones o tendencias dentro de los datos 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AnIntroductiontoMachineLearning"
+
+\end_inset
+
+.
+ De la misma forma, estas técnicas son utilizadas para predecir con un cierto
+ grado de precisión, siempre y cuando los datos que se utilicen en el inicio
+ sean lo suficientemente correctos.
+ Una de las partes fundamentales del aprendizaje automatico es la clasificación
+ o regresión.
+ En este trabajo nos centraremos en la primera de ella.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Otra parte fundamental son los modelos.
+ Existen diferentes tipos de modelos que se pueden crear a partir de los
+ datos.
+ Entre ellos se distinguen
 \begin_inset CommandInset citation
 LatexCommand citep
 key "patternRecognitionAndMachineLearning"
@@ -1888,18 +1912,18 @@ key "patternRecognitionAndMachineLearning"
 \end_layout
 
 \begin_layout Standard
-Otro aspecto muy importante son los atributos en los cuales se basa el modelo.
- Un atributo o característica es un tipo de medida realizada sobre cualquier
- instancia a medir.
- Los atributos mapean el espacio de instancias a un conjunto de valores
- o dominio de atributos.
- Los valores del dominio pueden ser números como la frecuencia de aparición
- de las instancias, valores binarios o un conjunto cualquiera como el de
- meses, estaciones o colores.
+En cuanto a los datos, normalmente, dado un conjuntos de datos, esté se
+ estructura en instancias con sus atributos o variables.
+ Los atributos no son mas que algún tipo de medida realizada sobre la instancia
+ a medir.
+ Dentro de los atributos o variables hay que distinguir entre los que aportan
+ información y por otra parte, un único atributo que nos indica el estado
+ de la instancia.
+ 
 \end_layout
 
 \begin_layout Subsection
-Tipos de Algoritmos
+Clasificación
 \end_layout
 
 \begin_layout Standard

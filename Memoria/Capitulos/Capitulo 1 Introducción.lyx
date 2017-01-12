@@ -293,8 +293,8 @@ key "OVH"
 La detección de los ataques DDoS se ha intentado resolver desde la Inteligencia
  Artificial usando aprendizaje automático.
  La detección de ataques DDoS requiere un clasificador de aprendizaje adaptativo
- incremental, menos complejidad computacional y una toma de decisiones precisa
- a partir de información incierta.
+ incremental, lo cual conlleva menos complejidad computacional y una toma
+ de decisiones precisa a partir de información incierta.
  Por lo tanto, los ataques DDoS podrían detectarse utilizando las técnicas
  de computación basadas en aprendizaje automático.
 \begin_inset Newline newline
