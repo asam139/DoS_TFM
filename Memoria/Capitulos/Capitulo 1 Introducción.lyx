@@ -401,7 +401,7 @@ description "Inteligencia Artificial"
 \shape default
  basadas en el aprendizaje automatico aplicadas a la detección de ataques
  DDoS.
- En especial destacamosel artículo
+ En especial destacamos el artículo
 \shape italic
  Detection of distributed denial of service attacks using an ensemble of
  adaptive and hybrid neuro-fuzzy systems
@@ -422,27 +422,6 @@ key "DectionOfDDoSAttacks_Article"
  Posteriormente proponen clasificadores Neurofuzzy adaptativos e híbridos
  como subsistemas funcionales que trabajan como un conjunto para mejorar
  los resultados, obteniendo grandes resultados finalmente.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Otro artículo muy completo es 
-\shape italic
-XXX
-\shape default
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "AdaptiveDRAForDIS"
-
-\end_inset
-
-, escrito por XXX.
- En este artículo se describe .
  
 \begin_inset Newline newline
 \end_inset
