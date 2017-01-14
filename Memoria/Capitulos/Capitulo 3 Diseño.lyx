@@ -77,10 +77,10 @@
 \begin_body
 
 \begin_layout Chapter
-Diseño
+Metodología
 \begin_inset CommandInset label
 LatexCommand label
-name "chap:Diseño"
+name "chap:Metodología"
 
 \end_inset
 
@@ -88,19 +88,12 @@ name "chap:Diseño"
 \end_layout
 
 \begin_layout Standard
-En esta sección se detallarán de forma teórica el planteamiento de las solucione
-s para implementación del videojuego y de las técnicas de predicción de
- trayectorias.
- Para ello se usarán esquemas y figuras para que todo sea mucho más visual.
- El diseño del videojuego se dividirá en 2 partes.
- En la primera de ellas se comenta se describe el videojuego.
- La descripción del videojuego está compuesta por su estructura, examinada
- por partes para poder describirla de una forma clara y sencilla, y la arquitect
-ura de red que presenta el videojuego.
- En la segunda parte de la sección se exponen las técnicas de predicción,
- es decir en que partes se ha dividido el diseño y las adaptaciones que
- se han realizado.
-  
+En esta sección se detallará el la base de datos sobre la que se va a realizar
+ el estudio.
+ A continuación se explicarán los modelos cada uno de los modelos que se
+ usarán.
+ Y por último el procedimiento que se llevará a cabo para la posterior experimen
+tación y análisis de datos.
 \end_layout
 
 \begin_layout Section
