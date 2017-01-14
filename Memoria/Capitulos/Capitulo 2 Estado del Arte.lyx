@@ -2006,6 +2006,42 @@ key "aprendizajeAutomaticoSupervisado"
 \end_layout
 
 \begin_layout Standard
+Con una definición más formal, en clasificación supervisada el conjunto
+ de variagbles a considerar será 
+\begin_inset Formula $Y=X\:\bigcup\:\left\{ C\right\} $
+\end_inset
+
+.
+ Donde 
+\begin_inset Formula $C$
+\end_inset
+
+ es la variable de clase, es decir la que se clasifica, y las variables
+ en 
+\begin_inset Formula $X$
+\end_inset
+
+ serán usadas para predecir los valores de 
+\begin_inset Formula $C$
+\end_inset
+
+ y son los atributos o también llamados en este contexto, variables predictoras,
+ inductoras o carecterísticas.
+ El objetivo es poder describir la variable de clase en función de los atrigbuto
+s y poder calcular la probabilidad condicionada de la clase dada cualquier
+ combinación de los atributos, 
+\begin_inset Formula $p(C|X)$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Según la naturaleza de los problemas de clasificación supervisada han ido
  desarrollandose multitud de diferentres algoritmos, que aunque todos funcionan
  bien globalmente, sobresalen en ciertos contexto en algunos aspectos como
@@ -2016,7 +2052,14 @@ Según la naturaleza de los problemas de clasificación supervisada han ido
 
 \begin_layout Itemize
 Redes neuronales: las redes neuronales fueron objeto de especial interés
- en los primeros tiempos de la Inteligencia Artificial (años 50 y 60).
+ en los primeros tiempos de la Inteligencia Artificial (años 50 y 60)
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Artificialneuralnetworks:fundamentalscomputingdesignandapplication"
+
+\end_inset
+
+.
  Sin embargo, los resultados no fueron alentadores, pues el escaso desarrollo
  que por aquellas fechas presentaba la tecnología informática provocó que
  muchas investigaciones acabaran en fracaso.
@@ -2030,7 +2073,14 @@ s de red más usuales por aquel entonces.
 a del cerebro humano provocaron un resurgimiento del interés por el tema.
  Una red neuronal consiste básicamente de una serie de unidades de proceso,
  también llamadas neuronas artificiales, relacionadas mediante unas conexiones
- ponderadas.
+ ponderadas
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Artificialneuralnetworks:fundamentalscomputingdesignandapplication"
+
+\end_inset
+
+.
  Cada unidad recibe señales a través de una serie de vías de entrada y responde
  a ese estímulo enviando una señal, que puede ser binaria (0,1) o real dentro
  de un intervalo contínuo, a todas aquellas con las que a su vez tenga una
@@ -2045,14 +2095,28 @@ a del cerebro humano provocaron un resurgimiento del interés por el tema.
 Árboles de decisión: surgen entorno a la décadas de los 50 y 60.
  Constan de la creacion de un modelo cuya representacion gráfica es una
  estructura de arbol, con nodos y aristas que permiten, haciendo uso de
- comprobaciones matemáticas validar en cada nodo los atribuots de una instancia.
+ comprobaciones matemáticas validar en cada nodo los atribuots de una instancia
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Asurveyofcostsensitivedecisiontreeinductionalgorithms"
+
+\end_inset
+
+.
  Este tipo de algoritmos serán comentados más detalladamente ya que son
  los que se usan principalmente en este trabajo.
 \end_layout
 
 \begin_layout Itemize
 Redes bayesianas: Corresponden a modelos gráficos basados en la teoría de
- la probabilidad.
+ la probabilidad
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ModelosBayesianosparalaclasificacinsupervisada.Aplicacionesalanlisisdedatosdeexpresingrfica"
+
+\end_inset
+
+.
  La idea es muy parecida a los árboles de decisión pero en este caso se
  añade probabilidad.
  En los arboles de decisión cada nodo representaba una variable del conjunto
@@ -2075,7 +2139,14 @@ description "Support Vector Machine"
  en el que cada uno de ellos pertenece a una de dos posibles categorías
  (problema de clasificación binario), un algoritmo basado en SVM construye
  un modelo capaz de predecir si un punto nuevo (cuya categoría desconocemos)
- pertenece a una categoría o a la otra.
+ pertenece a una categoría o a la otra
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Acomparativestudyonthepredictiveabilityofthedecisiontreesupportvectormachineandneuro-fuzzymodelsinlandslidesusceptibilitymappingusingGIS"
+
+\end_inset
+
+.
  Como en la mayoría de los métodos de clasificación supervisada, los datos
  de entrada (los puntos) son vistos como un vector p-dimensional (una lista
  ordenada de p números).
@@ -2092,13 +2163,20 @@ Algoritmos genéticos: aparecen a partir de 1970.
  A lo largo de las generaciones, las poblaciones evolucionan en la naturaleza
  de acorde con los principios de la selección natural y la supervivencia
  de los más fuertes, postulados por Darwin.
- Por imitación de este proceso, los Algoritmos Genéticos son capaces de
+ Por imitación de este proceso, los algoritmos genéticos son capaces de
  ir creando soluciones para problemas del mundo real.
  La evolución de dichas soluciones hacia valores óptimos del problema depende
  en buena medida de una adecuada codificación de las mismas.
  Un algoritmo genético consiste en una función matemática o una rutina de
  software que toma como entradas a los ejemplares y retorna como salidas
- cuales de ellos deben generar descendencia para la nueva generación.
+ cuales de ellos deben generar descendencia para la nueva generación
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Short-termwindspeedforecastingusingwavelettransformandsupportvectormachinesoptimizedbygeneticalgorithm"
+
+\end_inset
+
+.
  Versiones más complejas de algoritmos genéticos generan un ciclo iterativo
  que directamente toma a la especie (el total de los ejemplares) y crea
  una nueva generación que reemplaza a la antigua una cantidad de veces determina
@@ -2119,7 +2197,7 @@ El aprendizaje no supervisado es un método donde un modelo es ajustado a
  las observaciones
 \begin_inset CommandInset citation
 LatexCommand citep
-key "AdvancedLecturesonMachineLearning"
+key "UnsupervisedclassificationofmajordepressionusingfunctionalconnectivityMRI"
 
 \end_inset
 
@@ -2130,25 +2208,18 @@ key "AdvancedLecturesonMachineLearning"
  El aprendizaje no supervisado debido a que sería como una clasificación
  a ciegas, típicamente trata los objetos de entrada como un conjunto de
  variables aleatorias, siendo construido un modelo de densidad para el conjunto
- de datos.
- Esto sería como formar grupos heterogéneos que compartar características
- y que permita a las nuevas intancias ser localizadas en uno de los grupos,
- es decir etiquetarlas.
- 
-\end_layout
-
-\begin_layout Standard
-El aprendizaje no supervisado está muy relacionado con el problema de estimación
- de la densidad de estadísticas
+ de datos
 \begin_inset CommandInset citation
 LatexCommand citep
-key "AdvancedLecturesonMachineLearning"
+key "UnsupervisedclassificationofmajordepressionusingfunctionalconnectivityMRI"
 
 \end_inset
 
 .
- Sin embargo, también abarca muchas otras técnicas que buscan resumir y
- explicar las carecterísticas clave de los datos.
+ Esto sería como formar grupos heterogéneos que compartar características
+ y que permita a las nuevas intancias ser localizadas en uno de los grupos,
+ es decir etiquetarlas.
+ 
 \begin_inset Newline newline
 \end_inset
 
@@ -2156,7 +2227,26 @@ key "AdvancedLecturesonMachineLearning"
 \end_layout
 
 \begin_layout Standard
-Uno de los enfoques estadísticos para el aprendizaje sin supervisión es
+En clasificación no supervisada partiendo de un conjunto de variables 
+\begin_inset Formula $V=X$
+\end_inset
+
+ se trata de asignar cada caso a un grupo 
+\begin_inset Formula $C$
+\end_inset
+
+, es decir, el objetivo es descubrir grupos, una estructura de clases en
+ los datos, de tal manera que las instancias con una gran homogeneidad pertenezc
+a a la misma clase, por el contrario los que presenten heterogeneidad entre
+ ellos pertenecen a clases diferentes
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ModelosBayesianosparalaclasificacinsupervisada.Aplicacionesalanlisisdedatosdeexpresingrfica"
+
+\end_inset
+
+.
+ Uno de los enfoques estadísticos para el aprendizaje sin supervisión es
  el método de los momentos
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -2188,7 +2278,14 @@ key "TaxonomyDDoSAttackAndDefenseMechanisms"
 \end_layout
 
 \begin_layout Standard
-Entre los algoritmos y propuestas más conocidas se encuentran:
+Entre los algoritmos y propuestas más conocidas se encuentran
+\begin_inset CommandInset citation
+LatexCommand citep
+key "UnsupervisedclassificationofmajordepressionusingfunctionalconnectivityMRI"
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Itemize
@@ -2206,6 +2303,10 @@ Reglas de asociación: son usadas para identicar y representar dependencias
 Análisis cluster: corresponden a algoritmos que proporcionan grupos dentro
  de una nube de puntos en base a algún criterio.
  Suelen ser diferenciados según los llamados metodos jerárquicos y particionales.
+\end_layout
+
+\begin_layout Subsection
+Arboles de decisión
 \end_layout
 
 \end_body
