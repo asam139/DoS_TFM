@@ -396,7 +396,7 @@ filename "Capitulos/Capitulo 2 Estado del Arte.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "Capitulos/Capitulo 3 Diseño.lyx"
+filename "Capitulos/Capitulo 3 Metodología.lyx"
 
 \end_inset
 
