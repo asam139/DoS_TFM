@@ -1853,8 +1853,8 @@ Algunos sistemas de aprendizaje automático intentan eliminar toda necesidad
 
 \begin_layout Standard
 El aprendizaje automático busca aplicar técnicas de análisis de datos, aprendiza
-je estadístico, creación de modelos, ect, con el objetivo de idenficar automátic
-amente patrones o tendencias dentro de los datos 
+je estadístico, creación de modelos, ect, con el objetivo de identificar
+ automáticamente patrones o tendencias dentro de los datos 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AnIntroductiontoMachineLearning"
@@ -1868,45 +1868,114 @@ key "AnIntroductiontoMachineLearning"
  Una de las partes fundamentales del aprendizaje automatico es la clasificación
  o regresión.
  En este trabajo nos centraremos en la primera de ella.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Normalmente, dado un conjuntos de datos, esté se estructura en instancias
- con sus atributos o variables.
+Otra parte fundamental es obtener un modelo para los datos.
+ Existen diferentes tipos de modelos que se pueden crear a partir de los
+ datos.
+ Entre ellos se distinguen
+\begin_inset CommandInset citation
+LatexCommand citep
+key "patternRecognitionAndMachineLearning"
+
+\end_inset
+
+: los modelos geométricos, construidos en el espacio de instancias y que
+ pueden tener una, dos o múltiples dimensiones; los modelos probabilísticos,
+ que intentan determinar la distribución de probabilidades descriptora de
+ la función que enlaza a los valores de las características con valores
+ determinados y los modelos lógicos, que expresan las probabilidades en
+ reglas organizadas en forma de árboles de decisión.
+ Los algoritmos que se utilizan para resolver los problemas basados en árboles
+ de decicisón pueden ser muy variados
+\begin_inset CommandInset citation
+LatexCommand citep
+key "patternRecognitionAndMachineLearning"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En cuanto a los datos, normalmente, dado un conjuntos de datos, esté se
+ estructura en instancias con sus atributos o variables.
+ Los atributos no son mas que algún tipo de medida realizada sobre la instancia
+ a medir.
  Dentro de los atributos o variables hay que distinguir entre los que aportan
  información y por otra parte, un único atributo que nos indica el estado
  de la instancia.
  
 \end_layout
 
-\begin_layout Standard
-Otro aspecto muy importante son los atributos en los cuales se basa el modelo.
- Un atributo o característica es un tipo de medida realizada sobre cualquier
- instancia a medir.
- Los atributos mapean el espacio de instancias a un conjunto de valores
- o dominio de atributos.
- Los valores del dominio pueden ser números como la frecuencia de aparición
- de las instancias, valores binarios o un conjunto cualquiera como el de
- meses, estaciones o colores.
-\end_layout
-
 \begin_layout Subsection
-Tipos de Algoritmos
+Clasificación
 \end_layout
 
 \begin_layout Standard
-Los diferentes algoritmos de Aprendizaje Automático se agrupan en una taxonomía
- en función de la salida de los mismos.
- Los tipos de algoritmos son:
+Hay que hacer una diferencia en función de la variable clase entre la tareas
+ de clasificación y las de regresión
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AnIntroductiontoMachineLearning"
+
+\end_inset
+
+.
+ Si la clase es un atributo de tipo discreto, la tarea a realizar es una
+ clasificación mientras que si es continuo se tiene que emplear regresión.
+ Dado que en este trabajo el objetivo es la detección de ataques de denegación
+ de servicio, la clase va a ser de tipo discreto, luego nos centraremos
+ en los problemas de clasificación y sus variantes.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Antes de proceder a comentar los tipos de clasificación es importante ver
+ el procedimiento que se lleva acabo en toda tarea de clasificación.
+ Lo primero es tener dos conjuntos de datos, el de entrenamiento y el de
+ prueba.
+ El primero de ellos contiene todos los atributos incluyendo el de clase.
+ Mientras que el de prueba no contiene el atributo de prueba.
+ De este modo el objetivo es obtener este atributo para los datos de test
+ de modo que cada instancia quede correctamente valorada.
+ Para lograr esto existen una gran cantidad de algoritmos que serán los
+ que creen un modelo a partir de los datos de entrenamiento y con el cual
+ predecir el valor de la clase para cada instancia del conjunto de test
+ y así medir la precisión.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por último, los problemas de clasificación se dividen en dos subconjuntos
+ a su vez, los supervisados y no supervisados.
+ La diferencia reside en la información disponible en los conjuntos de datos
+ con las que el sistema tiene que trabajar.
 \end_layout
 
 \begin_layout Subsubsection
-Aprendizaje supervisado
+Clasificación supervisada
 \end_layout
 
 \begin_layout Standard
-En aprendizaje automático y minería de datos, el aprendizaje supervisado
- es una técnica para deducir una función a partir de datos de entrenamiento
+En aprendizaje automático y minería de datos, un tipo de análisis supervisado
+ es viable cuando los datos de entrenamiento poseen una variable de clase
 \begin_inset CommandInset citation
 LatexCommand citep
 key "aprendizajeAutomaticoSupervisado"
@@ -1914,13 +1983,8 @@ key "aprendizajeAutomaticoSupervisado"
 \end_inset
 
 .
- Los datos de entrenamiento consisten de pares de objetos (normalmente vectores)
-: una componente del par son los datos de entrada y el otro, los resultados
- deseados.
- La salida de la función puede ser un valor numérico (como en los problemas
- de regresión) o una etiqueta de clase (como en los de clasificación).
  El objetivo del aprendizaje supervisado es el de crear una función capaz
- de predecir el valor correspondiente a cualquier objeto de entrada válida
+ de predecir el valor correspondiente a cualquier objeto de entrada válido
  después de haber visto una serie de ejemplos, los datos de entrenamiento.
  Para ello, tiene que generalizar a partir de los datos presentados a las
  situaciones no vistas previamente
@@ -1931,6 +1995,10 @@ key "aprendizajeAutomaticoSupervisado"
 \end_inset
 
 .
+ Básicamente es encontrar las posibles relaciones entre los atributos de
+ entrada y el de clase.
+ Estas relaciones son establecidas en un modelo con el cual se predicen
+ los valores de clase para los datos de prueba.
 \begin_inset Newline newline
 \end_inset
 
@@ -1938,89 +2006,112 @@ key "aprendizajeAutomaticoSupervisado"
 \end_layout
 
 \begin_layout Standard
-Con el fin de resolver un determinado problema de aprendizaje supervisado
- (por ejemplo, aprender a reconocer la escritura) uno tiene que considerar
- varios pasos
-\begin_inset CommandInset citation
-LatexCommand citep
-key "aprendizajeAutomaticoSupervisado"
-
-\end_inset
-
-.
- Primeramente es necesario determinar el tipo de ejemplos de entrenamiento.
- Antes de hacer cualquier otra cosa, hay que decidir qué tipo de datos se
- va a utilizar para entrenar el modelo.
- Lo siguiente es reunir un conjunto de entrenamiento.
- El conjunto de necesidades de formación a las características propias del
- uso del mundo real de la función.
- Por lo tanto, un conjunto de objetos de entrada que se recopila y salidas
- correspondientes se recogen también, ya sea humana o de los expertos a
- partir de mediciones.
- Posteriormente se determina la función de ingreso de la representación
- de la función aprendido.
- Seguidamente se determinar la estructura de la función adecuada para resolver
- y el problema y la técnica de aprendizaje correspondiente.
- Por ejemplo, se podría optar por utilizar red neuronal artificial o un
- árbol de decisión.Y por último se completa el diseño.
- El ingeniero a continuación, ejecuta el algoritmo de aprendizaje en el
- conjunto de la formación obtenida.
- Parámetros del algoritmo de aprendizaje puede ser ajustado mediante la
- optimización de rendimiento en un subconjunto de ellas (llamado conjunto
- de validación) del conjunto de entrenamiento, o por medio de la validación
- cruzada.
- Después del ajuste de parámetros y de aprendizaje, el desempeño del algoritmo
- se puede medir utilizando un conjunto de pruebas independiente del de entrenami
-ento.
-\begin_inset Newline newline
-\end_inset
-
-
+Según la naturaleza de los problemas de clasificación supervisada han ido
+ desarrollandose multitud de diferentres algoritmos, que aunque todos funcionan
+ bien globalmente, sobresalen en ciertos contexto en algunos aspectos como
+ puede ser la precisión, la minimización del error de clasificación o la
+ complejidad computacional entre otros.
+ Algunos de los principales son:
 \end_layout
 
-\begin_layout Standard
-Otro término para el aprendizaje supervisado es la clasificación
-\begin_inset CommandInset citation
-LatexCommand citep
-key "aprendizajeAutomaticoSupervisado"
+\begin_layout Itemize
+Redes neuronales: las redes neuronales fueron objeto de especial interés
+ en los primeros tiempos de la Inteligencia Artificial (años 50 y 60).
+ Sin embargo, los resultados no fueron alentadores, pues el escaso desarrollo
+ que por aquellas fechas presentaba la tecnología informática provocó que
+ muchas investigaciones acabaran en fracaso.
+ Además, diversos trabajos como el de Minsky y Papert (1969), pusieron de
+ manifiesto graves limitaciones en el proceso de aprendizaje de las arquitectura
+s de red más usuales por aquel entonces.
+ Todo esto motivó que durante la década de los 70 el interés por las redes
+ neuronales artificiales desapareciera casi por completo.
+ Sin embargo, a partir de los años 80 los ordenadores más potentes resultantes
+ del avance de la tecnología informática y el mejor conocimiento de la estructur
+a del cerebro humano provocaron un resurgimiento del interés por el tema.
+ Una red neuronal consiste básicamente de una serie de unidades de proceso,
+ también llamadas neuronas artificiales, relacionadas mediante unas conexiones
+ ponderadas.
+ Cada unidad recibe señales a través de una serie de vías de entrada y responde
+ a ese estímulo enviando una señal, que puede ser binaria (0,1) o real dentro
+ de un intervalo contínuo, a todas aquellas con las que a su vez tenga una
+ conexión de salida.
+ Este tipo de estructuras están inspiradas en las neuronas de las estructuras
+ nerviosas de los seres vivos, las cuales reciben señales eléctricas de
+ entrada a través de las dendritas y proporcionan una señal de salida a
+ las neuronas conectadas con ella a través del axón.
+\end_layout
 
-\end_inset
+\begin_layout Itemize
+Árboles de decisión: surgen entorno a la décadas de los 50 y 60.
+ Constan de la creacion de un modelo cuya representacion gráfica es una
+ estructura de arbol, con nodos y aristas que permiten, haciendo uso de
+ comprobaciones matemáticas validar en cada nodo los atribuots de una instancia.
+ Este tipo de algoritmos serán comentados más detalladamente ya que son
+ los que se usan principalmente en este trabajo.
+\end_layout
 
-.
- Una amplia gama de clasificadores están disponibles, cada uno con sus fortaleza
-s y debilidades.
- El rendimiento del clasificador depende en gran medida de las características
- de los datos que deben clasificarse.
- No hay una clasificación única que funciona mejor en todos los problemas
- dados.
- Diversas pruebas empíricas se han realizado para comparar el rendimiento
- del clasificador y para encontrar las características de los datos que
- determinan el rendimiento del clasificador y se ha llegado a la conclusión
- que la determinación de un clasificador adecuado para un problema dado
- es sin embargo aún, más un arte que una ciencia.
+\begin_layout Itemize
+Redes bayesianas: Corresponden a modelos gráficos basados en la teoría de
+ la probabilidad.
+ La idea es muy parecida a los árboles de decisión pero en este caso se
+ añade probabilidad.
+ En los arboles de decisión cada nodo representaba una variable del conjunto
+ de datos, pero en este caso las aristas que unen dos nodos representan
+ una probabilidad entre los nodos, es decir variables.
  
-\begin_inset Newline newline
-\end_inset
-
-
 \end_layout
 
-\begin_layout Standard
-Los clasificadores más utilizados 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "aprendizajeAutomaticoSupervisado"
+\begin_layout Itemize
+Support Vector Machine (SVM
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "SVM"
+description "Support Vector Machine"
 
 \end_inset
 
-son las redes neuronales, como el (perceptrón multicapa); las máquinas de
- vectores de soporte; el algoritmo de los K-vecinos más cercanos, los modelos
- de mixturas; el clasificador bayesiano ingenuo; los árboles de decisión
- y las funciones de base radial.
+): El algoritmo inicial se creo en 1963.
+ Dado un conjunto de puntos, subconjunto de un conjunto mayor (espacio),
+ en el que cada uno de ellos pertenece a una de dos posibles categorías
+ (problema de clasificación binario), un algoritmo basado en SVM construye
+ un modelo capaz de predecir si un punto nuevo (cuya categoría desconocemos)
+ pertenece a una categoría o a la otra.
+ Como en la mayoría de los métodos de clasificación supervisada, los datos
+ de entrada (los puntos) son vistos como un vector p-dimensional (una lista
+ ordenada de p números).
+ La SVM busca un hiperplano que separe de forma óptima a los puntos de una
+ clase de la de otra, que eventualmente han podido ser previamente proyectados
+ a un espacio de dimensionalidad superior.
+\end_layout
+
+\begin_layout Itemize
+Algoritmos genéticos: aparecen a partir de 1970.
+ Son métodos adaptativos que pueden usarse para resolver problemas de búsqueda
+ y optimización.
+ Están basados en el proceso genético de los organismos vivos.
+ A lo largo de las generaciones, las poblaciones evolucionan en la naturaleza
+ de acorde con los principios de la selección natural y la supervivencia
+ de los más fuertes, postulados por Darwin.
+ Por imitación de este proceso, los Algoritmos Genéticos son capaces de
+ ir creando soluciones para problemas del mundo real.
+ La evolución de dichas soluciones hacia valores óptimos del problema depende
+ en buena medida de una adecuada codificación de las mismas.
+ Un algoritmo genético consiste en una función matemática o una rutina de
+ software que toma como entradas a los ejemplares y retorna como salidas
+ cuales de ellos deben generar descendencia para la nueva generación.
+ Versiones más complejas de algoritmos genéticos generan un ciclo iterativo
+ que directamente toma a la especie (el total de los ejemplares) y crea
+ una nueva generación que reemplaza a la antigua una cantidad de veces determina
+da por su propio diseño.
+ Una de sus características principales es la de ir perfeccionando su propia
+ heurística en el proceso de ejecución, por lo que no requiere largos períodos
+ de entrenamiento especializado por parte del ser humano, principal defecto
+ de otros métodos para solucionar problemas.
+ 
 \end_layout
 
 \begin_layout Subsubsection
-Aprendizaje No Supervisado
+Clasificación no supervisada
 \end_layout
 
 \begin_layout Standard
@@ -2034,16 +2125,16 @@ key "AdvancedLecturesonMachineLearning"
 
 .
  Se distingue del aprendizaje supervisado por el hecho de que no hay un
- conocimiento a priori.
- En el aprendizaje no supervisado, un conjunto de datos de objetos de entrada
- es tratado.
- Así, el aprendizaje no supervisado típicamente trata los objetos de entrada
- como un conjunto de variables aleatorias, siendo construido un modelo de
- densidad para el conjunto de datos.
-\begin_inset Newline newline
-\end_inset
-
-
+ conocimiento a priori, es decir no se tiene el atributo de clase de los
+ datos de entrenamiento.
+ El aprendizaje no supervisado debido a que sería como una clasificación
+ a ciegas, típicamente trata los objetos de entrada como un conjunto de
+ variables aleatorias, siendo construido un modelo de densidad para el conjunto
+ de datos.
+ Esto sería como formar grupos heterogéneos que compartar características
+ y que permita a las nuevas intancias ser localizadas en uno de los grupos,
+ es decir etiquetarlas.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2090,6 +2181,31 @@ key "TaxonomyDDoSAttackAndDefenseMechanisms"
  Los modelos de variables latentes son modelos estadísticos donde además
  de las variables observadas, existe también un conjunto de variables latentes
  que no se observa.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entre los algoritmos y propuestas más conocidas se encuentran:
+\end_layout
+
+\begin_layout Itemize
+Reglas de asociación: son usadas para identicar y representar dependencias
+ entre elementos (itancias) de una base de datos.
+ Son reglas que indican para instancias dentro de un espacio un estado en
+ otro espacio, con notación matemática sería: 
+\begin_inset Formula $X\rightarrow Y,\:donde\:X\:e\:Y\:son\:un\:conjunto\:de\:elementos$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Análisis cluster: corresponden a algoritmos que proporcionan grupos dentro
+ de una nube de puntos en base a algún criterio.
+ Suelen ser diferenciados según los llamados metodos jerárquicos y particionales.
 \end_layout
 
 \end_body
