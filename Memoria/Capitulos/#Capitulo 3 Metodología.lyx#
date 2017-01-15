@@ -2577,26 +2577,12 @@ status open
 
 ve Bayes han funcionado bastante bien en muchas situaciones complejas del
  mundo real.
- En 2004, un análisis 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "TheOptimallyofNaiveBayes"
-
-\end_inset
-
- del problema de la clasificación bayesiana mostró que existen razones teóricas
- sólidas para la aparentemente improbable eficacia de los clasificadores
- naif de Bayes.
+ En 2004, un análisis del problema de la clasificación bayesiana mostró
+ que existen razones teóricas sólidas para la aparentemente improbable eficacia
+ de los clasificadores naif de Bayes.
  Sin embargo, una comparación completa con otros algoritmos de clasificación
- en 2006 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Unacomparacinempricadealgoritmosdeaprendizajesupervisado"
-
-\end_inset
-
-mostró que la clasificación de Bayes es superada por otros enfoques, tales
- como los booted trees o los random forests.
+ en 2006 mostró que la clasificación de Bayes es superada por otros enfoques,
+ tales como los booted trees o los random forests.
 \end_layout
 
 \begin_layout Standard

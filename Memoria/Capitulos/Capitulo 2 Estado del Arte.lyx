@@ -161,8 +161,19 @@ key "SVM_Zombies_DDoS,DefendingAgainstDDoS_RKCChang"
 
 .
  Este tipo de redes complica los mecanismo de detección para reconocer al
- atacante original debido al uso de las direcciones IP falsificadas por
- los zombies bajo control.
+ atacante original debido al uso de las direcciones IP (
+\shape italic
+Internet Protocol
+\shape default
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "IP"
+description "Internet Protocol"
+
+\end_inset
+
+) falsificadas por los zombies bajo control.
  
 \begin_inset Newline newline
 \end_inset
