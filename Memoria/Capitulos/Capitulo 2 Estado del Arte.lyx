@@ -2062,8 +2062,16 @@ Según la naturaleza de los problemas de clasificación supervisada han ido
 \end_layout
 
 \begin_layout Itemize
-Redes neuronales: las redes neuronales fueron objeto de especial interés
- en los primeros tiempos de la Inteligencia Artificial (años 50 y 60)
+Redes neuronales artificiales (RNA
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "RNA"
+description "Redes Neuronal Artificial"
+
+\end_inset
+
+): las redes neuronales fueron objeto de especial interés en los primeros
+ tiempos de la Inteligencia Artificial (años 50 y 60)
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Artificialneuralnetworks:fundamentalscomputingdesignandapplication"

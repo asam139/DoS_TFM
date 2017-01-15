@@ -2577,12 +2577,26 @@ status open
 
 ve Bayes han funcionado bastante bien en muchas situaciones complejas del
  mundo real.
- En 2004, un análisis del problema de la clasificación bayesiana mostró
- que existen razones teóricas sólidas para la aparentemente improbable eficacia
- de los clasificadores naif de Bayes.
+ En 2004, un análisis 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "TheOptimallyofNaiveBayes"
+
+\end_inset
+
+ del problema de la clasificación bayesiana mostró que existen razones teóricas
+ sólidas para la aparentemente improbable eficacia de los clasificadores
+ naif de Bayes.
  Sin embargo, una comparación completa con otros algoritmos de clasificación
- en 2006 mostró que la clasificación de Bayes es superada por otros enfoques,
- tales como los booted trees o los random forests.
+ en 2006 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Unacomparacinempricadealgoritmosdeaprendizajesupervisado"
+
+\end_inset
+
+mostró que la clasificación de Bayes es superada por otros enfoques, tales
+ como los booted trees o los random forests.
 \end_layout
 
 \begin_layout Standard
@@ -2601,6 +2615,361 @@ status open
 
 ve Bayes es que sólo requiere un pequeño número de datos de entrenamiento
  para estimar los parámetros necesarios para la clasificación.
+\end_layout
+
+\begin_layout Subsection
+LogR (lo mismo tiene otro nombre para buscar informacion de él)
+\end_layout
+
+\begin_layout Subsection
+SVM: Support Vector Machine
+\end_layout
+
+\begin_layout Standard
+Las máquinas de soporte vectorial
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AnIntroductiontoSupportVectorMachinesandotherkernel-basedlearningmethods"
+
+\end_inset
+
+, máquinas de vectores de soporte o máquinas de vector soporte (Support
+ Vector Machines, SVMs) son un conjunto de algoritmos de aprendizaje supervisado
+ desarrollados por Vladimir Vapnik y su equipo en los laboratorios AT&T.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Estos métodos están propiamente relacionados con problemas de clasificación
+ y regresión.
+ Dado un conjunto de ejemplos de entrenamiento (de muestras) podemos etiquetar
+ las clases y entrenar una SVM para construir un modelo que prediga la clase
+ de una nueva muestra.
+ Intuitivamente, una SVM es un modelo que representa a los puntos de muestra
+ en el espacio, separando las clases a 2 espacios lo más amplios posibles
+ mediante un hiperplano de separación definido como el vector entre los
+ 2 puntos, de las 2 clases, mas cercanos al que se llama vector soporte.
+ Cuando las nuevas muestras se ponen en correspondencia con dicho modelo,
+ en función de los espacios a los que pertenezcan, pueden ser clasificadas
+ a una o la otra clase.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Más formalmente, una SVM construye un hiperplano o conjunto de hiperplanos
+ en un espacio de dimensionalidad muy alta (o incluso infinita) que puede
+ ser utilizado en problemas de clasificación o regresión
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AnIntroductiontoSupportVectorMachinesandotherkernel-basedlearningmethods"
+
+\end_inset
+
+.
+ Una buena separación entre las clases permitirá un clasificación correcta.
+ Una SVM busca un hiperplano que separe de forma óptima a los puntos de
+ una clase de la de otra, que eventualmente han podido ser previamente proyectad
+os a un espacio de dimensionalidad superior.
+ En ese concepto de "separación óptima" es donde reside la característica
+ fundamental de las SVM: este tipo de algoritmos buscan el hiperplano que
+ tenga la máxima distancia (margen) con los puntos que estén más cerca de
+ él mismo.
+ Por eso también a veces se les conoce a las SVM como clasificadores de
+ margen máximo.
+ De esta forma, los puntos del vector que son etiquetados con una categoría
+ estarán a un lado del hiperplano y los casos que se encuentren en la otra
+ categoría estarán al otro lado.
+ Los algoritmos SVM pertenecen a la familia de los clasificadores lineales.
+\end_layout
+
+\begin_layout Subsection
+Perceptrón multicapa
+\end_layout
+
+\begin_layout Standard
+Un perceptron de múltiples capas (MLP 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "MLP"
+description "Multilayer perceptron"
+
+\end_inset
+
+) es un modelo de red neuronal artificial de retropropagación (control o
+ modificación usando resultados anticipados) que asigna conjuntos de datos
+ de entrada a un conjunto de salidas apropiadas.
+ Un MLP consiste en múltiples capas de nodos en un gráfico dirigido, con
+ cada capa completamente conectada al siguiente.
+ Excepto para los nodos de entrada, cada nodo es una neurona (o elemento
+ de procesamiento ) con una función de activación no lineal.
+ MLP utiliza una técnica de aprendizaje supervisado llamada backpropagation
+ para entrenar la red.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PrinciplesofNeurodynamics:PerceptronsandtheTheoryofBrainMechanisms"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "LearninginternalRepresentationsbyErrorPropagation"
+
+\end_inset
+
+MLP es una modificación del perceptron lineal estándar y puede distinguir
+ datos que no son linealmente separables
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Approximationbysuperpositionsofasigmoidalfunction"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los perceptrones de múltiples capas que utilizan un algoritmo de retropropagació
+n son el algoritmo estándar para cualquier proceso supervisado de reconocimiento
+ de patrones de aprendizaje y el tema de la investigación en curso en neurocienc
+ia computacional y procesamiento distribuido paralelo.
+ Son útiles en la investigación en términos de su capacidad para resolver
+ problemas estocásticamente, lo que a menudo permite obtener soluciones
+ aproximadas para problemas extremadamente complejos.
+\end_layout
+
+\begin_layout Standard
+MLPs son aproximadores de función universal como se muestra por el teorema
+ de Cybenko, 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Approximationbysuperpositionsofasigmoidalfunction"
+
+\end_inset
+
+ por lo que pueden ser utilizados para crear modelos matemáticos mediante
+ análisis de regresión.
+ Como la clasificación es un caso particular de regresión cuando la variable
+ de respuesta es categórica , las MLP son también buenos algoritmos clasificador
+es.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los MLP eran una solución de aprendizaje de máquina popular en los años
+ 80, encontrando aplicaciones en diversos campos tales como reconocimiento
+ de voz, reconocimiento de imagen, y software de traducción automática 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Neuralnetworks.II.Whataretheyandwhyiseverybodysointerestedinthemnow?"
+
+\end_inset
+
+, pero desde la década de 1990 se enfrentó a la fuerte competencia de la
+ mucho más simple SVM.
+ Más recientemente, ha habido un renovado interés en las redes de retropropagaci
+ón debido a los éxitos del aprendizaje profundo.
+\end_layout
+
+\begin_layout Subsection
+Credal Decision Trees (CDT
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "CDT"
+description "Credal Decision Trees"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Standard
+El Credal Decision Trees es un árbol de decisión desarrollado por Abellán
+ y Moral
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Buildingclassificationtreesusingthetotaluncertaintycriterion"
+
+\end_inset
+
+, usando la teoría de probabilidades imprecisas presentada por Walley
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Inferencesfrommultinomialdatalearningaboutabagofmarbles"
+
+\end_inset
+
+, conocido por Imprecise Dirichlet Model (IDM
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "IDM"
+description "Imprecise Dirichlet Model"
+
+\end_inset
+
+).
+ El proceso de selección de variables para este algoritmo se basa en probabilida
+des imprecisas y medidas de incertidumbre en conjuntos acredenciados, es
+ decir cerrados y convexos de distribuciones de probabilidad.
+ De esta manera, este algoritmo considera que el conjunto de entrenamiento
+ no es confiable cuando se lleva a cabo el proceso de selección de variables.
+ Este método obtiene buenos resultados experimentales, especialmente cuando
+ se clasifican datos ruidodos
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Baggingschemesonthepresenceofnoiseinclassification,Analysisandextensionofdecisiontreesbasedonimpreciseprobabilities:applicationonnoisydata"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Analysisandextensionofdecisiontreesbasedonimpreciseprobabilities:applicationonnoisydata"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El criterio de división utilizado para construir CDTs se basa en probabilidades
+ imprecisas y en la aplicación de medidas de incertidumbre en los conjuntos
+ acredenciados.
+ La base matemática de este prodecimiento puede describirse: sea una variable
+ 
+\begin_inset Formula $Z$
+\end_inset
+
+ una variable con valores en 
+\begin_inset Formula $\{z_{1,}...,z_{k}\}$
+\end_inset
+
+.
+ Supongamos una distribuición de probabilidad 
+\begin_inset Formula $p(zj),j=1,...,k$
+\end_inset
+
+ definida por cada valor de 
+\begin_inset Formula $z_{j}$
+\end_inset
+
+del conjunto de datos.
+\end_layout
+
+\begin_layout Standard
+IDM es usado para estimar los intervalos de probabilidad del conjunto de
+ datos para cada valor de la variable 
+\begin_inset Formula $Z$
+\end_inset
+
+ de la siguiente forma:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p(z_{j})\epsilon\left[\frac{n_{z_{j}}}{N+s},\frac{n_{z_{j}}+s}{N+s}\right],j=1,...,k;
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+con 
+\begin_inset Formula $n_{z_{j}}como$
+\end_inset
+
+la frecuencia de los valores 
+\begin_inset Formula $Z=z_{j}$
+\end_inset
+
+en el conjunto de datos, 
+\begin_inset Formula $N$
+\end_inset
+
+el tamaño de la muestra y 
+\begin_inset Formula $s$
+\end_inset
+
+ hiperparámetro dado.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este tipo de reperesentación ofrece un tipo específico de cojunto acredidato
+ en la variable 
+\begin_inset Formula $Z,K(Z)$
+\end_inset
+
+ definido como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+K(Z)=\left\{ p|p(z_{j})\epsilon\left[\frac{n_{z_{j}}}{N+s},\frac{n_{z_{j}}+s}{N+s}\right],j=1,...,k\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En este tipo de conjuntos, pueden ser aplicadas medidas imprecisas.
+ El procedimiento para construir CDTs utilza la función máxima de entropía
+ en el cojunto de credenciales definido anteriormente.
+ Esta función denominada como 
+\begin_inset Formula $H*$
+\end_inset
+
+, se define como
+\begin_inset Formula $H*(K(Z))=max\{H(p)|P\epsilon K(Z)\}$
+\end_inset
+
+ donde la función 
+\begin_inset Formula $H$
+\end_inset
+
+ es la función de entropía de Shannon.
+ 
+\begin_inset Formula $H*$
+\end_inset
+
+ es una medida de incertidumbre total que es bien conocida para este tipo
+ de cojuntos.
+ El procedimiento para 
+\begin_inset Formula $H*$
+\end_inset
+
+ en el IDM alcanza su coste mas bajo para 
+\begin_inset Formula $s\leq1$
+\end_inset
+
+.
 \end_layout
 
 \end_body
