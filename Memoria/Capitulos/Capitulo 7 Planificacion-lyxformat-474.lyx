@@ -1,9 +1,7 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
-\save_transient_properties true
-\origin unavailable
 \textclass ociamthesis-lyx
 \options a4paper,titlepage
 \use_default_options false
@@ -12,16 +10,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
-\font_sans "default" "default"
-\font_typewriter "default" "default"
-\font_math "auto" "auto"
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100 100
-\font_tt_scale 100 100
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -93,16 +91,16 @@ Humanos
 
 \begin_layout Itemize
 D.
- Francisco Javier García Castellano, profesor del Departamento de Ciencias
- de la Computación e Inteligencia Artificial de la Universidad de Granada,
- en calidad de tutor del proyecto.
+ Juan José Ramos Muñoz, profesor del Departamento de Teoría de la Señal,
+ Telemática y Comunicaciones de la Universidad de Granada, en calidad de
+ tutor del proyecto.
 \end_layout
 
 \begin_layout Itemize
 D.
- Joaquín Abellán Mulero, profesor del Departamento de Ciencias de la Computación
- e Inteligencia Artificial de la Universidad de Granada, en calidad de tutor
- del proyecto.
+ Juan Manuel López Soler,, profesor del Departamento de Teoría de la Señal,
+ Telemática y Comunicaciones de la Universidad de Granada, en calidad de
+ tutor del proyecto.
 \end_layout
 
 \begin_layout Itemize
@@ -146,8 +144,7 @@ Sistema operativo Microsoft® Windows 7.
 \begin_layout Itemize
 Ofimática: 
 \shape italic
-\SpecialChar LyX
- 2.1.3
+LyX 2.1.3
 \shape default
  
 \begin_inset CommandInset citation
@@ -395,7 +392,7 @@ centering
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
-<features booktabs="true" tabularvalignment="middle">
+<features rotate="0" booktabs="true" tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="center" valignment="top" width="0pt">
 <row>
@@ -628,7 +625,7 @@ centering
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="11" columns="2">
-<features tabularvalignment="middle">
+<features rotate="0" tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
 <row>
