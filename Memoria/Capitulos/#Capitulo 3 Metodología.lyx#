@@ -2470,6 +2470,78 @@ key "ProgramsForMachineLearning"
 \end_layout
 
 \begin_layout Standard
+Los algoritmos como el ID3 y el C4.5 que pertenecen a la familia Top Down
+ Induction Trees (TDIDT
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "TDIDT"
+description "Top Down Induction Trees"
+
+\end_inset
+
+), se construyen a partir del método de Hunt.
+ El esqueleto de este método para construir un árbol de decisión a partir
+ de un conjunto 
+\begin_inset Formula $T$
+\end_inset
+
+ de datos de entrenamiento es muy simple.
+ Sean las clases 
+\begin_inset Formula ${C_{1},C_{2},C_{3},...,C_{k}}$
+\end_inset
+
+.
+ Este algoritmo tiene unos pocos casos base.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T$
+\end_inset
+
+ contiene uno o más casos, todos pertenecientes a una única clase 
+\begin_inset Formula $C_{j}$
+\end_inset
+
+: el árbol de decisión para 
+\begin_inset Formula $T$
+\end_inset
+
+ es una hoja identificando la clase 
+\begin_inset Formula $C_{j}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T$
+\end_inset
+
+ no contiene ningún caso: el árbol de decisión es una hoja, pero la clase
+ asociada debe ser determinada por información que no pertenece a 
+\begin_inset Formula $T.$
+\end_inset
+
+ Por ejemplo, una hoja puede escogerse de acuerdo a conocimientos de base
+ del dominio, como ser la clase mayoritaria.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T$
+\end_inset
+
+ contiene casos pertenecientes a varias clases: en este caso, la idea es
+ refinar 
+\begin_inset Formula $T$
+\end_inset
+
+ en subconjuntos de casos que tiendan, o parezcan tender hacia una colección
+ de casos pertenecientes a una única clase.
+ Se elige una prueba basada en un único.
+\end_layout
+
+\begin_layout Standard
 C4.5 construye árboles de decisión desde un grupo de datos de entrenamiento
  de la misma forma en que lo hace ID3, usando el concepto de entropía de
  información
@@ -2489,8 +2561,111 @@ key "Teoradelainformacincodificacinylenguajes"
 \end_inset
 
 .
- Los datos de entrenamiento son un grupo 
-\begin_inset Formula $S=s_{1},\:s,s_{3},$
+ La entropía suponiendo que un evento (variable aleatoria) tiene un grado
+ de indeterminación inicial igual a 
+\begin_inset Formula $k$
+\end_inset
+
+ (es decir existen 
+\begin_inset Formula $k$
+\end_inset
+
+ estados posibles) y supongamos todos los estados equiprobables.
+ Entonces la probabilidad de que se dé una de esas combinaciones será 
+\begin_inset Formula $p=\frac{1}{k}$
+\end_inset
+
+.
+ Luego podemos representar la expresión 
+\begin_inset Formula ${\displaystyle c_{i}}$
+\end_inset
+
+ como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle c_{i}=\log_{2}(k)=\log_{2}[1/(1/k)]=\log_{2}(1/p)=\underbrace{\log_{2}(1)}_{=0}-\log_{2}(p)=-\log_{2}(p)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si ahora cada uno de los {
+\backslash
+displaystyle k} k estados tiene una probabilidad 
+\begin_inset Formula ${\displaystyle p_{i}}$
+\end_inset
+
+, entonces la entropía vendrá dada por la suma ponderada de la cantidad
+ de información:
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Teoradelainformacincodificacinylenguajes"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle H=-p_{1}\log_{2}(p_{1})-p_{2}\log_{2}(p_{2})-....-p_{k}\log_{2}(p_{k})=-\sum_{i=1}^{k}p_{i}\log_{2}(p_{i})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto, la entropía de un mensaje 
+\begin_inset Formula ${\displaystyle X}$
+\end_inset
+
+, denotado por 
+\begin_inset Formula ${\displaystyle H(X)}$
+\end_inset
+
+, es el valor medio ponderado de la cantidad de información de los diversos
+ estados del mensaje:
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Teoradelainformacincodificacinylenguajes"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle H(X)=-\sum_{i}p(x_{i})\log_{2}p(x_{i})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+que representa una medida de la incertidumbre media acerca de una variable
+ aleatoria y por tanto de la cantidad de información.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los datos de entrenamiento son un grupo 
+\begin_inset Formula $S=s_{1},s_{2},s_{3},$
 \end_inset
 
 ...
@@ -2513,6 +2688,7 @@ key "Teoradelainformacincodificacinylenguajes"
 \end_inset
 
  representan la clase a la que pertenece cada muestra.
+ 
 \begin_inset Newline newline
 \end_inset
 
@@ -2520,50 +2696,69 @@ key "Teoradelainformacincodificacinylenguajes"
 \end_layout
 
 \begin_layout Standard
-En cada nodo del árbol, C4.5 elige un atributo de los datos que más eficazmente
- dividen el conjunto de muestras en subconjuntos enriquecidos en una clase
- u otra
-\begin_inset CommandInset citation
-LatexCommand citep
-key "ProgramsForMachineLearning"
+El algoritmo considera todas las pruebas posibles que pueden dividir el
+ conjunto de datos y selecciona la prueba que resulta en la mayor ganancia
+ de información.
+ Para cada atributo discreto, se considera una prueba con 
+\begin_inset Formula $n$
+\end_inset
 
+ resultados, siendo n el número de valores posibles que puede tomar el atributo.
+ Para cada atributo continuo, se realiza una prueba binaria sobre cada uno
+ de los valores que toma el atributo en los datos.
+ En cada nodo, el sistema debe decidir cuál prueba escoge para dividir los
+ datos.
+ Los tres tipos de pruebas posibles propuestas por el C4.5 son: 
+\end_layout
+
+\begin_layout Itemize
+La prueba "estándar" para las variables discretas, con un resultado y una
+ rama para cada valor posible de la variable.
+ 
+\end_layout
+
+\begin_layout Itemize
+Una prueba más compleja, basada en una variable discreta, en donde los valores
+ posibles son asignados a un número variable de grupos con un resultado
+ posible para cada grupo, en lugar de para cada valor.
+ S
+\end_layout
+
+\begin_layout Itemize
+Si una variable A tiene valores numéricos continuos, se realiza una prueba
+ binaria con resultados 
+\begin_inset Formula $A\leq Z$
+\end_inset
+
+ y 
+\begin_inset Formula $A>Z$
+\end_inset
+
+, para lo cual debe determinarse el valor límite 
+\begin_inset Formula $Z$
 \end_inset
 
 .
- Su criterio es el normalizado para ganancia de información (diferencia
- de entropía) que resulta en la elección de un atributo para dividir los
- datos.
- El atributo con la mayor ganancia de información normalizada se elige como
- parámetro de decisión.
- El algoritmo C4.5 divide recursivamente en sublistas más pequeñas.
-\begin_inset Newline newline
-\end_inset
-
-
+ 
 \end_layout
 
 \begin_layout Standard
-Este algoritmo tiene unos pocos casos base.
-\end_layout
+Todas estas pruebas se evalúan de la misma manera, mirando el resultado
+ de la proporción de ganancia de información o entropía, o alternativamente,
+ el de la ganancia resultante de la división que producen.
+ Ha sido útil agregar una restricción adicional: para cualquier división,
+ al menos dos de los subconjuntos 
+\begin_inset Formula $C_{i}$
+\end_inset
 
-\begin_layout Itemize
-Todas las muestras en la lista pertenecen a la misma clase.
- Cuando esto sucede, simplemente crea un nodo de hoja para el árbol de decisión
- diciendo que elija esa clase.
+ deben contener un número razonable de casos.
+ Esta restricción, que evita las subdivisiones casi triviales, es tenida
+ en cuenta solamente cuando el conjunto 
+\begin_inset Formula $C$
+\end_inset
+
+ es pequeño.
  
-\end_layout
-
-\begin_layout Itemize
-Ninguna de las características proporciona ninguna ganancia de información.
- En este caso, C4.5 crea un nodo de decisión más arriba del árbol utilizando
- el valor esperado de la clase.
- 
-\end_layout
-
-\begin_layout Itemize
-Instancia de la clase previamente no vista encontrada.
- Una vez más, C4.5 crea un nodo de decisión más arriba en el árbol con el
- valor esperado.
 \end_layout
 
 \begin_layout Subsection
