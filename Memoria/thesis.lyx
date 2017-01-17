@@ -276,26 +276,6 @@ filename "Dedicaciones/Contraportada.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "Resumen/Abstract.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "Resumen/AbstractEnglish.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
 filename "Dedicaciones/Confirmacion.lyx"
 
 \end_inset
@@ -314,6 +294,26 @@ filename "Dedicaciones/ConfirmacionBiblioteca.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "Agradecimientos/Acknowledgments.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "Resumen/Abstract.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "Resumen/AbstractEnglish.lyx"
 
 \end_inset
 

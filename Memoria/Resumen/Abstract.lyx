@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass ociamthesis-lyx
 \options a4paper,titlepage
 \use_default_options true
@@ -10,16 +12,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -103,8 +105,7 @@ Palabras Clave
 \end_layout
 
 \begin_layout Standard
-Red, Juego Multijugador, Dead Reckoning, Técnicas de Predicción, Unity3D
- y EoS.
+Example1, Example2, Example3.
  
 \begin_inset Newline newline
 \end_inset
@@ -125,97 +126,7 @@ Resumen
 \end_layout
 
 \begin_layout Standard
-La industria del videojuego generó en 2013 más de 93000 millones de dólares
- a nivel mundial.
- y se prevé que en 2015 se alcancen los 111000 millones.
- Indudablemente se trata de una industria pujante, y que aprovecha las innovacio
-nes tecnológicas para ofrecer una calidad de experiencia cada vez más exigente
- a sus jugadores.
- Por otro lado, muchos de los juegos de éxito ofrecen la posibilidad de
- jugar en red contra otros jugadores.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Sin embargo, las redes actuales no garantizan los requisitos de calidad
- de servicio (latencia, ancho de banda, variación de retardo, probabilidad
- de pérdidas de paquetes acotada, etc) a este tipo de aplicaciones, por
- lo que se hace necesario implementar esquemas que permitan mitigar la degradaci
-ón de la calidad percibida que pueden introducir las redes.
- En este proyecto se pretende desarrollar un juego con requisitos en tiempo
- real que implemente alguna técnicas de predicción de movimiento o 
-\shape italic
-dead reckoning
-\shape default
-, con el objetivo de realizar una evaluación de la mejora que supone.
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-El nombre del videojuego multijugador en línea que se ha desarrollado se
- ha bautizado como
-\shape italic
- End of Shooter
-\shape default
- (EoS).
- EoS es un 
-\shape italic
-First Person Shooter
-\shape default
- (FPS), género de videojuegos que se caracteriza por requerir un alto nivel
- de interactividad en tiempo real entre los personajes y otras entidades
- que lo componen.
- Este ha sido el principal motivo de elegir este tipo de juegos, ya que
- es un magnífico entorno para evaluar las técnicas de predicción seleccionadas.
- El juego se ha desarrollado mediante el uso de la plataforma 
-\shape italic
-Unity3D
-\shape default
- por que ofrece numerosas facilidades.
- Para poder aplicar las técnicas de predicción al videojuego se han tenido
- que adaptar e implementar sobre un 
-\shape italic
-script
-\shape default
-.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Para la evaluación de las técnicas de predicción se miden distintos aspectos
- del movimiento de los personajes.
- El primero de ellos consiste en medir la fluidez del movimiento de los
- personajes, a partir de las fluctuaciones del movimiento.
- El segundo aspecto será observar el comportamiento del movimiento de los
- personajes cuando se reduce la tasa de envío de mensajes de actualización,
- lo que reduce la tasa de transmisión del servidor.
- Por último, se estudia los errores de las trayectorias cuando se introduce
- una tasa de pérdidas de paquetes en la red.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Se ha conseguido verificar como las técnicas de predicción suavizan las
- trayectorias.
- Permite reducir el error esistente entre los movimientos de los personajes.
- Y además permite enviar a mucha menor tasa de actualización lo que se traduce
- en una reducción de la tasa de transferencia.
- 
+Blablablablablablabla
 \end_layout
 
 \end_body

@@ -1,9 +1,7 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
-\save_transient_properties true
-\origin unavailable
 \textclass ociamthesis-lyx
 \options a4paper,titlepage
 \use_default_options false
@@ -12,16 +10,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
-\font_sans "default" "default"
-\font_typewriter "default" "default"
-\font_math "auto" "auto"
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100 100
-\font_tt_scale 100 100
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -94,10 +92,10 @@ cleardoublepage}
 
 \begin_layout Standard
 D.
- Francisco Javier García Castellano y D.
- Joaquín Abellán Mulero, profesores del Departamento de Ciencias de la Computaci
-ón e Inteligencia Artificial de la Universidad de Granada, como directores
- del Trabajo Fin de Máster de D.
+ Juan José Ramoz Muñoz y D.
+ Juan Manuel López Soler, profesores del Departamento de Teoría de la Señal,
+ Telemática y Comunicaciones de la Universidad de Granada, como directores
+ del Trabajo Fin de Grado de D.
  Saúl Moreno Abril
 \begin_inset Newline newline
 \end_inset
@@ -113,8 +111,7 @@ Informa que el presente trabajo, titulado:
 
 \series bold
 \emph on
-Detección de ataques de Denegación de Servicio usando técnicas de clasificación
- supervisada
+Desarrollo de un Juego en Red con Técnicas de Predicción de Movimiento
 \size larger
 \emph default
 
@@ -127,10 +124,6 @@ Detección de ataques de Denegación de Servicio usando técnicas de clasificaci
 \begin_layout Standard
 Ha sido realizado y redactado por el mencionado alumno bajo nuestra dirección,
  y con esta fecha autorizo a su presentación.
-\begin_inset Separator latexpar
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -219,7 +212,7 @@ de
 \begin_inset space ~
 \end_inset
 
-de 2017.
+de 2015.
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -245,7 +238,7 @@ de 2017.
 \begin_layout Standard
 \align center
 Fdo.
- Francisco Javier García Castellano
+ Juan José Ramos Muñoz
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -271,7 +264,7 @@ Fdo.
 \begin_layout Standard
 \align center
 Fdo.
- Joaquín Abellán Mulero
+ Juan Manuel López Soler 
 \begin_inset Newpage clearpage
 \end_inset
 
