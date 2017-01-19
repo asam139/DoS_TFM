@@ -2585,9 +2585,9 @@ key "Teoradelainformacincodificacinylenguajes"
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 {\displaystyle c_{i}=\log_{2}(k)=\log_{2}[1/(1/k)]=\log_{2}(1/p)=\underbrace{\log_{2}(1)}_{=0}-\log_{2}(p)=-\log_{2}(p)}
-\]
+\end{equation}
 
 \end_inset
 
@@ -2614,9 +2614,9 @@ key "Teoradelainformacincodificacinylenguajes"
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-{\displaystyle H=-p_{1}\log_{2}(p_{1})-p_{2}\log_{2}(p_{2})-....-p_{k}\log_{2}(p_{k})=-\sum_{i=1}^{k}p_{i}\log_{2}(p_{i})}
-\]
+\begin{equation}
+H=-p_{1}\log_{2}(p_{1})-p_{2}\log_{2}(p_{2})-....-p_{k}\log_{2}(p_{k})=-\sum_{i=1}^{k}p_{i}\log_{2}(p_{i})
+\end{equation}
 
 \end_inset
 
@@ -2645,9 +2645,9 @@ key "Teoradelainformacincodificacinylenguajes"
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 {\displaystyle H(X)=-\sum_{i}p(x_{i})\log_{2}p(x_{i})}
-\]
+\end{equation}
 
 \end_inset
 
@@ -2846,9 +2846,9 @@ status open
 
 \end_inset
 
-ve Bayes un algoritmo basados en un principio común: todos los clasificadores
- de Bayes asumen que el valor de una característica particular es independiente
- del valor de cualquier otra característica dada la variable de clase.
+ve Bayes un algoritmo basado en un principio común: el valor de una característi
+ca particular es independiente del valor de cualquier otra característica
+ dada la variable de clase.
  Por ejemplo, una fruta puede ser considerada como una manzana si es roja,
  redonda y de unos 10 cm de diámetro.
  Un clasificador Na
@@ -2943,6 +2943,238 @@ status open
 
 ve Bayes es que sólo requiere un pequeño número de datos de entrenamiento
  para estimar los parámetros necesarios para la clasificación.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Abstractamente, Na
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+"{i}
+\end_layout
+
+\end_inset
+
+ve Bayes es un modelo de probabilidad condicional: dado un conjunto de datos
+ a ser clasificados, representado por un vector 
+\begin_inset Formula $x=(x_{1,}x_{2,}...,x_{n}$
+\end_inset
+
+ representando algunas características o atributos, 
+\begin_inset Formula $n$
+\end_inset
+
+ (variables independientes), asigna a esta instancia las probabilidades
+ 
+\begin_inset Formula $p(C_{k}|x_{1},...,x_{n}$
+\end_inset
+
+ para cada uno de los 
+\begin_inset Formula $K$
+\end_inset
+
+ posibles resultados o clases 
+\begin_inset Formula $C_{k}$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PatternRecognition:AnAlgorithmicApproach."
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El problema con la formulación anterior es que si el número de características
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ es grande o si una característica puede asumir un gran número de valores,
+ entonces basar dicho modelo en tablas de probabilidad es inviable.
+ Por lo tanto, se puede reformular el modelo para que sea más manejable.
+ Usando el teorema de Bayes , la probabilidad condicional se puede descomponer
+ como
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+p(C_{k}|x)=\frac{p(C_{k})p(x|C_{k})}{p(x)})\longrightarrow posterior=\frac{anterior*probabilidad}{evidencia}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la práctica, sólo hay interés en el numerador de esa fracción, porque
+ el denominador no depende de 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Y los valores de las características 
+\begin_inset Formula $F_{i}$
+\end_inset
+
+, de modo que el denominador es efectivamente constante.
+ El numerador es equivalente a una probabilidad compuesta: 
+\begin_inset Formula $p(C_{k},x_{1},...,x_{n})$
+\end_inset
+
+, que puede ser reescrita como sigue, aplicando repetidamente la definición
+ de probabilidad condicional:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+p(C,F1,...,F_{n}=p(C)p(F_{1},...,F_{n}|C)=p(C)p(F_{1}|C)p(F_{2},...F_{n}|C,F_{1})=p(C)p(F_{1}|C)p(F_{2}|C,F_{1})p(F_{3},...F_{n}|C,F_{1},F_{2})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y así sucesivamente.
+ Ahora es cuando el principio común de 
+\begin_inset Quotes eld
+\end_inset
+
+na
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+"{i}
+\end_layout
+
+\end_inset
+
+ve
+\begin_inset Quotes erd
+\end_inset
+
+ de independencia condicional se aplica: se asume que cada 
+\begin_inset Formula $F_{i}$
+\end_inset
+
+es independiente de cualquier otra 
+\begin_inset Formula $F_{j}$
+\end_inset
+
+ para 
+\begin_inset Formula $j\text{≠}i$
+\end_inset
+
+.
+ Esto significa que 
+\begin_inset Formula $p(F_{i}|C,F_{j})=p(F_{i}|C)$
+\end_inset
+
+, y por lo tanto que la probabilidad compuesta puede expresarse como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+p(C,F_{1},...,F_{n})=p(C)p(F_{1}|C)p(F_{2}|C)p(F_{3}|C)...=p(C)\prod_{i=1}^{n}p(F_{i}|C)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esto significa que haciendo estas asunciones, la distribución condicional
+ sobre la variable clasificaroria {
+\backslash
+displaystyle C} C puede expresarse de la siguiente manera:
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PatternRecognition:AnAlgorithmicApproach."
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+p(C|F_{1},...,F_{n})=\frac{1}{Z}p(C)\prod_{i=1}^{n}p(F_{i}|C)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+donde 
+\begin_inset Formula $Z$
+\end_inset
+
+ es un factor que depende sólo de 
+\begin_inset Formula $F_{1},...,F_{n}$
+\end_inset
+
+, es decir, constante si los valores de 
+\begin_inset Formula $F_{i}$
+\end_inset
+
+ son conocidos.
+\begin_inset Newline newline
+\end_inset
+
+Hasta ahora se ha desarrollado el modelo de probabilidad de Bayes.
+ Pero el clasificador combina este modelo junto con la regla de decisión.
+ Una regla común es escoger la hípotesís mas probable; esto se conoce como
+ el máximo a posteriori o regla de decisón MAP.
+ Por lo tanto el clasificador de Bayes es la función que asigna una etiqueta
+ de clase 
+\begin_inset Formula $\hat{y}=C_{k}$
+\end_inset
+
+:
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PatternRecognition:AnAlgorithmicApproach."
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{y}=\underset{k\epsilon\{1,...,K\}}{argmax}p(C_{k})\prod_{i=1}^{n}p(F_{i}|C)
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
