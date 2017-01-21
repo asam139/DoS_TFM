@@ -3443,7 +3443,17 @@ key "AnIntroductiontoSupportVectorMachinesandotherkernel-basedlearningmethods"
 
 , máquinas de vectores de soporte o máquinas de vector soporte (Support
  Vector Machines, SVMs) son un conjunto de algoritmos de aprendizaje supervisado
- desarrollados por Vladimir Vapnik y su equipo en los laboratorios AT&T.
+ desarrollados por Vladimir N.
+ Vapnik y Alexey Ya.
+ Chervonenkis en 1963.
+ En 1992, Bernhard E.
+ Boser , Isabelle M.
+ Guyon y Vladimir N.
+ Vapnik sugirieron una manera de crear clasificadores no lineales aplicando
+ el truco del núcleo a los hiperplanos de máximo margen.
+ [9] Corinna Cortés y Vapnik propusieron la actual encarnación estándar
+ (margen blando) en 1993 y se publicaron en 1995.
+ [1]
 \begin_inset Newline newline
 \end_inset
 
@@ -3456,10 +3466,10 @@ Estos métodos están propiamente relacionados con problemas de clasificación
  Dado un conjunto de ejemplos de entrenamiento (de muestras) podemos etiquetar
  las clases y entrenar una SVM para construir un modelo que prediga la clase
  de una nueva muestra.
- Intuitivamente, una SVM es un modelo que representa a los puntos de muestra
- en el espacio, separando las clases a 2 espacios lo más amplios posibles
- mediante un hiperplano de separación definido como el vector entre los
- 2 puntos, de las 2 clases, mas cercanos al que se llama vector soporte.
+ Intuitivamente, una SVM lineal es un modelo que representa a los puntos
+ de muestra en el espacio, separando las clases a 2 espacios lo más amplios
+ posibles mediante un hiperplano de separación definido como el vector entre
+ los 2 puntos, de las 2 clases, mas cercanos al que se llama vector soporte.
  Cuando las nuevas muestras se ponen en correspondencia con dicho modelo,
  en función de los espacios a los que pertenezcan, pueden ser clasificadas
  a una o la otra clase.
@@ -3494,6 +3504,92 @@ os a un espacio de dimensionalidad superior.
  estarán a un lado del hiperplano y los casos que se encuentren en la otra
  categoría estarán al otro lado.
  Los algoritmos SVM pertenecen a la familia de los clasificadores lineales.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si entramos en una explicación matemática, dado un cojunto de datos de n
+ puntos, 
+\begin_inset Formula $(\overrightarrow{x_{i}},y_{i}),...,(\overrightarrow{x_{n}},y_{n})$
+\end_inset
+
+, donde 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ es 1 o -1, cada uno indicando la clase a la cual el punto 
+\begin_inset Formula $\overrightarrow{x_{i}}$
+\end_inset
+
+ pertenece.
+ Cada 
+\begin_inset Formula $\overrightarrow{x_{i}}$
+\end_inset
+
+ es un vector real p-dimensional.
+ Se quiere encontrar el "hiperplano de máximo margen" que divide el grupo
+ de puntos 
+\begin_inset Formula $\overrightarrow{x_{i}}$
+\end_inset
+
+ para los cuales 
+\begin_inset Formula $y_{i}=1$
+\end_inset
+
+ de los que 
+\begin_inset Formula $y_{i}=-1$
+\end_inset
+
+ , el cual es definido por la distancia entre el hiperplano y el punto 
+\begin_inset Formula $\overrightarrow{x_{i}}$
+\end_inset
+
+ más cercano de cada grupo.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cualquier hiperplano puede ser escrito como el conjunto de datos de puntos
+ 
+\begin_inset Formula $\overrightarrow{x_{i}}$
+\end_inset
+
+ que cumpla:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\overrightarrow{w}*\overrightarrow{x}-b=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+donde 
+\begin_inset Formula $\overrightarrow{w}$
+\end_inset
+
+ es el vector nomal (no necesariamente normalizado) a el hiperplano.
+ El parámetro 
+\begin_inset Formula $\frac{b}{||\overrightarrow{w}\text{||}}$
+\end_inset
+
+determina el desplazamiento del hiperplano desde el origen a lo largo del
+ vector 
+\begin_inset Formula $\overrightarrow{w}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection

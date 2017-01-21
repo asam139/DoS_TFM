@@ -432,7 +432,8 @@ reference "chap:Implementacion"
 
 \end_inset
 
- se explica la descripción de los datos y las herramientas utilizadas.
+ se muestra la implementación de cada parte, centrandose en ...
+ .
  
 \begin_inset Newline newline
 \end_inset
@@ -449,7 +450,8 @@ reference "chap:Evaluación"
 \end_inset
 
  se lleva a cabo la evaluación de los resultados obtenidos de las pruebas
- sobre los diferentes tipos de clasificadores que se han probado.
+ sobre los diferentes tipos de clasificadores que se han implementado por
+ medio de varios casos y métricas.
  Finalmente hablaremos de las tendencias futuras y las conclusiones que
  se han obtenido.
  Por último se presenta el capítulo 
@@ -459,8 +461,7 @@ reference "chap:Conclusiones"
 
 \end_inset
 
- donde se comentan las conclusiones obtenidas a lo largo del trabajo y tendencia
-s futuras y el capítulo 
+ donde se comentan los resultados obtenidos y el capítulo 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "chap:Planicación"
