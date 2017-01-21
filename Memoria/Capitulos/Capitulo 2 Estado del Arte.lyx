@@ -1841,8 +1841,7 @@ key "problemasPvsNP"
 
 , por lo que gran parte de la investigación realizada en aprendizaje automático
  está enfocada al diseño de soluciones factibles a esos problemas.
- El aprendizaje automático puede ser visto como un intento de automatizar
- algunas partes del método científico mediante métodos matemáticos.
+ 
 \begin_inset Newline newline
 \end_inset
 
@@ -1857,8 +1856,6 @@ Algunos sistemas de aprendizaje automático intentan eliminar toda necesidad
  De todas formas, la intuición humana no puede ser reemplazada en su totalidad,
  ya que el diseñador del sistema ha de especificar la forma de representación
  de los datos y los métodos de manipulación y caracterización de los mismos.
- Sin embargo, las computadoras son utilizadas por todo el mundo con fines
- tecnológicos muy buenos.
 \begin_inset Newline newline
 \end_inset
 
@@ -1879,9 +1876,7 @@ key "AnIntroductiontoMachineLearning"
  De la misma forma, estas técnicas son utilizadas para predecir con un cierto
  grado de precisión, siempre y cuando los datos que se utilicen en el inicio
  sean lo suficientemente correctos.
- Una de las partes fundamentales del aprendizaje automatico es la clasificación
- o regresión.
- En este trabajo nos centraremos en la primera de ella.
+ 
 \begin_inset Newline newline
 \end_inset
 
@@ -1889,7 +1884,7 @@ key "AnIntroductiontoMachineLearning"
 \end_layout
 
 \begin_layout Standard
-Otra parte fundamental es obtener un modelo para los datos.
+El objetivo es lograr un modelo para los datos.
  Existen diferentes tipos de modelos que se pueden crear a partir de los
  datos.
  Entre ellos se distinguen
@@ -1944,7 +1939,7 @@ En esta sección se realizará una introducción a la IA, en la cual se explicar
 \end_layout
 
 \begin_layout Subsection
-Clasificación
+Aprendizaje Automático: clasificación
 \end_layout
 
 \begin_layout Standard
@@ -1986,12 +1981,16 @@ key "AnIntroductiontoMachineLearning"
 \begin_layout Standard
 Antes de proceder a comentar los tipos de clasificación es importante ver
  el procedimiento que se lleva acabo en toda tarea de clasificación.
- Lo primero es tener dos conjuntos de datos, el de entrenamiento y el de
- prueba.
- El primero de ellos contiene todos los atributos incluyendo el de clase.
- Mientras que el de prueba no contiene el atributo de prueba.
- De este modo el objetivo es obtener este atributo para los datos de test
- de modo que cada instancia quede correctamente valorada.
+ En nuestro caso, tenemos dos conjuntos de datos, el de entrenamiento y
+ el de prueba.
+ El primero de ellos contiene todos los atributos, los cuales son distintas
+ medidas del tráfico de red y la variable de clase que nos indica si hay
+ o no un ataque DDoS y qué tipo de ataque es.
+ Cada instancia nos da el estado de la red en un intervalo de tiempo y que
+ tipo de ataque se está produciendo con esas condiciones de red.
+ Mientras que el de prueba no contiene el atributo de clase.
+ De este modo el objetivo es obtener el atributo de clase para los datos
+ de test de modo que cada instancia quede correctamente valorada.
  Para lograr esto existen una gran cantidad de algoritmos que serán los
  que creen un modelo a partir de los datos de entrenamiento y con el cual
  predecir el valor de la clase para cada instancia del conjunto de test
@@ -2008,10 +2007,12 @@ Por último, los problemas de clasificación se dividen en dos subconjuntos
  a su vez, los supervisados y no supervisados.
  La diferencia reside en la información disponible en los conjuntos de datos
  con las que el sistema tiene que trabajar.
-\end_layout
+ Nos centraremos en el aprendizaje supervisado ya que es en el que se profundiza
+ en el trabajo.
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Subsubsection
-Clasificación supervisada
+
 \end_layout
 
 \begin_layout Standard
@@ -2040,6 +2041,32 @@ key "aprendizajeAutomaticoSupervisado"
  entrada y el de clase.
  Estas relaciones son establecidas en un modelo con el cual se predicen
  los valores de clase para los datos de prueba.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como contrapartida y sin desarrollar, el aprendizaje no supervisado se distingue
+ del aprendizaje supervisado por el hecho de que no hay un conocimiento
+ a priori, es decir no se tiene el atributo de clase de los datos de entrenamien
+to.
+ El aprendizaje no supervisado debido a que sería como una clasificación
+ a ciegas, típicamente trata los objetos de entrada como un conjunto de
+ variables aleatorias, siendo construido un modelo de densidad para el conjunto
+ de datos
+\begin_inset CommandInset citation
+LatexCommand citep
+key "UnsupervisedclassificationofmajordepressionusingfunctionalconnectivityMRI"
+
+\end_inset
+
+.
+ Esto sería como formar grupos heterogéneos que compartar características
+ y que permita a las nuevas intancias ser localizadas en uno de los grupos,
+ es decir etiquetarlas.
+ 
 \begin_inset Newline newline
 \end_inset
 
@@ -2080,6 +2107,10 @@ s y poder calcular la probabilidad condicionada de la clase dada cualquier
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Clasificadores:
 \end_layout
 
 \begin_layout Standard
@@ -2211,40 +2242,25 @@ key "Acomparativestudyonthepredictiveabilityofthedecisiontreesupportvectormachin
 \end_layout
 
 \begin_layout Itemize
-Algoritmos genéticos: aparecen a partir de 1970.
- Son métodos adaptativos que pueden usarse para resolver problemas de búsqueda
- y optimización.
- Están basados en el proceso genético de los organismos vivos.
- A lo largo de las generaciones, las poblaciones evolucionan en la naturaleza
- de acorde con los principios de la selección natural y la supervivencia
- de los más fuertes, postulados por Darwin.
- Por imitación de este proceso, los algoritmos genéticos son capaces de
- ir creando soluciones para problemas del mundo real.
- La evolución de dichas soluciones hacia valores óptimos del problema depende
- en buena medida de una adecuada codificación de las mismas.
- Un algoritmo genético consiste en una función matemática o una rutina de
- software que toma como entradas a los ejemplares y retorna como salidas
- cuales de ellos deben generar descendencia para la nueva generación
+Logictic Regression (LogR): la regresión estadística es un tipo de análisis
+ de regresión utilizado para predecir el resultado de una variable categórica
+ (una variable que puede adoptar un número limitado de categorías) en función
+ de las variables independientes o predictoras
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Short-termwindspeedforecastingusingwavelettransformandsupportvectormachinesoptimizedbygeneticalgorithm"
+key "ModelosEstadsticos:TeorayPrctica"
 
 \end_inset
 
 .
- Versiones más complejas de algoritmos genéticos generan un ciclo iterativo
- que directamente toma a la especie (el total de los ejemplares) y crea
- una nueva generación que reemplaza a la antigua una cantidad de veces determina
-da por su propio diseño.
- Una de sus características principales es la de ir perfeccionando su propia
- heurística en el proceso de ejecución, por lo que no requiere largos períodos
- de entrenamiento especializado por parte del ser humano, principal defecto
- de otros métodos para solucionar problemas.
- 
+ Se trata de una técnica estadística y por lo tanto no proviene de la integencia
+ artificial.
+ Pero aún así tiene muy buenos resultados como clasificador en aprendizaje
+ supervisado.
 \end_layout
 
 \begin_layout Subsubsection
-Clasificación no supervisada
+Aprendizaje no supervisado
 \end_layout
 
 \begin_layout Standard
