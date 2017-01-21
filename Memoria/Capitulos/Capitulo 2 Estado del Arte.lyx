@@ -1832,7 +1832,7 @@ key "patternRecognitionAndMachineLearning"
  Es, por lo tanto, un proceso de inducción del conocimiento.
  El aprendizaje automático se centra en el análisis de los datos y el estudio
  de la complejidad computacional de los problemas.
- Muchos problemas son de clase NP-hard
+ Muchos problemas son de clase NP-duros
 \begin_inset CommandInset citation
 LatexCommand citep
 key "problemasPvsNP"
