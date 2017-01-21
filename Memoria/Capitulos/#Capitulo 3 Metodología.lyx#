@@ -2986,7 +2986,14 @@ ve Bayes es un modelo de probabilidad condicional: dado un conjunto de datos
 \end_inset
 
 .
- [7]
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PatternRecognition:AnAlgorithmicApproach."
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3103,6 +3110,13 @@ Esto significa que haciendo estas asunciones, la distribución condicional
  sobre la variable clasificaroria {
 \backslash
 displaystyle C} C puede expresarse de la siguiente manera:
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PatternRecognition:AnAlgorithmicApproach."
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3142,13 +3156,20 @@ Hasta ahora se ha desarrollado el modelo de probabilidad de Bayes.
 \begin_inset Formula $\hat{y}=C_{k}$
 \end_inset
 
- :
+:
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PatternRecognition:AnAlgorithmicApproach."
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\hat{y}=\underset{k\epsilon\{1,...,K\}}{argmax}p(C_{k})
+\hat{y}=\underset{k\epsilon\{1,...,K\}}{argmax}p(C_{k})\prod_{i=1}^{n}p(F_{i}|C)
 \end{equation}
 
 \end_inset
@@ -3157,7 +3178,235 @@ Hasta ahora se ha desarrollado el modelo de probabilidad de Bayes.
 \end_layout
 
 \begin_layout Subsection
-LogR (lo mismo tiene otro nombre para buscar informacion de él)
+LogR: Logictic Regression
+\end_layout
+
+\begin_layout Standard
+La regresión logística o LogR
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "LogR"
+description "Logictic Regression"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ModelosEstadsticos:TeorayPrctica"
+
+\end_inset
+
+es un tipo de análisis de regresión utilizado para predecir el resultado
+ de una variable que se puede categorizar, es decir, una variable qu epuede
+ adoptar un número limitado de categorías en función de variables, característic
+as o atributos.
+ Es útil para modelar la probabilidad de un evento ocurriendo como función
+ de otros factores.
+ El análisis LogR se enmarca en el conjunto de Ge (GLM por sus siglas en
+ inglés) que usa como función de enlace la función logit.
+ Las probabilidades que describen el posible resultado de un único ensayo
+ se modelan, como una función de variables explicativas, utilizando una
+ función logística.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La variable solo puede tener dos valores, es decir sólo dos valores 
+\begin_inset Quotes eld
+\end_inset
+
+0
+\begin_inset Quotes erd
+\end_inset
+
+ y 
+\begin_inset Quotes eld
+\end_inset
+
+1
+\begin_inset Quotes erd
+\end_inset
+
+, se denomina regresión lógistica binaria, la cual se explicará.
+ En cambio si puede tener más ya se de habla de regresión lógistica multinomial.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La regresión logística fue desarrollada por el estadístico David Cox en
+ 1958.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Estimationoftheprobabilityofaneventasafunctionofseveralindependentvariables"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Theregressionanalysisofbinarysequenceswithdiscussion"
+
+\end_inset
+
+ El modelo logístico binario se utiliza para estimar la probabilidad de
+ una respuesta binaria basada en una o más variables predictor (o independientes
+) (características).
+ Permite decir que la presencia de un factor de riesgo aumenta la probabilidad
+ de un determinado resultado por un porcentaje específico.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La regresión logística se utiliza en varios campos, incluyendo el aprendizaje
+ automático, la mayoría de los campos médicos y las ciencias sociales.
+ Por ejemplo, la regresión logística puede usarse para predecir si un paciente
+ tiene una enfermedad dada (por ejemplo, diabetes , enfermedad coronaria),
+ basándose en las características observadas del paciente (edad, sexo, índice
+ de masa corporal  , resultados de varios análisis de sangre , etc.).
+ Ser utilizados en ingeniería , especialmente para predecir la probabilidad
+ de fallo de un proceso, sistema o producto dado.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una explicación de la regresión logística puede comenzar con una explicación
+ de la función logística estándar.
+ La función logística es útil porque puede tomar cualquier entrada real
+ 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $(t\epsilon R)$
+\end_inset
+
+ , mientras que la salida siempre toma valores entre cero y uno [14] y por
+ lo tanto es interpretable como una probabilidad.
+ La función logística 
+\begin_inset Formula $\sigma(t)$
+\end_inset
+
+ se define como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\sigma(t)=\frac{e^{t}}{e^{t}+1}=\frac{1}{1+e^{-t}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suponiendo que 
+\begin_inset Formula $t$
+\end_inset
+
+ es una función lineal de una sola variable 
+\begin_inset Formula $x$
+\end_inset
+
+, entonces se puede expresar 
+\begin_inset Formula $t$
+\end_inset
+
+ como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+t=\beta_{0}+\beta_{1}x
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y la función lógistica ahora se puede escribir como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+F(x)=\frac{1}{1+e^{-(\beta_{0}+\beta_{1}x)}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F(x)$
+\end_inset
+
+ se interpreta como la probabilidad de que la variable dependiente sea igual
+ a 
+\begin_inset Quotes eld
+\end_inset
+
+éxito
+\begin_inset Quotes erd
+\end_inset
+
+ o 
+\begin_inset Quotes eld
+\end_inset
+
+caso
+\begin_inset Quotes erd
+\end_inset
+
+, más que fallo o sin éxito.
+ Y haciendo uso de F(x) se define la inversa de la función logística, logit,
+ como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+g(F(x))=ln\left(\frac{F(x)}{1-F(x)}\right)=\beta_{0}+\beta_{1}x\longrightarrow\frac{F(x)}{1-F(x)}=e^{\beta_{0}+\beta_{1}x}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las probabilidades de que la variable dependiente sea igual a un caso (dada
+ alguna combinación lineal 
+\begin_inset Formula $x$
+\end_inset
+
+ de las variables predictor) es equivalente a la función exponencial de
+ la expresión de regresión lineal.
+ Esto ilustra cómo el logit sirve como una función de enlace entre la probabilid
+ad y la expresión de regresión lineal.
+ Dado que el logit oscila entre infinito negativo y positivo, proporciona
+ un criterio adecuado sobre el cual conducir la regresión lineal y el logit
+ se convierte fácilmente de nuevo en las probabilidades.
+ [14]
 \end_layout
 
 \begin_layout Subsection
