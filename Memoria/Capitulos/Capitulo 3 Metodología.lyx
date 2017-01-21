@@ -3727,8 +3727,8 @@ description "Imprecise Dirichlet Model"
 
 ).
  El proceso de selección de variables para este algoritmo se basa en probabilida
-des imprecisas y medidas de incertidumbre en conjuntos acredenciados, es
- decir cerrados y convexos de distribuciones de probabilidad.
+des imprecisas y medidas de incertidumbre en conjuntos credales, es decir
+ cerrados y convexos de distribuciones de probabilidad.
  De esta manera, este algoritmo considera que el conjunto de entrenamiento
  no es confiable cuando se lleva a cabo el proceso de selección de variables.
  Este método obtiene buenos resultados experimentales, especialmente cuando
@@ -3756,7 +3756,7 @@ key "Analysisandextensionofdecisiontreesbasedonimpreciseprobabilities:applicatio
 \begin_layout Standard
 El criterio de división utilizado para construir CDTs se basa en probabilidades
  imprecisas y en la aplicación de medidas de incertidumbre en los conjuntos
- acredenciados
+ credales
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Buildingclassificationtreesusingthetotaluncertaintycriterion"
@@ -3837,7 +3837,7 @@ el tamaño de la muestra y
 \end_layout
 
 \begin_layout Standard
-Este tipo de reperesentación ofrece un tipo específico de cojunto acredidato
+Este tipo de reperesentación ofrece un tipo específico de conjunto credal
  en la variable 
 \begin_inset Formula $Z,K(Z)$
 \end_inset
@@ -3866,7 +3866,7 @@ K(Z)=\left\{ p|p(z_{j})\epsilon\left[\frac{n_{z_{j}}}{N+s},\frac{n_{z_{j}}+s}{N+
 \begin_layout Standard
 En este tipo de conjuntos, pueden ser aplicadas medidas imprecisas.
  El procedimiento para construir CDTs utilza la función máxima de entropía
- en el cojunto de credenciales definido anteriormente.
+ en el cojunto de credales definido anteriormente.
  Esta función denominada como 
 \begin_inset Formula $H*$
 \end_inset
