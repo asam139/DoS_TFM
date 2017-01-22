@@ -260,14 +260,7 @@ ping
 \shape default
  de la muerte: es un tipo de ataque enviado a una computadora que consiste
  en mandar numerosos paquetes ICMP muy grandes (mayores a 65.535 bytes) con
- el fin de colapsar el sistema atacado
-\begin_inset CommandInset citation
-LatexCommand citep
-key "HACKINGtheartofexploitation"
-
-\end_inset
-
-.
+ el fin de colapsar el sistema atacado.
  Es un tipo de ataque a computadoras que implica enviar un ping deformado
  a una computadora.
  Un 
@@ -301,14 +294,7 @@ SMURF o ataque pitufo: es un ataque de denegación de servicio que utiliza
 \shape italic
 ping
 \shape default
- al broadcast falsificando su identiddad para inundar un objetivo
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Fraggleattack"
-
-\end_inset
-
-.
+ al broadcast falsificando su identiddad para inundar un objetivo.
  En este tipo de ataque, el atacante envía grandes cantidades de tráfico
  ICMP (
 \shape italic
