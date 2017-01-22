@@ -2436,65 +2436,12 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="4">
-<features rotate="90" islongtable="true" firstHeadTopDL="true" firstHeadBottomDL="true" headTopDL="true" headBottomDL="true" longtabularalignment="center">
+<lyxtabular version="3" rows="4" columns="4">
+<features rotate="90" islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="middle" width="2cm">
 <column alignment="center" valignment="middle" width="2cm">
 <column alignment="center" valignment="middle" width="5cm">
 <column alignment="center" valignment="middle" width="5cm">
-<row endhead="true" endfirsthead="true" caption="true">
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Tipos de aciertos y errores.
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Tipos-de-aciertos"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
 <row endhead="true" endfirsthead="true">
 <cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" width="3cm">
 \begin_inset Text
@@ -2655,6 +2602,10 @@ Verdadero positivo (diagnóstivo negativo, ataque presente)
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2890,7 +2841,14 @@ key "Improvementinintrusiondetectionwithadvancesinsensorfusion"
 
 \end_inset
 
- , sobre IDS invididuales.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Improvingintrusiondetectionforimbalancednetworktraffic"
+
+\end_inset
+
+, sobre IDS invididuales.
  
 \begin_inset Newline newline
 \end_inset
@@ -2899,11 +2857,17 @@ key "Improvementinintrusiondetectionwithadvancesinsensorfusion"
 \end_layout
 
 \begin_layout Standard
-Un estudio realizado en [15] donde se compara los algoritmos de aprendizaje
- automático en relación con la detección de ataques muestra todos los detalles
- y evaluaciónes.
+Un estudio realizado en 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Comparativeanalysisofmachinelearningalgorithmsalongwithclassifiersfornetworkintrusiondetection"
+
+\end_inset
+
+ donde se compara los algoritmos de aprendizaje automático en relación con
+ la detección de ataques muestra todos los detalles y evaluaciónes.
  Este estudio resalta los arboles de decisión aleatorios (Random Forest)
- y las redes ¡bayesianas como los candidatos adecuados para la dección de
+ y las redes bayesianas como los candidatos adecuados para la dección de
  intrusiones basadas en el cojunto NSL-KDD.
 \end_layout
 
