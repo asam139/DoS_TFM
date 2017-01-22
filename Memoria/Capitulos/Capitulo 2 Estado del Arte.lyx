@@ -2109,7 +2109,7 @@ s y poder calcular la probabilidad condicionada de la clase dada cualquier
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Clasificadores:
 \end_layout
 
@@ -2257,6 +2257,466 @@ key "ModelosEstadsticos:TeorayPrctica"
  artificial.
  Pero aún así tiene muy buenos resultados como clasificador en aprendizaje
  supervisado.
+\end_layout
+
+\begin_layout Subsection
+Evaluación de Clasificadores
+\end_layout
+
+\begin_layout Standard
+Es muy importante cuando se construye o usa un clasificador evaluar de alguna
+ manera lo bueno o malo que es
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Computersystemsthatlearn:Classificationandprediction.Methodsfromstatisticsneurlanetsmachinelearningandexpertsystems"
+
+\end_inset
+
+.
+ Por ejemplo, en nuestro caso usamos los clasificadores para la detección
+ de ataques de denegación de servicio, y por lo tanto no nos podemos permitir
+ un clasificador que falle dos de cada tres veces.
+ A la hora de evaluar un clasificador se tienen en cuenta distintos aspectos
+ como son el tiempo en construirlo, la interpretabilidad del modelo obtenido,
+ la sencillez del modelo (cuanto más sencillo, mayor capacidad de abstracción),
+ pero el aspecto que mayor relevancia toma es la precisión del clasificador
+ (o a la inversa la tasa de error) que ofrece.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La precisión de un clasificador es la probabilidad con la que clasifica
+ correctamente un caso seleccionado al azar, o también, lo podemos ver comom
+ el número de casos clasificados correctamente entre el número total de
+ elementos.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Wrappersforperformanceenhancementandobliviousdecisiongraphs"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+precisión=\frac{número\:de\:aciertos}{número\:de\:casos}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Además de ser la medida más aceptada para la evaluación de un clasificador,
+ la precisión es utiliza en algunos procedimientos para guiar la construcción
+ del clasificador, por ello vamos a exponer distintas formas de obtener
+ su valor:
+\end_layout
+
+\begin_layout Itemize
+Estimación por resustitución (resubstitution estimate) o error aparente:
+ es el modo más simple, consiste en utilizar los mismo datos que se han
+ utilizado para construir el modelo para ver cuántos predice correctamente.
+\end_layout
+
+\begin_layout Itemize
+Holdout: se basa en partir del conjunto de datos aleatoriamente en dos.
+ El cojunto de entrenamiento con el cual se construye el clasificador y
+ el conjunto de prueba o validación usado para estimar la precisión del
+ clasificador.
+\end_layout
+
+\begin_layout Itemize
+Remuestreo (random subsampling): es una variación del sistema anterior donde
+ se realizan diferentes particiones de los conjuntos de entrenamiento y
+ test.
+ Obteniéndose la precisión del clasificador a partir de la media obtenida
+ en los distintos cojuntos de test.
+\end_layout
+
+\begin_layout Itemize
+Validación cruzada de k-hojas (k-fold cross-validation)
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Cross-validationchoiceandassessmentofstatisticalpredictions"
+
+\end_inset
+
+: se puede ver como una generalización del criterio de remuestreo.
+ Hacemos k particiones del conjunto de datos mutuamente excluyentes y de
+ igual tamaño.
+ k-1 conjuntos se utilizan para construir el clasificador y se valida con
+ el conjunto restante.Este paso se efectúa k veces y la estimación de la
+ precisión del clasificador se obtiene como la media de las k mediciones
+ realizadas.
+\end_layout
+
+\begin_layout Itemize
+Dejar-uno-fuera (leave-one-out)
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Estimationoferrorratesindiscriminantanalysis"
+
+\end_inset
+
+: es un caso particular de la validación cruzada, donde se hacen tantas
+ particiones como casos tenga el conjunto de datos.
+ De esta forma los conjuntos de validación tienen un sólo caso y los de
+ entrenamiento todos los casos menos ese en particular.
+ Al tener que construir el clasificador tantas veces como casos tenga el
+ conjunto de datos se hace bastante costoso en tiempo, a no ser que se pueda
+ obtener una fórmula cerrada para el error.
+\end_layout
+
+\begin_layout Itemize
+Bootstrapping
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ROCgraphs:Notesandpracticalconsiderationsforresearchers."
+
+\end_inset
+
+: para evaluar un clasificador de forma efectiva cuando se tiene conjuntos
+ de datos con pocasmuestras se suele utilizar el método de dejar-uno-fuera.
+ No obstante, con conjuntos pequeños de datos, suele mostrar una varianza
+ alta.
+ El bootstrapping (o bootstrap) es un método de remuestreo propuesto por
+ Bradley Efron en 1979
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Bootstrapmethods:Anotherlookatthejackknife."
+
+\end_inset
+
+, donde para una muestra de tamñao n se genera el conjunto de entrenamiento
+ con n casos mediante muestreo con reemplazamiento, es decir, cogemos un
+ caso de forma aleatoria del conjunto d edatos para el conjunto de entrenamiento
+ y lo volvemos a dejar en el cojunto de entrenamiento.
+ El conjunto de test se genera cogiendo aquellos casos que no estén en el
+ conjunto de entrenamiento.
+ Este proceso se realiza un número elevado de veces.
+ La media de las distintas precisiones calculadas sirve como estimación
+ de la precisión verdadera.
+\end_layout
+
+\begin_layout Standard
+\align left
+Algunas veces también es importante conocer no solo la precisión del clasificado
+r, sino también el sentido en el que se equivoca
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ModelosBayesianosparalaclasificacinsupervisada.Aplicacionesalanlisisdedatosdeexpresingrfica"
+
+\end_inset
+
+.
+ En la tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Tipos-de-aciertos"
+
+\end_inset
+
+ se pueden ver los distintos tipos.
+ A partir de esta tabla se pueden obtener otras medidas de utilizada.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features rotate="90" islongtable="true" firstHeadTopDL="true" firstHeadBottomDL="true" headTopDL="true" headBottomDL="true" longtabularalignment="center">
+<column alignment="left" valignment="middle" width="2cm">
+<column alignment="center" valignment="middle" width="2cm">
+<column alignment="center" valignment="middle" width="5cm">
+<column alignment="center" valignment="middle" width="5cm">
+<row endhead="true" endfirsthead="true" caption="true">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tipos de aciertos y errores.
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Tipos-de-aciertos"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row endhead="true" endfirsthead="true">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" width="3cm">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Tipos
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Ataque DDoS
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ausente
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Presente
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Diagnóstico
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nevativo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Verdadero negativo (diagnóstivo negativo, ataque ausente)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Falso negativo (diagnóstivo negativo, ataque presente)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Positivo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Falso positivo (diagnóstico positivo enfermedad ausente)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Verdadero positivo (diagnóstivo negativo, ataque presente)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La sensibilidad es la capaciddad del clasificador para detectar a la clase
+ positiva, la que más interesa.
+ Se define como
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ModelosBayesianosparalaclasificacinsupervisada.Aplicacionesalanlisisdedatosdeexpresingrfica"
+
+\end_inset
+
+.:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+sensibilidad=\frac{verdaderos\:positivos}{verdaderos\:positivos+falsos\:negativos}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por otro lado, se define la especificidad como la capacidad de clasificar
+ correctamente a un flujo el cual no sea un ataque.
+ Se puede calcular como
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ModelosBayesianosparalaclasificacinsupervisada.Aplicacionesalanlisisdedatosdeexpresingrfica"
+
+\end_inset
+
+.:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+sensibilidad=\frac{verdaderos\:negativos}{verdaderos\:negativos+falsos\:positivos}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En problemas donde distinguir el tipo de error es importante, se pueden
+ utilizar las curvas ROC (Receiver Operating Characteristics).
+ Son curvas en las que se presenta la sensibilidad en función de los falsos
+ positivos para distintos resultados de un clasificador.
+ 
 \end_layout
 
 \end_body
