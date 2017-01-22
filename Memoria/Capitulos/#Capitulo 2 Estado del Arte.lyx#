@@ -2378,7 +2378,7 @@ key "Estimationoferrorratesindiscriminantanalysis"
 Bootstrapping
 \begin_inset CommandInset citation
 LatexCommand citep
-key "AnIntroductiontothebootstrap"
+key "ROCgraphs:Notesandpracticalconsiderationsforresearchers."
 
 \end_inset
 
@@ -2406,8 +2406,16 @@ key "Bootstrapmethods:Anotherlookatthejackknife."
 \end_layout
 
 \begin_layout Standard
+\align left
 Algunas veces también es importante conocer no solo la precisión del clasificado
-r, sino también el sentido en el que se equivoca.
+r, sino también el sentido en el que se equivoca
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ModelosBayesianosparalaclasificacinsupervisada.Aplicacionesalanlisisdedatosdeexpresingrfica"
+
+\end_inset
+
+.
  En la tabla 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2421,52 +2429,6 @@ reference "tab:Tipos-de-aciertos"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-La sensibilidad es la capaciddad del clasificador para detectar a la clase
- positiva, la que más interesa.
- Se define como:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-sensibilidad=\frac{verdaderos\:positivos}{verdaderos\:positivos+falsos\:negativos}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Por otro lado, se define la especificidad como la capacidad de clasificar
- correctamente a un flujo el cual no sea un ataque.
- Se puede calcular como:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-sensibilidad=\frac{verdaderos\:negativos}{verdaderos\:negativos+falsos\:positivos}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-En problemas donde distinguir el tipo de error es importante, se pueden
- utilizar las curvas ROC (Receiver Operating Characteristics).
- Son curvas en las que se presenta la sensibilidad en función de los falsos
- positivos para distintos resultados de un clasificador.
- 
-\end_layout
-
-\begin_layout Standard
-\align center
 \begin_inset Float table
 wide false
 sideways false
@@ -2699,6 +2661,250 @@ Verdadero positivo (diagnóstivo negativo, ataque presente)
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+La sensibilidad es la capaciddad del clasificador para detectar a la clase
+ positiva, la que más interesa.
+ Se define como
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ModelosBayesianosparalaclasificacinsupervisada.Aplicacionesalanlisisdedatosdeexpresingrfica"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+sensibilidad=\frac{verdaderos\:positivos}{verdaderos\:positivos+falsos\:negativos}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por otro lado, se define la especificidad como la capacidad de clasificar
+ correctamente a un flujo el cual no sea un ataque.
+ Se puede calcular como
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ModelosBayesianosparalaclasificacinsupervisada.Aplicacionesalanlisisdedatosdeexpresingrfica"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+sensibilidad=\frac{verdaderos\:negativos}{verdaderos\:negativos+falsos\:positivos}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En problemas donde distinguir el tipo de error es importante, se pueden
+ utilizar las curvas ROC (Receiver Operating Characteristics).
+ Son curvas en las que se presenta la sensibilidad en función de los falsos
+ positivos para distintos resultados de un clasificador.
+ 
+\end_layout
+
+\begin_layout Subsection
+Trabajos previos
+\end_layout
+
+\begin_layout Standard
+Existen multitud de trabajos en los cuales se usan los clasificadores para
+ detectar ataques DDoS.
+ Entre estos trabajos se encuentra el de Gil y Poletto, en el que se supone
+ que las tasas de paquetes entre dos son dispositivos son proporcionales
+ durante el funcionamiento normal 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "MULTOPS:Adatastructureforbandwidthattackdetection"
+
+\end_inset
+
+.
+ Este trabajo hace uso de una estructura de árbol dinámico conocido como
+ Multi Level Tree for Online Packet Statistics (MULTOPS) para monitorear
+ las tarifas de paquetes para cada dirección IP.
+ Wang y otros propusieron un método exclusivamente para detectar la inundación
+ SYN mediante el seguimiento de los cambios estadísticos en la relación
+ de los paquetes SYN a los paquetes FIN y RST 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DectionOfDDoSAttacks_Article"
+
+\end_inset
+
+.
+ Kulkarni y otros rastrearón las direcciones IP de origen y construyó Kolmogorov
+ Complexity Metrics para identificar su aleatoriedad.
+ De hecho, la aleatoriedad de las direcciones IP de origen es muy baja sin
+ ningún ataque DDoS; De lo contrario, es muy alta en los ataques DDoS con
+ direcciones IP de origen distribuidas aleatoriamente 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DetectingDistributedDenialofServiceAttackusingKolmogorovcomplexitymetrics"
+
+\end_inset
+
+.
+ Mirkovic y Reiher presentaron el método conocido como D-WARD, que se comporta
+ como un cortafuegos el cuál supervisa los cambios estadísticos de los parámetro
+s de los modelos de tráfico entrante y saliente 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "D-WARDasourceenddefenceagainstfloodingdenialofserviceattacks"
+
+\end_inset
+
+.
+ Los ataques pueden mezclar cuidadosamente diferentes tipos de tráfico para
+ asegurar que la proporción de cada traza es la misma que en la normal.
+ Por lo tanto, este escenario afectará a la suposición inicial hecha en
+ la construcción de los modelos con los algoritmos anteriores.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los trabajos de investigación en el campo de los algoritmos de aprendizaje
+ automático sugieren que una amplia variedad de algoritmos supervisados
+ de aprendizaje automático pueden ser utilizados por su eficiente caracterizació
+n de vectores de ataque en evolución, lo que a su vez ayuda a la detección
+ de DDoS 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Neuralnetworksvs.decisiontreesforintrusiondetection"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Artificialneuralnetworksarchitectureforintrusiondetectionsystemsandclassificationofattacks"
+
+\end_inset
+
+.
+ Bouzida y otros, en su trabajo, amplían la definición de detección de anomalías
+ para considerar ataques conocidos y perfiles normales para explorar técnicas
+ supervisadas de aprendizaje de máquinas.
+ Exploran la eficacia de las redes neuronales y los árboles de decisión
+ para la detección de intrusiones 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Neuralnetworksvs.decisiontreesforintrusiondetection"
+
+\end_inset
+
+.
+ Los algoritmos basados en arboles de decisión han demostrado su eficacia
+ en la predicción de las diferentes clases de los datos no etiquetados en
+ el cojunto de datos de prueba para el concurso de detección de intrudos
+ KDD 99.
+ Los resultados experimentales demuestran que si bien las redes neuronales
+ son muy existoas en la detección de ataques conocidos, los árboles de decisión
+ son más capaces de detectar nuevos ataques 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Neuralnetworksvs.decisiontreesforintrusiondetection"
+
+\end_inset
+
+.
+ Li y otros demuestran un sistema de detección DDoS qeu utiliza una red
+ neuroal LVQ para la detección de anomalías y a través de este método ellos
+ podían mejorar la tasa de detección del sistema 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DDoSAttackDetectionBasedOnNeuralNetwork"
+
+\end_inset
+
+.
+ Gumus y su equipo, presentarón una implementación adaptativa del algoritmo
+ Naive Bayes con pesos exponenciales para una media móvil y la desviación
+ estándar 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "OnlineNaiveBayesclassificationforNetworkIntrusionDetection"
+
+\end_inset
+
+.
+ También comparan las adaptaciones de varios algoritmos de aprendizaje automátic
+o en el conjunto de datos de detección de intrusos KDD 99.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El trabajo de Arun Raj Kumar y Selvakumar se centra en la identificación
+ de ataques de inundación de alta tasa con alta precisión y pocas falsas
+ alarmas haciendo uso de sistemas adaptativos e híbridos neuro-fuzzy con
+ el clasificador base Adaptive Neuro-Fuzzy Systems (ANFIS) 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Detectionofdistributeddenialofserviceattacksusinganensembleofadaptiveandhybridneuro-fuzzysystems"
+
+\end_inset
+
+.
+ También merece la pena comentar el rendimiento mejorado del híbrido GA
+ y ANN sobre el GA y el SVM 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Comparisonofgeneticalgorithmoptimizationonartificialneuralnetworkandsupportvectormachineinintrusiondetectionsystem"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DistributedDenialofServiceDetectionusinghybridmachinelearningtechniques"
+
+\end_inset
+
+, e IDS fusionados 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Improvementinintrusiondetectionwithadvancesinsensorfusion"
+
+\end_inset
+
+ , sobre IDS invididuales.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un estudio realizado en [15] donde se compara los algoritmos de aprendizaje
+ automático en relación con la detección de ataques muestra todos los detalles
+ y evaluaciónes.
+ Este estudio resalta los arboles de decisión aleatorios (Random Forest)
+ y las redes ¡bayesianas como los candidatos adecuados para la dección de
+ intrusiones basadas en el cojunto NSL-KDD.
 \end_layout
 
 \end_body
