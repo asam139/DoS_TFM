@@ -365,10 +365,10 @@ fragment offset
 \begin_layout Standard
 \align center
 \begin_inset Float table
-placement h
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -796,7 +796,7 @@ R2L
 \begin_layout Standard
 \align center
 \begin_inset Float table
-placement h
+placement H
 wide false
 sideways false
 status collapsed
@@ -1252,7 +1252,7 @@ reference "tab:atributosConVentana2segundos"
 \begin_layout Standard
 \align center
 \begin_inset Float table
-placement h
+placement H
 wide false
 sideways false
 status collapsed
@@ -1619,7 +1619,7 @@ Continuo
 \begin_layout Standard
 \align center
 \begin_inset Float table
-placement h
+placement H
 wide false
 sideways false
 status collapsed
@@ -2126,7 +2126,7 @@ Discreto
 \begin_layout Standard
 \align center
 \begin_inset Float table
-placement h
+placement H
 wide false
 sideways false
 status collapsed
@@ -2580,6 +2580,142 @@ Continuo
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Para la evaluación, a partir de los datos se han creado dos cojuntos de
+ datos.
+ El primero de ellos se han unido los ataques no DDoS y el flujo normal
+ de red y se diferencias los distintos ataques de DDoS.
+ Y un segundo cojunto de datos, donde las isntancias están clasificadas
+ como ataque DDoS (génerico) u otro tipo de situación.
+ Por tanto, tenemos un cojunto de datos con varias clases y otro dicotómico
+ o dos clases.
+\end_layout
+
+\begin_layout Section
+Herramienta: Weka
+\end_layout
+
+\begin_layout Standard
+Para la usar los diferentes tipos de clasificadores del trabajo, CDT, LogR,
+ NaiveBayes, SVM y MLP se ha utilizado su implementación por defecto en
+ Waikato Environment for Knowledge Analysis ( WEKA )
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "WEKA"
+description "Waikato Environment for Knowledge Analysis"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Weka:PracticalMachineLearningToolsandTechniqueswithJavaImplementations"
+
+\end_inset
+
+.
+ Weka es un popular conjunto de software de aprendizaje automático escrito
+ en Java , desarrollado en la Universidad de Waikato , Nueva Zelanda .
+ Se trata de software libre con licencia bajo la licencia pública general,
+ GNU (Gerenal Public License
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "GNU"
+description "General Public License"
+
+\end_inset
+
+).
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Weka es un banco de trabajo 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Weka:PracticalMachineLearningToolsandTechniqueswithJavaImplementations"
+
+\end_inset
+
+ que contiene una colección de herramientas de visualización y algoritmos
+ para el análisis de datos y el modelado predictivo, junto con interfaces
+ gráficas de usuario para facilitar el acceso a estas funciones.
+ La versión original no-Java de Weka fue un interfaz creada usando Tcl/Tk
+ para algoritmos de modelado (en su mayoría terceros) implementados en otros
+ lenguajes de programación, además de utilidades de preprocesamiento de
+ datos en C y un sistema basado en Makefile para ejecutar experimentos de
+ aprendizaje automático.
+ Esta versión original fue diseñada principalmente como una herramienta
+ para el análisis de datos procedentes del dominio de la agricultura 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "KDnuggetsnewsonSIGKDDServiceAward2005"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "OverviewofSIGKDDServiceAwardwinners"
+
+\end_inset
+
+, pero la más reciente versión completamente basada en Java (Weka 3), para
+ el que el desarrollo comenzó en 1997, ahora se utiliza en muchas aplicaciones
+ diferentes, en particular para fines educativos y de investigación.
+ Entre las ventajas de Weka se incluyen:
+\end_layout
+
+\begin_layout Itemize
+Está disponible gratuitamente bajo licencia GNU.
+ 
+\end_layout
+
+\begin_layout Itemize
+Portabilidad, ya que se implementa completamente en el lenguaje de programación
+ Java y por lo tanto se ejecuta en casi cualquier plataforma existente a
+ día de hoy.
+\end_layout
+
+\begin_layout Itemize
+Contiene una extensa colección de técnicas para preprocesamiento de datos
+ y modelado.
+\end_layout
+
+\begin_layout Itemize
+Es fácil de utilizar por alguién inexperto gracias a su interfaz gráfica
+ de usuario.
+\end_layout
+
+\begin_layout Standard
+Weka soporta varias tareas estándar de minería de datos , más específicamente,
+ preprocesamiento de datos, clustering, clasificación , regresión , visualizació
+n y selección de características.
+ Todas las técnicas de Weka están basadas en la suposición de que los datos
+ están disponibles como un archivo plano o una relación, donde cada registro
+ de datos se describe por un número fijo de atributos (normalmente, atributos
+ numéricos o nominales, pero también se admiten otros tipos de atributo)
+ .
+ Weka también proporciona acceso a las bases de datos SQL utilizando Java
+ Database Connectivity y puede procesar el resultado devuelto por una consulta
+ de base de datos.
+ No es capaz de minería de datos multi-relacional, pero hay software separado
+ para convertir una colección de tablas de base de datos enlazadas en una
+ sola tabla que es adecuada para procesar usando Weka
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DataMining:Practicalmachinelearningtoolsandtechniques2ndEdition"
+
+\end_inset
+
+.
+ Entre las carencias de Weka, actualmente entre sus algoritmos incluidos
+ no hay ninguno para el modelado de secuencias.
 \end_layout
 
 \end_body

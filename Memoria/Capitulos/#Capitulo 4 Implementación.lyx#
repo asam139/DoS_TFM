@@ -260,7 +260,14 @@ ping
 \shape default
  de la muerte: es un tipo de ataque enviado a una computadora que consiste
  en mandar numerosos paquetes ICMP muy grandes (mayores a 65.535 bytes) con
- el fin de colapsar el sistema atacado.
+ el fin de colapsar el sistema atacado
+\begin_inset CommandInset citation
+LatexCommand citep
+key "HACKINGtheartofexploitation"
+
+\end_inset
+
+.
  Es un tipo de ataque a computadoras que implica enviar un ping deformado
  a una computadora.
  Un 
@@ -294,7 +301,14 @@ SMURF o ataque pitufo: es un ataque de denegación de servicio que utiliza
 \shape italic
 ping
 \shape default
- al broadcast falsificando su identiddad para inundar un objetivo.
+ al broadcast falsificando su identiddad para inundar un objetivo
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Fraggleattack"
+
+\end_inset
+
+.
  En este tipo de ataque, el atacante envía grandes cantidades de tráfico
  ICMP (
 \shape italic
@@ -354,7 +368,7 @@ fragment offset
 placement h
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2566,6 +2580,94 @@ Continuo
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Para la evaluación, a partir de los datos se han creado dos cojuntos de
+ datos.
+ El primero de ellos se han unido los ataques no DDoS y el flujo normal
+ de red y se diferencias los distintos ataques de DDoS.
+ Y un segundo cojunto de datos, donde las isntancias están clasificadas
+ como ataque DDoS (génerico) u otro tipo de situación.
+ Por tanto, tenemos un cojunto de datos con varias clases y otro dicotómico
+ o dos clases.
+\end_layout
+
+\begin_layout Section
+Herramienta: Weka
+\end_layout
+
+\begin_layout Standard
+Para la usar los diferentes tipos de clasificadores del trabajo, CDT, LogR,
+ NaiveBayes, SVM y MLP se ha utilizado su implementación por defecto en
+ Waikato Environment for Knowledge Analysis ( Weka ) [].
+ Weka es un popular conjunto de software de aprendizaje automático escrito
+ en Java , desarrollado en la Universidad de Waikato , Nueva Zelanda .
+ Se trata de software libre con licencia bajo la licencia pública general,
+ GNU (.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Weka es un banco de trabajo [1] que contiene una colección de herramientas
+ de visualización y algoritmos para el análisis de datos y el modelado predictiv
+o, junto con interfaces gráficas de usuario para facilitar el acceso a estas
+ funciones.
+ La versión original no-Java de Weka fue un interfaz creada usando Tcl/Tk
+ para algoritmos de modelado (en su mayoría terceros) implementados en otros
+ lenguajes de programación, además de utilidades de preprocesamiento de
+ datos en C y un sistema basado en Makefile para ejecutar experimentos de
+ aprendizaje automático.
+ Esta versión original fue diseñada principalmente como una herramienta
+ para el análisis de datos de los dominios agrícolas, [2] [3], pero la más
+ reciente versión completamente basada en Java (Weka 3), para el que el
+ desarrollo comenzó en 1997, ahora se utiliza en muchas aplicaciones diferentes,
+ en particular para fines educativos y de investigación.
+ Las ventajas de Weka incluyen:
+\end_layout
+
+\begin_layout Itemize
+Está disponible gratuitamente bajo licencia pública general GNU (General
+ Public License).
+ 
+\end_layout
+
+\begin_layout Itemize
+Portabilidad, ya que se implementa completamente en el lenguaje de programación
+ Java y por lo tanto se ejecuta en casi cualquier plataforma existente a
+ día de hoy.
+\end_layout
+
+\begin_layout Itemize
+Contiene una extensa colección de técnicas para preprocesamiento de datos
+ y modelado.
+\end_layout
+
+\begin_layout Itemize
+Es fácil de utilizar por alguién inexperto gracias a su interfaz gráfica
+ de usuario.
+\end_layout
+
+\begin_layout Standard
+Weka soporta varias tareas estándar de minería de datos , más específicamente,
+ preprocesamiento de datos, agrupación , clasificación , regresión , visualizaci
+ón y selección de características .
+ Todas las técnicas de Weka están basadas en la suposición de que los datos
+ están disponibles como un archivo plano o relación, donde cada punto de
+ datos se describe por un número fijo de atributos (normalmente, atributos
+ numéricos o nominales, pero también se admiten otros tipos de atributo)
+ .
+ Weka proporciona acceso a las bases de datos SQL utilizando Java Database
+ Connectivity y puede procesar el resultado devuelto por una consulta de
+ base de datos.
+ No es capaz de minería de datos multi-relacional, pero hay software separado
+ para convertir una colección de tablas de base de datos enlazadas en una
+ sola tabla que es adecuada para procesar usando Weka.
+ [4] Otra área importante que actualmente no está cubierta por los algoritmos
+ incluidos en la distribución de Weka es el modelado de secuencias.
 \end_layout
 
 \end_body
