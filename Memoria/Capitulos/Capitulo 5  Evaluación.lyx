@@ -445,53 +445,7 @@ Estudio de la efectividad de las predicciones de trayectorias frente a las
 \end_layout
 
 \begin_layout Standard
-En este apartado se va a evaluar cómo afecta la introducción de pérdidas
- de paquetes a las técnicas de predicción.
- En este caso se fija la tasa de actualización a 15 por segundo (valor por
- defecto en 
-\shape italic
-Unity3D
-\shape default
-) y se introduce una probabilidad de pérdidas entre los equipos con el objetivo
- de analizar si las técnicas ayudan a mantener el movimiento.
- Para introducir pérdidas se ha utilizado el programa denominado 
-\shape italic
-Network Link Conditioner
-\shape default
- comentado en el inicio de la sección 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Descripción-del-entorno-experimental"
-
-\end_inset
-
-.
- El programa permite establecer el porcentaje de pérdidas de la interfaz
- de red 
-\end_layout
-
-\begin_layout Subsection
-Distancia
-\end_layout
-
-\begin_layout Standard
-Al igual que en el anterior caso se analiza el error de posición entre el
- personaje local y el personaje remoto en el otro equipo.
- En este caso el error se calcula de los nuevos datos obtenidos de las pruebas
- donde se ha ido variando la técnica de predicción y la probabilidad de
- pérdidas.
- Representando el error de posición se obtiene la Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Distancia-Perdidas"
-
-\end_inset
-
-.
- En la figura el eje X representa la probabilidad de pérdidas y el eje Y
- el error de posición o distancia en metros.
- 
+En este apartado se va a evaluar
 \end_layout
 
 \begin_layout Subsection
@@ -503,69 +457,7 @@ Conclusión
 \end_layout
 
 \begin_layout Standard
-Primeramente la evaluación ha conseguido demostrar por una parte que las
- técnicas de predicción consiguen suavizar, es decir aumentar la fluidez
- de los movimientos.
- Gracias a ello se consigue se consigue evitar que las entidades o personajes
- se queden inmóviles entre mensajes de actualización ofreciendo un movimiento
- más continuo y agradable visualmente.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Por otra parte mediante la reducción de la frecuencia de envió de los mensajes
- de actualización se ha comprobado que las técnicas de predicción tienen
- un gran potencial para reducir la tasa de transmisión necesaria.
- Esto es gracias a que las técnicas son capaces de entre actualizaciones
- consecutivas predecir el movimiento durante un intervalo de tiempo que
- se indica de modo que las entidades siguen el movimiento hasta la siguiente
- actualización donde corregirán la posición.
- Como se comentó en la sección 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Distancia-Rates"
-
-\end_inset
-
-, la reducción de frecuencia de actualización conlleva un retraso intrínseco
- en el movimiento de las entidades por lo tanto es necesario primeramente
- analizar si compensa reducir la tasa de actualización frente a ganar interactiv
-idad.
- Esto dependerá del género y tipo de juego que se vaya a desarrollar pero
- para el caso de los FPS que necesitan una alta interactividad y precisión
- no se puede reducir drásticamente la tasa de mensajes de actualización.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-En cuanto a pérdidas, las técnicas de predicción consiguen minimizar su
- efecto de modo que ante pérdidas puntuales o pequeñas ráfagas de pérdidas
- la entidad sigue el movimiento correcto con alguna desviación.
- En caso de ráfagas de mayor tamaño se mitiga el efecto que provocan moviendo
- a la entidad un tiempo pero posteriormente la entidades se paran o tiene
- un movimiento incorrecto.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-La idea básica de las técnicas de predicción es reemplazar la comunicación
- con el cálculo computacional.
- Si se reduce o empeora el tráfico de la red, es a costa de la capacidad
- de procesamiento.
- Exactamente en las técnicas de predicción se calculan posiciones futuras
- y se corrigen.
+Primeramente la evaluación 
 \end_layout
 
 \end_body
