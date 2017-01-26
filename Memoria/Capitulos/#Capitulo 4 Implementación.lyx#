@@ -368,7 +368,7 @@ fragment offset
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2586,7 +2586,7 @@ Continuo
 Para la evaluación, a partir de los datos se han creado dos cojuntos de
  datos.
  El primero de ellos se han unido los ataques no DDoS y el flujo normal
- de red y se diferencias los distintos ataques de DDoS.
+ de red y se diferencian los distintos ataques de DDoS.
  Y un segundo cojunto de datos, donde las isntancias están clasificadas
  como ataque DDoS (génerico) u otro tipo de situación.
  Por tanto, tenemos un cojunto de datos con varias clases y otro dicotómico
@@ -2727,7 +2727,122 @@ Experimentación
 \end_layout
 
 \begin_layout Standard
-ADSAFAD
+Como se ha comentado el software que se ha usado para la experimientación
+ ha sido WEKA.
+ Se han utilizado las implementaciones de C4.5, Naive Bayes, SVM y MLP que
+ WEKA incluye.
+ Los CDT se han implementado en WEKA para proporcionar las mismas condiciones
+ experimentales en la comparativa.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La experimentación consta de cuatro estudios.
+ En primero de ellos, se han combinado los clases de la base de datos original
+ para obtener únicamente dos clases, por una parte se han agrupado todos
+ los tipos de ataques DDoS y por otra el resto de ataques y el flujo de
+ red, es decir, 
+\begin_inset Quotes eld
+\end_inset
+
+ataques DDoS
+\begin_inset Quotes erd
+\end_inset
+
+ y 
+\begin_inset Quotes eld
+\end_inset
+
+otros
+\begin_inset Quotes erd
+\end_inset
+
+.
+ En el segundo estudio se han mantenido separadas las clases de los diferentes
+ ataques DDoS y se ha fusionado el resto, es decir, el resto de ataques
+ y el flujo normal.
+ Por tanto obtenemos unas variables clase con 7 valores, 6 tipos de ataques
+ DDoS y 
+\begin_inset Quotes eld
+\end_inset
+
+otros
+\begin_inset Quotes erd
+\end_inset
+
+, a este conjunto lo denominaremos multiclase.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por otro lado se ha considerado hacer una selección de atributos o en inglés,
+ 
+\shape italic
+Feature Subset Selection
+\shape default
+ (FSS
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "FSS"
+description "Feature Subset Selection"
+
+\end_inset
+
+)
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AnIntroductiontoVariableandFeatureSelection"
+
+\end_inset
+
+, para reducir la dimensionalidad de los datos como han hecho otros autores
+ en distintos trabajos.
+ No obstante, aquí no se ha utilizado el conjunto de datos completo para
+ hacer el FSS y luego se ha validado el clasificador.
+ En nuestro caso, se ha utilizado el algoritmo 
+\begin_inset Quotes eld
+\end_inset
+
+weka.classifiers.meta.AttributeSelectedClassifier
+\begin_inset Quotes erd
+\end_inset
+
+ de WEKA.
+ Se trata de un meta-clasificador, una de las tres opciones para realizar
+ selección de atributos que ofrece WEKA.
+ El meta-clasificador toma un algoritmo de búsqueda y un evaluador junto
+ al clasificador base.
+ Esto hace que el proceso de selección de atributos sea completamente transparen
+te y el clasificador reciba sólo el cojunto de datos reducido.
+ El evaluador o método de selección que se ha utilziado es el 
+\begin_inset Quotes eld
+\end_inset
+
+weka.attributeSelection.CfsSubsetEval
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Correlation-basedFeatureSubsetSelectionforMachineLearning"
+
+\end_inset
+
+.
+ Este método evalúa el valor de un subcojunto de atributos considerando
+ la capacidad predictiva invividual de cada característica junto con el
+ grado de redundancia entre ellos.
+ Son preferidos los subcojuntos de atributos que estan altamente correlacionados
+ con la clase mientras tiene una baja intercorrelación.
 \end_layout
 
 \begin_layout Standard
@@ -4488,7 +4603,8 @@ CDT vs.
 \begin_inset Text
 
 \begin_layout Plain Layout
-CDT vs .NB
+CDT vs.
+ NB
 \end_layout
 
 \end_inset
@@ -4497,7 +4613,7 @@ CDT vs .NB
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.047221
+1.63993
 \end_layout
 
 \end_inset
@@ -4508,7 +4624,7 @@ CDT vs .NB
 \begin_inset Text
 
 \begin_layout Plain Layout
-CDT vs.
+J48 vs.
  LogR
 \end_layout
 
@@ -4518,7 +4634,7 @@ CDT vs.
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.072601
+3.503295
 \end_layout
 
 \end_inset
@@ -4535,7 +4651,7 @@ CDT vs.
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-P-valores del test de Nemenyi para la precisión
+P-valores del test de Nemenyi para el tiempo
 \end_layout
 
 \end_inset

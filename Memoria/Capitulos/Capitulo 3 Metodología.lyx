@@ -1480,10 +1480,10 @@ p(z_{j})\epsilon\left[\frac{n_{z_{j}}}{N+s},\frac{n_{z_{j}}+s}{N+s}\right],j=1,.
 
 \begin_layout Standard
 con 
-\begin_inset Formula $n_{z_{j}}como$
+\begin_inset Formula $n_{z_{j}}$
 \end_inset
 
-la frecuencia de los valores 
+ como la frecuencia de los valores 
 \begin_inset Formula $Z=z_{j}$
 \end_inset
 
