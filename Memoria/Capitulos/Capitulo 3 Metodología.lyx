@@ -128,7 +128,8 @@ key "ProgramsForMachineLearning"
  Aunque los arboles de decisión que este algoritmo genera tienen múltiples
  aplicaciones una de las más importantes es como clasificador.
  Por ello es muy común referirse a él como clasificador estadístico.
- 
+ El J48 es una implementación de código abierto en el lenguaje de programación
+ Java.
 \begin_inset Newline newline
 \end_inset
 
