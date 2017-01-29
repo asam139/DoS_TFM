@@ -122,11 +122,7 @@ Ordenador personal, portátil.
 \end_layout
 
 \begin_layout Itemize
-Ordenador personal de sobremesa.
-\end_layout
-
-\begin_layout Itemize
-Router doméstico
+Ordenador profesional.
 \end_layout
 
 \begin_layout Subsection
@@ -136,18 +132,18 @@ Software
 \end_layout
 
 \begin_layout Itemize
-Sistema operativo OS X Yosemite
+Sistema operativo macOS Sierra
 \end_layout
 
 \begin_layout Itemize
-Sistema operativo Microsoft® Windows 7.
+Sistema operativo XXX
 \end_layout
 
 \begin_layout Itemize
 Ofimática: 
 \shape italic
 \SpecialChar LyX
- 2.1.3
+ 2.2.2
 \shape default
  
 \begin_inset CommandInset citation
@@ -158,7 +154,7 @@ key "LyX"
 
  y 
 \shape italic
-BibDesk 1.6.4
+BibDesk 1.6.7
 \shape default
  
 \begin_inset CommandInset citation
@@ -173,12 +169,12 @@ key "BibDesk"
 \begin_layout Itemize
 
 \shape italic
-Unity3D SDK
+WEKA 
 \shape default
-
+3.8
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Unity3DSDK"
+key "wekapage"
 
 \end_inset
 
@@ -186,37 +182,14 @@ key "Unity3DSDK"
 \end_layout
 
 \begin_layout Itemize
-
-\shape italic
-Network Link Conditioner
-\shape default
- utilidad de 
-\shape italic
-Xcode
-\shape default
-
+Keel suite 3.0
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Xcode"
+key "keelpage"
 
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Itemize
-
-\shape italic
-Matlab R2014b 8.4.0
-\shape default
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Matlab"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -297,50 +270,33 @@ name "fig:Diagrama-de-Gantt"
 
 \end_layout
 
-\begin_layout Subsection
-WP 1: Estado del arte
+\begin_layout Enumerate
+WP 1: Estado del arte; se hace un repaso de las soluciones existentes hasta
+ el momento, totales o parciales, sobre el mismo ámbito de aplicación o
+ relacionado del problema.
 \end_layout
 
-\begin_layout Standard
-Se hace un repaso de las soluciones existentes hasta el momento, totales
- o parciales, sobre el mismo ámbito de aplicación o relacionado del problema.
+\begin_layout Enumerate
+WP 3: Diseño; se adopta justificadamente una solución previamente especificada
+ y se procede a su diseño.
 \end_layout
 
-\begin_layout Subsection
-WP 3: Diseño
-\end_layout
-
-\begin_layout Standard
-Se adopta justificadamente una solución previamente especificada y se procede
- a su diseño.
-\end_layout
-
-\begin_layout Subsection
-WP 4: Implementación
-\end_layout
-
-\begin_layout Standard
-Se implementa el diseño anterior en el lenguaje de programación escogido.
+\begin_layout Enumerate
+WP 4: Implementación; se implementa el diseño anterior en el lenguaje de
+ programación escogido.
  
 \end_layout
 
-\begin_layout Subsection
-WP 5: Evaluación y pruebas
+\begin_layout Enumerate
+WP 5: Evaluación y pruebas; tras la comprobación y puesta a punto, se procede
+ a la evaluación de la solución, contrastando su funcionamiento y resultados,
+ si procede, con otras soluciones vistas durante la revisión del estado
+ del arte.
 \end_layout
 
-\begin_layout Standard
-Tras la comprobación y puesta a punto, se procede a la evaluación de la
- solución, contrastando su funcionamiento y resultados, si procede, con
- otras soluciones vistas durante la revisión del estado del arte.
-\end_layout
-
-\begin_layout Subsection
-WP6: Documentación
-\end_layout
-
-\begin_layout Standard
-La redacción de la documentación es una tarea que se lleva a cabo de forma
- paralela al resto.
+\begin_layout Enumerate
+WP6: Documentación; la redacción de la documentación es una tarea que se
+ lleva a cabo de forma paralela al resto.
  De este modo se recogen todos los detalles sin que se olvide ninguno.
  
 \end_layout
@@ -582,7 +538,8 @@ Herramientas
 \begin_layout Standard
 Se han empleado para el diseño del proyecto herramientas gratuitas siempre
  que ha sido posible para minimizar el coste del proyecto.
- Aunque el 
+ Por ello el coste en este apartado ha sido nulo.
+ 
 \end_layout
 
 \begin_layout Section
@@ -627,7 +584,7 @@ centering
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="11" columns="2">
+<lyxtabular version="3" rows="10" columns="2">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
@@ -736,26 +693,6 @@ Herramientas
 
 \begin_layout Plain Layout
 500 €
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Router domestico
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-30 €
 \end_layout
 
 \end_inset
