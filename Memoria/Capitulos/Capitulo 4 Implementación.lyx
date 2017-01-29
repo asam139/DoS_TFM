@@ -2843,6 +2843,9 @@ key "Correlation-basedFeatureSubsetSelectionforMachineLearning"
  grado de redundancia entre ellos.
  Son preferidos los subcojuntos de atributos que estan altamente correlacionados
  con la clase mientras tiene una baja intercorrelación.
+ Por tanto, hemos realizado dos estudios sin FSS usando la base de datos
+ con clase dicotómica (o dos clases) y otro con multiclase, y otros dos
+ estudios incorporando FSS, de la forma explicada, con ambas bases de datos.
 \begin_inset Newline newline
 \end_inset
 
@@ -2850,9 +2853,74 @@ key "Correlation-basedFeatureSubsetSelectionforMachineLearning"
 \end_layout
 
 \begin_layout Standard
-Por tanto, hemos realizado dos estudios sin FSS usando la base de datos
- con clase dicotómica (o dos clases) y otro con multiclase, y otros dos
- estudios incorporando FSS, de la forma explicada, con ambas bases de datos.
+En cuanto a la configuración que se ha tomado para los clasificadores ha
+ sido que WEKA trae por defecto.
+ No obstante en la implementación de los CDT el valor del hiperparámetro
+ 
+\begin_inset Formula $s$
+\end_inset
+
+ ha sido 
+\begin_inset Formula $s=1$
+\end_inset
+
+(ver sección 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Credal-Decision-Trees"
+
+\end_inset
+
+).
+ Este valor es el usado en el trabajo en el que se presentó la entropía
+ imprecisa 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Upperentropyofcredalsets.applicationstocredalclassification"
+
+\end_inset
+
+.
+ La motivación para hacer uso de este valor es que fue el valor propuesto
+ por Walley en 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Inferencesfrommultinomialdatalearningaboutabagofmarbles"
+
+\end_inset
+
+; además el procedimiento para obtener el máximo de la entropía alcanza
+ su coste computacional mínimo con este valor (ver 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "UncertaintymeasuresonprobabilityintervalsfromImpreciseDirichletmodel"
+
+\end_inset
+
+).
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para validar los resultados obtenidos se ha realizado una validación cruzada
+ de 10 hojas.
+ La tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Precisión-en-tanto-por-cierto-para-cada-clasificador"
+
+\end_inset
+
+ muestra los resultados obtenidos en precisión.
+ Como se puede observar el clasificador CDT junto con el J48, presentan
+ los mejores resultados con un 100% de aciertos tanto para el caso con clases
+ dicotómicas como para multiclase.
+ Y cuando se hace FSS, para clase diacotómica presentan un 99.47% y un 99.99%,
+ la única diferencia es para cuando es multiclase en la cual el CDT presenta
+ un 99.99% y el J48 un 100% de aciertos, algo insignificante.
  
 \end_layout
 
@@ -3214,6 +3282,13 @@ MLP
 \begin_layout Plain Layout
 Precisión en tanto por cierto para cada clasificador en cada uno de los
  cuatro casos estudiados
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Precisión-en-tanto-por-cierto-para-cada-clasificador"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -3228,6 +3303,24 @@ Precisión en tanto por cierto para cada clasificador en cada uno de los
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Por otra parte, en la tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Tiempo-medio-de-entrenamiento-en-segundos-para-cada-clasificador-en-cada-uno-de-los-cuatro-escenarios-contemplados"
+
+\end_inset
+
+ se muestran los resultados de tiempo, es decir el tiempo medio de entrenamiento
+ en segundos.
+ Aquí es donde está la gran diferencia, el CDT tiene un tiempo muchísimo
+ más bajo en todos los escenarios que el J48 con un porcentaje de acierto
+ prácticamente igual.
+ En cuanto al Naïve Bayes, tiene un tiempo muy bajo en los escenarios sin
+ FSS pero su rendimiento está por debajo de los anteriores.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3588,6 +3681,13 @@ MLP
 \begin_layout Plain Layout
 Tiempo medio de entrenamiento en segundos para cada clasificador en cada
  uno de los cuatro escenarios contemplados
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Tiempo-medio-de-entrenamiento-en-segundos-para-cada-clasificador-en-cada-uno-de-los-cuatro-escenarios-contemplados"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -3602,6 +3702,20 @@ Tiempo medio de entrenamiento en segundos para cada clasificador en cada
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Por último en la tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Área-bajo-la-curva-para-cada-clasificador-usando-la-base-datos-con-clase-binaria"
+
+\end_inset
+
+ se muestra el AUC para los estudios sin FSS.
+ Como se puede ver tanto el CDT como el J48 presentan un valor de 1.0000
+ y 0.9967 para la clase diacotómica y para multiclase correspondientemente,
+ lo que nos dice que es una prueba excelente.
 \end_layout
 
 \begin_layout Standard
@@ -3834,6 +3948,13 @@ MLP
 \begin_layout Plain Layout
 Área bajo la curva (AUC) para cada clasificador usando la base de datos
  con clase binaria, sin usar y usando selección de variables
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Área-bajo-la-curva-para-cada-clasificador-usando-la-base-datos-con-clase-binaria"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4496,7 +4617,7 @@ P-valores del test de Nemenyi para la precisión
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
