@@ -2615,10 +2615,30 @@ sensibilidad=\frac{verdaderos\:negativos}{verdaderos\:negativos+falsos\:positivo
 
 \begin_layout Standard
 En problemas donde distinguir el tipo de error es importante, se pueden
- utilizar las curvas ROC (Receiver Operating Characteristics).
+ utilizar las curvas ROC (Receiver Operating Characteristics)
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Receiver-operatingcharacteristicanalysisforevaluatingdiagnostictestsandpredictivemodels"
+
+\end_inset
+
+.
  Son curvas en las que se presenta la sensibilidad en función de los falsos
  positivos para distintos resultados de un clasificador.
- 
+ Una interpretación muy común de estas curvas es el área bajo ellas, llamada
+ comúnmente como AUC ( Area Under Curve)
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ComparacindemodelosdecurvasROCparalaevaluacindeprocedimientosestadsticosdeprediccineninvestigacindemercados"
+
+\end_inset
+
+.
+ Su valor rango de valores es 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+y cuanto más cerca de 1 se encuentre índica que mejor comportamiento tiene.
 \end_layout
 
 \begin_layout Subsection

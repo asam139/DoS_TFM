@@ -448,39 +448,13 @@ key "ProgramsForMachineLearning"
 \end_layout
 
 \begin_layout Subsection
-Na
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-"{i}
-\end_layout
-
-\end_inset
-
-ve Bayes
+Naïve Bayes
 \end_layout
 
 \begin_layout Standard
-El clasificador Na
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-"{i}
-\end_layout
-
-\end_inset
-
-ve Bayes es un simple clasificador probabilístico basado en la aplicación
- del teorema de Bayes con suposiciones de independencia fuertes (ingenuas)
- entre las características
+El clasificador Naïve Bayes es un simple clasificador probabilístico basado
+ en la aplicación del teorema de Bayes con suposiciones de independencia
+ fuertes (ingenuas) entre las características
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ModelosBayesianosparalaclasificacinsupervisada.Aplicacionesalanlisisdedatosdeexpresingrfica"
@@ -499,41 +473,15 @@ key "ModelosBayesianosparalaclasificacinsupervisada.Aplicacionesalanlisisdedatos
 \end_layout
 
 \begin_layout Standard
-Na
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-"{i}
-\end_layout
-
-\end_inset
-
-ve Bayes un algoritmo basado en un principio común: el valor de una característi
-ca particular es independiente del valor de cualquier otra característica
+Naïve Bayes un algoritmo basado en un principio común: el valor de una caracterí
+stica particular es independiente del valor de cualquier otra característica
  dada la variable de clase.
  Por ejemplo, una fruta puede ser considerada como una manzana si es roja,
  redonda y de unos 10 cm de diámetro.
- Un clasificador Na
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-"{i}
-\end_layout
-
-\end_inset
-
-ve Bayes considera que cada una de estas características contribuye independient
-emente a la probabilidad de que este fruto sea una manzana, independientemente
- de las posibles correlaciones entre el color, la redondez y las características
- del diámetro.
+ Un clasificador Naïve Bayes considera que cada una de estas características
+ contribuye independientemente a la probabilidad de que este fruto sea una
+ manzana, independientemente de las posibles correlaciones entre el color,
+ la redondez y las características del diámetro.
 \begin_inset Newline newline
 \end_inset
 
@@ -556,21 +504,8 @@ Para algunos tipos de modelos de probabilidad, los clasificadores ingenuos
 
 \begin_layout Standard
 A pesar de su diseño ingenuo y supuestos aparentemente simplificados, los
- clasificadores Na
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-"{i}
-\end_layout
-
-\end_inset
-
-ve Bayes han funcionado bastante bien en muchas situaciones complejas del
- mundo real.
+ clasificadores Naïve Bayes han funcionado bastante bien en muchas situaciones
+ complejas del mundo real.
  En 2004, un análisis 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -594,21 +529,8 @@ mostró que la clasificación de Bayes es superada por otros enfoques, tales
 \end_layout
 
 \begin_layout Standard
-Una ventaja de Na
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-"{i}
-\end_layout
-
-\end_inset
-
-ve Bayes es que sólo requiere un pequeño número de datos de entrenamiento
- para estimar los parámetros necesarios para la clasificación.
+Una ventaja de Naïve Bayes es que sólo requiere un pequeño número de datos
+ de entrenamiento para estimar los parámetros necesarios para la clasificación.
 \begin_inset Newline newline
 \end_inset
 
@@ -616,21 +538,8 @@ ve Bayes es que sólo requiere un pequeño número de datos de entrenamiento
 \end_layout
 
 \begin_layout Standard
-Abstractamente, Na
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-"{i}
-\end_layout
-
-\end_inset
-
-ve Bayes es un modelo de probabilidad condicional: dado un conjunto de datos
- a ser clasificados, representado por un vector 
+Abstractamente, Naïve Bayes es un modelo de probabilidad condicional: dado
+ un conjunto de datos a ser clasificados, representado por un vector 
 \begin_inset Formula $x=(x_{1,}x_{2,}...,x_{n}$
 \end_inset
 
@@ -723,20 +632,7 @@ y así sucesivamente.
 \begin_inset Quotes eld
 \end_inset
 
-na
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-"{i}
-\end_layout
-
-\end_inset
-
-ve
+naïve
 \begin_inset Quotes erd
 \end_inset
 
@@ -1365,6 +1261,13 @@ description "Credal Decision Trees"
 \end_inset
 
 ) 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Credal-Decision-Trees"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

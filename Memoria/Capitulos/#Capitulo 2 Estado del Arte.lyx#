@@ -2425,123 +2425,63 @@ reference "tab:Tipos-de-aciertos"
 
  se pueden ver los distintos tipos.
  A partir de esta tabla se pueden obtener otras medidas de utilizada.
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="4">
-<features rotate="90" islongtable="true" longtabularalignment="center">
-<column alignment="left" valignment="middle" width="2cm">
-<column alignment="center" valignment="middle" width="2cm">
-<column alignment="center" valignment="middle" width="5cm">
-<column alignment="center" valignment="middle" width="5cm">
-<row endhead="true" endfirsthead="true">
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" width="3cm">
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\series bold
 Tipos
 \end_layout
 
 \end_inset
 </cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Ataque Ausente
 \end_layout
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\series bold
-Ataque DDoS
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+Ataque Presente
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Diag.
+ Negativo
 \end_layout
 
 \end_inset
 </cell>
-<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Ausente
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Presente
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Diagnóstico
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Nevativo
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2550,7 +2490,7 @@ Verdadero negativo (diagnóstivo negativo, ataque ausente)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2561,25 +2501,17 @@ Falso negativo (diagnóstivo negativo, ataque presente)
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Diag.
+ Positivo
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Positivo
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2599,6 +2531,25 @@ Verdadero positivo (diagnóstivo negativo, ataque presente)
 </cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tipos de aciertos y errores
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Tipos-de-aciertos"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -2664,10 +2615,23 @@ sensibilidad=\frac{verdaderos\:negativos}{verdaderos\:negativos+falsos\:positivo
 
 \begin_layout Standard
 En problemas donde distinguir el tipo de error es importante, se pueden
- utilizar las curvas ROC (Receiver Operating Characteristics).
+ utilizar las curvas ROC (Receiver Operating Characteristics)
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Receiver-operatingcharacteristicanalysisforevaluatingdiagnostictestsandpredictivemodels"
+
+\end_inset
+
+.
  Son curvas en las que se presenta la sensibilidad en función de los falsos
  positivos para distintos resultados de un clasificador.
- 
+ Una interpretación muy común de estas curvas es el área bajo ellas, llamada
+ comúnmente como AUC ( Area Under Curve).
+ Su valor rango de valores es 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+y cuanto más cerca de 1 se encuentre índica que mejor comportamiento tiene.
 \end_layout
 
 \begin_layout Subsection
