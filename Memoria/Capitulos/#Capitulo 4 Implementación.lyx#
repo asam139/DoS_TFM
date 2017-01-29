@@ -2907,6 +2907,9 @@ key "UncertaintymeasuresonprobabilityintervalsfromImpreciseDirichletmodel"
 \begin_layout Standard
 Para validar los resultados obtenidos se ha realizado una validación cruzada
  de 10 hojas.
+ Nótese que no pudimos obtener resultados para el LogR para la base de datos
+ dicotómica, o el SVM y MLP para ninguna base de datos después de una semana
+ de ejecución de los experimentos.
  La tabla 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3318,7 +3321,7 @@ reference "tab:Tiempo-medio-de-entrenamiento-en-segundos-para-cada-clasificador-
  Aquí es donde está la gran diferencia, el CDT tiene un tiempo muchísimo
  más bajo en todos los escenarios que el J48 con un porcentaje de acierto
  prácticamente igual.
- En cuanto al Naive Bayes, tiene un tiempo muy bajo en los escenarios sin
+ En cuanto al Naïve Bayes, tiene un tiempo muy bajo en los escenarios sin
  FSS pero su rendimiento está por debajo de los anteriores.
  
 \end_layout
@@ -3705,14 +3708,24 @@ name "tab:Tiempo-medio-de-entrenamiento-en-segundos-para-cada-clasificador-en-ca
 \end_layout
 
 \begin_layout Standard
-SAD
+Por último en la tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Área-bajo-la-curva-para-cada-clasificador-usando-la-base-datos-con-clase-binaria"
+
+\end_inset
+
+ se muestra el AUC para los estudios sin FSS.
+ Como se puede ver tanto el CDT como el J48 presentan un valor de 1.0000
+ y 0.9967 para la clase diacotómica y para multiclase correspondientemente,
+ lo que nos dice que es una prueba excelente.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3955,6 +3968,63 @@ name "tab:Área-bajo-la-curva-para-cada-clasificador-usando-la-base-datos-con-cl
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Siguiento las recomendaciones de Demšar
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Statisticalcomparisonsofclassifiersovermultipledatasets"
+
+\end_inset
+
+, se han utilizado un serie de tests estadísticos para comparar los métodos.
+ Para ello se ha utilizado el software Keel
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Keel:asoftwaretooltoassessevolutionaryalgorithmsfordataminingproblems"
+
+\end_inset
+
+.
+ Nosotros hemos usado los siguientes tests para comparar los diferentes
+ clasificadores en los diferentes conjuntos:
+\end_layout
+
+\begin_layout Itemize
+La prueba de Friedman []: es un test no paramétrico que ordena los algoritmos
+ de forma seraprada por cada conjunto de datos, al mejor resultado le asigna
+ el orden 1, al segundo mejor el orden 2, etc.
+ La hipótesis nula es que todos los clasificadores son equivalentes.
+ Si se rechaza la hipótesis nula podemos comparar los resultados con el
+ test de Nememyi [].
+\end_layout
+
+\begin_layout Itemize
+La prueba de Nememyi []: es una prueba destinada a encontrar los grupos
+ de datos que difieren después de una prueba estadística de comparaciones
+ múltiples (como la prueba de Friedman) ha rechazado la hipótesis nula de
+ que el rendimiento de las comparaciones en los grupos de los datos son
+ similares.
+\end_layout
+
+\begin_layout Standard
+En todas las pruebas llevadas a cabo, el nivel de significación estadística
+ ha sido de 
+\begin_inset Formula $\alpha=0.10$
+\end_inset
+
+.
+ Por tanto la tabla X muestra el resultado de la prueba de Friedman para
+ la precisión y la tabla X los resultados del test de Friedman para el tiempo.
+ Para el AUC no se pudo calcular el test de Friedman pues necesita, como
+ mínimo, cuatro conjuntos de datos sobre los que aplicar la prueba.
+ Las tablas X y Y muestran los p-valores de test de Nemenyi en pares de
+ comparaciones.
+ La prueba de Nemenyi rechaza la hipótesis de que los algoritmos son equivalente
+s si el correspondiente p-valor es menor o igual que 0.006667 para la precisión
+ y si el correspondiente p-valor es menor o igual que 0.016667 para el tiempo.
+ 
 \end_layout
 
 \begin_layout Standard
