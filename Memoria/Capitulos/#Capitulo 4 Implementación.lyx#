@@ -88,7 +88,7 @@ name "chap:Implementacion"
 \end_layout
 
 \begin_layout Standard
-En esta sección se detallará el la base de datos sobre la que se va a realizar
+En esta sección se detallará la base de datos sobre la que se va a realizar
  el estudio.
  Además se comentará se explicara el programa usado con el cual se han ejecutado
  los diferentes clasificadores así como todos las variaciones y pruebas
@@ -1255,7 +1255,7 @@ reference "tab:atributosConVentana2segundos"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2929,6 +2929,7 @@ reference "tab:Precisión-en-tanto-por-cierto-para-cada-clasificador"
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status collapsed
@@ -3328,6 +3329,7 @@ reference "tab:Tiempo-medio-de-entrenamiento-en-segundos-para-cada-clasificador-
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status collapsed
@@ -3723,6 +3725,7 @@ reference "tab:Área-bajo-la-curva-para-cada-clasificador-usando-la-base-datos-c
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status collapsed
@@ -3992,20 +3995,40 @@ key "Keel:asoftwaretooltoassessevolutionaryalgorithmsfordataminingproblems"
 \end_layout
 
 \begin_layout Itemize
-La prueba de Friedman []: es un test no paramétrico que ordena los algoritmos
- de forma seraprada por cada conjunto de datos, al mejor resultado le asigna
- el orden 1, al segundo mejor el orden 2, etc.
+La prueba de Friedman 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Theuseofrankstoavoidtheassumptionofnormalityimplicitintheanalysisofvariance"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Acomparisonofalternativetestsofsignificancefortheproblemofmrankings"
+
+\end_inset
+
+: es un test no paramétrico que ordena los algoritmos de forma seraprada
+ por cada conjunto de datos, al mejor resultado le asigna el orden 1, al
+ segundo mejor el orden 2, etc.
  La hipótesis nula es que todos los clasificadores son equivalentes.
  Si se rechaza la hipótesis nula podemos comparar los resultados con el
- test de Nememyi [].
+ test de Nememyi.
 \end_layout
 
 \begin_layout Itemize
-La prueba de Nememyi []: es una prueba destinada a encontrar los grupos
- de datos que difieren después de una prueba estadística de comparaciones
- múltiples (como la prueba de Friedman) ha rechazado la hipótesis nula de
- que el rendimiento de las comparaciones en los grupos de los datos son
- similares.
+La prueba de Nememyi
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Distribution-freemultiplecomparisons"
+
+\end_inset
+
+: es una prueba destinada a encontrar los grupos de datos que difieren después
+ de una prueba estadística de comparaciones múltiples (como la prueba de
+ Friedman) ha rechazado la hipótesis nula de que el rendimiento de las comparaci
+ones en los grupos de los datos son similares.
 \end_layout
 
 \begin_layout Standard
@@ -4015,12 +4038,39 @@ En todas las pruebas llevadas a cabo, el nivel de significación estadística
 \end_inset
 
 .
- Por tanto la tabla X muestra el resultado de la prueba de Friedman para
- la precisión y la tabla X los resultados del test de Friedman para el tiempo.
+ Por tanto la tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Ranking-medio-prueba-friedman-precision"
+
+\end_inset
+
+muestra el resultado de la prueba de Friedman para la precisión y la tabla
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Ranking-medio-prueba-friedman-tiempo"
+
+\end_inset
+
+ los resultados del test de Friedman para el tiempo.
  Para el AUC no se pudo calcular el test de Friedman pues necesita, como
  mínimo, cuatro conjuntos de datos sobre los que aplicar la prueba.
- Las tablas X y Y muestran los p-valores de test de Nemenyi en pares de
- comparaciones.
+ Las tablas 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:P-valores-del-test-nemenyi-precision"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:P-valores-del-test-nemenyi-tiempo"
+
+\end_inset
+
+ muestran los p-valores de test de Nemenyi en pares de comparaciones.
  La prueba de Nemenyi rechaza la hipótesis de que los algoritmos son equivalente
 s si el correspondiente p-valor es menor o igual que 0.006667 para la precisión
  y si el correspondiente p-valor es menor o igual que 0.016667 para el tiempo.
@@ -4029,6 +4079,7 @@ s si el correspondiente p-valor es menor o igual que 0.006667 para la precisión
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status collapsed
@@ -4152,6 +4203,13 @@ LogR
 
 \begin_layout Plain Layout
 Ranking medio de la preuba de Friedman para la precisión
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Ranking-medio-prueba-friedman-precision"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4166,6 +4224,7 @@ Ranking medio de la preuba de Friedman para la precisión
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status collapsed
@@ -4289,6 +4348,13 @@ LogR
 
 \begin_layout Plain Layout
 Ranking medio de la preuba de Friedman para el tiempo
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Ranking-medio-prueba-friedman-tiempo"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4303,6 +4369,7 @@ Ranking medio de la preuba de Friedman para el tiempo
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status collapsed
@@ -4661,6 +4728,13 @@ SVM vs.
 
 \begin_layout Plain Layout
 P-valores del test de Nemenyi para la precisión
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:P-valores-del-test-nemenyi-precision"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4675,6 +4749,7 @@ P-valores del test de Nemenyi para la precisión
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status collapsed
@@ -4844,6 +4919,13 @@ J48 vs.
 
 \begin_layout Plain Layout
 P-valores del test de Nemenyi para el tiempo
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:P-valores-del-test-nemenyi-tiempo"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset

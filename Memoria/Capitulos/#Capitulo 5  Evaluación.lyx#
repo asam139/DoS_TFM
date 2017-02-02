@@ -76,7 +76,7 @@
 \begin_body
 
 \begin_layout Chapter
-Evaluación
+Evaluación de ...
 \begin_inset CommandInset label
 LatexCommand label
 name "chap:Evaluación"
@@ -87,14 +87,24 @@ name "chap:Evaluación"
 \end_layout
 
 \begin_layout Standard
-En este capítulo se procede a la evaluación de los distintos clasificadores
- objeto de estudio.
+En este capítulo se procede a la evaluación de las técnicas de predicción
+ implementadas.
+ Las evaluaciones se realiza sobre un entorno experimental.
  En primer lugar se define el entorno empleado para la realización de las
- pruebas, el equipo usado.
- A continuación se exponen en que consisten las distintas pruebas.
+ pruebas, los equipos utilizados y su conexión y los programas utilizados
+ para simular las pruebas.
+ A continuación se expondrá en que consiste cada prueba.
  Para cada prueba se indicará las modificaciones realizadas al escenario
  original y a continuación se mostrarán los resultados obtenidos.
  
+\end_layout
+
+\begin_layout Section
+Introducción
+\end_layout
+
+\begin_layout Standard
+Las téc
 \end_layout
 
 \begin_layout Section
@@ -109,11 +119,7 @@ name "sec:Descripción-del-entorno-experimental"
 \end_layout
 
 \begin_layout Standard
-En la tabla se muestra las características del ordenador sobre el cual se
- han simulado todos los estudios de este trabajo haciendo uso del programa
- WEKA.
- A pesar de que se trata de una máquina muy potente no ha sido suficiente
- para correr algunos de los estudios.
+El ordenador en el cual se ha montado y el entorno expirmental 
 \end_layout
 
 \begin_layout Standard
@@ -141,10 +147,46 @@ centering
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="2">
+<lyxtabular version="3" rows="5" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="5cm">
+<column alignment="center" valignment="top" width="5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Ordenador
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Cliente/Servidor (Portátil)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Cliente (Torre)
+\end_layout
+
+\end_inset
+</cell>
+</row>
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
@@ -157,11 +199,28 @@ Procesador
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Intel Xeon...
+2.8GHz IntelCore 7 
+\end_layout
+
+\begin_layout Plain Layout
+Doble Núcleo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.20GHz IntelCore 5 
+\end_layout
+
+\begin_layout Plain Layout
+Cuatro Núcleos
 \end_layout
 
 \end_inset
@@ -179,11 +238,20 @@ Memoria
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8GB 1333MHz DDR3
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-32GB 1333MHz DDR3
+4GB 1333MHz DDR3
 \end_layout
 
 \end_inset
@@ -201,11 +269,20 @@ Tarjeta Gráfica
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Intel HD 3000 512MB
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-xxx
+Nvidia GeForce GT 320
 \end_layout
 
 \end_inset
@@ -223,11 +300,20 @@ Sistema Operativo
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ubuntu 
+OS X Yosemite 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Windows 7 
 \end_layout
 
 \end_inset
@@ -245,7 +331,7 @@ Ubuntu
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Características del ordenador sobre el cual se han ejecutado los estudios
+Características de los ordenadores de las pruebas
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:CaracterísticasOrdenadores"
@@ -263,6 +349,10 @@ name "tab:CaracterísticasOrdenadores"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+El se
 \end_layout
 
 \begin_layout Section
