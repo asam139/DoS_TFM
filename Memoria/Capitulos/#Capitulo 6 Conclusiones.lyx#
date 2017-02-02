@@ -141,40 +141,11 @@ Líneas de trabajo futuras
 \end_layout
 
 \begin_layout Standard
-En un futuro próximo (corto a medio plazo) esperamos más desarrollo y despliegue
- de mecanismos de defensa distribuidos por parte de investigadores y proveedores
- de servicios, respectivamente.
+En un futuro próximo esperamos más desarrollo y despliegue de mecanismos
+ de defensa distribuidos por parte de investigadores y proveedores de servicios,
+ respectivamente, es lo que esperamos ver en un futuro próximo (corto a
+ medio plazo).
  En un plazo más largo esperamos ver:
-\end_layout
-
-\begin_layout Itemize
-La inevitable cooperación y colaboración entre los proveedores de servicios
- para detectar y detener los ataques DDoS más cerca de sus fuentes.
- El rápido crecimiento de entornos colaborativos como Cloud Computing [146]
- y la Internet de las Cosas (IoT) [147] - [149] conduce a un gran número
- de desarrollos de aplicaciones tanto en y para tales entornos.
- Esto amplía el panorama de amenazas para los ataques DDoS y acelera la
- transición a la era en la que existe una inevitable cooperación y colaboración
- entre diversas organizaciones y proveedores de servicios.
-\end_layout
-
-\begin_layout Itemize
-La incorporación de los resultados del análisis de incentivos que tuvieron
- los atacantes en futuros mecanismos de defensa (es decir, esto puede conducir
- a diferentes estrategias basadas en las motivaciones del atacante).
-\end_layout
-
-\begin_layout Itemize
-El empleo del análisis de tráfico de capas cruzadas en mecanismos de defensa
- (es decir, mirar la información en múltiples capas, diferentes protocolos,
- simultáneamente para detectar y responder a los ataques DDoS).
-\end_layout
-
-\begin_layout Itemize
-El desarrollo de leyes estrictas de delincuencia cibernética y mecanismos
- de cumplimiento multinacional junto con refinadas políticas de ciberseguridad
- que requieren la implementación de mecanismos de detección y prevención
- de DDoS.
 \end_layout
 
 \end_body
