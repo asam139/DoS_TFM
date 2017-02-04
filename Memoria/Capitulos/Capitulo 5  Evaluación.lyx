@@ -1549,7 +1549,7 @@ key "Acomparisonofalternativetestsofsignificancefortheproblemofmrankings"
 
 \end_inset
 
-: es un test no paramétrico que ordena los algoritmos de forma seraprada
+: es una prueba no paramétrica que ordena los algoritmos de forma separada
  por cada conjunto de datos, al mejor resultado le asigna el orden 1, al
  segundo mejor el orden 2, etc.
  La hipótesis nula es que todos los clasificadores son equivalentes.

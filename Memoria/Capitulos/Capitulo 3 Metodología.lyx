@@ -105,8 +105,8 @@ En esta sección describiremos los diferentes tipos de modelos de clasificación
  y validación.
  Se van a utilizar una serie de arboles de decisión estándares como son
  el C4.5, Naïve Bayes, LogR, SVM y Perceptrón multicapa.
- Y además se va a incorporar uno nuevo, el CDT, para ver como trabaja para
- la detección de ataques DDoS.
+ Y además se va a incorporar uno nuevo, el Credal Decision Trees (CDT),
+ para ver como trabaja para la detección de ataques DDoS.
  
 \end_layout
 

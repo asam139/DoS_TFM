@@ -2242,7 +2242,7 @@ key "Acomparativestudyonthepredictiveabilityofthedecisiontreesupportvectormachin
 \end_layout
 
 \begin_layout Itemize
-Logictic Regression (LogR): la regresión estadística es un tipo de análisis
+Logistic Regression (LogR): la regresión estadística es un tipo de análisis
  de regresión utilizado para predecir el resultado de una variable categórica
  (una variable que puede adoptar un número limitado de categorías) en función
  de las variables independientes o predictoras
