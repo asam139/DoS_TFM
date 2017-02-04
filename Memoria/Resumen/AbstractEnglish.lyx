@@ -125,7 +125,55 @@ Abstract
 \end_layout
 
 \begin_layout Standard
-Bla Bla Bla Bla
+Network security has become one of the most important factors to consider
+ as the Internet evolves.
+ DDoS attacks are the most important attacks that affect the availability
+ of service from decades until today, in other words, they cause the service
+ or resources offered by a computer or network system to be unfeasible by
+ legitimate users.
+ Therefore, these resources must be protected from DDoS attacks.
+ Since its inception have been countless DDoS attacks that have been carried
+ out against different companies, entities and services.
+ That is why the need for these entities to protect their resources and
+ services they offer.
+ The detection of a DDoS attack is a complicated task that encompasses many
+ factors and evolves, so it requires adaptive learning.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Traffic patterns exhibited by traffic that includes DDoS attacks can be
+ effectively captured by automatic learning algorithms such as decision
+ trees, bayesian networks and neural networks.
+ This paper explains in detail the different DDoS attacks as well as current
+ detection mechanisms.
+ Subsequently its main objective is to be able to give an evaluation and
+ classification of some of the supervised learning algorithms with the aim
+ of reducing errors and time while maintaining the detection precision.
+ As a novelty, credal decision trees or CDTs are added to study their behavior
+ against the detection of DDoS attacks.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The database used is called KDD Cup 1999, a small selection of the data
+ set of the 1999 KDD contest.
+ From this database, four cases have been studied to see the different behaviors
+ of the algorithms.
+ The simulations of the algorithms have been carried out with their implementati
+on in the WEKA program, a software platform for automatic learning and data
+ mining.
+ For the evaluation the accuracy of the algorithms is measured as well as
+ the time that they have taken to execute.
+ In addition, different tests are performed for comparison.
+ This evaluation demonstrates the effectiveness of classifiers for the detection
+ of DDoS attacks.
 \end_layout
 
 \end_body

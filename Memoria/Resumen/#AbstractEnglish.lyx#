@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass ociamthesis-lyx
 \options a4paper,titlepage
 \use_default_options true
@@ -10,16 +12,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -96,11 +98,18 @@ cleardoublepage}
 \size larger
 \noun on
 Key Words
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Red, Juego Multijugador, Dead Reckoning, Técnicas de Predicción, Unity3D
- y EoS.
+DDoS, Machine Learning, Classifiers, Credal Decision Trees (CDTs).
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -109,6 +118,43 @@ Red, Juego Multijugador, Dead Reckoning, Técnicas de Predicción, Unity3D
 \size larger
 \noun on
 Abstract
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Network security has become one of the most important factors to consider
+ as the Internet evolves.
+ DDoS attacks are the most important attacks that affect the availability
+ of service from decades until today, in other words, they cause the service
+ or resources offered by a computer or network system to be unfeasible by
+ legitimate users.
+ Therefore, these resources must be protected from DDoS attacks.
+ Since its inception have been countless DDoS attacks that have been carried
+ out against different companies, entities and services.
+ That is why the need for these entities to protect their resources and
+ services they offer.
+ The detection of a DDoS attack is a complicated task that encompasses many
+ factors and evolves, so it requires adaptive learning.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Traffic patterns exhibited by traffic that includes DDoS attacks can be
+ effectively captured by automatic learning algorithms such as decision
+ trees, Bayesian networks and neural networks.
+ This work explains in detail the different DDoS attacks as well as current
+ detection mechanisms.
+ Subsequently its main objective is to be able to give an evaluation and
+ classification of some of the supervised learning algorithms with the aim
+ of reducing errors and time while maintaining the detection precision.
+ As a novelty, credal decision trees or CDTs are added to study their behavior
+ against the detection of DDoS attacks.
 \end_layout
 
 \end_body
