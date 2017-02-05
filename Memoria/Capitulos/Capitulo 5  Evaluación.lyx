@@ -2292,7 +2292,7 @@ name "tab:P-valores-del-test-nemenyi-precision"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2473,10 +2473,6 @@ name "tab:P-valores-del-test-nemenyi-tiempo"
 
 \end_layout
 
-\end_inset
-
-
-\begin_inset Newline newline
 \end_inset
 
 
