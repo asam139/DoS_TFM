@@ -297,7 +297,7 @@ Guerra cibernética: en esta categoría los atacantes pertenecen normalmente
 \end_layout
 
 \begin_layout Subsection
-Clasificación
+Taxonomía
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Clasificación"
@@ -474,7 +474,7 @@ Ataques de solicitud/respuesta lenta: de la misma forma los atacantes crean
 \end_deeper
 \end_deeper
 \begin_layout Subsection
-Mecanismos de Defensa: alcance y clasificación
+Mecanismos de Defensa: alcance y taxonomía
 \end_layout
 
 \begin_layout Standard
@@ -538,7 +538,7 @@ key "ASurveyofDefenseMechanismsAgainstDDoS"
 \end_layout
 
 \begin_layout Subsubsection
-Clasificación basada en la ubicación de despliegue
+Taxonomía basada en la ubicación de despliegue
 \end_layout
 
 \begin_layout Enumerate
@@ -1622,11 +1622,11 @@ name "tab:comparacionDDoS-A-deployment-location-1"
 \end_layout
 
 \begin_layout Subsubsection
-Clasificación basada en el tiempo de actuación
+Taxonomía basada en el tiempo de actuación
 \end_layout
 
 \begin_layout Standard
-El segundo criterio para la clasificación es el momento en que los mecanismos
+El segundo criterio para la taxonomía es el momento en que los mecanismos
  de defensa DDoS deben actuar en respuesta a un posible ataque de inundación
  de DDoS.
  Basándonos en este criterio, clasificamos ambos mecanismos de defensa contra
@@ -1711,9 +1711,9 @@ d de los servicios.
 \end_layout
 
 \begin_layout Standard
-En este parte se ha presentado los ataques DDoS haciendo una clasificación
- de los diferentes tipos de ataques así como una clasificación de los mecanismos
- para detenerlos mostrando sus ventajas e inconvenientes.
+En este parte se ha presentado los ataques DDoS haciendo la taxonomía de
+ los diferentes tipos de ataques así como la de los mecanismos para detenerlos
+ mostrando sus ventajas e inconvenientes.
  Los mecanismos de defensa deben tener características que les permitan
  combatir a los ataques DDoS tanto en tiempo real como lo más cerca posible
  de las fuentes.
