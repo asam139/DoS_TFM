@@ -474,7 +474,7 @@ Ataques de solicitud/respuesta lenta: de la misma forma los atacantes crean
 \end_deeper
 \end_deeper
 \begin_layout Subsection
-Mecanismos de Defensa: alcance y clasificación
+Mecanismos de Defensa: alcance y taxonomía
 \end_layout
 
 \begin_layout Standard
@@ -538,7 +538,7 @@ key "ASurveyofDefenseMechanismsAgainstDDoS"
 \end_layout
 
 \begin_layout Subsubsection
-Clasificación basada en la ubicación de despliegue
+Taxonomía basada en la ubicación de despliegue
 \end_layout
 
 \begin_layout Enumerate
@@ -1622,11 +1622,11 @@ name "tab:comparacionDDoS-A-deployment-location-1"
 \end_layout
 
 \begin_layout Subsubsection
-Clasificación basada en el tiempo de actuación
+Taxonomía basada en el tiempo de actuación
 \end_layout
 
 \begin_layout Standard
-El segundo criterio para la clasificación es el momento en que los mecanismos
+El segundo criterio para la taxonomía es el momento en que los mecanismos
  de defensa DDoS deben actuar en respuesta a un posible ataque de inundación
  de DDoS.
  Basándonos en este criterio, clasificamos ambos mecanismos de defensa contra
@@ -1642,8 +1642,8 @@ key "TaxonomyDDoSAttackAndDefenseMechanisms"
 \end_inset
 
 .
- Sin embargo, un mecanismo de defensa DDoS comprensivo debe incluir las
- tres defensas ya que no existe una solución única.
+ Sin embargo, un mecanismo de defensa DDoS exahustivo debe incluir las tres
+ defensas ya que no existe una solución única.
 \end_layout
 
 \begin_layout Enumerate
@@ -1711,9 +1711,9 @@ d de los servicios.
 \end_layout
 
 \begin_layout Standard
-En este parte se ha presentado los ataques DDoS haciendo una clasificación
- de los diferentes tipos de ataques así como una clasificación de los mecanismos
- para detenerlos mostrando sus ventajas e inconvenientes.
+En este parte se ha presentado los ataques DDoS haciendo la taxonomía de
+ los diferentes tipos de ataques así como la de los mecanismos para detenerlos
+ mostrando sus ventajas e inconvenientes.
  Los mecanismos de defensa deben tener características que les permitan
  combatir a los ataques DDoS tanto en tiempo real como lo más cerca posible
  de las fuentes.
@@ -2037,13 +2037,28 @@ Aprendizaje Automático: clasificación
 \end_layout
 
 \begin_layout Standard
-Dado un conjuntos de datos, esté se estructura en instancias con sus atributos
+Dentro del aprendizaje automático, encontremos técnicas de clasificación
+ que nos permiten agrupar muestras de acuerdo a criterios o métodos, estas
+ técnicas son la clasificación supervisada y la no supervisada.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El objetivo de la clasificación dentro del aprendizaje automático consiste
+ en la asignación de un objeto o un fenómeno físico a una de las diversas
+ categorías o clases especificadas (se hace referencia a clase como una
+ agrupación de objetos que tiene características comunes, o mejor dicho
+ como un sinónimo de categoría).
+ Dado un conjuntos de datos, esté se estructura en instancias con sus atributos
  o variables.
  Los atributos no son mas que algún tipo de medida realizada sobre la instancia
  a medir.
  Dentro de los atributos o variables hay que distinguir entre los que aportan
  información y por otra parte, un único atributo que nos indica el estado
- de la instancia.
+ de la instancia o clase como se ha indicado.
  
 \begin_inset Newline newline
 \end_inset
@@ -2052,8 +2067,41 @@ Dado un conjuntos de datos, esté se estructura en instancias con sus atributos
 \end_layout
 
 \begin_layout Standard
-Hay que hacer una diferencia en función de la variable clase entre la tareas
- de clasificación y las de regresión 
+Distinguiendo entre los dos tipos de técnicas, la diferencia reside en la
+ información disponible en los conjuntos de datos con las que el sistema
+ tiene que trabajar.
+ en la clasificación supervisada se cuenta con un conocomiento a priori,
+ es decir para la tarea de clasificar un objeto dentro de una categoría
+ o clase contamos con modelos ya clasificados (objectos agrupados que tienen
+ características comunes).
+ Y por otra parte, la supervisada se distingue del aprendizaje supervisado
+ por el hecho de que no hay un conocimiento a priori, es decir no se tiene
+ el atributo de clase de los datos de entrenamiento.
+ El aprendizaje no supervisado debido a que sería como una clasificación
+ a ciegas, típicamente trata los objetos de entrada como un conjunto de
+ variables aleatorias, siendo construido un modelo de densidad para el conjunto
+ de datos 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "UnsupervisedclassificationofmajordepressionusingfunctionalconnectivityMRI"
+
+\end_inset
+
+.
+ Esto sería como formar grupos heterogéneos que compartar características
+ y que permita a las nuevas intancias ser localizadas en uno de los grupos,
+ es decir etiquetarlas.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Centrandonos en aprendizaje supervisado, ya que es en el que se profundiza
+ en el trabajo, hay que hacer una diferencia en función de la variable clase
+ entre la tareas de clasificación y las de regresión 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AnIntroductiontoMachineLearning"
@@ -2066,43 +2114,6 @@ key "AnIntroductiontoMachineLearning"
  Dado que en este trabajo el objetivo es la detección de ataques de denegación
  de servicio, la clase va a ser de tipo discreto, luego nos centraremos
  en los problemas de clasificación y sus variantes.
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Antes de proceder a comentar los tipos de clasificación es importante ver
- el procedimiento que se lleva acabo en toda tarea de clasificación.
- En nuestro caso, tenemos dos conjuntos de datos, el de entrenamiento y
- el de prueba.
- El primero de ellos contiene todos los atributos, los cuales son distintas
- medidas del tráfico de red y la variable de clase que nos indica si hay
- o no un ataque DDoS y qué tipo de ataque es.
- Cada instancia nos da el estado de la red en un intervalo de tiempo y que
- tipo de ataque se está produciendo con esas condiciones de red.
- Mientras que el de prueba no contiene el atributo de clase.
- De este modo el objetivo es obtener el atributo de clase para los datos
- de test de modo que cada instancia quede correctamente valorada.
- Para lograr esto existen una gran cantidad de algoritmos que serán los
- que creen un modelo a partir de los datos de entrenamiento y con el cual
- predecir el valor de la clase para cada instancia del conjunto de test
- y así medir la precisión.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Por último, los problemas de clasificación se dividen en dos subconjuntos
- a su vez, los supervisados y no supervisados.
- La diferencia reside en la información disponible en los conjuntos de datos
- con las que el sistema tiene que trabajar.
- Nos centraremos en el aprendizaje supervisado ya que es en el que se profundiza
- en el trabajo.
 \begin_inset Newline newline
 \end_inset
 
@@ -2143,32 +2154,6 @@ key "aprendizajeAutomaticoSupervisado"
 \end_layout
 
 \begin_layout Standard
-Como contrapartida y sin desarrollar, el aprendizaje no supervisado se distingue
- del aprendizaje supervisado por el hecho de que no hay un conocimiento
- a priori, es decir no se tiene el atributo de clase de los datos de entrenamien
-to.
- El aprendizaje no supervisado debido a que sería como una clasificación
- a ciegas, típicamente trata los objetos de entrada como un conjunto de
- variables aleatorias, siendo construido un modelo de densidad para el conjunto
- de datos 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "UnsupervisedclassificationofmajordepressionusingfunctionalconnectivityMRI"
-
-\end_inset
-
-.
- Esto sería como formar grupos heterogéneos que compartar características
- y que permita a las nuevas intancias ser localizadas en uno de los grupos,
- es decir etiquetarlas.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Con una definición más formal, en clasificación supervisada el conjunto
  de variagbles a considerar será 
 \begin_inset Formula $Y=X\:\bigcup\:\left\{ C\right\} $
@@ -2202,6 +2187,26 @@ s y poder calcular la probabilidad condicionada de la clase dada cualquier
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Antes de proceder a comentar los tipos de clasificación es importante ver
+ el procedimiento que se lleva acabo en toda tarea de clasificación.
+ En nuestro caso, tenemos dos conjuntos de datos, el de entrenamiento y
+ el de prueba.
+ El primero de ellos contiene todos los atributos, los cuales son distintas
+ medidas del tráfico de red y la variable de clase que nos indica si hay
+ o no un ataque DDoS y qué tipo de ataque es.
+ Cada instancia nos da el estado de la red en un intervalo de tiempo y que
+ tipo de ataque se está produciendo con esas condiciones de red.
+ Mientras que el de prueba no contiene el atributo de clase.
+ De este modo el objetivo es obtener el atributo de clase para los datos
+ de test de modo que cada instancia quede correctamente valorada.
+ Para lograr esto existen una gran cantidad de algoritmos que serán los
+ que creen un modelo a partir de los datos de entrenamiento y con el cual
+ predecir el valor de la clase para cada instancia del conjunto de test
+ y así medir la precisión.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -2750,6 +2755,18 @@ key "ComparacindemodelosdecurvasROCparalaevaluacindeprocedimientosestadsticosdep
 \end_inset
 
  y cuanto más cerca de 1 se encuentre índica que mejor comportamiento tiene.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El área bajo la curva ROC (AUC) es considerada con el fin de mejorar el
+ contraste entre los diferentes procedimientos, sobretodo cuando conjuntos
+ de datos con diferentes costos según la clasificación errónea.
+ En el caso de la detección de ataques DDoS el costo de un falso positivo
+ suele ser mucho q
 \end_layout
 
 \begin_layout Subsection
