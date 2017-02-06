@@ -2755,6 +2755,32 @@ key "ComparacindemodelosdecurvasROCparalaevaluacindeprocedimientosestadsticosdep
 \end_inset
 
  y cuanto más cerca de 1 se encuentre índica que mejor comportamiento tiene.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El área bajo la curva ROC (AUC) es considerada con el fin de mejorar el
+ contraste entre los diferentes procedimientos, sobretodo cuando conjuntos
+ de datos con diferentes costos según la clasificación errónea.
+ En el caso de la detección de ataques DDoS el costo de un falso negativo
+ suele ser mucho que un falso positivo (ver 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "beck1986use"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "fawcett2004roc"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Subsection
