@@ -262,9 +262,11 @@ key "Teoradelainformacincodificacinylenguajes"
 \end_layout
 
 \begin_layout Standard
-Si ahora cada uno de los {
-\backslash
-displaystyle k} k estados tiene una probabilidad 
+Si ahora cada uno de los 
+\begin_inset Formula $k$
+\end_inset
+
+ estados tiene una probabilidad 
 \begin_inset Formula ${\displaystyle p_{i}}$
 \end_inset
 
@@ -331,31 +333,12 @@ que representa una medida de la incertidumbre media acerca de una variable
 \end_layout
 
 \begin_layout Standard
-Los datos de entrenamiento son un grupo 
-\begin_inset Formula $S=s_{1},s_{2},s_{3},$
-\end_inset
-
-...
- de ejemplos ya clasificados.
- Cada ejemplo 
-\begin_inset Formula $s_{i}=x_{1},x_{2},x_{3},...$
-\end_inset
-
- es un vector donde 
-\begin_inset Formula $x_{1},x_{2},x_{3},...$
-\end_inset
-
- representan los atributos o características del ejemplo.
- Los datos de entrenamiento son aumentados con un vector 
-\begin_inset Formula $C=c_{1},c_{2},c_{3},...$
-\end_inset
-
- donde 
-\begin_inset Formula $c_{1},c_{2},c_{3}$
-\end_inset
-
- representan la clase a la que pertenece cada muestra.
- 
+En ID3 y posteriormente en C4.5, Quinlan hace una representación intuitiva
+ de los árboles de clasificación, donde cada nodo se puede ver como una
+ fuente de información de memoria nula, cuyo alfabeto tiene tantos símbolos
+ como clases.
+ Cada nodo al tener almacenado un subcojunto de casos del conjunto de datos,
+ guarda una información media sobre las clases de esos casos.
 \begin_inset Newline newline
 \end_inset
 
@@ -363,89 +346,159 @@ Los datos de entrenamiento son un grupo
 \end_layout
 
 \begin_layout Standard
-El algoritmo considera todas las pruebas posibles que pueden dividir el
- conjunto de datos y selecciona la prueba que resulta en la mayor ganancia
- de información 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "ProgramsForMachineLearning"
+En ID3, el mejor atributo X para ramificar el árbol dado el conjunto de
+ datos D, es aquel qeu maximiza la ganancia de información.
+ Para calcular la ganancia de cada atributo se realizan los siguientes pasos:
+\end_layout
+
+\begin_layout Itemize
+Se calcula la entropía de la clase C antes de ramificar, o lo que viene
+ a ser lo mismo, la entropía de C para el conjunto D:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H_{D}(C)=-\sum_{i=1}^{k}p_{i}\log_{2}(p_{i})
+\]
 
 \end_inset
 
-.
- Para cada atributo discreto, se considera una prueba con 
+ donde 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ representa la probabilidad (calculada por frecuencias relativas) de la
+ clase 
+\begin_inset Formula $i$
+\end_inset
+
+ en D y 
 \begin_inset Formula $n$
 \end_inset
 
- resultados, siendo n el número de valores posibles que puede tomar el atributo.
- Para cada atributo continuo, se realiza una prueba binaria sobre cada uno
- de los valores que toma el atributo en los datos.
- En cada nodo, el sistema debe decidir cuál prueba escoge para dividir los
- datos.
- Los tres tipos de pruebas posibles propuestas por el C4.5 son 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "ProgramsForMachineLearning"
+es el número de clases.
+\end_layout
+
+\begin_layout Itemize
+Se calcula el valor medio de la entropía en el nivel siguiente, generado
+ por el atributo 
+\begin_inset Formula $X$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+H_{D}(C|X)=\sum_{i=1}^{k}p_{D}(X=x_{j})H_{D_{j}}(C)
+\]
 
 \end_inset
 
-: 
-\end_layout
+ donde 
+\begin_inset Formula $\{x_{1,}x_{2,}...,x_{k}\}$
+\end_inset
 
-\begin_layout Itemize
-La prueba "estándar" para las variables discretas, con un resultado y una
- rama para cada valor posible de la variable.
- 
-\end_layout
+ son los valores del atributo, 
+\begin_inset Formula $X,p_{d}(X=x_{j})$
+\end_inset
 
-\begin_layout Itemize
-Una prueba más compleja, basada en una variable discreta, en donde los valores
- posibles son asignados a un número variable de grupos con un resultado
- posible para cada grupo, en lugar de para cada valor.
- S
-\end_layout
+representa la probabilidad condicionada de que 
+\begin_inset Formula $X=x_{j}$
+\end_inset
 
-\begin_layout Itemize
-Si una variable A tiene valores numéricos continuos, se realiza una prueba
- binaria con resultados 
-\begin_inset Formula $A\leq Z$
+en 
+\begin_inset Formula $D$
 \end_inset
 
  y 
-\begin_inset Formula $A>Z$
+\begin_inset Formula $D_{j}$
 \end_inset
 
-, para lo cual debe determinarse el valor límite 
-\begin_inset Formula $Z$
+ es el subconjunto de 
+\begin_inset Formula $D,D_{j}\subset D$
+\end_inset
+
+, tal que sus elementos tienen el valor de 
+\begin_inset Formula $X=x_{j}$
 \end_inset
 
 .
- 
+\end_layout
+
+\begin_layout Itemize
+Se denomina ganancia de la información de la variable X, a la diferencia
+ de entropía de la entropía de C para el conjunto D menos la entropía media
+ del siguiente nivel si ramificásemos por 
+\begin_inset Formula $X$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+Ganancia_{D}(C|X)=H_{D}(C)-H_{D}(C|X)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Todas estas pruebas se evalúan de la misma manera 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "ProgramsForMachineLearning"
+En ID3, se escoge la variable con mayor ganancia de información.
+ En C4.5 además se calcula la Información de ruptura, y la razón de ganancia.
+ Para un conjunto de datos 
+\begin_inset Formula $D$
+\end_inset
+
+ y un atributo 
+\begin_inset Formula $X$
+\end_inset
+
+, se define la razón de ganancia de la siguiente forma:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+RazónGanancia(X|C)=\frac{Ganancia_{D}(C|X)}{InfoRuptura_{D}(X)}
+\]
 
 \end_inset
 
-, mirando el resultado de la proporción de ganancia de información o entropía,
- o alternativamente, el de la ganancia resultante de la división que producen.
- Ha sido útil agregar una restricción adicional: para cualquier división,
- al menos dos de los subconjuntos 
-\begin_inset Formula $C_{i}$
+
+\end_layout
+
+\begin_layout Standard
+donde,
+\begin_inset Formula 
+\[
+InfoRuptura_{D}(X)=-\sum_{j=1}^{k}p_{d}(X=x_{j})\log_{2}(p_{D}(X=x_{j}))
+\]
+
 \end_inset
 
- deben contener un número razonable de casos.
- Esta restricción, que evita las subdivisiones casi triviales, es tenida
- en cuenta solamente cuando el conjunto 
-\begin_inset Formula $C$
+
+\end_layout
+
+\begin_layout Standard
+La prueba basada en el criterio de máxima ganancia, tiende a escoger aquellas
+ variables con mayor número de valores.
+ Esto es debido a que cuantas más particiones se hagan debido a los valores
+ de la variable, la entropía de un nuevo nodo será, normalmente menor.
+ En C4.5 se utilza la razón de ganancia para paliar esta tendencia.
+\begin_inset Newline newline
 \end_inset
 
- es pequeño.
- 
+
+\end_layout
+
+\begin_layout Standard
+El algoritmo C4.5 también se diferencia de ID3 porque admite datos continuos,
+ dividiendo el dominio de la variable continua en subintervalos por el valor
+ que tiene una mayor ganancia de información.
+ Además C4.5 admite valores desconocidos en los ejemplos, modificando los
+ criterios de ganancia e información de ruptura.
 \end_layout
 
 \begin_layout Subsection
