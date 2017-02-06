@@ -116,8 +116,15 @@ Por útimo en este capítulo se expondrán trabajos en los cuales se aplicán
 l, para posteriormente exponer el aprendizaje aútomatico centrándonos en
  las técnicas de clasificación supervisada las cuales son el objetivo del
  trabajo.
- Para ello se hará una pequeña introducción a la IA, en la cual se definen
- y explican conceptos relacionados.
+ Para ello se hará una pequeña introducción a la IA
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "IA"
+description "Inteligencia Artificial"
+
+\end_inset
+
+, en la cual se definen y explican conceptos relacionados.
  Posteriormente se centrará en el aprendizaje automático, definiendo y comentand
 o los diferentes métodos.
 \end_layout
@@ -349,7 +356,32 @@ La característica distribuidos de los ataques DDoS es la que hace que sean
 
 \begin_layout Enumerate
 Ataques de inundación DDoS a la capa de red/transporte: estos ataques son
- mayoritariamente lanzados usando paquetes de TCP, UDP, ICMP y DNS.
+ mayoritariamente lanzados usando paquetes de TCP (Transmission Control
+ Protocol
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "TCP"
+description "Transmission Control Protocol"
+
+\end_inset
+
+), UDP (User Datagram Protocol)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "UDP"
+description "User Datagram Protocol"
+
+\end_inset
+
+, ICMP (Internet Control Message Protocol)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "ICMP"
+description "Internet Control Message Protocol"
+
+\end_inset
+
+ y DNS.
  Hay cuatro tipos de ataques en esta categoría:
 \end_layout
 
@@ -391,7 +423,15 @@ Ataques de inundación DDoS a la capa de aplicación: estos ataques se centran
  Los ataques de este tipo generalmente consumen menos ancho de banda y son
  más difíciles de detectar debido a que son más similares al tráfico benigno.
  Aún así son igualmente perjudiciales ya que atacan a específicas característica
-s de aplicaciones como HTTP, DNS, o SIP (Session Initiation Protocol)
+s de aplicaciones como HTTP (Hypertext Transfer Protocol)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "HTTP"
+description "Hypertext Transfer Protocol"
+
+\end_inset
+
+, DNS, o SIP (Session Initiation Protocol)
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "SIP"
@@ -540,7 +580,23 @@ key "DDoS_PJCriscuolo"
 \shape italic
 Ingress/Egress filtering at the sources' edge routers
 \shape default
-; D-WARD, MULTOPS (
+; D-WARD (
+\shape italic
+DDoS Network Attack Recognition and Defense
+\shape default
+)
+\shape italic
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "D-WARD"
+description "DDoS Network Attack Recognition and Defense"
+
+\end_inset
+
+
+\shape default
+, MULTOPS (
 \shape italic
 Multi-Level Tree for Online Packet Statistics
 \shape default
@@ -566,9 +622,17 @@ description "Tabulated Online Packet Statistics"
 
 y RFW (
 \shape italic
-MANAnet Reverse Firewal
+MANAnet Reverse Firewall
 \shape default
-l) 
+)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "RFW"
+description "MANAnet Reverse Firewall"
+
+\end_inset
+
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ASurveyofDefenseMechanismsAgainstDDoS"
@@ -661,11 +725,19 @@ description "Defensive Cooperative Overlay Mesh"
 
 \end_inset
 
-; COSSACK; 
+; COSSACK (Coordinated Suppression of Simultaneous Attacks)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "COSSACK"
+description "Coordinated Suppression of Simultaneous Attacks"
+
+\end_inset
+
+; 
 \shape italic
 capability-based mechanisms
 \shape default
-; AITF(
+; AITF (
 \shape italic
 Active Internet Traffic Filtering
 \shape default
@@ -684,7 +756,7 @@ key "ASurveyofDefenseMechanismsAgainstDDoS"
 
 \end_inset
 
-: .
+.
 \end_layout
 
 \end_deeper
@@ -1680,7 +1752,8 @@ key "netflow"
 \end_inset
 
 , útil para obtener información sobre cantidades de tráfico así como número
- de conexiones e IPs origen/destino), obtención de valores SNMP
+ de conexiones e IPs origen/destino), obtención de valores SNMP (Simple
+ Network Management Protocol)
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "SNMP"
@@ -1717,11 +1790,19 @@ o y tunelizado, ya que sin la visibilidad de este tipo de conexiones nunca
 \begin_layout Standard
 Las soluciones de detección/mitigación de los fabricantes utilizan una combinaci
 ón de los anteriores métodos de monitorización (ya sea con dispositivos
- situados en línea o con la importación de los datos mediante SPAN de puertos
- u otro tipo de reenvío del tráfico), algunos incluso proporcionando los
- medios necesarios para romper ellos mismos los túneles SSL y de ese modo
- inspeccionar el tráfico encriptado (otros en cambio necesita de un tercero
- para hacer este trabajo y reenviarle los datos desencriptados).
+ situados en línea o con la importación de los datos mediante un analizador
+ de puertos u otro tipo de reenvío del tráfico), algunos incluso proporcionando
+ los medios necesarios para romper ellos mismos los túneles SSL (Secure
+ Sockets Layer)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "SSL"
+description "(Secure Sockets Layer)"
+
+\end_inset
+
+ y de ese modo inspeccionar el tráfico encriptado (otros en cambio necesita
+ de un tercero para hacer este trabajo y reenviarle los datos desencriptados).
 \begin_inset Newline newline
 \end_inset
 
@@ -1756,8 +1837,8 @@ o, pero en muchos casos no se aporta suficiente información para determinar
 \begin_layout Standard
 Detectar los orígenes del ataque puede ser muy complicado ya que, como se
  ha visto, los ataques reflexivos o la utilización de botnets complican
- la localización de las IPs desde las que se lanzan las peticiones de ataque,
- al estar estas enmascardas con el tráfico lícito de otros clientes.
+ la localización de las direcciones IP desde las que se lanzan las peticiones
+ de ataque, al estar estas enmascardas con el tráfico lícito de otros clientes.
 \begin_inset Newline newline
 \end_inset
 
@@ -1777,7 +1858,7 @@ Medición de tasas, es decir, número de peticiones por cliente, tráfico genera
 
 \begin_layout Itemize
 Clasificación de clientes, mediante puntuaciones que se realizan atendiendo
- al país de procedencia, rangos de IPs públicas, etc.
+ al país de procedencia, rangos de direcciones IP públicas, etc.
  Estas puntuaciones se modifican dinámicamente realimentándose de los datos
  obtenidos por los propios algoritmos.
  
@@ -1799,8 +1880,20 @@ Por último, una vez que se tienen acotados los posibles orígenes del ataque,
  se realiza un estudio más pormenorizado (revisando las capturas de paquetes
  o flujos de tráfico) para determinar el tipo de ataque que se está sufriendo.
  Estos procedimientos son parecidos a las que realizan otros elementos como
- IPS o firewalls de aplicación, incluso hay fabricantes que recogen la informaci
-ón de estos para poder deducir el tipo de ataque DoS que se está efectuando.
+ IDS (
+\shape italic
+Intrusion Detection System
+\shape default
+)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "IDS"
+description "Intrusion Detection System"
+
+\end_inset
+
+ o firewalls de aplicación, incluso hay fabricantes que recogen la información
+ de estos para poder deducir el tipo de ataque DoS que se está efectuando.
  Para ello utilizan una serie de firmas que verifican el vector de ataque.
  
 \begin_inset Newline newline
@@ -2617,7 +2710,15 @@ sensibilidad=\frac{verdaderos\:negativos}{verdaderos\:negativos+falsos\:positivo
 
 \begin_layout Standard
 En problemas donde distinguir el tipo de error es importante, se pueden
- utilizar las curvas ROC (Receiver Operating Characteristics) 
+ utilizar las curvas ROC (Receiver Operating Characteristics)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "ROC"
+description "Receiver Operating Characteristics"
+
+\end_inset
+
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Receiver-operatingcharacteristicanalysisforevaluatingdiagnostictestsandpredictivemodels"
@@ -2628,7 +2729,15 @@ key "Receiver-operatingcharacteristicanalysisforevaluatingdiagnostictestsandpred
  Son curvas en las que se presenta la sensibilidad en función de los falsos
  positivos para distintos resultados de un clasificador.
  Una interpretación muy común de estas curvas es el área bajo ellas, llamada
- comúnmente como AUC ( Area Under Curve) 
+ comúnmente como AUC (Area Under Curve)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "AUC"
+description "Area Under Curve"
+
+\end_inset
+
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ComparacindemodelosdecurvasROCparalaevaluacindeprocedimientosestadsticosdeprediccineninvestigacindemercados"
@@ -2640,7 +2749,7 @@ key "ComparacindemodelosdecurvasROCparalaevaluacindeprocedimientosestadsticosdep
 \begin_inset Formula $\left[0,1\right]$
 \end_inset
 
-y cuanto más cerca de 1 se encuentre índica que mejor comportamiento tiene.
+ y cuanto más cerca de 1 se encuentre índica que mejor comportamiento tiene.
 \end_layout
 
 \begin_layout Subsection
@@ -2664,8 +2773,44 @@ key "MULTOPS:Adatastructureforbandwidthattackdetection"
  Multi Level Tree for Online Packet Statistics (MULTOPS) para monitorear
  las tarifas de paquetes para cada dirección IP.
  Wang y otros propusieron un método exclusivamente para detectar la inundación
- SYN mediante el seguimiento de los cambios estadísticos en la relación
- de los paquetes SYN a los paquetes FIN y RST 
+ SYN (
+\shape italic
+SYNchronization
+\shape default
+)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "SYN"
+description "SYNchronization"
+
+\end_inset
+
+ mediante el seguimiento de los cambios estadísticos en la relación de los
+ paquetes SYN a los paquetes FIN (
+\shape italic
+FINalize
+\shape default
+) 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "FIN"
+description "Finalize"
+
+\end_inset
+
+ y RST (
+\shape italic
+ReSeT
+\shape default
+)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "RST"
+description "ReSeT"
+
+\end_inset
+
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "DectionOfDDoSAttacks_Article"
@@ -2752,8 +2897,20 @@ key "Neuralnetworksvs.decisiontreesforintrusiondetection"
 
 .
  Li y otros demuestran un sistema de detección DDoS qeu utiliza una red
- neuroal LVQ para la detección de anomalías y a través de este método ellos
- podían mejorar la tasa de detección del sistema 
+ neuroal LVQ (
+\shape italic
+Learning Vector Quantization
+\shape default
+)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "LVQ"
+description "Learning Vector Quantization"
+
+\end_inset
+
+ para la detección de anomalías y a través de este método ellos podían mejorar
+ la tasa de detección del sistema 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "DDoSAttackDetectionBasedOnNeuralNetwork"
@@ -2784,7 +2941,15 @@ o en el conjunto de datos de detección de intrusos KDD 99.
 El trabajo de Arun Raj Kumar y Selvakumar se centra en la identificación
  de ataques de inundación de alta tasa con alta precisión y pocas falsas
  alarmas haciendo uso de sistemas adaptativos e híbridos neuro-fuzzy con
- el clasificador base Adaptive Neuro-Fuzzy Systems (ANFIS) 
+ el clasificador base o ANFIS 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "ANFIS"
+description "Adaptive Neuro-Fuzzy Systems"
+
+\end_inset
+
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Detectionofdistributeddenialofserviceattacksusinganensembleofadaptiveandhybridneuro-fuzzysystems"
@@ -2793,7 +2958,35 @@ key "Detectionofdistributeddenialofserviceattacksusinganensembleofadaptiveandhyb
 
 .
  También merece la pena comentar el rendimiento mejorado del híbrido GA
- y ANN sobre el GA y el SVM 
+ (Genetic Algorithm)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "GA"
+description "Genetic Algorithm"
+
+\end_inset
+
+ y ANN (
+\shape italic
+Artificial Neural Network
+\shape default
+)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "ANN"
+description "Artificial Neural Network"
+
+\end_inset
+
+ sobre el GA y el SVM (Support Vector Machine)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "SVM"
+description "Support Vector Machine"
+
+\end_inset
+
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Comparisonofgeneticalgorithmoptimizationonartificialneuralnetworkandsupportvectormachineinintrusiondetectionsystem"

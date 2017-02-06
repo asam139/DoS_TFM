@@ -713,7 +713,19 @@ donde
 Hasta ahora se ha desarrollado el modelo de probabilidad de Bayes.
  Pero el clasificador combina este modelo junto con la regla de decisión.
  Una regla común es escoger la hípotesís mas probable; esto se conoce como
- el máximo a posteriori o regla de decisón MAP.
+ el máximo a posteriori o regla de decisón MAP (
+\shape italic
+Maximum a Posteriori Probability
+\shape default
+)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "MAP"
+description "Maximum a Posteriori Probability"
+
+\end_inset
+
+.
  Por lo tanto el clasificador de Bayes es la función que asigna una etiqueta
  de clase 
 \begin_inset Formula $\hat{y}=C_{k}$
