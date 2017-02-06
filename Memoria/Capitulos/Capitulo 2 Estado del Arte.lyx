@@ -2803,8 +2803,14 @@ key "MULTOPS:Adatastructureforbandwidthattackdetection"
  Este trabajo hace uso de una estructura de árbol dinámico conocido como
  Multi Level Tree for Online Packet Statistics (MULTOPS) para monitorear
  las tarifas de paquetes para cada dirección IP.
- Wang y otros propusieron un método exclusivamente para detectar la inundación
- SYN (
+ Wang y otros 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DectionOfDDoSAttacks_Article"
+
+\end_inset
+
+ propusieron un método exclusivamente para detectar la inundación SYN (
 \shape italic
 SYNchronization
 \shape default
@@ -2841,36 +2847,29 @@ description "ReSeT"
 
 \end_inset
 
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "DectionOfDDoSAttacks_Article"
-
-\end_inset
-
 .
- Kulkarni y otros rastrearón las direcciones IP de origen y construyó Kolmogorov
- Complexity Metrics para identificar su aleatoriedad.
- De hecho, la aleatoriedad de las direcciones IP de origen es muy baja sin
- ningún ataque DDoS; De lo contrario, es muy alta en los ataques DDoS con
- direcciones IP de origen distribuidas aleatoriamente 
+ Kulkarni y otros 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "DetectingDistributedDenialofServiceAttackusingKolmogorovcomplexitymetrics"
 
 \end_inset
 
-.
- Mirkovic y Reiher presentaron el método conocido como D-WARD, que se comporta
- como un cortafuegos el cuál supervisa los cambios estadísticos de los parámetro
-s de los modelos de tráfico entrante y saliente 
+ rastrearón las direcciones IP de origen y construyó Kolmogorov Complexity
+ Metrics para identificar su aleatoriedad.
+ De hecho, la aleatoriedad de las direcciones IP de origen es muy baja sin
+ ningún ataque DDoS; De lo contrario, es muy alta en los ataques DDoS con
+ direcciones IP de origen distribuidas aleatoriamente.
+ Mirkovic y Reiher 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "D-WARDasourceenddefenceagainstfloodingdenialofserviceattacks"
 
 \end_inset
 
-.
+ presentaron el método conocido como D-WARD, que se comporta como un cortafuegos
+ el cuál supervisa los cambios estadísticos de los parámetros de los modelos
+ de tráfico entrante y saliente.
  Los ataques pueden mezclar cuidadosamente diferentes tipos de tráfico para
  asegurar que la proporción de cada traza es la misma que en la normal.
  Por lo tanto, este escenario afectará a la suposición inicial hecha en
@@ -2901,18 +2900,18 @@ key "Artificialneuralnetworksarchitectureforintrusiondetectionsystemsandclassifi
 \end_inset
 
 .
- Bouzida y otros, en su trabajo, amplían la definición de detección de anomalías
- para considerar ataques conocidos y perfiles normales para explorar técnicas
- supervisadas de aprendizaje de máquinas.
- Exploran la eficacia de las redes neuronales y los árboles de decisión
- para la detección de intrusiones 
+ Bouzida y otros , en su trabajo 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Neuralnetworksvs.decisiontreesforintrusiondetection"
 
 \end_inset
 
-.
+, amplían la definición de detección de anomalías para considerar ataques
+ conocidos y perfiles normales para explorar técnicas supervisadas de aprendizaj
+e de máquinas.
+ Exploran la eficacia de las redes neuronales y los árboles de decisión
+ para la detección de intrusiones.
  Los algoritmos basados en arboles de decisión han demostrado su eficacia
  en la predicción de las diferentes clases de los datos no etiquetados en
  el cojunto de datos de prueba para el concurso de detección de intrudos
@@ -2927,8 +2926,15 @@ key "Neuralnetworksvs.decisiontreesforintrusiondetection"
 \end_inset
 
 .
- Li y otros demuestran un sistema de detección DDoS qeu utiliza una red
- neuroal LVQ (
+ Li y otros 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DDoSAttackDetectionBasedOnNeuralNetwork"
+
+\end_inset
+
+ demuestran un sistema de detección DDoS qeu utiliza una red neuroal LVQ
+ (
 \shape italic
 Learning Vector Quantization
 \shape default
@@ -2941,14 +2947,7 @@ description "Learning Vector Quantization"
 \end_inset
 
  para la detección de anomalías y a través de este método ellos podían mejorar
- la tasa de detección del sistema 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "DDoSAttackDetectionBasedOnNeuralNetwork"
-
-\end_inset
-
-.
+ la tasa de detección del sistema.
  Gumus y su equipo, presentarón una implementación adaptativa del algoritmo
  Naive Bayes con pesos exponenciales para una media móvil y la desviación
  estándar 
@@ -2969,21 +2968,20 @@ o en el conjunto de datos de detección de intrusos KDD 99.
 \end_layout
 
 \begin_layout Standard
-El trabajo de Arun Raj Kumar y Selvakumar se centra en la identificación
- de ataques de inundación de alta tasa con alta precisión y pocas falsas
- alarmas haciendo uso de sistemas adaptativos e híbridos neuro-fuzzy con
- el clasificador base o ANFIS 
+El trabajo de Arun Raj Kumar y Selvakumar 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Detectionofdistributeddenialofserviceattacksusinganensembleofadaptiveandhybridneuro-fuzzysystems"
+
+\end_inset
+
+ se centra en la identificación de ataques de inundación de alta tasa con
+ alta precisión y pocas falsas alarmas haciendo uso de sistemas adaptativos
+ e híbridos neuro-fuzzy con el clasificador base o ANFIS 
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "ANFIS"
 description "Adaptive Neuro-Fuzzy Systems"
-
-\end_inset
-
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Detectionofdistributeddenialofserviceattacksusinganensembleofadaptiveandhybridneuro-fuzzysystems"
 
 \end_inset
 
