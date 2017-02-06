@@ -1642,8 +1642,8 @@ key "TaxonomyDDoSAttackAndDefenseMechanisms"
 \end_inset
 
 .
- Sin embargo, un mecanismo de defensa DDoS comprensivo debe incluir las
- tres defensas ya que no existe una solución única.
+ Sin embargo, un mecanismo de defensa DDoS exahustivo debe incluir las tres
+ defensas ya que no existe una solución única.
 \end_layout
 
 \begin_layout Enumerate
