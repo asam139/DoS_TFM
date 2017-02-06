@@ -2949,7 +2949,7 @@ description "Learning Vector Quantization"
  para la detección de anomalías y a través de este método ellos podían mejorar
  la tasa de detección del sistema.
  Gumus y su equipo, presentarón una implementación adaptativa del algoritmo
- Naive Bayes con pesos exponenciales para una media móvil y la desviación
+ Naïve Bayes con pesos exponenciales para una media móvil y la desviación
  estándar 
 \begin_inset CommandInset citation
 LatexCommand citep

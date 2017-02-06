@@ -277,7 +277,7 @@ En este apartado se va a evaluar
 \begin_layout Standard
 Como se ha comentado el software que se ha usado para la experimientación
  ha sido WEKA.
- Se han utilizado las implementaciones de C4.5, Naive Bayes, SVM y MLP que
+ Se han utilizado las implementaciones de C4.5, Naïve Bayes, SVM y MLP que
  WEKA incluye.
  Los CDT se han implementado en WEKA para proporcionar las mismas condiciones
  experimentales en la comparativa.
