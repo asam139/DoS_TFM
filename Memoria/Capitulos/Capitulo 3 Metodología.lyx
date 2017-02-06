@@ -116,7 +116,7 @@ Algoritmo C4.5
 
 \begin_layout Standard
 Es un algoritmo usado para genera un árbol de decisión desarrollado por
- Ross Quinlan
+ Ross Quinlan 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ProgramsForMachineLearning"
@@ -211,7 +211,7 @@ description "Top Down Induction Trees"
 \begin_layout Standard
 C4.5 construye árboles de decisión desde un grupo de datos de entrenamiento
  de la misma forma en que lo hace ID3, usando el concepto de entropía de
- información
+ información 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ProgramsForMachineLearning"
@@ -220,7 +220,7 @@ key "ProgramsForMachineLearning"
 
 .
  La entropía mide la incertidumbre de una fuente de información, o también
- la cantidad de información que contienen los datos usados
+ la cantidad de información que contienen los datos usados 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Teoradelainformacincodificacinylenguajes"
@@ -269,14 +269,14 @@ displaystyle k} k estados tiene una probabilidad
 \end_inset
 
 , entonces la entropía vendrá dada por la suma ponderada de la cantidad
- de información:
+ de información 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Teoradelainformacincodificacinylenguajes"
 
 \end_inset
 
-
+:
 \end_layout
 
 \begin_layout Standard
@@ -300,14 +300,14 @@ Por lo tanto, la entropía de un mensaje
 \end_inset
 
 , es el valor medio ponderado de la cantidad de información de los diversos
- estados del mensaje:
+ estados del mensaje 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Teoradelainformacincodificacinylenguajes"
 
 \end_inset
 
-
+:
 \end_layout
 
 \begin_layout Standard
@@ -365,7 +365,7 @@ Los datos de entrenamiento son un grupo
 \begin_layout Standard
 El algoritmo considera todas las pruebas posibles que pueden dividir el
  conjunto de datos y selecciona la prueba que resulta en la mayor ganancia
- de información
+ de información 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ProgramsForMachineLearning"
@@ -382,7 +382,7 @@ key "ProgramsForMachineLearning"
  de los valores que toma el atributo en los datos.
  En cada nodo, el sistema debe decidir cuál prueba escoge para dividir los
  datos.
- Los tres tipos de pruebas posibles propuestas por el C4.5 son
+ Los tres tipos de pruebas posibles propuestas por el C4.5 son 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ProgramsForMachineLearning"
@@ -424,7 +424,7 @@ Si una variable A tiene valores numéricos continuos, se realiza una prueba
 \end_layout
 
 \begin_layout Standard
-Todas estas pruebas se evalúan de la misma manera
+Todas estas pruebas se evalúan de la misma manera 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ProgramsForMachineLearning"
@@ -455,7 +455,7 @@ Naïve Bayes
 \begin_layout Standard
 El clasificador Naïve Bayes es un simple clasificador probabilístico basado
  en la aplicación del teorema de Bayes con suposiciones de independencia
- fuertes (ingenuas) entre las características
+ fuertes (ingenuas) entre las características 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ModelosBayesianosparalaclasificacinsupervisada.Aplicacionesalanlisisdedatosdeexpresingrfica"
@@ -463,7 +463,7 @@ key "ModelosBayesianosparalaclasificacinsupervisada.Aplicacionesalanlisisdedatos
 \end_inset
 
 .
- Navies Bayes ha sido muy estudiado desde los años 50.
+ Naïve Bayes ha sido muy estudiado desde los años 50.
  Durante todos estos años sus aplicaciones han sido múltiples, una de ellas
  es como un método popular para la categorización de textos, es decir si
  son de política, deportes, anuncios, etc.
@@ -561,7 +561,6 @@ Abstractamente, Naïve Bayes es un modelo de probabilidad condicional: dado
 \begin_inset Formula $C_{k}$
 \end_inset
 
-.
  
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -569,7 +568,8 @@ key "PatternRecognition:AnAlgorithmicApproach."
 
 \end_inset
 
-
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -672,14 +672,14 @@ p(C,F_{1},...,F_{n})=p(C)p(F_{1}|C)p(F_{2}|C)p(F_{3}|C)...=p(C)\prod_{i=1}^{n}p(
 Esto significa que haciendo estas asunciones, la distribución condicional
  sobre la variable clasificaroria {
 \backslash
-displaystyle C} C puede expresarse de la siguiente manera:
+displaystyle C} C puede expresarse de la siguiente manera 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PatternRecognition:AnAlgorithmicApproach."
 
 \end_inset
 
-
+:
 \end_layout
 
 \begin_layout Standard
@@ -719,14 +719,14 @@ Hasta ahora se ha desarrollado el modelo de probabilidad de Bayes.
 \begin_inset Formula $\hat{y}=C_{k}$
 \end_inset
 
-:
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PatternRecognition:AnAlgorithmicApproach."
 
 \end_inset
 
-
+:
 \end_layout
 
 \begin_layout Standard
@@ -760,7 +760,7 @@ key "ModelosEstadsticos:TeorayPrctica"
 
 \end_inset
 
-es un tipo de análisis de regresión utilizado para predecir el resultado
+ es un tipo de análisis de regresión utilizado para predecir el resultado
  de una variable que se puede categorizar, es decir, una variable qu epuede
  adoptar un número limitado de categorías en función de variables, característic
 as o atributos.
@@ -981,15 +981,15 @@ Las probabilidades de que la variable dependiente sea igual a un caso (dada
 ad y la expresión de regresión lineal.
  Dado que el logit oscila entre infinito negativo y positivo, proporciona
  un criterio adecuado sobre el cual conducir la regresión lineal y el logit
- se convierte fácilmente de nuevo en las probabilidades.
- 
+ se convierte fácilmente de nuevo en las probabilidades 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AppliedLogisticRegression"
 
 \end_inset
 
-
+.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -997,7 +997,7 @@ SVM: Support Vector Machine
 \end_layout
 
 \begin_layout Standard
-Las máquinas de soporte vectorial
+Las máquinas de soporte vectorial 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AnIntroductiontoSupportVectorMachinesandotherkernel-basedlearningmethods"
@@ -1045,7 +1045,7 @@ Estos métodos están propiamente relacionados con problemas de clasificación
 \begin_layout Standard
 Más formalmente, una SVM construye un hiperplano o conjunto de hiperplanos
  en un espacio de dimensionalidad muy alta (o incluso infinita) que puede
- ser utilizado en problemas de clasificación o regresión
+ ser utilizado en problemas de clasificación o regresión 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AnIntroductiontoSupportVectorMachinesandotherkernel-basedlearningmethods"
@@ -1273,14 +1273,14 @@ name "subsec:Credal-Decision-Trees"
 
 \begin_layout Standard
 El Credal Decision Trees es un árbol de decisión desarrollado por Abellán
- y Moral
+ y Moral 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Buildingclassificationtreesusingthetotaluncertaintycriterion"
 
 \end_inset
 
-, usando la teoría de probabilidades imprecisas presentada por Walley
+, usando la teoría de probabilidades imprecisas presentada por Walley 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Inferencesfrommultinomialdatalearningaboutabagofmarbles"
@@ -1302,14 +1302,14 @@ des imprecisas y medidas de incertidumbre en conjuntos credales, es decir
  De esta manera, este algoritmo considera que el conjunto de entrenamiento
  no es confiable cuando se lleva a cabo el proceso de selección de variables.
  Este método obtiene buenos resultados experimentales, especialmente cuando
- se clasifican datos ruidodos
+ se clasifican datos ruidodos 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Baggingschemesonthepresenceofnoiseinclassification,Analysisandextensionofdecisiontreesbasedonimpreciseprobabilities:applicationonnoisydata"
 
 \end_inset
 
-
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Analysisandextensionofdecisiontreesbasedonimpreciseprobabilities:applicationonnoisydata"
@@ -1326,7 +1326,7 @@ key "Analysisandextensionofdecisiontreesbasedonimpreciseprobabilities:applicatio
 \begin_layout Standard
 El criterio de división utilizado para construir CDTs se basa en probabilidades
  imprecisas y en la aplicación de medidas de incertidumbre en los conjuntos
- credales
+ credales 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Buildingclassificationtreesusingthetotaluncertaintycriterion"
@@ -1361,7 +1361,7 @@ IDM es usado para estimar los intervalos de probabilidad del conjunto de
 \begin_inset Formula $Z$
 \end_inset
 
- de la siguiente forma
+ de la siguiente forma 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Inferencesfrommultinomialdatalearningaboutabagofmarbles"
@@ -1412,7 +1412,7 @@ Este tipo de reperesentación ofrece un tipo específico de conjunto credal
 \begin_inset Formula $Z,K(Z)$
 \end_inset
 
- definido como
+ definido como 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "UncertaintymeasuresonprobabilityintervalsfromImpreciseDirichletmodel"
@@ -1449,13 +1449,14 @@ En este tipo de conjuntos, pueden ser aplicadas medidas imprecisas.
 \begin_inset Formula $H$
 \end_inset
 
- es la función de entropía de Shannon.
+ es la función de entropía de Shannon 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "UncertaintymeasuresonprobabilityintervalsfromImpreciseDirichletmodel"
 
 \end_inset
 
+.
  
 \begin_inset Formula $H*$
 \end_inset

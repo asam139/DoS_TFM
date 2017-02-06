@@ -163,7 +163,7 @@ key "BibDesk"
 \shape italic
 WEKA 
 \shape default
-3.8
+3.8 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "wekapage"
@@ -174,7 +174,7 @@ key "wekapage"
 \end_layout
 
 \begin_layout Itemize
-Keel suite 3.0
+Keel suite 3.0 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "keelpage"

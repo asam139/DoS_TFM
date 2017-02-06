@@ -141,7 +141,7 @@ key "DDoS_PJCriscuolo"
  ordenadores zombies o Botnet, la cual es un conjunto de dispositivos controlado
 s remotamente, bien organizados y ampliamente dispersos que están continuamente
  enviando una gran cantidad de tráfico y/o peticiones al servicio de la
- víctima
+ víctima 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "SVM_Zombies_DDoS"
@@ -152,7 +152,7 @@ key "SVM_Zombies_DDoS"
  De este modo la víctima responde tan lento que el servicio es inusable
  o directamente colapsa.
  Los zombies o ordenadores que son parte de una botnet son usualmente reclutados
- a través de gusanos, troyanos o puertas traseras
+ a través de gusanos, troyanos o puertas traseras 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "SVM_Zombies_DDoS,DefendingAgainstDDoS_RKCChang"
@@ -194,7 +194,7 @@ description "Domain Name Service"
 
 \end_inset
 
-
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AtaqueDDoS21Octubre_Diaroti,AtaqueDDoS21Octubre"
@@ -216,7 +216,7 @@ Incentivos
 
 \begin_layout Standard
 Los ataques DDoS están usualmente motivados por diferentes incentivos.
- Estos incentivos se pueden clasificar en cinco categorias
+ Estos incentivos se pueden clasificar en cinco categorias 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ASurveyofDefenseMechanismsAgainstDDoS"
@@ -260,7 +260,7 @@ description "Partido Socialista Obrero Español"
 
 \end_inset
 
- debido a la ley Sinde
+ debido a la ley Sinde 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "leySinde"
@@ -301,7 +301,7 @@ name "subsec:Clasificación"
 \end_layout
 
 \begin_layout Standard
-Actualmente existen dos métodos para lanzar ataques DDoS en Internet
+Actualmente existen dos métodos para lanzar ataques DDoS en Internet 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "TaxonomyDDoSAttackAndDefenseMechanisms"
@@ -317,7 +317,7 @@ key "TaxonomyDDoSAttackAndDefenseMechanisms"
  Básicamente ataques de inundación en la capa de red y transporte; y la
  segunda es bloquear el acceso al servicio por parte del usuario mediante
  la sobrecarga de los recursor del servidor, es decir ataques de inundación
- a nivel de aplicación
+ a nivel de aplicación 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "DDoS_RSCALAID"
@@ -452,6 +452,7 @@ Normalmente cuando un ataque DDoS es detectado, no hay nada que se pueda
  Pero obviamente, es deseable responder al ataque lo más cercano de la fuente,
  por lo tanto siempre hay un compromiso entre la precisión y la cercanía
  a la fuente que tienen los mecanimos de prevención y detección.
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ASurveyofDefenseMechanismsAgainstDDoS,ASurveyOfDDoSAttack"
@@ -477,8 +478,7 @@ reference "subsec:Clasificación"
  Los mecanimos para combatir los ataques de DDoS a la capa de red/transporte
  se dividen en cuatro categorías, basados en fuente, destino, red e híbridos.
  Y los mecanismos que combaten los ataques en la capa de aplicación se dividen
- en dos categorías, basados en destino e híbridos.
- 
+ en dos categorías, basados en destino e híbridos 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ASurveyofDefenseMechanismsAgainstDDoS"
@@ -487,7 +487,7 @@ key "ASurveyofDefenseMechanismsAgainstDDoS"
 
 .
  Además haremos una clasificación secundaria de los mecanismos basada en
- el punto que actúan entre el inicio y el fin del ataque
+ el punto que actúan entre el inicio y el fin del ataque 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ASurveyofDefenseMechanismsAgainstDDoS"
@@ -502,7 +502,7 @@ Clasificación basada en la ubicación de despliegue
 \end_layout
 
 \begin_layout Enumerate
-Mecanismos para ataques DDoS a la capa de red/transporte
+Mecanismos para ataques DDoS a la capa de red/transporte 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ASurveyofDefenseMechanismsAgainstDDoS"
@@ -527,7 +527,7 @@ description "Autonomous System"
 
 \end_inset
 
- que conecta a los routers límite
+ que conecta a los routers límite 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "DDoS_PJCriscuolo"
@@ -568,7 +568,7 @@ y RFW (
 \shape italic
 MANAnet Reverse Firewal
 \shape default
-l)
+l) 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ASurveyofDefenseMechanismsAgainstDDoS"
@@ -609,7 +609,7 @@ y
 \shape italic
  Packet dropping based on the level of congestion
 \shape default
-
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ASurveyofDefenseMechanismsAgainstDDoS"
@@ -626,7 +626,7 @@ mente en los routers que forman los AS.
 \shape italic
 route-based packet filtering y detecting and filtering malicious routers
 \shape default
-
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ASurveyofDefenseMechanismsAgainstDDoS"
@@ -677,7 +677,7 @@ description "Active Internet Traffic Filtering"
 
 \end_inset
 
-y StopIt
+y StopIt 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ASurveyofDefenseMechanismsAgainstDDoS"
@@ -1200,7 +1200,7 @@ description "Defense Against Tilt DDoS attacks"
 
 \end_inset
 
-
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ASurveyofDefenseMechanismsAgainstDDoS"
@@ -1255,7 +1255,7 @@ description "Trush Management Helmet"
 \shape italic
 hybrid detection based on trust and information theory based metrics
 \shape default
-
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ASurveyofDefenseMechanismsAgainstDDoS"
@@ -1562,6 +1562,7 @@ El segundo criterio para la clasificación es el momento en que los mecanismos
  (es decir, tres puntos de defensa contra el ataque de inundación): antes
  del ataque (prevención de ataques) durante el ataque Ataque de detección),
  y después del ataque (identificación de la fuente de ataque y respuesta)
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "TaxonomyDDoSAttackAndDefenseMechanisms"
@@ -1582,7 +1583,7 @@ Antes del ataque o prevención: lo mejor siempre es parar el ataque DDoS
  de seguridad que pueden ser explotadas por los ataques DDoS.
  Hay muchos mecanismos de prevención generales que deberían ser empleados
  en todos ellos.
- Algunos de estos son
+ Algunos de estos son 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ASurveyofDefenseMechanismsAgainstDDoS"
@@ -1819,7 +1820,7 @@ machine learning
 \shape default
 ) es el subcampo de las ciencias de la computación y una rama de la inteligencia
  artificial cuyo objetivo es desarrollar técnicas que permitan a las computadora
-s aprender
+s aprender 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "patternRecognitionAndMachineLearning"
@@ -1832,7 +1833,7 @@ key "patternRecognitionAndMachineLearning"
  Es, por lo tanto, un proceso de inducción del conocimiento.
  El aprendizaje automático se centra en el análisis de los datos y el estudio
  de la complejidad computacional de los problemas.
- Muchos problemas son de clase NP-duros
+ Muchos problemas son de clase NP-duros 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "problemasPvsNP"
@@ -1887,7 +1888,7 @@ key "AnIntroductiontoMachineLearning"
 El objetivo es lograr un modelo para los datos.
  Existen diferentes tipos de modelos que se pueden crear a partir de los
  datos.
- Entre ellos se distinguen
+ Entre ellos se distinguen 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "patternRecognitionAndMachineLearning"
@@ -1901,7 +1902,7 @@ key "patternRecognitionAndMachineLearning"
  determinados y los modelos lógicos, que expresan las probabilidades en
  reglas organizadas en forma de árboles de decisión.
  Los algoritmos que se utilizan para resolver los problemas basados en árboles
- de decicisón pueden ser muy variados
+ de decicisón pueden ser muy variados 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "patternRecognitionAndMachineLearning"
@@ -1959,7 +1960,7 @@ Dado un conjuntos de datos, esté se estructura en instancias con sus atributos
 
 \begin_layout Standard
 Hay que hacer una diferencia en función de la variable clase entre la tareas
- de clasificación y las de regresión
+ de clasificación y las de regresión 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AnIntroductiontoMachineLearning"
@@ -2018,6 +2019,7 @@ Por último, los problemas de clasificación se dividen en dos subconjuntos
 \begin_layout Standard
 En aprendizaje automático y minería de datos, un tipo de análisis supervisado
  es viable cuando los datos de entrenamiento poseen una variable de clase
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "aprendizajeAutomaticoSupervisado"
@@ -2029,7 +2031,7 @@ key "aprendizajeAutomaticoSupervisado"
  de predecir el valor correspondiente a cualquier objeto de entrada válido
  después de haber visto una serie de ejemplos, los datos de entrenamiento.
  Para ello, tiene que generalizar a partir de los datos presentados a las
- situaciones no vistas previamente
+ situaciones no vistas previamente 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "aprendizajeAutomaticoSupervisado"
@@ -2055,7 +2057,7 @@ to.
  El aprendizaje no supervisado debido a que sería como una clasificación
  a ciegas, típicamente trata los objetos de entrada como un conjunto de
  variables aleatorias, siendo construido un modelo de densidad para el conjunto
- de datos
+ de datos 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "UnsupervisedclassificationofmajordepressionusingfunctionalconnectivityMRI"
@@ -2132,7 +2134,7 @@ description "Redes Neuronal Artificial"
 \end_inset
 
 ): las redes neuronales fueron objeto de especial interés en los primeros
- tiempos de la Inteligencia Artificial (años 50 y 60)
+ tiempos de la Inteligencia Artificial (años 50 y 60) 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Artificialneuralnetworks:fundamentalscomputingdesignandapplication"
@@ -2153,7 +2155,7 @@ s de red más usuales por aquel entonces.
 a del cerebro humano provocaron un resurgimiento del interés por el tema.
  Una red neuronal consiste básicamente de una serie de unidades de proceso,
  también llamadas neuronas artificiales, relacionadas mediante unas conexiones
- ponderadas
+ ponderadas 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Artificialneuralnetworks:fundamentalscomputingdesignandapplication"
@@ -2176,7 +2178,7 @@ key "Artificialneuralnetworks:fundamentalscomputingdesignandapplication"
  Constan de la creacion de un modelo cuya representacion gráfica es una
  estructura de arbol, con nodos y aristas que permiten, haciendo uso de
  comprobaciones matemáticas permiten clasificar a partir de decisiones tomadas
- en base a los atributos de un conjunto de datos de entrenamiento
+ en base a los atributos de un conjunto de datos de entrenamiento 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Asurveyofcostsensitivedecisiontreeinductionalgorithms"
@@ -2195,7 +2197,7 @@ key "Asurveyofcostsensitivedecisiontreeinductionalgorithms"
 
 \begin_layout Itemize
 Redes bayesianas: Corresponden a modelos gráficos basados en la teoría de
- la probabilidad
+ la probabilidad 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ModelosBayesianosparalaclasificacinsupervisada.Aplicacionesalanlisisdedatosdeexpresingrfica"
@@ -2225,7 +2227,7 @@ description "Support Vector Machine"
  en el que cada uno de ellos pertenece a una de dos posibles categorías
  (problema de clasificación binario), un algoritmo basado en SVM construye
  un modelo capaz de predecir si un punto nuevo (cuya categoría desconocemos)
- pertenece a una categoría o a la otra
+ pertenece a una categoría o a la otra 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Acomparativestudyonthepredictiveabilityofthedecisiontreesupportvectormachineandneuro-fuzzymodelsinlandslidesusceptibilitymappingusingGIS"
@@ -2245,7 +2247,7 @@ key "Acomparativestudyonthepredictiveabilityofthedecisiontreesupportvectormachin
 Logistic Regression (LogR): la regresión estadística es un tipo de análisis
  de regresión utilizado para predecir el resultado de una variable categórica
  (una variable que puede adoptar un número limitado de categorías) en función
- de las variables independientes o predictoras
+ de las variables independientes o predictoras 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ModelosEstadsticos:TeorayPrctica"
@@ -2265,7 +2267,7 @@ Evaluación de Clasificadores
 
 \begin_layout Standard
 Es muy importante cuando se construye o usa un clasificador evaluar de alguna
- manera lo bueno o malo que es
+ manera lo bueno o malo que es 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Computersystemsthatlearn:Classificationandprediction.Methodsfromstatisticsneurlanetsmachinelearningandexpertsystems"
@@ -2291,14 +2293,14 @@ key "Computersystemsthatlearn:Classificationandprediction.Methodsfromstatisticsn
 La precisión de un clasificador es la probabilidad con la que clasifica
  correctamente un caso seleccionado al azar, o también, lo podemos ver comom
  el número de casos clasificados correctamente entre el número total de
- elementos.
+ elementos 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Wrappersforperformanceenhancementandobliviousdecisiongraphs"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -2341,7 +2343,7 @@ Remuestreo (random subsampling): es una variación del sistema anterior donde
 \end_layout
 
 \begin_layout Itemize
-Validación cruzada de k-hojas (k-fold cross-validation)
+Validación cruzada de k-hojas (k-fold cross-validation) 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Cross-validationchoiceandassessmentofstatisticalpredictions"
@@ -2358,7 +2360,7 @@ key "Cross-validationchoiceandassessmentofstatisticalpredictions"
 \end_layout
 
 \begin_layout Itemize
-Dejar-uno-fuera (leave-one-out)
+Dejar-uno-fuera (leave-one-out) 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Estimationoferrorratesindiscriminantanalysis"
@@ -2375,7 +2377,7 @@ key "Estimationoferrorratesindiscriminantanalysis"
 \end_layout
 
 \begin_layout Itemize
-Bootstrapping
+Bootstrapping 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ROCgraphs:Notesandpracticalconsiderationsforresearchers."
@@ -2387,7 +2389,7 @@ key "ROCgraphs:Notesandpracticalconsiderationsforresearchers."
  No obstante, con conjuntos pequeños de datos, suele mostrar una varianza
  alta.
  El bootstrapping (o bootstrap) es un método de remuestreo propuesto por
- Bradley Efron en 1979
+ Bradley Efron en 1979 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Bootstrapmethods:Anotherlookatthejackknife."
@@ -2408,7 +2410,7 @@ key "Bootstrapmethods:Anotherlookatthejackknife."
 \begin_layout Standard
 \align left
 Algunas veces también es importante conocer no solo la precisión del clasificado
-r, sino también el sentido en el que se equivoca
+r, sino también el sentido en el que se equivoca 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ModelosBayesianosparalaclasificacinsupervisada.Aplicacionesalanlisisdedatosdeexpresingrfica"
@@ -2568,7 +2570,7 @@ name "tab:Tipos-de-aciertos"
 \begin_layout Standard
 La sensibilidad es la capaciddad del clasificador para detectar a la clase
  positiva, la que más interesa.
- Se define como
+ Se define como 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ModelosBayesianosparalaclasificacinsupervisada.Aplicacionesalanlisisdedatosdeexpresingrfica"
@@ -2592,7 +2594,7 @@ sensibilidad=\frac{verdaderos\:positivos}{verdaderos\:positivos+falsos\:negativo
 \begin_layout Standard
 Por otro lado, se define la especificidad como la capacidad de clasificar
  correctamente a un flujo el cual no sea un ataque.
- Se puede calcular como
+ Se puede calcular como 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ModelosBayesianosparalaclasificacinsupervisada.Aplicacionesalanlisisdedatosdeexpresingrfica"
@@ -2615,7 +2617,7 @@ sensibilidad=\frac{verdaderos\:negativos}{verdaderos\:negativos+falsos\:positivo
 
 \begin_layout Standard
 En problemas donde distinguir el tipo de error es importante, se pueden
- utilizar las curvas ROC (Receiver Operating Characteristics)
+ utilizar las curvas ROC (Receiver Operating Characteristics) 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Receiver-operatingcharacteristicanalysisforevaluatingdiagnostictestsandpredictivemodels"
@@ -2626,7 +2628,7 @@ key "Receiver-operatingcharacteristicanalysisforevaluatingdiagnostictestsandpred
  Son curvas en las que se presenta la sensibilidad en función de los falsos
  positivos para distintos resultados de un clasificador.
  Una interpretación muy común de estas curvas es el área bajo ellas, llamada
- comúnmente como AUC ( Area Under Curve)
+ comúnmente como AUC ( Area Under Curve) 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ComparacindemodelosdecurvasROCparalaevaluacindeprocedimientosestadsticosdeprediccineninvestigacindemercados"
@@ -2715,7 +2717,7 @@ key "Neuralnetworksvs.decisiontreesforintrusiondetection"
 
 \end_inset
 
-, 
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Artificialneuralnetworksarchitectureforintrusiondetectionsystemsandclassificationofattacks"
@@ -2798,7 +2800,7 @@ key "Comparisonofgeneticalgorithmoptimizationonartificialneuralnetworkandsupport
 
 \end_inset
 
-, 
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "DistributedDenialofServiceDetectionusinghybridmachinelearningtechniques"

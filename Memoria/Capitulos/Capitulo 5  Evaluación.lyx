@@ -344,7 +344,7 @@ description "Feature Subset Selection"
 
 \end_inset
 
-)
+) 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AnIntroductiontoVariableandFeatureSelection"
@@ -378,7 +378,7 @@ weka.attributeSelection.CfsSubsetEval
 \begin_inset Quotes erd
 \end_inset
 
-
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Correlation-basedFeatureSubsetSelectionforMachineLearning"
@@ -1514,7 +1514,7 @@ name "tab:Área-bajo-la-curva-para-cada-clasificador-usando-la-base-datos-con-cl
 \end_layout
 
 \begin_layout Standard
-Siguiento las recomendaciones de Demšar
+Siguiento las recomendaciones de Demšar 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Statisticalcomparisonsofclassifiersovermultipledatasets"
@@ -1522,7 +1522,7 @@ key "Statisticalcomparisonsofclassifiersovermultipledatasets"
 \end_inset
 
 , se han utilizado un serie de tests estadísticos para comparar los métodos.
- Para ello se ha utilizado el software Keel
+ Para ello se ha utilizado el software Keel 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Keel:asoftwaretooltoassessevolutionaryalgorithmsfordataminingproblems"
@@ -1542,7 +1542,7 @@ key "Theuseofrankstoavoidtheassumptionofnormalityimplicitintheanalysisofvariance
 
 \end_inset
 
-
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Acomparisonofalternativetestsofsignificancefortheproblemofmrankings"
@@ -1558,7 +1558,7 @@ key "Acomparisonofalternativetestsofsignificancefortheproblemofmrankings"
 \end_layout
 
 \begin_layout Itemize
-La prueba de Nememyi
+La prueba de Nememyi 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Distribution-freemultiplecomparisons"

@@ -212,7 +212,7 @@ reference "tab:tiposDeAtaque_KDD_2"
 \begin_layout Itemize
 BACK: ataque contra el servidor web Apache cuando un cliente pide una URL
  que contiene muchas barras.
- El tamaño máximo del búfer para la URL era de 2048Bytes
+ El tamaño máximo del búfer para la URL era de 2048Bytes 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "backAttackDDOS"
@@ -234,7 +234,7 @@ LAND: se realiza al enviar un paquete TCP/SYN falsificado con la dirección
 
 \begin_layout Itemize
 NEPTUNE o inundación SYN: envía un flujo de paquetes TCP/SYN, muchas veces
- con la dirección de origen falsificada
+ con la dirección de origen falsificada 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "TCPSYNFloodingAttacksandCommonMitigations"
@@ -260,7 +260,7 @@ ping
 \shape default
  de la muerte: es un tipo de ataque enviado a una computadora que consiste
  en mandar numerosos paquetes ICMP muy grandes (mayores a 65.535 bytes) con
- el fin de colapsar el sistema atacado
+ el fin de colapsar el sistema atacado 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "HACKINGtheartofexploitation"
@@ -301,7 +301,7 @@ SMURF o ataque pitufo: es un ataque de denegación de servicio que utiliza
 \shape italic
 ping
 \shape default
- al broadcast falsificando su identiddad para inundar un objetivo
+ al broadcast falsificando su identiddad para inundar un objetivo 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Fraggleattack"
@@ -340,7 +340,7 @@ broadcast
 
 \begin_layout Itemize
 TEARDROP: este ataque envuelve el envío de fragmentos IP dañados con cargas
- útiles superpuestas, sobredimensionadas a la máquina de destino
+ útiles superpuestas, sobredimensionadas a la máquina de destino 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "CERTAdvisoryCA-1997-28IPDenial-of-ServiceAttacks"

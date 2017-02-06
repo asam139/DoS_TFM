@@ -134,7 +134,7 @@ Los DDoS son ataques sobre la infraestuctura de red que provoca que el servicio
 Según la encuenta de Karpersky Lab y B2B Internacional a finales de 2015
  más de una de cada cinco compañías que ha sufrido algún tipo de ataque
  DDoS se dio cuenta que sus problemas continuaban durante días, o incluso
- semanas
+ semanas 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "KasperskyLabSurvey"
@@ -173,7 +173,7 @@ vos en los tiempos de carga del servicio.
 \begin_layout Standard
 Como caso reciente, el 21 de Octubre de 2016, se produjo una serie de ataques
  de Denegación de Servicio Distribuido o DDoS que causó una interrupción
- generalizada de la actividad de Internet en los Estados Unidos
+ generalizada de la actividad de Internet en los Estados Unidos 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AtaqueDDoS21Octubre"
@@ -325,7 +325,7 @@ De acuerdo a los estudios realizados y a las implementaciones existentes
 \begin_layout Itemize
 Es un desafío discriminar el tráfico normal y el tráfico de ataque DDoS
  por lo que hay que estudiar qeu algortimo tiene mayor efectividad dependiendo
- del tipo de red y otros factores
+ del tipo de red y otros factores 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "DectionOfDDoSAttacks_Article"
@@ -339,7 +339,7 @@ key "DectionOfDDoSAttacks_Article"
 \begin_layout Itemize
 Las técnicas de aprendizaje automático aplicadas a la detección de ataques
  DDoS tiene un gran efectividad llegando a tener una alta efectividad de
- detección del 99,2% reduciendo los falsos positivos
+ detección del 99,2% reduciendo los falsos positivos 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "DectionOfDDoSAttacks_Article"
