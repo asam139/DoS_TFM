@@ -1314,7 +1314,14 @@ key "Neuralnetworks.II.Whataretheyandwhyiseverybodysointerestedinthemnow?"
 , pero desde la década de 1990 se enfrentó a la fuerte competencia de la
  mucho más simple SVM.
  Más recientemente, ha habido un renovado interés en las redes de retropropagaci
-ón debido a los éxitos del aprendizaje profundo.
+ón debido a los éxitos del aprendizaje profundo 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "lecun2015deep"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -1537,6 +1544,172 @@ key "UncertaintymeasuresonprobabilityintervalsfromImpreciseDirichletmodel"
 \end_inset
 
 .
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El algoritmo para construir un CDT es muy similar al del ID3.
+ Se tiene en cuenta que cada nodo 
+\begin_inset Formula $N_{0}$
+\end_inset
+
+ en un árbol de decisión, produce una partición del conjunto de datos, que
+ nombramos para simplificar como 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ Cada nodo 
+\begin_inset Formula $N_{0}$
+\end_inset
+
+ tiene una lista asociada 
+\begin_inset Formula $L$
+\end_inset
+
+ de etiquetas de características (que no están en el camino desde el nodo
+ raíz a 
+\begin_inset Formula $N_{0}$
+\end_inset
+
+ ).
+ El procedimiento para construir un CDT se explica en el algoritmo de la
+ Fig.
+ 2.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Procedimiento ConstruirCDT(No, L)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.
+ Si L = 0, then Salir
+\end_layout
+
+\begin_layout Plain Layout
+
+2.
+ Sea D la partición asociada con el nodo No
+\end_layout
+
+\begin_layout Plain Layout
+
+3.
+ Computar el valor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\alpha=max\:x_{j}\epsilon L\left\{ IIG\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[mathescape=true]   
+\end_layout
+
+\begin_layout Plain Layout
+
+Procedimiento ConstruirCDT(No, L)	
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	1.
+ Si L = 0, then Salir 
+\end_layout
+
+\begin_layout Plain Layout
+
+	2.
+ Sea D la partición asociada con el nodo No
+\end_layout
+
+\begin_layout Plain Layout
+
+	3.
+ Computar el valor 
+\end_layout
+
+\begin_layout Plain Layout
+
+	list= { (*$S_1,S_2,S_3$*) } 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Procedimiento para construir un CDT
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

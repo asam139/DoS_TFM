@@ -1544,6 +1544,264 @@ key "UncertaintymeasuresonprobabilityintervalsfromImpreciseDirichletmodel"
 \end_inset
 
 .
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El algoritmo para construir un CDT es muy similar al del ID3.
+ Se tiene en cuenta que cada nodo 
+\begin_inset Formula $N_{0}$
+\end_inset
+
+ en un árbol de decisión, produce una partición del conjunto de datos, que
+ nombramos para simplificar como 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ Cada nodo 
+\begin_inset Formula $N_{0}$
+\end_inset
+
+ tiene una lista asociada 
+\begin_inset Formula $L$
+\end_inset
+
+ de etiquetas de características (que no están en el camino desde el nodo
+ raíz a 
+\begin_inset Formula $N_{0}$
+\end_inset
+
+ ).
+ El procedimiento para construir un CDT se explica en el algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Procedimiento-para-construir"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "abellan2017comparative"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[mathescape=true]   
+\end_layout
+
+\begin_layout Plain Layout
+
+Procedimiento ConstruirCDT(No, L)	
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	1.
+ Si L = 0, then Salir 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	2.
+ Sea D la partición asociada con el nodo No
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	3.
+ Computar el valor 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		$
+\backslash
+alpha=max
+\backslash
+:x_{j}
+\backslash
+epsilon L
+\backslash
+left
+\backslash
+{ IIG^{D}(C,X_{j})
+\backslash
+right
+\backslash
+}$
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	4.
+ Si $
+\backslash
+alpha
+\backslash
+leq0$ entonces Salir
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	5.
+ Sino
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		6.Sea la variable $X_l$ para cual el máximo de $
+\backslash
+alpha$ es alcanzado 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	7.
+ Eliminar $
+\backslash
+alpha
+\backslash
+leq0$ de $L$
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	8.
+ Asignar $X_l$ al nodo $N_o$
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	9.
+ Por cada posible valor $x_l$ de $X_l$
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		10.
+ Anadir un nodo $N_{o_{l}}$
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		11.
+ Hacer un hijo $N_{o_{l}}$ de $N_o$
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		12.
+ LLamar ConstruirCDT($N_{o_{l}}$, $L$)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Procedimiento para construir un CDT
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Procedimiento-para-construir"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
