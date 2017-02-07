@@ -109,11 +109,16 @@ name "sec:Descripción-del-entorno-experimental"
 \end_layout
 
 \begin_layout Standard
-En la tabla se muestra las características del ordenador sobre el cual se
- han simulado todos los estudios de este trabajo haciendo uso del programa
- WEKA.
- A pesar de que se trata de una máquina muy potente no ha sido suficiente
- para correr algunos de los estudios.
+En la tabla se muestra las características del equipo sobre el cual se han
+ simulado todos los estudios de este trabajo haciendo uso del programa WEKA.
+ El equipo se trata de un Acer AR160 F1 el cual instala 2 procesadores Intel(R)
+ Xeon(R) E5645 2.40GHz, cada uno con 6 núcleos y hasta 12 procesos y 32GB
+ de memoria.
+ No obstante, WEKA no está preparado para trabajar en paralelo y, por tanto
+ cada experimiento usaba un sólo proceso y por ello no lo suficiente para
+ ejecutar algunos de los algoritmos.
+ Para tardar menos se realizaron los experimentos para cada clasificador
+ por separado.
 \end_layout
 
 \begin_layout Standard
@@ -144,7 +149,29 @@ centering
 <lyxtabular version="3" rows="4" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="4cm">
-<column alignment="center" valignment="top" width="5cm">
+<column alignment="center" valignment="top" width="6cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Modelo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Acer AR160 F1
+\end_layout
+
+\end_inset
+</cell>
+</row>
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
@@ -152,7 +179,7 @@ centering
 \begin_layout Plain Layout
 
 \series bold
-Procesador
+Procesadores
 \end_layout
 
 \end_inset
@@ -161,7 +188,7 @@ Procesador
 \begin_inset Text
 
 \begin_layout Plain Layout
-Intel Xeon...
+2, Intel(R) Xeon(R) E5645 2.4GHz
 \end_layout
 
 \end_inset
@@ -183,29 +210,7 @@ Memoria
 \begin_inset Text
 
 \begin_layout Plain Layout
-32GB 1333MHz DDR3
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Tarjeta Gráfica
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-xxx
+32GB
 \end_layout
 
 \end_inset
@@ -223,7 +228,7 @@ Sistema Operativo
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout

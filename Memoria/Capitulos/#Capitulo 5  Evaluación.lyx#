@@ -109,11 +109,18 @@ name "sec:Descripción-del-entorno-experimental"
 \end_layout
 
 \begin_layout Standard
-En la tabla se muestra las características del ordenador sobre el cual se
- han simulado todos los estudios de este trabajo haciendo uso del programa
- WEKA.
- A pesar de que se trata de una máquina muy potente no ha sido suficiente
- para correr algunos de los estudios.
+En la tabla se muestra las características del equipo sobre el cual se han
+ simulado todos los estudios de este trabajo haciendo uso del programa WEKA.
+ El equipo se trata de un Acer AR160 F1 el cual instala 2 procesadores Intel(R)
+ Xeon(R) E5645 2.40GHz, cada uno con 6 núcleos y hasta 12 procesos y 32GB
+ de memoria.
+ No obstante, WEKA no está preparado para trabajar en paralelo y, por tanto
+ cada experimiento usaba un sólo proceso y por ello no lo suficiente pontente
+ .
+ Para tardar menos se realizaron los experimentos para cada clasificador
+ por separado.
+ sobre el que se ha ejeA pesar de que se trata de una máquina muy potente
+ no ha sido suficiente para correr algunos de los estudios.
 \end_layout
 
 \begin_layout Standard
@@ -141,10 +148,10 @@ centering
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="2">
+<lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="4cm">
-<column alignment="center" valignment="top" width="5cm">
+<column alignment="center" valignment="top" width="6cm">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
@@ -152,7 +159,7 @@ centering
 \begin_layout Plain Layout
 
 \series bold
-Procesador
+Procesadores
 \end_layout
 
 \end_inset
@@ -161,7 +168,7 @@ Procesador
 \begin_inset Text
 
 \begin_layout Plain Layout
-Intel Xeon...
+2, Intel(R) Xeon(R) E5645 2.4GHz
 \end_layout
 
 \end_inset
@@ -190,28 +197,6 @@ Memoria
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Tarjeta Gráfica
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-xxx
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
@@ -223,7 +208,7 @@ Sistema Operativo
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -277,7 +262,7 @@ En este apartado se va a evaluar
 \begin_layout Standard
 Como se ha comentado el software que se ha usado para la experimientación
  ha sido WEKA.
- Se han utilizado las implementaciones de C4.5, Naive Bayes, SVM y MLP que
+ Se han utilizado las implementaciones de C4.5, Naïve Bayes, SVM y MLP que
  WEKA incluye.
  Los CDT se han implementado en WEKA para proporcionar las mismas condiciones
  experimentales en la comparativa.
@@ -344,7 +329,7 @@ description "Feature Subset Selection"
 
 \end_inset
 
-)
+) 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AnIntroductiontoVariableandFeatureSelection"
@@ -378,7 +363,7 @@ weka.attributeSelection.CfsSubsetEval
 \begin_inset Quotes erd
 \end_inset
 
-
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Correlation-basedFeatureSubsetSelectionforMachineLearning"
@@ -1514,7 +1499,7 @@ name "tab:Área-bajo-la-curva-para-cada-clasificador-usando-la-base-datos-con-cl
 \end_layout
 
 \begin_layout Standard
-Siguiento las recomendaciones de Demšar
+Siguiento las recomendaciones de Demšar 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Statisticalcomparisonsofclassifiersovermultipledatasets"
@@ -1522,7 +1507,7 @@ key "Statisticalcomparisonsofclassifiersovermultipledatasets"
 \end_inset
 
 , se han utilizado un serie de tests estadísticos para comparar los métodos.
- Para ello se ha utilizado el software Keel
+ Para ello se ha utilizado el software Keel 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Keel:asoftwaretooltoassessevolutionaryalgorithmsfordataminingproblems"
@@ -1542,7 +1527,7 @@ key "Theuseofrankstoavoidtheassumptionofnormalityimplicitintheanalysisofvariance
 
 \end_inset
 
-
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Acomparisonofalternativetestsofsignificancefortheproblemofmrankings"
@@ -1558,7 +1543,7 @@ key "Acomparisonofalternativetestsofsignificancefortheproblemofmrankings"
 \end_layout
 
 \begin_layout Itemize
-La prueba de Nememyi
+La prueba de Nememyi 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Distribution-freemultiplecomparisons"
@@ -2292,7 +2277,7 @@ name "tab:P-valores-del-test-nemenyi-precision"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2476,18 +2461,14 @@ name "tab:P-valores-del-test-nemenyi-tiempo"
 \end_inset
 
 
-\begin_inset Newline newline
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 Para acabar se va a comparar los resultados de cada clasificador en duelos
- por parejas con un sencillo método basado en victorias en cada estudio
- para la precisión, el tiempo y la curva AUC.
+ por parejas con un sencillo método basado en puntos en cada estudio para
+ la precisión, el tiempo y la curva AUC.
  Por cada caso en el que sea el vencedor se llevará un punto y por el que
- no se le restará.
+ no se le restará, o en caso de empate ni se suma ni se resta.
  En la tabla 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2496,9 +2477,10 @@ reference "tab:comparacionBasadaEnVictorias"
 \end_inset
 
  se observa el resultado final.
- El CDT se pone a la cabeza de la tabla con 11 victorias seguido por el
- J48 con 3 victorias.
- Y en p
+ El CDT se pone a la cabeza de la tabla con 11 puntos seguido por el J48
+ con 3 puntos.
+ Y en la parte baja el NB y el LogR con -6 y -8 puntos correspondientemente.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3050,7 +3032,7 @@ MLP
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Ranking de clasificadores basado en las victorias
+Ranking de clasificadores basado en puntuación
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:comparacionBasadaEnVictorias"
