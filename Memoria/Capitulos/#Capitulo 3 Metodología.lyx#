@@ -1070,7 +1070,9 @@ key "AnIntroductiontoSupportVectorMachinesandotherkernel-basedlearningmethods"
 \end_inset
 
 , máquinas de vectores de soporte o máquinas de vector soporte (Support
- Vector Machines, SVMs) son un conjunto de algoritmos de aprendizaje supervisado
+ Vector Machines, SVMs) son un conjunto de algoritmos pensados para resolver
+ problemas de clasificación binaria, actualmente se utilizan para resolver
+ otros tipos de probleamas (regresión, agrupamiento, multiclasificación)
  desarrollados por Vladimir N.
  Vapnik y Alexey Ya.
  Chervonenkis en 1963.
@@ -1079,59 +1081,26 @@ key "AnIntroductiontoSupportVectorMachinesandotherkernel-basedlearningmethods"
  Guyon y Vladimir N.
  Vapnik sugirieron una manera de crear clasificadores no lineales aplicando
  el truco del núcleo a los hiperplanos de máximo margen.
- [9] Corinna Cortés y Vapnik propusieron la actual encarnación estándar
- (margen blando) en 1993 y se publicaron en 1995.
- [1]
-\begin_inset Newline newline
+ Corinna Cortés y Vapnik 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "cortes1995support"
+
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Estos métodos están propiamente relacionados con problemas de clasificación
- y regresión.
- Dado un conjunto de ejemplos de entrenamiento (de muestras) podemos etiquetar
- las clases y entrenar una SVM para construir un modelo que prediga la clase
- de una nueva muestra.
- Intuitivamente, una SVM lineal es un modelo que representa a los puntos
- de muestra en el espacio, separando las clases a 2 espacios lo más amplios
- posibles mediante un hiperplano de separación definido como el vector entre
- los 2 puntos, de las 2 clases, mas cercanos al que se llama vector soporte.
- Cuando las nuevas muestras se ponen en correspondencia con dicho modelo,
- en función de los espacios a los que pertenezcan, pueden ser clasificadas
- a una o la otra clase.
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Más formalmente, una SVM construye un hiperplano o conjunto de hiperplanos
- en un espacio de dimensionalidad muy alta (o incluso infinita) que puede
- ser utilizado en problemas de clasificación o regresión 
+ propusieron la actual encarnación estándar (margen blando) en 1993 y se
+ publicaron en 1995.
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AnIntroductiontoSupportVectorMachinesandotherkernel-basedlearningmethods"
 
 \end_inset
 
-.
- Una buena separación entre las clases permitirá un clasificación correcta.
- Una SVM busca un hiperplano que separe de forma óptima a los puntos de
- una clase de la de otra, que eventualmente han podido ser previamente proyectad
-os a un espacio de dimensionalidad superior.
- En ese concepto de "separación óptima" es donde reside la característica
- fundamental de las SVM: este tipo de algoritmos buscan el hiperplano que
- tenga la máxima distancia (margen) con los puntos que estén más cerca de
- él mismo.
- Por eso también a veces se les conoce a las SVM como clasificadores de
- margen máximo.
- De esta forma, los puntos del vector que son etiquetados con una categoría
- estarán a un lado del hiperplano y los casos que se encuentren en la otra
- categoría estarán al otro lado.
- Los algoritmos SVM pertenecen a la familia de los clasificadores lineales.
+ También han sido utilizados en más campos con éxito, tales como visión
+ artificial, reconocimiento de caracteres, categorización de texto e hipertexto,
+ clasificación de proteínas, análisis de series temporales.
+ De hecho, desde su introducción, han ido ganando un merecido reconocimiento
+ gracias a sus sólidos fundamentos teóricos.
 \begin_inset Newline newline
 \end_inset
 
@@ -1139,62 +1108,70 @@ os a un espacio de dimensionalidad superior.
 \end_layout
 
 \begin_layout Standard
-Si entramos en una explicación matemática, dado un cojunto de datos de n
- puntos, 
-\begin_inset Formula $(\overrightarrow{x_{i}},y_{i}),...,(\overrightarrow{x_{n}},y_{n})$
+Dentro de la tarea de clasificación, las SVMs pertenecen a la categoría
+ de los clasificadores lineales, puesto que inducen separadores lineales
+ o hiperplanos, ya sea en el espacio original de los ejemplos de entrada,
+ si éstos son separabales o cuasi-separables (ruido), o en un espacio transforma
+do (espacio de características), si los ejemplos no son separables linealmente
+ en el espacio original.
+ Como se verá más adelante, la búsqueda del hiperplano de separación en
+ estos espacios transformados, normalmente de muy alta dimensión, se hará
+ de forma implícita utilizando las denominadas funciones kernel.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mientras la mayoría de los método de aprendizaje se centran en minimzar
+ los errores cometidos por el modelo generado a partir de los ejemplos de
+ entrenamiento (error empírico), el sesgo inductivo asociado a las SVMs
+ radica en la minimización del denominado riesgo estructural.
+ La idea es seleccionar un hiperplano de separación qeu equidista de los
+ ejemplos más cercano de cada clase para, de esta forma, conseguir lo que
+ se denomina un margen máximo a cada lado del hiperplano.
+ Además, a la hora de definir el hiperplano, sólo se consideran los ejemplos
+ de entrenamiento de cada clase qeu caen justo en la frontera de dichos
+ márgenes.
+ Estos ejemplos reciben el nombre de vectores soporte.
+ Desde un punto de vista práctico, el hiperplano separador de margen máximo
+ ha demostrado tener una buena capacidad de generalización, evitando en
+ gran medida el problema del sobreajuste a los ejemplos de entrenamiento.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si entramos en una explicación matemática, dado un conjunto separable de
+ ejemplos, 
+\begin_inset Formula $S=(\overrightarrow{x_{i}},y_{i}),...,(\overrightarrow{x_{n}},y_{n})$
 \end_inset
 
 , donde 
-\begin_inset Formula $y_{i}$
+\begin_inset Formula $x_{i}\epsilon R^{d}$
 \end_inset
 
- es 1 o -1, cada uno indicando la clase a la cual el punto 
-\begin_inset Formula $\overrightarrow{x_{i}}$
+e 
+\begin_inset Formula $y_{i}\epsilon\{+1,-1\}$
 \end_inset
 
- pertenece.
- Cada 
-\begin_inset Formula $\overrightarrow{x_{i}}$
+, se puede definir un hiperplano de separación (ver figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hiperplanos-de-separación"
+
 \end_inset
 
- es un vector real p-dimensional.
- Se quiere encontrar el "hiperplano de máximo margen" que divide el grupo
- de puntos 
-\begin_inset Formula $\overrightarrow{x_{i}}$
-\end_inset
-
- para los cuales 
-\begin_inset Formula $y_{i}=1$
-\end_inset
-
- de los que 
-\begin_inset Formula $y_{i}=-1$
-\end_inset
-
- , el cual es definido por la distancia entre el hiperplano y el punto 
-\begin_inset Formula $\overrightarrow{x_{i}}$
-\end_inset
-
- más cercano de cada grupo.
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Cualquier hiperplano puede ser escrito como el conjunto de datos de puntos
- 
-\begin_inset Formula $\overrightarrow{x_{i}}$
-\end_inset
-
- que cumpla:
+) como una función lineal que es capaz de separa dicho cojunto sin error:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\overrightarrow{w}*\overrightarrow{x}-b=0
+D(x)=(w_{1}x_{1}+...+w_{d}x_{d})+b=<w,x>+b
 \end{equation}
 
 \end_inset
@@ -1204,20 +1181,211 @@ Cualquier hiperplano puede ser escrito como el conjunto de datos de puntos
 
 \begin_layout Standard
 donde 
-\begin_inset Formula $\overrightarrow{w}$
+\begin_inset Formula $w$
 \end_inset
 
- es el vector nomal (no necesariamente normalizado) a el hiperplano.
- El parámetro 
-\begin_inset Formula $\frac{b}{||\overrightarrow{w}\text{||}}$
+ y 
+\begin_inset Formula $b$
 \end_inset
 
-determina el desplazamiento del hiperplano desde el origen a lo largo del
- vector 
-\begin_inset Formula $\overrightarrow{w}$
+ son coeficientes reales.
+ El hiperplano de separación cumplirá las siguientes restricciones para
+ todo 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ del conjunto de ejemplos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y_{i}D(x_{i})\geq0,\;i=1,...,n
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tal y como se puede deducir de la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Hiperplanos-de-separación"
+
+\end_inset
+
+, el hiperplano que permite separar los ejemplos no es único, es decir,
+ existen infinitos hiperplanos separables, representados por todos aquellols
+ hiperplanos que son capaces de cumplir las restricciones impuestas.
+ Surge entonces la pregunta de cual de ellos es el óptimo.
+ Para ello, primero se define el concepto de margen de un hiperplano de
+ separación, denotado por 
+\begin_inset Formula $\tau$
+\end_inset
+
+, como la mínima distancia entre dicho hiperplano y el ejemplo más cercano
+ de cualquiera de las dos clases.
+ A partir de esta definición, un hiperplano de separación se denominará
+ óptimo si su margen es de tamaño máximo.
+\end_layout
+
+\begin_layout Standard
+\align block
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/Sau/Documents/MasterTeleco/TFM/Memoria/figures/hiperplanos1.png
+	width 75text%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Hiperplanos de separación en un espacio bidimensional de un cojunto de ejemplos
+ separables en dos clases.
+ (a) ejemplo de hiperplano de separación (b) otros ejemplos de hiperplanos
+ de separacion de entre los infinitos posibles.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Hiperplanos-de-separación"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por geometría, se sabe que la distancia entre un hiperplano de separación
+ 
+\begin_inset Formula $D(x)$
+\end_inset
+
+ y un ejemplo 
+\begin_inset Formula $\text{x'}$
+\end_inset
+
+viene dada por:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\left|D(x')\right|}{\left\Vert w\right\Vert }
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+siendo 
+\begin_inset Formula $w$
+\end_inset
+
+el vector que, junto con el parámetor 
+\begin_inset Formula $b$
+\end_inset
+
+, define el hiperplano 
+\begin_inset Formula $D(x)$
+\end_inset
+
+ y que, además, tiene la propiedad de ser perpendicular al hiperplano considerad
+o.
+ Haciendo uso de esta expresión y las restricciones, todos los ejemplos
+ de entrenamiento cumplirán que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{y_{i}D(x')}{\left\Vert w\right\Vert }\geq\tau,\;i=1,...,n
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De la expresión anterior, se deduce que el hiperplano óptimo es equivalente
+ a encontrar el valor de w que maximiza el margen.
+ Sin embargo, existen infinitas soluciones que difieren en la escala de
+ 
+\begin_inset Formula $w$
 \end_inset
 
 .
+ Para limitar las soluciones la escala de producto de 
+\begin_inset Formula $\tau$
+\end_inset
+
+ y la norma de 
+\begin_inset Formula $w$
+\end_inset
+
+ se fija, de forma arbitraria, a la unidad, es decir
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tau\left\Vert w\right\Vert =1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Llegando a la conclusión final de que aumentar el margen es equivalente
+ a disminuir la norma de 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ Por tanto, de acuerdo a su definición, un hiperplano de separación óptimo
+ será aquel que posee un margen máximo y, por tanto un valor mínimo de 
 \end_layout
 
 \begin_layout Subsection
@@ -1576,9 +1744,21 @@ El algoritmo para construir un CDT es muy similar al del ID3.
 \end_inset
 
  ).
- El procedimiento para construir un CDT se explica en el algoritmo de la
- Fig.
- 2.
+ El procedimiento para construir un CDT se explica en el algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Procedimiento-para-construir"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "abellan2017comparative"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1586,54 +1766,6 @@ El algoritmo para construir un CDT es muy similar al del ID3.
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-Procedimiento ConstruirCDT(No, L)
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-1.
- Si L = 0, then Salir
-\end_layout
-
-\begin_layout Plain Layout
-
-2.
- Sea D la partición asociada con el nodo No
-\end_layout
-
-\begin_layout Plain Layout
-
-3.
- Computar el valor
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-\alpha=max\:x_{j}\epsilon L\left\{ IIG\right\} 
-\]
-
-\end_inset
-
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1664,8 +1796,16 @@ Procedimiento ConstruirCDT(No, L)
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
 	2.
  Sea D la partición asociada con el nodo No
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1676,7 +1816,124 @@ Procedimiento ConstruirCDT(No, L)
 
 \begin_layout Plain Layout
 
-	list= { (*$S_1,S_2,S_3$*) } 
+\end_layout
+
+\begin_layout Plain Layout
+
+		$
+\backslash
+alpha=max
+\backslash
+:x_{j}
+\backslash
+epsilon L
+\backslash
+left
+\backslash
+{ IIG^{D}(C,X_{j})
+\backslash
+right
+\backslash
+}$
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	4.
+ Si $
+\backslash
+alpha
+\backslash
+leq0$ entonces Salir
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	5.
+ Sino
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		6.Sea la variable $X_l$ para cual el máximo de $
+\backslash
+alpha$ es alcanzado 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	7.
+ Eliminar $
+\backslash
+alpha
+\backslash
+leq0$ de $L$
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	8.
+ Asignar $X_l$ al nodo $N_o$
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	9.
+ Por cada posible valor $x_l$ de $X_l$
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		10.
+ Anadir un nodo $N_{o_{l}}$
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		11.
+ Hacer un hijo $N_{o_{l}}$ de $N_o$
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		12.
+ LLamar ConstruirCDT($N_{o_{l}}$, $L$)
 \end_layout
 
 \begin_layout Plain Layout
@@ -1696,14 +1953,17 @@ end{lstlisting}
 
 \begin_layout Plain Layout
 Procedimiento para construir un CDT
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Procedimiento-para-construir"
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
+
 
 \end_layout
 
