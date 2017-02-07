@@ -1314,7 +1314,14 @@ key "Neuralnetworks.II.Whataretheyandwhyiseverybodysointerestedinthemnow?"
 , pero desde la década de 1990 se enfrentó a la fuerte competencia de la
  mucho más simple SVM.
  Más recientemente, ha habido un renovado interés en las redes de retropropagaci
-ón debido a los éxitos del aprendizaje profundo.
+ón debido a los éxitos del aprendizaje profundo 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "lecun2015deep"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
