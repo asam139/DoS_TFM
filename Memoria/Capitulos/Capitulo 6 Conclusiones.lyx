@@ -113,11 +113,14 @@ reference "chap:Estado-del-Arte"
 \end_layout
 
 \begin_layout Standard
-Los CDT son árboles de decisión, los cuales se pueden ver como un conjunto
- de reglas compactadas en forma de árbol.
+En cuanto a los CDT son árboles de decisión, los cuales se pueden ver como
+ un conjunto de reglas compactadas en forma de árbol.
  Por tanto, extraer patrones de información en forma de reglas de este tipo
  de clasificadores es un proceso automático.
- 
+ Durante este trabajo se ha comprobado su buen funcionamiento para la detección
+ de ataques DDoS sobre un conjunto de datos reales.
+ Además son una muy buena opción para su implementación real ya que su precisión
+ en relación a su coste computacional sobresale.
 \end_layout
 
 \begin_layout Section
@@ -125,40 +128,14 @@ Líneas de trabajo futuras
 \end_layout
 
 \begin_layout Standard
-En un futuro próximo (corto a medio plazo) esperamos más desarrollo y despliegue
- de mecanismos de defensa distribuidos por parte de investigadores y proveedores
- de servicios, respectivamente.
- En un plazo más largo esperamos ver:
-\end_layout
-
-\begin_layout Itemize
-La inevitable cooperación y colaboración entre los proveedores de servicios
- para detectar y detener los ataques DDoS más cerca de sus fuentes.
- El rápido crecimiento de entornos colaborativos como Cloud Computing [146]
- y la Internet de las Cosas (IoT) [147] - [149] conduce a un gran número
- de desarrollos de aplicaciones tanto en y para tales entornos.
- Esto amplía el panorama de amenazas para los ataques DDoS y acelera la
- transición a la era en la que existe una inevitable cooperación y colaboración
- entre diversas organizaciones y proveedores de servicios.
-\end_layout
-
-\begin_layout Itemize
-La incorporación de los resultados del análisis de incentivos que tuvieron
- los atacantes en futuros mecanismos de defensa (es decir, esto puede conducir
- a diferentes estrategias basadas en las motivaciones del atacante).
-\end_layout
-
-\begin_layout Itemize
-El empleo del análisis de tráfico de capas cruzadas en mecanismos de defensa
- (es decir, mirar la información en múltiples capas, diferentes protocolos,
- simultáneamente para detectar y responder a los ataques DDoS).
-\end_layout
-
-\begin_layout Itemize
-El desarrollo de leyes estrictas de delincuencia cibernética y mecanismos
- de cumplimiento multinacional junto con refinadas políticas de ciberseguridad
- que requieren la implementación de mecanismos de detección y prevención
- de DDoS.
+En un futuro próximo (corto a medio plazo) habría que constrastar los experiment
+os realizados en este trabajo con muchas más bases de datos de ataques DDoS,
+ ya sean sintéticas o si provienen de ataques llevados acabo en el mundo
+ real muchísimo mejor.
+ Otra línea de investigación seríaextraer reglas de los arboles de decisión
+ y analizar que reconoce los patrones reales de ataques DDoS.
+ Y a largo plazo me gustaría crear un prototipo de IDS a partir de los patrones
+ encontrados para probar su funcionamiento en entornos reales.
 \end_layout
 
 \end_body

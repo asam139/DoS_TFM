@@ -99,24 +99,12 @@ reference "chap:Estado-del-Arte"
  y poder detener el ataque DDoS antes de que sus efectos sean perjudiciales.
  Por ello, creemos que un método rápido y efectivo como el propuesto es
  una buena solución para este cometido.
- Ya que crear un IDPS que detectan este tipo de ataques es un proceso complejo
+ Ya que crear IDPs que detecten este tipo de ataques es un proceso complejo
  que necesita de uno o varios expertos y que tiene que ser actualizado y
  mantenido de forma constante.
- Debido a la naturaleza de este tipo de ataques,  que una herramienta que
- ayude al experto en seguridad para detectar patrones de este tipo de ataques
- de forma automática es una ayuda muy valiosa
-\end_layout
-
-\begin_layout Standard
-Al desarrollar una investigación que implique aprendizaje automático, es
- necesario definir el alcance y los objetivos específicos del proyecto,
- ya que son los elementos claves para la selección de las técnicas y las
- variables operacionales, las cuales determinarán la adecuada clasificación
- del producto desarrollado.
- El diseño e implementación del prototipo a un nivel empresarial, requiere
- un manejo optimizado de los recursos de hardware en las etapas de filtro
- y normalización de la información, debido al alto volumen de datos capturado
- por cada una de las peticiones realizadas por los usuarios.
+ Debido a la naturaleza de este tipo de ataques,  que una herramienta ayude
+ al experto en seguridad para detectar los patrones de este tipo de ataques
+ de forma automática es muy valioso para mejorar la rápidez de actuación.
  
 \begin_inset Newline newline
 \end_inset
@@ -125,35 +113,14 @@ Al desarrollar una investigación que implique aprendizaje automático, es
 \end_layout
 
 \begin_layout Standard
-Es realmente sencillo hacer un desarrollo que permita realizar un ataque
- DDoS a un servidor WEB con certificados de seguridad o sin ellos, lo complejo
- es detectar qué peticiones son normales o anómalas, teniendo en cuenta
- el gran flujo de información.
- El proceso de entrenamiento y afinamiento de la máquina de aprendizaje
- a partir del conjunto de datos normalizados, son la base para que el modelo
- generado tenga un porcentaje de clasificación aceptable en el momento de
- realizar la evaluación de prototipo en un entorno productivo y con información
- real.
- La selección del conjunto de métricas en el problema de detección de intrusos:
- tasa de falsos positivos, tasa de falsos negativos, tasa de clasificación,
- curvas ROC, permiten tener un estándar de comparación contra otros modelos.
- La aplicación de técnicas con un modelo supervisado como CDT, tiene amplias
- ventajas en comparación con la técnica basada en reglas, ya que la generación
- del modelo se basa en un modelo estadístico que cambia su comportamiento
- según los parámetros de entrada definidos en el entrenamiento y el basado
- en reglas requiere la interacción humana.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-En la evaluación se ha obteniendo una valoración positiva en la cual se
- ha demostrado que los método de aprendizaje automático son una muy buena
- solución para detectar ataques de DDoS, ofreciendo una gran precisión.
- 
+En cuanto a los CDT son árboles de decisión, los cuales se pueden ver como
+ un conjunto de reglas compactadas en forma de árbol.
+ Por tanto, extraer patrones de información en forma de reglas de este tipo
+ de clasificadores es un proceso automático.
+ Durante este trabajo se ha comprobado su buen funcionamiento para la detección
+ de ataques DDoS sobre un conjunto de datos reales.
+ Además son una muy buena opción para su implementación real ya que su precisión
+ en relación a su coste computacional sobresale.
 \end_layout
 
 \begin_layout Section
@@ -161,10 +128,12 @@ Líneas de trabajo futuras
 \end_layout
 
 \begin_layout Standard
-En un futuro próximo (corto a medio plazo) esperamos más desarrollo y despliegue
- de mecanismos de defensa distribuidos por parte de investigadores y proveedores
- de servicios, respectivamente.
- En un plazo más largo esperamos ver:
+En un futuro próximo (corto a medio plazo) habría que constrastar los experiment
+os realizados en este trabajo con muchas más bases de datos de ataques DDoS,
+ ya sean sintéticas o si provienen de ataques llevados acabo en el mundo
+ real muchísimo mejor.
+ Otra línea de investigación sería0 extraer reglas de los arboles de decisión
+  En un plazo más largo esperamos ver:
 \end_layout
 
 \begin_layout Itemize
