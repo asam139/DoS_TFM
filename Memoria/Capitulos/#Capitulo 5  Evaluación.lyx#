@@ -115,12 +115,10 @@ En la tabla se muestra las características del equipo sobre el cual se han
  Xeon(R) E5645 2.40GHz, cada uno con 6 núcleos y hasta 12 procesos y 32GB
  de memoria.
  No obstante, WEKA no está preparado para trabajar en paralelo y, por tanto
- cada experimiento usaba un sólo proceso y por ello no lo suficiente pontente
- .
+ cada experimiento usaba un sólo proceso y por ello no lo suficiente para
+ ejecutar algunos de los algoritmos.
  Para tardar menos se realizaron los experimentos para cada clasificador
  por separado.
- sobre el que se ha ejeA pesar de que se trata de una máquina muy potente
- no ha sido suficiente para correr algunos de los estudios.
 \end_layout
 
 \begin_layout Standard
@@ -148,10 +146,32 @@ centering
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="2">
+<lyxtabular version="3" rows="4" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="6cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Modelo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Acer AR160 F1
+\end_layout
+
+\end_inset
+</cell>
+</row>
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
@@ -190,7 +210,7 @@ Memoria
 \begin_inset Text
 
 \begin_layout Plain Layout
-32GB 1333MHz DDR3
+32GB
 \end_layout
 
 \end_inset
@@ -1600,6 +1620,15 @@ reference "tab:P-valores-del-test-nemenyi-tiempo"
 s si el correspondiente p-valor es menor o igual que 0.006667 para la precisión
  y si el correspondiente p-valor es menor o igual que 0.016667 para el tiempo.
  
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se puede apreciar para el test Nemeny para la precisión no hay diferencias
+ significativas para entre el [J48, SVM], [J48, MLP] y [CDT, SVM]
 \end_layout
 
 \begin_layout Standard
@@ -1897,7 +1926,7 @@ name "tab:Ranking-medio-prueba-friedman-tiempo"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1927,7 +1956,7 @@ p-valor
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1937,7 +1966,7 @@ J48 vs.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1948,7 +1977,7 @@ J48 vs.
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1958,7 +1987,7 @@ J48 vs.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2328,7 +2357,7 @@ NB vs.
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2338,7 +2367,7 @@ J48 vs.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2349,7 +2378,7 @@ J48 vs.
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2359,7 +2388,7 @@ CDT vs.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2488,7 +2517,7 @@ reference "tab:comparacionBasadaEnVictorias"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
