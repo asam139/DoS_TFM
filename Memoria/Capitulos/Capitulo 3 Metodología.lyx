@@ -1109,11 +1109,17 @@ key "AnIntroductiontoSupportVectorMachinesandotherkernel-basedlearningmethods"
 
 \begin_layout Standard
 Dentro de la tarea de clasificación, las SVMs pertenecen a la categoría
- de los clasificadores lineales, puesto que inducen separadores lineales
- o hiperplanos, ya sea en el espacio original de los ejemplos de entrada,
- si éstos son separabales o cuasi-separables (ruido), o en un espacio transforma
-do (espacio de características), si los ejemplos no son separables linealmente
- en el espacio original.
+ de los clasificadores lineales 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "boser1992training"
+
+\end_inset
+
+, puesto que inducen separadores lineales o hiperplanos, ya sea en el espacio
+ original de los ejemplos de entrada, si éstos son separabales o cuasi-separable
+s (ruido), o en un espacio transformado (espacio de características), si
+ los ejemplos no son separables linealmente en el espacio original.
  Como se verá más adelante, la búsqueda del hiperplano de separación en
  estos espacios transformados, normalmente de muy alta dimensión, se hará
  de forma implícita utilizando las denominadas funciones kernel.
@@ -1145,8 +1151,14 @@ Mientras la mayoría de los método de aprendizaje se centran en minimzar
 \end_layout
 
 \begin_layout Standard
-Si entramos en una explicación matemática, dado un conjunto separable de
- ejemplos, 
+Si entramos en una explicación matemática 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "boser1992training"
+
+\end_inset
+
+, dado un conjunto separable de ejemplos, 
 \begin_inset Formula $S=(\overrightarrow{x_{i}},y_{i}),...,(\overrightarrow{x_{n}},y_{n})$
 \end_inset
 
@@ -1189,8 +1201,14 @@ donde
 \end_inset
 
  son coeficientes reales.
- El hiperplano de separación cumplirá las siguientes restricciones para
- todo 
+ El hiperplano de separación cumplirá las siguientes restricciones 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "boser1992training"
+
+\end_inset
+
+ para todo 
 \begin_inset Formula $x_{i}$
 \end_inset
 
@@ -1332,7 +1350,14 @@ el vector que, junto con el parámetor
  y que, además, tiene la propiedad de ser perpendicular al hiperplano considerad
 o.
  Haciendo uso de esta expresión y las restricciones, todos los ejemplos
- de entrenamiento cumplirán que:
+ de entrenamiento cumplirán que 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "boser1992training"
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
@@ -1378,8 +1403,14 @@ De la expresión anterior, se deduce que el hiperplano óptimo es equivalente
 \end_layout
 
 \begin_layout Standard
-Llegando a la conclusión final de que aumentar el margen es equivalente
- a disminuir la norma de 
+Llegando a la conclusión final 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "boser1992training"
+
+\end_inset
+
+ de que aumentar el margen es equivalente a disminuir la norma de 
 \begin_inset Formula $w$
 \end_inset
 
