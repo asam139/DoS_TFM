@@ -105,7 +105,7 @@ Palabras Clave
 \end_layout
 
 \begin_layout Standard
-DDoS, Aprendizaje Automático, Clasificadores, Arboles de decisisión credal
+DDoS, Aprendizaje Automático, Clasificadores, Arboles de decisión credal
  (CDTs).
 \begin_inset Newline newline
 \end_inset
@@ -148,8 +148,7 @@ d de servicio desde hace una década hasta a día de hoy, es decir provocan
 
 \begin_layout Standard
 Los patrones de tráfico exhibidos por el tráfico que incluye ataques DDoS
- pueden ser capturados efectivamente por algoritmos de aprendizaje automático
- como son los arboles de decisión, redes bayesianas y redes neuronales.
+ pueden ser capturados efectivamente por algoritmos de aprendizaje automático.
  Este trabajo explica detalladamente los distintos ataques DDoS así como
  mecanismos de detección actuales.
  Posteriormente su objetivo principal es poder dar una evaluación y clasificació
@@ -169,12 +168,12 @@ La base de datos utilizada se denomina KDD Cup 1999, una pequeña selección
  del conjunto de datos del concurso KDD de 1999.
  De esta base de datos se han estudiado cuatro casos para ver los diferentes
  comportamientos de los algoritmos.
- La simulaciones de los algoritmos se han realizado con su implementación
- en el programa WEKA, una plataforma software para el aprendizaje automático
- y minería de datos.
+ Los resultados experimentales de los distintos algoritmos se han realizado
+ con su implementación en el programa WEKA, una plataforma software para
+ el aprendizaje automático y minería de datos.
  Para la evaluación se mide la precisión de los algoritmos así como el tiempo
- que han tardado en ejecutarse.
- Además se realizan diferentes pruebas para su comparación.
+ que han tardado en ejecutarse, además se realizan diferentes pruebas para
+ su comparación.
  Esta evaluación demuestra la efectividad de los clasificadores para la
  detección de ataques DDoS.
  
