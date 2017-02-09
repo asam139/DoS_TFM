@@ -77,7 +77,7 @@
 \begin_body
 
 \begin_layout Chapter
-Experimentación
+Resultados Experimentales
 \begin_inset CommandInset label
 LatexCommand label
 name "chap:Implementacion"
@@ -109,8 +109,7 @@ Datos objeto de estudio
 
 \begin_layout Standard
 La base de datos que se van a utilizar en este estudio, se denomina KDD
- Cup 1999, una pequeña selección del conjunto de datos del concurso KDD
- (
+ Cup 1999, el conjunto de datos del concurso KDD (
 \shape italic
 Data Mining and Knowledge Discovery
 \shape default
@@ -122,7 +121,7 @@ description "KDD"
 
 \end_inset
 
-) de 1999, en donde se usó una versión reducida de la amplia variedad de
+) de 1999, en donde se usó el conjunto de datos de la amplia variedad de
  intrusiones militares simuladas en un entorno de red, proporcionadas por
  DARPA Intrusion Detection Program Evaluation en 1998, que tenían como objetivo
  evaluar el estudio y la investigación en la detección de intrusiones.
@@ -188,16 +187,7 @@ Sondeo: vigilancia y otros sondeos como puede ser la exploración de puertos.
 \end_layout
 
 \begin_layout Standard
-La base de datos tiene un tamaño de 430MBytes.
- Es importante señalar que los datos de prueba no provienen de la misma
- distribución de probabilidad que los datos de entrenamiento e incluyen
- tipos de ataque específicos que no están en los datos de entrenamiento.
- Esto hace que la tarea sea más realista.
- Algunos expertos en intrusión creen que la mayoría de los nuevos ataques
- son variantes de ataques conocidos y la "firma" de ataques conocidos puede
- ser suficiente para capturar nuevas variantes.
- Los conjuntos de datos contienen un total de 24 tipos de ataque de entrenamient
-o, con 14 tipos adicionales en los datos de prueba solamente.
+La base de datos tiene un tamaño de 736MBytes.
  En las tablas 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -219,7 +209,7 @@ reference "tab:tiposDeAtaque_KDD_2"
 \begin_layout Itemize
 BACK: ataque contra el servidor web Apache cuando un cliente pide una URL
  que contiene muchas barras.
- El tamaño máximo del búfer para la URL era de 2048Bytes 
+ El tamaño máximo del búfer para la URL era de 2048 Bytes 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "backAttackDDOS"
@@ -299,7 +289,7 @@ pings
  Así, cuando la computadora que es el blanco del ataque vuelve a montar
  el paquete, puede ocurrir una saturación del buffer, lo que a menudo produce
  como consecuencia un fallo del sistema.
- Hoy en día este ataque este ataque fue corregido.
+ Hoy en día este ataque fue corregido.
 \end_layout
 
 \begin_layout Itemize
@@ -370,6 +360,13 @@ fragment offset
 \end_layout
 
 \begin_layout Standard
+Como se aprendican en las tablas los datos tienen muchos otros tipos de
+ intrusiones que no son objeto de nuestro estudio y, por tanto, vamos a
+ limitarnos a DDoS.
+ 
+\end_layout
+
+\begin_layout Standard
 \align center
 \begin_inset Float table
 placement H
@@ -379,16 +376,450 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="13" columns="3">
+<lyxtabular version="3" rows="12" columns="3">
 <features islongtable="true" firstHeadTopDL="true" firstHeadBottomDL="true" headTopDL="true" headBottomDL="true" longtabularalignment="center">
-<column alignment="center" valignment="middle" width="2.5cm">
-<column alignment="center" valignment="middle" width="9cm">
-<column alignment="center" valignment="middle" width="2cm">
-<row endhead="true" endfirsthead="true" caption="true">
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="5cm">
+<column alignment="center" valignment="middle" width="1cm">
+<row endhead="true" endfirsthead="true">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size tiny
+Ataque
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size tiny
+Descripción
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size tiny
+Tipo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+back
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Ataque contra el servidor web Apache cuando un cliente pide una URL que
+ contiene muchas barras.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+DDoS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+land
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Envío de TCP/SYN falso con la dirección de la víctima como origen y destino,
+ causando que se responda a sí mismo continuamente.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+DDoS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+neptune
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Inundación por envíos de TCP/SYN en uno o más puertos.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+DDoS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+pop
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Ping de la muerte: manda muchos paquetes ICMP muy pesados.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+DDoS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+smurf
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+El atacante envía un ping, que parece proceder de la víctima, en broadcast
+ a una tercera parte de la red, donde todos los host responderán a la víctima.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+DDoS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+teardrop
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Usa el algoritmo de fragmentación de paquetes IP para enviar paquetes corruptos
+ a la víctima.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+DDoS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+ftp_write
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Usuario FTP remoto crea un archivo .rhost y obtiene un login local.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+R2L
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+guess_password
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Trata de adivinar la contraseña con telnet para la cuenta de visitante
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+R2L
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+imap
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Desbordamiento remoto del búfer utilizando el puerto imap.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+R2L
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+multihop
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Escenario de varios días donde el atacante primero accede a una máquina
+ que luego usa como trampolín para atacar a otras máquinas.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+R2L
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+phf
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Script CGI que permite ejecutar comandos en una máquina con un servidor
+ web mal configurado.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+R2L
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size tiny
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -408,26 +839,25 @@ name "tab:tiposDeAtaque_KDD_1"
 \end_layout
 
 \end_inset
-</cell>
-<cell multicolumn="2" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
 
-\begin_layout Plain Layout
 
 \end_layout
 
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
+\begin_layout Standard
+\align center
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="3">
+<features islongtable="true" firstHeadTopDL="true" firstHeadBottomDL="true" headTopDL="true" headBottomDL="true" longtabularalignment="center">
+<column alignment="center" valignment="middle" width="1.75cm">
+<column alignment="center" valignment="middle" width="5cm">
+<column alignment="center" valignment="middle" width="1cm">
 <row endhead="true" endfirsthead="true">
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
@@ -435,6 +865,7 @@ name "tab:tiposDeAtaque_KDD_1"
 \begin_layout Plain Layout
 
 \series bold
+\size tiny
 Ataque
 \end_layout
 
@@ -446,7 +877,8 @@ Ataque
 \begin_layout Plain Layout
 
 \series bold
-Descripción
+\size tiny
+,Descripción
 \end_layout
 
 \end_inset
@@ -457,6 +889,7 @@ Descripción
 \begin_layout Plain Layout
 
 \series bold
+\size tiny
 Tipo
 \end_layout
 
@@ -468,7 +901,9 @@ Tipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-back
+
+\size tiny
+spy
 \end_layout
 
 \end_inset
@@ -477,8 +912,9 @@ back
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ataque contra el servidor web Apache cuando un cliente pide una URL que
- contiene muchas barras.
+
+\size tiny
+Analizador de protocolos LAN por la interfaz de red.
 \end_layout
 
 \end_inset
@@ -487,183 +923,8 @@ Ataque contra el servidor web Apache cuando un cliente pide una URL que
 \begin_inset Text
 
 \begin_layout Plain Layout
-DDoS
-\end_layout
 
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-land
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Envío de TCP/SYN falso con la dirección de la víctima como origen y destino,
- causando que se responda a sí mismo continuamente.
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-DDoS
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-neptune
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Inundación por envíos de TCP/SYN en uno o más puertos.
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-DDoS
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-pop
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Ping de la muerte: manda muchos paquetes ICMP muy pesados.
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-DDoS
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-smurf
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El atacante envía un ping, que parece proceder de la víctima, en broadcast
- a una tercera parte de la red, donde todos los host responderán a la víctima.
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-DDoS
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-teardrop
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Usa el algoritmo de fragmentación de paquetes IP para enviar paquetes corruptos
- a la víctima.
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-DDoS
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ftp_write
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Usuario FTP remoto crea un archivo .rhost y obtiene un login local.
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
+\size tiny
 R2L
 \end_layout
 
@@ -675,7 +936,9 @@ R2L
 \begin_inset Text
 
 \begin_layout Plain Layout
-guess_password
+
+\size tiny
+warezclient
 \end_layout
 
 \end_inset
@@ -684,7 +947,10 @@ guess_password
 \begin_inset Text
 
 \begin_layout Plain Layout
-Trata de adivinar la contraseña con telnet para la cuenta de visitante
+
+\size tiny
+Los usuarios descargan software ilegal publicado a través de FTP anónimo
+ por el warezmaster.
 \end_layout
 
 \end_inset
@@ -693,6 +959,8 @@ Trata de adivinar la contraseña con telnet para la cuenta de visitante
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 R2L
 \end_layout
 
@@ -704,7 +972,9 @@ R2L
 \begin_inset Text
 
 \begin_layout Plain Layout
-imap
+
+\size tiny
+warezmaster
 \end_layout
 
 \end_inset
@@ -713,7 +983,9 @@ imap
 \begin_inset Text
 
 \begin_layout Plain Layout
-Desbordamiento remoto del búfer utilizando el puerto imap.
+
+\size tiny
+Subida FTP anónima de Warez (copias ilegales de software).
 \end_layout
 
 \end_inset
@@ -722,6 +994,8 @@ Desbordamiento remoto del búfer utilizando el puerto imap.
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 R2L
 \end_layout
 
@@ -733,7 +1007,9 @@ R2L
 \begin_inset Text
 
 \begin_layout Plain Layout
-multihop
+
+\size tiny
+buffer_overflow
 \end_layout
 
 \end_inset
@@ -742,8 +1018,9 @@ multihop
 \begin_inset Text
 
 \begin_layout Plain Layout
-Escenario de varios días donde el atacante primero accede a una máquina
- que luego usa como trampolín para atacar a otras máquinas.
+
+\size tiny
+Desbordamiento de la pila del búfer.
 \end_layout
 
 \end_inset
@@ -752,7 +1029,9 @@ Escenario de varios días donde el atacante primero accede a una máquina
 \begin_inset Text
 
 \begin_layout Plain Layout
-R2L
+
+\size tiny
+UR2
 \end_layout
 
 \end_inset
@@ -763,7 +1042,9 @@ R2L
 \begin_inset Text
 
 \begin_layout Plain Layout
-phf
+
+\size tiny
+loadmodule
 \end_layout
 
 \end_inset
@@ -772,8 +1053,10 @@ phf
 \begin_inset Text
 
 \begin_layout Plain Layout
-Script CGI que permite ejecutar comandos en una máquina con un servidor
- web mal configurado.
+
+\size tiny
+Ataque furtivo que reinicia la IFS para un usuario normal y crea un shell
+ de root.
 \end_layout
 
 \end_inset
@@ -782,7 +1065,221 @@ Script CGI que permite ejecutar comandos en una máquina con un servidor
 \begin_inset Text
 
 \begin_layout Plain Layout
-R2L
+
+\size tiny
+UR2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+perl
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Establece el id de usuario como root en un script de perl y crea un shell
+ de root.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+UR2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+rootkit
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Escenario de varios días donde un usuario instala componentes de un rootkit
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+UR2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+ipsweep
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Sondeo con barrido de puertos o mandando pings a múltiples direcciones de
+ clientes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+sondeo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+nmap
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Escaneo de puertos mediante la herramienta nmap.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+sondeo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+portsweep
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Barrido de puertos para determinar qué servicios se apoyan en un único host.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+sondeo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+satan
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Herramienta de sondeo de redes que busca debilidades conocidas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+sondeo
 \end_layout
 
 \end_inset
@@ -794,30 +1291,6 @@ R2L
 
 
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Float table
-placement H
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="13" columns="3">
-<features islongtable="true" firstHeadTopDL="true" firstHeadBottomDL="true" headTopDL="true" headBottomDL="true" longtabularalignment="center">
-<column alignment="center" valignment="middle" width="2.5cm">
-<column alignment="center" valignment="middle" width="9cm">
-<column alignment="center" valignment="middle" width="2cm">
-<row endhead="true" endfirsthead="true" caption="true">
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -832,392 +1305,6 @@ name "tab:tiposDeAtaque_KDD_2"
 
 
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row endhead="true" endfirsthead="true">
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Ataque
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Descripción
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Tipo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-spy
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Analizador de protocolos LAN por la interfaz de red.
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-R2L
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-warezclient
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Los usuarios descargan software ilegal publicado a través de FTP anónimo
- por el warezmaster.
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-R2L
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-warezmaster
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Subida FTP anónima de Warez (copias ilegales de software).
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-R2L
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-buffer_overflow
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Desbordamiento de la pila del búfer.
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-UR2
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-loadmodule
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Ataque furtivo que reinicia la IFS para un usuario normal y crea un shell
- de root.
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-UR2
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-perl
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Establece el id de usuario como root en un script de perl y crea un shell
- de root.
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-UR2
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-rootkit
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Escenario de varios días donde un usuario instala componentes de un rootkit
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-UR2
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ipsweep
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Sondeo con barrido de puertos o mandando pings a múltiples direcciones de
- clientes
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-sondeo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-nmap
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Escaneo de puertos mediante la herramienta nmap.
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-sondeo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-portsweep
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Barrido de puertos para determinar qué servicios se apoyan en un único host.
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-sondeo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-satan
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Herramienta de sondeo de redes que busca debilidades conocidas
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-sondeo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
 
 \end_inset
 
@@ -1262,18 +1349,374 @@ reference "tab:atributosConVentana2segundos"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="11" columns="3">
+<lyxtabular version="3" rows="10" columns="3">
 <features islongtable="true" firstHeadTopDL="true" firstHeadBottomDL="true" headTopDL="true" headBottomDL="true" longtabularalignment="center">
-<column alignment="center" valignment="middle" width="3cm">
-<column alignment="center" valignment="top" width="9cm">
+<column alignment="center" valignment="middle" width="2cm">
+<column alignment="center" valignment="top" width="5cm">
 <column alignment="center" valignment="top" width="1.5cm">
-<row endhead="true" endfirsthead="true" caption="true">
-<cell multicolumn="1" alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+<row endhead="true" endfirsthead="true">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size tiny
+Atributo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size tiny
+Descripción
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size tiny
+Tipo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+duration
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Longitud de la conexión en segundos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Continuo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+protocol_type
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Tipo de protocolo (TCP, UDP...)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Discreto
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+service
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Tipo de servicio de destino (HTTP, Telnet, SMTP...)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Discreto
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+src_bytes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Número de bytes de datos de fuente a destino
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Continuo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+dst_bytes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Número de bytes de datos de destino a la fuente
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Continuo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+flag
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Estado de la conexión (SF, S1, REJ...)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Discreto
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+landftp_write
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+1 si la conexión corresponde al mismo host/puerto; 0 de otro modo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Discreto
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+wrong_fragment
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Número de fragmentos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Continuo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+urgent
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Número de paquetes urgentes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Continuo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1295,26 +1738,25 @@ name "tab:atributosBasicosConexionesTCP"
 \end_layout
 
 \end_inset
-</cell>
-<cell multicolumn="2" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
 
-\begin_layout Plain Layout
 
 \end_layout
 
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
+\begin_layout Standard
+\align center
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
+\begin_inset Tabular
+<lyxtabular version="3" rows="14" columns="3">
+<features islongtable="true" firstHeadTopDL="true" firstHeadBottomDL="true" headTopDL="true" headBottomDL="true" longtabularalignment="center">
+<column alignment="center" valignment="middle" width="2.5cm">
+<column alignment="center" valignment="top" width="5cm">
+<column alignment="center" valignment="top" width="1.5cm">
 <row endhead="true" endfirsthead="true">
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
@@ -1322,6 +1764,7 @@ name "tab:atributosBasicosConexionesTCP"
 \begin_layout Plain Layout
 
 \series bold
+\size tiny
 Atributo
 \end_layout
 
@@ -1333,6 +1776,7 @@ Atributo
 \begin_layout Plain Layout
 
 \series bold
+\size tiny
 Descripción
 \end_layout
 
@@ -1344,6 +1788,7 @@ Descripción
 \begin_layout Plain Layout
 
 \series bold
+\size tiny
 Tipo
 \end_layout
 
@@ -1355,7 +1800,9 @@ Tipo
 \begin_inset Text
 
 \begin_layout Plain Layout
-duration
+
+\size tiny
+hot
 \end_layout
 
 \end_inset
@@ -1364,7 +1811,17 @@ duration
 \begin_inset Text
 
 \begin_layout Plain Layout
-Longitud de la conexión en segundos
+
+\size tiny
+Número de indicadores 
+\begin_inset Quotes eld
+\end_inset
+
+hot
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1373,6 +1830,8 @@ Longitud de la conexión en segundos
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Continuo
 \end_layout
 
@@ -1384,7 +1843,9 @@ Continuo
 \begin_inset Text
 
 \begin_layout Plain Layout
-protocol_type
+
+\size tiny
+num_failed_logins
 \end_layout
 
 \end_inset
@@ -1393,7 +1854,9 @@ protocol_type
 \begin_inset Text
 
 \begin_layout Plain Layout
-Tipo de protocolo (TCP, UDP...)
+
+\size tiny
+Número de intentos de acceso fallidos
 \end_layout
 
 \end_inset
@@ -1402,6 +1865,43 @@ Tipo de protocolo (TCP, UDP...)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
+Continuo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+logged_in
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+1 si acceso exitoso; 0 de otro modo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
 Discreto
 \end_layout
 
@@ -1413,7 +1913,9 @@ Discreto
 \begin_inset Text
 
 \begin_layout Plain Layout
-service
+
+\size tiny
+num_compromised
 \end_layout
 
 \end_inset
@@ -1422,7 +1924,9 @@ service
 \begin_inset Text
 
 \begin_layout Plain Layout
-Tipo de servicio de destino (HTTP, Telnet, SMTP...)
+
+\size tiny
+Número de condiciones irregulares
 \end_layout
 
 \end_inset
@@ -1431,6 +1935,43 @@ Tipo de servicio de destino (HTTP, Telnet, SMTP...)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
+Continuo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+root_shell
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+1 si se obtiene superusuario para acceso a root; 0 de otro modo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
 Discreto
 \end_layout
 
@@ -1442,7 +1983,9 @@ Discreto
 \begin_inset Text
 
 \begin_layout Plain Layout
-src_bytes
+
+\size tiny
+su_attempted
 \end_layout
 
 \end_inset
@@ -1451,7 +1994,17 @@ src_bytes
 \begin_inset Text
 
 \begin_layout Plain Layout
-Número de bytes de datos de fuente a destino
+
+\size tiny
+1 si se intenta el comando 
+\begin_inset Quotes eld
+\end_inset
+
+su sudo
+\begin_inset Quotes erd
+\end_inset
+
+; 0 de otro modo
 \end_layout
 
 \end_inset
@@ -1460,64 +2013,8 @@ Número de bytes de datos de fuente a destino
 \begin_inset Text
 
 \begin_layout Plain Layout
-Continuo
-\end_layout
 
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-dst_bytes
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Número de bytes de datos de destino a la fuente
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Continuo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-flag
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Estado de la conexión (SF, S1, REJ...)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
+\size tiny
 Discreto
 \end_layout
 
@@ -1529,7 +2026,9 @@ Discreto
 \begin_inset Text
 
 \begin_layout Plain Layout
-landftp_write
+
+\size tiny
+num_root
 \end_layout
 
 \end_inset
@@ -1538,7 +2037,9 @@ landftp_write
 \begin_inset Text
 
 \begin_layout Plain Layout
-1 si la conexión corresponde al mismo host/puerto; 0 de otro modo
+
+\size tiny
+Número de accesos a root
 \end_layout
 
 \end_inset
@@ -1547,6 +2048,191 @@ landftp_write
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
+Continuo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+num_file_creations
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Número de operaciones de creación de ficheros
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Continuo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+num_shells
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Número de Shell prompts
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Continuo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+num_access_files
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Número de operaciones de control de acceso a ficheros
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Continuo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+num_outbound_cmds
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Número de comandos de salida en un sessión ftp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Continuo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+is_hot_login
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+1 si el login pertenece a la lista 
+\begin_inset Quotes eld
+\end_inset
+
+hot
+\begin_inset Quotes erd
+\end_inset
+
+; 0 de otro modo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
 Discreto
 \end_layout
 
@@ -1558,7 +2244,9 @@ Discreto
 \begin_inset Text
 
 \begin_layout Plain Layout
-wrong_fragment
+
+\size tiny
+is_guess_login
 \end_layout
 
 \end_inset
@@ -1567,7 +2255,9 @@ wrong_fragment
 \begin_inset Text
 
 \begin_layout Plain Layout
-Número de fragmentos
+
+\size tiny
+1 si el acceso es un por un invitado; 0 de otro modo
 \end_layout
 
 \end_inset
@@ -1576,36 +2266,9 @@ Número de fragmentos
 \begin_inset Text
 
 \begin_layout Plain Layout
-Continuo
-\end_layout
 
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-urgent
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Número de paquetes urgentes
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Continuo
+\size tiny
+Discreto
 \end_layout
 
 \end_inset
@@ -1617,30 +2280,6 @@ Continuo
 
 
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Float table
-placement H
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="15" columns="3">
-<features islongtable="true" firstHeadTopDL="true" firstHeadBottomDL="true" headTopDL="true" headBottomDL="true" longtabularalignment="center">
-<column alignment="center" valignment="middle" width="3cm">
-<column alignment="center" valignment="top" width="9cm">
-<column alignment="center" valignment="top" width="2cm">
-<row endhead="true" endfirsthead="true" caption="true">
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1662,470 +2301,6 @@ name "tab:atributosEspeciales"
 \end_layout
 
 \end_inset
-</cell>
-<cell multicolumn="2" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row endhead="true" endfirsthead="true">
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Atributo
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Descripción
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Tipo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-hot
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Número de indicadores 
-\begin_inset Quotes eld
-\end_inset
-
-hot
-\begin_inset Quotes erd
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Continuo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-num_failed_logins
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Número de intentos de acceso fallidos
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Continuo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-logged_in
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1 si acceso exitoso; 0 de otro modo
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Discreto
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-num_compromised
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Número de condiciones irregulares
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Continuo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-root_shell
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1 si se obtiene superusuario para acceso a root; 0 de otro modo
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Discreto
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-su_attempted
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1 si se intenta el comando 
-\begin_inset Quotes eld
-\end_inset
-
-su sudo
-\begin_inset Quotes erd
-\end_inset
-
-; 0 de otro modo
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Discreto
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-num_root
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Número de accesos a root
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Continuo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-num_file_creations
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Número de operaciones de creación de ficheros
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Continuo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-num_shells
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Número de Shell prompts
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Continuo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-num_access_files
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Número de operaciones de control de acceso a ficheros
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Continuo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-num_outbound_cmds
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Número de comandos de salida en un sessión ftp
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Continuo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-is_hot_login
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1 si el login pertenece a la lista 
-\begin_inset Quotes eld
-\end_inset
-
-hot
-\begin_inset Quotes erd
-\end_inset
-
-; 0 de otro modo
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Discreto
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-is_guess_login
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1 si el acceso es un por un invitado; 0 de otro modo
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Discreto
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
 
 
 \end_layout
@@ -2136,59 +2311,15 @@ Discreto
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="13" columns="3">
+<lyxtabular version="3" rows="12" columns="3">
 <features islongtable="true" firstHeadTopDL="true" firstHeadBottomDL="true" headTopDL="true" headBottomDL="true" longtabularalignment="center">
-<column alignment="center" valignment="middle" width="3cm">
-<column alignment="center" valignment="top" width="9cm">
-<column alignment="center" valignment="top" width="2cm">
-<row endhead="true" endfirsthead="true" caption="true">
-<cell multicolumn="1" alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-KDD 1999 Cup: Atributos con ventana de 2 segundos 
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:atributosConVentana2segundos"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
+<column alignment="center" valignment="middle" width="2cm">
+<column alignment="center" valignment="top" width="5cm">
+<column alignment="center" valignment="top" width="1.5cm">
 <row endhead="true" endfirsthead="true">
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
@@ -2196,6 +2327,7 @@ name "tab:atributosConVentana2segundos"
 \begin_layout Plain Layout
 
 \series bold
+\size tiny
 Atributo
 \end_layout
 
@@ -2207,6 +2339,7 @@ Atributo
 \begin_layout Plain Layout
 
 \series bold
+\size tiny
 Descripción
 \end_layout
 
@@ -2218,6 +2351,7 @@ Descripción
 \begin_layout Plain Layout
 
 \series bold
+\size tiny
 Tipo
 \end_layout
 
@@ -2229,6 +2363,8 @@ Tipo
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 count
 \end_layout
 
@@ -2238,6 +2374,8 @@ count
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Número de conexiones a la misma máquina que la conexión actual en los dos
  últimos segundos
 \end_layout
@@ -2248,6 +2386,8 @@ Número de conexiones a la misma máquina que la conexión actual en los dos
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Continuo
 \end_layout
 
@@ -2259,6 +2399,8 @@ Continuo
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Los siguientes atributos se refieren a las conexiones de un mismo cliente
 \end_layout
 
@@ -2288,6 +2430,8 @@ Los siguientes atributos se refieren a las conexiones de un mismo cliente
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 serror_rate
 \end_layout
 
@@ -2297,6 +2441,8 @@ serror_rate
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Porcentaje de conexiones que tienen errores 
 \begin_inset Quotes eld
 \end_inset
@@ -2314,6 +2460,8 @@ SYN
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Continuo
 \end_layout
 
@@ -2325,6 +2473,8 @@ Continuo
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 rerror_rate
 \end_layout
 
@@ -2334,6 +2484,8 @@ rerror_rate
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Porcentaje de conexiones que tienen errores 
 \begin_inset Quotes eld
 \end_inset
@@ -2351,6 +2503,8 @@ REJ
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Continuo
 \end_layout
 
@@ -2362,6 +2516,8 @@ Continuo
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 same_srv_rate
 \end_layout
 
@@ -2371,6 +2527,8 @@ same_srv_rate
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Porcentaje de conexiones con el mismo servicio
 \end_layout
 
@@ -2380,6 +2538,8 @@ Porcentaje de conexiones con el mismo servicio
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Continuo
 \end_layout
 
@@ -2391,6 +2551,8 @@ Continuo
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 diff_srv_rate
 \end_layout
 
@@ -2400,6 +2562,8 @@ diff_srv_rate
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Porcentaje de conexiones con diferentes servicios
 \end_layout
 
@@ -2409,6 +2573,8 @@ Porcentaje de conexiones con diferentes servicios
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Discreto
 \end_layout
 
@@ -2420,6 +2586,8 @@ Discreto
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 srv_count
 \end_layout
 
@@ -2429,6 +2597,8 @@ srv_count
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Número de conexiones al mismo servicio que la conexión actual en los dos
  últimos segundos
 \end_layout
@@ -2439,6 +2609,8 @@ Número de conexiones al mismo servicio que la conexión actual en los dos
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Continuo
 \end_layout
 
@@ -2450,6 +2622,8 @@ Continuo
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Los siguientes atributos se refieren a las conexiones del mismo servicio
 \end_layout
 
@@ -2479,6 +2653,8 @@ Los siguientes atributos se refieren a las conexiones del mismo servicio
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 srv_serror_rate
 \end_layout
 
@@ -2488,6 +2664,8 @@ srv_serror_rate
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Porcentaje de conexiones que tienen errores 
 \begin_inset Quotes eld
 \end_inset
@@ -2505,6 +2683,8 @@ SYN
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Continuo
 \end_layout
 
@@ -2516,6 +2696,8 @@ Continuo
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 srv_error_rate
 \end_layout
 
@@ -2525,6 +2707,8 @@ srv_error_rate
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Porcentaje de conexiones que tienen errores 
 \begin_inset Quotes eld
 \end_inset
@@ -2542,6 +2726,8 @@ REJ
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Continuo
 \end_layout
 
@@ -2553,6 +2739,8 @@ Continuo
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 srv_diff_host_rate
 \end_layout
 
@@ -2562,6 +2750,8 @@ srv_diff_host_rate
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Porcentaje de conexiones a diferentes hosts
 \end_layout
 
@@ -2571,6 +2761,8 @@ Porcentaje de conexiones a diferentes hosts
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Continuo
 \end_layout
 
@@ -2584,20 +2776,39 @@ Continuo
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+KDD 1999 Cup: Atributos con ventana de 2 segundos 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:atributosConVentana2segundos"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-Para la evaluación, a partir de los datos se han creado dos cojuntos de
+Para la evaluación, a partir de los datos se han creado dos conjuntos de
  datos.
  El primero de ellos se han unido los ataques no DDoS y el flujo normal
  de red y se diferencian los distintos ataques de DDoS.
- Y un segundo cojunto de datos, donde las isntancias están clasificadas
+ Y un segundo conjunto de datos, donde las instancias están clasificadas
  como ataque DDoS (génerico) u otro tipo de situación.
- Por tanto, tenemos un cojunto de datos con varias clases y otro dicotómico
- o dos clases.
+ Por tanto, tenemos un cojunto de datos con varias clases y otro dicotómico,
+ es decir dos clases.
 \end_layout
 
 \begin_layout Section
@@ -2624,9 +2835,9 @@ key "Weka:PracticalMachineLearningToolsandTechniqueswithJavaImplementations"
 
 .
  Weka es un popular conjunto de software de aprendizaje automático escrito
- en Java , desarrollado en la Universidad de Waikato , Nueva Zelanda .
+ en Java , desarrollado en la Universidad de Waikato, Nueva Zelanda.
  Se trata de software libre con licencia bajo la licencia pública general,
- GNU (Gerenal Public License
+ GNU (Genenal Public License
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "GNU"
@@ -2642,7 +2853,7 @@ description "General Public License"
 \end_layout
 
 \begin_layout Standard
-Weka es un banco de trabajo 
+Weka es entorno para trabajar con aprendizaje automático 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Weka:PracticalMachineLearningToolsandTechniqueswithJavaImplementations"
@@ -2700,9 +2911,9 @@ Es fácil de utilizar por alguién inexperto gracias a su interfaz gráfica
 \end_layout
 
 \begin_layout Standard
-Weka soporta varias tareas estándar de minería de datos , más específicamente,
- preprocesamiento de datos, clustering, clasificación , regresión , visualizació
-n y selección de características.
+Weka soporta varias tareas estándar de minería de datos, más específicamente,
+ preprocesamiento de datos, clustering, clasificación, regresión, visualización
+ y selección de características.
  Todas las técnicas de Weka están basadas en la suposición de que los datos
  están disponibles como un archivo plano o una relación, donde cada registro
  de datos se describe por un número fijo de atributos (normalmente, atributos
@@ -2721,8 +2932,6 @@ key "DataMining:Practicalmachinelearningtoolsandtechniques2ndEdition"
 \end_inset
 
 .
- Entre las carencias de Weka, actualmente entre sus algoritmos incluidos
- no hay ninguno para el modelado de secuencias.
 \end_layout
 
 \begin_layout Section
@@ -2904,10 +3113,6 @@ Estudio de la efectividad de las predicciones de trayectorias frente a las
 \end_layout
 
 \begin_layout Standard
-En este apartado se va a evaluar
-\end_layout
-
-\begin_layout Standard
 Como se ha comentado el software que se ha usado para la experimientación
  ha sido WEKA.
  Se han utilizado las implementaciones de C4.5, Naïve Bayes, SVM y MLP que
@@ -2922,11 +3127,14 @@ Como se ha comentado el software que se ha usado para la experimientación
 \end_layout
 
 \begin_layout Standard
-La experimentación consta de cuatro estudios.
- En primero de ellos, se han combinado los clases de la base de datos original
- para obtener únicamente dos clases, por una parte se han agrupado todos
- los tipos de ataques DDoS y por otra el resto de ataques y el flujo de
- red, es decir, 
+La experimentación consta de dos estudios básicos:
+\end_layout
+
+\begin_layout Enumerate
+En el primero de ellos, se han combinado las clases de la base de datos
+ original para obtener únicamente dos clases de tal manera que se han agrupado
+ todos los tipos de ataques DDoS y por otra el resto de ataques y el flujo
+ de red, es decir, 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2943,7 +3151,10 @@ otros
 \end_inset
 
 .
- En el segundo estudio se han mantenido separadas las clases de los diferentes
+\end_layout
+
+\begin_layout Enumerate
+En el segundo estudio se han mantenido separadas las clases de los diferentes
  ataques DDoS y se ha fusionado el resto, es decir, el resto de ataques
  y el flujo normal.
  Por tanto obtenemos unas variables clase con 7 valores, 6 tipos de ataques
@@ -2957,15 +3168,11 @@ otros
 
 , a este conjunto lo denominaremos multiclase.
  
-\begin_inset Newline newline
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
-Por otro lado se ha considerado hacer una selección de atributos o en inglés,
- 
+A los dos estudios básicos se ha considerado por otro hacer una selección
+ de atributos o en inglés, 
 \shape italic
 Feature Subset Selection
 \shape default
@@ -2985,10 +3192,21 @@ key "AnIntroductiontoVariableandFeatureSelection"
 \end_inset
 
 , para reducir la dimensionalidad de los datos como han hecho otros autores
- en distintos trabajos.
+ en distintos trabajos.De este modo obtenemos un total de cuatro estudios.
  No obstante, aquí no se ha utilizado el conjunto de datos completo para
  hacer el FSS y luego se ha validado el clasificador.
- En nuestro caso, se ha utilizado el algoritmo 
+ Para la selección de atributos es importante señalar que aplicar FSS sobre
+ todos los datos y luego hacer la validación cruzada es un error en el que
+ muchos autores caen, pues están usando el cojunto de datos de entrenamiento
+ para la FSS, y eso es erróneo.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En nuestro caso, se ha utilizado el algoritmo 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3089,7 +3307,7 @@ key "UncertaintymeasuresonprobabilityintervalsfromImpreciseDirichletmodel"
 Para validar los resultados obtenidos se ha realizado una validación cruzada
  de 10 hojas.
  Nótese que no pudimos obtener resultados para el LogR para la base de datos
- dicotómica, o el SVM y MLP para ninguna base de datos después de una semana
+ multiclase, o el SVM y MLP para ninguna base de datos después de una semana
  de ejecución de los experimentos.
  La tabla 
 \begin_inset CommandInset ref
@@ -3104,7 +3322,7 @@ reference "tab:Precisión-en-tanto-por-cierto-para-cada-clasificador"
  dicotómicas como para multiclase.
  Y cuando se hace FSS, para clase diacotómica presentan un 99.47% y un 99.99%,
  la única diferencia es para cuando es multiclase en la cual el CDT presenta
- un 99.99% y el J48 un 100% de aciertos, algo insignificante.
+ un 99.99% y el J48 un 100% de aciertos.
  
 \end_layout
 
@@ -3890,7 +4108,8 @@ reference "tab:Área-bajo-la-curva-para-cada-clasificador-usando-la-base-datos-c
 
 \end_inset
 
- se muestra el AUC para los estudios sin FSS.
+ se muestra el AUC para los datos con clase binaria pues el AUC no tiene
+ sentido en problemas multiclase.
  Como se puede ver tanto el CDT como el J48 presentan un valor de 1.0000
  y 0.9967 para la clase diacotómica y para multiclase correspondientemente,
  lo que nos dice que es una prueba excelente.
@@ -4218,7 +4437,7 @@ reference "tab:Ranking-medio-prueba-friedman-precision"
 
 \end_inset
 
-muestra el resultado de la prueba de Friedman para la precisión y la tabla
+ muestra el resultado de la prueba de Friedman para la precisión y la tabla
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4260,6 +4479,8 @@ El test de Friedman indica que los mejores en precisión son el CDT y J48,
  Como se puede apreciar para el test Nemeny para la precisión no hay diferencias
  significativas para entre el [J48, SVM], [J48, MLP] y [CDT, SVM].
  Y en cuanto al tiempo solamente entre el [NB, LogR].
+ En general los resultados son buenos pero los resultados en algunos casos
+ no son estadísticamente significativos según Nemenyi.
 \end_layout
 
 \begin_layout Standard
@@ -4267,7 +4488,7 @@ El test de Friedman indica que los mejores en precisión son el CDT y J48,
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -4412,7 +4633,7 @@ name "tab:Ranking-medio-prueba-friedman-precision"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -4929,7 +5150,7 @@ name "tab:P-valores-del-test-nemenyi-precision"
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Standard
@@ -5153,10 +5374,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="8">
+<lyxtabular version="3" rows="5" columns="6">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -5205,24 +5424,6 @@ NB
 
 \begin_layout Plain Layout
 LogR
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-SVM
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-MLP
 \end_layout
 
 \end_inset
@@ -5287,24 +5488,6 @@ CDT
 \begin_inset Text
 
 \begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 11
 \end_layout
 
@@ -5353,24 +5536,6 @@ J48
 
 \begin_layout Plain Layout
 +4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-?
 \end_layout
 
 \end_inset
@@ -5435,24 +5600,6 @@ NB
 \begin_inset Text
 
 \begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 -6
 \end_layout
 
@@ -5509,173 +5656,7 @@ LogR
 \begin_inset Text
 
 \begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 -8
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-SVM
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-MLP
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-?
 \end_layout
 
 \end_inset
@@ -5692,7 +5673,7 @@ MLP
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Ranking de clasificadores basado en puntuación
+Ranking de clasificadores basado en comparación por pares
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:comparacionBasadaEnVictorias"
