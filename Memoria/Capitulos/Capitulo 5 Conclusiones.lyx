@@ -120,7 +120,8 @@ En cuanto a los CDT son árboles de decisión, los cuales se pueden ver como
  Durante este trabajo se ha comprobado su buen funcionamiento para la detección
  de ataques DDoS sobre un conjunto de datos reales.
  Además son una muy buena opción para su implementación real ya que su precisión
- en relación a su coste computacional sobresale.
+ en relación a su coste computacional sobresale con una baja tasa de falsos
+ positivos.
 \end_layout
 
 \begin_layout Section
