@@ -93,7 +93,7 @@ A día de hoy, Internet cada vez ofrece más servicios que permiten a los
  forma rápida y eficiente.
  Se pueden definir los servicios de Internet como el conjunto de funcionalidades
  que ofrece dicha red a los usuarios.
- A lo largo de los años han ido surgiendo nuevos y servicios y a los existentes
+ A lo largo de los años han ido surgiendo nuevos servicios y a los existentes
  han ido evolucionando con mayores prestaciones y velocidad de ejecución.
  Entre los más usados se encuentra la World Wide Web, mensajería instantanea,
  transferencia de archivos, videollamada, etc.
@@ -131,22 +131,21 @@ Los DDoS son ataques sobre la infraestuctura de red que provoca que el servicio
 \end_layout
 
 \begin_layout Standard
-Según la encuenta de Karpersky Lab y B2B Internacional a finales de 2015
- más de una de cada cinco compañías que ha sufrido algún tipo de ataque
- DDoS se dio cuenta que sus problemas continuaban durante días, o incluso
- semanas 
+Según una encuesta de Karpersky Lab y B2B Internacional 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "KasperskyLabSurvey"
 
 \end_inset
 
-.
- Las consecuencias de un ataque DDoS pueden variar desde tener acceso limitado
- a los servicios en línea hasta la total indisponibilidad, pero incluso
- un pequeño incidente puede llevar a pérdidas financieras (con cifras que
- fluctúan entre los $52,000 hasta $444,000 dependiendo del tamaño de la
- compañía).
+ a finales de 2015 más de una de cada cinco compañías que ha sufrido algún
+ tipo de ataque DDoS se dio cuenta que sus problemas continuaban durante
+ días, o incluso semanas .
+ Según el anterior informe las consecuencias de un ataque DDoS pueden variar
+ desde tener acceso limitado a los servicios en línea hasta la total indisponibi
+lidad, pero incluso un pequeño incidente puede llevar a cuantiosas pérdidas
+ financieras (con cifras que fluctúan entre los $52,000 hasta $444,000 dependien
+do del tamaño de la compañía).
 \begin_inset Newline newline
 \end_inset
 
@@ -155,14 +154,14 @@ key "KasperskyLabSurvey"
 
 \begin_layout Standard
 La encuesta incluyó preguntas a representantes de compañías de más de 5000
- empresas de todo el mundo incluyendo España afectadas por un ataque DDoS,
+ empresas de todo el mundo afectadas por un ataque DDoS incluyendo España,
  sobre la duración del ataque y el impacto que tuvo en la operación de los
  sitios de las compañías, servicios o infraestructura.
  Los resultados de la encuesta mostraron que, en el 13% de los casos, el
  ataque provocó la caída total del recurso y el 52% reportó retrasos significati
 vos en los tiempos de carga del servicio.
- Para 33% de los encuestados hubo ligeras demoras en la carga de páginas,
- y 29% de los ataques provocó el error de algunas transacciones a través
+ Para el 33% de los encuestados hubo ligeras demoras en la carga de páginas,
+ y el 29% de los ataques provocó el error de algunas transacciones a través
  del servicio.
 \begin_inset Newline newline
 \end_inset
@@ -182,12 +181,12 @@ key "AtaqueDDoS21Octubre"
 
 .
  Como los ataques estaban dirigidos al Sistema de Nombres de Dominio (DNS),
- el servicio encargado de asegurar que los pedidos de información por Internet
- se entreguen a la dirección correcta, muchas actividades cotidianas (como
- hacer compras online, interactuar en redes sociales y escuchar música)
- quedaron interrumpidas por ciertos períodos de tiempo.
+ un sistema de nomenclatura jerárquico descentralizado para dispositivos
+ conectados a redes IP como Internet o una red privada, muchas actividades
+ cotidianas (como hacer compras online, interactuar en redes sociales y
+ escuchar música) quedaron interrumpidas por ciertos períodos de tiempo.
  Aunque la longitud de dichas interrupciones fue variable, en algunos casos
- se extendió por varias horas .
+ se extendió por varias horas.
  
 \begin_inset Newline newline
 \end_inset
@@ -291,7 +290,7 @@ key "OVH"
 
 \begin_layout Standard
 La detección de los ataques DDoS se ha intentado resolver desde la Inteligencia
- Artificial usando aprendizaje automático.
+ Artificial usando entre otras técnicas aprendizaje automático.
  La detección de ataques DDoS requiere un clasificador de aprendizaje adaptativo
  incremental, lo cual conlleva menos complejidad computacional y una toma
  de decisiones precisa a partir de información incierta.
@@ -306,10 +305,10 @@ La detección de los ataques DDoS se ha intentado resolver desde la Inteligencia
 \begin_layout Standard
 Dentro del aprendizaje automático se encuentran diferentes tipos en función
  de la realimentación disponible en el proceso: el aprendizaje supervisado,
- el cual aprende una función a partir de ejemplos de sus entradsas y salidas;
- no supervisado, el cual aprende o extrae conclusiones a partir de patrones
- de entradas para los que no se especifican los valores de su salidas y
- por refuerzo, el cual aprende a partir del refuerzo que devuelve el entorno.
+ el cual aprende a partir de ejemplos de sus entradas y salidas; no supervisado,
+ el cual aprende o extrae conclusiones a partir de patrones de entradas
+ para los que no se especifican los valores de su salidas y por refuerzo,
+ el cual aprende a partir del refuerzo que devuelve el entorno.
 \end_layout
 
 \begin_layout Section
@@ -324,8 +323,7 @@ De acuerdo a los estudios realizados y a las implementaciones existentes
 
 \begin_layout Itemize
 Es un desafío discriminar el tráfico normal y el tráfico de ataque DDoS
- por lo que hay que estudiar qeu algortimo tiene mayor efectividad dependiendo
- del tipo de red y otros factores 
+ por lo que hay que estudiar que algoritmo tiene mayor efectividad 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "DectionOfDDoSAttacks_Article"
@@ -339,7 +337,7 @@ key "DectionOfDDoSAttacks_Article"
 \begin_layout Itemize
 Las técnicas de aprendizaje automático aplicadas a la detección de ataques
  DDoS tiene un gran efectividad llegando a tener una alta efectividad de
- detección del 99,2% reduciendo los falsos positivos 
+ detección del 99,2%, reduciendo los falsos positivos 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "DectionOfDDoSAttacks_Article"
@@ -354,13 +352,12 @@ Objetivos y alcance del proyecto
 \end_layout
 
 \begin_layout Standard
-El propósito de este proyecto es describir las técnicas para predicción
- de ataques DDoS, tantos las mas novedosasa como las más utilizadas.
- A continuación se proponen y simulan sobre bases de datos reales técnicas
- de aprendizaje autómatico para la detección de ataques DDoS.
+El propósito de este proyecto es revisar las técnicas para predicción de
+ ataques DDoS, tantos las mas novedosasa como las más utilizadas.
+ A continuación se proponen y simulan sobre bases de datos técnicas de aprendiza
+je autómatico para la detección de ataques DDoS.
  Y por último se evaluarán los resultados obtenidos de las experimentaciones
- para ofrecer una valoración sobre si son capaces de sustituir a cualquier
- otra técnica actual con gran efectividad.
+ para ofrecer una valoración sobre si son una herramienta válida.
 \begin_inset Newline newline
 \end_inset
 
@@ -375,9 +372,9 @@ Para satifisfacer los objetivos del proyectos primeramente se hara un revisión
  A continuación se exponen los algoritmos los cuales son objeto de estudio
  en el trabajo así como la base de datos sobre la cual se va a poner a prueba
  estos algoritmos.
- El siguiente paso será obtener los parámetros de las diferentes simulaciones
- de los algoritmos de aprendizaje automático sobre las base de datos y por
- último se realizará un análisis sobre los resultados obtenidos.
+ El siguiente paso será obtener los resultados de las diferentes experimentacion
+es de los algoritmos de aprendizaje automático sobre las base de datos y
+ por último se realizará un análisis sobre los resultados obtenidos.
  
 \end_layout
 
@@ -402,13 +399,13 @@ reference "chap:Estado-del-Arte"
 
 \end_inset
 
- se trata todo el estado del arte con a los ataques DDoS.
+ se revisa el estado del arte con respecto a los ataques DDoS.
  Se realiza una definición formal de ellos, para posteriormente enumerar
  los principales tipos y y sus características.
  También se lleva a cabo una descripción de las técnicas existentes para
  su predicción y una comparación entre ellas.
- Finalmente se centra en qué se ha relizado hasta la fecha para la predicción
- de DDoS mediante el uso de aprendizaje autómatico 
+ Finalmente se centra en qué se ha realizado hasta la fecha para la predicción
+ de ataques DDoS mediante el uso de aprendizaje autómatico 
 \begin_inset Newline newline
 \end_inset
 
@@ -432,27 +429,16 @@ reference "chap:Implementacion"
 
 \end_inset
 
- se explica la descripción de los datos y las herramientas utilizadas.
- 
+ se explica la descripción de los datos y las herramientas utilizadas, experimen
+tación y análisis de los resultados.
 \begin_inset Newline newline
 \end_inset
 
 
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
- A continuación en el capítulo 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Evaluación"
-
-\end_inset
-
- se lleva a cabo la evaluación de los resultados obtenidos de las pruebas
- sobre los diferentes tipos de clasificadores que se han probado.
- Finalmente hablaremos de las tendencias futuras y las conclusiones que
- se han obtenido.
- Por último se presenta el capítulo 
+\begin_layout Standard
+Por último se presenta el capítulo 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "chap:Conclusiones"
@@ -460,15 +446,7 @@ reference "chap:Conclusiones"
 \end_inset
 
  donde se comentan las conclusiones obtenidas a lo largo del trabajo y tendencia
-s futuras y el capítulo 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Planicación"
-
-\end_inset
-
- que muestra la planificación del proyecto.
- 
+s futuras.
 \end_layout
 
 \end_body

@@ -411,13 +411,6 @@ filename "Capitulos/Capitulo 4 Implementación.lyx"
 \end_inset
 
 
-\begin_inset CommandInset include
-LatexCommand include
-filename "Capitulos/Capitulo 5  Evaluación.lyx"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard

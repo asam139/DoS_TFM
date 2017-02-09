@@ -1252,15 +1252,7 @@ Basados en el destino (lado del servidor): la mayoría de aplicaciones siguen
 \shape italic
 defense against Reflection/Amplification attacks
 \shape default
-; DDoS-Shield: 
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "anomaly detector based on hidden semi-Markov model"
-description "Trush Management Helmet"
-
-\end_inset
-
- y DAT (
+; DDoS-Shield, y DAT (
 \shape italic
 Defense Against Tilt DDoS attacks
 \shape default
