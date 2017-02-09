@@ -406,7 +406,7 @@ filename "Capitulos/Capitulo 3 Metodología.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "Capitulos/Capitulo 4 Implementación.lyx"
+filename "Capitulos/Capitulo 4 Resultados Experimentales.lyx"
 
 \end_inset
 
@@ -416,17 +416,7 @@ filename "Capitulos/Capitulo 4 Implementación.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "Capitulos/Capitulo 6 Conclusiones.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "Capitulos/Capitulo 7 Planificacion.lyx"
+filename "Capitulos/Capitulo 5 Conclusiones.lyx"
 
 \end_inset
 
