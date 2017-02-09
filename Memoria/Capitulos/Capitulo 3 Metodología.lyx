@@ -88,7 +88,7 @@ name "chap:Metodología"
 \end_layout
 
 \begin_layout Standard
-En esta sección se explicara detalladamente cada uno de los clasificadores
+En esta sección se explicará detalladamente cada uno de los clasificadores
  objetos de estudio.
  Se comentará la procedencia de cada uno de ellos, ya sea estadística o
  de la IA, además se explicarán matemáticamente los fundamentos de cada
@@ -103,8 +103,8 @@ Modelos
 En esta sección describiremos los diferentes tipos de modelos de clasificación
  que se utilizarán sobre la base de datos para su posterior comparación
  y validación.
- Se van a utilizar una serie de arboles de decisión estándares como son
- el C4.5, Naïve Bayes, LogR, SVM y Perceptrón multicapa.
+ Se van a utilizar una serie de clasificadores estándares como son el C4.5,
+ Naïve Bayes, LogR, SVM y Perceptrón multicapa.
  Y además se va a incorporar uno nuevo, el Credal Decision Trees (CDT),
  para ver como trabaja para la detección de ataques DDoS.
  
@@ -124,12 +124,12 @@ key "ProgramsForMachineLearning"
 \end_inset
 
 .
- Se trata de una extensión del algoritmo ID3 anteriormente por Quinlan.
+ Se trata de una extensión del algoritmo ID3 también presentado anteriormente
+ por Quinlan.
  Aunque los arboles de decisión que este algoritmo genera tienen múltiples
  aplicaciones una de las más importantes es como clasificador.
- Por ello es muy común referirse a él como clasificador estadístico.
- El J48 es una implementación de código abierto en el lenguaje de programación
- Java.
+ El J48 es una implementación de código abierto en WEKA en el lenguaje de
+ programación Java.
 \begin_inset Newline newline
 \end_inset
 
@@ -146,7 +146,14 @@ description "Top Down Induction Trees"
 
 \end_inset
 
-), se construyen a partir del método de Hunt.
+), se construyen a partir del método de Hunt
+\begin_inset CommandInset citation
+LatexCommand citep
+key "quinlan1986induction"
+
+\end_inset
+
+.
  El esqueleto de este método para construir un árbol de decisión a partir
  de un conjunto 
 \begin_inset Formula $T$
@@ -205,7 +212,6 @@ description "Top Down Induction Trees"
 
  en subconjuntos de casos que tiendan, o parezcan tender hacia una colección
  de casos pertenecientes a una única clase.
- Se elige una prueba basada en un único.
 \end_layout
 
 \begin_layout Standard
@@ -237,8 +243,8 @@ key "Teoradelainformacincodificacinylenguajes"
 \begin_inset Formula $k$
 \end_inset
 
- estados posibles) y supongamos todos los estados equiprobables.
- Entonces la probabilidad de que se dé una de esas combinaciones será 
+ estados posibles) y supongamos todos los estados son equiprobables, entonces
+ la probabilidad de que se dé una de esas combinaciones será 
 \begin_inset Formula $p=\frac{1}{k}$
 \end_inset
 
@@ -519,7 +525,7 @@ key "ModelosBayesianosparalaclasificacinsupervisada.Aplicacionesalanlisisdedatos
  Naïve Bayes ha sido muy estudiado desde los años 50.
  Durante todos estos años sus aplicaciones han sido múltiples, una de ellas
  es como un método popular para la categorización de textos, es decir si
- son de política, deportes, anuncios, etc.
+ son de política, deportes, anuncios o correo basura.
 \begin_inset Newline newline
 \end_inset
 
@@ -569,7 +575,7 @@ key "TheOptimallyofNaiveBayes"
 
  del problema de la clasificación bayesiana mostró que existen razones teóricas
  sólidas para la aparentemente improbable eficacia de los clasificadores
- naif de Bayes.
+ Naïve Bayes.
  Sin embargo, una comparación completa con otros algoritmos de clasificación
  en 2006 
 \begin_inset CommandInset citation
@@ -578,8 +584,8 @@ key "Unacomparacinempricadealgoritmosdeaprendizajesupervisado"
 
 \end_inset
 
-mostró que la clasificación de Bayes es superada por otros enfoques, tales
- como los booted trees o los random forests.
+ mostró que la clasificación de Naïve Bayes es superada por otros enfoques,
+ tales como los booted trees o los random forests.
 \end_layout
 
 \begin_layout Standard
@@ -603,7 +609,7 @@ Abstractamente, Naïve Bayes es un modelo de probabilidad condicional: dado
 
  (variables independientes), asigna a esta instancia las probabilidades
  
-\begin_inset Formula $p(C_{k}|x_{1},...,x_{n}$
+\begin_inset Formula $p(C_{k}|x_{1},...,x_{n})$
 \end_inset
 
  para cada uno de los 
@@ -671,9 +677,10 @@ En la práctica, sólo hay interés en el numerador de esa fracción, porque
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-p(C,F1,...,F_{n}=p(C)p(F_{1},...,F_{n}|C)=p(C)p(F_{1}|C)p(F_{2},...F_{n}|C,F_{1})=p(C)p(F_{1}|C)p(F_{2}|C,F_{1})p(F_{3},...F_{n}|C,F_{1},F_{2})
-\end{equation}
+\begin{multline}
+p(C,F1,...,F_{n}=p(C)p(F_{1},...,F_{n}|C)=p(C)p(F_{1}|C)p(F_{2},...F_{n}|C,F_{1})=\\
+p(C)p(F_{1}|C)p(F_{2}|C,F_{1})p(F_{3},...F_{n}|C,F_{1},F_{2})
+\end{multline}
 
 \end_inset
 
@@ -723,9 +730,8 @@ p(C,F_{1},...,F_{n})=p(C)p(F_{1}|C)p(F_{2}|C)p(F_{3}|C)...=p(C)\prod_{i=1}^{n}p(
 
 \begin_layout Standard
 Esto significa que haciendo estas asunciones, la distribución condicional
- sobre la variable clasificaroria {
-\backslash
-displaystyle C} C puede expresarse de la siguiente manera 
+ sobre la variable clasificaroria C puede expresarse de la siguiente manera
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PatternRecognition:AnAlgorithmicApproach."
@@ -766,7 +772,7 @@ donde
 Hasta ahora se ha desarrollado el modelo de probabilidad de Bayes.
  Pero el clasificador combina este modelo junto con la regla de decisión.
  Una regla común es escoger la hípotesís mas probable; esto se conoce como
- el máximo a posteriori o regla de decisón MAP (
+ el máximo a posteriori o regla de decisión MAP (
 \shape italic
 Maximum a Posteriori Probability
 \shape default
@@ -826,17 +832,32 @@ key "ModelosEstadsticos:TeorayPrctica"
 \end_inset
 
  es un tipo de análisis de regresión utilizado para predecir el resultado
- de una variable que se puede categorizar, es decir, una variable qu epuede
+ de una variable que se puede categorizar, es decir, una variable que puede
  adoptar un número limitado de categorías en función de variables, característic
 as o atributos.
- Es útil para modelar la probabilidad de un evento ocurriendo como función
- de otros factores.
+ Es útil para modelar la probabilidad de un evento como función de otros
+ factores.
  El análisis LogR se enmarca en el conjunto de Ge (GLM por sus siglas en
  inglés) que usa como función de enlace la función logit.
  Las probabilidades que describen el posible resultado de un único ensayo
  se modelan, como una función de variables explicativas, utilizando una
  función logística.
 \begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La función logic para un número p queda determinada por la siguiente expresión:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle logit(p)=\log\left(\frac{p}{1-p}\right)=\log(p)-\log(1-p)}
+\end{equation}
+
 \end_inset
 
 
@@ -869,8 +890,7 @@ La variable solo puede tener dos valores, es decir sólo dos valores
 
 \begin_layout Standard
 La regresión logística fue desarrollada por el estadístico David Cox en
- 1958.
- 
+ 1958 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Estimationoftheprobabilityofaneventasafunctionofseveralindependentvariables"
@@ -884,6 +904,7 @@ key "Theregressionanalysisofbinarysequenceswithdiscussion"
 
 \end_inset
 
+.
  El modelo logístico binario se utiliza para estimar la probabilidad de
  una respuesta binaria basada en una o más variables predictor (o independientes
 ) (características).
@@ -899,7 +920,7 @@ key "Theregressionanalysisofbinarysequenceswithdiscussion"
 La regresión logística se utiliza en varios campos, incluyendo el aprendizaje
  automático, la mayoría de los campos médicos y las ciencias sociales.
  Por ejemplo, la regresión logística puede usarse para predecir si un paciente
- tiene una enfermedad dada (por ejemplo, diabetes , enfermedad coronaria),
+ tiene una enfermedad dada (por ejemplo, diabetes, enfermedad coronaria),
  basándose en las características observadas del paciente (edad, sexo, índice
  de masa corporal 
 \begin_inset CommandInset citation
@@ -909,7 +930,7 @@ key "ValidationofMPIandOIAIIintwodifferentgroupsofpatientswithsecondaryperitonit
 \end_inset
 
  , resultados de varios análisis de sangre , etc.).
- Ser utilizados en ingeniería , especialmente para predecir la probabilidad
+ Ser utilizados en ingeniería, especialmente para predecir la probabilidad
  de fallo de un proceso, sistema o producto dado.
 \begin_inset Newline newline
 \end_inset
@@ -1040,7 +1061,7 @@ Las probabilidades de que la variable dependiente sea igual a un caso (dada
 \begin_inset Formula $x$
 \end_inset
 
- de las variables predictor) es equivalente a la función exponencial de
+ de las variables predictoras) es equivalente a la función exponencial de
  la expresión de regresión lineal.
  Esto ilustra cómo el logit sirve como una función de enlace entre la probabilid
 ad y la expresión de regresión lineal.
@@ -1436,16 +1457,7 @@ description "Multilayer perceptron"
 
 \end_inset
 
-) es un modelo de red neuronal artificial de retropropagación (control o
- modificación usando resultados anticipados) que asigna conjuntos de datos
- de entrada a un conjunto de salidas apropiadas.
- Un MLP consiste en múltiples capas de nodos en un gráfico dirigido, con
- cada capa completamente conectada al siguiente.
- Excepto para los nodos de entrada, cada nodo es una neurona (o elemento
- de procesamiento ) con una función de activación no lineal.
- MLP utiliza una técnica de aprendizaje supervisado llamada backpropagation
- para entrenar la red.
- 
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PrinciplesofNeurodynamics:PerceptronsandtheTheoryofBrainMechanisms"
@@ -1459,7 +1471,16 @@ key "LearninginternalRepresentationsbyErrorPropagation"
 
 \end_inset
 
-MLP es una modificación del perceptron lineal estándar y puede distinguir
+) es un modelo de red neuronal artificial de retropropagación (control o
+ modificación usando resultados anticipados) que asigna conjuntos de datos
+ de entrada a un conjunto de salidas apropiadas.
+ Un MLP consiste en múltiples capas de nodos en un gráfico dirigido, con
+ cada capa completamente conectada al siguiente.
+ Excepto para los nodos de entrada, cada nodo es una neurona (o elemento
+ de procesamiento ) con una función de activación no lineal.
+ MLP utiliza una técnica de aprendizaje supervisado llamada backpropagation
+ para entrenar la red.
+ MLP es una modificación del perceptron lineal estándar y puede distinguir
  datos que no son linealmente separables
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1475,10 +1496,10 @@ key "Approximationbysuperpositionsofasigmoidalfunction"
 \end_layout
 
 \begin_layout Standard
-Los perceptrones de múltiples capas que utilizan un algoritmo de retropropagació
-n son el algoritmo estándar para cualquier proceso supervisado de reconocimiento
- de patrones de aprendizaje y el tema de la investigación en curso en neurocienc
-ia computacional y procesamiento distribuido paralelo.
+Los perceptrones de multicapa que utilizan un algoritmo de retropropagación
+ del error son el algoritmo estándar para cualquier proceso supervisado
+ de reconocimiento de patrones de aprendizaje y el tema de la investigación
+ en curso en neurociencia computacional y procesamiento distribuido paralelo.
  Son útiles en la investigación en términos de su capacidad para resolver
  problemas estocásticamente, lo que a menudo permite obtener soluciones
  aproximadas para problemas extremadamente complejos.
@@ -1486,18 +1507,18 @@ ia computacional y procesamiento distribuido paralelo.
 
 \begin_layout Standard
 MLPs son aproximadores de función universal como se muestra por el teorema
- de Cybenko, 
+ de Cybenko 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Approximationbysuperpositionsofasigmoidalfunction"
 
 \end_inset
 
- por lo que pueden ser utilizados para crear modelos matemáticos mediante
+, por lo que pueden ser utilizados para crear modelos matemáticos mediante
  análisis de regresión.
  Como la clasificación es un caso particular de regresión cuando la variable
- de respuesta es categórica , las MLP son también buenos algoritmos clasificador
-es.
+ de respuesta es categórica, los MLP son también buenos algoritmos clasificadore
+s.
 \begin_inset Newline newline
 \end_inset
 
@@ -1599,9 +1620,9 @@ key "Analysisandextensionofdecisiontreesbasedonimpreciseprobabilities:applicatio
 \end_layout
 
 \begin_layout Standard
-El criterio de división utilizado para construir CDTs se basa en probabilidades
- imprecisas y en la aplicación de medidas de incertidumbre en los conjuntos
- credales 
+El criterio de selección de variable para ramificar utilizado para construir
+ CDTs se basa en probabilidades imprecisas y en la aplicación de medidas
+ de incertidumbre en los conjuntos credales 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Buildingclassificationtreesusingthetotaluncertaintycriterion"
@@ -1609,7 +1630,7 @@ key "Buildingclassificationtreesusingthetotaluncertaintycriterion"
 \end_inset
 
 .
- La base matemática de este prodecimiento puede describirse: sea una variable
+ La base matemática de este procedimiento puede describirse: sea una variable
  
 \begin_inset Formula $Z$
 \end_inset
@@ -1627,7 +1648,7 @@ key "Buildingclassificationtreesusingthetotaluncertaintycriterion"
 \begin_inset Formula $z_{j}$
 \end_inset
 
-del conjunto de datos.
+ del conjunto de datos.
 \end_layout
 
 \begin_layout Standard
@@ -1648,9 +1669,9 @@ key "Inferencesfrommultinomialdatalearningaboutabagofmarbles"
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 p(z_{j})\epsilon\left[\frac{n_{z_{j}}}{N+s},\frac{n_{z_{j}}+s}{N+s}\right],j=1,...,k;
-\]
+\end{equation}
 
 \end_inset
 
@@ -1666,7 +1687,7 @@ con
 \begin_inset Formula $Z=z_{j}$
 \end_inset
 
-en el conjunto de datos, 
+ en el conjunto de datos, 
 \begin_inset Formula $N$
 \end_inset
 
@@ -1699,9 +1720,9 @@ key "UncertaintymeasuresonprobabilityintervalsfromImpreciseDirichletmodel"
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 K(Z)=\left\{ p|p(z_{j})\epsilon\left[\frac{n_{z_{j}}}{N+s},\frac{n_{z_{j}}+s}{N+s}\right],j=1,...,k\right\} 
-\]
+\end{equation}
 
 \end_inset
 
@@ -1716,8 +1737,15 @@ En este tipo de conjuntos, pueden ser aplicadas medidas imprecisas.
 \begin_inset Formula $H*$
 \end_inset
 
-, se define como
-\begin_inset Formula $H*(K(Z))=max\{H(p)|P\epsilon K(Z)\}$
+, se define como: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+H*(K(Z))=max\{H(p)|P\epsilon K(Z)\}
+\end{equation}
+
 \end_inset
 
  donde la función 
@@ -1737,16 +1765,74 @@ key "UncertaintymeasuresonprobabilityintervalsfromImpreciseDirichletmodel"
 \end_inset
 
  es una medida de incertidumbre total que es bien conocida para este tipo
- de cojuntos.
+ de conjuntos.
  El procedimiento para 
 \begin_inset Formula $H*$
 \end_inset
 
- en el IDM alcanza su coste mas bajo para 
+ en el IDM (Walley’s Imprecise Dirichlet Model
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "IDM"
+description "Walley’s Imprecise Dirichlet Model"
+
+\end_inset
+
+) alcanza su coste mas bajo para 
 \begin_inset Formula $s\leq1$
 \end_inset
 
 .
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En este modelo la Ganancia de Información Imprecisa es:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+IID(C,X)=H*(K(Z))-{\displaystyle \sum_{i}}P(X=x_{i})H*(K(Z|X=x_{i}))
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+en el cual 
+\begin_inset Formula $H*$
+\end_inset
+
+ determina la máxima entropía de los conjuntos credales 
+\begin_inset Formula $K(Z)$
+\end_inset
+
+ y 
+\begin_inset Formula $K(Z|X=x_{i}))$
+\end_inset
+
+, respectivamente.
+ Estos ultimos conjuntos se obtienen gracias al Modelo de Dirichlet Impreciso
+ tanto para la variable clase 
+\begin_inset Formula $Z$
+\end_inset
+
+ como para la misma condicionada al valor del atributo i-esimo 
+\begin_inset Formula $(Z|X=x_{i})$
+\end_inset
+
+.
+ Ademas, 
+\begin_inset Formula $P(X=x_{i})\nabla i=1,...,n$
+\end_inset
+
+ denota la distribucion de probabilidad precisa correspondiente.
 \begin_inset Newline newline
 \end_inset
 

@@ -94,15 +94,16 @@ reference "chap:Introducción"
 
 \end_inset
 
- se ha destacado los aspectos más importantes del trabajo.
+ se han destacado los aspectos más importantes del trabajo.
  En este capítulo exploramos el alcance de los problemas que provocan los
  ataques DDoS así como se intenta combatirlos.
- A continuación se clasifican los ataques de inundación de DDoS así como
- las contramedidas existentes basándonos en dónde y cuándo previenen, detectan
- y responden a los ataques de DDoS.
- La principal intención con este cápitulo es estimular a la comunidad investigad
-ora a desarrollar mecanismos creativos, efectivos, eficientes e integrales
- de prevención, detección y respuesta que aborden el DDoS.
+ A continuación se enumerna los distintos tipos de ataques de inundación
+ de DDoS así como las contramedidas existentes basándonos en dónde y cuándo
+ se previenen, detectan y responden a los ataques de DDoS.
+ La principal intención con este cápitulo es repasar lo que se ha hecho
+ previamente en la comunidad investigadora investigando mecanismos creativos,
+ efectivos, eficientes e integrales de prevención, detección y respuesta
+ que aborden los ataques de DDoS.
 \begin_inset Newline newline
 \end_inset
 
@@ -113,9 +114,9 @@ ora a desarrollar mecanismos creativos, efectivos, eficientes e integrales
 Por útimo en este capítulo se expondrán trabajos en los cuales se aplicán
  técnicas de aprendizaje autómatico para la detección de ataques DDoS.
  Para una mejor comprensión se explicarán conceptos sobre inteligencia artificia
-l, para posteriormente exponer el aprendizaje aútomatico centrándonos en
- las técnicas de clasificación supervisada las cuales son el objetivo del
- trabajo.
+l (IA), para posteriormente exponer el aprendizaje aútomatico centrándonos
+ en distintas técnicas de clasificación supervisada las cuales son el objetivo
+ del trabajo.
  Para ello se hará una pequeña introducción a la IA
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
@@ -136,7 +137,7 @@ Ataques DDoS
 \begin_layout Standard
 Los ataques de denegación de servicio distribuido o DDoS, los cuales tiene
  como objetivo impedir que los usuarios legítimos tengan acceso a un recurso
- espécifico, han sido conocidos desde principios de la década de 1980 
+ específico, han sido conocidos desde principios de la década de 1980 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "DDoS_PJCriscuolo"
@@ -172,7 +173,7 @@ key "SVM_Zombies_DDoS,DefendingAgainstDDoS_RKCChang"
 \shape italic
 Internet Protocol
 \shape default
- 
+
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "IP"
@@ -208,8 +209,8 @@ key "AtaqueDDoS21Octubre_Diaroti,AtaqueDDoS21Octubre"
 
 \end_inset
 
-.
- Los incidentes afectaron principalmente a servicios estadounidenses y europeos.
+, en el cual los incidentes afectaron principalmente a servicios estadounidenses
+ y europeos.
  La serie de ataques, tres en total, afectó a algunas de las plataformas
  web más populares incluyendo Twitter, Netflix, Reddit, Spotify, PayPal,
  Pinterest, CNN, así como los emblemáticos periódicos, The Guardian, New
@@ -222,7 +223,7 @@ Incentivos
 \end_layout
 
 \begin_layout Standard
-Los ataques DDoS están usualmente motivados por diferentes incentivos.
+Los ataques DDoS están usualmente motivados por diferentes motivos.
  Estos incentivos se pueden clasificar en cinco categorias 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -236,15 +237,15 @@ key "ASurveyofDefenseMechanismsAgainstDDoS"
 \begin_layout Enumerate
 Beneficios Financieros/Económicos: debido a la naturaleza de su incentivo,
  los atacantes de esta categoría suelen ser los atacantes más técnicos y
- más experimentados.
- y por lo tanto a menudo son los ataques más peligrosos y difíciles de detener.
+ más experimentados y por lo tanto a menudo son los ataques más peligrosos
+ y difíciles de detener.
  
 \end_layout
 
 \begin_layout Enumerate
 Venganza: los ataques en esta categoría provienen de individuos frustados,
- normalmente con pocas habilidades técnicas, que llegan los ataques como
- respuesta a una injusticia percibida.
+ normalmente con pocas habilidades técnicas, que usan los ataques como respuesta
+ a una injusticia percibida.
  
 \end_layout
 
@@ -259,7 +260,7 @@ description "Partido Popular"
 
 \end_inset
 
- y PSOE (
+ y PSOE (Partido Socialista Obrero Español
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "PSOE"
@@ -267,7 +268,7 @@ description "Partido Socialista Obrero Español"
 
 \end_inset
 
- debido a la ley Sinde 
+) debido a la ley Sinde 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "leySinde"
@@ -279,8 +280,7 @@ key "leySinde"
 
 \begin_layout Enumerate
 Retos intelectuales: los ataques de esta categoría provienene de personas
- que quieren experiementar y aprender sobre como lanzar varios tipos de
- ataques.
+ que quieren experimentar y aprender sobre como lanzar varios tipos de ataques.
  Normalmente son jovenes hackers quienes quieren mostrar sus capacidades.
  Hoy en día, existen gran cantidad de herramientas para atacar y alquilar
  botnets que hasta un aficionado podría lanzar un ataque DDoS.
@@ -339,8 +339,8 @@ key "DDoS_RSCALAID"
 \end_layout
 
 \begin_layout Standard
-La característica distribuidos de los ataques DDoS es la que hace que sean
- extremadamante difícil combatir y detectarlos.
+Que sean distribuidos de los ataques DDoS es lo que hace que sean extremadamente
+ difíciles de combatir y detectar.
  Los atacantes normalmente usan direcciones IP falsas con la intención de
  esconder su verdadera identidad, por lo que se vuelve muy complicado rastrear
  este tipo de ataques.
@@ -348,9 +348,9 @@ La característica distribuidos de los ataques DDoS es la que hace que sean
  que pueden ser explotados.
  Actualmente los ataques dirigidos a la capa de aplicación se estan viendo
  incrementados rápidamente.
- Existen muchos tipos de clasificaciones de los diferentes tipos de ataques
- DDoS pero vamos a comentar la que los clasifica en función de la capa en
- la cual el ataque actúa.
+ Existen muchos tipos de ordenación de los diferentes tipos de ataques DDoS
+ pero vamos a comentar la que los clasifica en función de la capa en la
+ cual el ataque actúa.
  Según esta clasificación se dividen en dos grupos principales:
 \end_layout
 
@@ -387,27 +387,27 @@ description "Internet Control Message Protocol"
 
 \begin_deeper
 \begin_layout Enumerate
-Ataques de Inundación: ataques centrados en interrunpir la conectividad
+Ataques de inundación: ataques centrados en interrumpir la conectividad
  de los usuarios legítimos agotando el ancho de banda.
  
 \end_layout
 
 \begin_layout Enumerate
-Ataques de Inundación explotando un protocolo: el ataque explota alguna
+Ataques de inundación explotando un protocolo: el ataque explota alguna
  característica específica o un fallo de implementación de alguno de los
  protocolos que la víctima usa con el objetivo de consumir una gran cantidad
  de recursos.
 \end_layout
 
 \begin_layout Enumerate
-Ataques de Inundación basados en reflexión: los atacantes envían peticiones
+Ataques de inundación basados en reflexión: los atacantes envían peticiones
  falsas a los reflectores, conjunto de dispositivos, los cuales multiplican
  la carga de esas peticiones enviando sus respuestas a las víctimas llegando
  a agotar sus recursos.
 \end_layout
 
 \begin_layout Enumerate
-Ataques de Inundación basados en amplificación: los atacantes explotan servicios
+Ataques de inundación basados en amplificación: los atacantes explotan servicios
  para generar una gran cantidad de mensajes o múltiples mensajes por cada
  mensaje que ellos reciben amplificiando el tráfico hacia la víctima.
  Las Botnets han sido constantemente usadas con el propósito de amplificación
@@ -422,7 +422,7 @@ Ataques de inundación DDoS a la capa de aplicación: estos ataques se centran
  servidor.
  Los ataques de este tipo generalmente consumen menos ancho de banda y son
  más difíciles de detectar debido a que son más similares al tráfico benigno.
- Aún así son igualmente perjudiciales ya que atacan a específicas característica
+ Aún así son igualmente perjudiciales ya que atacan a características específica
 s de aplicaciones como HTTP (Hypertext Transfer Protocol)
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
@@ -440,7 +440,7 @@ description "Sesssion Initiation Protocol"
 \end_inset
 
 .
- A continuación clasificamos en diferentes tipos:
+ A continuación distinguimos diferentes tipos:
 \end_layout
 
 \begin_deeper
@@ -479,8 +479,7 @@ Mecanismos de Defensa: alcance y taxonomía
 
 \begin_layout Standard
 Normalmente cuando un ataque DDoS es detectado, no hay nada que se pueda
- hacer excepto desconectar a la víctima de la red y manualmente arreglar
- el problema.
+ hacer excepto desconectar a la víctima de la red y reiniciar el sistema
  Por lo tanto, el objetivo de cualquier mecanismo de defensa DDoS es detectarlos
  tan pronto como sea posible y detenerlo lo más cerca posible de su fuente
  de origen.
@@ -491,15 +490,14 @@ Normalmente cuando un ataque DDoS es detectado, no hay nada que se pueda
  más cercanos a la víctima ya que se pueden observar todos los flujos atacantes.
  Pero obviamente, es deseable responder al ataque lo más cercano de la fuente,
  por lo tanto siempre hay un compromiso entre la precisión y la cercanía
- a la fuente que tienen los mecanimos de prevención y detección.
- 
+ a la fuente que tienen los mecanimos de prevención y detección 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ASurveyofDefenseMechanismsAgainstDDoS,ASurveyOfDDoSAttack"
 
 \end_inset
 
-
+.
 \begin_inset Newline newline
 \end_inset
 
@@ -514,7 +512,7 @@ reference "subsec:Clasificación"
 
 \end_inset
 
- de defensa seguirá el mismo tipo de clasificación.
+ de defensa seguirá el mismo tipo de taxonomía.
  Los mecanimos para combatir los ataques de DDoS a la capa de red/transporte
  se dividen en cuatro categorías, basados en fuente, destino, red e híbridos.
  Y los mecanismos que combaten los ataques en la capa de aplicación se dividen
@@ -538,7 +536,14 @@ key "ASurveyofDefenseMechanismsAgainstDDoS"
 \end_layout
 
 \begin_layout Subsubsection
-Taxonomía basada en la ubicación de despliegue
+Ordenación basada en la ubicación de despliegue
+\end_layout
+
+\begin_layout Standard
+Dependiendo de a que capa vayan dirigidos los ataques los cuales se quieren
+ mitigar los mecanismos pueden ser divididos en dos categorias, las cuales
+ a su vez pueden ser divididas dependiendo donde se desplieguen los mecanismos
+ se dividen en:
 \end_layout
 
 \begin_layout Enumerate
@@ -643,7 +648,7 @@ key "ASurveyofDefenseMechanismsAgainstDDoS"
 \end_layout
 
 \begin_layout Enumerate
-Basados en el destino: en este tipo de mecanismios la detección y respuesta
+Basados en el destino: en este tipo de mecanismos la detección y respuesta
  está hecha en el destino del ataque.
  Existen varios mecanismos que tiene lugar en los routers límite o en los
  de acceso a los destinos.
@@ -653,7 +658,7 @@ Basados en el destino: en este tipo de mecanismios la detección y respuesta
 \shape italic
 IP Traceback Mechanisms
 \shape default
-; MIP (
+; MIP(
 \shape italic
 Management Information Base
 \shape default
@@ -760,479 +765,6 @@ key "ASurveyofDefenseMechanismsAgainstDDoS"
 \end_layout
 
 \end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Float table
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="7">
-<features tabularvalignment="bottom">
-<column alignment="center" valignment="middle" width="2.5cm">
-<column alignment="center" valignment="middle" width="2cm">
-<column alignment="center" valignment="middle" width="1.6cm">
-<column alignment="center" valignment="middle" width="2.25cm">
-<column alignment="center" valignment="middle" width="2.1cm">
-<column alignment="center" valignment="middle" width="2.1cm">
-<column alignment="center" valignment="middle" width="1.75cm">
-<row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-\size footnotesize
-Precisión
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-\size footnotesize
-Escalabilidad
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-\size footnotesize
-Rendimiento
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-\size footnotesize
-Complejidad
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-\size footnotesize
-Defensa en conjunto
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-\size footnotesize
-Centralizados
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-\size footnotesize
-Basado en fuente
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Bajo
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Baja
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Moderado
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Baja
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-NO
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-\size footnotesize
-Basado en destino
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Alta
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Baja
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Bueno
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Baja
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-NO
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-\size footnotesize
-Basado en red
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Bajo
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Media
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Moderado
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Media
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-NO
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-\size footnotesize
-Distribuidos
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-\size footnotesize
-Híbrido o Distribuido
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Media
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Media - Alta
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Pobre - Moderado
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Media - Alta
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-SI
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Comparación cualitativa de mecanismos de defensa contra ataques DDoS sobre
- la capa de red/transporte basados en la localización donde se desplegan
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:comparacionDDoS-N/T-deployment-location"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Enumerate
 Mecanismos para la capa de aplicación: 
 \end_layout
@@ -1331,14 +863,471 @@ key "ASurveyofDefenseMechanismsAgainstDDoS"
 
 \end_deeper
 \begin_layout Standard
-\begin_inset Separator plain
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="7">
+<features tabularvalignment="bottom">
+<column alignment="left" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="2cm">
+<column alignment="center" valignment="middle" width="1cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.25cm">
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size tiny
+Precisión
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size tiny
+Escalabilidad
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size tiny
+Rendimiento
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size tiny
+Complejidad
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size tiny
+Defensa en conjunto
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size tiny
+Centralizados
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size tiny
+Basado en fuente
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Bajo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Baja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Moderado
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Baja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+NO
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size tiny
+Basado en destino
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Alta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Baja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Bueno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Baja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+NO
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size tiny
+Basado en red
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Bajo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Media
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Moderado
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Media
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+NO
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size tiny
+Distribuidos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size tiny
+Híbrido o Distribuido
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Media
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Media - Alta
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Pobre - Moderado
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Media - Alta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+SI
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparación cualitativa de mecanismos de defensa contra ataques DDoS sobre
+ la capa de red/transporte basados en la localización donde se desplegan
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:comparacionDDoS-N/T-deployment-location"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\align center
 \begin_inset Float table
 placement H
 wide false
@@ -1365,12 +1354,12 @@ centering
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="6">
 <features tabularvalignment="bottom">
-<column alignment="left" valignment="middle" width="3cm">
-<column alignment="center" valignment="middle" width="1.75cm">
-<column alignment="center" valignment="middle" width="2.25cm">
-<column alignment="center" valignment="middle" width="2cm">
-<column alignment="center" valignment="middle" width="2.75cm">
-<column alignment="center" valignment="middle" width="1.75cm">
+<column alignment="left" valignment="middle" width="1.25cm">
+<column alignment="center" valignment="middle" width="1cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.5cm">
+<column alignment="center" valignment="middle" width="1.25cm">
 <row>
 <cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
@@ -1387,7 +1376,7 @@ centering
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size tiny
 Precisión
 \end_layout
 
@@ -1399,7 +1388,7 @@ Precisión
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size tiny
 Escalabilidad
 \end_layout
 
@@ -1411,7 +1400,7 @@ Escalabilidad
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size tiny
 Rendimiento del sistema
 \end_layout
 
@@ -1423,7 +1412,7 @@ Rendimiento del sistema
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size tiny
 Complejidad de Implementación
 \end_layout
 
@@ -1435,7 +1424,7 @@ Complejidad de Implementación
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size tiny
 Defensa en conjunto
 \end_layout
 
@@ -1449,7 +1438,7 @@ Defensa en conjunto
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size tiny
 Basados en destino
 \end_layout
 
@@ -1460,7 +1449,7 @@ Basados en destino
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size tiny
 Alta
 \end_layout
 
@@ -1471,7 +1460,7 @@ Alta
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size tiny
 Baja
 \end_layout
 
@@ -1482,7 +1471,7 @@ Baja
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size tiny
 Moderado - bueno
 \end_layout
 
@@ -1493,7 +1482,7 @@ Moderado - bueno
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size tiny
 Baja
 \end_layout
 
@@ -1504,7 +1493,7 @@ Baja
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size tiny
 NO
 \end_layout
 
@@ -1518,7 +1507,7 @@ NO
 \begin_layout Plain Layout
 
 \series bold
-\size footnotesize
+\size tiny
 Híbridos
 \end_layout
 
@@ -1529,40 +1518,40 @@ Híbridos
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size tiny
 Media
 \end_layout
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size tiny
 Media
 \end_layout
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size tiny
 Moderado
 \end_layout
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size tiny
 Media - Alta
 \end_layout
 
@@ -1573,7 +1562,7 @@ Media - Alta
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size tiny
 SI
 \end_layout
 
@@ -1614,19 +1603,17 @@ name "tab:comparacionDDoS-A-deployment-location-1"
 \end_layout
 
 \begin_layout Subsubsection
-Taxonomía basada en el tiempo de actuación
+Ordenación basada en el tiempo de actuación
 \end_layout
 
 \begin_layout Standard
-El segundo criterio para la taxonomía es el momento en que los mecanismos
- de defensa DDoS deben actuar en respuesta a un posible ataque de inundación
- de DDoS.
+El segundo criterio es el momento en que los mecanismos de defensa DDoS
+ deben actuar en respuesta a un posible ataque de inundación de DDoS.
  Basándonos en este criterio, clasificamos ambos mecanismos de defensa contra
  los ataques DDoS a nivel de aplicación y de red / transporte en tres categorías
  (es decir, tres puntos de defensa contra el ataque de inundación): antes
- del ataque (prevención de ataques) durante el ataque Ataque de detección),
- y después del ataque (identificación de la fuente de ataque y respuesta)
- 
+ del ataque (prevención de ataques) durante el ataque (detección), y después
+ del ataque (identificación de la fuente de ataque y respuesta) 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "TaxonomyDDoSAttackAndDefenseMechanisms"
@@ -1640,7 +1627,7 @@ key "TaxonomyDDoSAttackAndDefenseMechanisms"
 
 \begin_layout Enumerate
 Antes del ataque o prevención: lo mejor siempre es parar el ataque DDoS
- al inicio, es decir prevenir es le mejor solución.
+ al inicio, es decir, prevenir es la mejor solución.
  Los mecanimos de prevención pueden ser desplegados en las fuentes, redes
  intermedias o una combinación de ellos.
  La mayoría de este tipo de mecanismos se centran en arreglar vulnerabilidades
@@ -1654,9 +1641,9 @@ key "ASurveyofDefenseMechanismsAgainstDDoS"
 
 \end_inset
 
-: mecanismos de seguridad de protoco y sistema para incrementar en general
+: mecanismos de seguridad de protocolo y sistema para incrementar en general
  la seguridad de los sistemas; Fail-Safe protección; asignación de recursos
- y credenciales; mecanismos de reconfiguación; instalación de IDPS (Intrusion
+ y credenciales; mecanismos de reconfiguración; instalación de IDPS (Intrusion
  Detection and Prevention Systems)
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
@@ -1679,7 +1666,7 @@ Durante el ataque o detección: pueden ser desplegados en los mismos puntos
  en las detecciones.
  Estos mecanismos monitorizan algunas características y estadísticas de
  los flujos de tráfico de modo que aprenden el comportamiento de cada uno
- de ellos obtener patrones con los que comparar y así detectar anomalias.
+ de ellos, para obtener patrones con los que comparar y así detectar anomalias.
  
 \end_layout
 
@@ -1704,15 +1691,15 @@ d de los servicios.
 
 \begin_layout Standard
 En este parte se ha presentado los ataques DDoS haciendo la taxonomía de
- los diferentes tipos de ataques así como la de los mecanismos para detenerlos
- mostrando sus ventajas e inconvenientes.
+ los diferentes tipos de ataques así como una clasificación de los mecanismos
+ para detenerlos, mostrando sus ventajas e inconvenientes.
  Los mecanismos de defensa deben tener características que les permitan
  combatir a los ataques DDoS tanto en tiempo real como lo más cerca posible
  de las fuentes.
- Y entre estas careterísticas se deberían implementar los mecanismos de
+ Y entre estas características se deberían implementar los mecanismos de
  prevención, detección y respuesta en más nodos, colaborar y cooperar entre
- los puntos de defensa y proveedeores de servicios, mecanimos de más confianza
- para autenticar y mecanismos de comunicación seguros.
+ los puntos de defensa y proveedores de servicios así como mecanimos de
+ más confianza para autenticar y establecer una comunicación segura.
 \end_layout
 
 \begin_layout Subsection
@@ -1769,10 +1756,9 @@ key "tcpdump"
 \end_layout
 
 \begin_layout Standard
-Es importante volver a recalcar la necesidad de monitorizar el tráfico encriptad
-o y tunelizado, ya que sin la visibilidad de este tipo de conexiones nunca
- se podrán evitar los ataques que utilicen esos medios para alcanzar a la
- víctima.
+Es importante la necesidad de monitorizar el tráfico encriptado y tunelizado,
+ ya que sin la visibilidad de este tipo de conexiones nunca se podrán evitar
+ los ataques que utilicen esos medios para alcanzar a la víctima.
 \begin_inset Newline newline
 \end_inset
 
@@ -1780,12 +1766,11 @@ o y tunelizado, ya que sin la visibilidad de este tipo de conexiones nunca
 \end_layout
 
 \begin_layout Standard
-Las soluciones de detección/mitigación de los fabricantes utilizan una combinaci
-ón de los anteriores métodos de monitorización (ya sea con dispositivos
- situados en línea o con la importación de los datos mediante un analizador
- de puertos u otro tipo de reenvío del tráfico), algunos incluso proporcionando
- los medios necesarios para romper ellos mismos los túneles SSL (Secure
- Sockets Layer)
+Las soluciones de detección/mitigación utilizan una combinación de los anteriore
+s métodos de monitorización (ya sea con dispositivos situados en línea o
+ con la importación de los datos mediante un analizador de puertos u otro
+ tipo de reenvío del tráfico), algunos incluso proporcionando los medios
+ necesarios para romper ellos mismos los túneles SSL (Secure Sockets Layer)
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "SSL"
@@ -1830,7 +1815,7 @@ o, pero en muchos casos no se aporta suficiente información para determinar
 Detectar los orígenes del ataque puede ser muy complicado ya que, como se
  ha visto, los ataques reflexivos o la utilización de botnets complican
  la localización de las direcciones IP desde las que se lanzan las peticiones
- de ataque, al estar estas enmascardas con el tráfico lícito de otros clientes.
+ de ataque, al estar estas enmascaradas con el tráfico lícito de otros clientes.
 \begin_inset Newline newline
 \end_inset
 
@@ -1864,14 +1849,14 @@ Análisis del comportamiento de cada cliente.
  Si se tiene esta sospecha se podría directamente marcar a un cliente como
  atacante, o modificar los puntos de su clasificación (punto anterior).
  Por otra parte, también se puede utilizar el conocimiento adquirido sobre
- los comportamientos habituales de los clientes..
+ los comportamientos habituales de los clientes.
 \end_layout
 
 \begin_layout Standard
 Por último, una vez que se tienen acotados los posibles orígenes del ataque,
  se realiza un estudio más pormenorizado (revisando las capturas de paquetes
  o flujos de tráfico) para determinar el tipo de ataque que se está sufriendo.
- Estos procedimientos son parecidos a las que realizan otros elementos como
+ Estos procedimientos son parecidos a los que realizan otros elementos como
  IDS (
 \shape italic
 Intrusion Detection System
@@ -1899,7 +1884,7 @@ Inteligencia artificial aplicada a la detección de ataques DDoS
 \end_layout
 
 \begin_layout Standard
-El aprendizaje automático (del inglés, 
+El aprendizaje automático (en inglés, 
 \shape italic
 machine learning
 \shape default
@@ -1950,7 +1935,7 @@ Algunos sistemas de aprendizaje automático intentan eliminar toda necesidad
 
 \begin_layout Standard
 El aprendizaje automático busca aplicar técnicas de análisis de datos, aprendiza
-je estadístico, creación de modelos, ect, con el objetivo de identificar
+je estadístico, creación de modelos, etc, con el objetivo de identificar
  automáticamente patrones o tendencias dentro de los datos 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1987,7 +1972,7 @@ key "patternRecognitionAndMachineLearning"
  determinados y los modelos lógicos, que expresan las probabilidades en
  reglas organizadas en forma de árboles de decisión.
  Los algoritmos que se utilizan para resolver los problemas basados en árboles
- de decicisón pueden ser muy variados 
+ de decisión pueden ser muy variados 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "patternRecognitionAndMachineLearning"
@@ -2018,7 +2003,7 @@ La IA nos permite la detección de los ataques de DDoS lo cúal es muy important
 En esta sección se realizará una introducción a la IA, en la cual se explicarán
  los conceptos esenciales para comprender las técnicas de aprendizaje automatico
  existentes.
- A continuación se realizara una clasificación de estas con especial interés
+ A continuación se realizará una ordenación de estas con especial interés
  en las de clasificación supervisada.
  Por último se exponen artículos en los cuales se hace uso de técnicas de
  aprendizaje automático para la detección de ataques DDoS.
@@ -2050,8 +2035,8 @@ El objetivo de la clasificación dentro del aprendizaje automático consiste
  a medir.
  Dentro de los atributos o variables hay que distinguir entre los que aportan
  información y por otra parte, un único atributo que nos indica el estado
- de la instancia o clase como se ha indicado.
- 
+ de la instancia, que se denomina variable de clase.
+ La clase nos indica el tipo de la instancia.
 \begin_inset Newline newline
 \end_inset
 
@@ -2147,7 +2132,7 @@ key "aprendizajeAutomaticoSupervisado"
 
 \begin_layout Standard
 Con una definición más formal, en clasificación supervisada el conjunto
- de variagbles a considerar será 
+ de variables a considerar será 
 \begin_inset Formula $Y=X\:\bigcup\:\left\{ C\right\} $
 \end_inset
 
@@ -2167,8 +2152,8 @@ Con una definición más formal, en clasificación supervisada el conjunto
 
  y son los atributos o también llamados en este contexto, variables predictoras,
  inductoras o carecterísticas.
- El objetivo es poder describir la variable de clase en función de los atrigbuto
-s y poder calcular la probabilidad condicionada de la clase dada cualquier
+ El objetivo es poder describir la variable de clase en función de los atrigutos
+ y poder calcular la probabilidad condicionada de la clase dada cualquier
  combinación de los atributos, 
 \begin_inset Formula $p(C|X)$
 \end_inset
@@ -2207,7 +2192,7 @@ Clasificadores
 
 \begin_layout Standard
 Según la naturaleza de los problemas de clasificación supervisada han ido
- desarrollandose multitud de diferentres algoritmos, que aunque todos funcionan
+ desarrollandose multitud de diferentes algoritmos, que aunque todos funcionan
  bien globalmente, sobresalen en ciertos contexto en algunos aspectos como
  puede ser la precisión, la minimización del error de clasificación o la
  complejidad computacional entre otros.
@@ -2240,9 +2225,10 @@ key "Artificialneuralnetworks:fundamentalscomputingdesignandapplication"
 s de red más usuales por aquel entonces.
  Todo esto motivó que durante la década de los 70 el interés por las redes
  neuronales artificiales desapareciera casi por completo.
- Sin embargo, a partir de los años 80 los ordenadores más potentes resultantes
- del avance de la tecnología informática y el mejor conocimiento de la estructur
-a del cerebro humano provocaron un resurgimiento del interés por el tema.
+ Sin embargo, a partir de los años 80 la aparición del algoritmo de retropopagac
+ión y así como el avance de la tecnología informática y el mejor conocimiento
+ de la estructura del cerebro humano provocaron un resurgimiento del interés
+ por el tema.
  Una red neuronal consiste básicamente de una serie de unidades de proceso,
  también llamadas neuronas artificiales, relacionadas mediante unas conexiones
  ponderadas 
@@ -2264,11 +2250,11 @@ key "Artificialneuralnetworks:fundamentalscomputingdesignandapplication"
 \end_layout
 
 \begin_layout Itemize
-Árboles de decisión: surgen entorno a la décadas de los 50 y 60.
- Constan de la creacion de un modelo cuya representacion gráfica es una
+Árboles de decisión: surgen en torno a la décadas de los 50 y 60.
+ Constan de la creación de un modelo cuya representacion gráfica es una
  estructura de arbol, con nodos y aristas que permiten, haciendo uso de
- comprobaciones matemáticas permiten clasificar a partir de decisiones tomadas
- en base a los atributos de un conjunto de datos de entrenamiento 
+ comprobaciones matemáticas, clasificar a partir de decisiones tomadas en
+ base a los atributos de un conjunto de datos de entrenamiento 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Asurveyofcostsensitivedecisiontreeinductionalgorithms"
@@ -2280,9 +2266,9 @@ key "Asurveyofcostsensitivedecisiontreeinductionalgorithms"
  nodos.
  En caso negativo, se dice que es un nodo de decision o nodo hoja y de lo
  contrario se denomina nodo prueba o nodo de un atributo cualquiera.
- Los modelos de clasicacion basados en Arboles de Decision poseen una gran
- ventaja con respecto a otros algoritmos, ya que estan dotados de una estructura
- facil de interpretar y constituyen ecientes clasicadores.
+ Los modelos de clasificación basados en Arboles de Decisión poseen una
+ gran ventaja con respecto a otros algoritmos, ya que estan dotados de una
+ estructura facil de interpretar y constituyen eficientes clasificadores.
 \end_layout
 
 \begin_layout Itemize
@@ -2299,7 +2285,7 @@ key "ModelosBayesianosparalaclasificacinsupervisada.Aplicacionesalanlisisdedatos
  añade probabilidad.
  En los arboles de decisión cada nodo representaba una variable del conjunto
  de datos, pero en este caso las aristas que unen dos nodos representan
- una probabilidad entre los nodos, es decir variables.
+ una probabilidad entre variables.
  
 \end_layout
 
@@ -2381,7 +2367,7 @@ key "Computersystemsthatlearn:Classificationandprediction.Methodsfromstatisticsn
 
 \begin_layout Standard
 La precisión de un clasificador es la probabilidad con la que clasifica
- correctamente un caso seleccionado al azar, o también, lo podemos ver comom
+ correctamente un caso seleccionado al azar, o también, lo podemos ver como
  el número de casos clasificados correctamente entre el número total de
  elementos 
 \begin_inset CommandInset citation
@@ -2406,7 +2392,7 @@ precisión=\frac{número\:de\:aciertos}{número\:de\:casos}
 
 \begin_layout Standard
 Además de ser la medida más aceptada para la evaluación de un clasificador,
- la precisión es utiliza en algunos procedimientos para guiar la construcción
+ la precisión es utilizada en algunos procedimientos para guiar la construcción
  del clasificador, por ello vamos a exponer distintas formas de obtener
  su valor:
 \end_layout
@@ -2420,8 +2406,8 @@ Estimación por resustitución (resubstitution estimate) o error aparente:
 \begin_layout Itemize
 Holdout: se basa en partir del conjunto de datos aleatoriamente en dos.
  El cojunto de entrenamiento con el cual se construye el clasificador y
- el conjunto de prueba o validación usado para estimar la precisión del
- clasificador.
+ el conjunto de test o validación usado para estimar la precisión del clasificad
+or.
 \end_layout
 
 \begin_layout Itemize
@@ -2444,9 +2430,9 @@ key "Cross-validationchoiceandassessmentofstatisticalpredictions"
  Hacemos k particiones del conjunto de datos mutuamente excluyentes y de
  igual tamaño.
  k-1 conjuntos se utilizan para construir el clasificador y se valida con
- el conjunto restante.Este paso se efectúa k veces y la estimación de la
- precisión del clasificador se obtiene como la media de las k mediciones
- realizadas.
+ el conjunto restante.
+ Este paso se efectúa k veces y la estimación de la precisión del clasificador
+ se obtiene como la media de las k mediciones realizadas.
 \end_layout
 
 \begin_layout Itemize
@@ -2462,8 +2448,7 @@ key "Estimationoferrorratesindiscriminantanalysis"
  De esta forma los conjuntos de validación tienen un sólo caso y los de
  entrenamiento todos los casos menos ese en particular.
  Al tener que construir el clasificador tantas veces como casos tenga el
- conjunto de datos se hace bastante costoso en tiempo, a no ser que se pueda
- obtener una fórmula cerrada para el error.
+ conjunto de datos se hace bastante costoso en tiempo.
 \end_layout
 
 \begin_layout Itemize
@@ -2475,7 +2460,7 @@ key "ROCgraphs:Notesandpracticalconsiderationsforresearchers."
 \end_inset
 
 : para evaluar un clasificador de forma efectiva cuando se tiene conjuntos
- de datos con pocasmuestras se suele utilizar el método de dejar-uno-fuera.
+ de datos con pocas muestras se suele utilizar el método de dejar-uno-fuera.
  No obstante, con conjuntos pequeños de datos, suele mostrar una varianza
  alta.
  El bootstrapping (o bootstrap) es un método de remuestreo propuesto por
@@ -2486,9 +2471,16 @@ key "Bootstrapmethods:Anotherlookatthejackknife."
 
 \end_inset
 
-, donde para una muestra de tamñao n se genera el conjunto de entrenamiento
- con n casos mediante muestreo con reemplazamiento, es decir, cogemos un
- caso de forma aleatoria del conjunto d edatos para el conjunto de entrenamiento
+, donde para una muestra de tamaño 
+\begin_inset Formula $n$
+\end_inset
+
+ se genera el conjunto de entrenamiento con 
+\begin_inset Formula $n$
+\end_inset
+
+ casos mediante muestreo con reemplazamiento, es decir, cogemos un caso
+ de forma aleatoria del conjunto de datos para el conjunto de entrenamiento
  y lo volvemos a dejar en el cojunto de entrenamiento.
  El conjunto de test se genera cogiendo aquellos casos que no estén en el
  conjunto de entrenamiento.
@@ -2516,23 +2508,23 @@ reference "tab:Tipos-de-aciertos"
 \end_inset
 
  se pueden ver los distintos tipos.
- A partir de esta tabla se pueden obtener otras medidas de utilizada.
+ A partir de esta tabla se pueden obtener otras medidas de utilizadad.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="1.5cm">
+<column alignment="center" valignment="top" width="3cm">
+<column alignment="center" valignment="top" width="3cm">
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -2658,7 +2650,7 @@ name "tab:Tipos-de-aciertos"
 \end_layout
 
 \begin_layout Standard
-La sensibilidad es la capaciddad del clasificador para detectar a la clase
+La sensibilidad es la capacidad del clasificador para detectar a la clase
  positiva, la que más interesa.
  Se define como 
 \begin_inset CommandInset citation
@@ -2782,19 +2774,18 @@ Trabajos previos
 \begin_layout Standard
 Existen multitud de trabajos en los cuales se usan los clasificadores para
  detectar ataques DDoS.
- Entre estos trabajos se encuentra el de Gil y Poletto, en el que se supone
- que las tasas de paquetes entre dos son dispositivos son proporcionales
- durante el funcionamiento normal 
+ Entre estos trabajos se encuentra el de Gil y Poletto 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "MULTOPS:Adatastructureforbandwidthattackdetection"
 
 \end_inset
 
-.
+, en el que se supone que las tasas de paquetes entre dos son dispositivos
+ son proporcionales durante el funcionamiento normal .
  Este trabajo hace uso de una estructura de árbol dinámico conocido como
  Multi Level Tree for Online Packet Statistics (MULTOPS) para monitorear
- las tarifas de paquetes para cada dirección IP.
+ las tasas de paquetes para cada dirección IP.
  Wang y otros 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -2848,7 +2839,9 @@ key "DetectingDistributedDenialofServiceAttackusingKolmogorovcomplexitymetrics"
 \end_inset
 
  rastrearón las direcciones IP de origen y construyó Kolmogorov Complexity
- Metrics para identificar su aleatoriedad.
+ Metrics, una medida de la cantidad de recursos computacionales necesarios
+ para describir una cierta cantidad de información, para identificar su
+ aleatoriedad.
  De hecho, la aleatoriedad de las direcciones IP de origen es muy baja sin
  ningún ataque DDoS; De lo contrario, es muy alta en los ataques DDoS con
  direcciones IP de origen distribuidas aleatoriamente.
@@ -2906,10 +2899,10 @@ e de máquinas.
  para la detección de intrusiones.
  Los algoritmos basados en arboles de decisión han demostrado su eficacia
  en la predicción de las diferentes clases de los datos no etiquetados en
- el cojunto de datos de prueba para el concurso de detección de intrudos
+ el conjunto de datos de prueba para el concurso de detección de intrudos
  KDD 99.
  Los resultados experimentales demuestran que si bien las redes neuronales
- son muy existoas en la detección de ataques conocidos, los árboles de decisión
+ son muy exitoxas en la detección de ataques conocidos, los árboles de decisión
  son más capaces de detectar nuevos ataques 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -2940,18 +2933,17 @@ description "Learning Vector Quantization"
 
  para la detección de anomalías y a través de este método ellos podían mejorar
  la tasa de detección del sistema.
- Gumus y su equipo, presentarón una implementación adaptativa del algoritmo
- Naïve Bayes con pesos exponenciales para una media móvil y la desviación
- estándar 
+ Gumus y su equipo 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "OnlineNaiveBayesclassificationforNetworkIntrusionDetection"
 
 \end_inset
 
-.
+, presentarón una implementación adaptativa del algoritmo Naïve Bayes con
+ pesos exponenciales para una media móvil y la desviación estándar.
  También comparan las adaptaciones de varios algoritmos de aprendizaje automátic
-o en el conjunto de datos de detección de intrusos KDD 99.
+o en el conjunto de datos de detección de intrusiones KDD 99.
  
 \begin_inset Newline newline
 \end_inset
@@ -2978,16 +2970,8 @@ description "Adaptive Neuro-Fuzzy Systems"
 \end_inset
 
 .
- También merece la pena comentar el rendimiento mejorado del híbrido GA
- (Genetic Algorithm)
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "GA"
-description "Genetic Algorithm"
-
-\end_inset
-
- y ANN (
+ También merece la pena comentar el rendimiento mejorado del híbrido algoritmo
+ genético y ANN (
 \shape italic
 Artificial Neural Network
 \shape default
@@ -3052,10 +3036,11 @@ key "Comparativeanalysisofmachinelearningalgorithmsalongwithclassifiersfornetwor
 \end_inset
 
  donde se compara los algoritmos de aprendizaje automático en relación con
- la detección de ataques muestra todos los detalles y evaluaciónes.
- Este estudio resalta los arboles de decisión aleatorios (Random Forest)
- y las redes bayesianas como los candidatos adecuados para la dección de
- intrusiones basadas en el cojunto NSL-KDD.
+ la detección de ataques muestra todos los detalles y evaluaciones.
+ Este estudio resalta los Random Forest y las redes bayesianas como los
+ candidatos adecuados para la detección de intrusiones basadas en el conjunto
+ NSL-KDD (un conjunto de datos sugerido para resolver algunos de los problemas
+ inherentes del conjunto de datos KDD 99).
 \end_layout
 
 \end_body
