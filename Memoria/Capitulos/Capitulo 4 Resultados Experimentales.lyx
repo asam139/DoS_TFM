@@ -308,7 +308,7 @@ ping
  al broadcast falsificando su identidad para inundar un objetivo 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Fraggleattack"
+key "zargar2013survey"
 
 \end_inset
 
@@ -4785,7 +4785,7 @@ name "tab:Ranking-medio-prueba-friedman-tiempo"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
