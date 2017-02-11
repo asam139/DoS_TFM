@@ -180,11 +180,27 @@ key "AtaqueDDoS21Octubre"
 \end_inset
 
 .
- Como los ataques estaban dirigidos al Sistema de Nombres de Dominio (DNS),
- un sistema de nomenclatura jerárquico descentralizado para dispositivos
- conectados a redes IP como Internet o una red privada, muchas actividades
- cotidianas (como hacer compras online, interactuar en redes sociales y
- escuchar música) quedaron interrumpidas por ciertos períodos de tiempo.
+ Como los ataques estaban dirigidos al Sistema de Nombres de Dominio (DNS)
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+un sistema de nomenclatura jerárquico descentralizado para dispositivos
+ conectados a redes IP como Internet o una red privada.
+ Este sistema asocia información variada con nombre de dominio asignado
+ a cada uno de los participantes.
+ Su función más importante es "traducir" nombres inteligibles para las personas
+ en identificadores binarios asociados con los equipos conectados a la red,
+ esto con el propósito de poder localizar y direccionar estos equipos mundialmen
+te.
+\end_layout
+
+\end_inset
+
+ muchas actividades cotidianas (como hacer compras online, interactuar en
+ redes sociales y escuchar música) quedaron interrumpidas por ciertos períodos
+ de tiempo.
  Aunque la longitud de dichas interrupciones fue variable, en algunos casos
  se extendió por varias horas.
  
@@ -445,8 +461,8 @@ reference "chap:Conclusiones"
 
 \end_inset
 
- donde se comentan las conclusiones obtenidas a lo largo del trabajo y tendencia
-s futuras.
+ donde se comentan las conclusiones obtenidas a lo largo del trabajo y líneas
+ de trabajo futuras.
 \end_layout
 
 \end_body
