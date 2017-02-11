@@ -2014,9 +2014,10 @@ Aprendizaje Automático
 \end_layout
 
 \begin_layout Standard
-Dentro del aprendizaje automático, encontremos técnicas de clasificación
- que nos permiten agrupar muestras de acuerdo a criterios o métodos, estas
- técnicas son la clasificación supervisada y la no supervisada.
+Dentro del aprendizaje automático, encontramos múltiples técnicas que permiten
+ agrupar muestras de acuerdo a criterios o métodos.
+ El aprendizaje automático se divide en supervisado y no supervisado.
+ 
 \begin_inset Newline newline
 \end_inset
 
@@ -2024,19 +2025,26 @@ Dentro del aprendizaje automático, encontremos técnicas de clasificación
 \end_layout
 
 \begin_layout Standard
-El objetivo de la clasificación dentro del aprendizaje automático consiste
- en la asignación de un objeto o un fenómeno físico a una de las diversas
- categorías o clases especificadas (se hace referencia a clase como una
- agrupación de objetos que tiene características comunes, o mejor dicho
- como un sinónimo de categoría).
- Dado un conjuntos de datos, esté se estructura en instancias con sus atributos
- o variables.
- Los atributos no son mas que algún tipo de medida realizada sobre la instancia
- a medir.
- Dentro de los atributos o variables hay que distinguir entre los que aportan
- información y por otra parte, un único atributo que nos indica el estado
- de la instancia, que se denomina variable de clase.
- La clase nos indica el tipo de la instancia.
+En el aprendizaje supervisado 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "aprendizajeAutomaticoSupervisado"
+
+\end_inset
+
+, también denominado simplemente como clasificación, tenemos un conjunto
+ de variables (denominados atributos) que están etiquetados o clasificados
+ según una variable que se denomina clase, la cual indica el tipo de instancia.
+ En este caso se busca un modelo que, a partir, de un conjunto de valores
+ de los atributos le asigne su clase correspondiente.
+ Esto es lo que se denomina un clasificador.
+ Para construir el clasificador previamente le hemos tenido que pasar un
+ conjunto de datos correctamente etiquetado.
+ Por ejemplo, aprendemos un clasificador a partir de los datos de los clientes
+ de un banco y si han pagado sus hipotecas, de esta forma cuando nos llegue
+ un nuevo cliente a pedir una hipoteca el clasificador nos dirá si la va
+ a devolver o no.
+ 
 \begin_inset Newline newline
 \end_inset
 
@@ -2044,31 +2052,31 @@ El objetivo de la clasificación dentro del aprendizaje automático consiste
 \end_layout
 
 \begin_layout Standard
-Distinguiendo entre los dos tipos de técnicas, la diferencia reside en la
- información disponible en los conjuntos de datos con las que el sistema
- tiene que trabajar.
- en la clasificación supervisada se cuenta con un conocimiento a priori,
- es decir para la tarea de clasificar un objeto dentro de una categoría
- o clase contamos con modelos ya clasificados (objetos agrupados que tienen
- características comunes).
- Y por otra parte, la supervisada se distingue del aprendizaje supervisado
- por el hecho de que no hay un conocimiento a priori, es decir no se tiene
- el atributo de clase de los datos de entrenamiento.
- El aprendizaje no supervisado debido a que sería como una clasificación
- a ciegas, típicamente trata los objetos de entrada como un conjunto de
- variables aleatorias, siendo construido un modelo de densidad para el conjunto
- de datos 
+Por otro lado, en el aprendizaje no supervisado 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "UnsupervisedclassificationofmajordepressionusingfunctionalconnectivityMRI"
 
 \end_inset
 
-.
+., también denominado agrupamiento o 
+\shape italic
+clustering
+\shape default
+, sólo tenemos los datos de los distintos atributos sin etiquetar, es decir
+ no se tiene la variable de clase, por lo que no se tiene un conocimiento
+ a priori.
+ Y lo que se suele hacer es buscar relaciones entre los distintos casos
+ o agrupar casos con elementos comunes.
+ El aprendizaje no supervisado debido a que sería como una clasificación
+ a ciegas, típicamente trata los objetos de entrada como un conjunto de
+ variables aleatorias, siendo construido un modelo de densidad para el conjunto
+ de datos.
  Esto sería como formar grupos heterogéneos que compartan características
  y que permita a las nuevas instancias ser localizadas en uno de los grupos,
  es decir etiquetarlas.
- 
+ Por ejemplo, agrupar los clientes de un banco en base a los productos que
+ tiene contratado con el banco
 \begin_inset Newline newline
 \end_inset
 
@@ -2168,22 +2176,84 @@ Con una definición más formal, en clasificación supervisada el conjunto
 
 \begin_layout Standard
 Antes de proceder a comentar los tipos de clasificación es importante ver
- el procedimiento que se lleva acabo en toda tarea de clasificación.
- En nuestro caso, tenemos dos conjuntos de datos, el de entrenamiento y
- el de prueba.
- El primero de ellos contiene todos los atributos, los cuales son distintas
- medidas del tráfico de red y la variable de clase que nos indica si hay
- o no un ataque DDoS y qué tipo de ataque es.
- Cada instancia nos da el estado de la red en un intervalo de tiempo y que
- tipo de ataque se está produciendo con esas condiciones de red.
- Mientras que el de prueba no contiene el atributo de clase.
- De este modo el objetivo es obtener el atributo de clase para los datos
- de test de modo que cada instancia quede correctamente valorada.
- Para lograr esto existen una gran cantidad de algoritmos que serán los
- que creen un modelo a partir de los datos de entrenamiento y con el cual
- predecir el valor de la clase para cada instancia del conjunto de test
- y así medir la precisión.
+ el procedimiento que se lleva acabo para evaluar la tarea de clasificación.
+ En nuestro caso, la técnica usada es validación cruzada o 
+\shape italic
+cross-validation
+\shape default
  
+\begin_inset CommandInset citation
+LatexCommand citep
+key "devijver1982pattern"
+
+\end_inset
+
+.
+ Se trata de una técnica utilizada para evaluar los resultados de un análisis
+ estadístico y garantizar que son independientes de la partición entre datos
+ de entrenamiento y prueba.
+ Consiste en repetir y calcular la media aritmética obtenida de las medidas
+ de evaluación sobre diferentes particiones.
+ Se utiliza en entornos donde el objetivo principal es la predicción y se
+ quiere estimar cómo de preciso es un modelo que se llevará a cabo a la
+ práctica.
+ Y por lo tanto es una técnica muy utilizada en proyectos de inteligencia
+ artificial para validar modelos generados.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De entre los tipos de validación cruzada el más utilizado la de 
+\shape italic
+K
+\shape default
+ iteraciones o 
+\shape italic
+K-fold cross-validation 
+\shape default
+los datos de muestra se dividen en 
+\shape italic
+K
+\shape default
+ subconjuntos.
+ Uno de los subconjuntos se utiliza como datos de prueba y el resto (
+\shape italic
+K-1
+\shape default
+) como datos de entrenamiento.
+ El proceso de validación cruzada es repetido durante 
+\shape italic
+k
+\shape default
+ iteraciones, con cada uno de los posibles subconjuntos de datos de prueba.
+ Finalmente se realiza la media aritmética de los resultados de cada iteración
+ para obtener un único resultado.
+ Este método es muy preciso puesto que evaluamos a partir de 
+\shape italic
+K
+\shape default
+ combinaciones de datos de entrenamiento y de prueba.
+ En la práctica, la elección del número de iteraciones depende de la medida
+ del conjunto de datos.
+ Lo más común es utilizar la validación cruzada de 10 iteraciones (10-fold
+ cross-validation) 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "refaeilzadeh2009cross"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "joanneum2005cross"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
