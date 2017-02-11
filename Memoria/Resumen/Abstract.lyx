@@ -105,7 +105,7 @@ Palabras Clave
 \end_layout
 
 \begin_layout Standard
-DDoS, Aprendizaje Automático, Clasificadores, Arboles de decisión credal
+DDoS, Aprendizaje Automático, Clasificadores, Arboles de decisión credales
  (CDTs).
 \begin_inset Newline newline
 \end_inset
@@ -169,8 +169,8 @@ La base de datos utilizada se denomina KDD Cup 1999, una pequeña selección
  De esta base de datos se han estudiado cuatro casos para ver los diferentes
  comportamientos de los algoritmos.
  Los resultados experimentales de los distintos algoritmos se han realizado
- con su implementación en el programa WEKA, una plataforma software para
- el aprendizaje automático y minería de datos.
+ en el programa WEKA, una plataforma software para el aprendizaje automático
+ y minería de datos.
  Para la evaluación se mide la precisión de los algoritmos así como el tiempo
  que han tardado en ejecutarse, además se realizan diferentes pruebas para
  su comparación.

@@ -146,13 +146,12 @@ Network security has become one of the most important factors to consider
 
 \begin_layout Standard
 Traffic patterns exhibited by traffic that includes DDoS attacks can be
- effectively captured by automatic learning algorithms such as decision
- trees, bayesian networks and neural networks.
+ effectively captured by machine learning algorithms.
  This paper explains in detail the different DDoS attacks as well as current
  detection mechanisms.
  Subsequently its main objective is to be able to give an evaluation and
  classification of some of the supervised learning algorithms with the aim
- of reducing errors and time while maintaining the detection precision.
+ of reducing errors and time while maintaining the detection accuracy.
  As a novelty, credal decision trees or CDTs are added to study their behavior
  against the detection of DDoS attacks.
 \begin_inset Newline newline
@@ -167,7 +166,7 @@ The database used is called KDD Cup 1999, a small selection of the data
  From this database, four cases have been studied to see the different behaviors
  of the algorithms.
  The simulations of the algorithms have been carried out with their implementati
-on in the WEKA program, a software platform for automatic learning and data
+on in the WEKA program, a software platform for machine learning and data
  mining.
  For the evaluation the accuracy of the algorithms is measured as well as
  the time that they have taken to execute.
