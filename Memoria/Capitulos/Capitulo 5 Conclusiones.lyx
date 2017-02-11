@@ -104,7 +104,7 @@ reference "chap:Estado-del-Arte"
  mantenido de forma constante.
  Debido a la naturaleza de este tipo de ataques,  que una herramienta ayude
  al experto en seguridad para detectar los patrones de este tipo de ataques
- de forma automática es muy valioso para mejorar la rápidez de actuación.
+ de forma automática es muy valioso para mejorar la rapidez de actuación.
  
 \begin_inset Newline newline
 \end_inset
@@ -129,11 +129,11 @@ Líneas de trabajo futuras
 \end_layout
 
 \begin_layout Standard
-En un futuro próximo (corto a medio plazo) habría que constrastar los experiment
-os realizados en este trabajo con muchas más bases de datos de ataques DDoS,
+En un futuro próximo (corto a medio plazo) habría que contrastar los experimento
+s realizados en este trabajo con muchas más bases de datos de ataques DDoS,
  ya sean sintéticas o si provienen de ataques llevados acabo en el mundo
  real muchísimo mejor.
- Otra línea de investigación seríaextraer reglas de los arboles de decisión
+ Otra línea de investigación sería extraer reglas de los arboles de decisión
  y analizar que reconoce los patrones reales de ataques DDoS.
  Y a largo plazo me gustaría crear un prototipo de IDS a partir de los patrones
  encontrados para probar su funcionamiento en entornos reales.
