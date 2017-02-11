@@ -2186,7 +2186,7 @@ num_outbound_cmds
 \begin_layout Plain Layout
 
 \size tiny
-Número de comandos de salida en un sesión ftp
+Número de comandos de salida en un sessión ftp
 \end_layout
 
 \end_inset
@@ -2813,8 +2813,8 @@ Para la evaluación, a partir de los datos se han creado dos conjuntos de
  El primero de ellos se han unido los ataques no DDoS y el flujo normal
  de red y se diferencian los distintos ataques de DDoS.
  Y un segundo conjunto de datos, donde las instancias están clasificadas
- como ataque DDoS (genérico) u otro tipo de situación.
- Por tanto, tenemos un conjunto de datos con varias clases y otro dicotómico,
+ como ataque DDoS (génerico) u otro tipo de situación.
+ Por tanto, tenemos un cojunto de datos con varias clases y otro dicotómico,
  es decir dos clases.
 \end_layout
 
@@ -2913,7 +2913,7 @@ Contiene una extensa colección de técnicas para preprocesamiento de datos
 \end_layout
 
 \begin_layout Itemize
-Es fácil de utilizar por alguien inexperto gracias a su interfaz gráfica
+Es fácil de utilizar por alguién inexperto gracias a su interfaz gráfica
  de usuario.
 \end_layout
 
@@ -2959,7 +2959,7 @@ En la tabla se muestra las características del equipo sobre el cual se han
  Xeon(R) E5645 2.40GHz, cada uno con 6 núcleos y hasta 12 procesos y 32GB
  de memoria.
  No obstante, WEKA no está preparado para trabajar en paralelo y, por tanto
- cada experimento usaba un sólo proceso y por ello no lo suficiente para
+ cada experimiento usaba un sólo proceso y por ello no lo suficiente para
  ejecutar algunos de los algoritmos.
  Para tardar menos se realizaron los experimentos para cada clasificador
  por separado.
@@ -3120,7 +3120,7 @@ Estudio de la efectividad de las predicciones de trayectorias frente a las
 \end_layout
 
 \begin_layout Standard
-Como se ha comentado el software que se ha usado para la experimentación
+Como se ha comentado el software que se ha usado para la experimientación
  ha sido WEKA.
  Se han utilizado las implementaciones de C4.5, Naïve Bayes, SVM y MLP que
  WEKA incluye.
@@ -3204,7 +3204,7 @@ key "AnIntroductiontoVariableandFeatureSelection"
  hacer el FSS y luego se ha validado el clasificador.
  Para la selección de atributos es importante señalar que aplicar FSS sobre
  todos los datos y luego hacer la validación cruzada es un error en el que
- muchos autores caen, pues están usando el conjunto de datos de entrenamiento
+ muchos autores caen, pues están usando el cojunto de datos de entrenamiento
  para la FSS, y eso es erróneo.
 \begin_inset Newline newline
 \end_inset
@@ -3227,8 +3227,8 @@ weka.classifiers.meta.AttributeSelectedClassifier
  El meta-clasificador toma un algoritmo de búsqueda y un evaluador junto
  al clasificador base.
  Esto hace que el proceso de selección de atributos sea completamente transparen
-te y el clasificador reciba sólo el conjunto de datos reducido.
- El evaluador o método de selección que se ha utilizado es el 
+te y el clasificador reciba sólo el cojunto de datos reducido.
+ El evaluador o método de selección que se ha utilziado es el 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3244,11 +3244,11 @@ key "Correlation-basedFeatureSubsetSelectionforMachineLearning"
 \end_inset
 
 .
- Este método evalúa el valor de un subconjunto de atributos considerando
+ Este método evalúa el valor de un subcojunto de atributos considerando
  la capacidad predictiva invividual de cada característica junto con el
  grado de redundancia entre ellos.
- Son preferidos los subconjuntos de atributos que están altamente correlacionado
-s con la clase mientras tiene una baja intercorrelación.
+ Son preferidos los subcojuntos de atributos que estan altamente correlacionados
+ con la clase mientras tiene una baja intercorrelación.
  Por tanto, hemos realizado dos estudios sin FSS usando la base de datos
  con clase dicotómica (o dos clases) y otro con multiclase, y otros dos
  estudios incorporando FSS, de la forma explicada, con ambas bases de datos.
@@ -4373,7 +4373,7 @@ name "tab:Área-bajo-la-curva-para-cada-clasificador-usando-la-base-datos-con-cl
 \end_layout
 
 \begin_layout Standard
-Siguiendo las recomendaciones de Demšar 
+Siguiento las recomendaciones de Demšar 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Statisticalcomparisonsofclassifiersovermultipledatasets"
@@ -4483,8 +4483,8 @@ s si el correspondiente p-valor es menor o igual que 0.006667 para la precisión
 \begin_layout Standard
 El test de Friedman indica que los mejores en precisión son el CDT y J48,
  y en cuanto a tiempo el CDT y el NB.
- Como se puede apreciar para el test Nemenyi para la precisión no hay diferencia
-s significativas para entre el [J48, SVM], [J48, MLP] y [CDT, SVM].
+ Como se puede apreciar para el test Nemeny para la precisión no hay diferencias
+ significativas para entre el [J48, SVM], [J48, MLP] y [CDT, SVM].
  Y en cuanto al tiempo solamente entre el [NB, LogR].
  En general los resultados son buenos pero los resultados en algunos casos
  no son estadísticamente significativos según Nemenyi.
