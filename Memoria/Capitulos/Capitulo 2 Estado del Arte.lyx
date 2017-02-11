@@ -2238,8 +2238,11 @@ K
  combinaciones de datos de entrenamiento y de prueba.
  En la práctica, la elección del número de iteraciones depende de la medida
  del conjunto de datos.
- Lo más común es utilizar la validación cruzada de 10 iteraciones (10-fold
- cross-validation) 
+ Lo más común es utilizar la validación cruzada de 10 iteraciones (
+\shape italic
+10-fold cross-validation
+\shape default
+) 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "refaeilzadeh2009cross"
