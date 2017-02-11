@@ -93,14 +93,12 @@ En este capítulo se detallará la base de datos sobre la que se va a realizar
  Posteriormente se comentará el programa usado con el cual se han ejecutado
  los diferentes clasificadores así como todos las variaciones y pruebas
  que se han realizado.
- Y por último se procede a la evaluación de los distintos clasificadores
- objeto de estudio.
- En primer lugar se define el entorno empleado para la realización de las
- pruebas, el equipo usado.
- Y para acabar se exponen en que consisten las distintas pruebas.
+ A continuación se exponen en que consisten las distintas pruebas.
  Para cada prueba se indicará las modificaciones realizadas al escenario
  original y a continuación se mostrarán los resultados obtenidos.
- 
+ Y por último se define el entorno empleado para la realización de las pruebas
+ y se procede a la evaluación de los distintos clasificadores objeto de
+ estudio.
 \end_layout
 
 \begin_layout Section
@@ -353,7 +351,7 @@ key "CERTAdvisoryCA-1997-28IPDenial-of-ServiceAttacks"
 
 .
  Esto puede bloquear varios sistemas operativos debido a un error en su
- código de re-ensamblaje de fragmentación TCP / IP.
+ código de re-ensamblaje de fragmentación TCP/IP.
  Uno de los campos de la cabecera IP es el campo 
 \shape italic
 fragment offset
@@ -379,7 +377,7 @@ s que no son objeto de nuestro estudio y, por tanto, vamos a limitarnos
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -856,7 +854,7 @@ name "tab:tiposDeAtaque_KDD_1"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -1356,7 +1354,7 @@ reference "tab:atributosConVentana2segundos"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -1755,7 +1753,7 @@ name "tab:atributosBasicosConexionesTCP"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2318,7 +2316,7 @@ name "tab:atributosEspeciales"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2815,7 +2813,7 @@ Para la evaluación, a partir de los datos se han creado dos conjuntos de
  Y un segundo conjunto de datos, donde las instancias están clasificadas
  como ataque DDoS (genérico) u otro tipo de situación.
  Por tanto, tenemos un conjunto de datos con varias clases y otro dicotómico,
- es decir dos clases.
+ es decir con dos clases.
 \end_layout
 
 \begin_layout Section
@@ -2825,7 +2823,7 @@ Herramienta: Weka
 \begin_layout Standard
 Para usar los diferentes tipos de clasificadores del trabajo, se ha utilizado
  su implementación por defecto en Waikato Environment for Knowledge Analysis
- ( WEKA )
+ (WEKA)
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "WEKA"
@@ -2931,7 +2929,7 @@ Weka soporta varias tareas estándar de minería de datos, más específicamente
  de base de datos.
  No es capaz de minería de datos multi-relacional, pero hay software separado
  para convertir una colección de tablas de base de datos enlazadas en una
- sola tabla que es adecuada para procesar usando Weka
+ sola tabla que es adecuada para procesar usando Weka 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "DataMining:Practicalmachinelearningtoolsandtechniques2ndEdition"
@@ -2959,8 +2957,7 @@ En la tabla se muestra las características del equipo sobre el cual se han
  Xeon(R) E5645 2.40GHz, cada uno con 6 núcleos y hasta 12 procesos y 32GB
  de memoria.
  No obstante, WEKA no está preparado para trabajar en paralelo y, por tanto
- cada experimento usaba un sólo proceso y por ello no lo suficiente para
- ejecutar algunos de los algoritmos.
+ cada experimento usaba un sólo proceso.
  Para tardar menos se realizaron los experimentos para cada clasificador
  por separado.
 \end_layout
@@ -3161,9 +3158,9 @@ otros
 
 \begin_layout Enumerate
 En el segundo estudio se han mantenido separadas las clases de los diferentes
- ataques DDoS y se ha fusionado el resto, es decir, el resto de ataques
+ ataques DDoS y se han fusionado el resto, es decir, el resto de ataques
  y el flujo normal.
- Por tanto obtenemos unas variables clase con 7 valores, 6 tipos de ataques
+ Por tanto obtenemos una variable clase con 7 valores, 6 tipos de ataques
  DDoS y 
 \begin_inset Quotes eld
 \end_inset
@@ -3177,8 +3174,8 @@ otros
 \end_layout
 
 \begin_layout Standard
-A los dos estudios básicos se ha considerado por otro hacer una selección
- de atributos o en inglés, 
+A los dos estudios básicos se ha considerado hacer una selección de atributos
+ o en inglés, 
 \shape italic
 Feature Subset Selection
 \shape default
@@ -3198,7 +3195,8 @@ key "AnIntroductiontoVariableandFeatureSelection"
 \end_inset
 
 , para reducir la dimensionalidad de los datos como han hecho otros autores
- en distintos trabajos.De este modo obtenemos un total de cuatro estudios.
+ en distintos trabajos.
+ De este modo obtenemos un total de cuatro estudios.
  No obstante, aquí no se ha utilizado el conjunto de datos completo para
  hacer el FSS y luego se ha validado el clasificador.
  Para la selección de atributos es importante señalar que aplicar FSS sobre
@@ -3269,7 +3267,7 @@ En cuanto a la configuración que se ha tomado para los clasificadores ha
 \begin_inset Formula $s=1$
 \end_inset
 
-(ver sección 
+ (ver sección 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Credal-Decision-Trees"
