@@ -115,7 +115,7 @@ Algoritmo C4.5
 \end_layout
 
 \begin_layout Standard
-Es un algoritmo usado para genera un árbol de decisión desarrollado por
+Es un algoritmo usado para generar un árbol de decisión desarrollado por
  Ross Quinlan 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -126,7 +126,7 @@ key "ProgramsForMachineLearning"
 .
  Se trata de una extensión del algoritmo ID3 también presentado anteriormente
  por Quinlan.
- Aunque los arboles de decisión que este algoritmo genera tienen múltiples
+ Aunque los árboles de decisión que este algoritmo genera tienen múltiples
  aplicaciones una de las más importantes es como clasificador.
  El J48 es una implementación de código abierto en WEKA en el lenguaje de
  programación Java.
@@ -413,7 +413,7 @@ representa la probabilidad condicionada de que
 \begin_inset Formula $X=x_{j}$
 \end_inset
 
-en 
+ en 
 \begin_inset Formula $D$
 \end_inset
 
@@ -551,9 +551,9 @@ stica particular es independiente del valor de cualquier otra característica
 \begin_layout Standard
 Para algunos tipos de modelos de probabilidad, los clasificadores ingenuos
  de Bayes pueden ser entrenados de manera muy eficiente en un entorno de
- aprendizaje supervisado .
+ aprendizaje supervisado.
  En muchas aplicaciones prácticas, la estimación de parámetros para modelos
- ingenuos de Bayes utiliza el método de máxima verosimilitud; En otras palabras,
+ ingenuos de Bayes utiliza el método de máxima verosimilitud; en otras palabras,
  se puede trabajar con él sin aceptar la probabilidad bayesiana o usar cualquier
  método bayesiano.
 \begin_inset Newline newline
@@ -906,8 +906,8 @@ key "Theregressionanalysisofbinarysequenceswithdiscussion"
 
 .
  El modelo logístico binario se utiliza para estimar la probabilidad de
- una respuesta binaria basada en una o más variables predictor (o independientes
-) (características).
+ una respuesta binaria basada en una o más variables predictoras (o independient
+es) (características).
  Permite decir que la presencia de un factor de riesgo aumenta la probabilidad
  de un determinado resultado por un porcentaje específico.
 \begin_inset Newline newline
@@ -1110,13 +1110,14 @@ key "cortes1995support"
 \end_inset
 
  propusieron la actual encarnación estándar (margen blando) en 1993 y se
- publicaron en 1995.
+ publicaron en 1995 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AnIntroductiontoSupportVectorMachinesandotherkernel-basedlearningmethods"
 
 \end_inset
 
+.
  También han sido utilizados en más campos con éxito, tales como visión
  artificial, reconocimiento de caracteres, categorización de texto e hipertexto,
  clasificación de proteínas, análisis de series temporales.
@@ -1151,7 +1152,7 @@ key "boser1992training"
 \end_layout
 
 \begin_layout Standard
-Mientras la mayoría de los método de aprendizaje se centran en minimizar
+Mientras la mayoría de los métodos de aprendizaje se centran en minimizar
  los errores cometidos por el modelo generado a partir de los ejemplos de
  entrenamiento (error empírico), el sesgo inductivo asociado a las SVMs
  radica en la minimización del denominado riesgo estructural.
@@ -1341,7 +1342,7 @@ Por geometría, se sabe que la distancia entre un hiperplano de separación
 \begin_inset Formula $\text{x'}$
 \end_inset
 
-viene dada por:
+ viene dada por:
 \end_layout
 
 \begin_layout Standard
@@ -1360,7 +1361,7 @@ siendo
 \begin_inset Formula $w$
 \end_inset
 
-el vector que, junto con el parámetro 
+ el vector que, junto con el parámetro 
 \begin_inset Formula $b$
 \end_inset
 
@@ -1481,7 +1482,7 @@ key "LearninginternalRepresentationsbyErrorPropagation"
  MLP utiliza una técnica de aprendizaje supervisado llamada backpropagation
  para entrenar la red.
  MLP es una modificación del perceptrón lineal estándar y puede distinguir
- datos que no son linealmente separables
+ datos que no son linealmente separables 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Approximationbysuperpositionsofasigmoidalfunction"
@@ -1549,7 +1550,7 @@ key "lecun2015deep"
 \end_layout
 
 \begin_layout Subsection
-Credal Decision Trees (CDT
+Credal Decision Tree (CDT
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "CDT"
@@ -1568,7 +1569,7 @@ name "subsec:Credal-Decision-Trees"
 \end_layout
 
 \begin_layout Standard
-El Credal Decision Trees es un árbol de decisión desarrollado por Abellán
+El Credal Decision Tree es un árbol de decisión desarrollado por Abellán
  y Moral 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1583,7 +1584,7 @@ key "Inferencesfrommultinomialdatalearningaboutabagofmarbles"
 
 \end_inset
 
-, conocido por Imprecise Dirichlet Model (IDM
+, conocido por Modelo Impreciso de Dirichlet (IDM
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "IDM"
@@ -1602,13 +1603,6 @@ des imprecisas y medidas de incertidumbre en conjuntos credales, es decir
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Baggingschemesonthepresenceofnoiseinclassification,Analysisandextensionofdecisiontreesbasedonimpreciseprobabilities:applicationonnoisydata"
-
-\end_inset
-
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Analysisandextensionofdecisiontreesbasedonimpreciseprobabilities:applicationonnoisydata"
 
 \end_inset
 
@@ -1695,7 +1689,7 @@ el tamaño de la muestra y
 \begin_inset Formula $s$
 \end_inset
 
- hiperparámetro dado.
+ un hiperparámetro dado.
 \begin_inset Newline newline
 \end_inset
 
@@ -1731,8 +1725,8 @@ K(Z)=\left\{ p|p(z_{j})\epsilon\left[\frac{n_{z_{j}}}{N+s},\frac{n_{z_{j}}+s}{N+
 
 \begin_layout Standard
 En este tipo de conjuntos, pueden ser aplicadas medidas imprecisas.
- El procedimiento para construir CDTs utiliza la función máxima de entropía
- en el conjunto de credales definido anteriormente.
+ El procedimiento para construir CDTs utiliza la función de máxima entropía
+ en el conjunto de credal definido anteriormente.
  Esta función denominada como 
 \begin_inset Formula $H*$
 \end_inset
@@ -1770,15 +1764,7 @@ key "UncertaintymeasuresonprobabilityintervalsfromImpreciseDirichletmodel"
 \begin_inset Formula $H*$
 \end_inset
 
- en el IDM (Walley’s Imprecise Dirichlet Model
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "IDM"
-description "Walley’s Imprecise Dirichlet Model"
-
-\end_inset
-
-) alcanza su coste mas bajo para 
+ en el IDM alcanza su coste mas bajo para 
 \begin_inset Formula $s\leq1$
 \end_inset
 
@@ -1796,7 +1782,7 @@ En este modelo la Ganancia de Información Imprecisa es:
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-IID(C,X)=H*(K(Z))-{\displaystyle \sum_{i}}P(X=x_{i})H*(K(Z|X=x_{i}))
+IIG(C,X)=H*(K(Z))-{\displaystyle \sum_{i}}P(X=x_{i})H*(K(Z|X=x_{i}))
 \end{equation}
 
 \end_inset
@@ -1836,7 +1822,7 @@ en el cual
 \begin_inset Newline newline
 \end_inset
 
-s
+
 \end_layout
 
 \begin_layout Standard
