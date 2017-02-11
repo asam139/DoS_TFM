@@ -343,7 +343,7 @@ En ID3 y posteriormente en C4.5, Quinlan hace una representación intuitiva
  de los árboles de clasificación, donde cada nodo se puede ver como una
  fuente de información de memoria nula, cuyo alfabeto tiene tantos símbolos
  como clases.
- Cada nodo al tener almacenado un subcojunto de casos del conjunto de datos,
+ Cada nodo al tener almacenado un subconjunto de casos del conjunto de datos,
  guarda una información media sobre las clases de esos casos.
 \begin_inset Newline newline
 \end_inset
@@ -353,7 +353,7 @@ En ID3 y posteriormente en C4.5, Quinlan hace una representación intuitiva
 
 \begin_layout Standard
 En ID3, el mejor atributo X para ramificar el árbol dado el conjunto de
- datos D, es aquel qeu maximiza la ganancia de información.
+ datos D, es aquel que maximiza la ganancia de información.
  Para calcular la ganancia de cada atributo se realizan los siguientes pasos:
 \end_layout
 
@@ -492,7 +492,7 @@ La prueba basada en el criterio de máxima ganancia, tiende a escoger aquellas
  variables con mayor número de valores.
  Esto es debido a que cuantas más particiones se hagan debido a los valores
  de la variable, la entropía de un nuevo nodo será, normalmente menor.
- En C4.5 se utilza la razón de ganancia para paliar esta tendencia.
+ En C4.5 se utiliza la razón de ganancia para paliar esta tendencia.
 \begin_inset Newline newline
 \end_inset
 
@@ -730,7 +730,7 @@ p(C,F_{1},...,F_{n})=p(C)p(F_{1}|C)p(F_{2}|C)p(F_{3}|C)...=p(C)\prod_{i=1}^{n}p(
 
 \begin_layout Standard
 Esto significa que haciendo estas asunciones, la distribución condicional
- sobre la variable clasificaroria C puede expresarse de la siguiente manera
+ sobre la variable clasificatoria C puede expresarse de la siguiente manera
  
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -771,7 +771,7 @@ donde
 
 Hasta ahora se ha desarrollado el modelo de probabilidad de Bayes.
  Pero el clasificador combina este modelo junto con la regla de decisión.
- Una regla común es escoger la hípotesís mas probable; esto se conoce como
+ Una regla común es escoger la hipótesis mas probable; esto se conoce como
  el máximo a posteriori o regla de decisión MAP (
 \shape italic
 Maximum a Posteriori Probability
@@ -880,8 +880,8 @@ La variable solo puede tener dos valores, es decir sólo dos valores
 \begin_inset Quotes erd
 \end_inset
 
-, se denomina regresión lógistica binaria, la cual se explicará.
- En cambio si puede tener más ya se de habla de regresión lógistica multinomial.
+, se denomina regresión logística binaria, la cual se explicará.
+ En cambio si puede tener más ya se de habla de regresión logística multinomial.
 \begin_inset Newline newline
 \end_inset
 
@@ -1004,7 +1004,7 @@ t=\beta_{0}+\beta_{1}x
 \end_layout
 
 \begin_layout Standard
-Y la función lógistica ahora se puede escribir como:
+Y la función logística ahora se puede escribir como:
 \end_layout
 
 \begin_layout Standard
@@ -1093,7 +1093,7 @@ key "AnIntroductiontoSupportVectorMachinesandotherkernel-basedlearningmethods"
 , máquinas de vectores de soporte o máquinas de vector soporte (Support
  Vector Machines, SVMs) son un conjunto de algoritmos pensados para resolver
  problemas de clasificación binaria, actualmente se utilizan para resolver
- otros tipos de probleamas (regresión, agrupamiento, multiclasificación)
+ otros tipos de problemas (regresión, agrupamiento, multiclasificación)
  desarrollados por Vladimir N.
  Vapnik y Alexey Ya.
  Chervonenkis en 1963.
@@ -1138,8 +1138,8 @@ key "boser1992training"
 \end_inset
 
 , puesto que inducen separadores lineales o hiperplanos, ya sea en el espacio
- original de los ejemplos de entrada, si éstos son separabales o cuasi-separable
-s (ruido), o en un espacio transformado (espacio de características), si
+ original de los ejemplos de entrada, si éstos son separables o cuasi-separables
+ (ruido), o en un espacio transformado (espacio de características), si
  los ejemplos no son separables linealmente en el espacio original.
  Como se verá más adelante, la búsqueda del hiperplano de separación en
  estos espacios transformados, normalmente de muy alta dimensión, se hará
@@ -1151,15 +1151,15 @@ s (ruido), o en un espacio transformado (espacio de características), si
 \end_layout
 
 \begin_layout Standard
-Mientras la mayoría de los método de aprendizaje se centran en minimzar
+Mientras la mayoría de los método de aprendizaje se centran en minimizar
  los errores cometidos por el modelo generado a partir de los ejemplos de
  entrenamiento (error empírico), el sesgo inductivo asociado a las SVMs
  radica en la minimización del denominado riesgo estructural.
- La idea es seleccionar un hiperplano de separación qeu equidista de los
+ La idea es seleccionar un hiperplano de separación que equidista de los
  ejemplos más cercano de cada clase para, de esta forma, conseguir lo que
  se denomina un margen máximo a cada lado del hiperplano.
  Además, a la hora de definir el hiperplano, sólo se consideran los ejemplos
- de entrenamiento de cada clase qeu caen justo en la frontera de dichos
+ de entrenamiento de cada clase que caen justo en la frontera de dichos
  márgenes.
  Estos ejemplos reciben el nombre de vectores soporte.
  Desde un punto de vista práctico, el hiperplano separador de margen máximo
@@ -1198,7 +1198,7 @@ reference "fig:Hiperplanos-de-separación"
 
 \end_inset
 
-) como una función lineal que es capaz de separa dicho cojunto sin error:
+) como una función lineal que es capaz de separa dicho conjunto sin error:
 \end_layout
 
 \begin_layout Standard
@@ -1256,7 +1256,7 @@ reference "fig:Hiperplanos-de-separación"
 \end_inset
 
 , el hiperplano que permite separar los ejemplos no es único, es decir,
- existen infinitos hiperplanos separables, representados por todos aquellols
+ existen infinitos hiperplanos separables, representados por todos aquellos
  hiperplanos que son capaces de cumplir las restricciones impuestas.
  Surge entonces la pregunta de cual de ellos es el óptimo.
  Para ello, primero se define el concepto de margen de un hiperplano de
@@ -1360,7 +1360,7 @@ siendo
 \begin_inset Formula $w$
 \end_inset
 
-el vector que, junto con el parámetor 
+el vector que, junto con el parámetro 
 \begin_inset Formula $b$
 \end_inset
 
@@ -1441,7 +1441,7 @@ key "boser1992training"
 \begin_inset Formula $\left\Vert w\right\Vert $
 \end_inset
 
-y, además, está sujeto a la restricción, junto con límitación impuesta.
+y, además, está sujeto a la restricción, junto con limitación impuesta.
 \end_layout
 
 \begin_layout Subsection
@@ -1449,7 +1449,7 @@ Perceptrón multicapa
 \end_layout
 
 \begin_layout Standard
-Un perceptron de múltiples capas (MLP 
+Un perceptrón de múltiples capas (MLP 
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "MLP"
@@ -1480,7 +1480,7 @@ key "LearninginternalRepresentationsbyErrorPropagation"
  de procesamiento ) con una función de activación no lineal.
  MLP utiliza una técnica de aprendizaje supervisado llamada backpropagation
  para entrenar la red.
- MLP es una modificación del perceptron lineal estándar y puede distinguir
+ MLP es una modificación del perceptrón lineal estándar y puede distinguir
  datos que no son linealmente separables
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1598,7 +1598,7 @@ des imprecisas y medidas de incertidumbre en conjuntos credales, es decir
  De esta manera, este algoritmo considera que el conjunto de entrenamiento
  no es confiable cuando se lleva a cabo el proceso de selección de variables.
  Este método obtiene buenos resultados experimentales, especialmente cuando
- se clasifican datos ruidodos 
+ se clasifican datos ruidosos 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Baggingschemesonthepresenceofnoiseinclassification,Analysisandextensionofdecisiontreesbasedonimpreciseprobabilities:applicationonnoisydata"
@@ -1640,7 +1640,7 @@ key "Buildingclassificationtreesusingthetotaluncertaintycriterion"
 \end_inset
 
 .
- Supongamos una distribuición de probabilidad 
+ Supongamos una distribución de probabilidad 
 \begin_inset Formula $p(zj),j=1,...,k$
 \end_inset
 
@@ -1703,7 +1703,7 @@ el tamaño de la muestra y
 \end_layout
 
 \begin_layout Standard
-Este tipo de reperesentación ofrece un tipo específico de conjunto credal
+Este tipo de representación ofrece un tipo específico de conjunto credal
  en la variable 
 \begin_inset Formula $Z,K(Z)$
 \end_inset
@@ -1731,8 +1731,8 @@ K(Z)=\left\{ p|p(z_{j})\epsilon\left[\frac{n_{z_{j}}}{N+s},\frac{n_{z_{j}}+s}{N+
 
 \begin_layout Standard
 En este tipo de conjuntos, pueden ser aplicadas medidas imprecisas.
- El procedimiento para construir CDTs utilza la función máxima de entropía
- en el cojunto de credales definido anteriormente.
+ El procedimiento para construir CDTs utiliza la función máxima de entropía
+ en el conjunto de credales definido anteriormente.
  Esta función denominada como 
 \begin_inset Formula $H*$
 \end_inset
@@ -1818,12 +1818,12 @@ en el cual
 \end_inset
 
 , respectivamente.
- Estos ultimos conjuntos se obtienen gracias al Modelo de Dirichlet Impreciso
+ Estos últimos conjuntos se obtienen gracias al Modelo de Dirichlet Impreciso
  tanto para la variable clase 
 \begin_inset Formula $Z$
 \end_inset
 
- como para la misma condicionada al valor del atributo i-esimo 
+ como para la misma condicionada al valor del atributo i-eximo 
 \begin_inset Formula $(Z|X=x_{i})$
 \end_inset
 
@@ -1832,7 +1832,7 @@ en el cual
 \begin_inset Formula $P(X=x_{i})\nabla i=1,...,n$
 \end_inset
 
- denota la distribucion de probabilidad precisa correspondiente.
+ denota la distribución de probabilidad precisa correspondiente.
 \begin_inset Newline newline
 \end_inset
 
