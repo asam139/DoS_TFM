@@ -101,7 +101,7 @@ reference "chap:Introducción"
  de DDoS así como las contramedidas existentes basándonos en dónde y cuándo
  se previenen, detectan y responden a los ataques de DDoS.
  La principal intención con este capítulo es repasar lo que se ha hecho
- previamente en la comunidad investigadora investigando mecanismos creativos,
+ previamente en la comunidad investigadora respecto a mecanismos creativos,
  efectivos, eficientes e integrales de prevención, detección y respuesta
  que aborden los ataques de DDoS.
 \begin_inset Newline newline
@@ -114,10 +114,7 @@ reference "chap:Introducción"
 Por último en este capítulo se expondrán trabajos en los cuales se aplican
  técnicas de aprendizaje automático para la detección de ataques DDoS.
  Para una mejor comprensión se explicarán conceptos sobre inteligencia artificia
-l (IA), para posteriormente exponer el aprendizaje automático centrándonos
- en distintas técnicas de clasificación supervisada las cuales son el objetivo
- del trabajo.
- Para ello se hará una pequeña introducción a la IA
+l (IA)
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "IA"
@@ -125,9 +122,9 @@ description "Inteligencia Artificial"
 
 \end_inset
 
-, en la cual se definen y explican conceptos relacionados.
- Posteriormente se centrará en el aprendizaje automático, definiendo y comentand
-o los diferentes métodos.
+, para posteriormente exponer el aprendizaje automático centrándonos en
+ distintas técnicas de clasificación supervisada las cuales son el objetivo
+ del trabajo.
 \end_layout
 
 \begin_layout Section
@@ -135,7 +132,7 @@ Ataques DDoS
 \end_layout
 
 \begin_layout Standard
-Los ataques de denegación de servicio distribuido o DDoS, los cuales tiene
+Los ataques de denegación de servicio distribuido o DDoS, los cuales tienen
  como objetivo impedir que los usuarios legítimos tengan acceso a un recurso
  específico, han sido conocidos desde principios de la década de 1980 
 \begin_inset CommandInset citation
@@ -168,8 +165,8 @@ key "SVM_Zombies_DDoS,DefendingAgainstDDoS_RKCChang"
 \end_inset
 
 .
- Este tipo de redes complica los mecanismo de detección para reconocer al
- atacante original debido al uso de las direcciones IP (
+ Este tipo de redes complica los mecanismos de detección para reconocer
+ al atacante original debido al uso de las direcciones IP (
 \shape italic
 Internet Protocol
 \shape default
@@ -275,7 +272,7 @@ key "leySinde"
 
 \end_inset
 
-).
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -339,7 +336,7 @@ key "DDoS_RSCALAID"
 \end_layout
 
 \begin_layout Standard
-Que sean distribuidos de los ataques DDoS es lo que hace que sean extremadamente
+Que sean distribuidos los ataques DDoS es lo que hace que sean extremadamente
  difíciles de combatir y detectar.
  Los atacantes normalmente usan direcciones IP falsas con la intención de
  esconder su verdadera identidad, por lo que se vuelve muy complicado rastrear
@@ -479,7 +476,7 @@ Mecanismos de Defensa: alcance y taxonomía
 
 \begin_layout Standard
 Normalmente cuando un ataque DDoS es detectado, no hay nada que se pueda
- hacer excepto desconectar a la víctima de la red y reiniciar el sistema
+ hacer excepto desconectar a la víctima de la red y reiniciar el sistema.
  Por lo tanto, el objetivo de cualquier mecanismo de defensa DDoS es detectarlos
  tan pronto como sea posible y detenerlo lo más cerca posible de su fuente
  de origen.
@@ -542,8 +539,8 @@ Ordenación basada en la ubicación de despliegue
 \begin_layout Standard
 Dependiendo de a que capa vayan dirigidos los ataques los cuales se quieren
  mitigar los mecanismos pueden ser divididos en dos categorías, las cuales
- a su vez pueden ser divididas dependiendo donde se desplieguen los mecanismos
- se dividen en:
+ a su vez pueden ser divididas dependiendo de donde se desplieguen los mecanismo
+s de defensa:
 \end_layout
 
 \begin_layout Enumerate
@@ -625,7 +622,7 @@ description "Tabulated Online Packet Statistics"
 
 \end_inset
 
-y RFW (
+ y RFW (
 \shape italic
 MANAnet Reverse Firewall
 \shape default
@@ -650,7 +647,7 @@ key "ASurveyofDefenseMechanismsAgainstDDoS"
 \begin_layout Enumerate
 Basados en el destino: en este tipo de mecanismos la detección y respuesta
  está hecha en el destino del ataque.
- Existen varios mecanismos que tiene lugar en los routers límite o en los
+ Existen varios mecanismos que tienen lugar en los routers límite o en los
  de acceso a los destinos.
  Estos mecanismos pueden modelar el comportamiento de la víctima y detectar
  así cualquier anomalía.
@@ -712,8 +709,8 @@ Híbridos: los mecanismos anteriores solamente tienen en cuenta su punto
  de actuación, además la detección y respuesta está realizada mayoritariamente
  por cada punto de despliegue o varios.
  Estos mecanismos son llamados centralizados.
- Por los híbridos o descentralizados tienen en cuenta múltiples localizaciones
- para la fuente, destino y redes intermedias.
+ En cambio los híbridos o descentralizados tienen en cuenta múltiples localizaci
+ones para la fuente, destino y redes intermedias.
  Por ejemplo la detección puede ser hecha en la parte de la víctima y la
  respuesta distribuida iniciada y distribuida a otros nodos de la red por
  la víctima.
@@ -754,7 +751,7 @@ description "Active Internet Traffic Filtering"
 
 \end_inset
 
-y StopIt 
+ y StopIt 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ASurveyofDefenseMechanismsAgainstDDoS"
@@ -773,7 +770,7 @@ Mecanismos para la capa de aplicación:
 \begin_layout Enumerate
 Basados en el destino (lado del servidor): la mayoría de aplicaciones siguen
  un modelo cliente-servidor.
- Un servidor es un proceso que implementa un específico servicio.
+ Un servidor es un proceso que implementa un servicio específico.
  Un cliente es un proceso que pide el servicio que ofrece el servidor.
  Como se ha dicho los mecanismos basados en el destino son desplegados en
  el destino, es decir en el servidor.
@@ -863,6 +860,32 @@ key "ASurveyofDefenseMechanismsAgainstDDoS"
 
 \end_deeper
 \begin_layout Standard
+En las tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:comparacionDDoS-N/T-deployment-location"
+
+\end_inset
+
+ se comparan los distintos mecanimos de defensa para la capa de de red/transport
+e según la precisión, escalabilidad, rendimineto , complejitdad y si proporciona
+n un a defensa del sistema en su conjunto o por el contrario es solamente
+ parcial.
+ Y en la tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:comparacionDDoS-A-deployment-location-1"
+
+\end_inset
+
+ lo mismo pero para los mecanismos de defensa para la capa de aplicación.
+ En general hay que buscar un compromiso entre todas las características
+ y en este aspecto los híbridos son los que sobresalen.
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
 \begin_inset Float table
 placement H
 wide false
@@ -1307,7 +1330,7 @@ SI
 
 \begin_layout Plain Layout
 Comparación cualitativa de mecanismos de defensa contra ataques DDoS sobre
- la capa de red/transporte basados en la localización donde se desplegan
+ la capa de red/transporte basados en la localización donde se despliegan
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:comparacionDDoS-N/T-deployment-location"
@@ -1582,7 +1605,7 @@ SI
 
 \begin_layout Plain Layout
 Comparación cualitativa de mecanismos de defensa contra ataques DDoS sobre
- la capa de aplicación basados en la localización donde se desplegan
+ la capa de aplicación basados en la localización donde se despliegan
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:comparacionDDoS-A-deployment-location-1"
@@ -1610,9 +1633,9 @@ Ordenación basada en el tiempo de actuación
 El segundo criterio es el momento en que los mecanismos de defensa DDoS
  deben actuar en respuesta a un posible ataque de inundación de DDoS.
  Basándonos en este criterio, clasificamos ambos mecanismos de defensa contra
- los ataques DDoS a nivel de aplicación y de red / transporte en tres categorías
+ los ataques DDoS a nivel de aplicación y de red/transporte en tres categorías
  (es decir, tres puntos de defensa contra el ataque de inundación): antes
- del ataque (prevención de ataques) durante el ataque (detección), y después
+ del ataque (prevención de ataques), durante el ataque (detección), y después
  del ataque (identificación de la fuente de ataque y respuesta) 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1662,7 +1685,7 @@ Durante el ataque o detección: pueden ser desplegados en los mismos puntos
  Algunos mecanismos detectan los ataques cuando se detectan patrones anómalos
  en las capas de red/transporte o aplicación.
  Muchísimos IDPS están basados en estos mecanismos.
- Ellos emplean técnicas de minería de datos e IA para obtener más precisión
+ Estos emplean técnicas de minería de datos e IA para obtener más precisión
  en las detecciones.
  Estos mecanismos monitorizan algunas características y estadísticas de
  los flujos de tráfico de modo que aprenden el comportamiento de cada uno
@@ -1699,7 +1722,7 @@ En este parte se ha presentado los ataques DDoS haciendo la taxonomía de
  Y entre estas características se deberían implementar los mecanismos de
  prevención, detección y respuesta en más nodos, colaborar y cooperar entre
  los puntos de defensa y proveedores de servicios así como mecanismos de
- más confianza para autenticar y establecer una comunicación segura.
+ más confianza para autentificar y establecer una comunicación segura.
 \end_layout
 
 \begin_layout Subsection
@@ -1723,7 +1746,7 @@ Para poder contrarrestar un ataque hay que disponer de cierta información.
 Para ello se requiere el estudio de los datos obtenidos mediante la monitorizaci
 ón de la plataforma.
  Esta monitorización puede venir dada por exportaciones de datos (por ejemplo
- Netflow
+ Netflow 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "netflow"
@@ -1741,7 +1764,7 @@ description "Simple Network Management Protocol"
 \end_inset
 
  o incluso, para las detecciones más avanzadas de algunos fabricantes, capturas
- de trazas (tcpdump
+ de trazas (tcpdump 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "tcpdump"
@@ -2015,8 +2038,8 @@ Aprendizaje Automático
 
 \begin_layout Standard
 Dentro del aprendizaje automático, encontramos múltiples técnicas que permiten
- agrupar muestras de acuerdo a criterios o métodos.
- El aprendizaje automático se divide en supervisado y no supervisado.
+ agrupar o clasificar muestras, estás técnicas son el aprendizaje supervisado
+ y el no supervisado.
  
 \begin_inset Newline newline
 \end_inset
@@ -2059,7 +2082,7 @@ key "UnsupervisedclassificationofmajordepressionusingfunctionalconnectivityMRI"
 
 \end_inset
 
-., también denominado agrupamiento o 
+, también denominado agrupamiento o 
 \shape italic
 clustering
 \shape default
@@ -2086,7 +2109,7 @@ clustering
 \begin_layout Standard
 Centrándonos en aprendizaje supervisado, ya que es en el que se profundiza
  en el trabajo, hay que hacer una diferencia en función de la variable clase
- entre la tareas de clasificación y las de regresión 
+ entre las tareas de clasificación y las de regresión 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AnIntroductiontoMachineLearning"
@@ -2107,8 +2130,7 @@ key "AnIntroductiontoMachineLearning"
 
 \begin_layout Standard
 En aprendizaje automático y minería de datos, un tipo de análisis supervisado
- es viable cuando los datos de entrenamiento poseen una variable de clase
- 
+ es viable cuando los datos de entrenamiento poseen una variable clase 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "aprendizajeAutomaticoSupervisado"
@@ -2129,9 +2151,9 @@ key "aprendizajeAutomaticoSupervisado"
 
 .
  Básicamente es encontrar las posibles relaciones entre los atributos de
- entrada y el de clase.
+ entrada y la clase.
  Estas relaciones son establecidas en un modelo con el cual se predicen
- los valores de clase para los datos de prueba.
+ los valores de la clase para los datos de prueba.
 \begin_inset Newline newline
 \end_inset
 
@@ -2149,8 +2171,8 @@ Con una definición más formal, en clasificación supervisada el conjunto
 \begin_inset Formula $C$
 \end_inset
 
- es la variable de clase, es decir la que se clasifica, y las variables
- en 
+ es la variable clase, es decir la que se clasifica, y las variables en
+ 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2160,7 +2182,7 @@ Con una definición más formal, en clasificación supervisada el conjunto
 
  y son los atributos o también llamados en este contexto, variables predictoras,
  inductoras o características.
- El objetivo es poder describir la variable de clase en función de los atributos
+ El objetivo es poder describir la variable clase en función de los atributos
  y poder calcular la probabilidad condicionada de la clase dada cualquier
  combinación de los atributos, 
 \begin_inset Formula $p(C|X)$
@@ -2290,9 +2312,8 @@ key "Artificialneuralnetworks:fundamentalscomputingdesignandapplication"
 \end_inset
 
 .
- Sin embargo, los resultados no fueron alentadores, pues el escaso desarrollo
- que por aquellas fechas presentaba la tecnología informática provocó que
- muchas investigaciones acabaran en fracaso.
+ Sin embargo, los resultados no fueron alentadores y provocaron que muchas
+ investigaciones acabaran en fracaso.
  Además, diversos trabajos como el de Minsky y Papert (1969), pusieron de
  manifiesto graves limitaciones en el proceso de aprendizaje de las arquitectura
 s de red más usuales por aquel entonces.
@@ -2339,7 +2360,7 @@ key "Asurveyofcostsensitivedecisiontreeinductionalgorithms"
  nodos.
  En caso negativo, se dice que es un nodo de decisión o nodo hoja y de lo
  contrario se denomina nodo prueba o nodo de un atributo cualquiera.
- Los modelos de clasificación basados en Arboles de Decisión poseen una
+ Los modelos de clasificación basados en arboles de decisión poseen una
  gran ventaja con respecto a otros algoritmos, ya que están dotados de una
  estructura fácil de interpretar y constituyen eficientes clasificadores.
 \end_layout
@@ -2358,8 +2379,7 @@ key "ModelosBayesianosparalaclasificacinsupervisada.Aplicacionesalanlisisdedatos
  añade probabilidad.
  En los arboles de decisión cada nodo representaba una variable del conjunto
  de datos, pero en este caso las aristas que unen dos nodos representan
- una probabilidad entre variables.
- 
+ probabilidad entre variables y relaciones de dependencia/independencia.
 \end_layout
 
 \begin_layout Itemize
@@ -2388,12 +2408,12 @@ key "Acomparativestudyonthepredictiveabilityofthedecisiontreesupportvectormachin
  de entrada (los puntos) son vistos como un vector p-dimensional (una lista
  ordenada de p números).
  La SVM busca un hiperplano que separe de forma óptima a los puntos de una
- clase de la de otra, que eventualmente han podido ser previamente proyectados
- a un espacio de dimensionalidad superior.
+ clase de la de otra, que normalmente son previamente proyectados a un espacio
+ de dimensionalidad superior.
 \end_layout
 
 \begin_layout Itemize
-Logistic Regression (LogR): la regresión estadística es un tipo de análisis
+Logistic Regression (LogR): la regresión logística es un tipo de análisis
  de regresión utilizado para predecir el resultado de una variable categórica
  (una variable que puede adoptar un número limitado de categorías) en función
  de las variables independientes o predictoras 
@@ -2464,10 +2484,8 @@ precisión=\frac{número\:de\:aciertos}{número\:de\:casos}
 \end_layout
 
 \begin_layout Standard
-Además de ser la medida más aceptada para la evaluación de un clasificador,
- la precisión es utilizada en algunos procedimientos para guiar la construcción
- del clasificador, por ello vamos a exponer distintas formas de obtener
- su valor:
+Al ser la medida más aceptada para la evaluación de un clasificador vamos
+ a exponer distintas formas de obtener su valor:
 \end_layout
 
 \begin_layout Itemize
@@ -2807,7 +2825,7 @@ key "ComparacindemodelosdecurvasROCparalaevaluacindeprocedimientosestadsticosdep
 \end_inset
 
 .
- Su valor rango de valores es 
+ Su valor está en un rango de valores 
 \begin_inset Formula $\left[0,1\right]$
 \end_inset
 
@@ -2820,8 +2838,7 @@ key "ComparacindemodelosdecurvasROCparalaevaluacindeprocedimientosestadsticosdep
 
 \begin_layout Standard
 El área bajo la curva ROC (AUC) es considerada con el fin de mejorar el
- contraste entre los diferentes procedimientos, sobretodo cuando conjuntos
- de datos con diferentes costos según la clasificación errónea.
+ contraste entre los diferentes procedimientos.
  En el caso de la detección de ataques DDoS el costo de un falso negativo
  suele ser mucho que un falso positivo (ver 
 \begin_inset CommandInset citation
@@ -2857,7 +2874,7 @@ key "MULTOPS:Adatastructureforbandwidthattackdetection"
 , en el que se supone que las tasas de paquetes entre dos son dispositivos
  son proporcionales durante el funcionamiento normal .
  Este trabajo hace uso de una estructura de árbol dinámico conocido como
- Multi Level Tree for Online Packet Statistics (MULTOPS) para monitorear
+ Multi Level Tree for Online Packet Statistics (MULTOPS) para monitorizar
  las tasas de paquetes para cada dirección IP.
  Wang y otros 
 \begin_inset CommandInset citation
@@ -2911,7 +2928,7 @@ key "DetectingDistributedDenialofServiceAttackusingKolmogorovcomplexitymetrics"
 
 \end_inset
 
- rastrearon las direcciones IP de origen y construyó Kolmogorov Complexity
+ rastrearon las direcciones IP de origen y construyeron Kolmogorov Complexity
  Metrics, una medida de la cantidad de recursos computacionales necesarios
  para describir una cierta cantidad de información, para identificar su
  aleatoriedad.
@@ -2967,9 +2984,9 @@ key "Neuralnetworksvs.decisiontreesforintrusiondetection"
 
 , amplían la definición de detección de anomalías para considerar ataques
  conocidos y perfiles normales para explorar técnicas supervisadas de aprendizaj
-e de máquinas.
- Exploran la eficacia de las redes neuronales y los árboles de decisión
- para la detección de intrusiones.
+e automático.
+ Exploran la eficacia de las redes neuronales artificiales y los árboles
+ de decisión para la detección de intrusiones.
  Los algoritmos basados en arboles de decisión han demostrado su eficacia
  en la predicción de las diferentes clases de los datos no etiquetados en
  el conjunto de datos de prueba para el concurso de detección de intrusos
@@ -3034,7 +3051,7 @@ key "Detectionofdistributeddenialofserviceattacksusinganensembleofadaptiveandhyb
 
  se centra en la identificación de ataques de inundación de alta tasa con
  alta precisión y pocas falsas alarmas haciendo uso de sistemas adaptativos
- e híbridos neuro-fuzzy con el clasificador base o ANFIS 
+ e híbridos neuro-fuzzy con el clasificador base o ANFIS
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "ANFIS"
