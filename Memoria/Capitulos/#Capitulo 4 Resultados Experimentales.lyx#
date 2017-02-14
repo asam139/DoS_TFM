@@ -93,14 +93,12 @@ En este capítulo se detallará la base de datos sobre la que se va a realizar
  Posteriormente se comentará el programa usado con el cual se han ejecutado
  los diferentes clasificadores así como todos las variaciones y pruebas
  que se han realizado.
- Y por último se procede a la evaluación de los distintos clasificadores
- objeto de estudio.
- En primer lugar se define el entorno empleado para la realización de las
- pruebas, el equipo usado.
- Y para acabar se exponen en que consisten las distintas pruebas.
+ A continuación se exponen en que consisten las distintas pruebas.
  Para cada prueba se indicará las modificaciones realizadas al escenario
  original y a continuación se mostrarán los resultados obtenidos.
- 
+ Y por último se define el entorno empleado para la realización de las pruebas
+ y se procede a la evaluación de los distintos clasificadores objeto de
+ estudio.
 \end_layout
 
 \begin_layout Section
@@ -308,7 +306,7 @@ ping
  al broadcast falsificando su identidad para inundar un objetivo 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Fraggleattack"
+key "zargar2013survey"
 
 \end_inset
 
@@ -353,7 +351,7 @@ key "CERTAdvisoryCA-1997-28IPDenial-of-ServiceAttacks"
 
 .
  Esto puede bloquear varios sistemas operativos debido a un error en su
- código de re-ensamblaje de fragmentación TCP / IP.
+ código de re-ensamblaje de fragmentación TCP/IP.
  Uno de los campos de la cabecera IP es el campo 
 \shape italic
 fragment offset
@@ -379,7 +377,7 @@ s que no son objeto de nuestro estudio y, por tanto, vamos a limitarnos
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -856,7 +854,7 @@ name "tab:tiposDeAtaque_KDD_1"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -1356,7 +1354,7 @@ reference "tab:atributosConVentana2segundos"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -1755,7 +1753,7 @@ name "tab:atributosBasicosConexionesTCP"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2186,7 +2184,7 @@ num_outbound_cmds
 \begin_layout Plain Layout
 
 \size tiny
-Número de comandos de salida en un sessión ftp
+Número de comandos de salida en un sesión ftp
 \end_layout
 
 \end_inset
@@ -2318,7 +2316,7 @@ name "tab:atributosEspeciales"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2813,9 +2811,9 @@ Para la evaluación, a partir de los datos se han creado dos conjuntos de
  El primero de ellos se han unido los ataques no DDoS y el flujo normal
  de red y se diferencian los distintos ataques de DDoS.
  Y un segundo conjunto de datos, donde las instancias están clasificadas
- como ataque DDoS (génerico) u otro tipo de situación.
- Por tanto, tenemos un cojunto de datos con varias clases y otro dicotómico,
- es decir dos clases.
+ como ataque DDoS (genérico) u otro tipo de situación.
+ Por tanto, tenemos un conjunto de datos con varias clases y otro dicotómico,
+ es decir con dos clases.
 \end_layout
 
 \begin_layout Section
@@ -2825,7 +2823,7 @@ Herramienta: Weka
 \begin_layout Standard
 Para usar los diferentes tipos de clasificadores del trabajo, se ha utilizado
  su implementación por defecto en Waikato Environment for Knowledge Analysis
- ( WEKA )
+ (WEKA)
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "WEKA"
@@ -2913,7 +2911,7 @@ Contiene una extensa colección de técnicas para preprocesamiento de datos
 \end_layout
 
 \begin_layout Itemize
-Es fácil de utilizar por alguién inexperto gracias a su interfaz gráfica
+Es fácil de utilizar por alguien inexperto gracias a su interfaz gráfica
  de usuario.
 \end_layout
 
@@ -2931,7 +2929,7 @@ Weka soporta varias tareas estándar de minería de datos, más específicamente
  de base de datos.
  No es capaz de minería de datos multi-relacional, pero hay software separado
  para convertir una colección de tablas de base de datos enlazadas en una
- sola tabla que es adecuada para procesar usando Weka
+ sola tabla que es adecuada para procesar usando Weka 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "DataMining:Practicalmachinelearningtoolsandtechniques2ndEdition"
@@ -2959,8 +2957,7 @@ En la tabla se muestra las características del equipo sobre el cual se han
  Xeon(R) E5645 2.40GHz, cada uno con 6 núcleos y hasta 12 procesos y 32GB
  de memoria.
  No obstante, WEKA no está preparado para trabajar en paralelo y, por tanto
- cada experimiento usaba un sólo proceso y por ello no lo suficiente para
- ejecutar algunos de los algoritmos.
+ cada experimento usaba un sólo proceso.
  Para tardar menos se realizaron los experimentos para cada clasificador
  por separado.
 \end_layout
@@ -3115,12 +3112,11 @@ name "tab:CaracterísticasOrdenadores"
 \end_layout
 
 \begin_layout Section
-Estudio de la efectividad de las predicciones de trayectorias frente a las
- pérdidas de paquetes
+Experimentos y análisis de resultados
 \end_layout
 
 \begin_layout Standard
-Como se ha comentado el software que se ha usado para la experimientación
+Como se ha comentado el software que se ha usado para la experimentación
  ha sido WEKA.
  Se han utilizado las implementaciones de C4.5, Naïve Bayes, SVM y MLP que
  WEKA incluye.
@@ -3162,9 +3158,9 @@ otros
 
 \begin_layout Enumerate
 En el segundo estudio se han mantenido separadas las clases de los diferentes
- ataques DDoS y se ha fusionado el resto, es decir, el resto de ataques
+ ataques DDoS y se han fusionado el resto, es decir, el resto de ataques
  y el flujo normal.
- Por tanto obtenemos unas variables clase con 7 valores, 6 tipos de ataques
+ Por tanto obtenemos una variable clase con 7 valores, 6 tipos de ataques
  DDoS y 
 \begin_inset Quotes eld
 \end_inset
@@ -3178,8 +3174,8 @@ otros
 \end_layout
 
 \begin_layout Standard
-A los dos estudios básicos se ha considerado por otro hacer una selección
- de atributos o en inglés, 
+A los dos estudios básicos se ha considerado hacer una selección de atributos
+ o en inglés, 
 \shape italic
 Feature Subset Selection
 \shape default
@@ -3199,12 +3195,13 @@ key "AnIntroductiontoVariableandFeatureSelection"
 \end_inset
 
 , para reducir la dimensionalidad de los datos como han hecho otros autores
- en distintos trabajos.De este modo obtenemos un total de cuatro estudios.
+ en distintos trabajos.
+ De este modo obtenemos un total de cuatro estudios.
  No obstante, aquí no se ha utilizado el conjunto de datos completo para
  hacer el FSS y luego se ha validado el clasificador.
  Para la selección de atributos es importante señalar que aplicar FSS sobre
  todos los datos y luego hacer la validación cruzada es un error en el que
- muchos autores caen, pues están usando el cojunto de datos de entrenamiento
+ muchos autores caen, pues están usando el conjunto de datos de entrenamiento
  para la FSS, y eso es erróneo.
 \begin_inset Newline newline
 \end_inset
@@ -3227,8 +3224,8 @@ weka.classifiers.meta.AttributeSelectedClassifier
  El meta-clasificador toma un algoritmo de búsqueda y un evaluador junto
  al clasificador base.
  Esto hace que el proceso de selección de atributos sea completamente transparen
-te y el clasificador reciba sólo el cojunto de datos reducido.
- El evaluador o método de selección que se ha utilziado es el 
+te y el clasificador reciba sólo el conjunto de datos reducido.
+ El evaluador o método de selección que se ha utilizado es el 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3244,11 +3241,11 @@ key "Correlation-basedFeatureSubsetSelectionforMachineLearning"
 \end_inset
 
 .
- Este método evalúa el valor de un subcojunto de atributos considerando
+ Este método evalúa el valor de un subconjunto de atributos considerando
  la capacidad predictiva invividual de cada característica junto con el
  grado de redundancia entre ellos.
- Son preferidos los subcojuntos de atributos que estan altamente correlacionados
- con la clase mientras tiene una baja intercorrelación.
+ Son preferidos los subconjuntos de atributos que están altamente correlacionado
+s con la clase mientras tiene una baja intercorrelación.
  Por tanto, hemos realizado dos estudios sin FSS usando la base de datos
  con clase dicotómica (o dos clases) y otro con multiclase, y otros dos
  estudios incorporando FSS, de la forma explicada, con ambas bases de datos.
@@ -3270,7 +3267,7 @@ En cuanto a la configuración que se ha tomado para los clasificadores ha
 \begin_inset Formula $s=1$
 \end_inset
 
-(ver sección 
+ (ver sección 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Credal-Decision-Trees"
@@ -3278,8 +3275,8 @@ reference "subsec:Credal-Decision-Trees"
 \end_inset
 
 ).
- Este valor es el usado en el trabajo en el que se presentó la entropía
- imprecisa 
+ Este valor es el usado en el trabajo en el que se presentó la ganancia
+ de información imprecisa 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Upperentropyofcredalsets.applicationstocredalclassification"
@@ -3313,9 +3310,10 @@ key "UncertaintymeasuresonprobabilityintervalsfromImpreciseDirichletmodel"
 \begin_layout Standard
 Para validar los resultados obtenidos se ha realizado una validación cruzada
  de 10 hojas.
- Nótese que no pudimos obtener resultados para el LogR para la base de datos
- multiclase, o el SVM y MLP para ninguna base de datos después de una semana
- de ejecución de los experimentos.
+ Nótese que no se pudo obtener resultados para el LogR para la base de datos
+ multiclase, o el SVM y MLP para ninguna base de datos debido al tamaño
+ de la base de datos ya que estos algoritmos presentan un gran coste computacion
+al.
  La tabla 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3691,7 +3689,8 @@ MLP
 
 \begin_layout Plain Layout
 Precisión en tanto por cierto para cada clasificador en cada uno de los
- cuatro casos estudiados
+ cuatro casos estudiados.
+ La ? indica que no se obtuvieron resultados.
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:Precisión-en-tanto-por-cierto-para-cada-clasificador"
@@ -4087,7 +4086,8 @@ MLP
 
 \begin_layout Plain Layout
 Tiempo medio de entrenamiento en segundos para cada clasificador en cada
- uno de los cuatro escenarios contemplados
+ uno de los cuatro escenarios contemplados.
+ La ? indica que no se obtuvieron resultados.
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:Tiempo-medio-de-entrenamiento-en-segundos-para-cada-clasificador-en-cada-uno-de-los-cuatro-escenarios-contemplados"
@@ -4352,7 +4352,8 @@ MLP
 
 \begin_layout Plain Layout
 Área bajo la curva (AUC) para cada clasificador usando la base de datos
- con clase binaria, sin usar y usando selección de variables
+ con clase binaria, sin usar y usando selección de variables.
+ La ? indica que no se obtuvieron resultados.
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:Área-bajo-la-curva-para-cada-clasificador-usando-la-base-datos-con-clase-binaria"
@@ -4373,7 +4374,7 @@ name "tab:Área-bajo-la-curva-para-cada-clasificador-usando-la-base-datos-con-cl
 \end_layout
 
 \begin_layout Standard
-Siguiento las recomendaciones de Demšar 
+Siguiendo las recomendaciones de Demšar 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Statisticalcomparisonsofclassifiersovermultipledatasets"
@@ -4483,8 +4484,8 @@ s si el correspondiente p-valor es menor o igual que 0.006667 para la precisión
 \begin_layout Standard
 El test de Friedman indica que los mejores en precisión son el CDT y J48,
  y en cuanto a tiempo el CDT y el NB.
- Como se puede apreciar para el test Nemeny para la precisión no hay diferencias
- significativas para entre el [J48, SVM], [J48, MLP] y [CDT, SVM].
+ Como se puede apreciar para el test Nemenyi para la precisión no hay diferencia
+s significativas para entre el [J48, SVM], [J48, MLP] y [CDT, SVM].
  Y en cuanto al tiempo solamente entre el [NB, LogR].
  En general los resultados son buenos pero los resultados en algunos casos
  no son estadísticamente significativos según Nemenyi.
@@ -4785,7 +4786,7 @@ name "tab:Ranking-medio-prueba-friedman-tiempo"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4857,7 +4858,7 @@ J48 vs.
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4867,7 +4868,7 @@ CDT vs.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4878,7 +4879,7 @@ CDT vs.
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4888,7 +4889,7 @@ CDT vs.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout

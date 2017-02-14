@@ -103,8 +103,9 @@ Modelos
 En esta sección describiremos los diferentes tipos de modelos de clasificación
  que se utilizarán sobre la base de datos para su posterior comparación
  y validación.
- Se van a utilizar una serie de clasificadores estándares como son el C4.5,
- Naïve Bayes, LogR, SVM y Perceptrón multicapa.
+ Se van a utilizar una serie de clasificadores estándares muy conocidos
+ y usados en el área de la IA como son el C4.5, Naïve Bayes, LogR, SVM y
+ Perceptrón multicapa.
  Y además se va a incorporar uno nuevo, el Credal Decision Trees (CDT),
  para ver como trabaja para la detección de ataques DDoS.
  
@@ -1599,7 +1600,7 @@ des imprecisas y medidas de incertidumbre en conjuntos credales, es decir
  De esta manera, este algoritmo considera que el conjunto de entrenamiento
  no es confiable cuando se lleva a cabo el proceso de selección de variables.
  Este método obtiene buenos resultados experimentales, especialmente cuando
- se clasifican datos ruidosos 
+ se clasifican datos con ruido 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Baggingschemesonthepresenceofnoiseinclassification,Analysisandextensionofdecisiontreesbasedonimpreciseprobabilities:applicationonnoisydata"
@@ -1766,6 +1767,13 @@ key "UncertaintymeasuresonprobabilityintervalsfromImpreciseDirichletmodel"
 
  en el IDM alcanza su coste mas bajo para 
 \begin_inset Formula $s\leq1$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Inferencesfrommultinomialdatalearningaboutabagofmarbles"
+
 \end_inset
 
 .
@@ -1986,11 +1994,7 @@ alpha$ es alcanzado
 \begin_layout Plain Layout
 
 	7.
- Eliminar $
-\backslash
-alpha
-\backslash
-leq0$ de $L$
+ Eliminar $X_l$ de $L$
 \end_layout
 
 \begin_layout Plain Layout

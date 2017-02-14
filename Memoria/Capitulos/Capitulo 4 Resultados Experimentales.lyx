@@ -3275,8 +3275,8 @@ reference "subsec:Credal-Decision-Trees"
 \end_inset
 
 ).
- Este valor es el usado en el trabajo en el que se presentó la entropía
- imprecisa 
+ Este valor es el usado en el trabajo en el que se presentó la ganancia
+ de información imprecisa 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Upperentropyofcredalsets.applicationstocredalclassification"
@@ -3310,9 +3310,10 @@ key "UncertaintymeasuresonprobabilityintervalsfromImpreciseDirichletmodel"
 \begin_layout Standard
 Para validar los resultados obtenidos se ha realizado una validación cruzada
  de 10 hojas.
- Nótese que no pudimos obtener resultados para el LogR para la base de datos
- multiclase, o el SVM y MLP para ninguna base de datos después de una semana
- de ejecución de los experimentos.
+ Nótese que no se pudo obtener resultados para el LogR para la base de datos
+ multiclase, o el SVM y MLP para ninguna base de datos debido al tamaño
+ de la base de datos ya que estos algoritmos presentan un gran coste computacion
+al.
  La tabla 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3688,7 +3689,8 @@ MLP
 
 \begin_layout Plain Layout
 Precisión en tanto por cierto para cada clasificador en cada uno de los
- cuatro casos estudiados
+ cuatro casos estudiados.
+ La ? indica que no se obtuvieron resultados.
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:Precisión-en-tanto-por-cierto-para-cada-clasificador"
@@ -4084,7 +4086,8 @@ MLP
 
 \begin_layout Plain Layout
 Tiempo medio de entrenamiento en segundos para cada clasificador en cada
- uno de los cuatro escenarios contemplados
+ uno de los cuatro escenarios contemplados.
+ La ? indica que no se obtuvieron resultados.
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:Tiempo-medio-de-entrenamiento-en-segundos-para-cada-clasificador-en-cada-uno-de-los-cuatro-escenarios-contemplados"
@@ -4349,7 +4352,8 @@ MLP
 
 \begin_layout Plain Layout
 Área bajo la curva (AUC) para cada clasificador usando la base de datos
- con clase binaria, sin usar y usando selección de variables
+ con clase binaria, sin usar y usando selección de variables.
+ La ? indica que no se obtuvieron resultados.
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:Área-bajo-la-curva-para-cada-clasificador-usando-la-base-datos-con-clase-binaria"
@@ -4481,7 +4485,8 @@ s si el correspondiente p-valor es menor o igual que 0.006667 para la precisión
 El test de Friedman indica que los mejores en precisión son el CDT y J48,
  y en cuanto a tiempo el CDT y el NB.
  Como se puede apreciar para el test Nemenyi para la precisión no hay diferencia
-s significativas para entre el [J48, SVM], [J48, MLP] y [CDT, SVM].
+s significativas para entre el [J48, SVM], [J48, MLP] , [CDT, SVM] y [CDT,
+ MLP].
  Y en cuanto al tiempo solamente entre el [NB, LogR].
  En general los resultados son buenos pero los resultados en algunos casos
  no son estadísticamente significativos según Nemenyi.
@@ -4854,7 +4859,7 @@ J48 vs.
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4864,7 +4869,7 @@ CDT vs.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4875,7 +4880,7 @@ CDT vs.
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4885,7 +4890,7 @@ CDT vs.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
