@@ -151,6 +151,9 @@ s realizados en este trabajo con muchas más bases de datos de ataques DDoS,
  real muchísimo mejor.
  Otra línea de investigación sería extraer reglas de los arboles de decisión
  y analizar que reconoce los patrones reales de ataques DDoS.
+ También obtener resultados en términos de tiempo y precisión para los CTDs
+ aplicados en esquemas más complejos, como Bagging o Boosting, sobre bases
+ de datos de ataques DDoS.
  Y a largo plazo crear un prototipo de IDS a partir de los patrones encontrados
  para probar su funcionamiento en entornos reales.
 \end_layout
