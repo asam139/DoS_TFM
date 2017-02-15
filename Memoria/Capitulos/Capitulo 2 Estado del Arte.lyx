@@ -868,8 +868,8 @@ reference "tab:comparacionDDoS-N/T-deployment-location"
 \end_inset
 
  se comparan los distintos mecanimos de defensa para la capa de de red/transport
-e según la precisión, escalabilidad, rendimineto , complejitdad y si proporciona
-n un a defensa del sistema en su conjunto o por el contrario es solamente
+e según la precisión, escalabilidad, rendimiento , complejidad y si proporcionan
+ una defensa del sistema en su conjunto o por el contrario es solamente
  parcial.
  Y en la tabla 
 \begin_inset CommandInset ref
@@ -2026,7 +2026,7 @@ La IA nos permite la detección de los ataques de DDoS lo cuál es muy important
 En esta sección se realizará una introducción a la IA, en la cual se explicarán
  los conceptos esenciales para comprender las técnicas de aprendizaje automático
  existentes.
- A continuación se realizará una ordenación de estas con especial interés
+ A continuación se realizará una ordenación de estás con especial interés
  en las de clasificación supervisada.
  Por último se exponen artículos en los cuales se hace uso de técnicas de
  aprendizaje automático para la detección de ataques DDoS.
@@ -2087,10 +2087,10 @@ key "UnsupervisedclassificationofmajordepressionusingfunctionalconnectivityMRI"
 clustering
 \shape default
 , sólo tenemos los datos de los distintos atributos sin etiquetar, es decir
- no se tiene la variable de clase, por lo que no se tiene un conocimiento
- a priori.
- Y lo que se suele hacer es buscar relaciones entre los distintos casos
- o agrupar casos con elementos comunes.
+ no se tiene la variable clase, por lo que no se tiene un conocimiento a
+ priori.
+ Lo que se suele hacer es buscar relaciones entre los distintos casos o
+ agrupar casos con elementos comunes.
  El aprendizaje no supervisado debido a que sería como una clasificación
  a ciegas, típicamente trata los objetos de entrada como un conjunto de
  variables aleatorias, siendo construido un modelo de densidad para el conjunto
@@ -2107,7 +2107,7 @@ clustering
 \end_layout
 
 \begin_layout Standard
-Centrándonos en aprendizaje supervisado, ya que es en el que se profundiza
+Centrándonos en aprendizaje supervisado, ya que es en el que se utiliza
  en el trabajo, hay que hacer una diferencia en función de la variable clase
  entre las tareas de clasificación y las de regresión 
 \begin_inset CommandInset citation
@@ -2221,43 +2221,6 @@ key "devijver1982pattern"
  práctica.
  Y por lo tanto es una técnica muy utilizada en proyectos de inteligencia
  artificial para validar modelos generados.
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-De entre los tipos de validación cruzada el más utilizado la de 
-\shape italic
-K
-\shape default
- iteraciones o 
-\shape italic
-K-fold cross-validation 
-\shape default
-los datos de muestra se dividen en 
-\shape italic
-K
-\shape default
- subconjuntos.
- Uno de los subconjuntos se utiliza como datos de prueba y el resto (
-\shape italic
-K-1
-\shape default
-) como datos de entrenamiento.
- El proceso de validación cruzada es repetido durante 
-\shape italic
-k
-\shape default
- iteraciones, con cada uno de los posibles subconjuntos de datos de prueba.
- Finalmente se realiza la media aritmética de los resultados de cada iteración
- para obtener un único resultado.
- Este método es muy preciso puesto que evaluamos a partir de 
-\shape italic
-K
-\shape default
- combinaciones de datos de entrenamiento y de prueba.
  En la práctica, la elección del número de iteraciones depende de la medida
  del conjunto de datos.
  Lo más común es utilizar la validación cruzada de 10 iteraciones (
@@ -2286,7 +2249,7 @@ Clasificadores
 \end_layout
 
 \begin_layout Standard
-Según la naturaleza de los problemas de clasificación supervisada han ido
+Según la naturaleza de los problemas de aprendizaje supervisado han ido
  desarrollandose multitud de diferentes algoritmos, que aunque todos funcionan
  bien globalmente, sobresalen en ciertos contexto en algunos aspectos como
  puede ser la precisión, la minimización del error de clasificación o la
@@ -2829,7 +2792,7 @@ key "ComparacindemodelosdecurvasROCparalaevaluacindeprocedimientosestadsticosdep
 \begin_inset Formula $\left[0,1\right]$
 \end_inset
 
- y cuanto más cerca de 1 se encuentre índica que mejor comportamiento tiene.
+ y cuanto más cerca de 1 se encuentre indica que mejor comportamiento tiene.
 \begin_inset Newline newline
 \end_inset
 
@@ -2871,8 +2834,8 @@ key "MULTOPS:Adatastructureforbandwidthattackdetection"
 
 \end_inset
 
-, en el que se supone que las tasas de paquetes entre dos son dispositivos
- son proporcionales durante el funcionamiento normal .
+, en el que se supone que las tasas de paquetes entre dos dispositivos son
+ proporcionales durante el funcionamiento normal .
  Este trabajo hace uso de una estructura de árbol dinámico conocido como
  Multi Level Tree for Online Packet Statistics (MULTOPS) para monitorizar
  las tasas de paquetes para cada dirección IP.
