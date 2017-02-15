@@ -139,9 +139,9 @@ Y particularmente los CDT son árboles de decisión, los cuales se pueden
  en relación a su coste computacional sobresale con una baja tasa de falsos
  positivos.
  Por ejemplo, para la base de datos dicotómica sin FSS se obtuvo una precisión
- del 100% con un tiempo de ejecución 365 segundos aproximadamente, en torno
- a 6 veces menos que el tiempo que tarda el J48 para el mismo caso obteniendo
- la misma precisión.
+ del 100% con un tiempo de ejecución de aproximadamente de 365 segundos,
+ en torno a 6 veces menos que el tiempo que tarda el J48 para el mismo caso
+ obteniendo la misma precisión.
 \end_layout
 
 \begin_layout Section
