@@ -92,13 +92,12 @@ En este capítulo se detallará la base de datos sobre la que se va a realizar
  el estudio.
  Posteriormente se comentará el programa usado con el cual se han ejecutado
  los diferentes clasificadores así como todos las variaciones y pruebas
- que se han realizado.
- A continuación se exponen en que consisten las distintas pruebas.
- Para cada prueba se indicará las modificaciones realizadas al escenario
- original y a continuación se mostrarán los resultados obtenidos.
- Y por último se define el entorno empleado para la realización de las pruebas
- y se procede a la evaluación de los distintos clasificadores objeto de
- estudio.
+ que se han realizado así como el entorno empleado para la realización de
+ las mismas.
+ A continuación se exponen en que consisten las distintas pruebas, indicando
+ para cada una las modificaciones realizadas al escenario original.
+ Y por último se muestran los resultados obtenidos y se procede a la evaluación
+ de los distintos clasificadores objeto de estudio.
 \end_layout
 
 \begin_layout Section
@@ -3174,8 +3173,7 @@ otros
 \end_layout
 
 \begin_layout Standard
-A los dos estudios básicos se ha considerado hacer una selección de atributos
- o en inglés, 
+Además se ha considerado hacer una selección de atributos o en inglés, 
 \shape italic
 Feature Subset Selection
 \shape default
@@ -3214,7 +3212,7 @@ En nuestro caso, se ha utilizado el algoritmo
 \begin_inset Quotes eld
 \end_inset
 
-weka.classifiers.meta.AttributeSelectedClassifier
+weka.classifiers.meta.AttributeSelected Classifier
 \begin_inset Quotes erd
 \end_inset
 
@@ -3275,8 +3273,7 @@ reference "subsec:Credal-Decision-Trees"
 \end_inset
 
 ).
- Este valor es el usado en el trabajo en el que se presentó la ganancia
- de información imprecisa 
+ Este valor es el usado en el trabajo original 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Upperentropyofcredalsets.applicationstocredalclassification"
@@ -3310,10 +3307,10 @@ key "UncertaintymeasuresonprobabilityintervalsfromImpreciseDirichletmodel"
 \begin_layout Standard
 Para validar los resultados obtenidos se ha realizado una validación cruzada
  de 10 hojas.
- Nótese que no se pudo obtener resultados para el LogR para la base de datos
- multiclase, o el SVM y MLP para ninguna base de datos debido al tamaño
- de la base de datos ya que estos algoritmos presentan un gran coste computacion
-al.
+ Nótese que no se pudo obtener resultados tras una semana de ejecución para
+ el LogR para la base de datos multiclase, o el SVM y MLP para ninguna base
+ de datos debido al tamaño de la base de datos ya que estos algoritmos presentan
+ un gran coste computacional.
  La tabla 
 \begin_inset CommandInset ref
 LatexCommand ref

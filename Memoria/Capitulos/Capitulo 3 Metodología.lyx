@@ -480,7 +480,7 @@ RazónGanancia(X|C)=\frac{Ganancia_{D}(C|X)}{InfoRuptura_{D}(X)}
 donde,
 \begin_inset Formula 
 \[
-InfoRuptura_{D}(X)=-\sum_{j=1}^{k}p_{d}(X=x_{j})\log_{2}(p_{D}(X=x_{j}))
+InfoRuptura_{D}(X)=-\sum_{j=1}^{k}p_{D}(X=x_{j})\log_{2}(p_{D}(X=x_{j}))
 \]
 
 \end_inset
@@ -648,7 +648,7 @@ El problema con la formulación anterior es que si el número de característica
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-p(C_{k}|x)=\frac{p(C_{k})p(x|C_{k})}{p(x)})\longrightarrow posterior=\frac{anterior*probabilidad}{evidencia}
+p(C_{k}|x)=\frac{p(C_{k})p(x|C_{k})}{p(x)}\longrightarrow posterior=\frac{anterior*probabilidad}{evidencia}
 \end{equation}
 
 \end_inset
@@ -679,7 +679,7 @@ En la práctica, sólo hay interés en el numerador de esa fracción, porque
 \begin_layout Standard
 \begin_inset Formula 
 \begin{multline}
-p(C,F1,...,F_{n}=p(C)p(F_{1},...,F_{n}|C)=p(C)p(F_{1}|C)p(F_{2},...F_{n}|C,F_{1})=\\
+p(C,F1,...,F_{n})=p(C)p(F_{1},...,F_{n}|C)=p(C)p(F_{1}|C)p(F_{2},...F_{n}|C,F_{1})=\\
 p(C)p(F_{1}|C)p(F_{2}|C,F_{1})p(F_{3},...F_{n}|C,F_{1},F_{2})
 \end{multline}
 
@@ -702,7 +702,7 @@ naïve
 \begin_inset Formula $F_{i}$
 \end_inset
 
-es independiente de cualquier otra 
+ es independiente de cualquier otra 
 \begin_inset Formula $F_{j}$
 \end_inset
 
